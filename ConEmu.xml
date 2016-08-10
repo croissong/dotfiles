@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2016-07-09 16:23:09" build="160619">
-			<value name="StartType" type="hex" data="02"/>
+		<key name=".Vanilla" modified="2016-08-03 02:50:18" build="160724">
+			<value name="StartType" type="hex" data="00"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
 			<value name="StartTasksName" type="string" data=""/>
@@ -59,7 +59,7 @@
 			<value name="FontSize" type="ulong" data="14"/>
 			<value name="StatusFontHeight" type="long" data="12"/>
 			<value name="TabFontHeight" type="long" data="13"/>
-			<key name="HotKeys" modified="2016-07-09 16:23:09" build="160619">
+			<key name="HotKeys" modified="2016-08-03 02:50:18" build="160724">
 				<value name="MinimizeRestore" type="dword" data="80808024"/>
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="0000005b"/>
@@ -286,8 +286,8 @@
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
 				<line data="{Shells::cmd (Admin)}"/>
-				<line data="{Shells::PowerShell (Admin)}"/>
 				<line data="{Bash::CygWin bash}"/>
+				<line data="{Shells::PowerShell (Admin)}"/>
 				<line data="{Shells::cmd 64/32}"/>
 			</value>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
@@ -338,8 +338,8 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="1088"/>
-			<value name="ConWnd Y" type="long" data="32"/>
+			<value name="ConWnd X" type="long" data="1038"/>
+			<value name="ConWnd Y" type="long" data="13"/>
 			<value name="LastMonitor" type="string" data="0,0,1920,1080"/>
 			<value name="ConWnd Width" type="dword" data="00000066"/>
 			<value name="ConWnd Height" type="dword" data="0000003c"/>
@@ -572,18 +572,18 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="Tasks" modified="2016-07-09 16:23:09" build="160619">
+			<key name="Tasks" modified="2016-08-03 02:50:18" build="160724">
 				<value name="Count" type="long" data="4"/>
-				<key name="Task1" modified="2016-07-09 16:23:09" build="160619">
+				<key name="Task1" modified="2016-08-06 20:14:10" build="160724">
 					<value name="Name" type="string" data="{Shells::cmd (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\CmdInit.cmd&quot; -new_console:I"/>
+					<value name="Cmd1" type="string" data="cmd.exe /k &quot;%ConEmuBaseDir%\CmdInit.cmd&quot; -new_console:Ia"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task2" modified="2016-07-09 16:23:09" build="160619">
+				<key name="Task2" modified="2016-08-06 20:14:10" build="160724">
 					<value name="Name" type="string" data="{Bash::CygWin bash}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -592,7 +592,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task3" modified="2016-07-09 16:23:09" build="160619">
+				<key name="Task3" modified="2016-08-06 20:14:10" build="160724">
 					<value name="Name" type="string" data="{Bash::Git bash}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -601,7 +601,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task4" modified="2016-07-09 16:23:09" build="160619">
+				<key name="Task4" modified="2016-08-06 20:14:10" build="160724">
 					<value name="Name" type="string" data="{Helper::Show ANSI colors}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -667,12 +667,12 @@
 					<value name="Count" type="long" data="1"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2016-07-09 16:23:09" build="160619">
+			<key name="Apps" modified="2016-08-06 20:14:10" build="160724">
 				<value name="Count" type="long" data="0"/>
 			</key>
-			<key name="Colors" modified="2016-07-09 16:23:09" build="160619">
+			<key name="Colors" modified="2016-08-06 20:14:10" build="160724">
 				<value name="Count" type="long" data="1"/>
-				<key name="Palette1" modified="2016-07-09 16:23:09" build="160619">
+				<key name="Palette1" modified="2016-08-06 20:14:10" build="160724">
 					<value name="Name" type="string" data="#Attached:emacs"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -730,6 +730,7 @@
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
 			<value name="UseAltGrayPlus" type="hex" data="01"/>
 			<value name="MouseDragWindow" type="hex" data="01"/>
+			<value name="CompressLongStrings" type="hex" data="01"/>
 		</key>
 	</key>
 </key>
