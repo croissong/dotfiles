@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+- link:
+    ~/git: git
+    ~/.gitconfig: .gitconfig
+    ~/.emacs.d: .emacs.d
+    ~/.exercism.json: .exercism.json
+    ~/.flake8: .flake8
+    ~/.npmrc: .npmrc
+    ~/AppData/Roaming/ConEmu.xml: ConEmu.xml
+- shell:
+    -
+      - "git submodule update --init --recursive"
+      - "Installing/updating submodules"
