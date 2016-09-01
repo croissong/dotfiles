@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
   <key name="ConEmu">
-    <key name=".Vanilla" modified="2016-08-13 18:24:06" build="160724">
+    <key name=".Vanilla" modified="2016-09-01 11:00:29" build="160828">
       <value name="StartType" type="hex" data="00"/>
       <value name="CmdLine" type="string" data=""/>
       <value name="StartTasksFile" type="string" data=""/>
@@ -334,15 +334,15 @@
       <value name="ColorKeyTransparent" type="hex" data="00"/>
       <value name="ColorKeyValue" type="dword" data="00010101"/>
       <value name="UseCurrentSizePos" type="hex" data="01"/>
-      <value name="AutoSaveSizePos" type="hex" data="00"/>
+      <value name="AutoSaveSizePos" type="hex" data="01"/>
       <value name="Cascaded" type="hex" data="01"/>
       <value name="IntegralSize" type="hex" data="00"/>
       <value name="WindowMode" type="dword" data="0000051f"/>
-      <value name="ConWnd X" type="long" data="1042"/>
-      <value name="ConWnd Y" type="long" data="17"/>
-      <value name="LastMonitor" type="string" data="0,0,1920,1080"/>
-      <value name="ConWnd Width" type="dword" data="00000066"/>
-      <value name="ConWnd Height" type="dword" data="0000003c"/>
+      <value name="ConWnd X" type="long" data="1418"/>
+      <value name="ConWnd Y" type="long" data="29"/>
+      <value name="LastMonitor" type="string" data="0,0,2560,1080"/>
+      <value name="ConWnd Width" type="dword" data="00000074"/>
+      <value name="ConWnd Height" type="dword" data="00000035"/>
       <value name="16bit Height" type="ulong" data="0"/>
       <value name="Restore2ActiveMon" type="hex" data="00"/>
       <value name="QuakeAnimation" type="ulong" data="300"/>
