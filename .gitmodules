@@ -5,5 +5,5 @@
 	path = .emacs.d
 	url = ./.emacs.d
 [submodule ".pws"]
-	path = .password-store
+	path = .pws
 	url = git@github.com:Croissong/.pws.git
