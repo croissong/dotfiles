@@ -14,6 +14,7 @@
     ~/AppData/Roaming/ConEmu.xml: ConEmu.xml
     ~/.bashrc: .bashrc_win
     ~/.agignore: .agignore
+    ~/.ssh: .ssh
 - shell:
     -
       - "git submodule update --init --recursive"
