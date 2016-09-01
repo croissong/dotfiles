@@ -6,13 +6,13 @@
 - clean: ['~']
 - link:
     ~/git: git
-    ~/.gitconfig: .gitconfig
+    ~/.gitconfig: .gitconfig_work
     ~/.emacs.d: .emacs.d
     ~/.exercism.json: .exercism.json
     ~/.flake8: .flake8
     ~/.npmrc: .npmrc
     ~/AppData/Roaming/ConEmu.xml: ConEmu.xml
-    ~/.bashrc: .bashrc
+    ~/.bashrc: .bashrc_win
     ~/.agignore: .agignore
 - shell:
     -

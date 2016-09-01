@@ -1,0 +1,7 @@
+[user]
+	name = Jan Moeller
+	email = jm@datawerk.de
+[commit]
+	template = ~/git/commit_template.txt
+[core]
+	excludesfile = ~/git/.gitignore

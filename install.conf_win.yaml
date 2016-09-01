@@ -12,7 +12,7 @@
     ~/.flake8: .flake8
     ~/.npmrc: .npmrc
     ~/AppData/Roaming/ConEmu.xml: ConEmu.xml
-    ~/.bashrc: .bashrc
+    ~/.bashrc: .bashrc_win
     ~/.agignore: .agignore
 - shell:
     -
