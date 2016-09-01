@@ -15,6 +15,7 @@
     ~/.bashrc: .bashrc
     ~/.agignore: .agignore
     ~/.ssh: .ssh
+    ~/.password-store: .password-store
 - shell:
     -
       - "git submodule update --init --recursive"
