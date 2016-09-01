@@ -4,6 +4,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = ./.emacs.d
-[submodule ".password-store"]
+[submodule ".pws"]
 	path = .password-store
 	url = git@github.com:Croissong/.pws.git
