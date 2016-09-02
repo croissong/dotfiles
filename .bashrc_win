@@ -1,5 +1,3 @@
-alias gpg='/cygdrive/c/Program\ Files\ \(x86\)/GNU/GnuPG/gpg2.exe'
-
 mkcd () {
     case "$1" in
         */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists

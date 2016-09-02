@@ -16,6 +16,7 @@
     ~/.agignore: .agignore
     ~/.ssh: .ssh
     ~/.password-store: .pws
+    ~/.bash_profile: .bash_profile
 - shell:
     -
       - "git submodule update --init --recursive"
