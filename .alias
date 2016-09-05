@@ -1,0 +1,4 @@
+alias emacsc="emacsclient"
+alias python="python3"
+alias install="sudo apt-get install -y"
+alias update="sudo apt-get update -y && sudo apt-get dist-upgrade -y"
