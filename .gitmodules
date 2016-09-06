@@ -3,7 +3,7 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule ".emacs.d"]
 	path = .emacs.d
-	url = git@github.com:Croissong/.emacs.git
+	url = https://github.com/Croissong/.emacs
 [submodule ".pws"]
 	path = .pws
-	url = git@github.com:Croissong/.pws.git
+	url = https://github.com/Croissong/.pws
