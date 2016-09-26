@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
 set -e
-
+if type croutonversion &>/dev/null
+then
 CONFIG="install.conf.yaml"
+else 
+CONFIG="install_cb.conf.yaml"
+fi
+
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"

@@ -1,2 +1,8 @@
+emacs --daemon
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 source ./.alias
+setxkbmap de
+xmodmap -e "keycode 133 = Contol_L"
+xmodmap -e "keycode 37 = Super_L"
+xmodmap -e "add control = Control_L"
+xmodmap -e "remove control = Super_L"
