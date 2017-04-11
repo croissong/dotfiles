@@ -6,17 +6,18 @@
 - clean: ['~']
 - link:
     ~/git: git
+    ~/.config/i3: i3
+    ~/.config/i3status: i3status
     ~/.gitconfig: .gitconfig
     ~/.emacs.d: .emacs.d
-    ~/.exercism.json: .exercism.json
     ~/.flake8: .flake8
-    ~/.npmrc: .npmrc
-    ~/AppData/Roaming/ConEmu.xml: ConEmu.xml
     ~/.bashrc: .bashrc
-    ~/.agignore: .agignore
+    ~/.bash_profile: .bash_profile
+    ~/.xinitrc: .xinitrc
+    ~/.Xresources: .Xresources
+    ~/.zshrc: .zshrc
     ~/.ssh: .ssh
     ~/.password-store: .pws
 - shell:
     -
-      - "git submodule update --init --recursive"
-      - "Installing/updating submodules"
+      - [git submodule update --init --recursive && git submodule foreach git checkout master, Installing submodules]
