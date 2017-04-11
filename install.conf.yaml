@@ -16,7 +16,7 @@
     ~/.bash_profile: .bash_profile
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
-   ~/.zshrc: .zshrc 
+    ~/.zshrc: .zshrc 
     ~/.ssh: .ssh
     ~/.password-store: .pws
 - shell:
