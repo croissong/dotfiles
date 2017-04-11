@@ -1,10 +1,12 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-[submodule ".emacs.d"]
-	path = .emacs.d
-	url = https://github.com/Croissong/.emacs
-	branch = master
+	url = git@github.com:anishathalye/dotbot.git
+  branch = master
 [submodule ".pws"]
 	path = .pws
-	url = https://github.com/Croissong/.pws
+	url = git@github.com:Croissong/.pws.git
+  branch = master
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = git@github.com:Croissong/.emacs.d.git
+	branch = master
