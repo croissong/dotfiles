@@ -8,6 +8,7 @@
     ~/git: git
     ~/.config/i3: i3
     ~/.config/i3status: i3status
+    ~/.config/systemd: systemd
     ~/.gitconfig: .gitconfig
     ~/.emacs.d: .emacs.d
     ~/.flake8: .flake8
@@ -15,7 +16,7 @@
     ~/.bash_profile: .bash_profile
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
-    ~/.zshrc: .zshrc
+   ~/.zshrc: .zshrc 
     ~/.ssh: .ssh
     ~/.password-store: .pws
 - shell:
