@@ -5,3 +5,7 @@
 	template = ~/git/commit_template.txt
 [core]
 	excludesfile = ~/git/.gitignore
+[diff]
+	submodule = log
+[status]
+	submodulesummary = 1
