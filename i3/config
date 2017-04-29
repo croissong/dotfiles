@@ -146,3 +146,4 @@ bar {
 }
 
 new_window none
+exec emacs --daemon  
