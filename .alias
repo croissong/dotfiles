@@ -20,11 +20,7 @@ alias usg='du -h --max-depth=1 -x'
 alias sysl="tail /var/log/syslog"
 alias survey="history |awk '{a[\$2]++} END{for(i in a){printf \"%5d\t%s \n\",a[i],i}}'|sort -rn|head"
 
-os=$(awk -F "=" '/ID_LIKE/ {print $2}' /etc/os-release)
-if [ $os==arch ]
-   
-fi
-alias emacsc="emacsclient"
-alias python="python3"
-alias install="sudo apt-get install -y"
-alias update="sudo apt-get update -y && sudo apt-get dist-upgrade -y"
+alias update="pacaur -Syu"
+alias install="pacaur -S"  
+alias emacsc="emacsclient -c -a emacs"
+alias ls='ls --color=auto'
