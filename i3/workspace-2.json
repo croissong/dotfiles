@@ -1,0 +1,25 @@
+// vim:ts=4:sw=4:et
+{
+  "border": "none",
+  "current_border_width": 0,
+  "floating": "auto_off",
+  "fullscreen_mode": 1,
+  "geometry": {
+    "height": 1057,
+    "width": 960,
+    "x": 960,
+    "y": 0
+  },
+  "name": "i3: Layout saving in i3 - Google Chrome",
+  "percent": 1,
+  "swallows": [
+    {
+      "class": "^Google\\-chrome\\-unstable$"
+      // "instance": "^google\\-chrome\\-unstable\\ \\(\\/home\\/skender\\/\\.config\\/google\\-chrome\\-unstable\\)$",
+      // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Google\\ Chrome$",
+      // "transient_for": "^$",
+      // "window_role": "^browser$"
+    }
+  ],
+  "type": "con"
+}
