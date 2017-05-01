@@ -9,18 +9,19 @@ mkcd () {
     esac
 }
 
-alias mkdir="mkcd"
+alias mkdir='mkcd'
 alias ls='ls -Ash --color=auto'
 alias grep='grep --color'
 # "sudo !!"  seems better
 alias please='sudo $( history -p !! )' 
-alias df="df -h -P --total --exclude-type=devtmpfs 2>/dev/null"
+alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias listps='ps aux | grep -v "ps aux" | grep -Ev "\[.+\]" | grep -v grep'
 alias usg='du -h --max-depth=1 -x'
-alias sysl="tail /var/log/syslog"
-alias survey="history |awk '{a[\$2]++} END{for(i in a){printf \"%5d\t%s \n\",a[i],i}}'|sort -rn|head"
+alias sysl='tail /var/log/syslog'
+alias survey="history |awk '{a[\$2]++} END{for(i in a){printf \"%5d\t%s \n\",a[i],i}}'|sort -rn|head "
 
-alias update="pacaur -Syu"
-alias install="pacaur -S"  
-alias emacsc="emacsclient -c -a emacs"
+alias update='pacaur --noconfirm --noedit -Syu'
+alias install='pacaur --noconfirm -S --noedit'  
+alias uninstall='pacaur -Rn'
+alias emacsc='emacsclient -c -a emacs'
 alias ls='ls --color=auto'
