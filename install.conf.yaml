@@ -10,14 +10,22 @@
     ~/.config/i3status: i3status
     ~/.config/systemd: systemd
     ~/.gitconfig: .gitconfig
-    ~/.emacs.d: .emacs.d
+    ~/.emacs.d:
+      path: .emacs.d
+      force: true
     ~/.flake8: .flake8
-    ~/.bashrc: .bashrc
-    ~/.bash_profile: .bash_profile
+    ~/.bashrc:
+      path: .bashrc
+      force: true
+    ~/.bash_profile:
+      path: .bash_profile
+      force: true
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
     ~/.zshrc: .zshrc 
-    ~/.ssh: .ssh
+    ~/.ssh:
+      path: .ssh
+      force: true
     ~/.password-store: .pws
 - shell:
     -
