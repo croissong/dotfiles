@@ -10,6 +10,9 @@
     ~/.config/i3status: i3status
     ~/.config/systemd: systemd
     ~/.gitconfig: .gitconfig
+    ~/.gnupg:
+      path: .gnupg
+      force: :true
     ~/.emacs.d: .emacs.d
     ~/.flake8: .flake8
     ~/.bashrc: .bashrc
