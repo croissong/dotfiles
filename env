@@ -1,0 +1,7 @@
+export BROWSER=/usr/bin/gooogle-chrome-unstable
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -t"
+export VISUAL="emacsclient -c -a emacs" 
+export TERMINAL=/usr/bin/urxvt
+export GOPATH=$HOME/code/goprojects
+export PATH=$PATH:$GOPATH/bin

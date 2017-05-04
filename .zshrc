@@ -15,13 +15,9 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-export BROWSER=/usr/bin/gooogle-chrome-unstable
-export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t"
-export VISUAL="emacsclient -c -a emacs" 
-export TERMINAL=/usr/bin/urxvt
 
-source ~/.dotfiles/.alias
+source ~/.dotfiles/env
+source ~/.dotfiles/alias
 
 source /usr/share/zsh/share/antigen.zsh
 
