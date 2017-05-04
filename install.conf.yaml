@@ -5,24 +5,24 @@
 
 - clean: ['~']
 - link:
-    ~/git: git
+    ~/.bashrc: .bashrc
+    ~/.bash_profile: .bash_profile
     ~/.config/i3: i3
     ~/.config/i3status: i3status
     ~/.config/systemd: systemd
-    ~/.gitconfig: .gitconfig
-    ~/.gnupg:
-      path: .gnupg
-      force: :true
     ~/.emacs.d: .emacs.d
     ~/.flake8: .flake8
-    ~/.bashrc: .bashrc
-    ~/.bash_profile: .bash_profile
+    ~/git: git
+    ~/.gitconfig: .gitconfig
+      path: .gnupg
+      force: :true
+    ~/.gnupg:
+    ~/.password-store: .pws
+    ~/.ssh: .ssh
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
     ~/.zshrc: .zshrc
     ~/.zprofile: .zprofile
-    ~/.ssh: .ssh
-    ~/.password-store: .pws
 - shell:
     -
       - [git submodule update --init --recursive && git submodule foreach git checkout master, Installing submodules]
