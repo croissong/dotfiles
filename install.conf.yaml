@@ -5,27 +5,32 @@
 
 - clean: ['~']
 - link:
-    ~/git: git
-    ~/.config/i3: i3
-    ~/.config/i3status: i3status
-    ~/.config/systemd: systemd
-    ~/.gitconfig: .gitconfig
-    ~/.emacs.d:
-      path: .emacs.d
-      force: true
-    ~/.flake8: .flake8
     ~/.bashrc:
       path: .bashrc
       force: true
     ~/.bash_profile:
       path: .bash_profile
       force: true
-    ~/.xinitrc: .xinitrc
-    ~/.Xresources: .Xresources
-    ~/.zshrc: .zshrc 
+    ~/.config/i3: i3
+    ~/.config/i3status: i3status
+    ~/.config/systemd: systemd
+    ~/.emacs.d:
+      path: .emacs.d
+      force: true
+    ~/.flake8: .flake8
+    ~/git: git
+    ~/.gitconfig: .gitconfig
+      path: .gnupg
+      force: :true
+    ~/.gnupg:
+    ~/.password-store: .pws
     ~/.ssh:
       path: .ssh
       force: true
+    ~/.xinitrc: .xinitrc
+    ~/.Xresources: .Xresources
+    ~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc 
     ~/.password-store: .pws
 - shell:
     -

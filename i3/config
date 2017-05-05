@@ -121,6 +121,8 @@ bar {
         font pango: 12px
 }
 
+focus_follows_mouse no  
+  
 new_window none
 exec emacs --daemon
 exec redshift-gtk
