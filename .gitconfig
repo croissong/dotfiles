@@ -9,3 +9,5 @@
 	submodule = log
 [status]
 	submodulesummary = 1
+[credential]
+	helper = cache
