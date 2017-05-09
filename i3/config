@@ -119,6 +119,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         font pango: 12px
+        tray_output VGA-1
 }
 
 focus_follows_mouse no  
