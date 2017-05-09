@@ -20,8 +20,8 @@ alias usg='du -h --max-depth=1 -x'
 alias sysl='tail /var/log/syslog'
 alias survey="history |awk '{a[\$2]++} END{for(i in a){printf \"%5d\t%s \n\",a[i],i}}'|sort -rn|head "
 
-alias update='pacaur --noconfirm --noedit -Syu'
-alias install='pacaur --noconfirm -S --noedit'  
+alias update='pacaur --noedit -Syu'
+alias install='pacaur -S --noedit'  
 alias uninstall='pacaur -Rn'
 alias emacsc='emacsclient -c -a emacs'
 alias ls='ls --color=auto'
