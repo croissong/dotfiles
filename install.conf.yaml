@@ -13,6 +13,7 @@
       force: true
     ~/.config/i3: i3
     ~/.config/i3status: i3status
+    ~/.config/mimeapps.list: mimeapps.list
     ~/.config/systemd/user: systemd/user
     ~/.emacs.d:
       path: .emacs.d
@@ -23,6 +24,7 @@
     ~/.gnupg:
       path: .gnupg
       force: :true
+    ~/.local/share/applications/emacsclient.desktop: applications/emacsclient.desktop  
     ~/.password-store: .pws
     ~/.ssh:
       path: .ssh
