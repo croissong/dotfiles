@@ -13,6 +13,7 @@
       force: true
     ~/.config/i3: i3
     ~/.config/i3status: i3status
+    ~/.config/systemd/user: systemd/user
     ~/.emacs.d:
       path: .emacs.d
       force: true
@@ -33,7 +34,7 @@
     ~/.password-store: .pws
     /etc/fonts/local.conf: etc/fonts/local.conf
     /etc/locale.conf: etc/locale.conf
-    /etc/systemd/system/sleep.target.wants/i3lock.service: systemd/i3lock.service
+    /etc/systemd/system/sleep.target.wants/i3lock.service: systemd/system/i3lock.service
 - shell:
     -
       - [git submodule update --init --recursive && git submodule foreach git checkout master, Installing submodules]

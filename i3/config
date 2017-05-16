@@ -119,7 +119,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         font pango: 12px
-        #tray_output VGA-1
+        tray_output DP-1
         wheel_up_cmd nop
         wheel_down_cmd nop
 }
@@ -127,7 +127,6 @@ bar {
 focus_follows_mouse no  
   
 new_window none
-exec emacs --daemon
 exec redshift-gtk
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'; exec emacsclient -c"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'; exec google-chrome-unstable"

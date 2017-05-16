@@ -3,7 +3,7 @@
   "border": "none",
   "current_border_width": 0,
   "floating": "auto_off",
-  "fullscreen_mode": 1,
+  "fullscreen_mode": 0,
   "geometry": {
     "height": 900,
     "width": 1521,
