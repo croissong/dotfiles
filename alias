@@ -10,7 +10,7 @@ mkcd () {
 }
 
 alias mkdir='mkcd'
-alias ls='ls -Ash --color=auto'
+alias ls='ls -Ah --color=auto' 
 alias grep='grep --color'
 # "sudo !!"  seems better
 alias please='sudo $( history -p !! )' 
@@ -24,4 +24,3 @@ alias update='pacaur --noedit -Syu'
 alias install='pacaur -S --noedit'  
 alias uninstall='pacaur -Rn'
 alias emacsc='emacsclient -c -a emacs'
-alias ls='ls --color=auto'
