@@ -1,4 +1,3 @@
-systemd/user/default.target.wants
 /.ssh/id_rsa*
 !/.ssh/*.pub
 .gnupg/private-keys-v1.d
