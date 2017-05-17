@@ -117,6 +117,9 @@ bindsym $mod+r mode "resize"
 
 # finds out, if available)
 bar {
+        mode hide
+        hidden_state hide
+        modifier Mod4
         status_command i3status
         font pango: 12px
         tray_output DP-1
