@@ -48,3 +48,5 @@
 ! Light Grey (Selection) + White (Current Line)
 *.color7:       t_selection
 *.color15:      t_current_line
+
+Emacs.font: Fantasque Sans Mono 13
