@@ -1,0 +1,3 @@
+bindkey -e
+bindkey '^[Od' emacs-backward-word
+bindkey '^[Oc' emacs-forward-word
