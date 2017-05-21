@@ -14,9 +14,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 source ~/.dotfiles/keybinds
-# End of lines configured by zsh-newuser-install
-
-
 source ~/.dotfiles/env
 source ~/.dotfiles/alias
 
