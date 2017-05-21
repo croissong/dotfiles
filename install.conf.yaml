@@ -11,10 +11,12 @@
     ~/.bash_profile:
       path: .bash_profile
       force: true
+    ~/.config/autostart: autostart  
     ~/.config/i3: i3
     ~/.config/i3status: i3status
     ~/.config/mimeapps.list: mimeapps.list
     ~/.config/systemd/user: systemd/user
+    ~/.chrome-remote-desktop-session: .chrome-remote-desktop-session
     ~/.emacs.d:
       path: .emacs.d
       force: true
