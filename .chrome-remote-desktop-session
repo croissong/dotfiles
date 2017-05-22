@@ -1,0 +1,5 @@
+# You will have to uncomment one of the following lines for CRD to work
+# Remove the # and select ctrl-X to finish.
+# 
+# exec i3-with-shmlog
+exec i3
