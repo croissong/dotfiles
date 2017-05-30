@@ -300,8 +300,8 @@ compose '0' 'A' to Aring
 compose '0' 'a' to aring
 compose 'A' 'A' to Aring
 compose 'a' 'a' to aring
-compose '°' 'A' to Aring
-compose '°' 'a' to aring
+compose '\260' 'A' to Aring
+compose '\260' 'a' to aring
 compose 'A' 'E' to AE
 compose 'a' 'e' to ae
 compose ',' 'C' to Ccedilla
