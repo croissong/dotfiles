@@ -2,6 +2,7 @@
 	path = .emacs.d
 	url = git@github.com:Croissong/.emacs.d.git
 	branch = master
-[submodule "arch"]
-	path = arch
+[submodule ".arch"]
+	path = .arch
 	url = git@github.com:Croissong/arch.git
+	branch = master
