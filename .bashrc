@@ -12,3 +12,4 @@ BROWSER=/usr/bin/gooogle-chrome-unstable
 EDITOR=/usr/bin/emacs
 # <<< END ADDED BY CNCHI INSTALLER
 TERMINAL=/usr/bin/urxvt
+#test
