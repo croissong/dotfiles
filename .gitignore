@@ -2,7 +2,8 @@
 !/.ssh/known_hosts
 !/.ssh/config
 .gnupg
-!.gnupg/gnupg.conf
+!.gnupg/gpg.conf
+!.gnupg/gpg-agent.conf
 /.yadm
 /.histfile
 /.zcompdump
