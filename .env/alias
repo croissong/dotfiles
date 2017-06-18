@@ -10,7 +10,7 @@ mkcd () {
 }
 
 alias mkdir='mkcd'
-alias ls='ls -Ah --color=auto' 
+alias ls='exa -a --group-directories-first' 
 alias grep='grep --color'
 # "sudo !!"  seems better
 alias please='sudo $( history -p !! )' 

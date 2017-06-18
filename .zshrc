@@ -1,5 +1,3 @@
-# The following lines were added by compinstall
-
 zstyle ':completion:*' completer _complete _ignored
 zstyle :compinstall filename '/home/skender/.zshrc'
 
@@ -13,9 +11,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-source ~/env/keybinds
-source ~/env/vars
-source ~/env/alias
+source ~/.env/keybinds
+source ~/.env/vars
+source ~/.env/alias
 
 gpg-connect-agent updatestartuptty /bye >/dev/null
 

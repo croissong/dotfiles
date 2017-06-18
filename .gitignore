@@ -7,3 +7,4 @@
 /.histfile
 /.zcompdump
 /.wget-hsts
+/.cargo  
