@@ -4,7 +4,7 @@
 [commit]
 	template = ~/.config/git/commit_template.txt
 [core]
-	excludesfile = ~/.config/git/.gitignore
+	excludesfile = ~/.config/git/ignore
 [diff]
 	submodule = log
 [status]
