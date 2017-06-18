@@ -17,6 +17,8 @@ source ~/env/keybinds
 source ~/env/vars
 source ~/env/alias
 
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 source /usr/share/zsh/share/antigen.zsh
 
 # Load the oh-my-zsh's library.

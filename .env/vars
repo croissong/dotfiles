@@ -7,3 +7,4 @@ export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export GOPATH=$HOME/code/goprojects
 export PATH=$PATH:$GOPATH/bin
 export XDG_CONFIG_HOME=$HOME/.config
+export GPG_TTY=$(tty)

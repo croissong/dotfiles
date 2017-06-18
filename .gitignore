@@ -1,6 +1,5 @@
 /.ssh
 !/.ssh/known_hosts
-!/.ssh/config
 .gnupg
 !.gnupg/gpg.conf
 !.gnupg/gpg-agent.conf
