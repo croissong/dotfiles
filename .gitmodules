@@ -2,10 +2,6 @@
 	path = dotbot
 	url = git@github.com:anishathalye/dotbot.git
   branch = master
-[submodule ".pws"]
-	path = .pws
-	url = git@github.com:Croissong/.pws.git
-  branch = master
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = git@github.com:Croissong/.emacs.d.git

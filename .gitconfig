@@ -2,9 +2,9 @@
 	name = Jan Moeller
 	email = jan.moeller0@gmail.com
 [commit]
-	template = ~/git/commit_template.txt
+	template = ~/.config/git/commit_template.txt
 [core]
-	excludesfile = ~/git/.gitignore
+	excludesfile = ~/.config/git/.gitignore
 [diff]
 	submodule = log
 [status]
