@@ -13,9 +13,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-source ~/.dotfiles/keybinds
-source ~/.dotfiles/env
-source ~/.dotfiles/alias
+source ~/env/keybinds
+source ~/env/vars
+source ~/env/alias
 
 source /usr/share/zsh/share/antigen.zsh
 
