@@ -4,7 +4,7 @@
 .gnupg
 !.gnupg/gpg.conf
 !.gnupg/gpg-agent.conf
-/.yadm
+/.yadm/repo.git
 /.histfile
 /.zcompdump
 /.wget-hsts
