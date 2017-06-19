@@ -7,4 +7,6 @@
 /.histfile
 /.zcompdump
 /.wget-hsts
-/.cargo  
+/.cargo
+/qa
+/.Xauthority  
