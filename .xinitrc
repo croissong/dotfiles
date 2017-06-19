@@ -1,5 +1,4 @@
 xrdb -merge -I$HOME ~/.Xresources
-setxkbmap -option caps:ctrl_modifier
 
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
