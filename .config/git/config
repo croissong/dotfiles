@@ -9,5 +9,6 @@
 	submodule = log
 [status]
 	submodulesummary = 1
+	showuntrackedfiles = normal
 [credential]
 	helper = cache
