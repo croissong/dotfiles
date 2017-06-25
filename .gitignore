@@ -24,7 +24,6 @@
 /.oracle_jre_usage  
 /.pki  
 /.ssh
-!/.ssh/known_hosts
 /.wget-hsts
 /.Xauthority  
 /.yadm/repo.git
