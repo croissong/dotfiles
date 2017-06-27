@@ -3,6 +3,7 @@
 /.config/menus
 /.config/pulse
 /.config/ranger/*
+/.config/systemd/user/*.wants
 !/.config/ranger/rc.conf
 /.esd_auth  
 /.gnome  
@@ -21,6 +22,7 @@
 !/.local/share/applications/emacsclient.desktop
 /.local/share/desktop-directories
 /.local/share/icons
+/.nvidia-settings-rc
 /.oracle_jre_usage  
 /.pki  
 /.ssh
