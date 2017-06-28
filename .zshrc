@@ -11,10 +11,6 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-source ~/.env/keybinds
-source ~/.env/vars
-source ~/.env/alias
-
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 source /usr/share/zsh/share/antigen.zsh
@@ -34,3 +30,9 @@ antigen theme avit
 
 # Tell Antigen that you're done.
 antigen apply
+
+source ~/.env/keybinds
+source ~/.env/vars
+source ~/.env/alias
+
+tmux attach-session -d
