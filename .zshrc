@@ -32,7 +32,6 @@ antigen theme avit
 antigen apply
 
 source ~/.env/keybinds
-source ~/.env/vars
 source ~/.env/alias
 
-tmux attach-session -d
+[[ -z "$TMUX" ]] && tmux attach-session -d
