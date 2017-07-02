@@ -3,6 +3,7 @@
 /.config/discordcanary
 /.config/google-chrome*
 /.config/menus
+/.config/pavucontrol.ini
 /.config/pulse
 /.config/ranger/*
 !/.config/ranger/rc.conf
