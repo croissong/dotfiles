@@ -6,3 +6,6 @@
 	path = .arch
 	url = git@github.com:Croissong/arch.git
 	branch = master
+[submodule ".priv"]
+	path = .priv
+	url = git@gitlab.com:Croissong/priv.git

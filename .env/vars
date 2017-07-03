@@ -4,6 +4,7 @@ export EDITOR="emacsclient -t"
 export GOPATH=$HOME/code/goprojects
 export GPG_TTY=$(tty)
 export JAVA_HOME=/usr/lib/jvm/java-8-jdk
+export PASSWORD_STORE_DIR=~/.priv/password-store  
 export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
 export VISUAL="emacsclient -c -a emacs" 
