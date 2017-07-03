@@ -1,11 +1,10 @@
 export ALTERNATE_EDITOR=""
-export BROWSER=/usr/bin/gooogle-chrome-unstable
+export BROWSER=/usr/bin/google-chrome-unstable
 export EDITOR="emacsclient -t"
 export GOPATH=$HOME/code/goprojects
 export GPG_TTY=$(tty)
 export JAVA_HOME=/usr/lib/jvm/java-8-jdk
-export RANGER_LOAD_DEFAULT_RC=FALSE
+export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
 export VISUAL="emacsclient -c -a emacs" 
 export XDG_CONFIG_HOME=$HOME/.config
-  
