@@ -1,5 +1,6 @@
 /.antigen
 /.cargo
+/.config/dconf
 /.config/discordcanary
 /.config/google-chrome*
 /.config/menus
@@ -26,6 +27,7 @@
 !/.local/share/applications/emacsclient.desktop
 /.local/share/desktop-directories
 /.local/share/icons
+/.local/share/recently-used.xbel
 /.nv
 /.nvidia-settings-rc
 /.oracle_jre_usage  
@@ -35,5 +37,6 @@
 /.Xauthority  
 /.yadm/repo.git
 /.zcompdump
-/IdeaProjects  
+/IdeaProjects
+/Downloads
 /qa
