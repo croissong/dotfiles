@@ -32,7 +32,7 @@
 /.nvidia-settings-rc
 /.oracle_jre_usage  
 /.pki
-/.ssh
+/.ssh/id_rsa*
 /.wget-hsts
 /.Xauthority  
 /.yadm/repo.git
