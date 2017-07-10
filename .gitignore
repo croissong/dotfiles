@@ -1,5 +1,6 @@
 /.antigen
 /.cargo
+/.config/configstore
 /.config/dconf
 /.config/discordcanary
 /.config/google-chrome*
@@ -14,6 +15,7 @@
 /.gnupg
 !/.gnupg/gpg.conf
 !/.gnupg/gpg-agent.conf
+/.hex
 /.histfile
 /.IdeaIC2017.1/system
 /.IdeaIC2017.1/config/*
@@ -28,6 +30,8 @@
 /.local/share/desktop-directories
 /.local/share/icons
 /.local/share/recently-used.xbel
+/.mix
+/.npm
 /.nv
 /.nvidia-settings-rc
 /.oracle_jre_usage  
@@ -36,7 +40,9 @@
 /.wget-hsts
 /.Xauthority  
 /.yadm/repo.git
+/.yarnrc
 /.zcompdump
 /IdeaProjects
+/code
 /Downloads
 /qa
