@@ -1,5 +1,5 @@
 * unfreeze frozen emacs                                         :emacs:linux:
 [[https://emacs.stackexchange.com/a/649][@stackexchange.com]]
 #+BEGIN_SRC shell
-pgrep -a emacs | kill -SIGUSR2
+pgrep -x emacs | xargs kill -SIGUSR2
 #+END_SRC
