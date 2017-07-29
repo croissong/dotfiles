@@ -10,6 +10,8 @@
 /.config/ranger/*
 !/.config/ranger/rc.conf
 /.config/systemd/user/*.wants
+/.config/yarn/link
+/.config/yarn/global/node_modules
 /.esd_auth  
 /.gnome  
 /.gnupg
