@@ -2,7 +2,7 @@ source ~/.env/functions.sh
 
 alias mkdir='mkcd'
 alias ls='exa -a --group-directories-first'
-alias rg='rg --vimgrep --no-heading --ignore-case --ignore-file /home/skender/.config/ripgrep/ignore'
+alias rg='rg --vimgrep --no-heading --smart-case --ignore-file /home/skender/.config/ripgrep/ignore'
 # "sudo !!"  seems better
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias listps='ps aux | grep -v "ps aux" | grep -Ev "\[.+\]" | grep -v grep'
