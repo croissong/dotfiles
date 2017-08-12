@@ -3,3 +3,8 @@
 #+BEGIN_SRC shell
 pgrep -x emacs | xargs kill -SIGUSR2
 #+END_SRC
+* fix gpg tty
+[[https://unix.stackexchange.com/questions/217737/pinentry-fails-with-gpg-agent-and-ssh][@stackexchange.com]]
+#+BEGIN_SRC shell
+echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
+#+END_SRC

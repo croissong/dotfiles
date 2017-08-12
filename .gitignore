@@ -32,7 +32,9 @@
 /.local/share/desktop-directories
 /.local/share/icons
 /.local/share/recently-used.xbel
+/.local/share/Trash
 /.mix
+/.nimble
 /.npm
 /.nv
 /.nvidia-settings-rc
