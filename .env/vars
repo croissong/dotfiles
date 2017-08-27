@@ -9,3 +9,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
 export VISUAL="emacsclient -c -a emacs" 
 export XDG_CONFIG_HOME=$HOME/.config
+export WAKATIME_HOME=$HOME/.priv/wakatime
+  
+source ~/.priv/vars
