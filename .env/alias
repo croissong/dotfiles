@@ -14,3 +14,5 @@ alias update='pacaur --noedit -Syu'
 alias install='pacaur -S --noedit'  
 alias uninstall='pacaur -Rn'
 alias emacsc='emacsclient -c -a emacs'
+alias unpack=dtrx
+alias mktar='tar zcvf'
