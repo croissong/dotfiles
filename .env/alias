@@ -15,4 +15,4 @@ alias install='pacaur -S --noedit'
 alias uninstall='pacaur -Rn'
 alias emacsc='emacsclient -c -a emacs'
 alias unpack=dtrx
-alias mktar='tar zcvf'
+alias pack='tar zcvf'
