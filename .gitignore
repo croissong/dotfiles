@@ -12,7 +12,8 @@
 /.config/systemd/user/*.wants
 /.config/yarn/link
 /.config/yarn/global/node_modules
-/.esd_auth  
+/.esd_auth
+/.gem
 /.gnome  
 /.gnupg
 !/.gnupg/gpg.conf

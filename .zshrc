@@ -33,5 +33,6 @@ antigen apply
 
 source ~/.env/keybinds
 source ~/.env/alias
+source ~/.bin/tmuxinator.zsh
 
 [[ -z "$TMUX" ]] && tmux attach-session -d
