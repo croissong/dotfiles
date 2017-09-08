@@ -1,5 +1,5 @@
 # ~/.tmuxinator/home.yml
-
+attach: false
 name: home
 root: ~/
 
@@ -32,11 +32,11 @@ root: ~/
 
 windows:
   - editor:
-      layout: even-vertical
+      layout: even-horizontal
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - zsh
-        - zsh
-        - zsh
+        - 
+        - 
+        - 
