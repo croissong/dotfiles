@@ -1,0 +1,21 @@
+# ~/.tmuxinator/patrician.yml
+
+name: patrician
+root: ~/code/patrician/
+
+pre: systemctl start postgresql
+
+windows:
+  - app:
+      layout: even-horizontal
+      root: app
+      panes:
+        - yarn start
+        -
+  - backend:
+      layout: even-horizontal
+      panes:
+        - phoenix:
+            - cd server
+            - mix phx.server
+        - 
