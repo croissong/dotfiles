@@ -5,6 +5,7 @@
 /.config/discordcanary
 /.config/google-chrome*
 /.config/menus
+/.config/mpv/watch_later
 /.config/pavucontrol.ini
 /.config/pulse
 /.config/ranger/*
@@ -36,10 +37,12 @@
 /.local/share/Trash
 /.mix
 /.nimble
+/.node-gyp
 /.npm
 /.nv
 /.nvidia-settings-rc
-/.oracle_jre_usage  
+/.oracle_jre_usage
+/.psql_history
 /.pki
 /.ssh/id_rsa*
 /.wget-hsts

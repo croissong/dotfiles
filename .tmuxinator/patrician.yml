@@ -3,19 +3,31 @@
 name: patrician
 root: ~/code/patrician/
 
-pre: systemctl start postgresql
+pre: systemctl start docker
+
+startup_window: app
 
 windows:
-  - app:
+  - docker:
       layout: even-horizontal
-      root: app
+      root: ~/code/patrician/docker
+      panes:
+        - docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+  - backend:
+      layout: even-horizontal
+      root: ~/code/patrician/server
+      panes:
+        - mix phx.server
+        - 
+  - koa:
+      layout: even-horizontal
+      root: ~/code/patrician/koa
       panes:
         - yarn start
         -
-  - backend:
+  - app:
       layout: even-horizontal
+      root: ~/code/patrician/app
       panes:
-        - phoenix:
-            - cd server
-            - mix phx.server
-        - 
+        - yarn start
+        -
