@@ -12,7 +12,7 @@ windows:
       layout: even-horizontal
       root: ~/code/patrician/docker
       panes:
-        - docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+        - docker-compose -f docker-compose.dev.yml up
   - backend:
       layout: even-horizontal
       root: ~/code/patrician/server
