@@ -1,7 +1,12 @@
 <keymap version="1" name="my-keys" parent="Default for XWin">
+  <action id="$SelectAll" />
   <action id="EditorLineEnd">
     <keyboard-shortcut first-keystroke="end" />
     <keyboard-shortcut first-keystroke="ctrl e" />
+  </action>
+  <action id="EditorLineStart">
+    <keyboard-shortcut first-keystroke="home" />
+    <keyboard-shortcut first-keystroke="ctrl a" />
   </action>
   <action id="RecentFiles" />
   <action id="Vcs.ShowMessageHistory">
