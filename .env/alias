@@ -1,6 +1,5 @@
 source ~/.env/functions.sh
-
-alias mkdir='mkcd'
+  
 alias ls='exa -a --group-directories-first'
 alias rg='rg --vimgrep --no-heading --smart-case --ignore-file /home/skender/.config/ripgrep/ignore'
 # "sudo !!"  seems better
