@@ -4,6 +4,7 @@
 /.config/dconf
 /.config/discordcanary
 /.config/google-chrome*
+/.config/gtk-2.0
 /.config/menus
 /.config/mpv/watch_later
 /.config/pavucontrol.ini
