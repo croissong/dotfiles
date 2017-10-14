@@ -14,6 +14,7 @@
 /.config/systemd/user/*.wants
 /.config/yarn/link
 /.config/yarn/global/node_modules
+/.docker
 /.esd_auth
 /.gem
 /.gnome  
@@ -46,6 +47,8 @@
 /.oracle_jre_usage
 /.psql_history
 /.pki
+/.rustup/*
+!/.rustup/settings.toml
 /.ssh/id_rsa*
 /.wget-hsts
 /.Xauthority  
