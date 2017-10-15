@@ -7,9 +7,6 @@ autoload -Uz promptinit
 promptinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 
 gpg-connect-agent updatestartuptty /bye >/dev/null
 

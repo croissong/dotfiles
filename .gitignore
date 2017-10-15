@@ -50,6 +50,7 @@
 /.rustup/*
 !/.rustup/settings.toml
 /.ssh/id_rsa*
+/.tmux/  
 /.wget-hsts
 /.Xauthority  
 /.yadm/repo.git
