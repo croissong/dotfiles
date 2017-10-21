@@ -50,3 +50,6 @@
 *.color15:      t_current_line
 
 Emacs.font: Fantasque Sans Mono 12
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
