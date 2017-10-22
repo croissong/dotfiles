@@ -6,5 +6,7 @@ pgrep -x emacs | xargs kill -SIGUSR2
 * fix gpg tty
 [[https://unix.stackexchange.com/questions/217737/pinentry-fails-with-gpg-agent-and-ssh][@stackexchange.com]]
 #+BEGIN_SRC shell
+gpgconf --kill gpg-agent
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
+or emacs setenv to echo $GPG_TTY manually
 #+END_SRC

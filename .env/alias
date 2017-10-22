@@ -15,4 +15,5 @@ alias uninstall='pacaur -Rn'
 alias emacsc='emacsclient -c -a emacs'
 alias unpack=dtrx
 alias pack='tar zcvf'
-alias sk=sk-tmux  
+alias sk=sk-tmux
+alias ssh='TERM=xterm ssh'
