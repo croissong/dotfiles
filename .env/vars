@@ -11,5 +11,6 @@ export VISUAL="emacsclient -c -a emacs"
 export XDG_CONFIG_HOME=$HOME/.config
 export WAKATIME_HOME=$HOME/.priv/wakatime
 export npm_config_prefix=~/.node_modules
-  
+export NODE_MODULES_PATH=$HOME/.node_modules
+    
 source ~/.priv/vars

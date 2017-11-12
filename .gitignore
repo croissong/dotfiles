@@ -41,6 +41,7 @@
 /.mix
 /.nimble
 /.node-gyp
+/.node_modules/  
 /.npm
 /.nv
 /.nvidia-settings-rc
@@ -54,6 +55,7 @@
 /.wget-hsts
 /.Xauthority  
 /.yadm/repo.git
+/.yarn/
 /.yarnrc
 /.zcompdump
 /IdeaProjects
