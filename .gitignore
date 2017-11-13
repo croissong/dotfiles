@@ -8,7 +8,8 @@
 /.config/menus
 /.config/mpv/watch_later
 /.config/pavucontrol.ini
-/.config/pulse
+/.config/pulse/*
+!/.config/pulse/default.pa
 /.config/ranger/*
 !/.config/ranger/rc.conf
 /.config/systemd/user/*.wants
