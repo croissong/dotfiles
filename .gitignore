@@ -32,6 +32,7 @@
 !/.IdeaIC2017.2/config/keymaps
 /.java
 /.lesshst
+/.local/bin/  
 /.local/share/applications/*
 !/.local/share/applications/emacsclient.desktop
 /.local/share/desktop-directories

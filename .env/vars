@@ -4,13 +4,15 @@ export EDITOR="emacsclient -t"
 export GOPATH=$HOME/code/goprojects
 export GPG_TTY=$(tty)
 export JAVA_HOME=/usr/lib/jvm/java-8-jdk
+export LESS='IMR'
+export npm_config_prefix=~/.node_modules  
 export PASSWORD_STORE_DIR=~/.priv/password-store  
 export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
 export VISUAL="emacsclient -c -a emacs" 
-export XDG_CONFIG_HOME=$HOME/.config
 export WAKATIME_HOME=$HOME/.priv/wakatime
-export npm_config_prefix=~/.node_modules
-export NODE_MODULES_PATH=$HOME/.node_modules
+export XDG_CONFIG_HOME=$HOME/.config
+
+export PATH=$PATH:$GOPATH/bin:$npm_config_prefix/bin:~/.local/bin
     
 source ~/.priv/vars

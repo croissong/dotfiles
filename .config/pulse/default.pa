@@ -134,8 +134,8 @@ load-module module-role-cork
 ### loading modules and rerouting streams.
 load-module module-filter-heuristics
 load-module module-filter-apply
-load-module module-echo-cancel
+load-module module-echo-cancel source_master=alsa_input.pci-0000_00_1b.0.analog-stereo source_name=mic_echo_cancelled source_properties=device.description=Echo
 
 ### Make some devices default
 #set-default-sink output
-#set-default-source input
+set-default-source mic_echo_cancelled

@@ -13,3 +13,12 @@
 	showuntrackedfiles = normal
 [credential]
 	helper = cache
+[difftool "ediff"]
+  cmd = emacsclient --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
