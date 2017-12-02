@@ -30,7 +30,7 @@
 /.IdeaIC2017.2/config/options/*
 !/.IdeaIC2017.2/config/options/keymap.xml
 !/.IdeaIC2017.2/config/keymaps
-/.java
+/.java/
 /.lesshst
 /.local/bin/  
 /.local/share/applications/*
@@ -60,7 +60,6 @@
 /.yarn/
 /.yarnrc
 /.zcompdump
-/IdeaProjects
 /code
 /Downloads
 /qa

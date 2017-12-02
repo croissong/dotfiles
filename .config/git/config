@@ -14,7 +14,7 @@
 [credential]
 	helper = cache
 [difftool "ediff"]
-  cmd = emacsclient --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+  cmd = emacsclient -ce \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
 [color]
   diff = auto
   status = auto
