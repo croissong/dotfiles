@@ -3,22 +3,20 @@ start() {
     sudo touch /var/run/xl2tpd/l2tp-control
     if [ $(systemctl is-active strongswan) != "active" ]; then
         systemctl start strongswan
-    fi
-    if [ $(systemctl is-active xl2tpd) != "active" ]; then
         systemctl start xl2tpd
     fi
     sudo ipsec up myvpn
     sudo sh -c 'echo "c myvpn" > /var/run/xl2tpd/l2tp-control'
-    sudo ip route replace 46.101.139.198 via 192.168.0.1
-    echo 'creating adapter...'
-    sleep 2
-    sudo ip route replace default dev ppp0
+    sleep 3
+    sudo ip r add 10.0.0.0/8 dev ppp0 scope link
 }
 
 stop() {
     sudo sh -c 'echo "d myvpn" > /var/run/xl2tpd/l2tp-control'
     sudo ipsec down myvpn
-    sudo ip route replace default via 192.168.0.1 dev enp5s0
+    if [ $(systemctl is-active strongswan) == "active" ]; then
+        systemctl stop strongswan xl2tpd
+    fi
 }
 
 case "$1" in
