@@ -1,10 +1,10 @@
 [submodule ".emacs.d"]
-	path = .emacs.d
 	url = git@github.com:Croissong/.emacs.d.git
+	path = emacs/.emacs.d
 	branch = master
 [submodule ".arch"]
 	path = .arch
-	url = git@github.com:Croissong/arch.git
+	url = ../arch.git
 	branch = master
 [submodule ".priv"]
 	path = .priv
