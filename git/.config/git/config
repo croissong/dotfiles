@@ -22,3 +22,25 @@
   interactive = auto
   ui = true
   pager = true
+[http]
+	sslCert = /home/croissong/.ssh/svh/user.crt
+	sslKey = /home/croissong/.ssh/svh/userkey.pem
+[alias]
+  br = branch -vv
+  bra = branch -avv
+  cm = commit
+  co = checkout
+  ds = diff --stat
+  dc = diff --cached
+  hist = log --graph --decorate --date=short --pretty=format:\"%Cblue%h%Creset %ad %Cblue>%Creset %s%Cred%d%Creset [%Cgreen%an%Creset]\"
+  ls = ls-files
+  mt = mergetool
+  st = status -sb
+  # Checkout pull request from GitHub.
+  co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
+  # Recursively fast-forward all branches in the repo.
+  rffwd = "!bash ~/.git.d/git-ffwd-branches.sh"
+  # Recursively pull and update all branches in all repos in current dir.
+  rpull = "! ~/.git.d/git-rpull.sh"
+[apply]
+  whitespace = warn

@@ -9,3 +9,6 @@
 [submodule ".priv"]
 	path = .priv
 	url = git@gitlab.com:Croissong/priv.git
+[submodule "password-store"]
+	path = pass/.password-store
+	url = git@gitlab.com:Croissong/password-store.git  
