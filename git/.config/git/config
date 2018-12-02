@@ -4,6 +4,8 @@
 [commit]
 	template = ~/.config/git/commit_template.txt
   gpgsign = true
+[pull]
+  rebase = true  
 [core]
 	excludesfile = ~/.config/git/ignore
 [diff]
