@@ -10,7 +10,8 @@ general {
         colors = true
         interval = 60
 }
-  
+
+order += "battery 0"  
 order += "tztime local"
 
 
@@ -18,3 +19,8 @@ order += "tztime local"
 tztime local {
         format = "%A %m-%d %H:%M"
 }
+
+
+battery 0 {
+    format = "%status %percentage"
+}  
