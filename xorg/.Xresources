@@ -1,0 +1,121 @@
+! Solarized colorscheme for Xresources
+! ====================================
+!
+! To switch between light and dark Solarized theme define the symbol when
+! loading `.Xresources` with `xrdb` as follows:
+!
+!   $ xrdb -DSOLARIZED_LIGHT -merge ~/.Xresources
+!   $ xrdb -DSOLARIZED_DARK -merge ~/.Xresources
+
+#if !defined(SOLARIZED_LIGHT) && !defined(SOLARIZED_DARK)
+#define SOLARIZED_DARK
+#elif defined(SOLARIZED_LIGHT) && defined(SOLARIZED_DARK)
+#undef SOLARIZED_LIGHT
+#endif
+
+! Define Solarized colors
+! -----------------------
+
+#define S_yellow #b58900
+#define S_orange #cb4b16
+#define S_red #dc322f
+#define S_magenta #d33682
+#define S_violet #6c71c4
+#define S_blue #268bd2
+#define S_cyan #2aa198
+#define S_green #859900
+
+#ifdef SOLARIZED_LIGHT
+#define S_base03 #fdf6e3
+#define S_base02 #eee8d5
+#define S_base01 #93a1a1
+#define S_base00 #839496
+#define S_base0 #657b83
+#define S_base1 #586e75
+#define S_base2 #073642
+#define S_base3 #002b36
+#endif
+
+#ifdef SOLARIZED_DARK
+#define S_base03 #002b36
+#define S_base02 #073642
+#define S_base01 #586e75
+#define S_base00 #657b83
+#define S_base0 #839496
+#define S_base1 #93a1a1
+#define S_base2 #eee8d5
+#define S_base3 #fdf6e3
+#endif
+
+*color0: S_base02
+*color1: S_red
+*color2: S_green
+*color3: S_yellow
+*color4: S_blue
+*color5: S_magenta
+*color6: S_cyan
+*color7: S_base2
+*color8: S_base03
+*color9: S_orange
+*color10: S_base01
+*color11: S_base00
+*color12: S_base0
+*color13: S_violet
+*color14: S_base1
+*color15: S_base3
+
+*vt100.foreground:          S_base0
+*vt100.background:          S_base03
+*pointerColorForeground:    S_base1
+*pointerColorBackground:    S_base01
+*cursorColor:               S_base1
+
+
+! Fonts
+! =====
+
+#define FONT_REGULAR xft:Hack:style=Regular:size=14
+#define FONT_BOLD xft:Hack:style=Bold:size=14
+#define FONT_ITALIC xft:Hack:style=Italic:size=14
+Xft.dpi: 96
+Xft.lcdfilter: lcddefault
+Xft.antialias: true
+Xft.autohint: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+
+
+! XTerm
+! =====
+
+XTerm*faceName: Hack
+XTerm*faceSize: 14
+XTerm*locale: true
+XTerm*scaleHeight: 1.01
+
+
+! URxvt
+! =====
+
+! Colors
+URxvt*foreground: S_base0
+URxvt*background: S_base03
+URxvt*font: FONT_REGULAR
+URxvt*boldFont: FONT_BOLD
+URxvt*italicFont: FONT_ITALIC
+URxvt*boldItalicFont: FONT_BOLD
+URxvt.colorIT: S_magenta
+URxvt.colorBD: S_green
+URxvt.colorUL: S_blue
+
+! Behavior
+URxvt*saveLines: 65535
+URxvt.scrollBar: false
+URxvt*urgentOnBell: true
+URxvt.scrollWithBuffer: true
+
+! Make URL clickable
+URxvt.matcher.button: 1
+URxvt.matcher.launcher: /usr/bin/xdg-open
+URxvt.url-launcher: /usr/bin/xdg-open

@@ -1,0 +1,10 @@
+Description='A basic dhcp ethernet connection'
+Interface=enp0s31f6
+Connection=ethernet
+IP=dhcp
+SkipNoCarrier=yes
+DHCPClient=dhcpcd
+DHCPReleaseOnStop=no
+IP6=dhcp
+DHCP6Client=dhclient
+IP6=stateless

@@ -8,6 +8,7 @@ alias listps='ps aux | grep -v "ps aux" | grep -Ev "\[.+\]" | grep -v grep'
 alias usg='du -h --max-depth=1 -x'
 alias sysl='tail /var/log/syslog'
 alias survey="history |awk '{a[\$2]++} END{for(i in a){printf \"%5d\t%s \n\",a[i],i}}'|sort -rn|head "
+alias clip="xclip -sel c"
 
 alias update='pacaur --noedit -Syu'
 alias install='pacaur -S --noedit'  
@@ -17,3 +18,7 @@ alias unpack=dtrx
 alias pack='tar zcvf'
 alias sk=sk-tmux
 alias ssh='TERM=xterm ssh'
+alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+alias open='xdg-open'
+alias dud='du -hd1'
+alias grepi='grep -ri --color=auto'

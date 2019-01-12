@@ -1,18 +1,35 @@
 export ALTERNATE_EDITOR=""
-export BROWSER=/usr/bin/google-chrome-unstable
+export BROWSER=/usr/bin/firefox-beta
 export EDITOR="emacsclient -t"
 export GOPATH=$HOME/code/goprojects
 export GPG_TTY=$(tty)
 export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export LESS='IMR'
-export npm_config_prefix=~/.node_modules  
+export NPM_CONFIG_PREFIX=~/.node_modules
 export PASSWORD_STORE_DIR=~/.priv/password-store  
 export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
 export VISUAL="emacsclient -c -a emacs" 
 export WAKATIME_HOME=$HOME/.priv/wakatime
 export XDG_CONFIG_HOME=$HOME/.config
+export KREW_ROOT=$HOME/.krew
 
-export PATH=$PATH:$GOPATH/bin:$npm_config_prefix/bin:~/.local/bin
+export TERM=xterm-256color
+
+LOCAL_BIN=$HOME/.local/bin
+YARN_BIN=$HOME/.yarn/bin
+
+export PATH=$PATH:$GOPATH/bin:$NPM_CONFIG_PREFIX/bin:$YARN_BIN:$LOCAL_BIN:$KREW_ROOT/bin
     
-source ~/.priv/vars
+source ~/dotfiles/.priv/vars
+
+
+HISTORY_IGNORE="(ls *|pwd|pass*)"
+HISTTIMEFORMAT="%d.%m.%y %T " 
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+
+
+# todo https://github.com/zoresvit/dotfiles/blob/master/bash/.bashrc.local

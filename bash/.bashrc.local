@@ -1,5 +1,1 @@
-BROWSER=/usr/bin/firefox-developer-edition
-EDITOR=/usr/bin/emacs
-# <<< END ADDED BY CNCHI INSTALLER
-TERMINAL=/usr/bin/urxvt
-export PATH=$PATH:$HOME/.local/bin:$HOME/.yarn/bin
+source ~/dotfiles/.env/vars
