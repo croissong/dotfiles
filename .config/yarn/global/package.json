@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@angular/cli": "^1.5.0",
-    "http-server": "^0.10.0",
-    "tslint": "^5.5.0",
-    "webpack-bundle-analyzer": "^2.9.1"
-  }
-}
