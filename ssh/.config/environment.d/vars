@@ -1,0 +1,17 @@
+BROWSER=/usr/bin/firefox-beta
+GOPATH=$HOME/code/goprojects
+EDITOR="emacsclient -t"
+GPG_TTY=$(tty)
+NPM_CONFIG_PREFIX=~/.node_modules
+PASSWORD_STORE_DIR=~/.priv/password-store
+XDG_CONFIG_HOME=$HOME/.config
+KREW_ROOT=$HOME/.krew
+
+LOCAL_BIN=$HOME/.local/bin
+YARN_BIN=$HOME/.yarn/bin
+
+PATH=$PATH:$GOPATH/bin:$NPM_CONFIG_PREFIX/bin:$YARN_BIN:$LOCAL_BIN:$KREW_ROOT/bin
+SSH_AGENT_PID=
+SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+
+DISPLAY=:0
