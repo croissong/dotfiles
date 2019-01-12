@@ -130,5 +130,5 @@ bar {
 focus_follows_mouse no  
   
 new_window none
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'; exec $EDITOR"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'; exec $VISUAL"
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'; exec $BROWSER"
