@@ -1,4 +1,0 @@
-yadm submodule update --init --recursive && yadm submodule foreach git checkout master
-(cd ~/.arch; .githooks/setup)
-(cd ~/.emacs.d; .githooks/setup)
-ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list
