@@ -1,0 +1,56 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 2 children
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 864,
+               "width": 1152,
+               "x": 384,
+               "y": 108
+            },
+            "name": "Slack - iogroup",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^Slack$",
+               // "instance": "^slack$",
+               // "title": "^Slack\\ \\-\\ iogroup$",
+               // "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 700,
+               "width": 1000,
+               "x": 460,
+               "y": 190
+            },
+            "name": "Production Alerts - Smart Voice Hub Mattermost - Smart Voice Hub",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^Mattermost$",
+               // "instance": "^mattermost$",
+               // "title": "^Production\\ Alerts\\ \\-\\ Smart\\ Voice\\ Hub\\ Mattermost\\ \\-\\ Smart\\ Voice\\ Hub$",
+               // "window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
