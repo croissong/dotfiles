@@ -1,6 +1,7 @@
 source ~/dotfiles/.env/functions.sh
   
 alias ls='exa -a --group-directories-first'
+alias find='fd'
 alias rg='rg --vimgrep --color always --no-heading --smart-case --hidden --ignore-file $HOME/.config/ripgrep/ignore'
 # "sudo !!"  seems better
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'

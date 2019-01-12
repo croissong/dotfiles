@@ -3,7 +3,6 @@ export GOPATH=$HOME/code/goprojects
 export EDITOR="emacsclient -t"
 export GPG_TTY=$(tty)
 export NPM_CONFIG_PREFIX=~/.node_modules
-export PASSWORD_STORE_DIR=~/.priv/password-store
 export XDG_CONFIG_HOME=$HOME/.config
 export KREW_ROOT=$HOME/.krew
 
