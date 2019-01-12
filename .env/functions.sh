@@ -8,12 +8,3 @@ mkcd () {
         *) mkdir -p "./$1" && cd "./$1";;
     esac
 }
-
-tmux-update-env () {
-    for key in SSH_AUTH_SOCK SSH_CONNECTION DISPLAY; do
-        if (tmux show-environment | grep "^${key}" > /dev/null); then
-            value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
-            export ${key}="${value}"
-        fi
-    done
-}

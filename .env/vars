@@ -9,6 +9,8 @@ export WAKATIME_HOME=$HOME/.priv/wakatime
 export TERM=xterm-256color
     
 source ~/dotfiles/.priv/vars
+source ~/dotfiles/.env/alias
+source ~/dotfiles/.env/keybinds
 source ~/dotfiles/.env/systemd_shared_vars
 
 
