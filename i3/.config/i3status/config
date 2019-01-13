@@ -11,6 +11,7 @@ general {
         interval = 60
 }
 
+order += "load"
 order += "battery 0"  
 order += "tztime local"
 
@@ -23,4 +24,8 @@ tztime local {
 
 battery 0 {
     format = "%status %percentage"
+}
+
+load {
+	format = " %1min"
 }  

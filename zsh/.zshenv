@@ -1,1 +1,1 @@
-source ~/dotfiles/.env/vars
+source ~/dotfiles/.env/env

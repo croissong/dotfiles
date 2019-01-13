@@ -3,7 +3,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export LESS='IMR'
 export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
-export VISUAL="emacsclient -c -a emacs" 
+export VISUAL="emacsclient -c" 
 export WAKATIME_HOME=$HOME/.priv/wakatime
 
 export TERM=xterm-256color
@@ -11,8 +11,6 @@ export TERM=xterm-256color
 source ~/dotfiles/.priv/vars
 source ~/dotfiles/.env/alias
 source ~/dotfiles/.env/keybinds
-source ~/dotfiles/.env/systemd_shared_vars
-
 
 HISTORY_IGNORE="(ls *|pwd|pass*)"
 HISTTIMEFORMAT="%d.%m.%y %T " 
