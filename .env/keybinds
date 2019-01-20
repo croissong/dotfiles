@@ -1,3 +1,5 @@
 bindkey -e
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
+bindkey '^[ö' backward-word
+bindkey '^[#' forward-word
