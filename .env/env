@@ -1,14 +1,3 @@
-export BROWSER=/usr/bin/firefox-beta
-export GOPATH=$HOME/code/goprojects
-export EDITOR="emacsclient -t"
-export GPG_TTY=$(tty)
-export NPM_CONFIG_PREFIX=~/.node_modules
-export XDG_CONFIG_HOME=$HOME/.config
-export KREW_ROOT=$HOME/.krew
-
-LOCAL_BIN=$HOME/.local/bin
-YARN_BIN=$HOME/.yarn/bin
-
-export PATH=$PATH:$GOPATH/bin:$NPM_CONFIG_PREFIX/bin:$YARN_BIN:$LOCAL_BIN:$KREW_ROOT/bin
-export SSH_AGENT_PID=
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+set -a
+.  <(systemctl --user show-environment)
+set +a

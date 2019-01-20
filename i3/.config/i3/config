@@ -132,6 +132,6 @@ focus_follows_mouse no
 new_window none
 exec --no-startup-id i3-battery-popup -L 30 -n
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'; exec $VISUAL"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'; exec $BROWSER"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'; exec i3-sensible-terminal"
-exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'; exec slack; exec mattermost-desktop"
+# exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'; exec $BROWSER"
+# exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace-3.json'; exec i3-sensible-terminal"
+# exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.config/i3/workspace-4.json'; exec slack; exec mattermost-desktop"

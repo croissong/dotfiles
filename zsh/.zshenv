@@ -1,1 +1,1 @@
-source ~/dotfiles/.env/env
+source $HOME/dotfiles/.env/env
