@@ -22,6 +22,7 @@ else
               setopt autocd
               setopt inc_append_history
               AGKOZAK_BLANK_LINES=1
+              AGKOZAK_LEFT_PROMPT_ONLY=1
 
               export FZF_DEFAULT_COMMAND='fd --type f'
               export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

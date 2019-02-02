@@ -1,5 +1,5 @@
 export ALTERNATE_EDITOR=""
-export JAVA_HOME=/usr/lib/jvm/java-8-jdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export LESS='IMR'
 export RANGER_LOAD_DEFAULT_RC=false
 export TERMINAL=/usr/bin/urxvt
