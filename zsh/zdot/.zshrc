@@ -3,34 +3,38 @@ if [ -z "$TMUX" ]; then
 else
     setopt extendedglob
     autoload -Uz compinit
-    if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
-	            compinit;
-              else
-	                compinit -C;
-          fi;
-              autoload -Uz promptinit
-              promptinit
-              setopt COMPLETE_ALIASES
-              DISABLE_AUTO_UPDATE=true
+    for dump in $ZDOTDIR/.zcompdump(N.mh+24); do
+        compinit
+    done
 
-              source $ZDOTDIR/.zsh_plugins.sh
-              source ~/dotfiles/.env/profile
-              source ~/.tmuxinator/tmuxinator.zsh
-              setopt globdots
-              setopt PROMPT_SP
-              setopt auto_paramslash
-              setopt autocd
-              setopt inc_append_history
-              AGKOZAK_BLANK_LINES=1
-              AGKOZAK_LEFT_PROMPT_ONLY=1
+    compinit -C
 
-              export FZF_DEFAULT_COMMAND='fd --type f'
-              export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-              export FZF_ALT_C_COMMAND="fd -t d -d 5"
-              export ENHANCD_FILTER=fzf
+    autoload -Uz promptinit
+    promptinit
+    setopt COMPLETE_ALIASES
+    DISABLE_AUTO_UPDATE=true
 
-              source /usr/share/fzf/key-bindings.zsh
-              source /usr/share/fzf/completion.zsh
+    source $ZDOTDIR/.zsh_plugins.sh
+    source ~/dotfiles/.env/profile
+    source ~/.tmuxinator/tmuxinator.zsh
+    setopt GLOBDOTS
+    setopt PROMPT_SP
+    setopt AUTO_PARAMSLASH
+    setopt AUTOCD
+    setopt SHARE_HISTORY
+    setopt HIST_IGNORE_DUPS
+    setopt HIST_FIND_NO_DUPS
+    AGKOZAK_BLANK_LINES=1
+    AGKOZAK_LEFT_PROMPT_ONLY=1
 
-              zstyle ':completion:*' insert-tab false
-          fi
+    export FZF_DEFAULT_COMMAND='fd --type f'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    export FZF_ALT_C_COMMAND="fd -t d -d 5"
+    export ENHANCD_FILTER=fzf
+
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+    source $ZDOTDIR/zsh_overrides.zsh
+
+    zstyle ':completion:*' insert-tab false
+fi
