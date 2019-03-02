@@ -1,0 +1,15 @@
+{
+  "pacmanconf": "/etc/pacman.conf",
+  "answerclean": "None",
+  "answeredit": "None",
+  "answerdiff": "None",
+  "answerupgrade": "",
+  "sortby": "votes",
+  "gitflags": "",
+  "requestsplitn": 150,
+  "sudoloop": false,
+  "timeupdate": false,
+  "devel": false,
+  "cleanAfter": true,
+  "gitclone": true
+}
