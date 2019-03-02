@@ -15,7 +15,7 @@ else
     DISABLE_AUTO_UPDATE=true
 
     source $ZDOTDIR/.zsh_plugins.sh
-    source ~/dotfiles/.env/profile
+    source ~/dotfiles/env/profile
     source ~/.tmuxinator/tmuxinator.zsh
     setopt GLOBDOTS
     setopt PROMPT_SP

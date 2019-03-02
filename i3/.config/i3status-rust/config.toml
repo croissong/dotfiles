@@ -1,0 +1,32 @@
+[theme]
+name = "gruvbox-dark"
+[theme.overrides]
+good_bg = "#697700"
+
+[icons]
+name = "none"
+[icons.overrides]
+cogs = ""
+bat_full = " 100%"
+
+
+[[block]]
+block = "custom"
+command = "python $XDG_CONFIG_HOME/i3status-rust/redshift_block.py"
+interval = 1800
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+
+[[block]]
+block = "battery"
+interval = 60
+upower = true
+format = "{percentage}% {time}"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%A %m-%d %H:%M"
