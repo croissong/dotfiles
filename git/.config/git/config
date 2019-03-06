@@ -15,6 +15,7 @@
 	showuntrackedfiles = normal
 [credential]
 	helper = cache
+  helper = /usr/lib/git-core/git-credential-libsecret
 [difftool "ediff"]
   cmd = emacsclient -ce \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
 [color]
