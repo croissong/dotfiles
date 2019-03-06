@@ -8,6 +8,8 @@ name = "none"
 [icons.overrides]
 cogs = ""
 bat_full = " 100%"
+bat_charging = " + "
+bat_discharging = " - "
 
 
 [[block]]

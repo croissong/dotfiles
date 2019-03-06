@@ -1,4 +1,4 @@
-source ~/dotfiles/.env/functions.sh
+source ~/dotfiles/shell/functions.sh
   
 alias ls='exa -a --group-directories-first'
 alias find='fd -H'
