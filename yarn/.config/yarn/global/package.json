@@ -1,14 +1,9 @@
 {
   "dependencies": {
-    "@angular/cli": "^7.1.4",
-    "aurelia-cli": "^1.0.0-beta.9",
-    "gatsby": "^2.0.78",
-    "gatsby-cli": "^2.4.8",
-    "graphql-cli": "^3.0.3",
-    "http-server": "^0.11.1",
-    "jwt-cli": "^1.1.0",
-    "lesspass-cli": "^5.1.1",
-    "nodemon": "^1.18.9",
-    "npm-check": "^5.9.0"
+    "@angular/cli": "7.3.5",
+    "gatsby-cli": "2.4.13",
+    "http-server": "0.11.1",
+    "jwt-cli": "1.1.0",
+    "npm-check": "5.9.0"
   }
 }
