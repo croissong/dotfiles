@@ -1,2 +1,4 @@
-source $HOME/dotfiles/env/env
-export ZDOTDIR=$HOME/dotfiles/zsh/zdot
+set -a
+.  <(systemctl --user show-environment)
+set +a
+export ZDOTDIR=$MY_DOTFILES/zsh/zdot

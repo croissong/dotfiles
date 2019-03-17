@@ -7,9 +7,9 @@ export WAKATIME_HOME=$HOME/.priv/wakatime
 
 export TERM=xterm-256color
     
-source ~/dotfiles/.priv/vars
-source ~/dotfiles/shell/alias
-source ~/dotfiles/shell/keybinds
+source $MY_PRIV/vars
+source $MY_DOTFILES/shell/alias
+source $MY_DOTFILES/shell/keybinds
 
 HISTORY_IGNORE="(ls *|pwd|pass*)"
 HISTTIMEFORMAT="%d.%m.%y %T " 
