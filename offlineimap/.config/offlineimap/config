@@ -1,0 +1,31 @@
+[general]
+accounts = iogroup
+maxsyncaccounts = 1
+metadata = $XDG_CONFIG_HOME/offlineimap/meta
+Pythonfile = $MY_PRIV/offlineimap/offlineimap.py
+fsync = false
+
+[Account iogroup]
+localrepository = iogroup_local
+remoterepository = iogroup_remote
+quick = 10
+postsynchook = mu index --maildir ~/mail
+
+[Repository iogroup_local]
+type = Maildir
+localfolders = ~/mail/iogroup
+
+[Repository iogroup_remote]
+type = IMAP
+maxconnections = 3
+remoteusereval = get_user("iogroup")
+remotepasseval = get_pass("iogroup")
+remotehost = outlook.office365.com
+remoteport = 993
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+# These are effectively the same as the above
+# [Account Exchange]
+# [Repository LocalExchange]
+# [Repository RemoteExchange]
