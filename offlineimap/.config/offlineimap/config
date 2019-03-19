@@ -1,9 +1,10 @@
 [general]
-accounts = iogroup
+accounts = iogroup, gmail
 maxsyncaccounts = 1
 metadata = $XDG_CONFIG_HOME/offlineimap/meta
 Pythonfile = $MY_PRIV/offlineimap/offlineimap.py
 fsync = false
+ui = MachineUI
 
 [Account iogroup]
 localrepository = iogroup_local
@@ -25,7 +26,24 @@ remoteport = 993
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
-# These are effectively the same as the above
-# [Account Exchange]
-# [Repository LocalExchange]
-# [Repository RemoteExchange]
+[Account gmail]
+localrepository = gmail_local
+remoterepository = gmail_remote
+quick = 10
+postsynchook = mu index --maildir ~/mail
+
+[Repository gmail_local]
+type = Maildir
+localfolders = ~/mail/gmail
+
+[Repository gmail_remote]
+type = Gmail
+maxconnections = 3
+remoteusereval = get_user("gmail")
+remotepasseval = get_pass("gmail")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2
+oauth2_client_id_eval = get_client_id("gmail")
+oauth2_client_secret_eval = get_client_secret("gmail")
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
+oauth2_refresh_token_eval = get_refresh_token("gmail")
