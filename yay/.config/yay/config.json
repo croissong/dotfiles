@@ -1,8 +1,11 @@
 {
   "pacmanconf": "/etc/pacman.conf",
-  "answerclean": "None",
+  "answerclean": "All",
   "answeredit": "None",
   "answerdiff": "None",
+  "cleanmenu": false,
+  "diffmenu": false,
+  "editmenu": false,
   "answerupgrade": "",
   "sortby": "votes",
   "gitflags": "",
