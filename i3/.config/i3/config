@@ -120,7 +120,7 @@ bar {
         mode hide
         hidden_state hide
         modifier Mod4
-        status_command i3status-rs $XDG_CONFIG_HOME/i3status-rust/config.toml | sed 's|K</span> "|K</span> ","markup":"pango"|'
+        status_command i3status-rs $XDG_CONFIG_HOME/i3status-rust/config.toml
         font pango: 14px
         # tray_output DP-1
         wheel_up_cmd nop
