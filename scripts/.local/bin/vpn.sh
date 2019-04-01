@@ -5,9 +5,10 @@ start() {
     systemctl start strongswan
     systemctl start xl2tpd
   fi
+  sleep 1
   sudo ipsec up myvpn
   sudo sh -c 'echo "c myvpn" > /var/run/xl2tpd/l2tp-control'
-  sleep 3
+  sleep 1
   sudo ip r add 10.0.0.0/8 dev ppp0 scope link
 }
 
