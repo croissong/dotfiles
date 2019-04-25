@@ -15,3 +15,4 @@ alias dud='du -hd1'
 alias journalctl='journalctl -fxe'
 alias top=glances
 alias curl='curl -s'
+alias lock='physlock -ds'

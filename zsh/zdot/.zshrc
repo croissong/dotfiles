@@ -5,6 +5,7 @@ else
     autoload -Uz compinit
     for dump in $ZDOTDIR/.zcompdump(N.mh+24); do
         compinit
+        _comp_options+=(globdots)
     done
 
     compinit -C
