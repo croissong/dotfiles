@@ -7,13 +7,12 @@ export WAKATIME_HOME=$HOME/.priv/wakatime
 
 export TERM=xterm-256color
     
-source $MY_PRIV/vars
-source $MY_DOTFILES/shell/alias
-source $MY_DOTFILES/shell/keybinds
+. $MY_PRIV/vars
+for f in $MY_DIR/.shell/*; do [[ -f "$f" ]] && . "$f"; done
 
 HISTORY_IGNORE="(ls *|pwd|pass*)"
 HISTTIMEFORMAT="%d.%m.%y %T " 
-HISTFILE=~/.histfile
+HISTFILE=$HOME/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 

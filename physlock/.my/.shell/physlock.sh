@@ -1,0 +1,1 @@
+alias lock='physlock -ds'
