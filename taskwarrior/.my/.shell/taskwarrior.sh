@@ -1,3 +1,5 @@
+alias tw='task'
 alias twa='task add'
 alias twl='task list'
 alias twd='task done'
+alias twm='task modify'
