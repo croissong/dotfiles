@@ -1,1 +1,1 @@
-alias ls='exa -a --group-directories-first'
+alias ls='exa -gha --group-directories-first'
