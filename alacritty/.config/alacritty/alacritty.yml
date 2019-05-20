@@ -321,7 +321,7 @@ mouse:
     #   - (Linux) xdg-open
     #   - (Windows) explorer
     #launcher:
-    program: xdg-open
+    program: mimeo
     #  args: []
 
     # URL modifiers

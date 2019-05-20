@@ -12,7 +12,6 @@ else
 
     autoload -Uz promptinit
     promptinit
-    setopt COMPLETE_ALIASES
     DISABLE_AUTO_UPDATE=true
 
     source $ZDOTDIR/.zsh_plugins.sh
