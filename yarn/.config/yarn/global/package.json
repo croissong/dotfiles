@@ -1,10 +1,11 @@
 {
   "dependencies": {
-    "@angular/cli": "7.3.5",
+    "@angular/cli": "7.3.9",
     "aurelia-cli": "^1.0.0-beta.15",
-    "gatsby-cli": "2.4.13",
+    "gatsby-cli": "2.6.2",
     "http-server": "0.11.1",
-    "jwt-cli": "1.1.0",
-    "npm-check": "5.9.0"
+    "jwt-cli": "1.1.1",
+    "npm-check": "5.9.0",
+    "svgo": "^1.2.2"
   }
 }
