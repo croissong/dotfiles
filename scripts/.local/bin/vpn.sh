@@ -1,8 +1,11 @@
+#!/bin/bash
+
 start() {
   mkdir -p /var/run/xl2tpd
   sudo touch /var/run/xl2tpd/l2tp-control
   if [ $(systemctl is-active strongswan) != "active" ]; then
     systemctl start strongswan
+    sleep 1
     systemctl start xl2tpd
   fi
   sleep 1
