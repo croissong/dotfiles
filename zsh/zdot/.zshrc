@@ -17,10 +17,10 @@ else
     source $ZDOTDIR/.zsh_plugins.sh
     source $MY_DOTFILES/env/profile
     source ~/.tmuxinator/tmuxinator.zsh
-    setopt GLOBDOTS
+    setopt GLOB_DOTS
     setopt PROMPT_SP
-    setopt AUTO_PARAMSLASH
-    setopt AUTOCD
+    setopt AUTO_PARAM_SLASH
+    setopt AUTO_CD
     setopt SHARE_HISTORY
     setopt HIST_IGNORE_DUPS
     setopt HIST_FIND_NO_DUPS
