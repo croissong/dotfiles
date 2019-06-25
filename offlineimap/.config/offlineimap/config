@@ -10,7 +10,7 @@ ui = Basic
 localrepository = iogroup_local
 remoterepository = iogroup_remote
 quick = 10
-postsynchook = mu index --maildir ~/mail
+postsynchook = $XDG_CONFIG_HOME/offlineimap/postsync.sh
 
 [Repository iogroup_local]
 type = Maildir
@@ -30,10 +30,10 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 localrepository = gmail_local
 remoterepository = gmail_remote
 quick = 10
-postsynchook = mu index --maildir ~/mail
+postsynchook = $XDG_CONFIG_HOME/offlineimap/postsync.sh
 
 [Repository gmail_local]
-type = Maildir
+type = GmailMaildir
 localfolders = ~/mail/gmail
 
 [Repository gmail_remote]
@@ -44,6 +44,7 @@ remotepasseval = get_pass("gmail")
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 ssl_version = tls1_2
 auth_mechanisms = XOAUTH2
+folderfilter = lambda foldername: foldername not in ['[Google Mail]/All Mail']
 oauth2_client_id_eval = get_client_id("gmail")
 oauth2_client_secret_eval = get_client_secret("gmail")
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
