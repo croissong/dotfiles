@@ -26,6 +26,7 @@ format = "{1m}"
 block = "battery"
 interval = 60
 upower = true
+device = "DisplayDevice"
 format = "{percentage}% {time}"
 
 [[block]]
