@@ -13,6 +13,7 @@ else
     DISABLE_AUTO_UPDATE=true
     source $ZDOTDIR/.zsh_plugins.sh
     source ~/.tmuxinator/tmuxinator.zsh
+    source $MY_DOTFILES/env/env
     setopt GLOB_DOTS
     setopt PROMPT_SP
     setopt AUTO_PARAM_SLASH
@@ -36,5 +37,4 @@ else
 
     zstyle ':completion:*' insert-tab false
 
-    source $MY_DOTFILES/env/env
 fi
