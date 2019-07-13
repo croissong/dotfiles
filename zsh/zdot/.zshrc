@@ -1,5 +1,5 @@
 if [ -z "$TMUX" ]; then
-    tmux attach-session -d
+    tmux attach-session -d || tmuxinator start home --suppress-tmux-version-warning && tmux attach-session -d
 else
     setopt extendedglob
     autoload -Uz compinit
@@ -10,12 +10,8 @@ else
 
     compinit -C
 
-    autoload -Uz promptinit
-    promptinit
     DISABLE_AUTO_UPDATE=true
-
     source $ZDOTDIR/.zsh_plugins.sh
-    source $MY_DOTFILES/env/profile
     source ~/.tmuxinator/tmuxinator.zsh
     setopt GLOB_DOTS
     setopt PROMPT_SP
@@ -37,4 +33,6 @@ else
     source $ZDOTDIR/zsh_overrides.zsh
 
     zstyle ':completion:*' insert-tab false
+
+    source $MY_DOTFILES/env/env
 fi

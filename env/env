@@ -1,3 +1,14 @@
-set -a
-.  <(systemctl --user show-environment)
-set +a
+. $MY_PRIV/vars
+for f in $MY_DIR/.shell/*; do [[ -f "$f" ]] && . "$f"; done
+
+HISTORY_IGNORE="(ls *|pwd|pass*)"
+HISTTIMEFORMAT="%d.%m.%y %T "
+HISTFILE=$HOME/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+export LS_COLORS='di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
+
+
+
+# todo https://github.com/zoresvit/dotfiles/blob/master/bash/.bashrc.local
