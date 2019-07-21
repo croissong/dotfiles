@@ -4,3 +4,4 @@ alias dud='du -hd1'
 alias journalctl='journalctl -fxe'
 alias curl='curl -s'
 alias pass=gopass
+alias summon='cyberark-summon -f $MY_PRIV/summons/secrets.yml'

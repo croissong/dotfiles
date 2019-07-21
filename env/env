@@ -6,6 +6,14 @@ HISTTIMEFORMAT="%d.%m.%y %T "
 HISTFILE=$HOME/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+export ALTERNATE_EDITOR=""
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export LESS='IMR'
+export RANGER_LOAD_DEFAULT_RC=false
+export VISUAL="emacsclient -c"
+export WAKATIME_HOME=$HOME/.priv/wakatime
+export SUMMON_PROVIDER=/usr/bin/gopass
+
 setopt HIST_NO_FUNCTIONS
 setopt HIST_REDUCE_BLANKS
 
