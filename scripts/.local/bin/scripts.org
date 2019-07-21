@@ -12,3 +12,7 @@ or emacs setenv to echo $GPG_TTY manually
 #+END_SRC
 
 echo | openssl s_client -showcerts -servername gnupg.org -connect gnupg.org:443 2>/dev/null | openssl x509 -inform pem -noout -text
+
+* github dl
+https://codeload.github.com/stakater/IngressMonitorController/tar.gz/master | \
+  tar -xz --strip=4 IngressMonitorController-master/deployments/kubernetes/chart/ingressmonitorcontroller
