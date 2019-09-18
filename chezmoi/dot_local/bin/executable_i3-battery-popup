@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# https://github.com/rjekker/i3-battery-popup
+
 ################################################################################
 # A script that shows a battery warning on i3wm                                #
 #                                                                              #
