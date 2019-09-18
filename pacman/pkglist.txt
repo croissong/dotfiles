@@ -24,6 +24,7 @@ bluez-utils
 btrfs-progs
 bzip2
 checkbashisms
+chezmoi
 coreutils
 cryptsetup
 cups
@@ -46,7 +47,7 @@ e2fsprogs
 ebtables
 ed
 electrum
-emacs
+emacs-git
 ethtool
 evince
 exa
