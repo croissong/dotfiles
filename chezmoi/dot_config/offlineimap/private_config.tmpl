@@ -1,8 +1,8 @@
+# https://github.com/OfflineIMAP/offlineimap/blob/master/offlineimap.conf
 [general]
 accounts = iogroup, gmail
 maxsyncaccounts = 1
 metadata = $XDG_CONFIG_HOME/offlineimap/meta
-Pythonfile = $MY_PRIV/offlineimap/offlineimap.py
 fsync = false
 ui = Basic
 
@@ -19,8 +19,8 @@ localfolders = ~/mail/iogroup
 [Repository iogroup_remote]
 type = IMAP
 maxconnections = 3
-remoteusereval = get_user("iogroup")
-remotepasseval = get_pass("iogroup")
+remoteuser = {{ secret "show" "wrk/office365.com" "user" | toString }}
+remotepass = {{ pass "wrk/office365.com" }}
 remotehost = outlook.office365.com
 remoteport = 993
 ssl = yes
@@ -39,13 +39,13 @@ localfolders = ~/mail/gmail
 [Repository gmail_remote]
 type = Gmail
 maxconnections = 3
-remoteusereval = get_user("gmail")
-remotepasseval = get_pass("gmail")
+remoteuser = {{ secret "show" "gmail.com" "user" | toString }}
+remotepass = {{ pass "frugalusenet.com" }}
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 ssl_version = tls1_2
 auth_mechanisms = XOAUTH2
 # folderfilter = lambda foldername: foldername not in ['[Google Mail]/All Mail']
-oauth2_client_id_eval = get_client_id("gmail")
-oauth2_client_secret_eval = get_client_secret("gmail")
+oauth2_client_id = {{ secret "show" "gmail.com" "clientId" | toString }}
+oauth2_client_secret = {{ secret "show" "gmail.com" "clientSecret" | toString }}
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
-oauth2_refresh_token_eval = get_refresh_token("gmail")
+oauth2_refresh_token = {{ secret "show" "gmail.com" "refreshToken" | toString }}
