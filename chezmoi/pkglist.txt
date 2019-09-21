@@ -23,6 +23,7 @@ bluez-firmware
 bluez-utils
 btrfs-progs
 bzip2
+calibre
 checkbashisms
 chezmoi
 coreutils

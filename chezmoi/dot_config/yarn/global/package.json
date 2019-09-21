@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@angular/cli": "latest",
+    "aurelia-cli": "latest",
+    "create-react-app": "latest",
+    "gatsby-cli": "latest",
+    "http-server": "latest",
+    "npm-check": "latest",
+    "svgo": "latest"
+  }
+}

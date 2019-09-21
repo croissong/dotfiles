@@ -1,1 +1,0 @@
-alias find='fd -H'
