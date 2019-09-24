@@ -21,3 +21,7 @@ curl https://codeload.github.com/stakater/IngressMonitorController/tar.gz/master
 helm fetch --untar --untardir . 'fluent-bit'
 helm template -f ./fluentbit-helm-values.yml --output-dir './fluent-bit-final' './fluent-bit
 ```
+* gpg list recipients
+```
+gpg --list-only --no-default-keyring --secret-keyring /dev/null password-store/prod-secrets/bi-etl-framework-secrets/application-secrets.yml.gpg
+```

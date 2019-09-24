@@ -3,7 +3,7 @@ if [ -z "$TMUX" ]; then
 else
     setopt extendedglob
     autoload -Uz compinit
-    for dump in $ZDOTDIR/.zcompdump(N.mh+24); do
+    for dump in $MY_DOTFILES/zsh/zdot/.zcompdump(N.mh+24); do
         compinit
         _comp_options+=(globdots)
     done
@@ -11,9 +11,8 @@ else
     compinit -C
 
     DISABLE_AUTO_UPDATE=true
-    source $ZDOTDIR/.zsh_plugins.sh
+    source $MY_DOTFILES/zsh/zdot/.zsh_plugins.sh
     source ~/.tmuxinator/tmuxinator.zsh
-    source $MY_DOTFILES/env/env
     setopt GLOB_DOTS
     setopt PROMPT_SP
     setopt AUTO_PARAM_SLASH
@@ -33,7 +32,7 @@ else
 
     source /usr/share/fzf/key-bindings.zsh
     source /usr/share/fzf/completion.zsh
-    source $ZDOTDIR/zsh_overrides.zsh
+    source $MY_DOTFILES/zsh/zdot/zsh_overrides.zsh
 
     zstyle ':completion:*' insert-tab false
 

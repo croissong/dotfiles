@@ -143,7 +143,6 @@ maven
 mdadm
 meld
 mimeo
-minetime
 mitmproxy
 mitogen
 moreutils
@@ -208,7 +207,6 @@ sed
 shadow
 slack-desktop
 smartmontools
-sops
 sshfs
 steam
 stow
@@ -222,7 +220,6 @@ systemd-sysvcompat
 tar
 task
 tcpdump
-terraform
 texinfo
 timew
 tlp
