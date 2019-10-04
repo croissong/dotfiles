@@ -25,7 +25,7 @@
   interactive = auto
   ui = true
   pager = true
-[http]
+[http "https://smarthub-wbench.wesp.telekom.net"]
 	sslCert = /home/croissong/.ssh/svh/user.crt
 	sslKey = /home/croissong/.ssh/svh/userkey.pem
 [alias]

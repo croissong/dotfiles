@@ -83,6 +83,7 @@ gradle
 graphviz
 grep
 groff
+grpcurl-bin
 gsfonts
 gst-libav
 gst-plugins-bad
@@ -101,12 +102,12 @@ ike-scan
 inetutils
 inkscape
 intel-ucode
-intellij-idea-community-edition
 iproute2
 iputils
 iwd
 jdk-openjdk
 jdk8-openjdk
+jetbrains-toolbox
 jfsutils
 jp
 jq
