@@ -1,0 +1,28 @@
+#!/bin/bash
+
+ediff() {
+	if [ -d $1 ]; then
+		emacsclient -c -q --eval "(ediff-directories \"$1\" \"$2\" \"\")"
+	else
+		emacsclient -c -q --eval "(ediff-files \"$1\" \"$2\")"
+	fi
+}
+
+ediff3() {
+	if [ $# -ne 3 ]; then
+		echo Usage: $0 local base other
+		exit 1
+	fi
+	emacsclient -c -q --eval '(ediff-merge-with-ancestor "'$1'" "'$2'" "'$3'")'
+}
+
+case "$1" in
+ediff)
+	cmd=ediff
+	;;
+ediff3)
+	cmd=ediff3
+	;;
+esac
+shift
+$cmd $@

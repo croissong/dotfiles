@@ -6,3 +6,5 @@ alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
 alias top=glances
 alias open=mimeo
+
+alias lock='physlock -ds'
