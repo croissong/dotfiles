@@ -1,0 +1,91 @@
+#+PROPERTY: header-args :shebang #!/bin/env zsh
+
+* k8s
+#+BEGIN_SRC sh
+k8s_get_labels() {
+  kubectl get po --no-headers | awk '{print $1}' | rg yag --smart-case --color never $1 | xargs kubectl get -o yaml po | rg -A3 labels
+}
+#+END_SRC
+* emacs
+#+BEGIN_SRC sh
+emacs_ediff() {
+  if [ -d $1 ]; then
+    emacsclient -c -q --eval "(ediff-directories \"$1\" \"$2\" \"\")"
+  else
+    emacsclient -c -q --eval "(ediff-files \"$1\" \"$2\")"
+  fi
+}
+
+emacs_ediff3() {
+  if [ $# -ne 3 ]; then
+    echo Usage: $0 local base other
+    exit 1
+  fi
+  emacsclient -c -q --eval '(ediff-merge-with-ancestor "'$1'" "'$2'" "'$3'")'
+}
+#+END_SRC
+[[https://emacs.stackexchange.com/a/649][@stackexchange.com]]
+#+BEGIN_SRC sh
+emacs_unfreeze() {
+    pgrep -x emacs | xargs kill -SIGUSR2
+}
+#+END_SRC
+* gpg
+#+BEGIN_SRC sh
+gpg_recients() {
+gpg --list-only --no-default-keyring --secret-keyring /dev/null
+}
+#+END_SRC
+fix tty
+[[https://unix.stackexchange.com/questions/217737/pinentry-fails-with-gpg-agent-and-ssh][@stackexchange.com]]
+#+BEGIN_SRC sh
+gpgconf --kill gpg-agent
+echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
+or emacs setenv to echo $GPG_TTY manually
+#+END_SRC
+* github dl
+#+BEGIN_SRC sh
+curl https://codeload.github.com/stakater/IngressMonitorController/tar.gz/master | \
+  tar -xz --strip=4 IngressMonitorController-master/deployments/kubernetes/chart/ingressmonitorcontroller
+#+END_SRC
+* helm
+#+BEGIN_SRC sh
+helm fetch --untar --untardir . 'fluent-bit'
+helm template -f ./fluentbit-helm-values.yml --output-dir './fluent-bit-final' './fluent-bit
+#+END_SRC
+
+* ssl
+#+BEGIN_SRC sh
+ssl_certs() {
+    server="$1"
+      openssl s_client -showcerts -servername $server -connect $server:443 </dev/null  | openssl x509 -inform pem -noout -text
+}
+#+END_SRC
+
+* xinput
+#+BEGIN_SRC sh
+xinput_list() {
+    xinput --list
+}
+xinput_disable() {
+    xinput --disable $1
+}
+#+END_SRC
+* rdp
+#+BEGIN_SRC sh
+rdp() {
+    ip=$1
+    domain=$2
+    user=$3
+    rdesktop -u "$domain\$user" -k de -g 1800x1080 $ip
+}
+#+END_SRC
+* end
+#+BEGIN_SRC sh
+if declare -f $1 >/dev/null; then
+  $1 $@
+else
+  compgen -A function
+fi
+
+#+END_SRC

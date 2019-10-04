@@ -3,7 +3,7 @@ set -a
 set +a
 . $MY_PRIV/vars
 for f in $MY_DIR/.shell/*; do [[ -f "$f" ]] && . "$f"; done
-{{template "alias.sh"}}
+{{ template "alias.sh" }}
 
 HISTORY_IGNORE="(ls *|pwd|pass *|tfa *)"
 HISTTIMEFORMAT="%d.%m.%y %T "
