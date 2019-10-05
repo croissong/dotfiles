@@ -43,11 +43,26 @@ gpgconf --kill gpg-agent
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 or emacs setenv to echo $GPG_TTY manually
 #+END_SRC
+* bash
+#+BEGIN_SRC sh
+mkcd() {
+  case "$1" in
+  */.. | */../) cd -- "$1" ;; # that doesn't make any sense unless the directory already exists
+  /*/../*) (cd "${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd -- "$1" ;;
+  /*) mkdir -p "$1" && cd "$1" ;;
+  */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "./$1" ;;
+  ../*) (cd .. && mkdir -p "${1#.}") && cd "$1" ;;
+  *) mkdir -p "./$1" && cd "./$1" ;;
+  esac
+}
+#+END_SRC
 * github dl
 #+BEGIN_SRC sh
 curl https://codeload.github.com/stakater/IngressMonitorController/tar.gz/master | \
   tar -xz --strip=4 IngressMonitorController-master/deployments/kubernetes/chart/ingressmonitorcontroller
 #+END_SRC
+* pacman restore package backup files
+pacman -Qii | awk '/^MODIFIED/ {print $2}' | sed -ne 's|/etc/pam.d/\(.*\)|\1|p' | xargs -I bu_file sudo sh -c 'pkg-extract_original /etc/pam.d/bu_file > /etc/pam.d/bu_file'
 * helm
 #+BEGIN_SRC sh
 helm fetch --untar --untardir . 'fluent-bit'
@@ -80,6 +95,8 @@ rdp() {
     rdesktop -u "$domain\$user" -k de -g 1800x1080 $ip
 }
 #+END_SRC
+* zsh
+antibody bundle < $ZDOTDIR/.zsh_plugins.txt > $ZDOTDIR/.zsh_plugins.sh
 * end
 #+BEGIN_SRC sh
 if declare -f $1 >/dev/null; then

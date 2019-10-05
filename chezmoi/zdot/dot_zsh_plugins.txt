@@ -1,0 +1,5 @@
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+agkozak/agkozak-zsh-prompt
+b4b4r07/enhancd path:init.sh

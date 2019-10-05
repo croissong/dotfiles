@@ -1,2 +1,0 @@
-- restore package backup files
-pacman -Qii | awk '/^MODIFIED/ {print $2}' | sed -ne 's|/etc/pam.d/\(.*\)|\1|p' | xargs -I bu_file sudo sh -c 'pkg-extract_original /etc/pam.d/bu_file > /etc/pam.d/bu_file'
