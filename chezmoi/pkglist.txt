@@ -13,6 +13,7 @@ autoconf
 automake
 autopep8
 autorandr
+base
 bash
 bind-tools
 binutils
@@ -178,6 +179,7 @@ perl-cgi
 physlock
 pkg_scripts
 pkgconf
+podman
 prettier
 procps-ng
 psmisc
@@ -222,6 +224,18 @@ tar
 task
 tcpdump
 texinfo
+texlive-bibtexextra
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 timew
 tlp
 tmux
@@ -251,6 +265,7 @@ whois
 wireguard-dkms
 wireguard-tools
 wireshark-qt
+wkhtmltopdf
 xclip
 xf86-input-libinput
 xf86-video-intel

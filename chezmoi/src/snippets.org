@@ -68,7 +68,10 @@ pacman -Qii | awk '/^MODIFIED/ {print $2}' | sed -ne 's|/etc/pam.d/\(.*\)|\1|p' 
 helm fetch --untar --untardir . 'fluent-bit'
 helm template -f ./fluentbit-helm-values.yml --output-dir './fluent-bit-final' './fluent-bit
 #+END_SRC
-
+* ssh
+#+BEGIN_SRC sh
+ssh -L localhost:9200:192.168.16.2:9200 root@10.1.10.70
+#+END_SRC
 * ssl
 #+BEGIN_SRC sh
 ssl_certs() {
@@ -96,7 +99,11 @@ rdp() {
 }
 #+END_SRC
 * zsh
-antibody bundle < $ZDOTDIR/.zsh_plugins.txt > $ZDOTDIR/.zsh_plugins.sh
+antibody bundle < $XDG_CONFIG_HOME/zsh/zsh_plugins.txt > $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
+* pandoc
+pandoc --self-contained -t html -o bosse.pdf bosse.md
+* git
+pandoc --self-contained -t html -o bosse.pdf bosse.md
 * end
 #+BEGIN_SRC sh
 if declare -f $1 >/dev/null; then

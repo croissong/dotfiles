@@ -8,10 +8,13 @@ else
         _comp_options+=(globdots)
     done
 
+    {{ template "keybinds.sh" }}
+    {{ template "alias.sh" }}
+
     compinit -C
 
     DISABLE_AUTO_UPDATE=true
-    source $MY_DOTFILES/zsh/zdot/.zsh_plugins.sh
+    source $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
     source ~/.tmuxinator/tmuxinator.zsh
     setopt GLOB_DOTS
     setopt PROMPT_SP
@@ -32,7 +35,7 @@ else
 
     source /usr/share/fzf/key-bindings.zsh
     source /usr/share/fzf/completion.zsh
-    source $MY_DOTFILES/zsh/zdot/zsh_overrides.zsh
+    source $XDG_CONFIG_HOME/zsh/zsh_overrides.zsh
 
     zstyle ':completion:*' insert-tab false
 
