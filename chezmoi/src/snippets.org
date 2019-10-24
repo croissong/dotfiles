@@ -100,6 +100,8 @@ rdp() {
 #+END_SRC
 * zsh
 antibody bundle < $XDG_CONFIG_HOME/zsh/zsh_plugins.txt > $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
+* multiline replace
+fd network-policies.yml.j2 deploymentsets -x perl -0777 -i -pe 's/(?<match>    - podSelector:\n        matchLabels:\n          deploymentSet: svhb-device-gateway\n          podName: svhb-device-gateway)/$+{match}\n    # TODO: This selector can be removed once the new, split-up svhb deploymentSets (SHCB-889) have found their way to prod\n    - podSelector:\n        matchLabels:\n          deploymentSet: svhb\n          podName: svhb-device-gateway/g' {}
 * pandoc
 pandoc --self-contained -t html -o bosse.pdf bosse.md
 * git

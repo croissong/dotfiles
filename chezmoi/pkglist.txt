@@ -131,6 +131,7 @@ licenses
 linux-lts
 linux-zen
 linux-zen-headers
+lld
 logrotate
 lostfiles
 lsof
@@ -171,6 +172,7 @@ pandoc
 paprefs
 pass
 patch
+patchelf
 pavucontrol
 pciutils
 perl
@@ -325,7 +327,7 @@ xorg-xwud
 xterm
 yapf
 yarn
-yay
+yay-bin
 youtube-dl
 yq
 zbar
