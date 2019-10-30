@@ -76,7 +76,7 @@ ssh -L localhost:9200:192.168.16.2:9200 root@10.1.10.70
 #+BEGIN_SRC sh
 ssl_certs() {
     server="$1"
-      openssl s_client -showcerts -servername $server -connect $server:443 </dev/null  | openssl x509 -inform pem -noout -text
+    openssl s_client -showcerts -servername $server -connect $server:443 </dev/null  | openssl x509 -inform pem -noout -text
 }
 #+END_SRC
 

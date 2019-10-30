@@ -79,6 +79,7 @@ gnu-free-fonts
 go
 go-tools
 google-chrome-dev
+google-musicmanager
 gopass
 gradle
 graphviz
@@ -131,7 +132,6 @@ licenses
 linux-lts
 linux-zen
 linux-zen-headers
-lld
 logrotate
 lostfiles
 lsof
@@ -172,7 +172,6 @@ pandoc
 paprefs
 pass
 patch
-patchelf
 pavucontrol
 pciutils
 perl
@@ -212,6 +211,7 @@ sed
 shadow
 slack-desktop
 smartmontools
+socat
 sshfs
 steam
 stow
@@ -261,6 +261,7 @@ vi
 vim
 virt-manager
 visualvm
+websocat
 wget
 which
 whois
