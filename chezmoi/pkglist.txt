@@ -46,6 +46,7 @@ drive-bin
 dtrx-git
 dunst
 e2fsprogs
+earlyoom
 ebtables
 ed
 electrum
