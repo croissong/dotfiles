@@ -1,6 +1,3 @@
-alias unpack=dtrx
-alias pack='tar zcvf'
-
 alias ls='exa -gha --group-directories-first'
 # https://github.com/b4b4r07/enhancd/issues/104
 # alias find='fd -H'
@@ -25,13 +22,15 @@ alias ediff='scripts emacsc_ediff'
 alias ediff3='scripts emacsc_ediff3'
 
 alias kc=kubectl
-alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+alias kcd='kubectl config set-context $(kubectl config current-context) --namespace'
 alias kctx='kubectl config use-context'
 alias kcg='kubectl get -o yaml'
-alias kcdesc='kubectl describe'
+alias kcdsc='kubectl describe'
 alias kcroll='kubectl patch deployment -p \
   "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}"'
 alias kcl='kubectl logs -f'
+alias kcx='kubectl exec -ti'
+alias kcfwd='kubectl port-forward'
 
 alias tw='task'
 alias twa='task add'

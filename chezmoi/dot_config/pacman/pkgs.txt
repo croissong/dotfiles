@@ -4,6 +4,7 @@ alsa-tools
 ansible-lint
 arandr
 arduino
+atool
 autoconf
 automake
 autopep8
@@ -78,6 +79,7 @@ prettier
 pulseaudio-jack
 python-jedi
 python-virtualenv
+python2-pyaml
 rdesktop
 redshift
 reflector

@@ -8,8 +8,8 @@ docker-compose-bin
 doctl-bin
 downgrade
 drive-bin
-dtrx-git
 earlyoom
+ffsend-bin
 firefox-beta-bin
 google-chrome-dev
 google-musicmanager
@@ -18,7 +18,6 @@ i3status-rust-git
 ike-scan
 jetbrains-toolbox
 jp
-kubernetes-helmfile-bin
 mattermost-desktop-bin
 mimeo
 mitogen
