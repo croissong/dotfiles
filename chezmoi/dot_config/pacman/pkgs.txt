@@ -30,6 +30,7 @@ flake8
 flameshot
 flex
 font-mathematica
+fwupd
 fzf
 gdb
 glances
