@@ -1,0 +1,1 @@
+- pkglist: install intel microcode only "when: "'GenuineIntel' in ansible_processor""
