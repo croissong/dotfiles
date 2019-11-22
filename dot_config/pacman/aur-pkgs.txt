@@ -24,6 +24,7 @@ mitogen
 mssql-tools
 mu
 pkg_scripts
+python37
 rtags
 slack-desktop
 tmuxinator

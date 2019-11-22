@@ -6,6 +6,7 @@ libfbclient
 linux-firmware
 llvm
 mariadb-libs
+mpdecimal
 ocl-icd
 perl-lwp-protocol-https
 postgresql-libs
@@ -16,3 +17,4 @@ qt5-tools
 qt5-xmlpatterns
 samba
 speech-dispatcher
+tk
