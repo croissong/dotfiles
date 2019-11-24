@@ -64,10 +64,54 @@ entries:
         change:
           command: |
             yq w k8s/values/images.yml 'prometheus.tag' {{.NewVersion}} | sponge k8s/values/images.yml
-
         commit:
           msgTemplate: 'Bump prometheus -> {{.NewVersion}}'
           branch: master
-          push: false
+          push: true
+          authorEmail: releasewatcher@patrician.cloud
+          authorName:  ReleaseWatcher Bot
+
+
+  - name: verdun-riot
+    upstream:
+      type: docker
+      repo: bubuntux/riot-web
+    downstream:
+      type: yaml
+      url: https://raw.githubusercontent.com/Croissong/verdun/master/k8s/values/images.yml
+      path: 'matrix.riot.tag'
+
+    hooks:
+      - type: git
+        repo: git@github.com:Croissong/verdun.git
+        change:
+          command: |
+            yq w k8s/values/images.yml 'matrix.riot.tag' {{.NewVersion}} | sponge k8s/values/images.yml
+        commit:
+          msgTemplate: 'Bump riot -> {{.NewVersion}}'
+          branch: master
+          push: true
+          authorEmail: releasewatcher@patrician.cloud
+          authorName:  ReleaseWatcher Bot
+
+  - name: verdun-traefik
+    upstream:
+      type: docker
+      repo: traefik
+    downstream:
+      type: yaml
+      url: https://raw.githubusercontent.com/Croissong/verdun/master/k8s/values/images.yml
+      path: 'traefik.tag'
+
+    hooks:
+      - type: git
+        repo: git@github.com:Croissong/verdun.git
+        change:
+          command: |
+            yq w k8s/values/images.yml 'traefik.tag' {{.NewVersion}} | sponge k8s/values/images.yml
+        commit:
+          msgTemplate: 'Bump traefik -> {{.NewVersion}}'
+          branch: master
+          push: true
           authorEmail: releasewatcher@patrician.cloud
           authorName:  ReleaseWatcher Bot
