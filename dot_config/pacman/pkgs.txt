@@ -46,6 +46,7 @@ inkscape
 intel-ucode
 iwd
 jfsutils
+jq
 keybase
 krita
 ledger
@@ -159,4 +160,3 @@ xorg-xwininfo
 xorg-xwud
 yapf
 yarn
-yq

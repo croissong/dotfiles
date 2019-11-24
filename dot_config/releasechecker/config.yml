@@ -1,0 +1,73 @@
+debug: true
+initDownstreams: true
+entries:
+  - name: terraform
+    upstream:
+      type: regex
+      url: https://releases.hashicorp.com/terraform/
+      regex: '.*>terraform_(.*)<.*'
+    downstream:
+      type: command
+      command: |
+        terraform version | sed -rn 's/.*v([0-9\.]+)/\1/p'
+    hooks:
+      - type: download
+        url: 'https://releases.hashicorp.com/terraform/{{.Version}}/terraform_{{.Version}}_linux_amd64.zip'
+        dest: '$HOME/.local/bin/terraform'
+        extract:
+          file: terraform
+
+  - name: helmfile
+    upstream:
+      type: github
+      repo: roboll/helmfile
+    downstream:
+      type: command
+      command: |
+        helmfile -v | sed -rn 's/.*v([0-9\.]+)/\1/p'
+    hooks:
+      - type: download
+        github:
+          repo: roboll/helmfile
+          asset: helmfile_linux_amd64
+        dest: '$HOME/.local/bin/helmfile'
+        chmod: 0755
+
+  - name: argocd
+    upstream:
+      type: github
+      repo: argoproj/argo-cd
+    downstream:
+      type: command
+      command: |
+        argocd version --short --client | sed -rn 's/.*v([0-9\.]+).*/\1/p'
+    hooks:
+      - type: download
+        github:
+          repo: argoproj/argo-cd
+          asset: argocd-linux-amd64
+        dest: '$HOME/.local/bin/argocd'
+        chmod: 755
+
+  - name: verdun-prometheus
+    upstream:
+      type: docker
+      repo: prom/prometheus
+    downstream:
+      type: yaml
+      url: https://raw.githubusercontent.com/Croissong/verdun/master/k8s/values/images.yml
+      path: 'prometheus.tag'
+
+    hooks:
+      - type: git
+        repo: git@github.com:Croissong/verdun.git
+        change:
+          command: |
+            yq w k8s/values/images.yml 'prometheus.tag' {{.NewVersion}} | sponge k8s/values/images.yml
+
+        commit:
+          msgTemplate: 'Bump prometheus -> {{.NewVersion}}'
+          branch: master
+          push: false
+          authorEmail: releasewatcher@patrician.cloud
+          authorName:  ReleaseWatcher Bot

@@ -32,5 +32,6 @@ tor-browser
 ttf-ubraille
 websocat
 yay-bin
+yq-bin
 zoiper
 zoom
