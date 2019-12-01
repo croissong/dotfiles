@@ -1,4 +1,4 @@
-debug: true
+debug: false
 initDownstreams: true
 entries:
   - name: terraform
@@ -111,6 +111,51 @@ entries:
             yq w k8s/values/images.yml 'traefik.tag' {{.NewVersion}} | sponge k8s/values/images.yml
         commit:
           msgTemplate: 'Bump traefik -> {{.NewVersion}}'
+          branch: master
+          push: true
+          authorEmail: releasewatcher@patrician.cloud
+          authorName:  ReleaseWatcher Bot
+
+  - name: matrix-synapse-s3-storage
+    upstream:
+      type: docker
+      repo: matrixdotorg/synapse
+    downstream:
+      type: regex
+      url: https://raw.githubusercontent.com/Croissong/matrix-synapse-s3-storage/master/Dockerfile
+      regex: '.*synapse:(.*).*'
+    hooks:
+      - type: git
+        repo: git@github.com:Croissong/matrix-synapse-s3-storage.git
+        change:
+          command: |
+            sed -i s/{{.OldVersion}}/{{.NewVersion}}/ Dockerfile
+        commit:
+          msgTemplate: 'Bump -> {{.NewVersion}}'
+          branch: master
+          push: true
+          authorEmail: releasewatcher@patrician.cloud
+          authorName:  ReleaseWatcher Bot
+          tag: '{{.NewVersion}}'
+
+
+  - name: verdun-synapse
+    upstream:
+      type: docker
+      repo: croissong/matrix-synapse-s3-storage
+    downstream:
+      type: yaml
+      url: https://raw.githubusercontent.com/Croissong/verdun/master/k8s/values/images.yml
+      path: 'matrix.synapse.tag'
+
+    hooks:
+      - type: git
+        repo: git@github.com:Croissong/verdun.git
+        change:
+          command: |
+            yq w k8s/values/images.yml 'matrix.synapse.tag' {{.NewVersion}} | sponge k8s/values/images.yml
+        commit:
+          msgTemplate: 'Bump synapse -> {{.NewVersion}}'
           branch: master
           push: true
           authorEmail: releasewatcher@patrician.cloud
