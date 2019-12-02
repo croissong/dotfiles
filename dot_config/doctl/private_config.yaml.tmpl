@@ -1,0 +1,651 @@
+access-token: {{ pass "ops/digitalocean.com/token" }}
+account:
+  get:
+    format: ""
+    no-header: false
+  ratelimit:
+    format: ""
+    no-header: false
+action:
+  get:
+    format: ""
+    no-header: false
+  list:
+    action-type: ""
+    after: ""
+    before: ""
+    format: ""
+    no-header: false
+    region: ""
+    resource-type: ""
+    status: ""
+  wait:
+    format: ""
+    no-header: false
+    poll-timeout: 5
+api-url: ""
+cdn:
+  create:
+    certificate-id: ""
+    domain: ""
+    format: ""
+    no-header: false
+    ttl: 3600
+  delete:
+    force: false
+  flush:
+    files: '[*]'
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+  update:
+    certificate-id: ""
+    domain: ""
+    format: ""
+    no-header: false
+    ttl: 3600
+certificate:
+  create:
+    certificate-chain-path: ""
+    dns-names: '[]'
+    leaf-certificate-path: ""
+    name: ""
+    private-key-path: ""
+    type: ""
+  delete:
+    force: false
+cluster:
+  create:
+    count: 3
+    node-pool: []
+    region: nyc1
+    size: s-1vcpu-2gb
+    tag: []
+    update-kubeconfig: true
+    version: latest
+    wait: true
+  delete:
+    force: false
+    update-kubeconfig: true
+  update:
+    cluster-name: ""
+    tag: []
+    update-kubeconfig: true
+compute:
+  ssh:
+    ssh-agent-forwarding: false
+    ssh-command: ""
+    ssh-key-path: /home/croissong/.ssh/id_rsa
+    ssh-port: 22
+    ssh-private-ip: false
+    ssh-user: root
+context: default
+databases:
+  create:
+    engine: pg
+    num-nodes: 1
+    region: nyc1
+    size: db-s-1vcpu-1gb
+    version: "11"
+  delete:
+    force: false
+  migrate:
+    region: ""
+  resize:
+    num-nodes: 0
+    size: ""
+db:
+  delete:
+    force: false
+domain:
+  create:
+    format: ""
+    ip-address:
+      required: true
+    no-header: false
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+droplet:
+  actions:
+    format: ""
+    no-header: false
+  backups:
+    format: ""
+    no-header: false
+  create:
+    enable-backups: false
+    enable-ipv6: false
+    enable-monitoring: false
+    enable-private-networking: false
+    format: ""
+    image:
+      required: true
+    no-header: false
+    region:
+      required: true
+    size:
+      required: true
+    ssh-keys: '[]'
+    tag-name: ""
+    tag-names: '[]'
+    user-data: ""
+    user-data-file: ""
+    volumes: '[]'
+    wait: false
+  delete:
+    force: false
+    tag-name: ""
+  get:
+    format: ""
+    no-header: false
+    template: ""
+  kernels:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+    region: ""
+    tag-name: ""
+  neighbors:
+    format: ""
+    no-header: false
+  snapshots:
+    format: ""
+    no-header: false
+  tag:
+    tag-name: ""
+  untag:
+    tag-name: '[]'
+droplet-action:
+  change-kernel:
+    format: ""
+    kernel-id: 0
+    no-header: false
+    wait: false
+  disable-backups:
+    format: ""
+    no-header: false
+    wait: false
+  enable-backups:
+    format: ""
+    no-header: false
+    wait: false
+  enable-ipv6:
+    format: ""
+    no-header: false
+    wait: false
+  enable-private-networking:
+    format: ""
+    no-header: false
+    wait: false
+  get:
+    action-id:
+      required: true
+    format: ""
+    no-header: false
+  password-reset:
+    format: ""
+    no-header: false
+    wait: false
+  power-cycle:
+    format: ""
+    no-header: false
+    wait: false
+  power-off:
+    format: ""
+    no-header: false
+    wait: false
+  power-on:
+    format: ""
+    no-header: false
+    wait: false
+  reboot:
+    format: ""
+    no-header: false
+    wait: false
+  rebuild:
+    format: ""
+    image: ""
+    no-header: false
+    wait: false
+  rename:
+    droplet-name: ""
+    format: ""
+    no-header: false
+    wait: false
+  resize:
+    format: ""
+    no-header: false
+    resize-disk: false
+    size: ""
+    wait: false
+  restore:
+    format: ""
+    image-id: 0
+    no-header: false
+    wait: false
+  shutdown:
+    format: ""
+    no-header: false
+    wait: false
+  snapshot:
+    format: ""
+    no-header: false
+    snapshot-name:
+      required: true
+    wait: false
+firewall:
+  add-droplets:
+    droplet-ids: '[]'
+  add-rules:
+    inbound-rules: ""
+    outbound-rules: ""
+  add-tags:
+    tag-names: '[]'
+  create:
+    droplet-ids: '[]'
+    format: ""
+    inbound-rules: ""
+    name:
+      required: true
+    no-header: false
+    outbound-rules: ""
+    tag-names: '[]'
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+  list-by-droplet:
+    format: ""
+    no-header: false
+  remove-droplets:
+    droplet-ids: '[]'
+  remove-rules:
+    inbound-rules: ""
+    outbound-rules: ""
+  remove-tags:
+    tag-names: '[]'
+  update:
+    droplet-ids: '[]'
+    format: ""
+    inbound-rules: ""
+    name: ""
+    no-header: false
+    outbound-rules: ""
+    tag-names: '[]'
+floating-ip:
+  create:
+    droplet-id: 0
+    format: ""
+    no-header: false
+    region: ""
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+    region: ""
+floating-ip-action:
+  assign:
+    format: ""
+    no-header: false
+  get:
+    format: ""
+    no-header: false
+  unassign:
+    format: ""
+    no-header: false
+image:
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+    public: false
+  list-application:
+    format: ""
+    no-header: false
+    public: true
+  list-distribution:
+    format: ""
+    no-header: false
+    public: true
+  list-user:
+    format: ""
+    no-header: false
+    public: false
+  update:
+    format: ""
+    image-name: ""
+    no-header: false
+image-action:
+  get:
+    action-id: 0
+    format: ""
+    no-header: false
+  transfer:
+    format: ""
+    no-header: false
+    region:
+      required: true
+    wait: false
+kubeconfig:
+  exec-credential:
+    version: ""
+load-balancer:
+  add-droplets:
+    droplet-ids: '[]'
+  add-forwarding-rules:
+    forwarding-rules: ""
+  create:
+    algorithm: round_robin
+    droplet-ids: '[]'
+    forwarding-rules: ""
+    health-check: ""
+    name:
+      required: true
+    redirect-http-to-https: false
+    region:
+      required: true
+    sticky-sessions: ""
+    tag-name: ""
+  delete:
+    force: false
+  remove-droplets:
+    droplet-ids: '[]'
+  remove-forwarding-rules:
+    forwarding-rules: ""
+  update:
+    algorithm: round_robin
+    droplet-ids: '[]'
+    forwarding-rules: ""
+    health-check: ""
+    name: ""
+    redirect-http-to-https: false
+    region: ""
+    sticky-sessions: ""
+    tag-name: ""
+maintenance-window:
+  update:
+    day: ""
+    hour: ""
+node-pool:
+  create:
+    count: 0
+    name: ""
+    size: ""
+    tag: ""
+  delete:
+    force: false
+  recycle:
+    node-ids: ""
+  update:
+    count: 0
+    name: ""
+    tag: ""
+output: text
+pool:
+  create:
+    db: ""
+    mode: transaction
+    size: 0
+    user: ""
+  delete:
+    force: false
+projects:
+  create:
+    description: ""
+    environment: ""
+    format: ""
+    name: ""
+    no-header: false
+    purpose: ""
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+  update:
+    description: ""
+    environment: ""
+    format: ""
+    is_default: false
+    name: ""
+    no-header: false
+    purpose: ""
+records:
+  create:
+    format: ""
+    no-header: false
+    record-data: ""
+    record-flags: 0
+    record-name: ""
+    record-port: 0
+    record-priority: 0
+    record-tag: ""
+    record-ttl: 1800
+    record-type: ""
+    record-weight: 0
+  delete:
+    force: false
+  list:
+    format: ""
+    no-header: false
+  update:
+    format: ""
+    no-header: false
+    record-data: ""
+    record-flags: 0
+    record-id: 0
+    record-name: ""
+    record-port: 0
+    record-priority: 0
+    record-tag: ""
+    record-ttl: 1800
+    record-type: ""
+    record-weight: 0
+region:
+  list:
+    format: ""
+    no-header: false
+replica:
+  create:
+    region: nyc1
+    size: db-s-1vcpu-1gb
+  delete:
+    force: false
+required:
+  certificate:
+    create:
+      name: true
+  cluster:
+    create:
+      region: true
+  databases:
+    migrate:
+      region: true
+    resize:
+      num-nodes: true
+      size: true
+  droplet:
+    create:
+      image: true
+      region: true
+      size: true
+    tag:
+      tag-name: true
+  droplet-action:
+    change-kernel:
+      kernel-id: true
+    get:
+      action-id: true
+    rebuild:
+      image: true
+    rename:
+      droplet-name: true
+    restore:
+      image-id: true
+    snapshot:
+      snapshot-name: true
+  firewall:
+    create:
+      name: true
+    update:
+      name: true
+  image:
+    update:
+      image-name: true
+  image-action:
+    get:
+      action-id: true
+    transfer:
+      region: true
+  load-balancer:
+    create:
+      name: true
+      region: true
+    update:
+      name: true
+      region: true
+  maintenance-window:
+    update:
+      day: true
+      hour: true
+  node-pool:
+    create:
+      count: true
+      name: true
+      size: true
+  pool:
+    create:
+      db: true
+      size: true
+      user: true
+  projects:
+    create:
+      name: true
+      purpose: true
+  ssh-key:
+    create:
+      public-key: true
+    import:
+      public-key-file: true
+    update:
+      key-name: true
+  volume:
+    create:
+      region: true
+      size: true
+    snapshot:
+      snapshot-name: true
+  volume-action:
+    resize:
+      region: true
+      size: true
+resources:
+  assign:
+    resource: []
+  list:
+    format: ""
+    no-header: false
+size:
+  list:
+    format: ""
+    no-header: false
+snapshot:
+  delete:
+    force: false
+    format: ""
+    no-header: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+    region: ""
+    resource: ""
+ssh-key:
+  create:
+    format: ""
+    no-header: false
+    public-key: ""
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  import:
+    format: ""
+    no-header: false
+    public-key-file:
+      required: true
+  list:
+    format: ""
+    no-header: false
+  update:
+    format: ""
+    key-name:
+      required: true
+    no-header: false
+tag:
+  delete:
+    force: false
+user:
+  delete:
+    force: false
+volume:
+  create:
+    desc: ""
+    format: ""
+    fs-label: ""
+    fs-type: ""
+    no-header: false
+    region:
+      required: true
+    size: 4TiB
+    tag: []
+  delete:
+    force: false
+  get:
+    format: ""
+    no-header: false
+  list:
+    format: ""
+    no-header: false
+    region: ""
+  snapshot:
+    format: ""
+    no-header: false
+    snapshot-desc: ""
+    snapshot-name:
+      required: true
+    tag: []
+volume-action:
+  resize:
+    region: ""
+    size:
+      required: true
