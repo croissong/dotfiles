@@ -12,7 +12,6 @@ alias journalctl='journalctl -fxe'
 alias curl='curl -s'
 alias pass=gopass
 alias ssh='TERM=xterm ssh'
-alias summon='cyberark-summon -f $MY_PRIV/summons/secrets.yml'
 
 alias lock='physlock -ds'
 
@@ -39,3 +38,7 @@ alias twd='task done'
 alias twm='task modify'
 
 alias docker=podman
+
+function summon() {
+    cyberark-summon -f $XDG_CONFIG_HOME/summons/secrets.yml $SHELL -c $@
+}

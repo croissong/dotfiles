@@ -79,6 +79,8 @@ ssl_certs() {
     openssl s_client -showcerts -servername $server -connect $server:443 </dev/null  | openssl x509 -inform pem -noout -text
 }
 #+END_SRC
+* unpack
+aunpack -F 7z -O-p$PASSWORD sslarchive.zip
 
 * xinput
 #+BEGIN_SRC sh
