@@ -1,6 +1,5 @@
 alias ls='exa -gha --group-directories-first'
-# https://github.com/b4b4r07/enhancd/issues/104
-# alias find='fd -H'
+alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
 alias top=glances
 alias open=mimeo
