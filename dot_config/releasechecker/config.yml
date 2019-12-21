@@ -9,7 +9,7 @@ entries:
     downstream:
       type: command
       command: |
-        terraform version | sed -rn 's/.*v([0-9\.]+)/\1/p'
+        terraform version | sed -rn 's/Terraform v([0-9\.]+)/\1/p'
     hooks:
       - type: download
         url: 'https://releases.hashicorp.com/terraform/{{.Version}}/terraform_{{.Version}}_linux_amd64.zip'

@@ -5,6 +5,10 @@
 k8s_get_labels() {
   kubectl get po --no-headers | awk '{print $1}' | rg yag --smart-case --color never $1 | xargs kubectl get -o yaml po | rg -A3 labels
 }
+
+kc_ubuntu() {
+    kubectl run -i --tty --image ubuntu:latest ubuntu-test --restart=Never --rm /bin/bash
+}
 #+END_SRC
 * emacs
 #+BEGIN_SRC sh

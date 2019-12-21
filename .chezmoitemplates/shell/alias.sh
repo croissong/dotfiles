@@ -7,7 +7,7 @@ alias open=mimeo
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='xclip -sel c'
-alias dud='du -hd1'
+alias du='dust'
 alias journalctl='journalctl -fxe'
 alias curl='curl -s'
 alias pass=gopass
@@ -30,6 +30,7 @@ alias kcroll='kubectl patch deployment -p \
 alias kcl='kubectl logs -f'
 alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
+alias kcw='kubectl get po -w'
 
 alias tw='task'
 alias twa='task add'
@@ -39,6 +40,4 @@ alias twm='task modify'
 
 alias docker=podman
 
-function summon() {
-    cyberark-summon -f $XDG_CONFIG_HOME/summons/secrets.yml $SHELL -c $@
-}
+alias summon=cyberark-summon
