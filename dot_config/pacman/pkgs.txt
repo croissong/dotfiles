@@ -32,7 +32,6 @@ flex
 font-mathematica
 fwupd
 fzf
-gdb
 glances
 go
 go-tools
@@ -129,8 +128,6 @@ xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-fonts-misc
 xorg-iceauth
-xorg-server-devel
-xorg-server-xdmx
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb

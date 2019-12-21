@@ -8,6 +8,7 @@ docker-compose-bin
 doctl-bin
 downgrade
 drive-bin
+dust
 earlyoom
 ffsend-bin
 firefox-beta-bin
