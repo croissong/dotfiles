@@ -26,7 +26,7 @@ alias kcg='kubectl get -o yaml'
 alias kcdsc='kubectl describe'
 alias kcroll='kubectl patch deployment -p \
   "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}"'
-alias kcl='kubectl logs -f'
+alias kcl='kubectl logs -f --tail 100'
 alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
 alias kcw='kubectl get po -w'
@@ -40,3 +40,7 @@ alias twm='task modify'
 alias docker=podman
 
 alias summon=cyberark-summon
+
+alias unpack=aunpack
+
+awkp() { awk "{print \$${1:-1}}"; }

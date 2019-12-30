@@ -21,7 +21,7 @@ jetbrains-toolbox
 jp
 mattermost-desktop-bin
 mimeo
-miniserve
+miniserve-bin
 mitogen
 mssql-tools
 mu
