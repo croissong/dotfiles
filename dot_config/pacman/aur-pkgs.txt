@@ -23,6 +23,7 @@ mattermost-desktop-bin
 mimeo
 miniserve-bin
 mitogen
+mssql-cli
 mssql-tools
 mu
 pkg_scripts

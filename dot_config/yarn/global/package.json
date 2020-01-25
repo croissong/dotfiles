@@ -5,6 +5,7 @@
     "create-react-app": "3.3.0",
     "gatsby-cli": "2.8.22",
     "npm-check": "latest",
-    "svgo": "latest"
+    "svgo": "latest",
+    "typescript-language-server": "^0.4.0"
   }
 }

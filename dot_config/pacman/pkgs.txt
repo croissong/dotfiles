@@ -5,8 +5,6 @@ ansible-lint
 arandr
 arduino
 atool
-autoconf
-automake
 autopep8
 autorandr
 base
@@ -14,6 +12,7 @@ bind-tools
 bison
 blueman
 bluez-utils
+broot
 calibre
 checkbashisms
 chezmoi

@@ -11,7 +11,9 @@ ocl-icd
 perl-lwp-protocol-https
 postgresql-libs
 pstoedit
+python2-lockfile
 python-jmespath
+python-lockfile
 python-requests-oauthlib
 qt5-tools
 qt5-xmlpatterns
