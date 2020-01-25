@@ -47,4 +47,4 @@ entries:
           repo: argoproj/argo-cd
           asset: argocd-linux-amd64
         dest: '$HOME/.local/bin/argocd'
-        chmod: 755
+        chmod: 0755
