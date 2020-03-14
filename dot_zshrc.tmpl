@@ -28,6 +28,9 @@ else
     AGKOZAK_COLORS_PATH=green
     AGKOZAK_CUSTOM_PROMPT='%(?..%B%F{${AGKOZAK_COLORS_EXIT_STATUS}}(%?%)%f%b )%(!.%b%s.%f%b)%B%F{${AGKOZAK_COLORS_PATH}}%2v%f%b%(3V.%F{${AGKOZAK_COLORS_BRANCH_STATUS}}%3v%f.)${AGKOZAK_PROMPT_WHITESPACE}${AGKOZAK_COLORS_PROMPT_CHAR:+%F{${AGKOZAK_COLORS_PROMPT_CHAR}\}}%(4V.${AGKOZAK_PROMPT_CHAR[3]:-:}.%(!.${AGKOZAK_PROMPT_CHAR[2]:-%#}.${AGKOZAK_PROMPT_CHAR[1]:-%#}))${AGKOZAK_COLORS_PROMPT_CHAR:+%f} '
 
+    # Treat these characters as part of a word.
+    WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
+
     export FZF_DEFAULT_COMMAND='fd --type f'
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     export FZF_ALT_C_COMMAND="fd -t d -d 5"
