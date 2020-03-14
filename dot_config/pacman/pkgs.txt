@@ -4,6 +4,7 @@ alsa-tools
 ansible-lint
 arandr
 arduino
+arp-scan
 atool
 autopep8
 autorandr
@@ -16,6 +17,7 @@ broot
 calibre
 checkbashisms
 chezmoi
+colordiff
 dbeaver
 dhcpcd
 discord
@@ -71,6 +73,7 @@ offlineimap
 pamixer
 pandoc
 paprefs
+parallel
 pass
 pavucontrol
 physlock
@@ -92,6 +95,7 @@ socat
 sshfs
 steam
 strongswan
+sway
 sysstat
 tcpdump
 texlive-bibtexextra
@@ -131,7 +135,6 @@ xorg-iceauth
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
