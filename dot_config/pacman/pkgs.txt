@@ -20,6 +20,7 @@ dbeaver
 dhcpcd
 discord
 dunst
+earlyoom
 electrum
 evince
 exa
