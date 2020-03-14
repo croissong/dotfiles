@@ -33,6 +33,7 @@ tmuxinator
 tor-browser
 ttf-ubraille
 websocat
+wlrobs-hg
 yay-bin
 yq-bin
 zoiper
