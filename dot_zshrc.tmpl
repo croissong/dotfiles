@@ -8,8 +8,8 @@ else
         _comp_options+=(globdots)
     done
 
-    {{ template "keybinds.sh" }}
-    {{ template "alias.sh" }}
+    {{ template "shell/keybinds.sh" }}
+    {{ template "shell/alias.sh" }}
 
     compinit -C
 
