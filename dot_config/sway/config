@@ -129,7 +129,7 @@ bar {
         bindsym button7 nop
 }
 
-input "type:touchpad" {
+input type:touchpad {
     events disabled_on_external_mouse
     tap enabled
     natural_scroll enabled
