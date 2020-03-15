@@ -156,6 +156,7 @@ output 'Acer Technologies VG270U P 0x0000F7FA' {
 focus_follows_mouse no
 default_border none
 
+exec "systemctl --user import-environment; systemctl --user start sway-session.target"
 exec --no-startup-id i3-battery-popup -L 30 -n
 exec --no-startup-id hsetroot -solid "#000000"
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/sway/workspace-1.json'; exec emacsclient -c"
