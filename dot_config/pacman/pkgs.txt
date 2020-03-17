@@ -75,6 +75,7 @@ gopass
 gradle
 graphviz
 grep
+grim
 groff
 gsfonts
 gst-libav
@@ -188,6 +189,7 @@ s3cmd
 seahorse
 sed
 shadow
+slurp
 smartmontools
 socat
 sshfs
