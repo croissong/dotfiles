@@ -26,8 +26,8 @@
   ui = true
   pager = true
 [http "https://smarthub-wbench.wesp.telekom.net"]
-	sslCert = /home/croissong/.ssh/svh/user.crt
-	sslKey = /home/croissong/.ssh/svh/userkey.pem
+	sslCert = ~/.config/svh/ssl_smarthub-wbench/user.crt
+	sslKey = ~/.config/svh/ssl_smarthub-wbench/userkey.pem
 [alias]
   br = branch -vv
   bra = branch -avv
