@@ -178,7 +178,6 @@ python2-pip
 python2-pyaml
 qemu
 rdesktop
-redshift
 reflector
 ripgrep
 rmlint

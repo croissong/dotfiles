@@ -29,6 +29,7 @@ mssql-tools
 mu
 pkg_scripts
 python37
+redshift-wlr-gamma-control-git
 rtags
 slack-desktop
 tmuxinator
