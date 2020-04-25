@@ -15,10 +15,12 @@ firefox-beta-bin
 google-chrome-dev
 google-musicmanager
 grpcurl-bin
+gsctl-bin
 i3status-rust-git
 ike-scan
 jetbrains-toolbox
 jp
+jsonnet
 kubectl-bin
 mattermost-desktop-bin
 mimeo
@@ -41,4 +43,3 @@ wlrobs-hg
 yay-bin
 yq-bin
 zoiper
-zoom

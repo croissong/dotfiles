@@ -8,6 +8,7 @@ arandr
 arduino
 arp-scan
 atool
+audacity
 autoconf
 automake
 autopep8
@@ -100,6 +101,7 @@ jdk-openjdk
 jdk8-openjdk
 jfsutils
 jq
+k9s
 keybase
 krita
 lame
@@ -170,9 +172,11 @@ pulseaudio-bluetooth
 pulseaudio-jack
 python-gevent
 python-jedi
+python-language-server
 python-pip
 python-pyalsa
 python-setuptools
+python-six
 python-virtualenv
 python2-pip
 python2-pyaml
@@ -195,6 +199,7 @@ sshfs
 steam
 strongswan
 sudo
+swaks
 sway
 sysfsutils
 sysstat
