@@ -5,8 +5,8 @@ alias top=glances
 alias open=mimeo
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
-alias clip='xclip -sel c'
-alias du='dust'
+alias clip='wl-copy'
+alias du='du -hd1'
 alias journalctl='journalctl -fxe'
 alias curl='curl -s'
 alias pass=gopass
