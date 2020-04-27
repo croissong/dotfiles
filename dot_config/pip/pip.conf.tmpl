@@ -1,6 +1,3 @@
-[install]
-# incompatible with venv
-# user = yes
 [global]
-client-cert = ~/.ssh/svh/client.crt
-extra-index-url = https://jm:{{ pass "svh/ssl-archive" }}@smarthub-wbench.wesp.telekom.net/nexus3/repository/pypi-all/simple
+client-cert = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").pip.clientCert }}
+extra-index-url = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").pip.extraIndexUrl }}

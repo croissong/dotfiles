@@ -19,8 +19,8 @@ localfolders = ~/mail/iogroup
 [Repository iogroup_remote]
 type = IMAP
 maxconnections = 3
-remoteuser = {{ secret "show" "wrk/office365.com" "user" | toString }}
-remotepass = {{ pass "wrk/office365.com" }}
+remoteuser = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.iogroup.user }}
+remotepass = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.iogroup.password }}
 remotehost = outlook.office365.com
 remoteport = 993
 ssl = yes
@@ -39,13 +39,13 @@ localfolders = ~/mail/gmail
 [Repository gmail_remote]
 type = Gmail
 maxconnections = 3
-remoteuser = {{ secret "show" "gmail.com" "user" | toString }}
-remotepass = {{ pass "frugalusenet.com" }}
+remoteuser = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.gmail.user }}
+remotepass = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.gmail.password }}
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 ssl_version = tls1_2
 auth_mechanisms = XOAUTH2
 # folderfilter = lambda foldername: foldername not in ['[Google Mail]/All Mail']
-oauth2_client_id = {{ secret "show" "gmail.com" "clientId" | toString }}
-oauth2_client_secret = {{ secret "show" "gmail.com" "clientSecret" | toString }}
+oauth2_client_id = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.gmail.clientId }}
+oauth2_client_secret = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.gmail.clientSecret }}
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
-oauth2_refresh_token = {{ secret "show" "gmail.com" "refreshToken" | toString }}
+oauth2_refresh_token = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").offlineimap.gmail.refreshToken }}
