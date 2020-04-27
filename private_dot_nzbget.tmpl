@@ -55,19 +55,6 @@ UpdateCheck=stable
 DaemonUsername=root
 UMask=1000
 
-
-##############################################################################
-### CATEGORIES                                                             ###
-
-Category1.Name=Movies
-Category1.DestDir=
-Category1.Unpack=yes
-Category1.Extensions=
-Category1.Aliases=
-Category2.Name=Series
-Category3.Name=Music
-Category4.Name=Software
-
 ##############################################################################
 ### RSS FEEDS                                                              ###
 
@@ -75,7 +62,7 @@ Category4.Name=Software
 ##############################################################################
 ### INCOMING NZBS                                                          ###
 
-AppendCategoryDir=yes
+AppendCategoryDir=no
 NzbDirInterval=5
 NzbDirFileAge=60
 DupeCheck=yes
@@ -672,7 +659,7 @@ UnpackPassFile=
 # http://nzbget.net/catalog-of-extension-scripts.
 #
 # NOTE: For developer documentation visit http://nzbget.net/extension-scripts.
-Extensions=
+Extensions=videosort/VideoSort.py
 
 # Execution order for extension scripts.
 #
@@ -722,18 +709,6 @@ ShellOverride=
 # Value "-1" disables "file-downloaded"-events. Scripts are still
 # notified on other events (such as "nzb-added" or "nzb-downloaded").
 EventInterval=0
-Category2.DestDir=
-Category2.Unpack=yes
-Category2.Extensions=
-Category2.Aliases=
-Category3.DestDir=
-Category3.Unpack=yes
-Category3.Extensions=
-Category3.Aliases=
-Category4.DestDir=
-Category4.Unpack=yes
-Category4.Extensions=
-Category4.Aliases=
 Feed1.Name=dog
 Feed1.URL=https://dognzb.cr/rss.cfm?r={{ (secretJSON "-d" "--output-type=json" "secrets.yml").nzbget.feedApiKey }}&t=9000
 Feed1.Filter=
@@ -743,3 +718,27 @@ Feed1.PauseNzb=no
 Feed1.Category=
 Feed1.Priority=0
 Feed1.Extensions=
+ControlUsername=nzbget
+videosort/VideoSort.py:MoviesDir=${DestDir}/movies
+videosort/VideoSort.py:SeriesDir=${DestDir}/series
+videosort/VideoSort.py:DatedDir=${DestDir}/series
+videosort/VideoSort.py:OtherTvDir=${DestDir}/series
+videosort/VideoSort.py:TvCategories=
+videosort/VideoSort.py:VideoExtensions=.mkv,.avi,.divx,.xvid,.mov,.wmv,.mp4,.mpg,.mpeg,.vob,.iso
+videosort/VideoSort.py:SatelliteExtensions=.srt,.sub
+videosort/VideoSort.py:MinSize=100
+videosort/VideoSort.py:MoviesFormat=%.t_%y
+videosort/VideoSort.py:SeriesFormat=%s.n/s%s/e%0e_%e.n
+videosort/VideoSort.py:MultipleEpisodes=range
+videosort/VideoSort.py:EpisodeSeparator=E
+videosort/VideoSort.py:SeriesYear=yes
+videosort/VideoSort.py:DatedFormat=%sn/%sn_%y_%0m%0d
+videosort/VideoSort.py:OtherTvFormat=%t
+videosort/VideoSort.py:LowerWords=the,of,and,at,vs,a,an,but,nor,for,on,so,yet
+videosort/VideoSort.py:UpperWords=III,II,IV
+videosort/VideoSort.py:DNZBHeaders=yes
+videosort/VideoSort.py:PreferNZBName=no
+videosort/VideoSort.py:Overwrite=no
+videosort/VideoSort.py:Cleanup=yes
+videosort/VideoSort.py:Preview=no
+videosort/VideoSort.py:Verbose=no
