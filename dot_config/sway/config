@@ -168,6 +168,8 @@ default_border none
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
 exec --no-startup-id i3-battery-popup -L 30 -n
 exec --no-startup-id hsetroot -solid "#000000"
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/sway/workspace-1.json'; exec emacsclient -c"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/sway/workspace-2.json'; exec $BROWSER"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/sway/workspace-3.json'; exec i3-sensible-terminal"
+
+# https://github.com/swaywm/sway/pull/3022
+# exec --no-startup-id "swaymsg 'workspace 1; append_layout ~/.config/sway/workspace-1.json'; exec emacsclient -c"
+# exec --no-startup-id "swaymsg 'workspace 2; append_layout ~/.config/sway/workspace-2.json'; exec $BROWSER"
+# exec --no-startup-id "swaymsg 'workspace 3; append_layout ~/.config/sway/workspace-3.json'; exec i3-sensible-terminal"
