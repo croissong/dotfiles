@@ -86,6 +86,7 @@ gstreamer
 gstreamer-vaapi
 gutenprint
 gzip
+helm
 hplip
 hsetroot
 i3-wm
@@ -272,5 +273,6 @@ xorg-xset
 yapf
 yarn
 youtube-dl
+yq
 zbar
 zsh

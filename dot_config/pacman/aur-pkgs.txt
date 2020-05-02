@@ -1,6 +1,7 @@
 acestream-launcher
 antibody-bin
 apache-tools
+azure-cli
 bluez-firmware
 cyberark-summon
 dashbinsh
@@ -35,6 +36,7 @@ python37
 redshift-wlr-gamma-control-git
 rtags
 slack-desktop
+teams
 tmuxinator
 tor-browser
 ttf-ubraille
@@ -42,5 +44,4 @@ websocat
 wl-clipboard-x11
 wlrobs-hg
 yay-bin
-yq-bin
 zoiper
