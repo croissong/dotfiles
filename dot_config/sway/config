@@ -93,7 +93,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | wl-copy
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -152,19 +152,14 @@ input type:keyboard {
 
 output "*" {
   bg #282828 solid_color
-  # https://github.com/swaywm/wlroots/issues/958
-  pos 320 1440
-  # pos 320 1080
 }
 
 output 'Acer Technologies VG270U P 0x0000F7FA' {
   mode 2560x1440
-  pos 0 0
 }
 
 output 'Goldstar Company Ltd LG ULTRAWIDE 0x00005F71' {
   mode 2560x1080
-  pos 0 0
 }
 
 focus_follows_mouse no
