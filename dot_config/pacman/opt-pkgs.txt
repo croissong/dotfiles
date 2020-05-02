@@ -20,6 +20,7 @@ pstoedit
 python2-lockfile
 python-jmespath
 python-lockfile
+python-lxml
 python-requests-oauthlib
 qt5-tools
 qt5-wayland

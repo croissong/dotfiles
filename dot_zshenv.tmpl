@@ -1,8 +1,7 @@
+# TODO: https://wiki.archlinux.org/index.php/Systemd/User#Environment_variables
 set -a
 .  <(systemctl --user show-environment)
 set +a
-. $MY_PRIV/vars
-
 HISTORY_IGNORE="(ls *|pwd|pass *|tfa *)"
 HISTTIMEFORMAT="%d.%m.%y %T "
 HISTFILE=$HOME/.histfile
@@ -11,9 +10,7 @@ SAVEHIST=10000
 export ALTERNATE_EDITOR=""
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 export LESS='IMR'
-export RANGER_LOAD_DEFAULT_RC=false
 export VISUAL="emacsclient"
-export WAKATIME_HOME=$HOME/.priv/wakatime
 export SUMMON_PROVIDER=/usr/bin/gopass
 
 export GOPASS_NO_NOTIFY=true
