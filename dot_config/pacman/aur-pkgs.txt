@@ -15,6 +15,7 @@ ffsend-bin
 firefox-beta-bin
 google-chrome-dev
 google-musicmanager
+gopls
 grpcurl-bin
 gsctl-bin
 i3status-rust-git

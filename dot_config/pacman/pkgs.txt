@@ -32,6 +32,7 @@ coreutils
 cryptsetup
 cups
 dbeaver
+delve
 device-mapper
 dhcpcd
 diffutils
@@ -70,7 +71,6 @@ glibc
 gnome-keyring
 gnu-free-fonts
 go
-go-tools
 gopass
 gradle
 graphviz
@@ -170,6 +170,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-jack
+python-black
 python-gevent
 python-jedi
 python-language-server
@@ -192,6 +193,7 @@ s3cmd
 seahorse
 sed
 shadow
+shfmt
 slurp
 smartmontools
 socat
