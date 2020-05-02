@@ -378,4 +378,5 @@ x-scheme-handler/ftp=firefox-developer-edition.desktop;
 x-scheme-handler/http=firefox-developer-edition.desktop;
 x-scheme-handler/https=firefox-developer-edition.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/msteams=teams.desktop
 
