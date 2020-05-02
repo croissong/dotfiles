@@ -2,7 +2,7 @@
 set -a
 .  <(systemctl --user show-environment)
 set +a
-HISTORY_IGNORE="(ls *|pwd|pass *|tfa *)"
+HISTORY_IGNORE="(ls *|pwd|pass *|gopass *)"
 HISTTIMEFORMAT="%d.%m.%y %T "
 HISTFILE=$HOME/.histfile
 HISTSIZE=10000
