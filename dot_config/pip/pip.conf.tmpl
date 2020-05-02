@@ -1,3 +1,0 @@
-[global]
-client-cert = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").pip.clientCert }}
-extra-index-url = {{ (secretJSON "-d" "--output-type=json" "secrets.yml").pip.extraIndexUrl }}
