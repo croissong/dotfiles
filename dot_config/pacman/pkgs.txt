@@ -12,7 +12,6 @@ audacity
 autoconf
 automake
 autopep8
-autorandr
 base
 bash
 bind-tools
@@ -37,7 +36,6 @@ device-mapper
 dhcpcd
 diffutils
 discord
-dnsmasq
 docker
 e2fsprogs
 earlyoom
@@ -101,6 +99,7 @@ jdk-openjdk
 jdk8-openjdk
 jfsutils
 jq
+jwt-cli
 k9s
 keybase
 krita
@@ -259,15 +258,11 @@ xfsprogs
 xl2tpd
 xorg-bdftopcf
 xorg-font-util
-xorg-fonts-100dpi
-xorg-fonts-75dpi
 xorg-fonts-encodings
 xorg-mkfontscale
 xorg-server-common
 xorg-server-xwayland
 xorg-setxkbmap
-xorg-xbacklight
-xorg-xev
 xorg-xkbcomp
 xorg-xprop
 xorg-xrandr
