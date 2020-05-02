@@ -1,0 +1,16 @@
+font=Iosevka Term 15
+format=<b>%s</b>\n%b
+padding=6
+default-timeout=5000
+
+[urgency=low]
+text-color=#3B7C87
+background-color=#191311
+
+[urgency=normal]
+text-color=#5B8234
+background-color=#191311
+
+[urgency=high]
+text-color=#B7472A
+background-color=#191311

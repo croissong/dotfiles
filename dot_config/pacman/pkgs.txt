@@ -38,7 +38,6 @@ diffutils
 discord
 dnsmasq
 docker
-dunst
 e2fsprogs
 earlyoom
 ebtables

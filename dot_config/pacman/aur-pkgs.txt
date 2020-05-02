@@ -22,6 +22,7 @@ jetbrains-toolbox
 jp
 jsonnet
 kubectl-bin
+mako-git
 mattermost-desktop-bin
 mimeo
 miniserve-bin
