@@ -15,7 +15,6 @@ else
     {{ template "shell/keybinds.sh" }}
     {{ template "shell/alias.sh" }}
 
-    DISABLE_AUTO_UPDATE=true
     source $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
     source ~/.tmuxinator/tmuxinator.zsh
 
@@ -40,7 +39,6 @@ else
     export FZF_DEFAULT_COMMAND='fd --type f'
     export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     export FZF_ALT_C_COMMAND="fd -t d -d 5"
-    export ENHANCD_FILTER=fzf
 
     source /usr/share/fzf/key-bindings.zsh
     source /usr/share/fzf/completion.zsh
@@ -49,5 +47,6 @@ else
     source $XDG_CONFIG_HOME/zsh/zsh_overrides.zsh
 
     zstyle ':completion:*' insert-tab false
+    zstyle ':completion:*' menu select
 
 fi
