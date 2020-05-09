@@ -25,8 +25,21 @@ else
     setopt SHARE_HISTORY
     setopt HIST_IGNORE_DUPS
     setopt HIST_FIND_NO_DUPS
+    setopt HIST_NO_FUNCTIONS
+    setopt HIST_REDUCE_BLANKS
 
     unsetopt nomatch
+
+    HISTORY_IGNORE="(ls *|pwd|pass *|gopass *)"
+    HISTTIMEFORMAT="%d.%m.%y %T "
+    HISTFILE=$HOME/.histfile
+    HISTSIZE=10000
+    SAVEHIST=10000
+
+    export LESS='IMR'
+    export SUMMON_PROVIDER=/usr/bin/gopass
+    export LS_COLORS='di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
+    export GOPASS_NO_NOTIFY=true
 
     AGKOZAK_BLANK_LINES=1
     AGKOZAK_SHOW_STASH=0

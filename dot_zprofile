@@ -1,3 +1,7 @@
+set -a
+.  <(systemctl --user show-environment)
+set +a
+
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
