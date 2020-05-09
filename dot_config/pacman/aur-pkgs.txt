@@ -3,6 +3,7 @@ antibody-bin
 apache-tools
 azure-cli
 bluez-firmware
+cozy-audiobooks
 cyberark-summon
 dashbinsh
 docker-compose-bin
@@ -23,6 +24,7 @@ ike-scan
 jetbrains-toolbox
 jp
 jsonnet
+keybase-bin
 kubectl-bin
 mako-git
 mattermost-desktop-bin
@@ -33,10 +35,12 @@ mssql-cli
 mssql-tools
 mu
 pkg_scripts
+pyls-mypy
 python37
 redshift-wlr-gamma-control-git
 rtags
 slack-desktop
+sops
 teams
 tmuxinator
 tor-browser
@@ -44,5 +48,7 @@ ttf-ubraille
 websocat
 wl-clipboard-x11
 wlrobs-hg
+xsv-bin
 yay-bin
 zoiper
+zoom

@@ -101,7 +101,6 @@ jfsutils
 jq
 jwt-cli
 k9s
-keybase
 krita
 lame
 ledger
@@ -133,11 +132,14 @@ meld
 mitmproxy
 moreutils
 mpv
+mtr
 mumble
+mypy
 net-tools
 nftables
 nmap
 noto-fonts
+noto-fonts-emoji
 npm
 nvchecker
 nzbget
@@ -169,6 +171,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-jack
+pwgen
 python-black
 python-gevent
 python-jedi
