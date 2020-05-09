@@ -19,7 +19,7 @@ alias rg='rg --color always --no-heading --smart-case --hidden --ignore-file $HO
 alias ec=emacsclient
 alias ediff='scripts emacsc_ediff'
 alias ediff3='scripts emacsc_ediff3'
-man() {emacsclient -que '(progn (man "tmux") (select-frame-set-input-focus (selected-frame)))'}
+man() {emacsclient -que '(progn (man "$1") (select-frame-set-input-focus (selected-frame)))'}
 
 alias kc=kubectl
 alias kcd='kubectl config set-context $(kubectl config current-context) --namespace'
