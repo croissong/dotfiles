@@ -1,7 +1,6 @@
 if [ -z "$TMUX" ]; then
     tmux attach-session -d || tmuxinator start home --suppress-tmux-version-warning && tmux attach-session -d
 else
-    setopt extendedglob
     autoload -Uz compinit
     for dump in $HOME/.zcompdump(N.mh+24); do
         compinit
@@ -16,6 +15,8 @@ else
     DISABLE_AUTO_UPDATE=true
     source $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
     source ~/.tmuxinator/tmuxinator.zsh
+
+    setopt extendedglob
     setopt GLOB_DOTS
     setopt PROMPT_SP
     setopt AUTO_PARAM_SLASH
@@ -23,10 +24,13 @@ else
     setopt SHARE_HISTORY
     setopt HIST_IGNORE_DUPS
     setopt HIST_FIND_NO_DUPS
+
+    unsetopt nomatch
+
     AGKOZAK_BLANK_LINES=1
-    AGKOZAK_CUSTOM_RPROMPT=''
+    AGKOZAK_LEFT_PROMPT_ONLY=1
+    AGKOZAK_USER_HOST_DISPLAY=0
     AGKOZAK_COLORS_PATH=green
-    AGKOZAK_CUSTOM_PROMPT='%(?..%B%F{${AGKOZAK_COLORS_EXIT_STATUS}}(%?%)%f%b )%(!.%b%s.%f%b)%B%F{${AGKOZAK_COLORS_PATH}}%2v%f%b%(3V.%F{${AGKOZAK_COLORS_BRANCH_STATUS}}%3v%f.)${AGKOZAK_PROMPT_WHITESPACE}${AGKOZAK_COLORS_PROMPT_CHAR:+%F{${AGKOZAK_COLORS_PROMPT_CHAR}\}}%(4V.${AGKOZAK_PROMPT_CHAR[3]:-:}.%(!.${AGKOZAK_PROMPT_CHAR[2]:-%#}.${AGKOZAK_PROMPT_CHAR[1]:-%#}))${AGKOZAK_COLORS_PROMPT_CHAR:+%f} '
 
     # Treat these characters as part of a word.
     WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
