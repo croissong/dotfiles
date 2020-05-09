@@ -2,21 +2,23 @@ if [ -z "$TMUX" ]; then
     tmux attach-session -d || tmuxinator start home --suppress-tmux-version-warning && tmux attach-session -d
 else
     autoload -Uz compinit
-    for dump in $HOME/.zcompdump(N.mh+24); do
-        compinit
-        _comp_options+=(globdots)
-    done
+    () {
+      setopt extendedglob local_options
+      if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+         compinit
+      else
+        compinit -C
+      fi
+    }
+
 
     {{ template "shell/keybinds.sh" }}
     {{ template "shell/alias.sh" }}
-
-    compinit -C
 
     DISABLE_AUTO_UPDATE=true
     source $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
     source ~/.tmuxinator/tmuxinator.zsh
 
-    setopt extendedglob
     setopt GLOB_DOTS
     setopt PROMPT_SP
     setopt AUTO_PARAM_SLASH
