@@ -29,7 +29,7 @@ alias kcroll='kubectl patch deployment -p \
 alias kcl='kubectl logs -f --tail 100'
 alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
-alias kcw='kubectl get po -w -owide'
+alias kcw='kubectl get po -w -owide --sort-by=.metadata.creationTimestamp'
 
 alias tw='task'
 alias twa='task add'
