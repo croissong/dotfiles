@@ -16,9 +16,10 @@ alias lock='physlock -ds'
 
 alias rg='rg --color always --no-heading --smart-case --hidden --ignore-file $HOME/.config/ripgrep/ignore'
 
+alias ec=emacsclient
 alias ediff='scripts emacsc_ediff'
 alias ediff3='scripts emacsc_ediff3'
-alias e=emacsclient
+man() {emacsclient -que '(progn (man "tmux") (select-frame-set-input-focus (selected-frame)))'}
 
 alias kc=kubectl
 alias kcd='kubectl config set-context $(kubectl config current-context) --namespace'
