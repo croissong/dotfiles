@@ -43,4 +43,6 @@ alias summon=cyberark-summon
 
 alias unpack=aunpack
 
+alias c=z
+
 awkp() { awk "{print \$${1:-1}}"; }
