@@ -29,7 +29,8 @@ alias kcroll='kubectl patch deployment -p \
 alias kcl='kubectl logs -f --tail 100'
 alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
-alias kcw='kubectl get po -w -owide --sort-by=.metadata.creationTimestamp'
+alias kcw='kubectl get po -w -owide'
+alias kcgs='kubectl get -owide --sort-by=.metadata.creationTimestamp'
 
 alias tw='task'
 alias twa='task add'
@@ -38,11 +39,10 @@ alias twd='task done'
 alias twm='task modify'
 
 alias docker=podman
-
 alias summon=cyberark-summon
-
 alias unpack=aunpack
-
+alias pack=apack
 alias c=z
+alias vpnio='sudo swanctl -i -c vpn'
 
 awkp() { awk "{print \$${1:-1}}"; }
