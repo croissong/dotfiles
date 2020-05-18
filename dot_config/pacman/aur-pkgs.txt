@@ -36,6 +36,7 @@ mssql-tools
 mu
 pkg_scripts
 pyls-mypy
+python2-pyaml
 python37
 redshift-wlr-gamma-control-git
 rtags

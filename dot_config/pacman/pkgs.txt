@@ -11,7 +11,6 @@ atool
 audacity
 autoconf
 automake
-autopep8
 base
 bash
 bind-tools
@@ -182,7 +181,6 @@ python-setuptools
 python-six
 python-virtualenv
 python2-pip
-python2-pyaml
 qemu
 rdesktop
 reflector
@@ -270,7 +268,6 @@ xorg-xkbcomp
 xorg-xprop
 xorg-xrandr
 xorg-xset
-yapf
 yarn
 youtube-dl
 yq

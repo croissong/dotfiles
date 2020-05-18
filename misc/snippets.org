@@ -1,5 +1,3 @@
-#+PROPERTY: header-args :shebang #!/bin/env zsh
-
 * k8s
 #+BEGIN_SRC sh
 k8s_get_labels() {
