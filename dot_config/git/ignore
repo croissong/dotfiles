@@ -24,4 +24,5 @@ Thumbs.db
 *.lib
 *.sbr
 summon.yml
+secrets.yml
 /.mypy_cache/
