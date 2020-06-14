@@ -25,6 +25,7 @@ jetbrains-toolbox
 jp
 jsonnet
 keybase-bin
+krew-bin
 kubectl-bin
 mako-git
 mattermost-desktop-bin

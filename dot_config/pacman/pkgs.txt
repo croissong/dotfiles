@@ -148,6 +148,7 @@ openldap
 openssh
 opus
 p7zip
+packer
 pacman
 pamixer
 pandoc

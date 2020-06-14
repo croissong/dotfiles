@@ -2,11 +2,13 @@ celt
 ell
 flite
 glu
+hspell
 intel-media-sdk
 kio
 ladspa
 lib32-libpulse
 libfbclient
+libvoikko
 linux-firmware
 llvm
 mariadb-libs
@@ -24,7 +26,7 @@ python-lxml
 python-requests-oauthlib
 qt5-tools
 qt5-wayland
-qt5-xmlpatterns
+reiserfsprogs
 samba
 speech-dispatcher
 tk
