@@ -273,4 +273,5 @@ yarn
 youtube-dl
 yq
 zbar
+zip
 zsh
