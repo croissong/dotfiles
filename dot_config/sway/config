@@ -164,6 +164,7 @@ output 'Goldstar Company Ltd LG ULTRAWIDE 0x00005F71' {
 
 focus_follows_mouse no
 default_border none
+hide_edge_borders --i3 both
 
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
 exec --no-startup-id i3-battery-popup -L 30 -n
