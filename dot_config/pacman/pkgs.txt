@@ -144,6 +144,7 @@ nvchecker
 nzbget
 obs-studio
 offlineimap
+openjdk11-src
 openldap
 openssh
 opus

@@ -35,7 +35,7 @@
   co = checkout
   ds = diff --stat
   dc = diff --cached
-  hist = log --graph --decorate --date=short --pretty=format:\"%Cblue%h%Creset %ad %Cblue>%Creset %s%Cred%d%Creset [%Cgreen%an%Creset]\"
+  hist = log --graph --decorate --date=short --pretty=format:\"%Cblue%h%Creset %C(yellow)%ad%Creset %Cgreen%<(20)%an%Creset\t%s %Cred%d%Creset \"
   ls = ls-files
   mt = mergetool
   st = status -sb
