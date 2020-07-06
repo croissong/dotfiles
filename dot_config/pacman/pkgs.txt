@@ -53,7 +53,6 @@ findutils
 flake8
 flameshot
 flex
-font-mathematica
 fwupd
 fzf
 gawk
@@ -86,6 +85,7 @@ gzip
 helm
 hplip
 hsetroot
+httpie
 i3-wm
 i3lock
 inetutils

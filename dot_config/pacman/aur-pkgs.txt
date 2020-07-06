@@ -15,11 +15,13 @@ dust
 emacs-git
 ffsend-bin
 firefox-beta-bin
+font-mathematica
 google-chrome-dev
 google-musicmanager
 gopls
 grpcurl-bin
 gsctl-bin
+http-prompt
 i3status-rust-git
 ike-scan
 jetbrains-toolbox
