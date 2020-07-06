@@ -27,6 +27,7 @@ python-requests-oauthlib
 qt5-tools
 qt5-wayland
 reiserfsprogs
+rpcbind
 samba
 speech-dispatcher
 tk

@@ -10,21 +10,7 @@ kc_ubuntu() {
 #+END_SRC
 * emacs
 #+BEGIN_SRC sh
-emacs_ediff() {
-  if [ -d $1 ]; then
-    emacsclient -c -q --eval "(ediff-directories \"$1\" \"$2\" \"\")"
-  else
-    emacsclient -c -q --eval "(ediff-files \"$1\" \"$2\")"
-  fi
-}
 
-emacs_ediff3() {
-  if [ $# -ne 3 ]; then
-    echo Usage: $0 local base other
-    exit 1
-  fi
-  emacsclient -c -q --eval '(ediff-merge-with-ancestor "'$1'" "'$2'" "'$3'")'
-}
 #+END_SRC
 [[https://emacs.stackexchange.com/a/649][@stackexchange.com]]
 #+BEGIN_SRC sh

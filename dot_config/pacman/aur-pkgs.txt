@@ -53,6 +53,7 @@ ttf-ubraille
 websocat
 wl-clipboard-x11
 wlrobs-hg
+wshowkeys-git
 xsv-bin
 yay-bin
 zoiper

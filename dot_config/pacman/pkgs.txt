@@ -13,7 +13,7 @@ autoconf
 automake
 base
 bash
-bind-tools
+bind
 binutils
 bison
 blueman
@@ -101,6 +101,7 @@ jq
 jwt-cli
 k9s
 krita
+kustomize
 lame
 ledger
 less
