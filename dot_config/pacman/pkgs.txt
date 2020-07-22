@@ -246,6 +246,7 @@ vi
 vim
 virt-manager
 visualvm
+wf-recorder
 wget
 which
 whois

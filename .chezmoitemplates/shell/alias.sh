@@ -6,7 +6,7 @@ alias open=mimeo
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
-alias du='du -hd1'
+alias du='dust -b'
 alias journalctl='journalctl -fxe'
 alias curl='curl -s'
 alias pass=gopass

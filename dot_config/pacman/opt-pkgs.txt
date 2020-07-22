@@ -15,7 +15,6 @@ mariadb-libs
 mercurial
 modemmanager
 mpdecimal
-ocl-icd
 perl-lwp-protocol-https
 postgresql-libs
 pstoedit
