@@ -16,6 +16,7 @@ emacs-git
 ffsend-bin
 firefox-beta-bin
 font-mathematica
+gammastep
 google-chrome-dev
 google-musicmanager
 gopls
@@ -40,9 +41,6 @@ mssql-tools
 mu
 pkg_scripts
 pyls-mypy
-python2-pyaml
-python37
-redshift-wlr-gamma-control-git
 rtags
 slack-desktop
 sops
