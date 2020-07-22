@@ -5,7 +5,10 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec rofi -show run
+set $menu dmenu_path | /usr/bin/wofi --show drun -i -W1000 -H400 | xargs swaymsg exec --
+
+
+bindsym $mod+d exec $menu
 
 # change focus
 bindsym $mod+odiaeresis focus left
