@@ -2,6 +2,7 @@ acestream-launcher
 antibody-bin
 apache-tools
 azure-cli
+batsignal
 bluez-firmware
 cozy-audiobooks
 cyberark-summon
