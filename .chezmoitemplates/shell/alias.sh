@@ -22,8 +22,7 @@ alias kcd='kubectl config set-context $(kubectl config current-context) --namesp
 alias kctx='kubectl config use-context'
 alias kcg='kubectl get -o yaml'
 alias kcdsc='kubectl describe'
-alias kcroll='kubectl patch deployment -p \
-  "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}"'
+alias kcroll='kubectl rollout restart'
 alias kcl='kubectl logs -f --tail 100'
 alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
@@ -42,5 +41,8 @@ alias unpack=aunpack
 alias pack=apack
 alias c=z
 alias vpnio='sudo swanctl -i -c vpn'
+
+alias mvnpkg='mvn package -DskipTests'
+alias mvndep='mvn dependency:resolve -Dclassifier=javadoc'
 
 awkp() { awk "{print \$${1:-1}}"; }
