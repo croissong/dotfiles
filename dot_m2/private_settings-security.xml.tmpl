@@ -1,0 +1,3 @@
+<settingsSecurity><master>
+  {{"{"}}{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.master }}{{"}"}}
+</master></settingsSecurity>
