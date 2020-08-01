@@ -16,7 +16,6 @@ dust
 emacs-git
 ffsend-bin
 firefox-beta-bin
-font-mathematica
 gammastep
 google-chrome-dev
 google-musicmanager
