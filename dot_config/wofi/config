@@ -1,4 +1,5 @@
-show=drun
+show=run,drun
 insensitive=true
 width=1000
 height=400
+run-always_parse_args=true
