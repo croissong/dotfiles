@@ -43,6 +43,8 @@ alias c=z
 alias vpnio='sudo swanctl -i -c vpn'
 
 alias mvnpkg='mvn package -DskipTests'
-alias mvndep='mvn dependency:resolve -Dclassifier=javadoc'
+alias mvndep='mvn dependency:resolve -Dclassifier=sources'
+
+alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
 awkp() { awk "{print \$${1:-1}}"; }
