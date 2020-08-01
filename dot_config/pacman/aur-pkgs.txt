@@ -48,6 +48,7 @@ sops
 teams
 tmuxinator
 tor-browser
+trivy-bin
 ttf-ubraille
 websocat
 wl-clipboard-x11

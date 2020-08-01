@@ -47,3 +47,5 @@
   rpull = "! ~/.git.d/git-rpull.sh"
 [apply]
   whitespace = warn
+[diff "sopsdiffer"]
+	textconv = sops -d
