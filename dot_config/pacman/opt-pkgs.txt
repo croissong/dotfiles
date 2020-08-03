@@ -20,8 +20,8 @@ postgresql-libs
 pstoedit
 python2-beautifulsoup4
 python2-cssselect
-python2-html5-parser
 python2-lockfile
+python2-lxml
 python2-pygments
 python-jmespath
 python-lockfile

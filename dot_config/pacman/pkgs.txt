@@ -25,7 +25,6 @@ bzip2
 calibre-python3
 checkbashisms
 chezmoi
-cmake
 colordiff
 coreutils
 cryptsetup
@@ -99,7 +98,6 @@ jdk-openjdk
 jdk8-openjdk
 jfsutils
 jq
-jsoncpp
 jwt-cli
 k9s
 krita
@@ -131,7 +129,6 @@ man-pages
 maven
 mdadm
 meld
-meson
 mitmproxy
 moreutils
 mpv
@@ -140,7 +137,6 @@ mumble
 mypy
 net-tools
 nftables
-ninja
 nmap
 noto-fonts
 noto-fonts-emoji
@@ -191,14 +187,11 @@ python2-pip
 qemu
 rdesktop
 reflector
-rhash
 ripgrep
 rmlint
 rsync
-rust
 s-nail
 s3cmd
-scdoc
 seahorse
 sed
 shadow

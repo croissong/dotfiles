@@ -1,18 +1,20 @@
 {
-  "pacmanconf": "/etc/pacman.conf",
   "answerclean": "All",
-  "answeredit": "None",
   "answerdiff": "None",
+  "answeredit": "None",
+  "answerupgrade": "None",
+  "askremovemake": false,
+  "cleanAfter": true,
   "cleanmenu": false,
+  "devel": false,
   "diffmenu": false,
   "editmenu": false,
-  "answerupgrade": "",
-  "sortby": "votes",
+  "gitclone": true,
   "gitflags": "",
+  "pacmanconf": "/etc/pacman.conf",
+  "removemake": false,
   "requestsplitn": 150,
+  "sortby": "votes",
   "sudoloop": false,
-  "timeupdate": false,
-  "devel": false,
-  "cleanAfter": true,
-  "gitclone": true
+  "timeupdate": false
 }
