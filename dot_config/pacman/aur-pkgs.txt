@@ -41,6 +41,7 @@ mssql-tools
 mu
 pkg_scripts
 pyls-mypy
+python-ptvsd
 rtags
 slack-desktop
 sops
