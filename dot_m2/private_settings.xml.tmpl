@@ -5,7 +5,7 @@
         <server>
             <id>nexus-releases</id>
             <username>
-            {{"{"}}{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.server.user }}{{"}"}}
+            {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.server.user }}
             </username>
             <password>
               {{"{"}}{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.server.pass }}{{"}"}}
@@ -14,7 +14,7 @@
         <server>
             <id>nexus-snapshots</id>
             <username>
-            {{"{"}}{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.server.user }}{{"}"}}
+            {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.server.user }}
             </username>
             <password>
               {{"{"}}{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).maven.server.pass }}{{"}"}}
