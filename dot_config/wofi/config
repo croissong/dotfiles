@@ -1,4 +1,4 @@
-show=run,drun
+show=drun,run
 insensitive=true
 width=1000
 height=400

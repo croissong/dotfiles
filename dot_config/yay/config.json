@@ -12,7 +12,7 @@
   "gitclone": true,
   "gitflags": "",
   "pacmanconf": "/etc/pacman.conf",
-  "removemake": false,
+  "removemake": "no",
   "requestsplitn": 150,
   "sortby": "votes",
   "sudoloop": false,
