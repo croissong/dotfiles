@@ -190,6 +190,7 @@ reflector
 ripgrep
 rmlint
 rsync
+rustup
 s-nail
 s3cmd
 seahorse
