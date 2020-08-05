@@ -121,6 +121,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+tiling_drag disable
+
 bar {
         mode hide
         hidden_state hide
