@@ -55,6 +55,7 @@ flameshot
 flex
 fwupd
 fzf
+gammastep
 gawk
 gcc
 gcc-libs
@@ -86,7 +87,6 @@ helm
 hplip
 hsetroot
 httpie
-i3-wm
 i3lock
 inetutils
 inkscape
