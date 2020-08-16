@@ -13,7 +13,7 @@ doctl-bin
 downgrade
 drive-bin
 dust
-emacs-git
+emacs-native-comp-git-enhanced
 ffsend-bin
 firefox-beta-bin
 google-chrome-dev
@@ -30,6 +30,7 @@ jsonnet
 keybase-bin
 krew-bin
 kubectl-bin
+libgccjit
 mako-git
 mattermost-desktop-bin
 mimeo
@@ -50,6 +51,7 @@ tor-browser
 trivy-bin
 ttf-ubraille
 websocat
+wev
 wl-clipboard-x11
 wlrobs-hg
 wshowkeys-git
