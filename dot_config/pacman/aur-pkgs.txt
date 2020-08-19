@@ -50,6 +50,7 @@ tmuxinator
 tor-browser
 trivy-bin
 ttf-ubraille
+usql
 websocat
 wev
 wl-clipboard-x11
