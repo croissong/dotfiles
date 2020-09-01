@@ -63,7 +63,6 @@ gdb
 gettext
 ghostscript
 gimp
-glances
 glibc
 gnome-keyring
 gnu-free-fonts
@@ -86,6 +85,7 @@ gzip
 helm
 hplip
 hsetroot
+htop
 httpie
 i3lock
 inetutils
