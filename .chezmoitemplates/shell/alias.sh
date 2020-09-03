@@ -10,6 +10,8 @@ alias clip='wl-copy'
 alias du='dust -b'
 alias journalctl='journalctl -fxe'
 alias pass=gopass
+alias passc='gopass show -c'
+alias passo='gopass otp -c'
 alias ssh='TERM=xterm ssh'
 
 alias lock='physlock -ds'
