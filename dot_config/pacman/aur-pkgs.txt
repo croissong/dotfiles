@@ -1,4 +1,3 @@
-acestream-launcher
 antibody-bin
 apache-tools
 azure-cli
@@ -12,7 +11,7 @@ docker-compose-bin
 doctl-bin
 downgrade
 drive-bin
-dust
+dust-bin
 emacs-native-comp-git-enhanced
 fedora-firefox-wayland-bin
 ffsend-bin
@@ -36,8 +35,6 @@ mattermost-desktop-bin
 mimeo
 miniserve-bin
 mitogen
-mssql-cli
-mssql-tools
 mu
 pkg_scripts
 pyls-mypy

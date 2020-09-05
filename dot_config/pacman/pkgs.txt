@@ -87,7 +87,6 @@ hplip
 hsetroot
 htop
 httpie
-i3lock
 inetutils
 inkscape
 intel-ucode
@@ -95,11 +94,9 @@ iproute2
 iputils
 iwd
 jdk-openjdk
-jdk8-openjdk
 jfsutils
 jq
 jwt-cli
-k9s
 krita
 kustomize
 lame
@@ -162,7 +159,6 @@ patch
 pavucontrol
 pciutils
 perl
-perl-anyevent-i3
 perl-cgi
 physlock
 pipewire
@@ -186,7 +182,6 @@ python-pyalsa
 python-setuptools
 python-six
 python-virtualenv
-python2-pip
 qemu
 rdesktop
 reflector
