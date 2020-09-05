@@ -169,6 +169,14 @@ focus_follows_mouse no
 default_border none
 hide_edge_borders --i3 both
 
+
+
+for_window [app_id="firefox" title="Firefox - Sharing Indicator"] {
+  kill
+}
+
+
+
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
 exec --no-startup-id batsignal -b -w 60 -c 40
 exec --no-startup-id hsetroot -solid "#000000"
