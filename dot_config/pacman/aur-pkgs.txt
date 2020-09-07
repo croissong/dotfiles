@@ -4,7 +4,6 @@ azure-cli
 batsignal
 bluez-firmware
 cozy-audiobooks
-cyberark-summon
 dashbinsh
 dive
 docker-compose-bin

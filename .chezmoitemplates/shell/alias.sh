@@ -38,7 +38,7 @@ alias twd='task done'
 alias twm='task modify'
 
 alias docker=podman
-alias summon=cyberark-summon
+alias summon='cyberark-summon -f summon.yml'
 alias unpack=aunpack
 alias pack=apack
 alias c=z

@@ -29,6 +29,7 @@ colordiff
 coreutils
 cryptsetup
 cups
+cyberark-summon
 dbeaver
 delve
 device-mapper
