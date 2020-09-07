@@ -47,6 +47,8 @@ alias vpnio='sudo swanctl -i -c vpn'
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'
 
+alias gitdelbr="git branch -vv | grep ': gone]' | grep -v '\*' | awk '{ print $1}' | xargs -r git branch -D"
+
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
 awkp() { awk "{print \$${1:-1}}"; }

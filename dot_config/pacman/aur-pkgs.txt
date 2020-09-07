@@ -34,6 +34,7 @@ mattermost-desktop-bin
 mimeo
 miniserve-bin
 mitogen
+mssql-tools
 mu
 pkg_scripts
 pyls-mypy
