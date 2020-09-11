@@ -45,7 +45,7 @@ sops
 teams
 tmuxinator
 tor-browser
-trivy-bin
+trivy
 ttf-ubraille
 usql
 websocat
