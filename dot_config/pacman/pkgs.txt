@@ -27,6 +27,7 @@ checkbashisms
 chezmoi
 colordiff
 coreutils
+croc
 cryptsetup
 cups
 cyberark-summon

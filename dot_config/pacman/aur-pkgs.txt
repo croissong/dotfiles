@@ -13,7 +13,6 @@ drive-bin
 dust-bin
 emacs-native-comp-git-enhanced
 fedora-firefox-wayland-bin
-ffsend-bin
 google-chrome-dev
 google-musicmanager
 gopls
