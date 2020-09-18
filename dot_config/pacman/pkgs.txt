@@ -177,7 +177,6 @@ pwgen
 python-black
 python-gevent
 python-jedi
-python-language-server
 python-pip
 python-pyalsa
 python-setuptools
