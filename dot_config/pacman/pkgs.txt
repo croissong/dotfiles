@@ -13,6 +13,7 @@ autoconf
 automake
 base
 bash
+bat
 bind
 binutils
 bison
