@@ -31,6 +31,7 @@ alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
 alias kcw='kubectl get po -w -owide'
 alias kcgs='kubectl get -owide --sort-by=.metadata.creationTimestamp'
+alias kcrollall='kc get deploy --no-headers=true -ocustom-columns='name:{.metadata.name}' | xargs -I{} kubectl rollout restart deploy {}'
 
 alias tw='task'
 alias twa='task add'

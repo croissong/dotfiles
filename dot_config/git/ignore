@@ -25,3 +25,4 @@ Thumbs.db
 *.sbr
 summon.yml
 /.mypy_cache/
+pyrightconfig.json
