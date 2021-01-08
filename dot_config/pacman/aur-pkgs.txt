@@ -13,9 +13,9 @@ drive-bin
 dust-bin
 emacs-native-comp-git-enhanced
 fedora-firefox-wayland-bin
+golangci-lint-bin
 google-chrome-dev
 google-musicmanager
-gopls
 grpcurl-bin
 gsctl-bin
 http-prompt
@@ -35,6 +35,8 @@ miniserve-bin
 mitogen
 mssql-tools
 mu
+ngrok-bin
+paru-bin
 pkg_scripts
 python-ptvsd
 rtags
@@ -53,6 +55,5 @@ wlrobs-hg
 wshowkeys-git
 xdg-desktop-portal-wlr
 xsv-bin
-yay-bin
 zoiper
 zoom

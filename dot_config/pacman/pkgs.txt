@@ -71,6 +71,7 @@ gnome-keyring
 gnu-free-fonts
 go
 gopass
+gopls
 gradle
 graphviz
 grep
@@ -137,6 +138,7 @@ mtr
 mumble
 mypy
 net-tools
+nethogs
 nftables
 nmap
 noto-fonts
