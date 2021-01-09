@@ -46,6 +46,7 @@ python38
 rtags
 slack-desktop
 sops
+starship-bin
 streamlink-twitch-gui
 teams
 tmuxinator

@@ -1,5 +1,4 @@
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
-agkozak/agkozak-zsh-prompt
 agkozak/zsh-z

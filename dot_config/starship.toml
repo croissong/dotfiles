@@ -1,0 +1,53 @@
+add_newline = false
+format = """
+$shlvl\
+$directory\
+$git_branch\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$zig\
+$nix_shell\
+$conda\
+$crystal\
+$cmd_duration\
+$line_break\
+$jobs\
+$status\
+$character"""
+
+[character]
+success_symbol = "[❯](white)"
+
+[directory]
+style = "bold green"
+
+[git_branch]
+format = "[$branch]($style) "
+style = "#d69423"
+
+[python]
+format = '[$virtualenv]($style) '
+style = "yellow"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "dimmed white"
