@@ -1,4 +1,5 @@
 acpid
+aerc
 alacritty
 alsa-tools
 alsa-utils
@@ -7,6 +8,7 @@ ansible-lint
 arandr
 arduino
 arp-scan
+asciidoctor
 atool
 audacity
 autoconf
@@ -23,7 +25,7 @@ bluez-utils
 broot
 btrfs-progs
 bzip2
-calibre-python3
+calibre
 checkbashisms
 chezmoi
 colordiff
@@ -54,7 +56,6 @@ file
 filesystem
 findutils
 flake8
-flameshot
 flex
 fwupd
 fzf
@@ -122,6 +123,7 @@ linux-zen-headers
 logrotate
 lostfiles
 lsof
+lutris
 lvm2
 lzop
 m4
@@ -204,6 +206,7 @@ smartmontools
 socat
 sshfs
 steam
+streamlink
 strongswan
 sudo
 swaks
@@ -259,6 +262,7 @@ wireshark-qt
 wkhtmltopdf
 wl-clipboard
 wofi
+xdg-desktop-portal-wlr
 xf86-input-libinput
 xf86-video-intel
 xf86-video-vesa
@@ -269,12 +273,12 @@ xorg-font-util
 xorg-fonts-encodings
 xorg-mkfontscale
 xorg-server-common
-xorg-server-xwayland
 xorg-setxkbmap
 xorg-xkbcomp
 xorg-xprop
 xorg-xrandr
 xorg-xset
+xorg-xwayland
 yarn
 youtube-dl
 yq
