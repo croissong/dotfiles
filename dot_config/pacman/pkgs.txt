@@ -163,6 +163,7 @@ paprefs
 parallel
 pass
 patch
+patchutils
 pavucontrol
 pciutils
 perl
@@ -216,6 +217,8 @@ systemd-sysvcompat
 tar
 task
 tcpdump
+tesseract
+tesseract-data-eng
 texinfo
 texlive-bibtexextra
 texlive-core

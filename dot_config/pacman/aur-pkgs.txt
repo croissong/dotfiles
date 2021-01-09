@@ -41,6 +41,7 @@ paru-bin
 pkg_scripts
 plantuml-bin
 py-spy
+python-poetry-git
 python-ptvsd
 python38
 rtags
