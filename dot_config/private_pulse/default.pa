@@ -1,8 +1,0 @@
-.include /etc/pulse/default.pa
-
-### configure to switch audio output to newly connected devices
-load-module module-switch-on-connect
-
-### Enable Echo/Noise-Cancellation
-load-module module-echo-cancel use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1" source_name=echoCancel_source
-set-default-source echoCancel_source

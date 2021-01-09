@@ -175,10 +175,7 @@ podman
 prettier
 procps-ng
 psmisc
-pulseaudio
 pulseaudio-alsa
-pulseaudio-bluetooth
-pulseaudio-jack
 pwgen
 python-black
 python-gevent
