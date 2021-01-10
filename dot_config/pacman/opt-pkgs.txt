@@ -11,15 +11,9 @@ llvm
 mariadb-libs
 modemmanager
 mpdecimal
-perl-json-xs
 perl-lwp-protocol-https
 postgresql-libs
 pstoedit
-python2-beautifulsoup4
-python2-cssselect
-python2-html5lib
-python2-lockfile
-python2-lxml
 python2-pygments
 python-jmespath
 python-requests-oauthlib

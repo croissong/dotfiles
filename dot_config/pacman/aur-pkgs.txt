@@ -7,7 +7,6 @@ cozy-audiobooks
 dashbinsh
 dive
 docker-compose-bin
-doctl-bin
 downgrade
 drive-bin
 dust-bin
@@ -32,7 +31,6 @@ linkerd
 mako-git
 mattermost-desktop-bin
 mimeo
-miniserve-bin
 mitogen
 mssql-tools
 mu
