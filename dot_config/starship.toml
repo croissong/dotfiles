@@ -1,38 +1,4 @@
 add_newline = false
-format = """
-$shlvl\
-$directory\
-$git_branch\
-$dart\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$golang\
-$helm\
-$java\
-$julia\
-$kotlin\
-$nim\
-$nodejs\
-$ocaml\
-$perl\
-$php\
-$purescript\
-$python\
-$ruby\
-$rust\
-$swift\
-$terraform\
-$zig\
-$nix_shell\
-$conda\
-$crystal\
-$cmd_duration\
-$line_break\
-$jobs\
-$status\
-$character"""
 
 [character]
 success_symbol = "[❯](white)"
@@ -51,3 +17,41 @@ style = "yellow"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "dimmed white"
+
+
+[username]
+disabled = true
+[kubernetes]
+disabled = true
+[hostname]
+disabled = true
+[git_commit]
+disabled = true
+[git_state]
+disabled = true
+[git_status]
+disabled = true
+[hg_branch]
+disabled = true
+[docker_context]
+disabled = true
+[package]
+disabled = true
+[memory_usage]
+disabled = true
+[nix_shell]
+disabled = true
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[openstack]
+disabled = true
+[env_var]
+disabled = true
+[custom]
+disabled = true
+[battery]
+disabled = true
+[time]
+disabled = true
