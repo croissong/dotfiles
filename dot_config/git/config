@@ -11,6 +11,8 @@
 	excludesfile = ~/.config/git/ignore
 [diff]
 	submodule = log
+[diff "json"]
+    textconv = "jq ''"
 [status]
 	submodulesummary = 1
 	showuntrackedfiles = normal
