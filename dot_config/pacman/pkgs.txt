@@ -255,6 +255,8 @@ vi
 vim
 virt-manager
 visualvm
+vivaldi
+vivaldi-ffmpeg-codecs
 wf-recorder
 wget
 which

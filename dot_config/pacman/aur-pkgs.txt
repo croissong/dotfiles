@@ -53,6 +53,7 @@ tor-browser
 trivy
 ttf-ubraille
 usql
+vivaldi-update-ffmpeg-hook
 websocat
 wev
 wl-clipboard-x11
