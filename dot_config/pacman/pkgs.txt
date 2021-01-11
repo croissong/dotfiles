@@ -7,6 +7,7 @@ alsa-utils
 ansible
 ansible-lint
 arandr
+archiver
 arduino
 arp-scan
 asciidoctor

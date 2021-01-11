@@ -5,7 +5,8 @@ alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
 alias top=htop
 alias open='handlr open'
 alias history='history -E'
-alias tree='br'
+alias tree=br
+alias ps=procs
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
