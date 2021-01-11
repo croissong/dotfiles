@@ -55,3 +55,7 @@ disabled = true
 disabled = true
 [time]
 disabled = true
+[helm]
+disabled = true
+[nodejs]
+disabled = true
