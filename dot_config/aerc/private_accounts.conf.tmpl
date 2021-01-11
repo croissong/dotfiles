@@ -1,0 +1,7 @@
+[work]
+source   = imaps://{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).offlineimap.iogroup.userUrlEncoded }}:{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).offlineimap.iogroup.password }}@outlook.office365.com:993
+outgoing = smtp+login://{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).offlineimap.iogroup.userUrlEncoded }}:{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).offlineimap.iogroup.password }}@smtp.office365.com:587
+default  = INBOX
+from     = Jan Möller <jm@datawerk.de>
+copy-to  = Sent Items
+smtp-starttls = yes
