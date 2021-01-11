@@ -47,7 +47,6 @@ alias docker=podman
 alias summon='cyberark-summon -f summon.yml'
 alias unpack=aunpack
 alias pack=apack
-alias c=z
 alias vpnio='sudo swanctl -i -c vpn'
 
 alias mvnpkg='mvn package -DskipTests'

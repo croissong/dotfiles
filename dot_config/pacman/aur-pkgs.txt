@@ -64,3 +64,4 @@ wshowkeys-git
 xsv-bin
 zoiper
 zoom
+zoxide-bin
