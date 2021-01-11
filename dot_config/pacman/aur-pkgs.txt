@@ -35,6 +35,7 @@ mitogen
 mssql-tools
 mu
 ngrok-bin
+pandoc-bin
 paru-bin
 pkg_scripts
 plantuml-bin

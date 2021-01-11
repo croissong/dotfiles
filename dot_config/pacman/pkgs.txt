@@ -161,7 +161,6 @@ p7zip
 packer
 pacman
 pamixer
-pandoc
 paprefs
 parallel
 pass
