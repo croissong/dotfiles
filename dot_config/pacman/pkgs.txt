@@ -199,6 +199,7 @@ rsync
 rustup
 s-nail
 s3cmd
+sd
 seahorse
 sed
 shadow

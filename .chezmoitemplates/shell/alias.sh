@@ -7,6 +7,7 @@ alias open='handlr open'
 alias history='history -E'
 alias tree=br
 alias ps=procs
+alias sed=sd
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
