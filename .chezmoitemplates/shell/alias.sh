@@ -3,7 +3,7 @@ alias cat=bat
 alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
 alias top=htop
-alias open=mimeo
+alias open='handlr open'
 alias history='history -E'
 alias tree='br'
 

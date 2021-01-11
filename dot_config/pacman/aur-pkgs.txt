@@ -17,6 +17,7 @@ google-chrome-dev
 google-musicmanager
 grpcurl-bin
 gsctl-bin
+handlr-bin
 http-prompt
 i3status-rust-git
 ike-scan
@@ -30,7 +31,6 @@ libgccjit
 linkerd
 mako-git
 mattermost-desktop-bin
-mimeo
 mitogen
 mssql-tools
 mu
