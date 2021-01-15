@@ -45,8 +45,7 @@ alias twm='task modify'
 
 alias docker=podman
 alias summon='cyberark-summon -f summon.yml'
-alias unpack=aunpack
-alias pack=apack
+alias pack=archiver
 alias vpnio='sudo swanctl -i -c vpn'
 
 alias mvnpkg='mvn package -DskipTests'

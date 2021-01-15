@@ -12,7 +12,6 @@ arduino
 arp-scan
 asciidoctor
 aspell-en
-atool
 audacity
 autoconf
 automake
