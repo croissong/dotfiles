@@ -59,3 +59,7 @@ disabled = true
 disabled = true
 [nodejs]
 disabled = true
+[java]
+disabled = true
+[terraform]
+disabled = true
