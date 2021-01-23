@@ -14,7 +14,6 @@ emacs-native-comp-git-enhanced
 fedora-firefox-wayland-bin
 golangci-lint-bin
 google-chrome-dev
-google-musicmanager
 grpcurl-bin
 gsctl-bin
 handlr-bin
