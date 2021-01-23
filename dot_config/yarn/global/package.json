@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@angular/cli": "10.1.0",
-    "aurelia-cli": "2.0.0",
-    "create-react-app": "3.4.1",
-    "gatsby-cli": "2.12.91",
+    "@angular/cli": "11.1.1",
+    "aurelia-cli": "2.0.2",
+    "create-react-app": "4.0.1",
+    "gatsby-cli": "^2.18.0",
     "http-server": "^0.12.3",
     "npm-check": "5.9.2",
     "svgo": "latest",
-    "typescript-language-server": "^0.4.0"
+    "typescript-language-server": "^0.5.1"
   }
 }
