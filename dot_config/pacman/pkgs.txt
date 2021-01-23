@@ -37,6 +37,7 @@ croc
 cryptsetup
 cups
 cyberark-summon
+dante
 dbeaver
 delve
 device-mapper
@@ -259,6 +260,7 @@ virt-manager
 visualvm
 vivaldi
 vivaldi-ffmpeg-codecs
+w3m
 wf-recorder
 wget
 which
