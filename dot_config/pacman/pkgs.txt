@@ -258,8 +258,6 @@ vi
 vim
 virt-manager
 visualvm
-vivaldi
-vivaldi-ffmpeg-codecs
 w3m
 wf-recorder
 wget

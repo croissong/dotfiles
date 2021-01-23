@@ -54,7 +54,8 @@ tor-browser
 trivy
 ttf-ubraille
 usql
-vivaldi-update-ffmpeg-hook
+vivaldi-snapshot
+vivaldi-snapshot-ffmpeg-codecs
 websocat
 wev
 wl-clipboard-x11
