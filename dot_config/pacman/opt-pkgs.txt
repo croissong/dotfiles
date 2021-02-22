@@ -4,6 +4,7 @@ intel-media-sdk
 kio
 ladspa
 lib32-libpulse
+libcanberra-pulse
 libfbclient
 libvoikko
 linux-firmware
@@ -11,6 +12,7 @@ llvm
 mariadb-libs
 modemmanager
 mpdecimal
+perl-json
 perl-lwp-protocol-https
 postgresql-libs
 pstoedit
@@ -21,5 +23,6 @@ qt5-tools
 reiserfsprogs
 rpcbind
 samba
+sdl
 speech-dispatcher
 tk

@@ -38,7 +38,6 @@ pandoc-bin
 paru-bin
 pkg_scripts
 plantuml-bin
-procs-bin
 py-spy
 python-poetry-git
 python-ptvsd
@@ -56,7 +55,6 @@ ttf-ubraille
 usql
 vivaldi-snapshot
 vivaldi-snapshot-ffmpeg-codecs
-websocat
 wev
 wl-clipboard-x11
 wlrobs-hg

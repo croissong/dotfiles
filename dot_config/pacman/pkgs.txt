@@ -169,7 +169,6 @@ parallel
 pass
 patch
 patchutils
-pavucontrol
 pciutils
 perl
 perl-cgi
@@ -178,8 +177,10 @@ pipewire
 pipewire-pulse
 pkgconf
 podman
+podman-compose
 prettier
 procps-ng
+procs
 psmisc
 pulseaudio-alsa
 pwgen
@@ -259,6 +260,7 @@ vim
 virt-manager
 visualvm
 w3m
+websocat
 wf-recorder
 wget
 which
