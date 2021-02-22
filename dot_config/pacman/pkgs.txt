@@ -15,7 +15,6 @@ aspell-en
 audacity
 autoconf
 automake
-bandwhich
 base
 bash
 bat
@@ -147,6 +146,7 @@ mtr
 mumble
 mypy
 net-tools
+nethogs
 nftables
 nmap
 noto-fonts

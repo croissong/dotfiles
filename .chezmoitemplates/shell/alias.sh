@@ -8,7 +8,7 @@ alias history='history -E'
 alias tree=br
 alias ps=procs
 alias sed=sd
-alias ntop='sudo bandwhich'
+alias ntop='sudo nethogs'
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
@@ -47,6 +47,8 @@ alias docker=podman
 alias summon='cyberark-summon -f summon.yml'
 alias pack=archiver
 alias vpnio='sudo swanctl -i -c vpn'
+
+alias vol=pamixer
 
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'
