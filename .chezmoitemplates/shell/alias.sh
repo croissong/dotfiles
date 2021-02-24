@@ -9,6 +9,7 @@ alias tree=br
 alias ps=procs
 alias sed=sd
 alias ntop='sudo nethogs'
+alias rename=vidir
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
