@@ -223,6 +223,7 @@ systemd-sysvcompat
 tar
 task
 tcpdump
+terraform
 tesseract
 tesseract-data-eng
 texinfo
