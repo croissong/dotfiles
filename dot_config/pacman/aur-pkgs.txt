@@ -3,6 +3,7 @@ apache-tools
 azure-cli
 batsignal
 bluez-firmware
+bottom-bin
 cozy-audiobooks
 dashbinsh
 dive

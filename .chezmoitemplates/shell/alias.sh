@@ -50,6 +50,9 @@ alias pack=archiver
 alias vpnio='sudo swanctl -i -c vpn'
 
 alias vol=pamixer
+alias volm='pamixer -t'
+alias voli='pamixer -i --allow-boost'
+alias vold='pamixer -d'
 
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'

@@ -95,7 +95,6 @@ helm
 hey
 hplip
 hsetroot
-htop
 httpie
 inetutils
 inkscape
