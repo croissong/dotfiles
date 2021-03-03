@@ -35,11 +35,13 @@ mitogen
 mssql-tools
 mu
 ngrok-bin
+openpomodoro
 pandoc-bin
 paru-bin
 pkg_scripts
 plantuml-bin
 py-spy
+pyright
 python-poetry-git
 python-ptvsd
 python38

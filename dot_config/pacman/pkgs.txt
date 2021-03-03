@@ -30,6 +30,7 @@ bzip2
 calibre
 checkbashisms
 chezmoi
+cmake
 colordiff
 coreutils
 croc
@@ -105,7 +106,9 @@ iwd
 jdk-openjdk
 jfsutils
 jq
+jsoncpp
 jwt-cli
+khal
 krita
 kustomize
 lame
@@ -125,6 +128,7 @@ light
 linux-lts
 linux-zen
 linux-zen-headers
+lld
 logrotate
 lostfiles
 lsof
@@ -195,6 +199,7 @@ python-virtualenv
 qemu
 rdesktop
 reflector
+rhash
 ripgrep
 rmlint
 rsync
