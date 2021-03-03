@@ -121,6 +121,7 @@ libtool
 libva-intel-driver
 libvirt
 licenses
+light
 linux-lts
 linux-zen
 linux-zen-headers
