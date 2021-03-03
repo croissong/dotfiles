@@ -1,4 +1,5 @@
 alias ls='exa -gha --group-directories-first'
+alias ll='ls -l'
 alias cat=bat
 alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
@@ -51,8 +52,9 @@ alias vpnio='sudo swanctl -i -c vpn'
 
 alias vol=pamixer
 alias volm='pamixer -t'
-alias voli='pamixer -i --allow-boost'
+alias voli='pamixer --allow-boost -i'
 alias vold='pamixer -d'
+alias volg='pamixer --get-volume-human'
 
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'
