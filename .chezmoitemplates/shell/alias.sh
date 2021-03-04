@@ -3,7 +3,7 @@ alias ll='ls -l'
 alias cat=bat
 alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
-alias top=htop
+alias top=btm
 alias open='handlr open'
 alias history='history -E'
 alias tree=br
@@ -37,7 +37,7 @@ alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
 alias kcw='kubectl get po -w -owide'
 alias kcgs='kubectl get -owide --sort-by=.metadata.creationTimestamp'
-alias kcrollall='kc get deploy --no-headers=true -ocustom-columns='name:{.metadata.name}' | xargs -I{} kubectl rollout restart deploy {}'
+alias kcrollall="kc get deploy --no-headers=true -ocustom-columns='name:{.metadata.name}' | xargs -I{} kubectl rollout restart deploy {}"
 
 alias tw='task'
 alias twa='task add'

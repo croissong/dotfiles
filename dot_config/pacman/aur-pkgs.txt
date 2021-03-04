@@ -11,7 +11,7 @@ docker-compose-bin
 downgrade
 drive-bin
 dust-bin
-emacs-native-comp-git-enhanced
+emacs-gcc-wayland-devel-bin
 fedora-firefox-wayland-bin
 golangci-lint-bin
 google-chrome-dev
@@ -19,7 +19,6 @@ grpcurl-bin
 gsctl-bin
 handlr-bin
 http-prompt
-i3status-rust-git
 ike-scan
 jetbrains-toolbox
 jp
@@ -39,7 +38,6 @@ openpomodoro
 pandoc-bin
 paru-bin
 pkg_scripts
-plantuml-bin
 py-spy
 pyright
 python-poetry-git

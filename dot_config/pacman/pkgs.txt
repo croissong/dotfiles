@@ -97,6 +97,7 @@ hey
 hplip
 hsetroot
 httpie
+i3status-rust
 inetutils
 inkscape
 intel-ucode
@@ -180,6 +181,7 @@ physlock
 pipewire
 pipewire-pulse
 pkgconf
+plantuml
 podman
 podman-compose
 prettier
@@ -203,6 +205,7 @@ rhash
 ripgrep
 rmlint
 rsync
+rust-analyzer
 rustup
 s-nail
 s3cmd
