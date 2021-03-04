@@ -1,7 +1,7 @@
 antibody-bin
 apache-tools
 azure-cli
-batsignal
+bato-bin
 bluez-firmware
 bottom-bin
 cozy-audiobooks

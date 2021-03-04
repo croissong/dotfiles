@@ -178,7 +178,7 @@ for_window [app_id="firefox" title="Firefox - Sharing Indicator"] {
 
 
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
-exec --no-startup-id batsignal -b -w 60 -c 40
+exec --no-startup-id bato
 exec --no-startup-id hsetroot -solid "#000000"
 
 # https://github.com/swaywm/sway/pull/3022
