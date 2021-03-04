@@ -63,3 +63,5 @@ disabled = true
 disabled = true
 [terraform]
 disabled = true
+[rust]
+disabled = true
