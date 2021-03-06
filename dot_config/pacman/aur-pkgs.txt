@@ -6,6 +6,7 @@ bluez-firmware
 bottom-bin
 cozy-audiobooks
 dashbinsh
+direnv-bin
 dive
 docker-compose-bin
 downgrade
@@ -28,7 +29,6 @@ krew-bin
 kubectl-bin
 libgccjit
 linkerd
-mako-git
 mattermost-desktop-bin
 mitogen
 mssql-tools
@@ -40,7 +40,6 @@ paru-bin
 pkg_scripts
 py-spy
 pyright
-python-poetry-git
 python-ptvsd
 python38
 rtags

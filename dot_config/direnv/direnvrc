@@ -1,0 +1,5 @@
+layout_poetry() {
+  export VIRTUAL_ENV=$(poetry env info --path)
+  export POETRY_ACTIVE=1
+  PATH_add "$VIRTUAL_ENV/bin"
+}

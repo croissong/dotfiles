@@ -38,6 +38,7 @@ cryptsetup
 cups
 cyberark-summon
 dante
+dateutils
 dbeaver
 delve
 device-mapper
@@ -138,6 +139,7 @@ lvm2
 lzop
 m4
 make
+mako
 man-db
 man-pages
 maven
@@ -194,6 +196,7 @@ python-black
 python-gevent
 python-jedi
 python-pip
+python-poetry
 python-pyalsa
 python-setuptools
 python-six
