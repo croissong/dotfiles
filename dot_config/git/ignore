@@ -26,3 +26,4 @@ Thumbs.db
 summon.yml
 /.mypy_cache/
 pyrightconfig.json
+/.envrc
