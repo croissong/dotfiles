@@ -2,6 +2,7 @@ antibody-bin
 apache-tools
 azure-cli
 bato-bin
+blanket-bin
 bluez-firmware
 bottom-bin
 cozy-audiobooks

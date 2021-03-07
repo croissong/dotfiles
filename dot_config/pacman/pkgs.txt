@@ -261,6 +261,7 @@ ttf-dejavu
 ttf-hack
 ttf-hannom
 ttf-indic-otf
+units
 unrar
 unzip
 usbutils
