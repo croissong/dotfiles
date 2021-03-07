@@ -14,8 +14,9 @@ bat_discharging = " - "
 
 [[block]]
 block = "custom"
-command = "python $XDG_CONFIG_HOME/i3status-rust/redshift_block.py"
-interval = 1800
+command = "$XDG_CONFIG_HOME/i3status-rust/pomodoro-block.sh"
+json = true
+interval = 30
 
 [[block]]
 block = "load"
