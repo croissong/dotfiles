@@ -18,6 +18,10 @@ style = "yellow"
 format = "[$duration]($style) "
 style = "dimmed white"
 
+[status]
+disabled = false
+symbol = ""
+style = "red"
 
 [username]
 disabled = true
