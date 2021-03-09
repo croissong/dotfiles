@@ -9,6 +9,7 @@ set $term alacritty
 
 bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
+bindsym $mod+ctrl+d exec $menu --show run
 
 # change focus
 bindsym $mod+odiaeresis focus left
