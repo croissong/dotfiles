@@ -28,12 +28,14 @@ jsonnet
 keybase-bin
 krew-bin
 kubectl-bin
+kubernetes-helmfile-bin
 libgccjit
 linkerd
 mattermost-desktop-bin
 mitogen
 mssql-tools
 mu
+nb
 ngrok-bin
 openpomodoro
 pandoc-bin
