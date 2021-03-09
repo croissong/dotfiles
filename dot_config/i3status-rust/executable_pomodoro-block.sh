@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-minutesLeft=`pomodoro status -f '%R'`
-if [ "$minutesLeft" = "0" ]; then
-    state=Idle
+minutesLeft=`pomodoro status -f '%r'`
+if [ "$minutesLeft" = "0:00" ]; then
+    text="🍅"
 else
-    state=Info
+    text="$minutesLeft⏱"
 fi
-echo "{\"icon\": \"POMODORO\", \"state\": \"$state\", \"text\": \"$minutesLeft\"}"
+echo "{\"text\": \"$text\"}"
