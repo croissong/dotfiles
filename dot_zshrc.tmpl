@@ -59,5 +59,11 @@ else
     zstyle ':completion:*' insert-tab false
     zstyle ':completion:*' menu select
 
+    # auto url quoting
+    autoload -Uz bracketed-paste-magic
+    zle -N bracketed-paste bracketed-paste-magic
+    autoload -Uz url-quote-magic
+    zle -N self-insert url-quote-magic
+
     eval "$(direnv hook zsh)"
 fi
