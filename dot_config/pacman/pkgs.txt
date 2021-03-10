@@ -213,6 +213,7 @@ rustup
 s-nail
 s3cmd
 sd
+sdcv
 seahorse
 sed
 shadow
@@ -221,6 +222,7 @@ slurp
 smartmontools
 socat
 sshfs
+stardict
 steam
 streamlink
 strongswan
