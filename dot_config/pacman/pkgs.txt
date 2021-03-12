@@ -167,6 +167,7 @@ openjdk11-src
 openldap
 openssh
 opus
+otf-font-awesome
 p7zip
 packer
 pacman
@@ -228,6 +229,7 @@ streamlink
 strongswan
 sudo
 swaks
+swappy
 sway
 sysfsutils
 sysstat

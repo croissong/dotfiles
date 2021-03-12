@@ -94,7 +94,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "swaynag -t warning -m 'Exit?' -b 'Mais oui!' 'swaymsg exit'"
 
-bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | wl-copy
+bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
