@@ -23,7 +23,6 @@ alias ssh='TERM=xterm ssh'
 
 alias lock='physlock -ds'
 
-alias ec=emacsclient
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
 
 alias kc=kubectl
@@ -68,3 +67,14 @@ awkp() { awk "{print \$${1:-1}}"; }
 
 b64e() { echo -n $1 | base64 -w0 }
 b64d() { echo -n $1 | base64 -d }
+
+e() {
+    if [ -z "$1" ]; then
+        TMP="$(mktemp /tmp/stdin-XXX)"
+        cat >$TMP
+        emacsclient $TMP
+        rm $TMP
+    else
+        emacsclient "$@"
+    fi
+}
