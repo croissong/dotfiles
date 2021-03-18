@@ -5,6 +5,7 @@ bato-bin
 blanket-bin
 bluez-firmware
 bottom-bin
+bukuserver
 cozy-audiobooks
 dashbinsh
 direnv-bin
@@ -43,6 +44,10 @@ paru-bin
 pkg_scripts
 py-spy
 pyright
+python-flask-admin
+python-flask-api
+python-flask-paginate
+python-flask-reverse-proxy-fix
 python-ptvsd
 python38
 rtags
