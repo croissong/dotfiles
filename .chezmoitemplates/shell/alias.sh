@@ -1,6 +1,7 @@
 alias ls='exa -gha --group-directories-first'
 alias ll='ls -l'
 alias cat=bat
+alias less=bat
 alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
 alias top=btm
