@@ -30,6 +30,7 @@ keybase-bin
 krew-bin
 kubectl-bin
 kubernetes-helmfile-bin
+libfixposix
 libgccjit
 linkerd
 mattermost-desktop-bin
@@ -38,6 +39,7 @@ mssql-tools
 mu
 nb
 ngrok-bin
+nyxt
 openpomodoro
 pandoc-bin
 paru-bin

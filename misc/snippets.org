@@ -105,3 +105,5 @@ else
 fi
 
 #+END_SRC
+* end
+mitmdump -p 8118 --set client_certs=/home/croissong/.config/ssl/client-certs/ -q

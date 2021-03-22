@@ -49,3 +49,9 @@
 (define-command play-video-in-current-page (&optional (buffer (current-buffer)))
   "Play video in the currently open buffer."
   (uiop:run-program (list "mpv" (object-string (url buffer)))))
+
+
+(define-configuration nyxt/proxy-mode:proxy-mode
+  ((nyxt/proxy-mode:proxy (make-instance 'proxy
+                                         :server-address (quri:uri "http://localhost:8118")
+                                         :proxied-downloads-p t))))
