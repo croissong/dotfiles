@@ -8,7 +8,13 @@
     "M-ö" 'nyxt/web-mode:history-backwards
     "M-#" 'nyxt/web-mode:history-forwards
     "C-M-d" 'set-url-new-buffer
-    "C-d" 'set-url)
+    "C-d" 'set-url
+
+    "C-e" 'set-url-from-bookmark
+    "C-M-e e" 'bookmark-current-page
+
+    "C-s" 'nyxt/web-mode:search-buffer
+    "C-M-s" 'nyxt/web-mode:remove-search-hints)
 
 (defvar *my-minibuffer-keymap* (make-keymap "my-minibuffer-map"))
 
@@ -38,3 +44,8 @@
 
 (define-configuration (minibuffer)
     ((default-modes (append '(my-minibuffer-mode) %slot-default))))
+
+
+(define-command play-video-in-current-page (&optional (buffer (current-buffer)))
+  "Play video in the currently open buffer."
+  (uiop:run-program (list "mpv" (object-string (url buffer)))))
