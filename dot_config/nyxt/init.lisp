@@ -9,6 +9,7 @@
     "M-#" 'nyxt/web-mode:history-forwards
     "C-M-d" 'set-url-new-buffer
     "C-d" 'set-url
+    "C-space" 'nyxt/visual-mode:visual-mode
 
     "C-e" 'set-url-from-bookmark
     "C-M-e e" 'bookmark-current-page
@@ -32,7 +33,8 @@
 (defvar *my-prompt-keymap* (make-keymap "my-prompt-map"))
 (define-key *my-prompt-keymap*
     "M-ä" 'nyxt/prompt-buffer-mode:select-next
-    "M-ü" 'nyxt/prompt-buffer-mode:select-previous)
+    "M-ü" 'nyxt/prompt-buffer-mode:select-previous
+    "C-y" 'nyxt/prompt-buffer-mode:prompt-buffer-paste)
 (define-mode my-prompt-mode ()
   "Dummy mode for the custom key bindings in `*my-keymap*'."
   ((keymap-scheme (keymap:make-scheme
@@ -52,3 +54,20 @@
   ((nyxt/proxy-mode:proxy (make-instance 'proxy
                                          :server-address (quri:uri "http://localhost:8118")
                                          :proxied-downloads-p t))))
+
+(define-configuration buffer
+  ((search-engines (list
+                    (make-instance 'search-engine
+                                   :shortcut "wiki"
+                                   :search-url "https://en.wikipedia.org/w/index.php?search=~a"
+                                   :fallback-url "https://en.wikipedia.org/")
+                    (make-instance 'search-engine
+                                   :shortcut "g"
+                                   :fallback-url "https://google.com"
+                                   :search-url "https://google.com/search?q=~a")))))
+
+
+(define-configuration buffer
+  ((override-map (let ((map (make-keymap "override-map")))
+                   (define-key map
+                     "M-x" 'execute-command)))))
