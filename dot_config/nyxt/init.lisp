@@ -12,6 +12,8 @@
     "C-space" 'nyxt/visual-mode:visual-mode
     "C-l l" 'copy-url
 
+    "M-enter" 'nyxt/web-mode:follow-hint
+
     "C-e" 'set-url-from-bookmark
     "C-M-e e" 'bookmark-current-page
 
@@ -73,3 +75,15 @@
   ((override-map (let ((map (make-keymap "override-map")))
                    (define-key map
                      "M-x" 'execute-command)))))
+
+
+(define-configuration buffer
+    ((request-resource-hook (reduce #'hooks:add-hook
+                                    (list (url-dispatching-handler
+                                           'wbench-dispatcher
+                                           (match-host "smarthub-wbench.workbench.telekom.de")
+                                           (lambda (url)
+                                             (nyxt/proxy-mode:proxy-mode :activate t)
+                                             url)
+                                           ))
+                                    :initial-value %slot-default))))
