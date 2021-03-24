@@ -9,6 +9,7 @@ bottom-bin
 bukuserver
 cozy-audiobooks
 cyberark-summon
+dasel
 dashbinsh
 direnv-bin
 dive
@@ -45,6 +46,7 @@ nyxt-browser-git
 openpomodoro
 pandoc-bin
 paru-bin
+pet-bin
 pkg_scripts
 py-spy
 pyright

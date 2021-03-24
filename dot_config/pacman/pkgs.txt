@@ -225,6 +225,7 @@ socat
 sshfs
 stardict
 steam
+step-cli
 streamlink
 strongswan
 sudo

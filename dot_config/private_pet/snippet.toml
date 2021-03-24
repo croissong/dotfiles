@@ -1,0 +1,9 @@
+[[snippets]]
+  description = "jq yq alternative"
+  command = "dasel"
+  output = ""
+
+[[snippets]]
+  description = "jwt certificates"
+  command = "step-cli"
+  output = ""
