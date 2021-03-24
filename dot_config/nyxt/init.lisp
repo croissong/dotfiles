@@ -35,7 +35,8 @@
 (define-key *my-prompt-keymap*
     "M-ä" 'nyxt/prompt-buffer-mode:select-next
     "M-ü" 'nyxt/prompt-buffer-mode:select-previous
-    "C-y" 'nyxt/prompt-buffer-mode:prompt-buffer-paste)
+    "C-y" 'nyxt/prompt-buffer-mode:prompt-buffer-paste
+    "M-w" 'nyxt/prompt-buffer-mode:copy-selection)
 (define-mode my-prompt-mode ()
   "Dummy mode for the custom key bindings in `*my-keymap*'."
   ((keymap-scheme (keymap:make-scheme
