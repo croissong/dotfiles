@@ -29,6 +29,7 @@ ike-scan
 jetbrains-toolbox
 jp
 jsonnet
+jwt-cli
 keybase-bin
 krew-bin
 kubectl-bin
