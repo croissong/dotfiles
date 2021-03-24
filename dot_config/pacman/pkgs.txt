@@ -7,7 +7,6 @@ alsa-utils
 ansible
 ansible-lint
 arandr
-archiver
 arduino
 arp-scan
 asciidoctor
@@ -36,7 +35,6 @@ coreutils
 croc
 cryptsetup
 cups
-cyberark-summon
 dante
 dateutils
 dbeaver

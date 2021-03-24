@@ -20,7 +20,7 @@ dust-bin
 emacs-gcc-wayland-devel-bin
 fedora-firefox-wayland-bin
 golangci-lint-bin
-google-chrome-dev
+google-chrome-beta
 grpcurl-bin
 gsctl-bin
 handlr-bin
