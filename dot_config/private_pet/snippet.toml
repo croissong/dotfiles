@@ -1,9 +1,17 @@
 [[snippets]]
   description = "jq yq alternative"
   command = "dasel"
+  tag = ["jq", "yq"]
   output = ""
 
 [[snippets]]
   description = "jwt certificates"
   command = "step-cli"
+  tag = ["jwt", "certificates", "ssl"]
+  output = ""
+
+[[snippets]]
+  description = "golint alternative"
+  command = "revive"
+  tag = ["golang", "lint"]
   output = ""
