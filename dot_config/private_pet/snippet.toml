@@ -20,3 +20,78 @@
   description = "wbench mitmproxy 8118"
   command = "mitmdump -p 8118 --set client_certs=/home/croissong/.config/ssl/client-certs/ -q"
   output = ""
+
+[[snippets]]
+  description = "step inspect jwt"
+  command = "step-cli crypto jwt inspect --insecure"
+  output = ""
+
+[[snippets]]
+  description = "pandoc md to pdf"
+  command = "pandoc --self-contained -t html -o bosse.pdf bosse.md"
+  output = ""
+
+[[snippets]]
+  description = "multiline replace"
+  command = "fd network-policies.yml.j2 deploymentsets -x perl -0777 -i -pe 's/(?<match>    - podSelector:\\n        matchLabels:\\n          deploymentSet: svhb-device-gateway\\n          podName: svhb-device-gateway)/$+{match}\\n    # TODO: This selector can be removed once the new, split-up svhb deploymentSets (SHCB-889) have found their way to prod\\n    - podSelector:\\n        matchLabels:\\n          deploymentSet: svhb\\n          podName: svhb-device-gateway/g' {}"
+  output = ""
+
+[[snippets]]
+  description = "antibody rebundle"
+  command = "antibody bundle < $DOTFILES/dot_config/zsh/zsh_plugins.txt > $XDG_CONFIG_HOME/zsh/zsh_plugins.sh"
+  output = ""
+
+[[snippets]]
+  description = "rdp"
+  command = "rdesktop -u \"$domain\\$user\" -k de -g 1800x1080 $ip"
+  output = ""
+
+[[snippets]]
+  description = "ssl cert text"
+  command = "openssl s_client -showcerts -servername $server -connect $server:443 </dev/null  | openssl x509 -inform pem -noout -text"
+  output = ""
+
+[[snippets]]
+  description = "ssl cert dates"
+  command = "openssl s_client -connect example.com:443 2>/dev/null |openssl x509 -dates -noout\""
+  output = ""
+
+[[snippets]]
+  description = "ssh forward"
+  command = "ssh -L localhost:9200:192.168.16.2:9200 root@10.1.10.70"
+  output = ""
+
+[[snippets]]
+  description = "ssh jump forward"
+  command = "ssh -v -L 8080:localhost:80 user@local.virtual -J user@jump:1077"
+  output = ""
+
+[[snippets]]
+  description = "pacman restore package backup files"
+  command = "pacman -Qii | awk '/^MODIFIED/ {print $2}' | sed -ne 's|/etc/pam.d/\\(.*\\)|\\1|p' | xargs -I bu_file sudo sh -c 'pkg-extract_original /etc/pam.d/bu_file > /etc/pam.d/bu_file'"
+  output = ""
+
+[[snippets]]
+  description = "github dl"
+  command = "curl https://codeload.github.com/stakater/IngressMonitorController/tar.gz/master | tar -xz --strip=4 IngressMonitorController-master/deployments/kubernetes/chart/ingressmonitorcontroller"
+  output = ""
+
+[[snippets]]
+  description = "gpg recipients"
+  command = "gpg --list-only --no-default-keyring --secret-keyring /dev/null"
+  output = ""
+
+[[snippets]]
+  description = "emacs unfreeze"
+  command = "pgrep -x emacs | xargs kill -SIGUSR2"
+  output = ""
+
+[[snippets]]
+  description = "k8s ubuntu sleep"
+  command = "kubectl run -i --image ubuntu:latest ubuntu-test --restart=Never --rm -- sleep infinity"
+  output = ""
+
+[[snippets]]
+  description = "k8s labels"
+  command = "kubectl get po --no-headers | awk '{print $1}' | rg yag --smart-case --color never $1 | xargs kubectl get -o yaml po | rg -A3 labels"
+  output = ""
