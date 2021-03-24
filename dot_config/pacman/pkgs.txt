@@ -108,6 +108,7 @@ jfsutils
 jq
 jsoncpp
 jwt-cli
+k9s
 khal
 krita
 kustomize
