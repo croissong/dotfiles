@@ -41,7 +41,7 @@ mssql-tools
 mu
 nb
 ngrok-bin
-nyxt
+nyxt-browser-git
 openpomodoro
 pandoc-bin
 paru-bin
