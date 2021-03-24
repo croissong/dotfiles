@@ -10,6 +10,7 @@
     "C-M-d" 'set-url-new-buffer
     "C-d" 'set-url
     "C-space" 'nyxt/visual-mode:visual-mode
+    "C-l l" 'copy-url
 
     "C-e" 'set-url-from-bookmark
     "C-M-e e" 'bookmark-current-page
