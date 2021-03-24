@@ -1,5 +1,6 @@
 antibody-bin
 apache-tools
+archiver
 azure-cli
 bato-bin
 blanket-bin
@@ -7,6 +8,7 @@ bluez-firmware
 bottom-bin
 bukuserver
 cozy-audiobooks
+cyberark-summon
 dashbinsh
 direnv-bin
 dive

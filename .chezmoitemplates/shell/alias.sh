@@ -46,8 +46,7 @@ alias twd='task done'
 alias twm='task modify'
 
 alias docker=podman
-alias summon='cyberark-summon -f summon.yml'
-alias pack=archiver
+alias summon='summon -f summon.yml'
 alias vpnio='sudo swanctl -i -c vpn'
 
 alias vol=pamixer
