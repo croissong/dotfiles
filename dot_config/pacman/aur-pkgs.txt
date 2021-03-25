@@ -21,6 +21,7 @@ emacs-gcc-wayland-devel-bin
 fedora-firefox-wayland-bin
 golangci-lint-bin
 google-chrome-beta
+gopass-summon-provider
 grpcurl-bin
 gsctl-bin
 handlr-bin
