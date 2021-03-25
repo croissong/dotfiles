@@ -66,6 +66,10 @@
                                    :search-url "https://en.wikipedia.org/w/index.php?search=~a"
                                    :fallback-url "https://en.wikipedia.org/")
                     (make-instance 'search-engine
+                                   :shortcut "gh"
+                                   :fallback-url "https://github.com"
+                                   :search-url "https://github.com/search?q=~a")
+                    (make-instance 'search-engine
                                    :shortcut "g"
                                    :fallback-url "https://google.com"
                                    :search-url "https://google.com/search?q=~a")))))
