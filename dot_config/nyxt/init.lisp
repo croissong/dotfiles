@@ -70,6 +70,10 @@
                                    :fallback-url "https://github.com"
                                    :search-url "https://github.com/search?q=~a")
                     (make-instance 'search-engine
+                                   :shortcut "t"
+                                   :fallback-url "https://translate.google.com/?hl=de&tab=TT&sl=de&tl=en&op=translate"
+                                   :search-url "https://translate.google.com/?hl=de&sl=de&tl=en&text=~a%0A&op=translate")
+                    (make-instance 'search-engine
                                    :shortcut "g"
                                    :fallback-url "https://google.com"
                                    :search-url "https://google.com/search?q=~a")))))
