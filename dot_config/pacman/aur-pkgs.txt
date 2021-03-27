@@ -18,6 +18,7 @@ downgrade
 drive-bin
 dust-bin
 emacs-gcc-wayland-devel-bin
+git-delta-bin
 golangci-lint-bin
 gopass-summon-provider
 grpcurl-bin

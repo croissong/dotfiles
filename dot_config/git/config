@@ -9,6 +9,7 @@
   rebase = true  
 [core]
 	excludesfile = ~/.config/git/ignore
+  pager = delta
 [diff]
 	submodule = log
 [diff "json"]
@@ -45,3 +46,9 @@
   whitespace = warn
 [diff "sopsdiffer"]
 	textconv = sops -d
+
+[delta]
+    syntax-theme = gruvbox
+
+[interactive]
+    diffFilter = delta --color-only
