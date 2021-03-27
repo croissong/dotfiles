@@ -220,6 +220,7 @@ slurp
 smartmontools
 socat
 sshfs
+sshuttle
 stardict
 steam
 step-cli
