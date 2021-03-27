@@ -95,3 +95,13 @@
   description = "k8s labels"
   command = "kubectl get po --no-headers | awk '{print $1}' | rg yag --smart-case --color never $1 | xargs kubectl get -o yaml po | rg -A3 labels"
   output = ""
+
+[[snippets]]
+  description = "ssh port forward"
+  command = "sshuttle"
+  output = ""
+
+[[snippets]]
+  description = "sway find xwayland applications"
+  command = "swaymsg -t get_tree | rg -A3 window_properties"
+  output = ""
