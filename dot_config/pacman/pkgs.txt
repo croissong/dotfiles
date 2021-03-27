@@ -99,6 +99,7 @@ httpie
 i3status-rust
 inetutils
 inkscape
+inotify-tools
 intel-ucode
 iproute2
 iputils
