@@ -7,6 +7,8 @@
     "C-#" 'switch-buffer-next
     "M-ö" 'nyxt/web-mode:history-backwards
     "M-#" 'nyxt/web-mode:history-forwards
+    "C-M-ö" 'nyxt/web-mode:history-tree
+    "C-M-#" 'nyxt/web-mode:jump-to-heading
     "C-M-d" 'set-url-new-buffer
     "C-d" 'set-url
     "C-space" 'nyxt/visual-mode:visual-mode
