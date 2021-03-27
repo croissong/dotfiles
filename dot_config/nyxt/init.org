@@ -1,6 +1,6 @@
 # -*- eval: (babel-tangle-mode 1) -*-
 #+PROPERTY: header-args :results silent :tangle "./init.lisp"
-* Initial
+* Keybindings
 #+begin_src lisp
 (defvar *my-keymap* (make-keymap "my-map"))
 (define-key *my-keymap*
@@ -53,18 +53,6 @@
 (define-configuration (prompt-buffer)
     ((default-modes (append '(my-prompt-mode) %slot-default))))
 
-
-
-(define-command play-video-in-current-page (&optional (buffer (current-buffer)))
-  "Play video in the currently open buffer."
-  (uiop:run-program (list "mpv" (object-string (url buffer)))))
-
-
-(define-configuration nyxt/proxy-mode:proxy-mode
-  ((nyxt/proxy-mode:proxy (make-instance 'proxy
-                                         :server-address (quri:uri "http://localhost:8118")
-                                         :proxied-downloads-p t))))
-
 (define-configuration buffer
   ((search-engines (list
                     (make-instance 'search-engine
@@ -89,7 +77,19 @@
   ((override-map (let ((map (make-keymap "override-map")))
                    (define-key map
                      "M-x" 'execute-command)))))
-
+#+end_src
+* Commands
+#+begin_src lisp
+(define-command play-video-in-current-page (&optional (buffer (current-buffer)))
+  "Play video in the currently open buffer."
+  (uiop:run-program (list "mpv" (object-string (url buffer)))))
+#+end_src
+* Proxy
+#+begin_src lisp
+(define-configuration nyxt/proxy-mode:proxy-mode
+  ((nyxt/proxy-mode:proxy (make-instance 'proxy
+                                         :server-address (quri:uri "http://localhost:8118")
+                                         :proxied-downloads-p t))))
 
 (define-configuration buffer
     ((request-resource-hook (reduce #'hooks:add-hook
