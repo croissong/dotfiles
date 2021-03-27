@@ -58,6 +58,7 @@ python-flask-reverse-proxy-fix
 python-ptvsd
 python38
 rtags
+sad
 slack-desktop
 sops
 starship-bin

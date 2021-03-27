@@ -105,3 +105,8 @@
   description = "sway find xwayland applications"
   command = "swaymsg -t get_tree | rg -A3 window_properties"
   output = ""
+
+[[snippets]]
+  description = "interactive sed"
+  command = "fd <files> | sad <pattern> <replacement> | delta"
+  output = ""
