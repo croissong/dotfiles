@@ -29,6 +29,7 @@ bzip2
 calibre
 checkbashisms
 chezmoi
+chromium
 colordiff
 coreutils
 croc

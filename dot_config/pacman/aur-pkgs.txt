@@ -20,7 +20,6 @@ dust-bin
 emacs-gcc-wayland-devel-bin
 fedora-firefox-wayland-bin
 golangci-lint-bin
-google-chrome-beta
 gopass-summon-provider
 grpcurl-bin
 gsctl-bin
@@ -69,8 +68,6 @@ tor-browser
 trivy
 ttf-ubraille
 usql
-vivaldi-snapshot
-vivaldi-snapshot-ffmpeg-codecs
 wev
 wl-clipboard-x11
 wlrobs-hg
