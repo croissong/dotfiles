@@ -1,3 +1,7 @@
+# -*- eval: (babel-tangle-mode 1) -*-
+#+PROPERTY: header-args :results silent :tangle "./init.lisp"
+* Initial
+#+begin_src lisp
 (defvar *my-keymap* (make-keymap "my-map"))
 (define-key *my-keymap*
     "M-d" 'switch-buffer
@@ -97,3 +101,4 @@
                                              url)
                                            ))
                                     :initial-value %slot-default))))
+#+end_src
