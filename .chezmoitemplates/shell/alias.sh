@@ -1,7 +1,10 @@
 alias ls='exa -gha --group-directories-first'
 alias ll='ls -l'
+
 alias cat=bat
 alias less=bat
+function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log }
+
 alias find='fd -H'
 alias feh='feh --conversion-timeout 1 -g 640x480 -d -S filename'
 alias top=btm
@@ -77,3 +80,5 @@ e() {
         emacsclient "$@"
     fi
 }
+
+function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
