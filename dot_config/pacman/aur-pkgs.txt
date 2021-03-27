@@ -18,7 +18,6 @@ downgrade
 drive-bin
 dust-bin
 emacs-gcc-wayland-devel-bin
-fedora-firefox-wayland-bin
 golangci-lint-bin
 gopass-summon-provider
 grpcurl-bin
