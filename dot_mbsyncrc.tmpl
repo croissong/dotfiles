@@ -1,0 +1,26 @@
+
+IMAPStore jm@iogroup.org-remote
+Host outlook.office365.com
+Port 993
+User {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).offlineimap.iogroup.user }}
+PassCmd "pass svh/portal.azure.com/jm@iogroup.org"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore jm@iogroup.org-local
+Subfolders Verbatim
+Path /home/croissong/.local/share/mail/jm@iogroup.org/
+Inbox /home/croissong/.local/share/mail/jm@iogroup.org/INBOX
+
+Channel jm@iogroup.org
+Expunge Both
+Master :jm@iogroup.org-remote:
+Slave :jm@iogroup.org-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
