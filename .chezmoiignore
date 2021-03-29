@@ -2,3 +2,4 @@ pkglist.txt
 misc/
 secrets.yml
 Readme.md
+.config/nyxt/init.org

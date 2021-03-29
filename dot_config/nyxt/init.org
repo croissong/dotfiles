@@ -23,6 +23,7 @@
     "C-e" 'set-url-from-bookmark
     "C-M-e e" 'bookmark-current-page
 
+    "M-s" 'search-selection
     "C-s" 'nyxt/web-mode:search-buffer
     "C-M-s" 'nyxt/web-mode:remove-search-hints)
 
