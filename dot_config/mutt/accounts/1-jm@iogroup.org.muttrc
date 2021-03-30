@@ -21,7 +21,7 @@ unset signature
 unmacro index o
 macro index o "<shell-escape>mw -y jm@iogroup.org<enter>" "run mbsync to sync jm@iogroup.org"
 
-mailboxes "=Archive" "=backups" "=Calendar/Birthdays" "=Calendar/Feiertage in Deutschland" "=Deleted Items/trello" "=Drafts" "=exports" "=INBOX" "=Journal" "=Junk Email" "=Notes" "=Outbox" "=Sent Items" "=svh/mattermost" "=svh/noop/service/trello" "=svh/trello" "=sysops" "=Tasks" "=Trash"
+mailboxes "=Archive" "=backups" "=Calendar/Birthdays" "=Calendar/Feiertage in Deutschland" "=Deleted Items/trello" "=Drafts" "=exports" "=INBOX" "=Journal" "=Junk Email" "=Notes" "=Outbox" "=Sent Items" "=svh/mattermost" "=service" "=svh/trello" "=sysops" "=Tasks" "=Trash"
 macro index,pager ga "<change-folder>=Archive<enter>" "go to archive"
 macro index,pager Ma ";<save-message>=Archive<enter>" "move mail to archive"
 macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"
