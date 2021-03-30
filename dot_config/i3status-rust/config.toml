@@ -10,6 +10,7 @@ cogs = ""
 bat_full = " 100%"
 bat_charging = " + "
 bat_discharging = " - "
+thermometer = " C° "
 
 
 [[block]]
@@ -20,15 +21,21 @@ interval = 30
 
 [[block]]
 block = "load"
-interval = 1
+interval = 60
 format = "{1m}"
+
+[[block]]
+block = "temperature"
+interval = 60
+chip = "coretemp-isa-*"
+format = "{min} min, {max} max, {average} avg"
 
 [[block]]
 block = "battery"
 interval = 60
-upower = true
+driver = "upower"
 device = "DisplayDevice"
-format = "{percentage}% {time}"
+format = "{percentage}%"
 
 [[block]]
 block = "time"
