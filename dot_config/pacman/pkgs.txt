@@ -1,6 +1,6 @@
+abook
 acpi_call-dkms
 acpid
-aerc
 alacritty
 alsa-tools
 alsa-utils
@@ -133,6 +133,7 @@ lostfiles
 lsof
 lutris
 lvm2
+lynx
 lzop
 m4
 make
@@ -159,7 +160,6 @@ npm
 nvchecker
 nzbget
 obs-studio
-offlineimap
 openjdk11-src
 openldap
 openssh

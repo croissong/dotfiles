@@ -19,6 +19,7 @@ drive-bin
 dust-bin
 emacs-gcc-wayland-devel-bin
 git-delta-bin
+goimapnotify
 golangci-lint-bin
 gopass-summon-provider
 grpcurl-bin
@@ -41,6 +42,7 @@ mattermost-desktop-bin
 mitogen
 mssql-tools
 mu
+mutt-wizard
 nb
 ngrok-bin
 nyxt-browser-git
@@ -68,6 +70,7 @@ tmuxinator
 tor-browser
 trivy
 ttf-ubraille
+urlview
 usql
 wev
 wl-clipboard-x11
