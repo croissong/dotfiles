@@ -7,18 +7,19 @@
     "M-d" 'switch-buffer
     "M-q" 'delete-buffer
     "C-q" 'delete-current-buffer
+    "C-M-q" 'reopen-buffer
     "C-ö" 'switch-buffer-previous
     "C-#" 'switch-buffer-next
     "M-ö" 'nyxt/web-mode:history-backwards
     "M-#" 'nyxt/web-mode:history-forwards
-    "C-M-ö" 'nyxt/web-mode:history-tree
+    "C-M-ö" 'nyxt/web-mode:history-all-query
     "C-M-#" 'nyxt/web-mode:jump-to-heading
     "C-M-d" 'set-url-new-buffer
     "C-d" 'set-url
     "C-space" 'nyxt/visual-mode:visual-mode
     "C-l l" 'copy-url
 
-    "M-enter" 'nyxt/web-mode:follow-hint
+    "M-return" 'nyxt/web-mode:follow-hint
 
     "C-e" 'set-url-from-bookmark
     "C-M-e e" 'bookmark-current-page
