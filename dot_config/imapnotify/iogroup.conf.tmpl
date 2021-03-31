@@ -1,0 +1,13 @@
+{
+  "host": "outlook.office365.com",
+  "port": 993,
+  "tls": true,
+  "tlsOptions": {
+    "rejectUnauthorized": false
+  },
+  "username": "jm@iogroup.org",
+  "password": "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.iogroup.password }}",
+  "onNewMail": "systemctl --user restart mbsync jm@iogroup.org",
+  "onNewMailPost": "",
+  "boxes": [ "INBOX", "svh", "service" ]
+}
