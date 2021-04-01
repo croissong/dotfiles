@@ -110,3 +110,8 @@
   description = "interactive sed"
   command = "fd <files> | sad <pattern> <replacement> | delta"
   output = ""
+
+[[snippets]]
+  description = "restart gpg agent"
+  command = "gpgconf --kill gpg-agent; # echo \"UPDATESTARTUPTTY\" | gpg-connect-agent > /dev/null 2>&1"
+  output = ""
