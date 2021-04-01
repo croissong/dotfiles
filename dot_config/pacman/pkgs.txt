@@ -287,7 +287,6 @@ wireguard-tools
 wireshark-qt
 wkhtmltopdf
 wl-clipboard
-wofi
 xdg-desktop-portal-wlr
 xf86-input-libinput
 xf86-video-intel
