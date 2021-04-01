@@ -84,6 +84,10 @@ bindsym $mod+Down exec "pamixer --decrease 10"
 bindsym $mod+Up exec "pamixer --allow-boost --increase 10"
 bindsym $mod+Right exec "pamixer --set-volume 100"
 
+bindsym $mod+Shift+Left exec "light -S 0"
+bindsym $mod+Shift+Right exec "light -S 100"
+
+
 bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
 
 # resize window (you can also use the mouse for that)
