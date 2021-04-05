@@ -21,7 +21,6 @@ emacs-gcc-wayland-devel-bin
 git-delta-bin
 goimapnotify
 golangci-lint-bin
-gopass-summon-provider
 grpcurl-bin
 gsctl-bin
 handlr-bin
@@ -73,6 +72,7 @@ sops
 starship-bin
 streamlink-twitch-gui
 teams
+telepresence
 tizonia-all
 tmuxinator
 tor-browser

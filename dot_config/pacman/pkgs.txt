@@ -6,7 +6,6 @@ alsa-tools
 alsa-utils
 ansible
 ansible-lint
-arandr
 arduino
 arp-scan
 asciidoctor
@@ -76,6 +75,7 @@ gnome-keyring
 gnu-free-fonts
 go
 gopass
+gopass-summon-provider
 gopls
 gradle
 graphviz
@@ -179,6 +179,7 @@ perl
 perl-cgi
 physlock
 pipewire
+pipewire-alsa
 pipewire-pulse
 pkgconf
 plantuml
