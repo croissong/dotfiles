@@ -37,6 +37,7 @@ kubectl-bin
 kubernetes-helmfile-bin
 libfixposix
 libgccjit
+libspotify
 linkerd
 mattermost-desktop-bin
 mitogen
@@ -57,7 +58,13 @@ python-flask-admin
 python-flask-api
 python-flask-paginate
 python-flask-reverse-proxy-fix
+python-gmusicapi
+python-mpv
+python-plexapi
 python-ptvsd
+python-pychromecast
+python-soundcloud-git
+python-spotipy
 python38
 rtags
 sad
@@ -66,6 +73,7 @@ sops
 starship-bin
 streamlink-twitch-gui
 teams
+tizonia-all
 tmuxinator
 tor-browser
 trivy
