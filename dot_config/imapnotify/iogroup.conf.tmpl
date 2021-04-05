@@ -7,7 +7,6 @@
   },
   "username": "jm@iogroup.org",
   "password": "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.iogroup.password }}",
-  "onNewMail": "systemctl --user restart mbsync jm@iogroup.org",
-  "onNewMailPost": "",
+  "onNewMail": "systemctl --user restart mbsync@jm@iogroup.org",
   "boxes": [ "INBOX", "svh", "service" ]
 }
