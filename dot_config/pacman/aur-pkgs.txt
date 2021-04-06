@@ -38,10 +38,10 @@ libfixposix
 libgccjit
 libspotify
 linkerd
+log4c
 mattermost-desktop-bin
 mitogen
 mssql-tools
-mu
 mutt-wizard
 nb
 ngrok-bin
