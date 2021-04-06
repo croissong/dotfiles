@@ -115,3 +115,13 @@
   description = "restart gpg agent"
   command = "gpgconf --kill gpg-agent; # echo \"UPDATESTARTUPTTY\" | gpg-connect-agent > /dev/null 2>&1"
   output = ""
+
+[[snippets]]
+  description = "java view jar content"
+  command = "jar tf"
+  output = ""
+
+[[snippets]]
+  description = "shebang"
+  command = "#!/usr/bin/env bash"
+  output = ""
