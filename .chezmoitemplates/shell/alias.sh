@@ -17,6 +17,7 @@ alias ntop='sudo nethogs'
 alias rename=vidir
 alias diff=delta
 alias m=neomutt
+alias mr='neomutt -R'
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
@@ -65,6 +66,8 @@ alias mvndep='mvn dependency:resolve -Dclassifier=sources'
 alias lightkbd='light -s sysfs/leds/tpacpi::kbd_backlight'
 
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
+
+alias cal='khal calendar'
 
 awkp() { awk "{print \$${1:-1}}"; }
 
