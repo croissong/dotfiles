@@ -1,9 +1,8 @@
-# vim: filetype=neomuttrc
 # muttrc file for account jm@iogroup.org
 set realname = "jm"
-set from = "jm@iogroup.org"
+set from = "jm@datawerk.de"
 set sendmail = "msmtp -a jm@iogroup.org"
-alias me jm <jm@iogroup.org>
+alias me jm <jm@datawerk.de>
 set folder = "/home/croissong/.local/share/mail/jm@iogroup.org"
 set header_cache = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/headers
 set message_cachedir = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/bodies
