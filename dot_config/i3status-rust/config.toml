@@ -1,16 +1,15 @@
 [theme]
-name = "gruvbox-dark"
+name = "plain"
 [theme.overrides]
-good_bg = "#697700"
+idle_fg = "#ebdbb2"
 
 [icons]
-name = "none"
+name = "awesome5"
 [icons.overrides]
 cogs = ""
-bat_full = " 100%"
+bat_full = "100%"
 bat_charging = " + "
 bat_discharging = " - "
-thermometer = " C° "
 
 
 [[block]]
@@ -18,6 +17,15 @@ block = "custom"
 command = "$XDG_CONFIG_HOME/i3status-rust/pomodoro-block.sh"
 json = true
 interval = 30
+
+[[block]]
+block = "maildir"
+interval = 60
+inboxes = ["/home/croissong/.local/share/mail/jm@iogroup.org/INBOX"]
+threshold_warning = 1
+threshold_critical = 10
+interval = 60
+display_type = "new"
 
 [[block]]
 block = "load"
@@ -28,7 +36,9 @@ format = "{1m}"
 block = "temperature"
 interval = 60
 chip = "coretemp-isa-*"
-format = "{min} min, {max} max, {average} avg"
+collapsed = false
+format = "{average}"
+icons_format = ""
 
 [[block]]
 block = "battery"
@@ -40,4 +50,5 @@ format = "{percentage}%"
 [[block]]
 block = "time"
 interval = 60
-format = "%A %m-%d %H:%M"
+format = "%a %m-%d %H:%M"
+icons_format = ""

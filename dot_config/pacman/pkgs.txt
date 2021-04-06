@@ -263,6 +263,7 @@ traceroute
 ttf-arphic-uming
 ttf-baekmuk
 ttf-dejavu
+ttf-font-awesome
 ttf-hack
 ttf-hannom
 ttf-indic-otf
