@@ -29,8 +29,6 @@ disabled = true
 disabled = true
 [hostname]
 disabled = true
-[git_commit]
-disabled = true
 [git_state]
 disabled = true
 [git_status]

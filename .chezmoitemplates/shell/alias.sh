@@ -18,6 +18,7 @@ alias rename=vidir
 alias diff=delta
 alias m=neomutt
 alias mr='neomutt -R'
+alias ms='mailsync'
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
