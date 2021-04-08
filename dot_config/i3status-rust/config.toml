@@ -6,10 +6,9 @@ idle_fg = "#ebdbb2"
 [icons]
 name = "awesome5"
 [icons.overrides]
-cogs = ""
 bat_full = "100%"
-bat_charging = " + "
-bat_discharging = " - "
+bat_charging = "+"
+bat_discharging = "-"
 
 
 [[block]]
@@ -31,6 +30,7 @@ display_type = "new"
 block = "load"
 interval = 60
 format = "{1m}"
+icons_format = ""
 
 [[block]]
 block = "temperature"
@@ -45,7 +45,7 @@ block = "battery"
 interval = 60
 driver = "upower"
 device = "DisplayDevice"
-format = "{percentage}%"
+format = "{percentage}"
 
 [[block]]
 block = "time"
