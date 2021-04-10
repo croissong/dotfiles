@@ -30,6 +30,7 @@ jetbrains-toolbox
 jp
 jsonnet
 jwt-cli
+k6-bin
 keybase-bin
 krew-bin
 kubectl-bin
