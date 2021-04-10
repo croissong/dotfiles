@@ -69,7 +69,6 @@ rtags
 sad
 slack-desktop
 smug
-sops
 starship-bin
 streamlink-twitch-gui
 svgo

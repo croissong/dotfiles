@@ -220,6 +220,7 @@ shfmt
 slurp
 smartmontools
 socat
+sops
 sshfs
 sshuttle
 stardict
