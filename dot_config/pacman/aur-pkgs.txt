@@ -71,6 +71,7 @@ slack-desktop
 sops
 starship-bin
 streamlink-twitch-gui
+svgo
 teams
 telepresence
 tizonia-all
