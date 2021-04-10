@@ -61,7 +61,6 @@ findutils
 flake8
 flex
 fwupd
-fzf
 gammastep
 gawk
 gcc
