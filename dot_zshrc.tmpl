@@ -13,12 +13,12 @@ else
       fi
     }
 
-    {{ template "shell/keybinds.sh" }}
-    {{ template "shell/alias.sh" }}
-    {{ template "shell/functions.sh" }}
-
-    {{ template "shell/options.sh" }}
-    {{ template "shell/env-vars.sh" }}
+    {{ include "shell/keybinds.sh" | nindent 4 }}
+    {{ include "shell/alias.sh" | nindent 4 }}
+    {{ include "shell/functions.sh" | nindent 4 }}
+    {{ include "shell/options.sh" | nindent 4 }}
+    {{ include "shell/env-vars.sh" | nindent 4 }}
+    {{ include "shell/fzf.sh" | nindent 4 }}
 
 
     eval "$(starship init zsh)"
