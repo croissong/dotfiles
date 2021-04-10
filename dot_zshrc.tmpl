@@ -4,16 +4,6 @@ else
 
     {{ include "shell/zinit.sh" | nindent 4 }}
 
-    autoload -Uz compinit
-    () {
-      setopt extendedglob local_options
-      if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
-         compinit
-      else
-        compinit -C
-      fi
-    }
-
     {{ include "shell/keybinds.sh" | nindent 4 }}
     {{ include "shell/alias.sh" | nindent 4 }}
     {{ include "shell/functions.sh" | nindent 4 }}
