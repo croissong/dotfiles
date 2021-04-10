@@ -17,40 +17,14 @@ else
     {{ template "shell/alias.sh" }}
     {{ template "shell/functions.sh" }}
 
-    setopt GLOB_DOTS
-    setopt PROMPT_SP
-    setopt AUTO_PARAM_SLASH
-    setopt AUTO_CD
-    setopt SHARE_HISTORY
-    setopt HIST_IGNORE_DUPS
-    setopt HIST_FIND_NO_DUPS
-    setopt HIST_NO_FUNCTIONS
-    setopt HIST_REDUCE_BLANKS
+    {{ template "shell/options.sh" }}
+    {{ template "shell/env-vars.sh" }}
 
-    unsetopt nomatch
-
-    HISTORY_IGNORE="(ls *|pwd|pass *|gopass *)"
-    HISTTIMEFORMAT="%d.%m.%y %T "
-    HISTFILE=$XDG_CONFIG_HOME/zsh/.histfile
-    HISTSIZE=10000
-    SAVEHIST=10000
-
-    export SUMMON_PROVIDER=/usr/bin/gopass-summon-provider
-    export LS_COLORS='di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
-    export GOPASS_NO_NOTIFY=true
 
     eval "$(starship init zsh)"
     eval "$(zoxide init --cmd c zsh)"
 
-    # Treat these characters as part of a word.
-    WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 
-    export FZF_DEFAULT_COMMAND='fd --type f'
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-    export FZF_ALT_C_COMMAND="fd -t d -d 5"
-
-    source /usr/share/fzf/key-bindings.zsh
-    source /usr/share/fzf/completion.zsh
     source $XDG_CONFIG_HOME/broot/launcher/bash/br
 
     zstyle ':completion:*' insert-tab false
