@@ -37,11 +37,6 @@
   output = ""
 
 [[snippets]]
-  description = "antibody rebundle"
-  command = "antibody bundle < $DOTFILES/dot_config/zsh/zsh_plugins.txt > $XDG_CONFIG_HOME/zsh/zsh_plugins.sh"
-  output = ""
-
-[[snippets]]
   description = "rdp"
   command = "rdesktop -u \"$domain\\$user\" -k de -g 1800x1080 $ip"
   output = ""

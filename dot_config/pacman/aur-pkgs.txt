@@ -1,4 +1,3 @@
-antibody-bin
 apache-tools
 archiver
 azure-cli

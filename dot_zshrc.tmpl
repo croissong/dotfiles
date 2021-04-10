@@ -1,7 +1,8 @@
 if [ -z "$TMUX" ]; then
     smug start home
 else
-    source $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
+
+    {{ include "shell/zinit.sh" | nindent 4 }}
 
     autoload -Uz compinit
     () {
