@@ -189,6 +189,7 @@ prettier
 procps-ng
 procs
 psmisc
+pueue
 pulseaudio-alsa
 pwgen
 python-black

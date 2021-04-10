@@ -125,3 +125,7 @@
   description = "shebang"
   command = "#!/usr/bin/env bash"
   output = ""
+[[snippets]]
+  description = "shell queue background"
+  command = "q"
+  output = ""

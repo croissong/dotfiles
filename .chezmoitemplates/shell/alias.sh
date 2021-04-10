@@ -3,6 +3,7 @@ alias ll='ls -l'
 
 alias cat=bat
 alias less=bat
+alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log }
 
 alias find='fd -H'
