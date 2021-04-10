@@ -1,5 +1,5 @@
 if [ -z "$TMUX" ]; then
-    tmux attach-session -d || tmuxinator start home --suppress-tmux-version-warning && tmux attach-session -d
+    smug start home
 else
     source $XDG_CONFIG_HOME/zsh/zsh_plugins.sh
 
@@ -12,8 +12,6 @@ else
         compinit -C
       fi
     }
-
-    source ~/.tmuxinator/tmuxinator.zsh
 
     {{ template "shell/keybinds.sh" }}
     {{ template "shell/alias.sh" }}

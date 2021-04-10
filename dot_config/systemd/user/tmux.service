@@ -3,7 +3,7 @@ Description=Start tmux in detached session
 
 [Service]
 Type=forking
-ExecStart=/usr/sbin/tmux start-server
+ExecStart=/usr/bin/tmux start-server
 ExecStop=/usr/bin/tmux kill-server
 RemainAfterExit=yes
 

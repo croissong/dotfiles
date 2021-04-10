@@ -69,6 +69,7 @@ python38
 rtags
 sad
 slack-desktop
+smug
 sops
 starship-bin
 streamlink-twitch-gui
@@ -76,7 +77,6 @@ svgo
 teams
 telepresence
 tizonia-all
-tmuxinator
 tor-browser
 trivy
 ttf-ubraille
