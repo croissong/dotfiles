@@ -36,6 +36,8 @@ man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (sele
 alias kc=kubectl
 alias kcd='kubectl config set-context $(kubectl config current-context) --namespace'
 alias kctx='kubectl config use-context'
+alias kctxrm='kubectl config delete-context'
+alias kctxmv='kubectl config rename-context'
 alias kcg='kubectl get -o yaml'
 alias kcdsc='kubectl describe'
 alias kcroll='kubectl rollout restart'
