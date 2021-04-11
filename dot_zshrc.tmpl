@@ -2,6 +2,10 @@ if [ -z "$TMUX" ]; then
     smug start home
 else
 
+    zstyle ':completion:*' insert-tab false
+    zstyle ':completion:*' menu select
+
+
     {{ include "shell/zinit.sh" | nindent 4 }}
 
     {{ include "shell/keybinds.sh" | nindent 4 }}
@@ -17,9 +21,6 @@ else
 
 
     source $XDG_CONFIG_HOME/broot/launcher/bash/br
-
-    zstyle ':completion:*' insert-tab false
-    zstyle ':completion:*' menu select
 
     # auto url quoting
     autoload -Uz bracketed-paste-magic
