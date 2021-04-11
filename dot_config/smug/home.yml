@@ -1,5 +1,0 @@
-session: home
-root: ~/
-windows:
-- name: home
-  root: ~

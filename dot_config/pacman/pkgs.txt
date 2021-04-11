@@ -259,7 +259,6 @@ texlive-science
 tidy
 timew
 tlp
-tmux
 traceroute
 ttf-arphic-uming
 ttf-baekmuk

@@ -1,30 +1,22 @@
-if [ -z "$TMUX" ]; then
-    smug start home
-else
+zstyle ':completion:*' insert-tab false
+zstyle ':completion:*' menu select
 
-    zstyle ':completion:*' insert-tab false
-    zstyle ':completion:*' menu select
-
-
-    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
-    {{ include "dot_config/zsh/tmpl/fzf.sh" | nindent 4 }}
-
-    {{ include "dot_config/zsh/tmpl/keybinds.sh" | nindent 4 }}
-    {{ include "dot_config/zsh/tmpl/alias.sh" | nindent 4 }}
-    {{ include "dot_config/zsh/tmpl/functions.sh" | nindent 4 }}
-    {{ include "dot_config/zsh/tmpl/options.sh" | nindent 4 }}
-    {{ include "dot_config/zsh/tmpl/env-vars.sh" | nindent 4 }}
+# auto url quoting
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
 
 
-    eval "$(starship init zsh)"
-    eval "$(zoxide init --cmd c zsh)"
+{{ include "dot_config/zsh/tmpl/zinit.sh" }}
+{{ include "dot_config/zsh/tmpl/fzf.sh" }}
 
+{{ include "dot_config/zsh/tmpl/keybinds.sh" }}
+{{ include "dot_config/zsh/tmpl/alias.sh" }}
+{{ include "dot_config/zsh/tmpl/functions.sh" }}
+{{ include "dot_config/zsh/tmpl/options.sh" }}
+{{ include "dot_config/zsh/tmpl/env-vars.sh" }}
 
-    source $XDG_CONFIG_HOME/broot/launcher/bash/br
-
-    # auto url quoting
-    autoload -Uz bracketed-paste-magic
-    zle -N bracketed-paste bracketed-paste-magic
-    autoload -Uz url-quote-magic
-    zle -N self-insert url-quote-magic
-fi
+eval "$(starship init zsh)"
+eval "$(zoxide init --cmd c zsh)"
+source $XDG_CONFIG_HOME/broot/launcher/bash/br

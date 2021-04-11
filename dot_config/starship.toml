@@ -1,4 +1,5 @@
 add_newline = false
+format = "${custom.tab}$all"
 
 [character]
 success_symbol = "[❯](white)"
@@ -22,6 +23,14 @@ style = "dimmed white"
 disabled = false
 symbol = ""
 style = "red"
+
+[custom.tab]
+description = "The current tab in the tab terminal multiplexer"
+command = "tab --starship"
+when = "tab --starship"
+shell = ["sh"]
+format = "[$output]($style) "
+style = "bold blue"
 
 [username]
 disabled = true
@@ -50,8 +59,6 @@ disabled = true
 [openstack]
 disabled = true
 [env_var]
-disabled = true
-[custom]
 disabled = true
 [battery]
 disabled = true
