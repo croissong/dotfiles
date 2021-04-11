@@ -6,14 +6,13 @@ else
     zstyle ':completion:*' menu select
 
 
-    {{ include "shell/zinit.sh" | nindent 4 }}
+    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
 
-    {{ include "shell/keybinds.sh" | nindent 4 }}
-    {{ include "shell/alias.sh" | nindent 4 }}
-    {{ include "shell/functions.sh" | nindent 4 }}
-    {{ include "shell/options.sh" | nindent 4 }}
-    {{ include "shell/env-vars.sh" | nindent 4 }}
-    {{ include "shell/fzf.sh" | nindent 4 }}
+    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
+    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
+    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
+    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
+    {{ include "dot_config/zsh/tmpl/zinit.sh" | nindent 4 }}
 
 
     eval "$(starship init zsh)"

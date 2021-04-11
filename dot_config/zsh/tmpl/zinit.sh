@@ -1,5 +1,5 @@
 declare -A ZINIT
-ZINIT[HOME_DIR]=$XDG_CONFIG_HOME/zsh/.zinit
+ZINIT[HOME_DIR]=$ZDOTDIR/.zinit
 
 source $ZINIT[HOME_DIR]/bin/zinit.zsh
 
@@ -18,4 +18,6 @@ zinit lucid light-mode for \
 zinit from"gh-r" sbin"direnv" mv"direnv* -> direnv" \
 	atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
 	src="zhook.zsh" for \
-	    direnv/direnv
+	direnv/direnv
+
+{{ include "fzf.sh" }}
