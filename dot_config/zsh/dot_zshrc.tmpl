@@ -1,12 +1,6 @@
 zstyle ':completion:*' insert-tab false
 zstyle ':completion:*' menu select
 
-# auto url quoting
-autoload -Uz bracketed-paste-magic
-zle -N bracketed-paste bracketed-paste-magic
-autoload -Uz url-quote-magic
-zle -N self-insert url-quote-magic
-
 # TODO: install proper
 # tab multiplexer configuration: https://github.com/austinjones/tab-rs/
 source ~/.local/share/tab/completion/zsh-history.zsh
