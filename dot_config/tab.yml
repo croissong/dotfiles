@@ -1,7 +1,11 @@
+key_bindings:
+- action: SelectInteractive
+  keys: ctrl-A
+
 workspace:
-  - tab: home
-    doc: "mkay"
-    directory: ~
+- tab: home
+  doc: "mkay"
+  directory: ~
 
   # this links to a workspace config in ~/my-workspace
   #   workspaces are only active within the workspace directory
