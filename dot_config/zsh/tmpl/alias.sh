@@ -30,6 +30,8 @@ alias passc='gopass show -c'
 alias passo='gopass otp -c'
 alias ssh='TERM=xterm ssh'
 
+alias t=tab
+
 alias lock='physlock -ds'
 
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
