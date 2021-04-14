@@ -1,6 +1,6 @@
 key_bindings:
 - action: SelectInteractive
-  keys: ctrl-A
+  keys: ctrl-Q
 
 workspace:
 - tab: home
