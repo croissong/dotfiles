@@ -14,5 +14,3 @@ set sidebar_visible = no
 bind index,pager \Cs sync-mailbox
 
 bind index,pager x sidebar-toggle-visible
-bind index,pager <C-Up> sidebar-prev
-bind index,pager <C-Down> sidebar-next
