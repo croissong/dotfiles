@@ -1,0 +1,25 @@
+[general]
+# A folder where vdirsyncer can store some metadata about each pair.
+status_path = "~/.local/share/vdirsyncer/status/"
+
+# CALDAV
+[pair wrk_calendar]
+a = "wrk_calendar_local"
+b = "wrk_calendar_remote"
+collections = ["from a", "from b"]
+
+# Calendars also have a color property
+metadata = ["displayname", "color"]
+
+[storage wrk_calendar_local]
+type = "filesystem"
+path = "~/.local/share/calendars/"
+fileext = ".ics"
+
+[storage wrk_calendar_remote]
+type = "caldav"
+url = "http://localhost:1080/users/jm@iogroup.org/calendar/"
+username = "jm@iogroup.org"
+password = "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.iogroup.password }}"
+start_date = "datetime.now() - timedelta(days=180)"
+end_date = "datetime.now() + timedelta(days=180)"

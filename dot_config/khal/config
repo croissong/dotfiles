@@ -1,0 +1,12 @@
+[calendars]
+  [[work]]
+    path = ~/.local/share/calendars/calendar
+    readonly = True
+
+  [[holidays]]
+    path = ~/.local/share/calendars/
+    readonly = True
+
+
+[view]
+agenda_event_format = '{calendar-color}{cancelled}{start-end-time-style} {title}{repeat-symbol}{reset}'
