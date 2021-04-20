@@ -3,9 +3,16 @@ source ~/.config/mutt/gpg.rc
 source /home/croissong/.config/mutt/accounts/1-jm@iogroup.org.muttrc
 macro index,pager i1 '<sync-mailbox><enter-command>source /home/croissong/.config/mutt/accounts/1-jm@iogroup.org.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to jm@iogroup.org"
 
-set recall=no
+set recall = no
 set edit_headers
 # TODO: Enable when autocomplete contacts in emacs mail-mode :)
 # set autoedit
 
-set change_folder_next
+set sidebar_visible = no
+
+
+bind index,pager \Cs sync-mailbox
+
+bind index,pager x sidebar-toggle-visible
+bind index,pager <C-Up> sidebar-prev
+bind index,pager <C-Down> sidebar-next
