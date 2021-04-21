@@ -25,9 +25,8 @@ alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
 alias du='dust -b'
 alias journalctl='journalctl -fxe'
-alias pass=gopass
-alias passc='gopass show -c'
-alias passo='gopass otp -c'
+# todo https://github.com/junegunn/fzf/issues/2028
+alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass otp -c {})+abort,space:execute(gopass show {})+abort'"
 alias ssh='TERM=xterm ssh'
 
 alias t=tab
