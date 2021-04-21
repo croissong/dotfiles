@@ -12,7 +12,8 @@ zinit wait lucid light-mode for \
 
 zinit lucid light-mode for \
   zinit-zsh/z-a-bin-gem-node \
-  zinit-zsh/z-a-patch-dl
+  zinit-zsh/z-a-patch-dl \
+  Aloxaf/fzf-tab
 
 zinit from"gh-r" sbin"direnv" mv"direnv* -> direnv" \
 	atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
