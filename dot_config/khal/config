@@ -1,7 +1,7 @@
 [calendars]
   [[work]]
     path = ~/.local/share/calendars/calendar
-    readonly = True
+    readonly = False
 
   [[holidays]]
     path = ~/.local/share/calendars/

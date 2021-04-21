@@ -73,7 +73,10 @@ alias lightkbd='light -s sysfs/leds/tpacpi::kbd_backlight'
 
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
-alias cal='khal calendar'
+alias cal='khal'
+alias call='khal list'
+alias cala='khal calendar'
+alias cali='ikhal'
 
 awkp() { awk "{print \$${1:-1}}"; }
 
