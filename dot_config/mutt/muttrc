@@ -5,8 +5,7 @@ macro index,pager i1 '<sync-mailbox><enter-command>source /home/croissong/.confi
 
 set recall = no
 set edit_headers
-# TODO: Enable when autocomplete contacts in emacs mail-mode :)
-# set autoedit
+set autoedit
 
 set sidebar_visible = no
 
@@ -14,3 +13,12 @@ set sidebar_visible = no
 bind index,pager \Cs sync-mailbox
 
 bind index,pager x sidebar-toggle-visible
+
+
+set query_command = "khard email --parsable %s"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
+macro index,pager a \
+  "<pipe-message>khard add-email<return>" \
+  "add the sender email address to khard"
