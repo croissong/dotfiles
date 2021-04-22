@@ -140,3 +140,13 @@
   description = "shell queue background"
   command = "q"
   output = ""
+
+[[snippets]]
+  description = "rand 32 bytes b64"
+  command = "openssl rand -base64 32"
+  output = ""
+
+[[snippets]]
+  description = "fix touchpad"
+  command = "sudo modprobe -r psmouse; sudo modprobe psmouse"
+  output = ""
