@@ -35,9 +35,9 @@
 
 
 ;; (define-configuration buffer
-;;     ((default-modes (append '() %slot-default))))
+;;     ((default-modes (append '() %slot-default%))))
 (define-configuration (buffer web-buffer)
-    ((default-modes (append '(emacs-mode my-mode blocker-mode) %slot-default))))
+    ((default-modes (append '(emacs-mode my-mode blocker-mode) %slot-default%))))
 
 
 
@@ -53,7 +53,7 @@
                    scheme:cua *my-prompt-keymap*))))
 
 (define-configuration (prompt-buffer)
-    ((default-modes (append '(my-prompt-mode) %slot-default))))
+    ((default-modes (append '(my-prompt-mode) %slot-default%))))
 
 (define-configuration buffer
   ((search-engines (list
@@ -102,5 +102,5 @@
                                              (nyxt/proxy-mode:proxy-mode :activate t)
                                              url)
                                            ))
-                                    :initial-value %slot-default))))
+                                    :initial-value %slot-default%))))
 #+end_src
