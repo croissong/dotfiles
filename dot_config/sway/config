@@ -80,8 +80,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "swaynag -t warning -m 'Exit?' -b 'Mais oui!' 'swaymsg exit'"
 
 bindsym $mod+Left exec "pamixer --toggle-mute"
-bindsym $mod+Down exec "pamixer --decrease 10"
-bindsym $mod+Up exec "pamixer --allow-boost --increase 10"
+bindsym $mod+Down exec "pamixer --decrease 5"
+bindsym $mod+Up exec "pamixer --allow-boost --increase 5"
 bindsym $mod+Right exec "pamixer --set-volume 100"
 
 bindsym $mod+Shift+Left exec "light -S 0"
