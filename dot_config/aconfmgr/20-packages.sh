@@ -408,7 +408,6 @@ AddPackage --foreign ttf-ubraille # Unicode Braillt font
 AddPackage --foreign usql # A universal command-line interface for SQL databases
 AddPackage --foreign wev # tool for debugging wayland events, similar to xev
 AddPackage --foreign wl-clipboard-x11 # A wrapper to use wl-clipboard as a drop-in replacement to X11 clipboard tools
-AddPackage --foreign wlrobs-hg # An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
 AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland session
 AddPackage --foreign xsv-bin # CSV command line toolkit written in Rust
 AddPackage --foreign yofi-bin # Minimalistic menu for Wayland-based compositors

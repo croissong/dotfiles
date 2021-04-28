@@ -6,11 +6,14 @@ IgnorePath '/var/lib/pacman/sync/*.db.sig' # repo sigs
 
 
 # https://github.com/CyberShadow/aconfmgr/issues/37
+
 # Boot binaries
 IgnorePath '/boot/*.img'
 IgnorePath '/boot/*/*.EFI'
 IgnorePath '/boot/*/*.efi'
 IgnorePath '/boot/vmlin*'
+IgnorePath '/boot/EFI/*'
+
 # Certificate databases
 IgnorePath '/etc/ca-certificates/extracted/*'
 IgnorePath '/etc/ssl/certs/*'
@@ -40,3 +43,30 @@ IgnorePath '/var/lib/*'
 IgnorePath '/var/log/*'
 IgnorePath '/var/swap*'
 IgnorePath '/var/tmp/*'
+
+
+# Ignore probably forever
+IgnorePath '/etc/.pwd.lock'
+IgnorePath '/etc/adjtime'
+IgnorePath '/etc/brlapi.key'
+IgnorePath '/etc/dbeaver/*'
+IgnorePath '/etc/docker/key.json'
+IgnorePath '/etc/texmf/*'
+IgnorePath '/usr/local/bin/*'
+IgnorePath '/usr/bin/*'
+IgnorePath '/usr/man/*'
+IgnorePath '/var/spool/*'
+IgnorePath '/.snapshots/*'
+
+IgnorePath '/home/croissong/*'
+
+
+# Ignore for now
+IgnorePath '/boot/loader'
+IgnorePath '/etc/conf.d/'
+IgnorePath '/etc/ca-certificates'
+
+IgnorePath '/etc/systemd/*'
+IgnorePath '/etc/swanctl/*'
+IgnorePath '/etc/sudoers'
+IgnorePath '/etc/*'
