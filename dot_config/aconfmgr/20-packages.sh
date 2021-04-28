@@ -2,8 +2,6 @@
 
 # So 18. Apr 17:33:57 CEST 2021 - Unknown packages
 
-
-AddPackage abook # Text-based addressbook designed for use with Mutt
 AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
 AddPackage acpid # A daemon for delivering ACPI power management events with netlink support
 AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
@@ -59,7 +57,6 @@ AddPackage evince # Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr,
 AddPackage exa # ls replacement
 AddPackage fakeroot # Tool for simulating superuser privileges
 AddPackage fd # Simple, fast and user-friendly alternative to find
-AddPackage feh # Fast and light imlib2-based image viewer
 AddPackage file # File type identification utility
 AddPackage filesystem # Base Arch Linux files
 AddPackage findutils # GNU utilities to locate files
@@ -140,7 +137,6 @@ AddPackage lynx # A text browser for the World Wide Web
 AddPackage lzop # File compressor using lzo lib
 AddPackage m4 # The GNU macro processor
 AddPackage make # GNU make utility to maintain groups of programs
-AddPackage mako # Lightweight notification daemon for Wayland
 AddPackage man-db # A utility for reading man pages
 AddPackage man-pages # Linux man pages
 AddPackage maven # Java project management and project comprehension tool
@@ -162,7 +158,6 @@ AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage npm # A package manager for javascript
 AddPackage nvchecker # New version checker for software releases
 AddPackage nzbget # Download from Usenet using .nzb files
-AddPackage obs-studio # Free, open source software for live streaming and recording
 AddPackage openjdk11-src # OpenJDK Java 11 sources
 AddPackage openldap # Lightweight Directory Access Protocol (LDAP) client and server
 AddPackage openssh # Premier connectivity tool for remote login with the SSH protocol
@@ -372,7 +367,6 @@ AddPackage --foreign mssql-tools # Microsoft® SQL Server® Tools for Linux
 AddPackage --foreign mutt-wizard # Simple interface to auto-configure neomutt and isync with safe passwords
 AddPackage --foreign nb # A command line note-taking, bookmarking, archiving, and knowledge base application
 AddPackage --foreign ngrok-bin # secure introspectable tunnels to localhost
-AddPackage --foreign nyxt-browser-git # Keyboard-oriented, Common Lisp extensible web-browser
 AddPackage --foreign openpomodoro # A command-line Pomodoro tracker which uses the Open Pomodoro Format
 AddPackage --foreign pandoc-bin # Pandoc - executable only, without 750MB Haskell depends/makedepends
 AddPackage --foreign paru-bin # Feature packed AUR helper
@@ -414,3 +408,37 @@ AddPackage --foreign yofi-bin # Minimalistic menu for Wayland-based compositors
 AddPackage --foreign zoiper # a SIP and IAX2 VoIP softphone
 AddPackage --foreign zoom # Video Conferencing and Web Conferencing Service
 AddPackage --foreign zoxide-bin # A fast cd command that learns your habits (binary release)
+
+
+# backup
+AddPackage borg # Deduplicating backup program with compression and authenticated encryption
+AddPackage borgmatic # Simple, configuration-driven backup software for servers and workstations
+AddPackage snapper # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
+
+# For emacs-gif-screencast
+AddPackage gifsicle # A powerful command-line program for creating, editing, manipulating and getting information about GIF images and animations
+
+# CLIs
+
+AddPackage imv # Image viewer for Wayland and X11
+AddPackage khard # Console CardDAV client
+AddPackage --foreign davmail # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
+AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
+
+
+# System
+AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
+
+
+# Dev
+AddPackage prometheus # An open-source systems monitoring and alerting toolkit
+AddPackage --foreign eclipse-mat # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
+AddPackage --foreign google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
+AddPackage --foreign quicklisp # A library manager for Common Lisp
+
+# Stuff
+AddPackage --foreign obs-studio-git # Free and open source software for video recording and live streaming.
+
+
+# Not sure
+AddPackage sox # The Swiss Army knife of sound processing tools

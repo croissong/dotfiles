@@ -58,7 +58,7 @@ IgnorePath '/usr/man/*'
 IgnorePath '/var/spool/*'
 IgnorePath '/.snapshots/*'
 
-IgnorePath '/home/croissong/*'
+IgnorePath '/home/croissong*'
 
 
 # Ignore for now
@@ -70,3 +70,4 @@ IgnorePath '/etc/systemd/*'
 IgnorePath '/etc/swanctl/*'
 IgnorePath '/etc/sudoers'
 IgnorePath '/etc/*'
+IgnorePath '/usr/local/share/*'
