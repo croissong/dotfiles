@@ -1,0 +1,8 @@
+* DONE pacman meta packages
+Superseded by https://github.com/CyberShadow/aconfmgr
+* https://karthinks.com/software/bridging-islands-in-emacs-1/
+https://www.reddit.com/r/emacs/comments/n0dtm7/bridging_islands_in_emacs_rebuilder_and/
+https://www.reddit.com/r/commandline/comments/my7hda/the_cli_email_client_the_aim_of_himalaya_is_to/
+https://github.com/soywod/himalaya/wiki/Usage:msg:idle
+* https://github.com/osa1/tiny
+* https://github.com/sayanarijit/xplr
