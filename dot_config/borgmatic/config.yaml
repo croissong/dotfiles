@@ -1,0 +1,15 @@
+location:
+  source_directories:
+  - /home/croissong
+  repositories:
+  - /tmp/backups/local.borg
+
+  exclude_patterns:
+    - '*.pyc'
+    - /home/*/.cache
+
+retention:
+    # Retention policy for how many backups to keep.
+    keep_daily: 7
+    keep_weekly: 4
+    keep_monthly: 6
