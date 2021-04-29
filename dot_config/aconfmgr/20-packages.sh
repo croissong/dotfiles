@@ -428,6 +428,7 @@ AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust
 
 # System
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
+AddPackage upower # Abstraction for enumerating power devices, listening to device events and querying history and statistics
 
 
 # Dev
