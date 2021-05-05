@@ -26,6 +26,7 @@ alias clip='wl-copy'
 alias du='dust -b'
 alias journalctl='journalctl -fxe'
 # todo https://github.com/junegunn/fzf/issues/2028
+alias pass=gopass
 alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass otp -c {})+abort,space:execute(gopass show {})+abort'"
 alias ssh='TERM=xterm ssh'
 
