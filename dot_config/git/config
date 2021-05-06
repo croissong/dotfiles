@@ -42,6 +42,9 @@
   st = status -sb
   prune-local = !bash -c 'git branch --format \"%(upstream:track)%(refname)\" | grep \"^\\[gone\\]\" | cut -c 18- | xargs git branch -D'
   prune-remote = remote prune origin
+  regexadd = "!f() { git diff -U0 \
+   | grepdiff -E $1 --output-matching=hunk \
+   | git apply --cached --unidiff-zero; }; f"
 [apply]
   whitespace = warn
 [diff "sopsdiffer"]
