@@ -11,6 +11,7 @@ alias top=btm
 alias open='handlr open'
 alias history='history -E'
 alias tree=br
+alias x=xplr
 alias ps=procs
 alias sed=sd
 alias ntop='sudo nethogs'
