@@ -6,7 +6,12 @@ location:
 
   exclude_patterns:
     - '*.pyc'
-    - /home/*/.cache
+    - ~/Downloads
+    - '*/tmp/'
+
+  exclude_caches: true
+  exclude_if_present:
+    - .nobackup
 
 retention:
     # Retention policy for how many backups to keep.

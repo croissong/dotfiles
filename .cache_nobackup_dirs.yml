@@ -1,0 +1,14 @@
+cachedirs:
+- .cache
+- .cargo
+- .local
+- .m2
+- .npm
+- .kube
+- .rustup
+- .yarn
+- .node_modules
+
+nobackup:
+- Downloads
+- code/golang

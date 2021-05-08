@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo '{{ include ".cache_nobackup_dirs.yml" }}' \
+    | dasel select -p yaml cachedirs \
+    | sd '\-\s+' '' \
+    | xargs -I{} touch ~/{}/CACHEDIR.TAG
+
+echo '{{ include ".cache_nobackup_dirs.yml" }}' \
+    | dasel select -p yaml nobackup \
+    | sd '\-\s+' '' \
+    | xargs -I{} touch ~/{}/.nobackup
