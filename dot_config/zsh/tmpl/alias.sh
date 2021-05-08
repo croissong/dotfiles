@@ -21,6 +21,8 @@ alias m=neomutt
 alias mr='neomutt -R'
 alias ms='mailsync'
 
+alias printer='system-config-printer'
+
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
 alias clip='wl-copy'
 alias du='dust -b'

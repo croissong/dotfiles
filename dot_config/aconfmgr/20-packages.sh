@@ -125,9 +125,12 @@ AddPackage libva-intel-driver # VA-API implementation for Intel G45 and HD Graph
 AddPackage libvirt # API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)
 AddPackage licenses # Standard licenses distribution package
 AddPackage light # Program to easily change brightness on backlight-controllers.
+
+AddPackage linux-firmware # Firmware files for Linux
 AddPackage linux-lts # The LTS Linux kernel and modules
 AddPackage linux-zen # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
+
 AddPackage logrotate # Rotates system logs automatically
 AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage lsof # Lists open files for running Unix processes
@@ -351,7 +354,6 @@ AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and 
 AddPackage --foreign jp # Command line interface to JMESPath
 AddPackage --foreign jsonnet # The data templating language
 AddPackage --foreign jwt-cli # A super fast CLI tool to decode and encode JWTs built in Rust
-AddPackage --foreign k6-bin # A modern load testing tool, using Go and JavaScript (precompiled)
 AddPackage --foreign keybase-bin # the Keybase Go client, filesystem, and GUI
 AddPackage --foreign krew-bin # Krew is the package manager for kubectl plugins.
 AddPackage --foreign kubectl-bin # Kubernetes.io client binary
@@ -410,6 +412,9 @@ AddPackage --foreign zoom # Video Conferencing and Web Conferencing Service
 AddPackage --foreign zoxide-bin # A fast cd command that learns your habits (binary release)
 
 
+# tools
+AddPackage system-config-printer # A CUPS printer configuration tool and status applet
+
 # backup
 AddPackage borg # Deduplicating backup program with compression and authenticated encryption
 AddPackage borgmatic # Simple, configuration-driven backup software for servers and workstations
@@ -424,7 +429,7 @@ AddPackage imv # Image viewer for Wayland and X11
 AddPackage khard # Console CardDAV client
 AddPackage --foreign davmail # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
-
+AddPackage --foreign xplr-bin # A hackable, minimal, fast TUI file explorer
 
 # System
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
@@ -443,3 +448,6 @@ AddPackage --foreign obs-studio-git # Free and open source software for video re
 
 # Not sure
 AddPackage sox # The Swiss Army knife of sound processing tools
+
+# Nyxt, lisp
+AddPackage sbcl # Steel Bank Common Lisp
