@@ -150,3 +150,28 @@
   description = "fix touchpad"
   command = "sudo modprobe -r psmouse; sudo modprobe psmouse"
   output = ""
+
+[[snippets]]
+  description = "list files"
+  command = "pacman -Ql package_name"
+  output = ""
+
+[[snippets]]
+  description = "timestamp"
+  command = "date -d @"
+  output = ""
+
+[[snippets]]
+  description = "git prune branches"
+  command = "git prune-remote; git prune-local"
+  output = ""
+
+[[snippets]]
+  description = "rename"
+  command = "find canary-linkerd.yml ../ | xargs vidir"
+  output = ""
+
+[[snippets]]
+  description = "colorpicker"
+  command = "grim -g \"$(slurp -p)\" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy"
+  output = ""
