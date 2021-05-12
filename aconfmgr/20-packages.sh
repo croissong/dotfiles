@@ -289,7 +289,6 @@ AddPackage which # A utility to show the full path of commands
 AddPackage whois # Intelligent WHOIS client
 AddPackage wireguard-dkms # next generation secure network tunnel - module sources
 AddPackage wireguard-tools # next generation secure network tunnel - tools for configuration
-AddPackage wireshark-qt # Network traffic and protocol analyzer/sniffer - Qt GUI
 AddPackage wkhtmltopdf # Command line tools to render HTML into PDF and various image formats
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
@@ -348,7 +347,6 @@ AddPackage --foreign grpcurl-bin # Like cURL, but for gRPC
 AddPackage --foreign gsctl-bin # The Giant Swarm command line interface
 AddPackage --foreign handlr-bin # Powerful alternative to xdg-utils written in Rust
 AddPackage --foreign http-prompt # An interactive HTTP command-line client
-AddPackage --foreign i3status-rust-git # Very resourcefriendly and feature-rich replacement for i3status to use with bar programs (like i3bar and swaybar), written in pure Rust
 AddPackage --foreign ike-scan # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
 AddPackage --foreign jp # Command line interface to JMESPath
@@ -430,10 +428,12 @@ AddPackage khard # Console CardDAV client
 AddPackage --foreign davmail # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
 AddPackage --foreign xplr-bin # A hackable, minimal, fast TUI file explorer
+AddPackage termshark # Terminal UI for tshark, inspired by Wireshark
 
 # System
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage upower # Abstraction for enumerating power devices, listening to device events and querying history and statistics
+AddPackage i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
 
 
 # Dev
@@ -443,7 +443,7 @@ AddPackage --foreign google-cloud-sdk # A set of command-line tools for the Goog
 AddPackage --foreign quicklisp # A library manager for Common Lisp
 
 # Stuff
-AddPackage --foreign obs-studio-git # Free and open source software for video recording and live streaming.
+AddPackage obs-studio # Free, open source software for live streaming and recording
 
 
 # Not sure
