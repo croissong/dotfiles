@@ -434,6 +434,7 @@ AddPackage termshark # Terminal UI for tshark, inspired by Wireshark
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage upower # Abstraction for enumerating power devices, listening to device events and querying history and statistics
 AddPackage i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
+AddPackage --foreign clipman # A simple clipboard manager for Wayland
 
 
 # Dev

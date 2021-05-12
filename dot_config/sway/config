@@ -170,10 +170,6 @@ for_window [title="^chrome-extension.*is sharing your screen.$"] floating enable
 
 
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
+exec wl-paste -t text --watch clipman store
 exec --no-startup-id bato
 exec --no-startup-id hsetroot -solid "#000000"
-
-# https://github.com/swaywm/sway/pull/3022
-# exec --no-startup-id "swaymsg 'workspace 1; append_layout ~/.config/sway/workspace-1.json'; exec emacsclient -c"
-# exec --no-startup-id "swaymsg 'workspace 2; append_layout ~/.config/sway/workspace-2.json'; exec $BROWSER"
-# exec --no-startup-id "swaymsg 'workspace 3; append_layout ~/.config/sway/workspace-3.json'; exec i3-sensible-terminal"
