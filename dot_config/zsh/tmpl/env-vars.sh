@@ -1,8 +1,9 @@
-HISTORY_IGNORE="(ls *|pwd|pass *|gopass *)"
+HISTORY_IGNORE="(ls *|pwd)"
 HISTTIMEFORMAT="%d.%m.%y %T "
 HISTFILE=$XDG_CONFIG_HOME/zsh/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+
 
 # Treat these characters as part of a word.
 WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
