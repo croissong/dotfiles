@@ -63,11 +63,16 @@ IgnorePath '/home/croissong*'
 
 # Ignore for now
 IgnorePath '/boot/loader'
-IgnorePath '/etc/conf.d/'
+IgnorePath '/etc/conf.d/*'
 IgnorePath '/etc/ca-certificates'
 
 IgnorePath '/etc/systemd/*'
 IgnorePath '/etc/swanctl/*'
 IgnorePath '/etc/sudoers'
-IgnorePath '/etc/*'
 IgnorePath '/usr/local/share/*'
+
+
+
+
+IgnorePath "/etc/"{cups,fonts,geoclue,wireguard,iwd,keybase,libvirt,light,mkinitcpio.d,modprobe.d,pam.d,ppp,reflector,sgml,udev,xdg/reflector,xl2tpd,xml,docker,keybase}"/*"
+IgnorePath "/etc/"{fstab,group,hostname,hosts,ipsec,locale.conf,machine-id,nftables.conf,odbcinst.ini,os-release,passwd,printcap,shells,strongswan,subgid,subuid,vconsole.conf}"*"
