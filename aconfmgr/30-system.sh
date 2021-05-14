@@ -12,3 +12,6 @@ CopyFile /etc/snapper/configs/config 640
 CreateLink /etc/containers/certs.d/smarthub-wbench.workbench.telekom.de/user.cert /home/croissong/.ssh/svh/user.crt
 CreateLink /etc/containers/certs.d/smarthub-wbench.workbench.telekom.de/user.key /home/croissong/.ssh/svh/userkey.pem
 CreateLink /etc/docker/certs.d /home/croissong/.config/containers/certs.d
+# shrug
+RemoveFile /etc/docker/certs.d
+RemoveFile /etc/docker

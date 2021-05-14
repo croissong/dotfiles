@@ -287,7 +287,6 @@ AddPackage wf-recorder # Screen recorder for wlroots-based compositors such as s
 AddPackage wget # Network utility to retrieve files from the Web
 AddPackage which # A utility to show the full path of commands
 AddPackage whois # Intelligent WHOIS client
-AddPackage wireguard-dkms # next generation secure network tunnel - module sources
 AddPackage wireguard-tools # next generation secure network tunnel - tools for configuration
 AddPackage wkhtmltopdf # Command line tools to render HTML into PDF and various image formats
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
@@ -397,7 +396,6 @@ AddPackage --foreign teams # Microsoft Teams for Linux is your chat-centered wor
 AddPackage --foreign telepresence # Local development against a remote Kubernetes or OpenShift cluster
 AddPackage --foreign tizonia-all # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
 AddPackage --foreign tor-browser # Tor Browser Bundle
-AddPackage --foreign trivy # A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 AddPackage --foreign ttf-ubraille # Unicode Braillt font
 AddPackage --foreign usql # A universal command-line interface for SQL databases
 AddPackage --foreign wev # tool for debugging wayland events, similar to xev

@@ -57,6 +57,7 @@ IgnorePath '/usr/bin/*'
 IgnorePath '/usr/man/*'
 IgnorePath '/var/spool/*'
 IgnorePath '/.snapshots/*'
+IgnorePath '/etc/docker/key.json'
 
 IgnorePath '/home/croissong*'
 
@@ -70,7 +71,6 @@ IgnorePath '/etc/systemd/*'
 IgnorePath '/etc/swanctl/*'
 IgnorePath '/etc/sudoers'
 IgnorePath '/usr/local/share/*'
-
 
 
 
