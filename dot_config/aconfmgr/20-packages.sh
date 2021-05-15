@@ -38,7 +38,6 @@ AddPackage coreutils # The basic file, shell and text manipulation utilities of 
 AddPackage croc # Easily and securely send things from one computer to another.
 AddPackage cryptsetup # Userspace setup tool for transparent encryption of block devices using dm-crypt
 AddPackage cups # The CUPS Printing System - daemon package
-AddPackage dante # SOCKS v4 and v5 compatible proxy server and client
 AddPackage dateutils # nifty command line date and time utilities; fast date calculations and conversion in the shell
 AddPackage dbeaver # Free universal SQL Client for developers and database administrators (community edition)
 AddPackage delve # A debugger for the Go programming language.
@@ -50,7 +49,6 @@ AddPackage docker # Pack, ship and run any application as a lightweight containe
 AddPackage doctl # The official command line interface for the DigitalOcean API
 AddPackage e2fsprogs # Ext2/3/4 filesystem utilities
 AddPackage earlyoom # Early OOM Daemon for Linux
-AddPackage ed # A POSIX-compliant line-oriented text editor
 AddPackage electrum # Lightweight Bitcoin wallet
 AddPackage ethtool # Utility for controlling network drivers and hardware
 AddPackage evince # Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
@@ -107,7 +105,6 @@ AddPackage iwd # Internet Wireless Daemon
 AddPackage jdk-openjdk # OpenJDK Java 15 development kit
 AddPackage jfsutils # JFS filesystem utilities
 AddPackage jq # Command-line JSON processor
-AddPackage k9s # TUI for managing Kubernetes clusters and pods
 AddPackage khal # CLI calendar application build around CalDAV
 AddPackage krita # Edit and paint images
 AddPackage kustomize # Template-free customization of Kubernetes YAML manifests
@@ -132,7 +129,6 @@ AddPackage linux-zen # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 
 AddPackage logrotate # Rotates system logs automatically
-AddPackage lostfiles # Find orphaned files not owned by any Arch packages
 AddPackage lsof # Lists open files for running Unix processes
 AddPackage lutris # Open Gaming Platform
 AddPackage lvm2 # Logical Volume Manager 2 utilities
@@ -170,7 +166,6 @@ AddPackage p7zip # Command-line file archiver with high compression ratio
 AddPackage packer # tool for creating identical machine images for multiple platforms from a single source configuration
 AddPackage pacman # A library-based package manager with dependency support
 AddPackage pamixer # Pulseaudio command-line mixer like amixer
-AddPackage paprefs # Configuration dialog for PulseAudio
 AddPackage parallel # A shell tool for executing jobs in parallel
 AddPackage pass # Stores, retrieves, generates, and synchronizes passwords securely
 AddPackage patch # A utility to apply patch files to original sources
@@ -211,7 +206,6 @@ AddPackage rmlint # Tool to remove duplicates and other lint, being much faster 
 AddPackage rsync # A fast and versatile file copying tool for remote and local files
 AddPackage rust-analyzer # Experimental Rust compiler front-end for IDEs
 AddPackage rustup # The Rust toolchain installer
-AddPackage s-nail # Environment for sending and receiving mail
 AddPackage s3cmd # A command line client for Amazon S3
 AddPackage sd # Intuitive find & replace
 AddPackage sdcv # StarDict Console Version
@@ -291,15 +285,9 @@ AddPackage wireguard-tools # next generation secure network tunnel - tools for c
 AddPackage wkhtmltopdf # Command line tools to render HTML into PDF and various image formats
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
-AddPackage xf86-input-libinput # Generic input driver for the X.Org server based on libinput
-AddPackage xf86-video-intel # X.org Intel i810/i830/i915/945G/G965+ video drivers
-AddPackage xf86-video-vesa # X.org vesa video driver
 AddPackage xfsprogs # XFS filesystem utilities
 AddPackage xl2tpd # an open source implementation of the L2TP maintained by Xelerance Corporation
-AddPackage xorg-bdftopcf # Convert X font from Bitmap Distribution Format to Portable Compiled Format
-AddPackage xorg-font-util # X.Org font utilities
 AddPackage xorg-fonts-encodings # X.org font encoding files
-AddPackage xorg-mkfontscale # Create an index of scalable font files for X
 AddPackage xorg-server-common # Xorg server common files
 AddPackage xorg-setxkbmap # Set the keyboard using the X Keyboard Extension
 AddPackage xorg-xkbcomp # X Keyboard description compiler
