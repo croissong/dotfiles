@@ -1,22 +1,22 @@
 [user]
-	name = Jan Moeller
-	email = jan.moeller0@gmail.com
+  name = Jan Moeller
+  email = jan.moeller0@gmail.com
   signingkey = 96A438F9EE72572F
 [commit]
-	template = ~/.config/git/commit_template.txt
+  template = ~/.config/git/commit_template.txt
   gpgsign = true
 [pull]
-  rebase = true  
+  rebase = true
 [core]
-	excludesfile = ~/.config/git/ignore
+  excludesfile = ~/.config/git/ignore
   pager = delta
 [diff]
-	submodule = log
+  submodule = log
 [diff "json"]
     textconv = "jq ''"
 [status]
-	submodulesummary = 1
-	showuntrackedfiles = normal
+  submodulesummary = 1
+  showuntrackedfiles = normal
 [credential]
   helper = /usr/lib/git-core/git-credential-libsecret
 [color]
@@ -27,8 +27,8 @@
   ui = true
   pager = true
 [http "https://smarthub-wbench.workbench.telekom.de"]
-	sslCert = ~/.config/svh/ssl_smarthub-wbench/user.crt
-	sslKey = ~/.config/svh/ssl_smarthub-wbench/userkey.pem
+  sslCert = ~/.config/svh/ssl_smarthub-wbench/user.crt
+  sslKey = ~/.config/svh/ssl_smarthub-wbench/userkey.pem
 [alias]
   br = branch -vv
   bra = branch -avv
@@ -45,10 +45,11 @@
   regexadd = "!f() { git diff -U0 \
    | grepdiff -E $1 --output-matching=hunk \
    | git apply --cached --unidiff-zero; }; f"
+
 [apply]
   whitespace = warn
 [diff "sopsdiffer"]
-	textconv = sops -d
+  textconv = sops -d
 
 [delta]
     syntax-theme = gruvbox
