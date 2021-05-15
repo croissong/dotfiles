@@ -6,14 +6,14 @@ zstyle ':completion:*' menu select
 source ~/.local/share/tab/completion/zsh-history.zsh
 # end tab configuration
 
-{{ include "dot_config/zsh/tmpl/zinit.sh" }}
-{{ include "dot_config/zsh/tmpl/fzf.sh" }}
+{{ include "dot_config/zsh/.zinit.sh" }}
+{{ include "dot_config/zsh/.fzf.sh" }}
 
-{{ include "dot_config/zsh/tmpl/keybinds.sh" }}
-{{ include "dot_config/zsh/tmpl/alias.sh" }}
-{{ include "dot_config/zsh/tmpl/functions.sh" }}
-{{ include "dot_config/zsh/tmpl/options.sh" }}
-{{ include "dot_config/zsh/tmpl/env-vars.sh" }}
+{{ include "dot_config/zsh/.keybinds.sh" }}
+{{ include "dot_config/zsh/.alias.sh" }}
+{{ include "dot_config/zsh/.functions.sh" }}
+{{ include "dot_config/zsh/.options.sh" }}
+{{ include "dot_config/zsh/.env-vars.sh" }}
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd c zsh)"
