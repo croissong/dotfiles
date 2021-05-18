@@ -4,5 +4,4 @@ secrets.yml
 Readme.md
 .config/nyxt/init.org
 /tf/
-.config/zsh/tmpl/
 todo.*

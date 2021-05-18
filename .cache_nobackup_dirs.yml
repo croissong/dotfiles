@@ -7,7 +7,29 @@ cachedirs:
 - .kube
 - .rustup
 - .yarn
+- .gem
 - .node_modules
+- .config/chromium
+- .config/Slack
+- .config/discord
+- .config/emacs/straight
+- .config/emacs/eln-cache
+- .config/emacs/.cache
+- .config/Mattermost
+- .mozilla/firefox
+- .config/zsh/.zinit
+- .config/GIMP
+- .config/.krew/index
+- .config/mpv/watch_later
+- .config/doctl/cache
+- .config/libreoffice
+- .config/Microsoft/Microsoft Teams
+- .config/streamlink-twitch-gui
+- .config/.cache
+- .eclipse
+- .tor-browser
+- GPUCache
+- .zoom
 
 nobackup:
 - Downloads

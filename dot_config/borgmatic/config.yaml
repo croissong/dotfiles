@@ -2,12 +2,13 @@ location:
   source_directories:
   - /home/croissong
   repositories:
-  - /tmp/backups/local.borg
+  - /tmp/local.borg
 
   exclude_patterns:
     - '*.pyc'
-    - ~/Downloads
+    - '*/node_modules/'
     - '*/tmp/'
+    - '*/scratch/'
 
   exclude_caches: true
   exclude_if_present:
