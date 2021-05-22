@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+davmail &
+davmailPID=$!
+while ! ncat -z localhost 1080; do
+  sleep 0.5
+done
+
+vdirsyncer sync
+
+kill $davmailPID

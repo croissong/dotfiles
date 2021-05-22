@@ -1,9 +1,0 @@
-[Unit]
-Description=Davmail
-BindsTo=vdirsyncer.service
-
-[Service]
-Restart=no
-ExecStart=/usr/bin/davmail
-ExecStartPost=/usr/bin/timeout 30 sh -c 'while ! ss -H -t -l -n sport = :1080 | grep -q "^LISTEN.*:1080"; do sleep 1; done'
-SuccessExitStatus=143
