@@ -46,12 +46,12 @@ alias kctxmv='kubectl config rename-context'
 alias kcg='kubectl get -o yaml'
 alias kcdsc='kubectl describe'
 alias kcroll='kubectl rollout restart'
-alias kcl='kubectl logs --timestamps -f --tail 1000'
+alias kcl='kubectl logs --all-containers --timestamps -f --tail 1000'
 alias kcx='kubectl exec -ti'
 alias kcfwd='kubectl port-forward'
 alias kcw='kubectl get po -w -owide'
 alias kcgs='kubectl get -owide --sort-by=.metadata.creationTimestamp'
-alias kcrollall="kc get deploy --no-headers=true -ocustom-columns='name:{.metadata.name}' | xargs -I{} kubectl rollout restart deploy {}"
+alias kcrollall="kc get deploy --no-headers -ocustom-columns='name:{.metadata.name}' | xargs -I{} kubectl rollout restart deploy {}"
 
 alias tw='task'
 alias twa='task add'
