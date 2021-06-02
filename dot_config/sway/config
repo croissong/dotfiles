@@ -88,6 +88,9 @@ bindsym $mod+Shift+Left exec "light -S 0"
 bindsym $mod+Shift+Right exec "light -S 100"
 
 
+bindsym $mod+Control+w exec "wl-paste | xargs handlr open"
+
+
 bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
 
 # resize window (you can also use the mouse for that)
@@ -170,6 +173,5 @@ for_window [title="^chrome-extension.*is sharing your screen.$"] floating enable
 
 
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
-exec wl-paste -t text --watch clipman store
 exec --no-startup-id bato
 exec --no-startup-id hsetroot -solid "#000000"
