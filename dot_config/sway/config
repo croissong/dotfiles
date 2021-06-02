@@ -88,7 +88,7 @@ bindsym $mod+Shift+Left exec "light -S 0"
 bindsym $mod+Shift+Right exec "light -S 100"
 
 
-bindsym $mod+Control+w exec "wl-paste | xargs handlr open"
+bindsym $mod+Control+e exec "wl-paste | xargs handlr open"
 
 
 bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
