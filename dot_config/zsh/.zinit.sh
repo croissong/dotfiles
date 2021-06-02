@@ -15,6 +15,11 @@ zinit lucid light-mode for \
   zinit-zsh/z-a-patch-dl \
   Aloxaf/fzf-tab
 
+
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':completion:complete:*:options' sort false
+
+
 zinit from"gh-r" sbin"direnv" mv"direnv* -> direnv" \
 	atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
 	src="zhook.zsh" for \
