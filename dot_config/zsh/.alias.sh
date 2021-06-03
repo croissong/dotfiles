@@ -82,6 +82,8 @@ alias cali='ikhal'
 
 alias aconfmgr='aconfmgr --skip-checksums --aur-helper paru'
 
+alias pacdiff='sudo -E pacdiff'
+
 awkp() { awk "{print \$${1:-1}}"; }
 
 b64e() { echo -n $1 | base64 -w0 }
