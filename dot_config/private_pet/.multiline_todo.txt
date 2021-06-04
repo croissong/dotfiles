@@ -9,7 +9,7 @@ spec:
   hostNetwork: true
   containers:
     - name: ubuntu-god
-      image: ubuntu
+      image: praqma/network-multitool
       args: ['sleep', 'infinity']
       securityContext:
           privileged: true
