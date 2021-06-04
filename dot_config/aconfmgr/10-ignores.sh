@@ -58,6 +58,7 @@ IgnorePath '/usr/man/*'
 IgnorePath '/var/spool/*'
 IgnorePath '/.snapshots/*'
 IgnorePath '/etc/docker/key.json'
+IgnorePath '/etc/redis/*'
 
 IgnorePath '/home/croissong*'
 

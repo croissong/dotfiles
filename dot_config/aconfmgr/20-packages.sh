@@ -44,7 +44,6 @@ AddPackage delve # A debugger for the Go programming language.
 AddPackage device-mapper # Device mapper userspace library and tools
 AddPackage dhcpcd # RFC2131 compliant DHCP client daemon
 AddPackage diffutils # Utility programs used for creating patch files
-AddPackage discord # All-in-one voice and text chat for gamers that's free and secure.
 AddPackage docker # Pack, ship and run any application as a lightweight container
 AddPackage doctl # The official command line interface for the DigitalOcean API
 AddPackage e2fsprogs # Ext2/3/4 filesystem utilities
@@ -332,7 +331,6 @@ AddPackage --foreign goimapnotify # Execute scripts on IMAP mailbox changes (new
 AddPackage --foreign golangci-lint-bin # Linters Runner for Go. 5x faster than gometalinter.
 AddPackage --foreign grpcurl-bin # Like cURL, but for gRPC
 AddPackage --foreign gsctl-bin # The Giant Swarm command line interface
-AddPackage --foreign handlr-bin # Powerful alternative to xdg-utils written in Rust
 AddPackage --foreign http-prompt # An interactive HTTP command-line client
 AddPackage --foreign ike-scan # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
 AddPackage --foreign jetbrains-toolbox # Manage all your JetBrains Projects and Tools
@@ -360,7 +358,6 @@ AddPackage --foreign paru-bin # Feature packed AUR helper
 AddPackage --foreign pet-bin # Simple command-line snippet manager, written in Go.
 AddPackage --foreign pkg_scripts # A collection of pacman and package-related utilities.
 AddPackage --foreign py-spy # Sampling profiler for Python programs
-AddPackage --foreign pyright # Type checker for the Python language
 AddPackage --foreign python-flask-admin # Simple and extensible admin interface framework for Flask
 AddPackage --foreign python-flask-api # Browsable web APIs for Flask.
 AddPackage --foreign python-flask-paginate # A simple paginate extension for flask
@@ -398,6 +395,7 @@ AddPackage --foreign zoxide-bin # A fast cd command that learns your habits (bin
 
 # tools
 AddPackage system-config-printer # A CUPS printer configuration tool and status applet
+AddPackage --foreign ookla-speedtest-bin # Speedtest CLI by Ookla
 
 # backup
 AddPackage borg # Deduplicating backup program with compression and authenticated encryption
@@ -420,17 +418,21 @@ AddPackage termshark # Terminal UI for tshark, inspired by Wireshark
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage upower # Abstraction for enumerating power devices, listening to device events and querying history and statistics
 AddPackage i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
-AddPackage --foreign clipman # A simple clipboard manager for Wayland
+AddPackage --foreign handlr-bin # Powerful alternative to xdg-utils written in Rust
+AddPackage --foreign xdg-utils-handlr # A shim for xdg-utils to use handlr under the hood
 
 
 # Dev
 AddPackage prometheus # An open-source systems monitoring and alerting toolkit
+AddPackage pyright # Type checker for the Python language
+AddPackage redis # An in-memory database that persists on disk
 AddPackage --foreign eclipse-mat # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
 AddPackage --foreign google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
 AddPackage --foreign quicklisp # A library manager for Common Lisp
 
 # Stuff
 AddPackage obs-studio # Free, open source software for live streaming and recording
+AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
 
 
 # Not sure
