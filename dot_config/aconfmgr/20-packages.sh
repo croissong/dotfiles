@@ -101,7 +101,6 @@ AddPackage intel-ucode # Microcode update files for Intel CPUs
 AddPackage iproute2 # IP Routing Utilities
 AddPackage iputils # Network monitoring tools, including ping
 AddPackage iwd # Internet Wireless Daemon
-AddPackage jdk-openjdk # OpenJDK Java 15 development kit
 AddPackage jfsutils # JFS filesystem utilities
 AddPackage jq # Command-line JSON processor
 AddPackage khal # CLI calendar application build around CalDAV
@@ -156,7 +155,6 @@ AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage npm # A package manager for javascript
 AddPackage nvchecker # New version checker for software releases
 AddPackage nzbget # Download from Usenet using .nzb files
-AddPackage openjdk11-src # OpenJDK Java 11 sources
 AddPackage openldap # Lightweight Directory Access Protocol (LDAP) client and server
 AddPackage openssh # Premier connectivity tool for remote login with the SSH protocol
 AddPackage opus # Totally open, royalty-free, highly versatile audio codec
@@ -429,6 +427,8 @@ AddPackage redis # An in-memory database that persists on disk
 AddPackage --foreign eclipse-mat # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
 AddPackage --foreign google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
 AddPackage --foreign quicklisp # A library manager for Common Lisp
+AddPackage --foreign jdk-adoptopenjdk # OpenJDK Java 16 development kit (AdoptOpenJDK build)
+AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
 
 # Stuff
 AddPackage obs-studio # Free, open source software for live streaming and recording
