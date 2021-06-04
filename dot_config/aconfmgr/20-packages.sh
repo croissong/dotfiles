@@ -9,7 +9,6 @@ AddPackage alsa-tools # Advanced tools for certain sound cards
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage ansible # Official assortment of Ansible collections
 AddPackage ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
-AddPackage arduino # Arduino prototyping platform SDK
 AddPackage arp-scan # A tool that uses ARP to discover and fingerprint IP hosts on the local network
 AddPackage asciidoctor # An implementation of AsciiDoc in Ruby
 AddPackage aspell-en # English dictionary for aspell
@@ -33,7 +32,6 @@ AddPackage calibre # Ebook management application
 AddPackage checkbashisms # Debian script that checks for bashisms
 AddPackage chezmoi # Manage your dotfiles across multiple machines
 AddPackage chromium # A web browser built for speed, simplicity, and security
-AddPackage colordiff # A Perl script wrapper for 'diff' that produces the same output but with pretty 'syntax' highlighting
 AddPackage coreutils # The basic file, shell and text manipulation utilities of the GNU operating system
 AddPackage croc # Easily and securely send things from one computer to another.
 AddPackage cryptsetup # Userspace setup tool for transparent encryption of block devices using dm-crypt
