@@ -68,7 +68,6 @@ IgnorePath '/boot/loader'
 IgnorePath '/etc/conf.d/*'
 IgnorePath '/etc/ca-certificates'
 
-IgnorePath '/etc/systemd/*'
 IgnorePath '/etc/swanctl/*'
 IgnorePath '/etc/sudoers'
 IgnorePath '/usr/local/share/*'

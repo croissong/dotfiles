@@ -222,7 +222,8 @@ AddPackage strongswan # Open source IPsec implementation
 AddPackage sudo # Give certain users the ability to run some commands as root
 AddPackage swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
 AddPackage swappy # A Wayland native snapshot editing tool
-AddPackage sway # Tiling Wayland compositor and replacement for the i3 window manager
+
+
 AddPackage sysfsutils # System Utilities Based on Sysfs
 AddPackage sysstat # a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
 AddPackage systemd # system and service manager
@@ -438,3 +439,7 @@ AddPackage sox # The Swiss Army knife of sound processing tools
 
 # Nyxt, lisp
 AddPackage sbcl # Steel Bank Common Lisp
+
+
+AddPackage sway # Tiling Wayland compositor and replacement for the i3 window manager
+AddPackage swayidle # Idle management daemon for Wayland
