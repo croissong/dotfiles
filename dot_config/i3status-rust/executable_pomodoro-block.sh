@@ -2,8 +2,8 @@
 
 minutesLeft=`pomodoro status -f '%r'`
 if [ "$minutesLeft" = "0:00" ]; then
-    text="🍅"
+    text=""
 else
-    text="$minutesLeft⏱"
+    text="$minutesLeft"
 fi
-echo "{\"text\": \"$text\"}"
+echo "{\"icon\": \"pomodoro\", \"text\": \"$text\"}"
