@@ -4,7 +4,7 @@
     readonly = False
 
   [[holidays]]
-    path = ~/.local/share/calendars/
+    path = ~/.local/share/calendars/Feiertage in Deutschland
     readonly = True
 
 
