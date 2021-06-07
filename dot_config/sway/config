@@ -176,6 +176,6 @@ exec "systemctl --user import-environment; systemctl --user start sway-session.t
 exec bato
 exec hsetroot -solid "#000000"
 exec swayidle -w \
-  timeout 1800 'swaymsg "output * dpms off"'
-    resume 'swaymsg "output * dpms on"'
+  timeout 1800 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
 	timeout 3600 'systemctl suspend'
