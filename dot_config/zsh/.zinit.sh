@@ -10,6 +10,12 @@ zinit wait lucid light-mode for \
 	blockf atpull'zinit creinstall -q .' \
 	    zsh-users/zsh-completions
 
+zinit ice lucid as"program" from"gh-r" \
+      atclone'./starship completions zsh > ~/.config/zsh/.zinit/completions/_starship' atpull'%atclone' \
+      atload'!eval $(starship init zsh)'
+
+zinit light starship/starship
+
 zinit lucid light-mode for \
   zinit-zsh/z-a-bin-gem-node \
   zinit-zsh/z-a-patch-dl \

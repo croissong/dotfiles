@@ -370,7 +370,6 @@ AddPackage --foreign python38 # Major release 3.8 of the Python high-level progr
 AddPackage --foreign rtags # A client/server application that indexes C/C++ code
 AddPackage --foreign sad # Space Age seD
 AddPackage --foreign slack-desktop # Slack Desktop (Beta) for Linux
-AddPackage --foreign starship-bin # The cross-shell prompt for astronauts
 AddPackage --foreign streamlink-twitch-gui # A multi platform Twitch.tv browser for Streamlink
 AddPackage --foreign svgo # Tool for optimizing SVG files
 AddPackage --foreign tab-rs-bin # The intuitive config-driven terminal multiplexer
