@@ -32,6 +32,9 @@ alias pass=gopass
 alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass otp -c {})+abort,space:execute(gopass show {})+abort'"
 alias ssh='TERM=xterm ssh'
 
+alias pack='arc archive'
+alias unpack='arc unarchive'
+
 alias t=tab
 
 alias lock='physlock -ds'
