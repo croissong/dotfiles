@@ -323,8 +323,6 @@ AddPackage --foreign dust-bin # du + rust = dust. Like du but more intuitive
 AddPackage --foreign ebtables # Ethernet bridge filtering utilities
 AddPackage --foreign emacs-gcc-wayland-devel-bin # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
 AddPackage --foreign fedora-firefox-wayland-bin # Fedora's firefox build with wayland enabled by default
-AddPackage --foreign git-delta-bin # A viewer for git and diff output
-AddPackage --foreign goimapnotify # Execute scripts on IMAP mailbox changes (new/deleted/updated messages) using IDLE, golang version.
 AddPackage --foreign golangci-lint-bin # Linters Runner for Go. 5x faster than gometalinter.
 AddPackage --foreign grpcurl-bin # Like cURL, but for gRPC
 AddPackage --foreign gsctl-bin # The Giant Swarm command line interface
@@ -392,6 +390,21 @@ AddPackage --foreign zoxide-bin # A fast cd command that learns your habits (bin
 # tools
 AddPackage system-config-printer # A CUPS printer configuration tool and status applet
 AddPackage --foreign ookla-speedtest-bin # Speedtest CLI by Ookla
+AddPackage gifski # GIF encoder based on libimagequant (pngquant). Squeezes maximum possible quality from the awful GIF format.
+AddPackage goimapnotify # Execute scripts on IMAP mailbox changes (new/deleted/updated messages) using IDLE, golang version.
+AddPackage pngquant # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
+AddPackage --foreign tmpmail-git # A temporary email right from your terminal
+
+## daily
+AddPackage himalaya # Minimalist CLI email client
+AddPackage --foreign hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
+
+# shell
+AddPackage fzf # Command-line fuzzy finder
+AddPackage --foreign direnv-bin # a shell extension that manages your environment
+AddPackage starship # The cross-shell prompt for astronauts
+AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
+AddPackage --foreign git-delta-bin # A viewer for git and diff output
 
 # backup
 AddPackage borg # Deduplicating backup program with compression and authenticated encryption
@@ -427,6 +440,7 @@ AddPackage --foreign google-cloud-sdk # A set of command-line tools for the Goog
 AddPackage --foreign quicklisp # A library manager for Common Lisp
 AddPackage --foreign jdk-adoptopenjdk # OpenJDK Java 16 development kit (AdoptOpenJDK build)
 AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
+AddPackage --foreign ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
 
 # Stuff
 AddPackage obs-studio # Free, open source software for live streaming and recording
