@@ -180,3 +180,18 @@
   description = "kubectl debug https://martinheinz.dev/blog/49"
   command = "kubectl debug -it distroless-python --image=praqma/network-multitool --target=distroless-python -- sh"
   output = ""
+
+[[snippets]]
+  description = "kubectl scale down daemonset"
+  command = "kubectl patch daemonset cadvisor -p '{\"spec\": {\"template\": {\"spec\": {\"nodeSelector\": {\"non-existing\": \"true\"}}}}}'"
+  output = ""
+
+[[snippets]]
+  description = "record gif"
+  command = "wf-recorder -f test.gif -g \"$(slurp)\""
+  output = ""
+
+[[snippets]]
+  description = "crop gif"
+  command = "ffmpeg -ss 1 -i yag.gif -t 7 -c copy yag.gif"
+  output = ""
