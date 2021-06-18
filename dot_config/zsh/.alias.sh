@@ -21,6 +21,10 @@ alias m=neomutt
 alias mr='neomutt -R'
 alias ms='mailsync'
 
+alias chezmoi='chezmoi -vr'
+
+alias ec=echo
+
 alias printer='system-config-printer'
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
@@ -84,6 +88,7 @@ alias cala='khal calendar'
 alias cali='ikhal'
 
 alias aconfmgr='aconfmgr --skip-checksums --aur-helper paru'
+alias parus="paru -Slq | fzf --multi --preview 'paru -Si {1}' | clip"
 
 alias pacdiff='sudo -E pacdiff'
 
