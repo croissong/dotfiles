@@ -6,14 +6,10 @@ zstyle ':completion:*' menu select
 source ~/.local/share/tab/completion/zsh-history.zsh
 # end tab configuration
 
-{{ include "dot_config/zsh/.zinit.sh" }}
-{{ include "dot_config/zsh/.fzf.sh" }}
-
 {{ include "dot_config/zsh/.keybinds.sh" }}
 {{ include "dot_config/zsh/.alias.sh" }}
 {{ include "dot_config/zsh/.functions.sh" }}
 {{ include "dot_config/zsh/.options.sh" }}
 {{ include "dot_config/zsh/.env-vars.sh" }}
 
-eval "$(zoxide init --cmd c zsh)"
-source $XDG_CONFIG_HOME/broot/launcher/bash/br
+eval "$(sheldon source)"

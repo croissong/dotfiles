@@ -1,0 +1,48 @@
+shell = "zsh"
+
+[templates]
+defer = { value = 'zsh-defer -p source "{{ file }}"', each = true }
+
+[plugins]
+
+[plugins.starship]
+inline = 'eval $(starship init zsh)'
+
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.zoxide]
+inline = 'zsh-defer -c "eval $(zoxide init --cmd c zsh)"'
+
+[plugins.direnv]
+inline = 'zsh-defer -c "eval $(direnv hook zsh)"'
+
+[plugins.broot]
+inline = 'zsh-defer source $XDG_CONFIG_HOME/broot/launcher/bash/br'
+
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+apply = ["defer"]
+[plugins.fzf-tab-conf]
+inline = """
+export FZF_DEFAULT_COMMAND='fd --type f'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':completion:complete:*:options' sort false
+"""
+
+[plugins.zsh-syntax-highlighting]
+github = "zdharma/fast-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+[plugins.compinit]
+inline = 'autoload -Uz compinit && zsh-defer compinit'
