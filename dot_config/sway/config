@@ -77,7 +77,7 @@ bindsym $mod+Control+Shift+numbersign move workspace to output right
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "swaynag -t warning -m 'Exit?' -b 'Mais oui!' 'swaymsg exit'"
+bindsym $mod+Control+Shift+e exec "swaynag -t warning -m 'Exit?' -b 'Mais oui!' 'swaymsg exit'"
 
 bindsym $mod+Left exec "pamixer --toggle-mute"
 bindsym $mod+Down exec "pamixer --decrease 5"
@@ -91,7 +91,7 @@ bindsym $mod+Shift+Right exec "light -S 100"
 bindsym $mod+Control+e exec "wl-paste | xargs handlr open"
 
 
-bindsym --release Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
+bindsym --release $mod+Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
