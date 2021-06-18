@@ -18,6 +18,13 @@ inline = 'zsh-defer -c "eval $(zoxide init --cmd c zsh)"'
 [plugins.direnv]
 inline = 'zsh-defer -c "eval $(direnv hook zsh)"'
 
+[plugins.mcfly]
+inline = 'zsh-defer -c "eval $(mcfly init zsh)"'
+[plugins.mcfly-conf]
+inline = """
+export MCFLY_FUZZY=true
+"""
+
 [plugins.broot]
 inline = 'zsh-defer source $XDG_CONFIG_HOME/broot/launcher/bash/br'
 

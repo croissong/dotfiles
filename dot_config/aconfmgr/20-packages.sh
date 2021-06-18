@@ -405,6 +405,7 @@ AddPackage --foreign direnv-bin # a shell extension that manages your environmen
 AddPackage starship # The cross-shell prompt for astronauts
 AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
 AddPackage --foreign git-delta-bin # A viewer for git and diff output
+AddPackage --foreign mcfly # Fly through your shell history
 
 # backup
 AddPackage borg # Deduplicating backup program with compression and authenticated encryption
