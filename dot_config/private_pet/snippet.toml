@@ -195,3 +195,13 @@
   description = "crop gif"
   command = "ffmpeg -ss 1 -i yag.gif -t 7 -c copy yag.gif"
   output = ""
+
+[[snippets]]
+  description = "cut awk alternative"
+  command = "choose"
+  output = ""
+
+[[snippets]]
+  description = "parse timestamp"
+  command = "date -d @<nanos>"
+  output = ""
