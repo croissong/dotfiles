@@ -19,7 +19,6 @@ cachedirs:
 - .mozilla/firefox
 - .config/zsh/.zinit
 - .config/GIMP
-- .config/.krew
 - .config/mpv/watch_later
 - .config/doctl/cache
 - .config/libreoffice
