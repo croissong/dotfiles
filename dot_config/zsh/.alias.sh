@@ -1,4 +1,4 @@
-alias ls='exa -gha --group-directories-first'
+alias ls='exa -ga --group-directories-first'
 alias ll='ls -l'
 
 alias cat=bat
