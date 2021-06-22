@@ -30,7 +30,8 @@
 
 (define-mode my-mode ()
   "Dummy mode for the custom key bindings in `*my-keymap*'."
-  ((keymap-scheme (keymap:make-scheme
+  ((visible-in-status-p nil)
+   (keymap-scheme (keymap:make-scheme
                    scheme:emacs *my-keymap*))))
 
 
@@ -88,10 +89,10 @@
 #+end_src
 * Proxy
 #+begin_src lisp
-;; (define-configuration nyxt/proxy-mode:proxy-mode
-;;   ((nyxt/proxy-mode:proxy (make-instance 'proxy
-;;                                          :server-address (quri:uri "http://localhost:8118")
-;;                                          :proxied-downloads-p t))))
+(define-configuration nyxt/proxy-mode:proxy-mode
+  ((nyxt/proxy-mode:proxy (make-instance 'proxy
+                                         :url (quri:uri "http://localhost:8118")
+                                         :proxied-downloads-p t))))
 
 (define-configuration buffer
     ((request-resource-hook (reduce #'hooks:add-hook
