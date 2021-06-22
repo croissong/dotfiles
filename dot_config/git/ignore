@@ -28,4 +28,4 @@ summon.yml
 pyrightconfig.json
 /.envrc
 /.direnv
-/.local
+/.local*

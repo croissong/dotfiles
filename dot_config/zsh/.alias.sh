@@ -6,6 +6,8 @@ alias less=bat
 alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log }
 
+alias rmr='rm -r'
+
 alias find='fd -H'
 alias top=btm
 alias open='handlr open'
