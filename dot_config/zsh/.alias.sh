@@ -30,12 +30,12 @@ alias ec=echo
 alias printer='system-config-printer'
 
 alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
-alias clip='wl-copy'
+alias clip='wl-copy -n'
 alias du='dust -b'
 alias journalctl='journalctl -fxe'
 # todo https://github.com/junegunn/fzf/issues/2028
 alias pass=gopass
-alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass otp -c {})+abort,space:execute(gopass show {})+abort'"
+alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass otp -c {}),space:execute(gopass show {})+abort,alt-#:execute-silent(choose -f / -1 <<< {} | wl-copy -n)'"
 alias ssh='TERM=xterm ssh'
 
 alias pack='arc archive'
