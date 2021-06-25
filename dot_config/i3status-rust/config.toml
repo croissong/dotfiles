@@ -21,8 +21,8 @@ interval = 30
 block = "maildir"
 interval = 60
 inboxes = ["/home/croissong/.local/share/mail/jm@iogroup.org/INBOX"]
-threshold_warning = 1
-threshold_critical = 10
+threshold_warning = 5
+threshold_critical = 10000000
 interval = 60
 display_type = "new"
 
