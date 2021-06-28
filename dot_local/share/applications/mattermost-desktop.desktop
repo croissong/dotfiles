@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Name=Mattermost
+Name=Mattermost Wayland
 Comment=Open source, private cloud Slack-alternative
 StartupWMClass=Mattermost
 Exec=/usr/lib/mattermost/mattermost-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
