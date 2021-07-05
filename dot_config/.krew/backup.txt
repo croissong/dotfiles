@@ -1,5 +1,6 @@
 gs
 mtail
+neat
 sniff
 view-secret
 who-can
