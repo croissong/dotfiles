@@ -101,6 +101,8 @@ awkp() { awk "{print \$${1:-1}}"; }
 b64e() { echo -n $1 | base64 -w0 }
 b64d() { echo -n $1 | base64 -d }
 
+alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.9/bin/promotor'
+
 e() {
     if [ -z "$1" ]; then
         TMP="$(mktemp /tmp/stdin-XXX)"
