@@ -41,7 +41,7 @@ alias ssh='TERM=xterm ssh'
 alias pack='arc archive'
 alias unpack='arc unarchive'
 
-alias paruch='sudo pacman --config ~/.config/pacman/chaotic-aur.conf -Syu'
+alias paruch='paru --config ~/.config/pacman/chaotic-aur.conf'
 
 alias t=tab
 
