@@ -1,8 +1,8 @@
 # muttrc file for account jm@iogroup.org
 set realname = "Jan Möller"
 set from = "jm@datawerk.de"
-set sendmail = "msmtp -a jm@iogroup.org"
-alias me Jan Möller <jm@datawerk.de>
+set sendmail = "msmtp -a jm@datawerk.com"
+alias me Jan Möller <jm@datawerk.com>
 set folder = "/home/croissong/.local/share/mail/jm@iogroup.org"
 set header_cache = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/headers
 set message_cachedir = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/bodies

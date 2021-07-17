@@ -1,0 +1,11 @@
+account jm@datawerk.com
+host smtp.office365.com
+port 587
+from jm@datawerk.de
+user jm@datawerk.com
+passwordeval "pass wrk/jm@datawerk.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/croissong/.config/msmtp/msmtp.log
+
