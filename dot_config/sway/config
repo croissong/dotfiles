@@ -5,7 +5,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 set $menu yofi
-set $term alacritty
+set $term wezterm
 
 bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
