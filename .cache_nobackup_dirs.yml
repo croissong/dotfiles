@@ -17,7 +17,6 @@ cachedirs:
 - .config/emacs/.cache
 - .config/Mattermost
 - .mozilla/firefox
-- .config/zsh/.zinit
 - .config/GIMP
 - .config/mpv/watch_later
 - .config/doctl/cache
