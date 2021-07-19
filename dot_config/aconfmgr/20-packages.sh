@@ -459,6 +459,10 @@ AddPackage --foreign bato # Small program to send battery notifications
 AddPackage --foreign wlsunset # Day/night gamma adjustments for Wayland compositors
 AddPackage --foreign yofi-git # Minimalistic menu for Wayland-based compositors
 
+AddPackage xdg-user-dirs # Manage user directories like ~/Desktop and ~/Music
+CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
+
+
 
 
 #
