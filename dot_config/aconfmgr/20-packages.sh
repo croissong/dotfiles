@@ -11,7 +11,6 @@ AddPackage ansible # Official assortment of Ansible collections
 AddPackage ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
 AddPackage arp-scan # A tool that uses ARP to discover and fingerprint IP hosts on the local network
 AddPackage aspell-en # English dictionary for aspell
-AddPackage audacity # A program that lets you manipulate digital audio waveforms
 AddPackage autoconf # A GNU tool for automatically configuring source code
 AddPackage automake # A GNU tool for automatically creating Makefiles
 AddPackage base # Minimal package set to define a basic Arch Linux installation
@@ -55,7 +54,6 @@ AddPackage findutils # GNU utilities to locate files
 AddPackage flake8 # The modular source code checker
 AddPackage flex # A tool for generating text-scanning programs
 AddPackage fwupd # Simple daemon to allow session software to update firmware
-AddPackage gammastep # Adjust the color temperature of your screen according to your surroundings.
 AddPackage gawk # GNU version of awk
 AddPackage gcc # The GNU Compiler Collection - C and C++ frontends
 AddPackage gcc-libs # Runtime libraries shipped by GCC
@@ -361,7 +359,6 @@ AddPackage --foreign ttf-ubraille # Unicode Braillt font
 AddPackage --foreign usql # A universal command-line interface for SQL databases
 AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland session
 AddPackage --foreign xsv-bin # CSV command line toolkit written in Rust
-AddPackage --foreign yofi-bin # Minimalistic menu for Wayland-based compositors
 AddPackage --foreign zoiper # a SIP and IAX2 VoIP softphone
 AddPackage --foreign zoxide-bin # A fast cd command that learns your habits (binary release)
 
@@ -396,16 +393,26 @@ AddPackage --foreign slack-desktop # Slack Desktop (Beta) for Linux
 AddPackage --foreign ungoogled-chromium # A lightweight approach to removing Google web service dependency
 AddPackage --foreign zoom # Video Conferencing and Web Conferencing Service
 
+
+
+#
 # shell
+#
+
 AddPackage fzf # Command-line fuzzy finder
 AddPackage --foreign direnv-bin # a shell extension that manages your environment
 AddPackage starship # The cross-shell prompt for astronauts
 AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
 AddPackage --foreign git-delta-bin # A viewer for git and diff output
 AddPackage --foreign mcfly # Fly through your shell history
-AddPackage wezterm # A GPU-accelerated cross-platform terminal emulator and multiplexer
+AddPackage --foreign wezterm-nightly-bin # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 
+
+
+#
 # backup
+#
+
 AddPackage borg # Deduplicating backup program with compression and authenticated encryption
 AddPackage borgmatic # Simple, configuration-driven backup software for servers and workstations
 AddPackage snapper # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
@@ -414,7 +421,11 @@ AddPackage snapper # A tool for managing BTRFS and LVM snapshots. It can create,
 # For emacs-gif-screencast
 AddPackage gifsicle # A powerful command-line program for creating, editing, manipulating and getting information about GIF images and animations
 
+
+
+#
 # CLIs
+#
 
 AddPackage imv # Image viewer for Wayland and X11
 AddPackage khard # Console CardDAV client
@@ -427,8 +438,14 @@ AddPackage --foreign cheat # Allows you to create and view interactive cheatshee
 AddPackage --foreign choose # A human-friendly and fast alternative to cut and (sometimes) awk
 AddPackage --foreign slides-bin # Terminal based presentation tool
 AddPackage --foreign webex-bin # Webex for Linux
+AddPackage --foreign matterhorn-bin # A terminal-based chat client for MatterMost
 
+
+
+#
 # System
+#
+
 AddPackage --foreign mako-git # Lightweight notification daemon for Wayland
 AddPackage upower # Abstraction for enumerating power devices, listening to device events and querying history and statistics
 AddPackage i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
@@ -439,9 +456,15 @@ AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pac
 AddPackage --foreign dashbinsh # Relink /bin/sh to dash
 AddPackage --foreign downgrade # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage --foreign bato # Small program to send battery notifications
+AddPackage --foreign wlsunset # Day/night gamma adjustments for Wayland compositors
+AddPackage --foreign yofi-git # Minimalistic menu for Wayland-based compositors
 
 
+
+#
 # Dev
+#
+
 AddPackage prometheus # An open-source systems monitoring and alerting toolkit
 AddPackage pyright # Type checker for the Python language
 AddPackage redis # An in-memory database that persists on disk
@@ -471,6 +494,7 @@ AddPackage --foreign tor-browser # Tor Browser Bundle
 
 AddPackage --foreign tizonia-all # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
 AddPackage --foreign python-spotipy # A light weight Python library for the Spotify Web API
+AddPackage --foreign tenacity-git # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
 
 
 # Not sure
