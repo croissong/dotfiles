@@ -85,7 +85,6 @@ AddPackage gzip # GNU compression utility
 AddPackage helm # The Kubernetes Package Manager
 AddPackage hey # HTTP load generator
 AddPackage hplip # Drivers for HP DeskJet, OfficeJet, Photosmart, Business Inkjet and some LaserJet
-AddPackage hsetroot # Tool which allows you to compose wallpapers ("root pixmaps") for X. Fork by Hyriand
 AddPackage httpie # cURL for humans
 AddPackage inetutils # A collection of common network programs
 AddPackage inkscape # Professional vector graphics editor
