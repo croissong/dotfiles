@@ -38,6 +38,8 @@ alias pass=gopass
 alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass -c {}),alt-#:execute-silent(gopass otp -c {})+abort,space:execute(gopass show {})+abort,alt-+:execute-silent(choose -f / -1 <<< {} | wl-copy -n)'"
 alias ssh='TERM=xterm ssh'
 
+alias ag='angle-grinder -o json'
+
 alias pack='arc archive'
 alias unpack='arc unarchive'
 
