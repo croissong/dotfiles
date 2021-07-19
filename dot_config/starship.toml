@@ -19,14 +19,6 @@ style = "yellow"
 format = "[$duration]($style) "
 style = "dimmed white"
 
-[custom.tab]
-description = "The current tab in the tab terminal multiplexer"
-command = "tab --starship"
-when = "tab --starship"
-shell = ["sh"]
-format = "[$output]($style) "
-style = "bold blue"
-
 [username]
 disabled = true
 [kubernetes]

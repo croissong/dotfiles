@@ -354,7 +354,6 @@ AddPackage --foreign python-soundcloud-git # A Python wrapper around the Soundcl
 AddPackage --foreign rtags # A client/server application that indexes C/C++ code
 AddPackage --foreign sad # Space Age seD
 AddPackage --foreign svgo # Tool for optimizing SVG files
-AddPackage --foreign tab-rs-bin # The intuitive config-driven terminal multiplexer
 AddPackage --foreign teams # Microsoft Teams for Linux is your chat-centered workspace in Office 365
 AddPackage --foreign telepresence # Local development against a remote Kubernetes or OpenShift cluster
 
