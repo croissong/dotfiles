@@ -52,19 +52,19 @@ alias lock='physlock -ds'
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
 
 alias kc=kubectl
-alias kcd='kubectl config set-context $(kubectl config current-context) --namespace'
-alias kctx='kubectl config use-context'
-alias kctxrm='kubectl config delete-context'
-alias kctxmv='kubectl config rename-context'
-alias kcg='kubectl neat get -o yaml'
-alias kcdsc='kubectl describe'
-alias kcroll='kubectl rollout restart'
-alias kcl='kubectl logs --all-containers --timestamps -f --tail 1000'
-alias kcx='kubectl exec -ti'
-alias kcfwd='kubectl port-forward'
-alias kcw='kubectl get po -w -owide'
-alias kcgs='kubectl get -owide --sort-by=.metadata.creationTimestamp'
-alias kcrollall="kc get deploy --no-headers -ocustom-columns='name:{.metadata.name}' | xargs -I{} kubectl rollout restart deploy {}"
+alias kcf=kubectl-fuzzy
+alias kcd='kc config set-context $(kubectl config current-context) --namespace'
+alias kctx='kc config use-context'
+alias kctxrm='kc config delete-context'
+alias kctxmv='kc config rename-context'
+alias kcg='kc neat get -o yaml'
+alias kcdsc='kcf describe'
+alias kcroll='kc rollout restart'
+alias kcl="kcf logs -f --tail 100 | jq"
+alias kcx='kcf exec -ti'
+alias kcfwd='kc port-forward'
+alias kcw='kcf get po -w -owide'
+alias kcgs='kc get -owide --sort-by=.metadata.creationTimestamp'
 
 alias tw='task'
 alias twa='task add'
