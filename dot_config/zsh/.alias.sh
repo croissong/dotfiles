@@ -23,7 +23,7 @@ alias m=neomutt
 alias mr='neomutt -R'
 alias ms='mailsync'
 
-alias chezmoi='chezmoi -vr'
+alias cm='chezmoi -vr'
 
 alias ec=echo
 
@@ -83,9 +83,12 @@ alias volg='pamixer --get-volume-human'
 
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'
+alias mvntree='mvn dependency:tree | tee > /tmp/tree.txt'
+alias mvnpom='mvn help:effective-pom | tee /tmp/pom.xml'
 
 alias lightkbd='light -s sysfs/leds/tpacpi::kbd_backlight'
 
+alias curl=curlie
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
 alias cal='khal'
