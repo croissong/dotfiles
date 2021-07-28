@@ -25,6 +25,17 @@ local keys = {
    {key="s", mods="CTRL", action=wezterm.action{Search={CaseInSensitiveString=""}}},
 
    {key="q", mods="CTRL", action="ShowLauncher"},
+   {key="w", mods="CTRL|ALT", action="ShowTabNavigator"},
+
+   {key="2", mods="CTRL", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+   {key="3", mods="CTRL", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+   {key="q", mods="CTRL|ALT", action=wezterm.action{CloseCurrentPane={confirm=true}}},
+   {key="#", mods="CTRL|ALT", action=wezterm.action{ActivatePaneDirection="Right"}},
+   {key="ö", mods="CTRL|ALT", action=wezterm.action{ActivatePaneDirection="Left"}},
+   {key="ü", mods="CTRL|ALT", action=wezterm.action{ActivatePaneDirection="Up"}},
+   {key="ä", mods="CTRL|ALT", action=wezterm.action{ActivatePaneDirection="Down"}},
+
+   {key="+", mods="CTRL", action="IncreaseFontSize"},
 }
 
 for i = 1, 8 do
