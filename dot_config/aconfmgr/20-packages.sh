@@ -4,7 +4,6 @@
 
 AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
 AddPackage acpid # A daemon for delivering ACPI power management events with netlink support
-AddPackage alacritty # A cross-platform, GPU-accelerated terminal emulator
 AddPackage alsa-tools # Advanced tools for certain sound cards
 AddPackage alsa-utils # Advanced Linux Sound Architecture - Utilities
 AddPackage ansible # Official assortment of Ansible collections
@@ -16,7 +15,6 @@ AddPackage automake # A GNU tool for automatically creating Makefiles
 AddPackage base # Minimal package set to define a basic Arch Linux installation
 AddPackage bash # The GNU Bourne Again shell
 AddPackage bat # Cat clone with syntax highlighting and git integration
-AddPackage bind # A complete, highly portable implementation of the DNS protocol
 AddPackage binutils # A set of programs to assemble and manipulate binary and object files
 AddPackage bison # The GNU general-purpose parser generator
 AddPackage blueman # GTK+ Bluetooth Manager
@@ -404,7 +402,7 @@ AddPackage starship # The cross-shell prompt for astronauts
 AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
 AddPackage --foreign git-delta-bin # A viewer for git and diff output
 AddPackage --foreign mcfly # Fly through your shell history
-AddPackage --foreign wezterm-nightly-bin # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+AddPackage --foreign wezterm-git # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 
 
 
@@ -438,6 +436,7 @@ AddPackage --foreign choose # A human-friendly and fast alternative to cut and (
 AddPackage --foreign slides-bin # Terminal based presentation tool
 AddPackage --foreign webex-bin # Webex for Linux
 AddPackage --foreign matterhorn-bin # A terminal-based chat client for MatterMost
+AddPackage --foreign diffsitter-bin # A tree-sitter based AST difftool to get meaningful semantic diffs
 
 
 
@@ -485,6 +484,8 @@ AddPackage argocd # Declarative continuous deployment for Kubernetes
 AddPackage dog # Command-line DNS client like dig
 AddPackage gpg-tui # A terminal user interface for GnuPG
 AddPackage --foreign kubeval-bin # Tool for validating Kubernetes YAML or JSON configuration files
+AddPackage --foreign mongodb-shell # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
+
 
 #
 # Stuff
@@ -498,6 +499,7 @@ AddPackage --foreign tor-browser # Tor Browser Bundle
 AddPackage --foreign tizonia-all # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
 AddPackage --foreign python-spotipy # A light weight Python library for the Spotify Web API
 AddPackage --foreign tenacity-git # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
+AddPackage --foreign ventoy-bin # A new multiboot USB solution (Binary)
 
 
 # Not sure
