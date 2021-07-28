@@ -23,6 +23,8 @@ local keys = {
    {key="r", mods="CTRL|ALT", action="ReloadConfiguration"},
 
    {key="s", mods="CTRL", action=wezterm.action{Search={CaseInSensitiveString=""}}},
+
+   {key="q", mods="CTRL", action="ShowLauncher"},
 }
 
 for i = 1, 8 do
