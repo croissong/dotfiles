@@ -51,20 +51,46 @@ alias lock='physlock -ds'
 
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
 
+
+
+#
+# Kubectl
+#
+
 alias kc=kubectl
 alias kcf=kubectl-fuzzy
-alias kcd='kc config set-context $(kubectl config current-context) --namespace'
+
 alias kctx='kc config use-context'
+alias kcn='kc config set-context $(kubectl config current-context) --namespace'
 alias kctxrm='kc config delete-context'
 alias kctxmv='kc config rename-context'
+
+alias kck='kc delete'
+alias kckf='kcf delete'
+
 alias kcg='kc neat get -o yaml'
-alias kcdsc='kcf describe'
+alias kcgr='kc get -o yaml'
+
+alias kcd='kc describe'
+alias kcdf='kcf describe'
+
 alias kcroll='kc rollout restart'
-alias kcl="kcf logs -f --tail 100 | jq"
+
+alias kcl="kc logs -f --tail 100 | jq"
+alias kclr="kc logs -f --tail 100"
+alias kclf="kcf logs -f --tail 100 | jq"
+
 alias kcx='kcf exec -ti'
+alias kcxf='kcf exec -ti'
+
 alias kcfwd='kc port-forward'
-alias kcw='kcf get po -w -owide'
+alias kcw='kc get po -w -owide'
 alias kcgs='kc get -owide --sort-by=.metadata.creationTimestamp'
+
+
+#
+#
+#
 
 alias tw='task'
 alias twa='task add'
@@ -92,8 +118,8 @@ alias curl=curlie
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
 alias cal='khal'
-alias call='khal list'
-alias cala='khal calendar'
+alias call='cal list'
+alias cala='cal calendar'
 alias cali='ikhal'
 
 alias aconfmgr='aconfmgr --skip-checksums --aur-helper paru'
