@@ -23,6 +23,8 @@ inline = 'zsh-defer -c "eval $(mcfly init zsh)"'
 [plugins.mcfly-conf]
 inline = """
 export MCFLY_FUZZY=true
+export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_RESULTS_SORT=LAST_RUN
 """
 
 [plugins.broot]
