@@ -77,7 +77,7 @@ alias kcdf='kcf describe'
 alias kcroll='kc rollout restart'
 
 alias kcl="kc logs -f --tail 100 | jq"
-alias kclr="kc logs -f --tail 100"
+alias kclr="kc logs -f --tail 100 --all-containers"
 alias kclf="kcf logs -f --tail 100 | jq"
 
 alias kcx='kcf exec -ti'
@@ -111,6 +111,7 @@ alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'
 alias mvntree='mvn dependency:tree | tee > /tmp/tree.txt'
 alias mvnpom='mvn help:effective-pom | tee /tmp/pom.xml'
+alias mvnupdate='mvn versions:dependency-updates-report -DprocessDependencyManagementTransitive=false && chromium target/site/dependency-updates-report.html'
 
 alias lightkbd='light -s sysfs/leds/tpacpi::kbd_backlight'
 
