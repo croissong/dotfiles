@@ -79,6 +79,7 @@ alias kcroll='kc rollout restart'
 alias kcl="kc logs -f --tail 100 | jq"
 alias kclr="kc logs -f --tail 100 --all-containers"
 alias kclf="kcf logs -f --tail 100 | jq"
+alias kclt="kc tail --current-ns"
 
 alias kcx='kcf exec -ti'
 alias kcxf='kcf exec -ti'
