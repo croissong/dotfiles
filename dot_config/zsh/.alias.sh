@@ -81,7 +81,7 @@ alias kclr="kc logs -f --tail 100 --all-containers"
 alias kclf="kcf logs -f --tail 100 | jq"
 alias kclt="kc tail --current-ns"
 
-alias kcx='kcf exec -ti'
+alias kcx='kc exec -ti'
 alias kcxf='kcf exec -ti'
 
 alias kcfwd='kc port-forward'
