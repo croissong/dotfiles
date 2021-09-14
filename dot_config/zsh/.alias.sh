@@ -6,7 +6,7 @@ alias less=bat
 alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log }
 
-alias rmr='rm -r'
+alias rm='garbage put'
 
 alias find='fd -H'
 alias top=btm
@@ -22,6 +22,8 @@ alias diff=delta
 alias m=neomutt
 alias mr='neomutt -R'
 alias ms='mailsync'
+alias watch='viddy'
+alias sys=sysz
 
 alias cm='chezmoi -vr'
 
@@ -76,8 +78,7 @@ alias kcdf='kcf describe'
 
 alias kcroll='kc rollout restart'
 
-alias kcl="kc logs -f --tail 100 | jq"
-alias kclr="kc logs -f --tail 100 --all-containers"
+alias kcl="kc logs -f --tail 100 --all-containers"
 alias kclf="kcf logs -f --tail 100 | jq"
 alias kclt="kc tail --current-ns"
 
@@ -85,7 +86,7 @@ alias kcx='kc exec -ti'
 alias kcxf='kcf exec -ti'
 
 alias kcfwd='kc port-forward'
-alias kcw='kc get po -w -owide'
+alias kcw='kc get po -w -owide | rg'
 alias kcgs='kc get -owide --sort-by=.metadata.creationTimestamp'
 
 
@@ -128,6 +129,8 @@ alias aconfmgr='aconfmgr --skip-checksums --aur-helper paru'
 alias parus="paru -Slq | fzf --multi --preview 'paru -Si {1}' | clip"
 
 alias pacdiff='sudo -E pacdiff'
+
+alias emacsmin='emacs -q --load ~/.config/emacs/init-minimal.el'
 
 awkp() { awk "{print \$${1:-1}}"; }
 
