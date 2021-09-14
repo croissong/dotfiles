@@ -63,6 +63,8 @@ disabled = true
 disabled = true
 [rust]
 disabled = true
+[lua]
+disabled = true
 [golang]
 disabled = true
 [status]
