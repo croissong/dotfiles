@@ -1,0 +1,3 @@
+[general]
+shell = "zsh"
+shell_options = "--login"
