@@ -24,6 +24,8 @@ cachedirs:
 - .config/Microsoft/Microsoft Teams
 - .config/streamlink-twitch-gui
 - .config/.cache
+- .config/obs-studio/profiler_data
+- .config/obs-studio/logs
 - .eclipse
 - .tor-browser
 - GPUCache

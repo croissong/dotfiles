@@ -1,11 +1,15 @@
 #!/bin/bash
 
-echo '{{ include ".cache_nobackup_dirs.yml" }}' \
+read -r -d '' BACKUP_DIRS << EOM
+{{ include "nobackup_dirs.yml"}}
+EOM
+
+echo "$BACKUP_DIRS" \
     | dasel select -p yaml cachedirs \
     | sd '\-\s+' '' \
     | xargs -I{} sh -c 'echo "Signature: 8a477f597d28d172789f06886806bc55" > ~/$1/CACHEDIR.TAG' -- {}
 
-echo '{{ include ".cache_nobackup_dirs.yml" }}' \
+echo "$BACKUP_DIRS" \
     | dasel select -p yaml nobackup \
     | sd '\-\s+' '' \
     | xargs -I{} touch ~/{}/.nobackup
