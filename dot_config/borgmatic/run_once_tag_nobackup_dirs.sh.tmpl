@@ -1,7 +1,7 @@
 #!/bin/bash
 
 read -r -d '' BACKUP_DIRS << EOM
-{{ include "nobackup_dirs.yml"}}
+{{ include "dot_config/borgmatic/nobackup_dirs.yml"}}
 EOM
 
 echo "$BACKUP_DIRS" \

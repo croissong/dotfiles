@@ -9,10 +9,17 @@ location:
     - '*/node_modules/'
     - '*/tmp/'
     - '*/scratch/'
+    - '*/.git/modules/'
 
   exclude_caches: true
   exclude_if_present:
     - .nobackup
+  exclude_from:
+    - /tmp/excludes.txt
+
+hooks:
+  before_backup:
+    - /home/croissong/Dotfiles/dot_config/borgmatic/excludes.sh
 
 retention:
     # Retention policy for how many backups to keep.

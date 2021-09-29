@@ -5,3 +5,4 @@ Readme.md
 .config/nyxt/init.org
 /tf/
 todo.*
+.config/borgmatic/excludes.sh

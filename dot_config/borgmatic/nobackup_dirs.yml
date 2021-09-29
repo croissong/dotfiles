@@ -15,8 +15,8 @@ cachedirs:
 - .config/emacs/straight
 - .config/emacs/eln-cache
 - .config/emacs/.cache
+- .config/emacs/workspace/.plugins
 - .config/Mattermost
-- .mozilla/firefox
 - .config/GIMP
 - .config/mpv/watch_later
 - .config/doctl/cache
@@ -26,11 +26,15 @@ cachedirs:
 - .config/.cache
 - .config/obs-studio/profiler_data
 - .config/obs-studio/logs
+- .config/JetBrains
 - .eclipse
+- .mozilla/firefox
 - .tor-browser
 - GPUCache
 - .zoom
+- .java
 
 nobackup:
 - Downloads
 - code/golang
+- Docs/blob
