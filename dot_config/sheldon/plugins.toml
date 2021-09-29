@@ -53,5 +53,8 @@ github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
+[plugins.kubeswitch]
+inline = 'zsh-defer source $HOME/.local/bin/switch.sh'
+
 [plugins.compinit]
 inline = 'autoload -Uz compinit && zsh-defer compinit'
