@@ -63,7 +63,7 @@ alias kc=kubectl
 alias kcf=kubectl-fuzzy
 
 alias kctx='switch'
-alias kcn='kc config set-context $(kubectl config current-context) --namespace'
+alias kcn='kubectl ns'
 alias kctxrm='kc config delete-context'
 alias kctxmv='kc config rename-context'
 
