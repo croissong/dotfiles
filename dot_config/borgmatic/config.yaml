@@ -1,6 +1,7 @@
 location:
   source_directories:
   - /home/croissong
+  - /etc
   repositories:
   - /tmp/local.borg
 
@@ -10,6 +11,7 @@ location:
     - '*/tmp/'
     - '*/scratch/'
     - '*/.git/modules/'
+    - '*/.mypy_cache/'
 
   exclude_caches: true
   exclude_if_present:

@@ -1,40 +1,47 @@
 cachedirs:
+- .azure
 - .cache
 - .cargo
+- .conan
+- .config/autostart
+- .config/ansible/roles/
+- .config/.cache
+- .config/GIMP
+- .config/JetBrains
+- .config/Mattermost
+- .config/Microsoft/Microsoft Teams
+- .config/Slack
+- .config/chromium
+- .config/discord
+- .config/doctl/cache
+- .config/emacs/.cache
+- .config/emacs/eln-cache
+- .config/emacs/straight
+- .config/emacs/workspace
+- .config/Keybase/Cache
+- .config/libreoffice
+- .config/mpv/watch_later
+- .config/obs-studio/logs
+- .config/obs-studio/profiler_data
+- .config/streamlink-twitch-gui
+- .eclipse
+- .gem
+- .gradle
+- .java
+- .kube
 - .local
 - .m2
-- .npm
-- .kube
-- .rustup
-- .yarn
-- .gem
-- .node_modules
-- .config/chromium
-- .config/Slack
-- .config/discord
-- .config/emacs/straight
-- .config/emacs/eln-cache
-- .config/emacs/.cache
-- .config/emacs/workspace/.plugins
-- .config/Mattermost
-- .config/GIMP
-- .config/mpv/watch_later
-- .config/doctl/cache
-- .config/libreoffice
-- .config/Microsoft/Microsoft Teams
-- .config/streamlink-twitch-gui
-- .config/.cache
-- .config/obs-studio/profiler_data
-- .config/obs-studio/logs
-- .config/JetBrains
-- .eclipse
 - .mozilla/firefox
+- .node_modules
+- .npm
+- .rustup
+- .slime
 - .tor-browser
-- GPUCache
+- .yarn
 - .zoom
-- .java
+- GPUCache
 
 nobackup:
 - Downloads
 - code/golang
-- Docs/blob
+# - Docs/blob

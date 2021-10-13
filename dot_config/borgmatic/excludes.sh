@@ -4,13 +4,13 @@
 rm -f /tmp/excludes.txt
 
 # https://github.com/borgbackup/borg/issues/641
-fd -H '\.gitignore' ~/code \
+fd -H '\.gitignore' /home/croissong/code \
    -E 'golang' \
    -E 'tmp' \
-   -x rg --color=never '^/?([^\s#].*)$' -r {//}'/$1' {} \
+   -x rg --color=never '^/?([^\s#].*)$' -r {//}'/*$1' {} \
    > /tmp/excludes.txt
 
-fd -H '\.gitmodules' ~/code \
+fd -H '\.gitmodules' /home/croissong/code \
    -E 'golang' \
    -E 'tmp' \
    -x bash -c 'git config --file {} --get-regexp path | choose 1 | rg --color=never "(.*)" -r {//}/\$1' \
