@@ -1,3 +1,7 @@
 AddKeysToAgent yes
 UserKnownHostsFile ~/.ssh/known_hosts
 Include ~/.ssh/hosts
+
+# PubkeyAcceptedKeyTypes ssh-rsa-cert-v01@openssh.com,ssh-rsa
+# PreferredAuthentications keyboard-interactive,password,publickey,hostbased,gssapi-with-mic
+# ServerAliveInterval=60
