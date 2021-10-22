@@ -31,6 +31,7 @@ cachedirs:
 - .kube
 - .local
 - .m2
+- .mcfly
 - .mozilla/firefox
 - .node_modules
 - .npm
