@@ -65,6 +65,6 @@ x-scheme-handler/chrome=nyxt.desktop;
 x-scheme-handler/discord-418794856081653760=discord-418794856081653760.desktop;
 x-scheme-handler/ftp=nyxt.desktop;
 x-scheme-handler/http=nyxt.desktop;
-x-scheme-handler/https=nyxt.desktop;mpv.desktop;emacsclient.desktop;chromium.desktop;
+x-scheme-handler/https=chromium.desktop;nyxt.desktop;mpv.desktop;emacsclient.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
 x-scheme-handler/msteams=teams.desktop;
