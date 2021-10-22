@@ -1,3 +1,0 @@
-kind: SwitchConfig
-version: v1alpha1
-kubeconfigName: "config"
