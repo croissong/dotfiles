@@ -1,0 +1,39 @@
+# https://torsion.org/borgmatic/docs/reference/configuration/
+
+location:
+  source_directories:
+  - /home/croissong
+  - /etc
+  repositories:
+  - {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).borgmatic.repo }}
+
+  exclude_patterns:
+    - '*.pyc'
+    - '*/node_modules/'
+    - '*/tmp/'
+    - '*/scratch/'
+    - '*/.git/modules/'
+    - '*/.mypy_cache/'
+
+  exclude_caches: true
+  exclude_if_present:
+    - .nobackup
+  exclude_from:
+    - /tmp/excludes.txt
+  one_file_system: true
+
+hooks:
+  before_backup:
+    - /home/croissong/Dotfiles/dot_config/borgmatic/excludes.sh
+
+storage:
+  compression: auto,zstd
+  encryption_passphrase: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).borgmatic.passphrase }}
+  archive_name_format: '{hostname}-{now}'
+
+retention:
+  # Retention policy for how many backups to keep.
+  keep_daily: 3
+  keep_weekly: 4
+  keep_monthly: 12
+  prefix: '{hostname}-'

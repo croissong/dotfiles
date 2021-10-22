@@ -1,7 +1,8 @@
 pkglist.txt
 misc/
 secrets.yml
-Readme.md
+/**/Readme.md
+/**/Readme.org
 .config/nyxt/init.org
 /tf/
 todo.*
