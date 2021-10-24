@@ -26,9 +26,9 @@ wezterm.on("copy-cmd", function(window, pane)
 	local scrollback = pane:get_lines_as_text()
 	string_after_prompt = string.match(scrollback, ".*❯ (.*)")
 	cmd = string_after_prompt:gsub("\n", "")
-  proc = io.popen("wl-copy -n", "w")
-  proc:write(cmd)
-  proc:close()
+	proc = io.popen("wl-copy -n", "w")
+	proc:write(cmd)
+	proc:close()
 end)
 
 ---
