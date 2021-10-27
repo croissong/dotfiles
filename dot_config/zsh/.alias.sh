@@ -76,6 +76,7 @@ alias kcgr='kc get -o yaml'
 alias kcd='kc describe'
 alias kcdf='kcf describe'
 
+alias kce='kc edit'
 alias kcroll='kc rollout restart'
 
 alias kcl="kc logs -f --tail 100 --all-containers"
