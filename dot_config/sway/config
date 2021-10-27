@@ -91,7 +91,7 @@ bindsym $mod+Shift+Right exec "light -S 100"
 bindsym $mod+Control+e exec "wl-paste | xargs handlr open"
 
 
-bindsym --release $mod+Print exec grim -g \"$(slurp; sleep 3)" - | swappy -f -
+bindsym --release $mod+Print "exec grim -g \"$(slurp; sleep 3)\" - | swappy -f -"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
