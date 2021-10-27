@@ -1,1 +1,1 @@
-only = ["krew", "sheldon", "cargo", "rustup"]
+only = ["krew", "sheldon", "cargo", "rustup", "chezmoi"]
