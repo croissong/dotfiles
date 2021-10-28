@@ -2,7 +2,7 @@
 #+begin_src shell
 # borg init -e repokey-blake2 <repo.borgbase.com>
 
-sudo borgmatic -c /home/croissong/.config/borgmatic/config.yaml --verbosity 1 --files \
+sudo -E borgmatic --verbosity 1 --files \
     | rg -v \
          -e .git/ \
     | tee >(ansi2txt >/tmp/borgmatic.txt)
