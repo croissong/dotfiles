@@ -1,0 +1,4 @@
+- https://github.com/Eisa01/mpv-scripts#smarthistory-script
+- https://github.com/occivink/mpv-scripts#seek-tolua
+  input.conf -> `Shift+Ctrl+S script-binding toggle-seeker`
+- https://github.com/cvzi/mpv-youtube-upnext
