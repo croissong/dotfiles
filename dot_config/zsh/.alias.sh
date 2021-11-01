@@ -25,6 +25,7 @@ alias mr='neomutt -R'
 alias ms='mailsync'
 alias watch='viddy'
 alias sys=sysz
+alias gpgt=gpg-tui
 
 alias cm='chezmoi -vr'
 
