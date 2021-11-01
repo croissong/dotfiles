@@ -1,5 +1,6 @@
 alias ls='exa -ga --group-directories-first'
 alias ll='ls -l'
+alias l='xplr'
 
 alias cat=bat
 alias less=bat
@@ -119,6 +120,7 @@ alias mvnupdate='mvn versions:dependency-updates-report -DprocessDependencyManag
 alias lightkbd='light -s sysfs/leds/tpacpi::kbd_backlight'
 
 alias curl=curlie
+alias curll='/usr/bin/curl'
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
 alias cal='khal'
