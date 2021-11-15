@@ -41,7 +41,7 @@ zstyle ':completion:complete:*:options' sort false
 """
 
 [plugins.zsh-syntax-highlighting]
-github = "zdharma/fast-syntax-highlighting"
+github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]
 
 [plugins.zsh-completions]
