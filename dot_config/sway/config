@@ -170,6 +170,7 @@ hide_edge_borders --i3 both
 
 
 for_window [title="^chrome-extension.*is sharing your screen.$"] floating enable
+for_window [app_id="pinentry-qt"] floating enable
 
 # Required to get e.g. wl-clipboard wayland connection working in emacs on system start (without having to restart the emacs daemon)
 # Used in conjunction with 'exec-path-from-shell' in emacs
