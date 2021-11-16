@@ -1,6 +1,10 @@
+access-matrix
+deprecations
 fuzzy
 gs
+lineage
 neat
+ns
 sniff
 tail
 view-secret

@@ -7,3 +7,4 @@ secrets.yml
 /tf/
 todo.*
 .config/borgmatic/excludes.sh
+/krew/backup.txt
