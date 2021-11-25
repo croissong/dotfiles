@@ -147,10 +147,10 @@ e() {
     if [ -z "$1" ]; then
         TMP="$(mktemp /tmp/stdin-XXX)"
         cat >$TMP
-        emacsclient $TMP
+        emacsclient -n $TMP
         rm $TMP
     else
-        emacsclient "$@"
+        emacsclient -n "$@"
     fi
 }
 
