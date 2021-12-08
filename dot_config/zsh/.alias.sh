@@ -7,7 +7,8 @@ alias less=bat
 alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log }
 
-alias rm='garbage put'
+alias rm='echo "Use trash-put or \rm"; false'
+alias rmt='echo "Use rmt or \rm"; false'
 
 alias find='fd -H'
 alias top=btm
