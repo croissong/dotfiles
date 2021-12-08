@@ -1,0 +1,22 @@
+# Special built-in mail store.
+
+[Data Source]
+DisplayName=Search Folders
+Enabled=true
+Parent=
+
+[Mail Account]
+BackendName=vfolder
+IdentityUid=self
+ArchiveFolder=
+NeedsInitialSetup=false
+MarkSeen=inconsistent
+MarkSeenTimeout=1500
+
+[Vfolder Backend]
+FilterInbox=true
+StoreChangesInterval=3
+
+[Refresh]
+Enabled=true
+IntervalMinutes=60

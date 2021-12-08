@@ -1,0 +1,24 @@
+
+[Data Source]
+DisplayName=Birthdays & Anniversaries
+Enabled=true
+Parent=contacts-stub
+
+[Calendar]
+BackendName=contacts
+Color=#fed4d3
+Enabled=true
+Writable=false
+Selected=true
+Order=0
+
+[Alarms]
+IncludeMe=false
+LastNotified=
+
+[Offline]
+StaySynchronized=true
+
+[Refresh]
+Enabled=true
+IntervalMinutes=30
