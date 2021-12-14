@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+commitlint --config ~/.config/commitlint/commitlintrc.yml --edit -- "$@"

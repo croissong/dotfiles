@@ -1,0 +1,2 @@
+extends:
+  - '/home/croissong/.node_modules/lib/node_modules/@commitlint/config-conventional/'
