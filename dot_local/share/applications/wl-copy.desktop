@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=wl-copy
+MimeType=text/plain
+Exec=wl-copy -n
+Type=Application
+Terminal=false
+Categories=Development
