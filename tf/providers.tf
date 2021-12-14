@@ -1,23 +1,22 @@
 terraform {
   required_providers {
     outlook = {
-      source = "magodo/outlook"
+      source  = "magodo/outlook"
+      version = "0.0.4"
     }
 
     google = {
       source  = "hashicorp/google"
-      version = "3.65.0"
+      version = "4.4.0"
     }
   }
+
+  required_version = ">= 1.1.0"
 }
+
 
 provider "outlook" {}
 
-variable "google_access_token" {
-  type      = string
-  sensitive = true
-}
 
-provider "google" {
-  access_token = var.google_access_token
-}
+
+provider "google" {}
