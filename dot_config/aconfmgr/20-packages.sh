@@ -29,11 +29,9 @@ AddPackage coreutils              # The basic file, shell and text manipulation 
 AddPackage croc                   # Easily and securely send things from one computer to another.
 AddPackage cryptsetup             # Userspace setup tool for transparent encryption of block devices using dm-crypt
 AddPackage cups                   # The CUPS Printing System - daemon package
-AddPackage dateutils              # nifty command line date and time utilities; fast date calculations and conversion in the shell
 AddPackage dbeaver                # Free universal SQL Client for developers and database administrators (community edition)
 AddPackage delve                  # A debugger for the Go programming language.
 AddPackage device-mapper          # Device mapper userspace library and tools
-AddPackage dhcpcd                 # RFC2131 compliant DHCP client daemon
 AddPackage diffutils              # Utility programs used for creating patch files
 AddPackage docker                 # Pack, ship and run any application as a lightweight container
 AddPackage doctl                  # The official command line interface for the DigitalOcean API
@@ -291,8 +289,6 @@ AddPackage zsh                    # A very advanced and programmable command int
 
 AddPackage --foreign aconfmgr-git                   # A configuration manager for Arch Linux
 AddPackage --foreign apache-tools                   # Useful Apache tools - htdigest, htpasswd, ab, htdbm
-AddPackage --foreign archiver                       # Easily create & extract archives, and compress & decompress files of various formats
-AddPackage --foreign blanket-bin                    # Improve focus and increase your productivity by listening to different sounds
 AddPackage --foreign bluez-firmware                 # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
 AddPackage --foreign bottom-bin                     # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
 AddPackage --foreign bukuserver                     # Powerful command-line bookmark manager. CLI and server.
@@ -302,7 +298,6 @@ AddPackage --foreign dive                           # A tool for exploring each 
 AddPackage --foreign docker-compose-bin             # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage --foreign drive-bin                      # Google Drive client for the commandline (binary version)
 AddPackage --foreign dust-bin                       # du + rust = dust. Like du but more intuitive
-AddPackage --foreign ebtables                       # Ethernet bridge filtering utilities
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
 AddPackage --foreign golangci-lint-bin              # Linters Runner for Go. 5x faster than gometalinter.
 AddPackage --foreign grpcurl-bin                    # Like cURL, but for gRPC
@@ -342,7 +337,6 @@ AddPackage --foreign python-ptvsd                   # Python debugger package fo
 AddPackage --foreign python-pychromecast            # Library for Python 3 to communicate with the Google Chromecast
 AddPackage --foreign python-soundcloud-git          # A Python wrapper around the Soundcloud API
 AddPackage --foreign rtags                          # A client/server application that indexes C/C++ code
-AddPackage --foreign sad                            # Space Age seD
 AddPackage --foreign svgo                           # Tool for optimizing SVG files
 AddPackage --foreign teams                          # Microsoft Teams for Linux is your chat-centered workspace in Office 365
 AddPackage --foreign telepresence                   # Local development against a remote Kubernetes or OpenShift cluster
@@ -351,8 +345,6 @@ AddPackage --foreign ttf-ubraille  # Unicode Braillt font
 AddPackage --foreign usql          # A universal command-line interface for SQL databases
 AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland session
 AddPackage --foreign xsv-bin       # CSV command line toolkit written in Rust
-AddPackage --foreign zoiper        # a SIP and IAX2 VoIP softphone
-AddPackage --foreign zoxide-bin    # A fast cd command that learns your habits (binary release)
 
 #
 # tools
@@ -370,8 +362,27 @@ AddPackage zathura                       # Minimalistic document viewer
 AddPackage zathura-pdf-mupdf             # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 AddPackage --foreign b3sum-bin           # BLAKE3 hash function CLI utility, written in Rust
 
-AddPackage asciidoctor                        # An implementation of AsciiDoc in Ruby
-AddPackage --foreign ruby-asciidoctor-diagram # Asciidoctor diagramming extension
+AddPackage asciidoctor                         # An implementation of AsciiDoc in Ruby
+AddPackage --foreign ruby-asciidoctor-diagram  # Asciidoctor diagramming extension
+AddPackage xournalpp                           # Handwriting notetaking software with PDF annotation support
+AddPackage --foreign colorized-logs            # Tools for logs with ANSI color
+AddPackage --foreign topgrade                  # Invoke the upgrade procedure of multiple package managers
+AddPackage --foreign pastel                    # A command-line tool to generate, analyze, convert and manipulate colors
+AddPackage --foreign parsec-bin                # Remotely connect to a gaming pc for a low latency remote computing experience
+AddPackage --foreign meli                      # A MUA for the terminal aiming for configurability and extensibility with sane defaults
+AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
+AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone based on the SIP protocol (AppImage version)
+AddPackage age                                 # A simple, modern and secure file encryption tool
+AddPackage clamav                              # Anti-virus toolkit for Unix
+AddPackage just                                # A handy way to save and run project-specific commands
+AddPackage evolution                           # Manage your email, contacts and schedule
+AddPackage evolution-ews                       # MS Exchange integration through Exchange Web Services
+AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
+AddPackage syncthing                           # Open Source Continuous Replication / Cluster Synchronization Thing
+AddPackage --foreign archiver                  # Easily create & extract archives, and compress & decompress files of various formats
+AddPackage --foreign ouch                      # Painless compression and decompression in the terminal
+AddPackage --foreign blanket-bin               # Improve focus and increase your productivity by listening to different sounds
+AddPackage --foreign termscp                   # A feature rich terminal UI file transfer and explorer
 
 ##
 ## daily
@@ -379,30 +390,33 @@ AddPackage --foreign ruby-asciidoctor-diagram # Asciidoctor diagramming extensio
 
 AddPackage himalaya                     # Minimalist CLI email client
 AddPackage --foreign hydroxide          # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
-AddPackage firefox                      # Standalone web browser from mozilla.org
+AddPackage firefox-developer-edition    # Developer Edition of the popular Firefox web browser
 AddPackage --foreign slack-desktop      # Slack Desktop (Beta) for Linux
 AddPackage --foreign ungoogled-chromium # A lightweight approach to removing Google web service dependency
 AddPackage --foreign zoom               # Video Conferencing and Web Conferencing Service
+AddPackage --foreign nyxt               # A keyboard-oriented, infinitely extensible web browser designed for power users
 
 #
 # shell
 #
 
-AddPackage fzf                     # Command-line fuzzy finder
-AddPackage --foreign direnv-bin    # a shell extension that manages your environment
-AddPackage starship                # The cross-shell prompt for astronauts
-AddPackage --foreign sheldon-bin   # A fast, configurable, shell plugin manager
-AddPackage --foreign git-delta-bin # A viewer for git and diff output
-AddPackage --foreign mcfly         # Fly through your shell history
-AddPackage --foreign wezterm-git   # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+AddPackage fzf                           # Command-line fuzzy finder
+AddPackage --foreign direnv-bin          # a shell extension that manages your environment
+AddPackage starship                      # The cross-shell prompt for astronauts
+AddPackage --foreign sheldon-bin         # A fast, configurable, shell plugin manager
+AddPackage --foreign git-delta-bin       # A viewer for git and diff output
+AddPackage --foreign mcfly               # Fly through your shell history
+AddPackage --foreign wezterm-nightly-bin # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+AddPackage --foreign zoxide-bin          # A fast cd command that learns your habits (binary release)
 
 #
 # backup
 #
 
-AddPackage borg      # Deduplicating backup program with compression and authenticated encryption
-AddPackage borgmatic # Simple, configuration-driven backup software for servers and workstations
-AddPackage snapper   # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
+AddPackage borg          # Deduplicating backup program with compression and authenticated encryption
+AddPackage borgmatic     # Simple, configuration-driven backup software for servers and workstations
+AddPackage python-llfuse # A set of Python bindings for the low level FUSE API.
+AddPackage snapper       # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
 
 # For emacs-gif-screencast
 AddPackage gifsicle # A powerful command-line program for creating, editing, manipulating and getting information about GIF images and animations
@@ -422,8 +436,25 @@ AddPackage --foreign cheat               # Allows you to create and view interac
 AddPackage --foreign choose              # A human-friendly and fast alternative to cut and (sometimes) awk
 AddPackage --foreign slides-bin          # Terminal based presentation tool
 AddPackage --foreign webex-bin           # Webex for Linux
-AddPackage --foreign matterhorn-bin      # A terminal-based chat client for MatterMost
 AddPackage --foreign diffsitter-bin      # A tree-sitter based AST difftool to get meaningful semantic diffs
+AddPackage oath-toolkit                  # OATH one-time password toolkit
+AddPackage sad                           # Space Age seD
+AddPackage sslscan                       # A fast tool to scan SSL services such as HTTPS to determine supported ciphers
+AddPackage --foreign bcal                # Storage conversion and expression calculator
+AddPackage --foreign dtool               # A collection of development tools for numeric conversion
+AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
+
+# required for topgrade cargo step
+AddPackage --foreign cargo-update # A cargo subcommand for checking and applying updates to installed executables
+
+AddPackage --foreign imgp        # Multi-core batch image resizer and rotator
+AddPackage --foreign python-grip # Preview GitHub Markdown files like Readme locally before committing them
+AddPackage --foreign sysz        # fzf terminal UI for systemctl
+AddPackage --foreign viddy       # A modern watch command
+AddPackage --foreign navi        # An interactive cheatsheet tool for the command-line
+AddPackage pv                    # A terminal-based tool for monitoring the progress of data through a pipeline.
+AddPackage peco                  # Simplistic interactive filtering tool
+AddPackage watchexec             # Executes commands in response to file modifications
 
 #
 # System
@@ -444,6 +475,15 @@ AddPackage --foreign yofi-git           # Minimalistic menu for Wayland-based co
 
 AddPackage xdg-user-dirs # Manage user directories like ~/Desktop and ~/Music
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
+
+#
+# sys tools
+#
+AddPackage dmidecode          # Desktop Management Interface table related utilities
+AddPackage pavucontrol        # PulseAudio Volume Control
+AddPackage hwdetect           # Hardware detection script with loading modules and mkinitcpio.conf
+AddPackage efibootmgr         # Linux user-space application to modify the EFI Boot Manager
+AddPackage --foreign thinkfan # A minimalist fan control program. Supports the sysfs hwmon interface and thinkpad_acpi
 
 #
 # Dev
@@ -467,6 +507,18 @@ AddPackage dog                          # Command-line DNS client like dig
 AddPackage gpg-tui                      # A terminal user interface for GnuPG
 AddPackage --foreign kubeval-bin        # Tool for validating Kubernetes YAML or JSON configuration files
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
+AddPackage go-tools                     # Developer tools for the Go programming language
+AddPackage kubectx                      # Utility to manage and switch between kubectl contexts and Kubernetes namespaces
+AddPackage --foreign angle-grinder      # Slice and dice logs on the command line
+AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
+AddPackage --foreign cqlsh              # CQL shell for apache cassandra
+AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
+AddPackage --foreign frpc               # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
+AddPackage --foreign terraform-docs-bin # Generate docs from terraform modules
+AddPackage --foreign glow               # Markdown renderer for the CLI
+AddPackage --foreign gron-bin           # gron transforms JSON into discrete assignments to make it easier to grep.
+AddPackage --foreign pluto              # A cli tool to help discover deprecated apiVersions in Kubernetes
+AddPackage --foreign shellcheck-bin     # Shell script analysis tool (binary release)
 
 #
 # Stuff
@@ -477,10 +529,11 @@ AddPackage --foreign discord_arch_electron # Discord (popular voice + video app)
 AddPackage --foreign streamlink-twitch-gui # A multi platform Twitch.tv browser for Streamlink
 AddPackage --foreign tor-browser           # Tor Browser Bundle
 
-AddPackage --foreign tizonia-all    # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
+# AddPackage --foreign tizonia-all    # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
 AddPackage --foreign python-spotipy # A light weight Python library for the Spotify Web API
 AddPackage --foreign tenacity-git   # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
 AddPackage --foreign ventoy-bin     # A new multiboot USB solution (Binary)
+AddPackage --foreign epick          # Color picker for creating harmonic color palettes
 
 # Not sure
 AddPackage sox # The Swiss Army knife of sound processing tools
@@ -491,6 +544,24 @@ AddPackage sbcl # Steel Bank Common Lisp
 AddPackage sway     # Tiling Wayland compositor and replacement for the i3 window manager
 AddPackage swayidle # Idle management daemon for Wayland
 
+# required by tenacity-git
+AddPackage portmidi # Cross platform library for interfacing with OS MIDI I/O APIs
+
+AddPackage remind                    # A sophisticated calendar and alarm program.
+AddPackage --foreign wl-color-picker # A wayland color picker that also works on wlroots
+AddPackage --foreign webtty          # Share a terminal session over WebRTC
+
 #
 # lib
 #
+
+AddPackage qt6-wayland # Provides APIs for Wayland
+
+#
+# VMs
+#
+
+AddPackage virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
+# AddPackage dnsmasq # Lightweight, easy to configure DNS forwarder and DHCP server
+AddPackage iptables-nft       # Linux kernel packet control tool (using nft interface)
+AddPackage --foreign quickemu # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.
