@@ -379,7 +379,6 @@ AddPackage evolution                           # Manage your email, contacts and
 AddPackage evolution-ews                       # MS Exchange integration through Exchange Web Services
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage syncthing                           # Open Source Continuous Replication / Cluster Synchronization Thing
-AddPackage --foreign archiver                  # Easily create & extract archives, and compress & decompress files of various formats
 AddPackage --foreign ouch                      # Painless compression and decompression in the terminal
 AddPackage --foreign blanket-bin               # Improve focus and increase your productivity by listening to different sounds
 AddPackage --foreign termscp                   # A feature rich terminal UI file transfer and explorer

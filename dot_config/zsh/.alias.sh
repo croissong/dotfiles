@@ -44,8 +44,8 @@ alias ssh='TERM=xterm ssh'
 
 alias ag='angle-grinder -o json'
 
-alias pack='arc archive'
-alias unpack='arc unarchive'
+alias pack='ouch compress'
+alias unpack='ouch decompress'
 
 alias paruch='paru --config ~/.config/pacman/chaotic-aur.conf'
 
