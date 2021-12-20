@@ -8,6 +8,9 @@ set mailcap_path = ~/.config/mutt/mailcap:$mailcap_path
 set recall = no
 set edit_headers
 set autoedit
+set use_threads=yes
+set index_format = "%4C %Z %{%b %d} %-15.15L %s" # remove (message size)
+set pager_stop=yes
 
 set sidebar_visible = no
 

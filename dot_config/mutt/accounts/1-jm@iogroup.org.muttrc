@@ -2,18 +2,23 @@
 set realname = "Jan Möller"
 set from = "jm@datawerk.de"
 set sendmail = "msmtp -a jm@datawerk.com"
-alias me Jan Möller <jm@datawerk.com>
+alias me Jan Möller <jm@datawerk.de>
 set folder = "/home/croissong/.local/share/mail/jm@iogroup.org"
 set header_cache = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/headers
 set message_cachedir = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/bodies
 set mbox_type = Maildir
 
-
+# https://neomutt.org/guide/reference.html#functions
 bind index,pager gg noop
 bind index,pager g noop
 bind index,pager M noop
 bind index,pager C noop
+
 bind index gg first-entry
+bind index c change-folder
+bind index s save-message
+
+
 unmailboxes *
 unalternates *
 unset signature
@@ -22,7 +27,7 @@ set copy = no
 unmacro index o
 macro index o "<shell-escape>mw -y jm@iogroup.org<enter>" "run mbsync to sync jm@iogroup.org"
 
-mailboxes "=Archive" "=backups" "=Calendar/Birthdays" "=Calendar/Feiertage in Deutschland" "=Deleted Items/trello" "=Drafts" "=exports" "=INBOX" "=Journal" "=Junk Email" "=Notes" "=Outbox" "=Sent Items" "=svh/mattermost" "=service" "=svh/trello" "=sysops" "=Tasks" "=Trash"
+named-mailboxes "in" "=INBOX" "arch" "=Archive" "junk" "=Junk Email" "sent" "=Sent Items" "deleted" "=Deleted Items" "noop" "=noop" "ops" "=ops"
 set postponed = "+Drafts"
 set spoolfile = "+INBOX"
-set trash = "+Trash"
+set trash = "+Deleted Items"
