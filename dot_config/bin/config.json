@@ -1,0 +1,29 @@
+{
+    "default_path": "/home/croissong/.local/bin",
+    "bins": {
+        "/home/croissong/.local/bin/bin": {
+            "path": "/home/croissong/.local/bin/bin",
+            "remote_name": "bin",
+            "version": "v0.11.0",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "github.com/marcosnils/bin",
+            "provider": "github"
+        },
+        "/home/croissong/.local/bin/humioctl": {
+            "path": "/home/croissong/.local/bin/humioctl",
+            "remote_name": "humioctl",
+            "version": "v0.28.11",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "github.com/humio/cli",
+            "provider": "github"
+        },
+        "/home/croissong/.local/bin/vals": {
+            "path": "/home/croissong/.local/bin/vals",
+            "remote_name": "vals",
+            "version": "v0.15.0",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "github.com/variantdev/vals",
+            "provider": "github"
+        }
+    }
+}
