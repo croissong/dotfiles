@@ -105,3 +105,7 @@
                                            ))
                                     :initial-value %slot-default%))))
 #+end_src
+* extensions
+#+begin_src lisp
+(asdf:load-system :demeter)
+#+end_src
