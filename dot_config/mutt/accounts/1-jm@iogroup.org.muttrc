@@ -8,16 +8,6 @@ set header_cache = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/headers
 set message_cachedir = /home/croissong/.cache/mutt-wizard/jm@iogroup.org/bodies
 set mbox_type = Maildir
 
-# https://neomutt.org/guide/reference.html#functions
-bind index,pager gg noop
-bind index,pager g noop
-bind index,pager M noop
-bind index,pager C noop
-
-bind index gg first-entry
-bind index c change-folder
-bind index s save-message
-
 
 unmailboxes *
 unalternates *

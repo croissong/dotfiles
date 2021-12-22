@@ -19,11 +19,27 @@ bind index,pager \Cs sync-mailbox
 
 bind index,pager x sidebar-toggle-visible
 
+# https://neomutt.org/guide/reference.html#functions
+bind index,pager gg noop
+bind index,pager g noop
+bind index,pager M noop
+bind index,pager C noop
+
+bind index gg first-entry
+bind index c change-folder
+bind index s save-message
+
+bind index,pager a noop
+macro index,pager "\e[1;3A" "<sidebar-prev><sidebar-open>"
+macro index,pager "\e[1;3B" "<sidebar-next><sidebar-open>"
+
+macro index,pager "a" "<save-message>=Archive"
+
 
 set query_command = "khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
 
-macro index,pager a \
+macro index,pager \Ca \
   "<pipe-message>khard add-email<return>" \
   "add the sender email address to khard"
