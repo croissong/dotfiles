@@ -105,7 +105,6 @@ alias twm='task modify'
 
 alias docker=podman
 alias summon='summon -f summon.yml'
-alias vpnio='sudo swanctl -i -c vpn'
 
 alias pets='pet search | clip'
 
@@ -155,3 +154,6 @@ e() {
 }
 
 function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
+
+
+alias j='just --justfile ~/.user.justfile --working-directory .'
