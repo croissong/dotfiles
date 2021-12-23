@@ -1,0 +1,13 @@
+address: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).humio.address }}
+ca-certificate-file: ""
+insecure: false
+profiles:
+  default:
+    address: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).humio.address }}
+    ca_certificate: ""
+    insecure: false
+    token: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).humio.token }}
+    username: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).humio.username }}
+proxy-organization: ""
+token: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).humio.token }}
+token-file: ""
