@@ -1,0 +1,8 @@
+#tabbrowser-tabs {
+    visibility: collapse;
+}
+
+
+#sidebar-header {
+  display: none;
+}
