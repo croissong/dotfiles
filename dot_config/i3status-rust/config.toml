@@ -20,7 +20,10 @@ interval = 30
 [[block]]
 block = "maildir"
 interval = 60
-inboxes = ["/home/croissong/.local/share/mail/jm@iogroup.org/INBOX"]
+inboxes = [
+  "$HOME/.local/share/mail/jm@iogroup.org/INBOX",
+  "$HOME/.local/share/mail/jm@iogroup.org/ops"
+]
 threshold_warning = 5
 threshold_critical = 10000000
 interval = 60

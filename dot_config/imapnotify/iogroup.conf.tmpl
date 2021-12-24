@@ -8,5 +8,5 @@
   "username": "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.user }}",
   "password": "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.password }}",
   "onNewMail": "/usr/bin/mailsync jm@iogroup.org",
-  "boxes": [ "INBOX", "svh", "service" ]
+  "boxes": [ "INBOX", "ops" ]
 }
