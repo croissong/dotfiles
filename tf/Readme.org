@@ -1,5 +1,4 @@
-#### Apply
+* Apply
 ```
-GOOGLE_ACCESS_TOKEN=`gcloud auth print-access-token` envsubst < secrets.auto.tfvars.tmpl > secrets.auto.tfvars
-terraform apply
+terraform apply -parallelism=1
 ```
