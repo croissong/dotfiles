@@ -17,7 +17,7 @@ set copy = no
 unmacro index o
 macro index o "<shell-escape>mw -y jm@iogroup.org<enter>" "run mbsync to sync jm@iogroup.org"
 
-named-mailboxes "in" "=INBOX" "ops" "=ops" "noop" "=noop "arch" "=Archive" "sent" "=Sent Items" "junk" "=Junk Email" "deleted" "=Deleted Items"
+named-mailboxes "in" "=INBOX" "ops" "=ops" "noop" "=noop" "arch" "=Archive" "sent" "=Sent Items" "junk" "=Junk Email" "deleted" "=Deleted Items"
 set postponed = "+Drafts"
 set spoolfile = "+INBOX"
 set trash = "+Deleted Items"
