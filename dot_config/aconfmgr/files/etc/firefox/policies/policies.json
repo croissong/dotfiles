@@ -67,6 +67,12 @@
       "toolkit.legacyUserProfileCustomizations.stylesheets": {
         "Value": true,
         "Status": "locked"
+      },
+      "gfx.webrender.compositor.force-enabled": {
+        "Value": false,
+        "Status": "locked",
+        "Note": "https://wiki.archlinux.org/title/firefox#Wayland",
+        "Note": "disabled: causes ugly scrolling"
       }
     },
     "PromptForDownloadLocation": true,
