@@ -21,9 +21,9 @@
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/cookies-txt/latest.xpi"
       },
-      "treestyletab@piro.sakura.ne.jp": {
+      "{3c078156-979c-498b-8990-85f7987dd929}": {
         "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/tree-style-tab/latest.xpi"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sidebery/latest.xpi"
       },
       "jid1-xUfzOsOFlzSOXg@jetpack": {
         "installation_mode": "force_installed",
