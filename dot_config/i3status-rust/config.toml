@@ -21,8 +21,9 @@ interval = 30
 block = "maildir"
 interval = 60
 inboxes = [
-  "$HOME/.local/share/mail/jm@iogroup.org/INBOX",
-  "$HOME/.local/share/mail/jm@iogroup.org/ops"
+  # TODO: env var https://github.com/greshake/i3status-rust/issues/1246
+  "/home/croissong/.local/share/mail/jm@iogroup.org/INBOX",
+  "/home/croissong/.local/share/mail/jm@iogroup.org/ops"
 ]
 threshold_warning = 5
 threshold_critical = 10000000
