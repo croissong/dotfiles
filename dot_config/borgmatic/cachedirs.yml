@@ -6,6 +6,7 @@ cachedirs:
 - .config/autostart
 - .config/ansible/roles/
 - .config/.cache
+- .config/gcloud/logs
 - .config/GIMP
 - .config/JetBrains
 - .config/Mattermost
