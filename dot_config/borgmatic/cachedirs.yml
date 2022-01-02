@@ -45,4 +45,4 @@ cachedirs:
 nobackup:
 - Downloads
 - code/golang
-# - Docs/blob
+- Docs/blob

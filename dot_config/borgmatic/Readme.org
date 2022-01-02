@@ -6,4 +6,6 @@ sudo -E borgmatic --verbosity 1 --files \
     | rg -v \
          -e .git/ \
     | tee >(ansi2txt >/tmp/borgmatic.txt)
+
+# or use borgmatic --dry-run
 #+end_src
