@@ -5,7 +5,7 @@ alias l='xplr'
 alias cat=bat
 alias less=bat
 alias q=pueue
-function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log }
+function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log; }
 
 alias rm='trash -v'
 
@@ -33,7 +33,7 @@ alias ec=echo
 
 alias printer='system-config-printer'
 
-alias df='df -h -P --total --exclude-type=devtmpfs 2>/dev/null'
+alias df='duf'
 alias clip='wl-copy -n'
 alias du='dust -b'
 alias journalctl='journalctl -fxe'
@@ -54,8 +54,6 @@ alias t=tab
 alias lock='physlock -ds'
 
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
-
-
 
 #
 # Kubectl
@@ -91,7 +89,6 @@ alias kcxf='kcf exec -ti'
 alias kcfwd='kc port-forward'
 alias kcw='kc get po -w -owide | rg'
 alias kcgs='kc get -owide --sort-by=.metadata.creationTimestamp'
-
 
 #
 #
@@ -137,23 +134,22 @@ alias emacsmin='emacs -q --load ~/.config/emacs/init-minimal.el'
 
 awkp() { awk "{print \$${1:-1}}"; }
 
-b64e() { echo -n $1 | base64 -w0 }
-b64d() { echo -n $1 | base64 -d }
+b64e() { echo -n $1 | base64 -w0; }
+b64d() { echo -n $1 | base64 -d; }
 
 alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promotor'
 
 e() {
-    if [ -z "$1" ]; then
-        TMP="$(mktemp /tmp/stdin-XXX)"
-        cat >$TMP
-        emacsclient -n $TMP
-        rm $TMP
-    else
-        emacsclient -n "$@"
-    fi
+  if [ -z "$1" ]; then
+    TMP="$(mktemp /tmp/stdin-XXX)"
+    cat >$TMP
+    emacsclient -n $TMP
+    rm $TMP
+  else
+    emacsclient -n "$@"
+  fi
 }
 
 function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
-
 
 alias j='just --justfile ~/.user.justfile --working-directory .'
