@@ -60,15 +60,15 @@ local keys = { -- Turn off the default CMD-m Hide action on macOS by making it
 	mods = "ALT",
 	action = wezterm.action{ CopyTo = "Clipboard" },
 }, {
-	key = "y",
+	key = "z",
 	mods = "CTRL",
 	action = wezterm.action{ PasteFrom = "Clipboard" },
 }, {
-	key = "ü",
+	key = "[",
 	mods = "CTRL",
 	action = wezterm.action{ ScrollByLine = -20 },
 }, {
-	key = "ä",
+	key = "'",
 	mods = "CTRL",
 	action = wezterm.action{ ScrollByLine = 20 },
 }, {
@@ -108,19 +108,19 @@ local keys = { -- Turn off the default CMD-m Hide action on macOS by making it
 		CloseCurrentPane = { confirm = true },
 	},
 }, {
-	key = "#",
+	key = "\\",
 	mods = "CTRL|ALT",
 	action = wezterm.action{ ActivatePaneDirection = "Right" },
 }, {
-	key = "ö",
+	key = ";",
 	mods = "CTRL|ALT",
 	action = wezterm.action{ ActivatePaneDirection = "Left" },
 }, {
-	key = "ü",
+	key = "[",
 	mods = "CTRL|ALT",
 	action = wezterm.action{ ActivatePaneDirection = "Up" },
 }, {
-	key = "ä",
+	key = "'",
 	mods = "CTRL|ALT",
 	action = wezterm.action{ ActivatePaneDirection = "Down" },
 }, {
@@ -197,4 +197,5 @@ return {
 	font_size = 13,
 	keys = keys,
 	mouse_bindings = mouse_bindings,
+  debug_key_events = true,
 }
