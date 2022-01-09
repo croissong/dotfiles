@@ -11,15 +11,11 @@ local wezterm = require"wezterm"
 local os = require"os"
 local io = require"io"
 
-wezterm.on("open-in-emacs", function(window, pane)
+wezterm.on("copy-scrollback", function(window, pane)
 	local scrollback = pane:get_lines_as_text(250)
-
-	command =
-		string.format(
-			[[emacsclient -e '(my/open-in-buffer "wezterm" "%s")']],
-			scrollback
-		)
-	os.execute(command)
+	proc = io.popen("wl-copy -n", "w")
+	proc:write(scrollback)
+	proc:close()
 end)
 
 wezterm.on("copy-cmd", function(window, pane)
@@ -130,7 +126,7 @@ local keys = { -- Turn off the default CMD-m Hide action on macOS by making it
 }, {
 	key = "e",
 	mods = "CTRL|ALT",
-	action = wezterm.action{ EmitEvent = "open-in-emacs" },
+	action = wezterm.action{ EmitEvent = "copy-scrollback" },
 }, {
 	key = "c",
 	mods = "ALT",
@@ -197,5 +193,5 @@ return {
 	font_size = 13,
 	keys = keys,
 	mouse_bindings = mouse_bindings,
-  debug_key_events = true,
+  debug_key_events = false,
 }
