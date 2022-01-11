@@ -79,9 +79,7 @@ alias kcdf='kcf describe'
 alias kce='kc edit'
 alias kcroll='kc rollout restart'
 
-alias kcl="kc logs -f --tail 100 --all-containers"
-alias kclf="kcf logs -f --tail 100 | jq"
-alias kclt="kc tail --current-ns"
+alias kcl="kc stern"
 
 alias kcx='kc exec -ti'
 alias kcxf='kcf exec -ti'

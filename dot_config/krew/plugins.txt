@@ -1,11 +1,11 @@
 access-matrix
-deprecations
+bulk-action
 fuzzy
 gs
 lineage
 neat
 ns
 sniff
-tail
+stern
 view-secret
 who-can
