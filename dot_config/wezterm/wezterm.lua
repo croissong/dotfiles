@@ -62,11 +62,11 @@ local keys = { -- Turn off the default CMD-m Hide action on macOS by making it
 }, {
 	key = "[",
 	mods = "CTRL",
-	action = wezterm.action{ ScrollByLine = -20 },
+	action = wezterm.action{ ScrollByPage = -0.5 },
 }, {
 	key = "'",
 	mods = "CTRL",
-	action = wezterm.action{ ScrollByLine = 20 },
+	action = wezterm.action{ ScrollByPage = 0.5 },
 }, {
 	key = "r",
 	mods = "CTRL|ALT",
