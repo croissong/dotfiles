@@ -79,7 +79,7 @@ alias kcdf='kcf describe'
 alias kce='kc edit'
 alias kcroll='kc rollout restart'
 
-alias kcl="kc stern"
+alias kcl="kc stern --container-state running,waiting,terminated"
 
 alias kcx='kc exec -ti'
 alias kcxf='kcf exec -ti'
