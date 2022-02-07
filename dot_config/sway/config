@@ -2,96 +2,6 @@ set $mod Mod4
 font pango:monospace 8
 
 floating_modifier $mod
-bindsym $mod+Shift+q kill
-
-set $menu yofi
-set $term wezterm
-
-bindsym $mod+Return exec $term
-bindsym $mod+d exec $menu
-bindsym $mod+ctrl+d exec $menu --show run
-
-# change focus
-bindsym $mod+odiaeresis focus left
-bindsym $mod+adiaeresis focus down
-bindsym $mod+udiaeresis focus up
-bindsym $mod+numbersign Focus right
-
-# move focused window
-bindsym $mod+shift+odiaeresis move left
-bindsym $mod+shift+adiaeresis move down
-bindsym $mod+shift+udiaeresis move up
-bindsym $mod+shift+numbersign Move right
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-
-bindsym $mod+Control+Shift+odiaeresis move workspace to output left
-bindsym $mod+Control+Shift+adiaeresis move workspace to output down
-bindsym $mod+Control+Shift+udiaeresis move workspace to output up
-bindsym $mod+Control+Shift+numbersign move workspace to output right
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Control+Shift+e exec "swaynag -t warning -m 'Exit?' -b 'Mais oui!' 'swaymsg exit'"
-
-bindsym $mod+Left exec "pamixer --toggle-mute"
-bindsym $mod+Down exec "pamixer --allow-boost --decrease 5"
-bindsym $mod+Up exec "pamixer --allow-boost --increase 5"
-bindsym $mod+Right exec "pamixer --set-volume 100"
-
-bindsym $mod+Shift+Left exec "light -S 0"
-bindsym $mod+Shift+Right exec "light -S 100"
-
-
-bindsym $mod+Control+e exec "wl-paste | xargs handlr open"
-
-
-bindsym --release $mod+Print exec grim -g "$(slurp; sleep 3)" - | swappy -f -
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -172,6 +82,9 @@ hide_edge_borders --i3 both
 for_window [title="^chrome-extension.*is sharing your screen.$"] floating enable
 for_window [app_id="pinentry-qt"] floating enable
 
+
+include ./keybinds.conf
+
 # Required to get e.g. wl-clipboard wayland connection working in emacs on system start (without having to restart the emacs daemon)
 # Used in conjunction with 'exec-path-from-shell' in emacs
 # also see /etc/sway/config.d/50-systemd-user.conf
@@ -181,7 +94,6 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 # Required for wlsunset to work on system start
 exec systemctl --user start sway-session.target
-
 
 exec bato
 exec swayidle -w
