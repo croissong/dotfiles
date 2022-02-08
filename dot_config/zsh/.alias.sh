@@ -16,6 +16,7 @@ alias history='history -E'
 alias tree=br
 alias x=xplr
 alias ps=procs
+alias dig=dog
 alias sed=sd
 alias ntop='sudo nethogs'
 alias rename=vidir
@@ -49,7 +50,7 @@ alias unpack='ouch decompress'
 
 alias paruch='paru --config ~/.config/pacman/chaotic-aur.conf'
 
-alias t=tab
+alias jwtd='jwt decode --iso8601'
 
 alias lock='physlock -ds'
 
