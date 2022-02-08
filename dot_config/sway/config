@@ -95,5 +95,9 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # Required for wlsunset to work on system start
 exec systemctl --user start sway-session.target
 
+
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+exec systemctl enable --now --user wob.socket
+
 exec bato
 exec swayidle -w
