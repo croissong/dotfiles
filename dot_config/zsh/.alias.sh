@@ -30,6 +30,8 @@ alias gpgt=gpg-tui
 
 alias cm='chezmoi -vr'
 
+alias myip='curl -4 ifconfig.co'
+
 alias ec=echo
 
 alias printer='system-config-printer'
