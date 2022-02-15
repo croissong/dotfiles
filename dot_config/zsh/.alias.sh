@@ -115,8 +115,6 @@ alias mvntree='mvn dependency:tree | tee > /tmp/tree.txt'
 alias mvnpom='mvn help:effective-pom | tee /tmp/pom.xml'
 alias mvnupdate='mvn versions:dependency-updates-report -DprocessDependencyManagementTransitive=false && chromium target/site/dependency-updates-report.html'
 
-alias lightkbd='light -s sysfs/leds/tpacpi::kbd_backlight'
-
 alias curl=curlie
 alias curll='/usr/bin/curl'
 alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
