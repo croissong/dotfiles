@@ -30,7 +30,7 @@ alias gpgt=gpg-tui
 
 alias cm='chezmoi -vr'
 
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias myip='dig -1 myip.opendns.com @resolver1.opendns.com'
 
 alias ec=echo
 
