@@ -82,7 +82,7 @@ alias kcdf='kcf describe'
 alias kce='kc edit'
 alias kcroll='kc rollout restart'
 
-alias kcl="kc stern --container-state running,waiting,terminated"
+alias kcl="kc stern -t --container-state running,waiting,terminated"
 
 alias kcx='kc exec -ti'
 alias kcxf='kcf exec -ti'
@@ -152,3 +152,11 @@ e() {
 function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
 
 alias j='just --justfile ~/.user.justfile --working-directory .'
+
+ts-from-unix() {
+  date --utc -Iseconds -d @$1
+}
+
+ts-to-unix() {
+  date -d "$1" +"%s"
+}
