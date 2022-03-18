@@ -80,7 +80,7 @@ local keys = { -- Turn off the default CMD-m Hide action on macOS by making it
 }, {
 	key = "q",
 	mods = "CTRL",
-	action = "ShowLauncher",
+	action = wezterm.action{ShowLauncherArgs={flags="FUZZY|LAUNCH_MENU_ITEMS|KEY_ASSIGNMENTS|DOMAINS"}},
 }, {
 	key = "w",
 	mods = "CTRL|ALT",
