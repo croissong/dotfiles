@@ -52,7 +52,7 @@ alias unpack='ouch decompress'
 
 alias paruch='paru --config ~/.config/pacman/chaotic-aur.conf'
 
-alias jwtd='jwt decode --iso8601'
+alias jwtd='jwt decode -j --iso8601'
 
 alias lock='physlock -ds'
 
@@ -159,4 +159,8 @@ ts-from-unix() {
 
 ts-to-unix() {
   date -d "$1" +"%s"
+}
+
+ts-now-s() {
+  date +'%s'
 }
