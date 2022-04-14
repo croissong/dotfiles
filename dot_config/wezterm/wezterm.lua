@@ -194,4 +194,5 @@ return {
 	keys = keys,
 	mouse_bindings = mouse_bindings,
   debug_key_events = false,
+  key_map_preference = "Physical",
 }
