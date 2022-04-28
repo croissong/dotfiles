@@ -65,8 +65,8 @@ man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (sele
 alias kc=kubectl
 alias kcf=kubectl-fuzzy
 
-alias kctx='kubectx'
-alias kcn='kubens'
+alias kctx='switch'
+alias kcn='switch ns'
 alias kctxrm='kc config delete-context'
 alias kctxmv='kc config rename-context'
 
