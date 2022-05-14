@@ -133,8 +133,8 @@ alias emacsmin='emacs -q --load ~/.config/emacs/init-minimal.el'
 
 awkp() { awk "{print \$${1:-1}}"; }
 
-b64e() { echo -n $1 | base64 -w0; }
-b64d() { echo -n $1 | base64 -d; }
+b64e() { echo -n $(cat -) | base64 -w0; }
+b64d() { echo -n $(cat -) | base64 -d; }
 
 alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promotor'
 
