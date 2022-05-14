@@ -1,1 +1,1 @@
-only = ["krew", "sheldon", "cargo", "rustup", "firmware", "bin", "go"] # "chezmoi",
+only = ["krew", "sheldon", "cargo", "rustup", "firmware", "bin", "go", "pipx"] # "chezmoi",
