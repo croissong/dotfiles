@@ -28,7 +28,7 @@ alias watch='viddy'
 alias sys=sysz
 alias gpgt=gpg-tui
 
-alias cm='chezmoi -vr'
+alias cm='chezmoi'
 
 alias myip='dig -1 myip.opendns.com @resolver1.opendns.com'
 
