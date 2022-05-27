@@ -8,8 +8,6 @@ set +a
 {{ include "dot_config/zsh/.alias.sh" }}
 {{ include "dot_config/zsh/.env-vars.sh" }}
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
-
 if [ "$(tty)" = "/dev/tty1" ]; then
 	exec sway
 fi
