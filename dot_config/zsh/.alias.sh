@@ -28,6 +28,9 @@ alias watch='viddy'
 alias sys=sysz
 alias gpgt=gpg-tui
 
+alias mani='mani -c ~/.config/mani/code.yaml'
+alias mani-all='cm apply ~/.config/mani && mani run rm && mani sync'
+
 alias cm='chezmoi'
 
 alias myip='dig -1 myip.opendns.com @resolver1.opendns.com'
