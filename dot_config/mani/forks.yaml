@@ -1,0 +1,19 @@
+projects:
+  emacs:
+    path: ~/code/my/tmp/emacs
+    url: git://git.sv.gnu.org/emacs.git
+    sync: false
+
+  nyxt:
+    path: ~/code/my/tmp/forks/nyxt
+    url: git@github.com:Croissong/nyxt.git
+    sync: false
+
+  sysz:
+    path: ~/code/my/tmp/sysz
+    url: git@github.com:Croissong/sysz.git
+
+  test:
+    path: ~/code/my/tmp/test
+    url: git@github.com:Croissong/test.git
+    sync: false

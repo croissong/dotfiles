@@ -1,0 +1,19 @@
+tasks:
+  rm:
+    desc: Remove
+    shell: bash
+    target:
+      tags: [rm]
+    spec:
+      ignore_error: false
+    cmd: |
+      dir=$(pwd)
+      echo "$dir"
+      [ ! -d "$dir" ] && exit 0
+      source ~/.config/zsh/lib/confirm.sh
+      echo "Removing $dir"
+      if [ -z "$(git status --porcelain)" ]; then
+        trash -v "$dir"
+      else
+        echo "dirty workspace $dir"
+      fi
