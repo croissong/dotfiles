@@ -102,7 +102,6 @@ AddPackage libiscsi               # Clientside library to implement the iSCSI pr
 AddPackage libpipewire02          # User space API to deal with multimedia pipelines (0.2)
 AddPackage libreoffice-fresh      # LibreOffice branch which contains new features and program enhancements
 AddPackage libtool                # A generic library support script
-AddPackage libva-intel-driver     # VA-API implementation for Intel G45 and HD Graphics family
 AddPackage libvirt                # API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)
 AddPackage licenses               # Standard licenses distribution package
 AddPackage light                  # Program to easily change brightness on backlight-controllers.
@@ -180,7 +179,6 @@ AddPackage python-pyalsa     # Python binding for the ALSA library
 AddPackage python-setuptools # Easily download, build, install, upgrade, and uninstall Python packages
 AddPackage python-six        # Python 2 and 3 compatibility utilities
 AddPackage python-virtualenv # Virtual Python Environment builder
-AddPackage qemu              # A generic and open source machine emulator and virtualizer
 AddPackage rdesktop          # An open source client for Windows Remote Desktop Services
 AddPackage reflector         # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 AddPackage revive            # faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
@@ -305,11 +303,9 @@ AddPackage --foreign keybase-bin                    # the Keybase Go client, fil
 AddPackage --foreign krew-bin                       # Krew is the package manager for kubectl plugins.
 AddPackage --foreign kubectl-bin                    # Kubernetes.io client binary
 AddPackage --foreign kubernetes-helmfile-bin        # Deploy Kubernetes Helm Charts
-AddPackage --foreign libfixposix                    # Thin wrapper over POSIX syscalls
 AddPackage --foreign libspotify                     # C API package allowing third-party developers to write applications that utilize the Spotify music streaming service
 AddPackage --foreign linkerd                        # A service sidecar for Kubernetes and beyond. Main repo for Linkerd 2.x. - https
 AddPackage --foreign log4c                          # Logging FrameWork for C, as Log4j or Log4Cpp
-AddPackage --foreign mattermost-desktop-bin         # Mattermost Desktop for Linux (binary)
 AddPackage --foreign mitogen                        # Distributed self-replicating programs in Python
 AddPackage --foreign mssql-tools                    # Microsoft® SQL Server® Tools for Linux
 AddPackage --foreign mutt-wizard                    # Simple interface to auto-configure neomutt and isync with safe passwords
@@ -369,8 +365,6 @@ AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone
 AddPackage age                                 # A simple, modern and secure file encryption tool
 AddPackage clamav                              # Anti-virus toolkit for Unix
 AddPackage just                                # A handy way to save and run project-specific commands
-AddPackage evolution                           # Manage your email, contacts and schedule
-AddPackage evolution-ews                       # MS Exchange integration through Exchange Web Services
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage syncthing                           # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage --foreign ouch-git                  # Painless compression and decompression in the terminal (git version)
@@ -378,6 +372,10 @@ AddPackage blanket                             # Improve focus and increase your
 AddPackage --foreign termscp                   # A feature rich terminal UI file transfer and explorer
 AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes
 AddPackage --foreign mani                      # A CLI tool that helps you manage multiple repositories
+AddPackage qemu-desktop                        # A QEMU setup for desktop environments
+AddPackage termdown                            # Countdown timer and stopwatch in your terminal
+AddPackage --foreign tcpping                   # test response times using TCP SYN packets
+AddPackage libva-utils                         # Intel VA-API Media Applications and Scripts for libva
 
 ##
 ## daily
@@ -386,10 +384,10 @@ AddPackage --foreign mani                      # A CLI tool that helps you manag
 AddPackage himalaya                     # Minimalist CLI email client
 AddPackage --foreign hydroxide          # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 AddPackage firefox-developer-edition    # Developer Edition of the popular Firefox web browser
-AddPackage --foreign slack-desktop      # Slack Desktop (Beta) for Linux
+AddPackage --foreign slack-electron     # Slack Desktop (Beta) for Linux, using the system Electron package
 AddPackage --foreign ungoogled-chromium # A lightweight approach to removing Google web service dependency
 AddPackage --foreign zoom               # Video Conferencing and Web Conferencing Service
-AddPackage --foreign nyxt               # A keyboard-oriented, infinitely extensible web browser designed for power users
+AddPackage --foreign nyxt-browser-git   # Keyboard-oriented, Common Lisp extensible web-browser
 AddPackage --foreign toggldesktop       # Toggl time tracking software
 AddPackage kalendar                     # A calendar application using Akonadi to sync with external services
 
@@ -435,7 +433,7 @@ AddPackage xplr                          # A hackable, minimal, fast TUI file ex
 AddPackage termshark                     # Terminal UI for tshark, inspired by Wireshark
 AddPackage curlie                        # The power of curl, the ease of use of httpie.
 AddPackage --foreign cheat               # Allows you to create and view interactive cheatsheets on the command-line
-AddPackage --foreign choose              # A human-friendly and fast alternative to cut and (sometimes) awk
+AddPackage choose                        # A human-friendly and fast alternative to cut and (sometimes) awk
 AddPackage --foreign slides-bin          # Terminal based presentation tool
 AddPackage --foreign webex-bin           # Webex for Linux
 AddPackage --foreign diffsitter-bin      # A tree-sitter based AST difftool to get meaningful semantic diffs
@@ -446,7 +444,9 @@ AddPackage --foreign bcal                # Storage conversion and expression cal
 AddPackage --foreign dtool               # A collection of development tools for numeric conversion
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
 AddPackage --foreign jwt-cli-bin         # A super fast CLI tool to decode and encode JWTs built in Rust
-AddPackage --foreign visidata            # Terminal spreadsheet multitool for discovering and arranging data
+AddPackage visidata                      # Terminal spreadsheet multitool for discovering and arranging data
+AddPackage --foreign rusty-krab-manager  # Time management TUI
+AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
 # required for topgrade cargo step
 AddPackage --foreign cargo-update # A cargo subcommand for checking and applying updates to installed executables
@@ -462,7 +462,8 @@ AddPackage watchexec             # Executes commands in response to file modific
 AddPackage miller                # Name-indexed data processing tool
 AddPackage gping                 # Ping, but with a graph
 AddPackage go-yq                 # Portable command-line YAML processor
-AddPackage --foreign jless       # A command-line pager for JSON data.
+AddPackage jless                 # A command-line pager for JSON data
+AddPackage ugrep                 # ultra fast grep with interactive TUI, fuzzy search, boolean queries, hexdumps and more
 
 #
 # System
@@ -477,10 +478,13 @@ AddPackage --foreign chaotic-keyring    # Chaotic-AUR PGP keyring
 AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pacman
 AddPackage --foreign dashbinsh          # Relink /bin/sh to dash
 AddPackage --foreign downgrade          # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
-AddPackage --foreign bato               # Small program to send battery notifications
+AddPackage --foreign batsignal          # A lightweight battery monitor daemon
 AddPackage --foreign wlsunset           # Day/night gamma adjustments for Wayland compositors
 AddPackage --foreign yofi-bin           # Minimalistic menu for Wayland-based compositors
 AddPackage --foreign wob                # A lightweight overlay volume/backlight/progress/anything bar for Wayland
+AddPackage libfixposix                  # Thin wrapper over POSIX syscalls
+AddPackage libxcrypt-compat             # Modern library for one-way hashing of passwords - legacy API functions
+AddPackage libva-intel-driver           # VA-API implementation for Intel G45 and HD Graphics family
 
 AddPackage xdg-user-dirs # Manage user directories like ~/Desktop and ~/Music
 CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /usr/lib/systemd/user/xdg-user-dirs-update.service
@@ -488,13 +492,14 @@ CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /
 #
 # sys tools
 #
-AddPackage dmidecode             # Desktop Management Interface table related utilities
-AddPackage pavucontrol           # PulseAudio Volume Control
-AddPackage hwdetect              # Hardware detection script with loading modules and mkinitcpio.conf
-AddPackage efibootmgr            # Linux user-space application to modify the EFI Boot Manager
-AddPackage --foreign thinkfan    # A minimalist fan control program. Supports the sysfs hwmon interface and thinkpad_acpi
-AddPackage --foreign thinkfan-ui # A small gui app for Linux to control the fan speed and monitor temps on a ThinkPad
-AddPackage arch-install-scripts  # Scripts to aid in installing Arch Linux
+AddPackage dmidecode               # Desktop Management Interface table related utilities
+AddPackage pavucontrol             # PulseAudio Volume Control
+AddPackage hwdetect                # Hardware detection script with loading modules and mkinitcpio.conf
+AddPackage efibootmgr              # Linux user-space application to modify the EFI Boot Manager
+AddPackage --foreign thinkfan      # A minimalist fan control program. Supports the sysfs hwmon interface and thinkpad_acpi
+AddPackage --foreign thinkfan-ui   # A small gui app for Linux to control the fan speed and monitor temps on a ThinkPad
+AddPackage arch-install-scripts    # Scripts to aid in installing Arch Linux
+AddPackage --foreign xdg-ninja-git # A shell script which checks your $HOME for unwanted files and directories.
 
 #
 # Dev
@@ -505,13 +510,13 @@ AddPackage pyright                      # Type checker for the Python language
 AddPackage redis                        # An in-memory database that persists on disk
 AddPackage --foreign eclipse-mat        # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
 AddPackage --foreign google-cloud-sdk   # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
-AddPackage --foreign quicklisp          # A library manager for Common Lisp
+AddPackage quicklisp                    # A library manager for Common Lisp
 AddPackage --foreign jdk-adoptopenjdk   # OpenJDK Java 16 development kit (AdoptOpenJDK build)
 AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
 AddPackage --foreign ktlint             # An anti-bikeshedding Kotlin linter with built-in formatter
 AddPackage --foreign azure-cli          # Command-line tools for Azure.
 AddPackage --foreign jetbrains-toolbox  # Manage all your JetBrains Projects and Tools
-AddPackage --foreign libgccjit          # Just-In-Time Compilation using GCC.
+AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
 AddPackage xh                           # Friendly and fast tool for sending HTTP requests
 AddPackage argocd                       # Declarative continuous deployment for Kubernetes
 AddPackage dog                          # Command-line DNS client like dig
@@ -520,7 +525,7 @@ AddPackage --foreign kubeval-bin        # Tool for validating Kubernetes YAML or
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
 AddPackage go-tools                     # Developer tools for the Go programming language
 AddPackage kubectx                      # Utility to manage and switch between kubectl contexts and Kubernetes namespaces
-AddPackage --foreign angle-grinder      # Slice and dice logs on the command line
+AddPackage angle-grinder                # Slice and dice logs on the command line
 AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
 AddPackage --foreign cqlsh              # CQL shell for apache cassandra
 AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
@@ -535,6 +540,12 @@ AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
 AddPackage --foreign golang-mockery     # A mock code autogenerator for golang
 AddPackage cargo-edit                   # Managing cargo dependencies from the command line
+AddPackage postgresql-libs              # Libraries for use with PostgreSQL
+AddPackage python-pipx                  # Install and Run Python Applications in Isolated Environments
+AddPackage skopeo                       # A command line utility for various operations on container images and image repositories.
+AddPackage stylua                       # Code formatter for Lua
+AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
+AddPackage --foreign kubeswitch-bin     # The kubectx for operators.
 
 #
 # Stuff
@@ -547,10 +558,19 @@ AddPackage --foreign tor-browser           # Tor Browser Bundle
 
 # AddPackage --foreign tizonia-all    # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
 AddPackage --foreign python-spotipy # A light weight Python library for the Spotify Web API
-AddPackage --foreign tenacity-git   # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
-AddPackage --foreign ventoy-bin     # A new multiboot USB solution (Binary)
-AddPackage --foreign epick          # Color picker for creating harmonic color palettes
-AddPackage kdenlive                 # A non-linear video editor for Linux using the MLT video framework
+
+AddPackage --foreign portsmf-git         # Portable library for reading/writing Standard MIDI Files
+AddPackage --foreign tenacity-wxgtk3-git # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
+
+AddPackage --foreign ventoy-bin # A new multiboot USB solution (Binary)
+AddPackage --foreign epick      # Color picker for creating harmonic color palettes
+AddPackage kdenlive             # A non-linear video editor for Linux using the MLT video framework
+
+#
+# Media
+#
+
+AddPackage gnome-podcasts # Podcast application for GNOME
 
 # Not sure
 AddPackage sox # The Swiss Army knife of sound processing tools
