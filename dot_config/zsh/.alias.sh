@@ -141,6 +141,8 @@ b64d() { echo -n $(cat -) | base64 -d; }
 
 alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promotor'
 
+alias restart-netds='systemctl restart systemd-networkd.service systemd-resolved.service iwd'
+
 e() {
   if [ -z "$1" ]; then
     TMP="$(mktemp /tmp/stdin-XXX)"
