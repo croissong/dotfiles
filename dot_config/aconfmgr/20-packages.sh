@@ -468,7 +468,6 @@ AddPackage ugrep                 # ultra fast grep with interactive TUI, fuzzy s
 
 AddPackage --foreign mako-git           # Lightweight notification daemon for Wayland
 AddPackage upower                       # Abstraction for enumerating power devices, listening to device events and querying history and statistics
-AddPackage i3status-rust                # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
 AddPackage --foreign handlr-bin         # Powerful alternative to xdg-utils written in Rust
 AddPackage --foreign xdg-utils-handlr   # A shim for xdg-utils to use handlr under the hood
 AddPackage --foreign chaotic-keyring    # Chaotic-AUR PGP keyring

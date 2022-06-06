@@ -19,6 +19,7 @@
     argocd                       # Declarative continuous deployment for Kubernetes
     calibre                # Ebook management application
     chezmoi # Manage your dotfiles across multiple machines
+    i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
     nixpkgs-fmt
     pkgs.termdown # Countdown timer and stopwatch in your terminal
     wl-color-picker # A wayland color picker that also works on wlroots
