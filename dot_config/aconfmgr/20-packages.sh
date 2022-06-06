@@ -476,7 +476,6 @@ AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pac
 AddPackage --foreign dashbinsh          # Relink /bin/sh to dash
 AddPackage --foreign downgrade          # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage --foreign batsignal          # A lightweight battery monitor daemon
-AddPackage --foreign wlsunset           # Day/night gamma adjustments for Wayland compositors
 AddPackage --foreign yofi-bin           # Minimalistic menu for Wayland-based compositors
 AddPackage --foreign wob                # A lightweight overlay volume/backlight/progress/anything bar for Wayland
 AddPackage libfixposix                  # Thin wrapper over POSIX syscalls

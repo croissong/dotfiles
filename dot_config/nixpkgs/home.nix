@@ -22,7 +22,16 @@
     nixpkgs-fmt
     pkgs.termdown # Countdown timer and stopwatch in your terminal
     wl-color-picker # A wayland color picker that also works on wlroots
+    wlsunset # Day/night gamma adjustments for Wayland compositors
   ];
+
+
+   services.wlsunset = {
+     enable = true;
+     latitude = "51.3";
+     longitude = "9.5";
+     temperature.night = 2500;
+   };
 
   # home.stateVersion= "22.11";
 
