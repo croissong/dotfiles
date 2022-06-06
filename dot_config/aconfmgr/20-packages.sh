@@ -373,7 +373,6 @@ AddPackage --foreign termscp                   # A feature rich terminal UI file
 AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes
 AddPackage --foreign mani                      # A CLI tool that helps you manage multiple repositories
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
-AddPackage termdown                            # Countdown timer and stopwatch in your terminal
 AddPackage --foreign tcpping                   # test response times using TCP SYN packets
 AddPackage libva-utils                         # Intel VA-API Media Applications and Scripts for libva
 
