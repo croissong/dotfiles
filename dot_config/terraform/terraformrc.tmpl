@@ -1,0 +1,3 @@
+credentials "gitlab.devops.telekom.de" {
+  token = "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).wrk.svh.gitlabToken }}"
+}
