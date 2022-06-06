@@ -22,8 +22,10 @@
     i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
     nixpkgs-fmt
     pkgs.termdown # Countdown timer and stopwatch in your terminal
+    rust-analyzer     # Experimental Rust compiler front-end for IDEs
     wl-color-picker # A wayland color picker that also works on wlroots
     wlsunset # Day/night gamma adjustments for Wayland compositors
+    xplr # A hackable, minimal, fast TUI file explorer
   ];
 
 

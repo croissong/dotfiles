@@ -183,29 +183,29 @@ AddPackage revive            # faster, stricter, configurable, extensible, and b
 AddPackage ripgrep           # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage rmlint            # Tool to remove duplicates and other lint, being much faster than fdupes
 AddPackage rsync             # A fast and versatile file copying tool for remote and local files
-AddPackage rust-analyzer     # Experimental Rust compiler front-end for IDEs
-AddPackage rustup            # The Rust toolchain installer
-AddPackage s3cmd             # A command line client for Amazon S3
-AddPackage sd                # Intuitive find & replace
-AddPackage sdcv              # StarDict Console Version
-AddPackage seahorse          # GNOME application for managing PGP keys.
-AddPackage sed               # GNU stream editor
-AddPackage shadow            # Password and account management tool suite with support for shadow files and PAM
-AddPackage shfmt             # Format shell programs
-AddPackage slurp             # Select a region in a Wayland compositor
-AddPackage smartmontools     # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
-AddPackage socat             # Multipurpose relay
-AddPackage sops              # Editor of encrypted files that supports YAML, JSON and BINARY formats
-AddPackage sshfs             # FUSE client based on the SSH File Transfer Protocol
-AddPackage sshuttle          # Transparent proxy server that forwards all TCP packets over ssh
-AddPackage stardict          # International dictionary software
-AddPackage steam             # Valve's digital software delivery system
-AddPackage step-cli          # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
-AddPackage streamlink        # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
-AddPackage strongswan        # Open source IPsec implementation
-AddPackage sudo              # Give certain users the ability to run some commands as root
-AddPackage swaks             # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
-AddPackage swappy            # A Wayland native snapshot editing tool
+AddPackage
+AddPackage rustup        # The Rust toolchain installer
+AddPackage s3cmd         # A command line client for Amazon S3
+AddPackage sd            # Intuitive find & replace
+AddPackage sdcv          # StarDict Console Version
+AddPackage seahorse      # GNOME application for managing PGP keys.
+AddPackage sed           # GNU stream editor
+AddPackage shadow        # Password and account management tool suite with support for shadow files and PAM
+AddPackage shfmt         # Format shell programs
+AddPackage slurp         # Select a region in a Wayland compositor
+AddPackage smartmontools # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
+AddPackage socat         # Multipurpose relay
+AddPackage sops          # Editor of encrypted files that supports YAML, JSON and BINARY formats
+AddPackage sshfs         # FUSE client based on the SSH File Transfer Protocol
+AddPackage sshuttle      # Transparent proxy server that forwards all TCP packets over ssh
+AddPackage stardict      # International dictionary software
+AddPackage steam         # Valve's digital software delivery system
+AddPackage step-cli      # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
+AddPackage streamlink    # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
+AddPackage strongswan    # Open source IPsec implementation
+AddPackage sudo          # Give certain users the ability to run some commands as root
+AddPackage swaks         # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
+AddPackage swappy        # A Wayland native snapshot editing tool
 
 AddPackage sysfsutils             # System Utilities Based on Sysfs
 AddPackage sysstat                # a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
@@ -426,7 +426,6 @@ AddPackage imv                           # Image viewer for Wayland and X11
 AddPackage khard                         # Console CardDAV client
 AddPackage --foreign davmail             # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
-AddPackage xplr                          # A hackable, minimal, fast TUI file explorer
 AddPackage termshark                     # Terminal UI for tshark, inspired by Wireshark
 AddPackage curlie                        # The power of curl, the ease of use of httpie.
 AddPackage --foreign cheat               # Allows you to create and view interactive cheatsheets on the command-line
