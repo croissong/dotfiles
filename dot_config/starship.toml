@@ -69,3 +69,5 @@ disabled = true
 disabled = true
 [status]
 disabled = true
+[php]
+disabled = true
