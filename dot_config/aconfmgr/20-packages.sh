@@ -22,9 +22,7 @@ AddPackage broot                  # Fuzzy Search + tree + cd
 AddPackage btrfs-progs            # Btrfs filesystem utilities
 AddPackage bzip2                  # A high-quality data compression program
 AddPackage caddy                  # Fast web server with automatic HTTPS
-AddPackage calibre                # Ebook management application
 AddPackage checkbashisms          # Debian script that checks for bashisms
-AddPackage chezmoi                # Manage your dotfiles across multiple machines
 AddPackage coreutils              # The basic file, shell and text manipulation utilities of the GNU operating system
 AddPackage croc                   # Easily and securely send things from one computer to another.
 AddPackage cryptsetup             # Userspace setup tool for transparent encryption of block devices using dm-crypt
@@ -517,7 +515,6 @@ AddPackage --foreign azure-cli          # Command-line tools for Azure.
 AddPackage --foreign jetbrains-toolbox  # Manage all your JetBrains Projects and Tools
 AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
 AddPackage xh                           # Friendly and fast tool for sending HTTP requests
-AddPackage argocd                       # Declarative continuous deployment for Kubernetes
 AddPackage dog                          # Command-line DNS client like dig
 AddPackage gpg-tui                      # A terminal user interface for GnuPG
 AddPackage --foreign kubeval-bin        # Tool for validating Kubernetes YAML or JSON configuration files
@@ -583,9 +580,8 @@ AddPackage swayidle # Idle management daemon for Wayland
 # required by tenacity-git
 AddPackage portmidi # Cross platform library for interfacing with OS MIDI I/O APIs
 
-AddPackage remind                    # A sophisticated calendar and alarm program.
-AddPackage --foreign wl-color-picker # A wayland color picker that also works on wlroots
-AddPackage --foreign webtty          # Share a terminal session over WebRTC
+AddPackage remind           # A sophisticated calendar and alarm program.
+AddPackage --foreign webtty # Share a terminal session over WebRTC
 
 #
 # lib

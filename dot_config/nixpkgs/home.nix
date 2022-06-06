@@ -15,9 +15,13 @@
     }) ];
 
 
-  home.packages = with pkgs; [
+   home.packages = with pkgs; [
+    argocd                       # Declarative continuous deployment for Kubernetes
+    calibre                # Ebook management application
+    chezmoi # Manage your dotfiles across multiple machines
     nixpkgs-fmt
     pkgs.termdown # Countdown timer and stopwatch in your terminal
+    wl-color-picker # A wayland color picker that also works on wlroots
   ];
 
   # home.stateVersion= "22.11";
