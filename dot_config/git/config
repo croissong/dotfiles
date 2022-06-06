@@ -52,7 +52,7 @@
   textconv = sops -d
 
 [delta]
-    syntax-theme = gruvbox
+    syntax-theme = gruvbox-light
     side-by-side = true
 
 [interactive]
