@@ -1,5 +1,13 @@
+
 { pkgs, ... }: {
+  nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
+
+  systemd.user.sessionVariables = {
+
+    # used by: slack
+    NIXOS_OZONE_WL = 1;
+  };
 
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
    nixpkgs.overlays = [ (self: super: {
@@ -35,6 +43,7 @@
        nixpkgs-fmt
        pkgs.termdown # Countdown timer and stopwatch in your terminal
        rust-analyzer     # Experimental Rust compiler front-end for IDEs
+       slack     # Slack Desktop for Linux, using the system Electron package
        wl-color-picker # A wayland color picker that also works on wlroots
        wlsunset # Day/night gamma adjustments for Wayland compositors
        xplr # A hackable, minimal, fast TUI file explorer
