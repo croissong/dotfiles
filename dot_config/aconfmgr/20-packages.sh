@@ -364,7 +364,6 @@ AddPackage age                                 # A simple, modern and secure fil
 AddPackage clamav                              # Anti-virus toolkit for Unix
 AddPackage just                                # A handy way to save and run project-specific commands
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
-AddPackage syncthing                           # Open Source Continuous Replication / Cluster Synchronization Thing
 AddPackage --foreign ouch-git                  # Painless compression and decompression in the terminal (git version)
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage --foreign termscp                   # A feature rich terminal UI file transfer and explorer
@@ -455,10 +454,6 @@ AddPackage peco                  # Simplistic interactive filtering tool
 AddPackage watchexec             # Executes commands in response to file modifications
 AddPackage miller                # Name-indexed data processing tool
 AddPackage gping                 # Ping, but with a graph
-AddPackage go-yq                 # Portable command-line YAML processor
-AddPackage jless                 # A command-line pager for JSON data
-AddPackage ugrep                 # ultra fast grep with interactive TUI, fuzzy search, boolean queries, hexdumps and more
-
 #
 # System
 #
@@ -471,7 +466,6 @@ AddPackage --foreign chaotic-keyring    # Chaotic-AUR PGP keyring
 AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pacman
 AddPackage --foreign dashbinsh          # Relink /bin/sh to dash
 AddPackage --foreign downgrade          # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
-AddPackage --foreign batsignal          # A lightweight battery monitor daemon
 AddPackage --foreign yofi-bin           # Minimalistic menu for Wayland-based compositors
 AddPackage --foreign wob                # A lightweight overlay volume/backlight/progress/anything bar for Wayland
 AddPackage libfixposix                  # Thin wrapper over POSIX syscalls

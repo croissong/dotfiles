@@ -11,10 +11,10 @@
 
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
    nixpkgs.overlays = [ (self: super: {
-      termdown = super.termdown.overrideAttrs (prev: {
+      termdown = super.termdown.overrideAttrs (prev: rec {
         version = "1.18.0";
         src = super.fetchFromGitHub {
-          rev = "1.18.0";
+          rev = version;
           sha256 = "sha256-Hnk/MOYdbOl14fI0EFbIq7Hmc7TyhcZWGEg2/jmNJ5Y=";
           repo = "termdown";
           owner = "trehn";
@@ -40,15 +40,22 @@
        calibre                # Ebook management application
        chezmoi # Manage your dotfiles across multiple machines
        i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
+
        nixpkgs-fmt
-       pkgs.termdown # Countdown timer and stopwatch in your terminal
+       termdown # Countdown timer and stopwatch in your terminal
        rust-analyzer     # Experimental Rust compiler front-end for IDEs
        slack     # Slack Desktop for Linux, using the system Electron package
+       syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
        wl-color-picker # A wayland color picker that also works on wlroots
        wlsunset # Day/night gamma adjustments for Wayland compositors
        xplr # A hackable, minimal, fast TUI file explorer
+
      ];
    };
+
+   imports = [
+     ./packages.nix
+   ];
 
   programs.firefox = {
     enable = true;
