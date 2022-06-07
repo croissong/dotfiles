@@ -380,7 +380,6 @@ AddPackage libva-utils                         # Intel VA-API Media Applications
 
 AddPackage himalaya                     # Minimalist CLI email client
 AddPackage --foreign hydroxide          # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
-AddPackage firefox-developer-edition    # Developer Edition of the popular Firefox web browser
 AddPackage --foreign slack-electron     # Slack Desktop (Beta) for Linux, using the system Electron package
 AddPackage --foreign ungoogled-chromium # A lightweight approach to removing Google web service dependency
 AddPackage --foreign zoom               # Video Conferencing and Web Conferencing Service
