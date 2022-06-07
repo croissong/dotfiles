@@ -144,6 +144,12 @@ local keys = { -- Turn off the default CMD-m Hide action on macOS by making it
 		action = "IncreaseFontSize",
 	},
 	{
+		-- key = "-" not working for some reason :(
+		key = "raw:61",
+		mods = "CTRL",
+		action = "DecreaseFontSize",
+	},
+	{
 		key = "e",
 		mods = "CTRL|ALT",
 		action = wezterm.action({ EmitEvent = "copy-scrollback" }),
@@ -168,8 +174,7 @@ key_tables = {
 	search_mode = {
 		{ key = "w", mods = "CTRL", action = wezterm.action({ CopyMode = "ClearPattern" }) },
 
-
-    -- TODO: find out how to merge with default key table
+		-- TODO: find out how to merge with default key table
 		{ key = "Escape", mods = "NONE", action = wezterm.action({ CopyMode = "Close" }) },
 		{ key = "UpArrow", mods = "NONE", action = wezterm.action({ CopyMode = "PriorMatch" }) },
 		{ key = "Enter", mods = "NONE", action = wezterm.action({ CopyMode = "PriorMatch" }) },
@@ -227,6 +232,8 @@ mouse_bindings = { -- Change the default click behavior so that it only selects
 return {
 	automatically_reload_config = false,
 	check_for_updates = false,
+
+	-- terminfo installed via https://wezfurlong.org/wezterm/config/lua/config/term.html?highlight=xterm-256color#term--xterm-256color
 	term = "wezterm",
 	color_scheme = "Gruvbox Dark",
 	enable_tab_bar = false,
