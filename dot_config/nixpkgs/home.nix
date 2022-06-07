@@ -2,6 +2,7 @@
 { pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
+  programs.home-manager.enable = true;
 
   systemd.user.sessionVariables = {
 

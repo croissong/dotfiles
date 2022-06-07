@@ -1,108 +1,106 @@
 # So 18. Apr 17:33:57 CEST 2021 - Unknown packages
 
-AddPackage acpi_call-dkms         # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
-AddPackage acpid                  # A daemon for delivering ACPI power management events with netlink support
-AddPackage alsa-tools             # Advanced tools for certain sound cards
-AddPackage alsa-utils             # Advanced Linux Sound Architecture - Utilities
-AddPackage ansible                # Official assortment of Ansible collections
-AddPackage ansible-lint           # Checks playbooks for practices and behaviour that could potentially be improved.
-AddPackage arp-scan               # A tool that uses ARP to discover and fingerprint IP hosts on the local network
-AddPackage aspell-en              # English dictionary for aspell
-AddPackage autoconf               # A GNU tool for automatically configuring source code
-AddPackage automake               # A GNU tool for automatically creating Makefiles
-AddPackage base                   # Minimal package set to define a basic Arch Linux installation
-AddPackage bash                   # The GNU Bourne Again shell
-AddPackage bat                    # Cat clone with syntax highlighting and git integration
-AddPackage binutils               # A set of programs to assemble and manipulate binary and object files
-AddPackage bison                  # The GNU general-purpose parser generator
-AddPackage blueman                # GTK+ Bluetooth Manager
-AddPackage bluez                  # Daemons for the bluetooth protocol stack
-AddPackage bluez-utils            # Development and debugging utilities for the bluetooth protocol stack
-AddPackage broot                  # Fuzzy Search + tree + cd
-AddPackage btrfs-progs            # Btrfs filesystem utilities
-AddPackage bzip2                  # A high-quality data compression program
-AddPackage caddy                  # Fast web server with automatic HTTPS
-AddPackage checkbashisms          # Debian script that checks for bashisms
-AddPackage coreutils              # The basic file, shell and text manipulation utilities of the GNU operating system
-AddPackage croc                   # Easily and securely send things from one computer to another.
-AddPackage cryptsetup             # Userspace setup tool for transparent encryption of block devices using dm-crypt
-AddPackage cups                   # The CUPS Printing System - daemon package
-AddPackage dbeaver                # Free universal SQL Client for developers and database administrators (community edition)
-AddPackage delve                  # A debugger for the Go programming language.
-AddPackage device-mapper          # Device mapper userspace library and tools
-AddPackage diffutils              # Utility programs used for creating patch files
-AddPackage docker                 # Pack, ship and run any application as a lightweight container
-AddPackage doctl                  # The official command line interface for the DigitalOcean API
-AddPackage e2fsprogs              # Ext2/3/4 filesystem utilities
-AddPackage earlyoom               # Early OOM Daemon for Linux
-AddPackage electrum               # Lightweight Bitcoin wallet
-AddPackage ethtool                # Utility for controlling network drivers and hardware
-AddPackage exa                    # ls replacement
-AddPackage fakeroot               # Tool for simulating superuser privileges
-AddPackage fd                     # Simple, fast and user-friendly alternative to find
-AddPackage file                   # File type identification utility
-AddPackage filesystem             # Base Arch Linux files
-AddPackage findutils              # GNU utilities to locate files
-AddPackage flake8                 # The modular source code checker
-AddPackage flex                   # A tool for generating text-scanning programs
-AddPackage fwupd                  # Simple daemon to allow session software to update firmware
-AddPackage gawk                   # GNU version of awk
-AddPackage gcc                    # The GNU Compiler Collection - C and C++ frontends
-AddPackage gcc-libs               # Runtime libraries shipped by GCC
-AddPackage gdb                    # The GNU Debugger
-AddPackage gettext                # GNU internationalization library
-AddPackage ghostscript            # An interpreter for the PostScript language
-AddPackage gimp                   # GNU Image Manipulation Program
-AddPackage glibc                  # GNU C Library
-AddPackage gnome-keyring          # Stores passwords and encryption keys
-AddPackage gnu-free-fonts         # A free family of scalable outline fonts
-AddPackage go                     # Core compiler tools for the Go programming language
-AddPackage gopass                 # The slightly more awesome standard unix password manager for teams.
-AddPackage gopass-summon-provider # summon provider for gopass
-AddPackage gopls                  # Language server for Go programming language
-AddPackage gradle                 # Powerful build system for the JVM
-AddPackage graphviz               # Graph visualization software
-AddPackage grep                   # A string search utility
-AddPackage grim                   # Screenshot utility for Wayland
-AddPackage groff                  # GNU troff text-formatting system
-AddPackage gsfonts                # (URW)++ base 35 font set
-AddPackage gst-libav              # Multimedia graph framework - libav plugin
-AddPackage gst-plugins-bad        # Multimedia graph framework - bad plugins
-AddPackage gst-plugins-good       # Multimedia graph framework - good plugins
-AddPackage gst-plugins-ugly       # Multimedia graph framework - ugly plugins
-AddPackage gstreamer              # Multimedia graph framework - core
-AddPackage gstreamer-vaapi        # Multimedia graph framework - vaapi plugin
-AddPackage gutenprint             # Top quality printer drivers for POSIX systems
-AddPackage gzip                   # GNU compression utility
-AddPackage helm                   # The Kubernetes Package Manager
-AddPackage hey                    # HTTP load generator
-AddPackage hplip                  # Drivers for HP DeskJet, OfficeJet, Photosmart, Business Inkjet and some LaserJet
-AddPackage httpie                 # cURL for humans
-AddPackage inetutils              # A collection of common network programs
-AddPackage inkscape               # Professional vector graphics editor
-AddPackage inotify-tools          # inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify.
-AddPackage intel-ucode            # Microcode update files for Intel CPUs
-AddPackage iproute2               # IP Routing Utilities
-AddPackage iputils                # Network monitoring tools, including ping
-AddPackage iwd                    # Internet Wireless Daemon
-AddPackage jfsutils               # JFS filesystem utilities
-AddPackage jq                     # Command-line JSON processor
-AddPackage khal                   # CLI calendar application build around CalDAV
-AddPackage krita                  # Edit and paint images
-AddPackage kustomize              # Template-free customization of Kubernetes YAML manifests
-AddPackage lame                   # A high quality MPEG Audio Layer III (MP3) encoder
-AddPackage ledger                 # Double-entry accounting system with a command-line reporting interface
-AddPackage less                   # A terminal based program for viewing text files
-AddPackage lftp                   # Sophisticated command line based FTP client
-AddPackage libbsd                 # Provides useful functions commonly found on BSD systems like strlcpy()
-AddPackage libgdiplus             # Open Source Implementation of the GDI+ API
-AddPackage libiscsi               # Clientside library to implement the iSCSI protocol
-AddPackage libpipewire02          # User space API to deal with multimedia pipelines (0.2)
-AddPackage libreoffice-fresh      # LibreOffice branch which contains new features and program enhancements
-AddPackage libtool                # A generic library support script
-AddPackage libvirt                # API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)
-AddPackage licenses               # Standard licenses distribution package
-AddPackage light                  # Program to easily change brightness on backlight-controllers.
+AddPackage acpi_call-dkms    # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
+AddPackage acpid             # A daemon for delivering ACPI power management events with netlink support
+AddPackage alsa-tools        # Advanced tools for certain sound cards
+AddPackage alsa-utils        # Advanced Linux Sound Architecture - Utilities
+AddPackage ansible           # Official assortment of Ansible collections
+AddPackage ansible-lint      # Checks playbooks for practices and behaviour that could potentially be improved.
+AddPackage arp-scan          # A tool that uses ARP to discover and fingerprint IP hosts on the local network
+AddPackage aspell-en         # English dictionary for aspell
+AddPackage autoconf          # A GNU tool for automatically configuring source code
+AddPackage automake          # A GNU tool for automatically creating Makefiles
+AddPackage base              # Minimal package set to define a basic Arch Linux installation
+AddPackage bash              # The GNU Bourne Again shell
+AddPackage bat               # Cat clone with syntax highlighting and git integration
+AddPackage binutils          # A set of programs to assemble and manipulate binary and object files
+AddPackage bison             # The GNU general-purpose parser generator
+AddPackage blueman           # GTK+ Bluetooth Manager
+AddPackage bluez             # Daemons for the bluetooth protocol stack
+AddPackage bluez-utils       # Development and debugging utilities for the bluetooth protocol stack
+AddPackage broot             # Fuzzy Search + tree + cd
+AddPackage btrfs-progs       # Btrfs filesystem utilities
+AddPackage bzip2             # A high-quality data compression program
+AddPackage caddy             # Fast web server with automatic HTTPS
+AddPackage checkbashisms     # Debian script that checks for bashisms
+AddPackage coreutils         # The basic file, shell and text manipulation utilities of the GNU operating system
+AddPackage croc              # Easily and securely send things from one computer to another.
+AddPackage cryptsetup        # Userspace setup tool for transparent encryption of block devices using dm-crypt
+AddPackage cups              # The CUPS Printing System - daemon package
+AddPackage dbeaver           # Free universal SQL Client for developers and database administrators (community edition)
+AddPackage delve             # A debugger for the Go programming language.
+AddPackage device-mapper     # Device mapper userspace library and tools
+AddPackage diffutils         # Utility programs used for creating patch files
+AddPackage docker            # Pack, ship and run any application as a lightweight container
+AddPackage doctl             # The official command line interface for the DigitalOcean API
+AddPackage e2fsprogs         # Ext2/3/4 filesystem utilities
+AddPackage earlyoom          # Early OOM Daemon for Linux
+AddPackage electrum          # Lightweight Bitcoin wallet
+AddPackage ethtool           # Utility for controlling network drivers and hardware
+AddPackage exa               # ls replacement
+AddPackage fakeroot          # Tool for simulating superuser privileges
+AddPackage fd                # Simple, fast and user-friendly alternative to find
+AddPackage file              # File type identification utility
+AddPackage filesystem        # Base Arch Linux files
+AddPackage findutils         # GNU utilities to locate files
+AddPackage flake8            # The modular source code checker
+AddPackage flex              # A tool for generating text-scanning programs
+AddPackage fwupd             # Simple daemon to allow session software to update firmware
+AddPackage gawk              # GNU version of awk
+AddPackage gcc               # The GNU Compiler Collection - C and C++ frontends
+AddPackage gcc-libs          # Runtime libraries shipped by GCC
+AddPackage gdb               # The GNU Debugger
+AddPackage gettext           # GNU internationalization library
+AddPackage ghostscript       # An interpreter for the PostScript language
+AddPackage gimp              # GNU Image Manipulation Program
+AddPackage glibc             # GNU C Library
+AddPackage gnome-keyring     # Stores passwords and encryption keys
+AddPackage gnu-free-fonts    # A free family of scalable outline fonts
+AddPackage go                # Core compiler tools for the Go programming language
+AddPackage gopls             # Language server for Go programming language
+AddPackage gradle            # Powerful build system for the JVM
+AddPackage graphviz          # Graph visualization software
+AddPackage grep              # A string search utility
+AddPackage grim              # Screenshot utility for Wayland
+AddPackage groff             # GNU troff text-formatting system
+AddPackage gsfonts           # (URW)++ base 35 font set
+AddPackage gst-libav         # Multimedia graph framework - libav plugin
+AddPackage gst-plugins-bad   # Multimedia graph framework - bad plugins
+AddPackage gst-plugins-good  # Multimedia graph framework - good plugins
+AddPackage gst-plugins-ugly  # Multimedia graph framework - ugly plugins
+AddPackage gstreamer         # Multimedia graph framework - core
+AddPackage gstreamer-vaapi   # Multimedia graph framework - vaapi plugin
+AddPackage gutenprint        # Top quality printer drivers for POSIX systems
+AddPackage gzip              # GNU compression utility
+AddPackage helm              # The Kubernetes Package Manager
+AddPackage hey               # HTTP load generator
+AddPackage hplip             # Drivers for HP DeskJet, OfficeJet, Photosmart, Business Inkjet and some LaserJet
+AddPackage httpie            # cURL for humans
+AddPackage inetutils         # A collection of common network programs
+AddPackage inkscape          # Professional vector graphics editor
+AddPackage inotify-tools     # inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify.
+AddPackage intel-ucode       # Microcode update files for Intel CPUs
+AddPackage iproute2          # IP Routing Utilities
+AddPackage iputils           # Network monitoring tools, including ping
+AddPackage iwd               # Internet Wireless Daemon
+AddPackage jfsutils          # JFS filesystem utilities
+AddPackage jq                # Command-line JSON processor
+AddPackage khal              # CLI calendar application build around CalDAV
+AddPackage krita             # Edit and paint images
+AddPackage kustomize         # Template-free customization of Kubernetes YAML manifests
+AddPackage lame              # A high quality MPEG Audio Layer III (MP3) encoder
+AddPackage ledger            # Double-entry accounting system with a command-line reporting interface
+AddPackage less              # A terminal based program for viewing text files
+AddPackage lftp              # Sophisticated command line based FTP client
+AddPackage libbsd            # Provides useful functions commonly found on BSD systems like strlcpy()
+AddPackage libgdiplus        # Open Source Implementation of the GDI+ API
+AddPackage libiscsi          # Clientside library to implement the iSCSI protocol
+AddPackage libpipewire02     # User space API to deal with multimedia pipelines (0.2)
+AddPackage libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
+AddPackage libtool           # A generic library support script
+AddPackage libvirt           # API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)
+AddPackage licenses          # Standard licenses distribution package
+AddPackage light             # Program to easily change brightness on backlight-controllers.
 
 AddPackage linux-firmware    # Firmware files for Linux
 AddPackage linux-lts         # The LTS Linux kernel and modules
@@ -377,13 +375,11 @@ AddPackage libva-utils                         # Intel VA-API Media Applications
 ## daily
 ##
 
-AddPackage himalaya                     # Minimalist CLI email client
-AddPackage --foreign hydroxide          # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
-AddPackage --foreign ungoogled-chromium # A lightweight approach to removing Google web service dependency
-AddPackage --foreign zoom               # Video Conferencing and Web Conferencing Service
-AddPackage --foreign nyxt-browser-git   # Keyboard-oriented, Common Lisp extensible web-browser
-AddPackage --foreign toggldesktop       # Toggl time tracking software
-AddPackage kalendar                     # A calendar application using Akonadi to sync with external services
+AddPackage himalaya                   # Minimalist CLI email client
+AddPackage --foreign hydroxide        # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
+AddPackage --foreign nyxt-browser-git # Keyboard-oriented, Common Lisp extensible web-browser
+AddPackage --foreign toggldesktop     # Toggl time tracking software
+AddPackage kalendar                   # A calendar application using Akonadi to sync with external services
 
 #
 # shell
@@ -458,7 +454,6 @@ AddPackage gping                 # Ping, but with a graph
 # System
 #
 
-AddPackage --foreign mako-git           # Lightweight notification daemon for Wayland
 AddPackage upower                       # Abstraction for enumerating power devices, listening to device events and querying history and statistics
 AddPackage --foreign handlr-bin         # Powerful alternative to xdg-utils written in Rust
 AddPackage --foreign xdg-utils-handlr   # A shim for xdg-utils to use handlr under the hood
