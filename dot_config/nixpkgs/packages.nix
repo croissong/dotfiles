@@ -2,14 +2,16 @@
 let
   packages = with pkgs; {
     cli = [
-      bat               # Cat clone with syntax highlighting and git integration
+      bat # Cat clone with syntax highlighting and git integration
       jless # A command-line pager for JSON data
 
-      gopass                 # The slightly more awesome standard unix password manager for teams.
+      gopass # The slightly more awesome standard unix password manager for teams.
       gopass-summon-provider # summon provider for gopass
 
-      podman            # Tool and library for running OCI-based containers in pods
-      podman-compose    # A script to run docker-compose.yml using podman
+      ouch # Painless compression and decompression in the terminal (git version)
+
+      podman # Tool and library for running OCI-based containers in pods
+      podman-compose # A script to run docker-compose.yml using podman
 
       yq-go # Portable command-line YAML processor
     ];
@@ -23,7 +25,7 @@ let
 
     apps = [
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
-      zoom             # Video Conferencing and Web Conferencing Service
+      zoom # Video Conferencing and Web Conferencing Service
     ];
 
 
@@ -66,6 +68,50 @@ in
           sha256 = "sha256-06UDXVsC7jDd/Lq7dSu3ZnkGW9rLiGHSJLoG9SZi1HY=";
         };
       });
+    })
+
+
+    (self: super: {
+      # https://github.com/NixOS/nixpkgs/issues/107070
+      ouch = super.rustPlatform.buildRustPackage
+        rec {
+          pname = "ouch";
+          version = "0.3.1-next";
+
+          src = super.fetchFromGitHub {
+            owner = "ouch-org";
+            repo = pname;
+            rev = "fc532d81d8136cc69eb73bdf3c3d65faede7a596";
+            sha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnY=";
+          };
+
+          cargoSha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnR=";
+          cargoHash = "sha256-RsvpFrwX7QhKpOevH9OnG/E0vRbBpSWLO2j6NUVT/Sg=";
+
+
+          nativeBuildInputs = [ super.help2man super.installShellFiles super.pkg-config ];
+
+          buildInputs = [ super.bzip2 super.xz super.zlib super.zstd ];
+
+          buildFeatures = [ "zstd/pkg-config" ];
+
+          postInstall = ''
+            help2man $out/bin/ouch > ouch.1
+            installManPage ouch.1
+
+            completions=($releaseDir/build/ouch-*/out/completions)
+            installShellCompletion $completions/ouch.{bash,fish} --zsh $completions/_ouch
+          '';
+
+          GEN_COMPLETIONS = 1;
+
+          meta = with super.lib; {
+            description = "A command-line utility for easily compressing and decompressing files and directories";
+            homepage = "https://github.com/ouch-org/ouch";
+            license = licenses.mit;
+            maintainers = with maintainers; [ figsoda psibi ];
+          };
+        };
     })
   ];
 }

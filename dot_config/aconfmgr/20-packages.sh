@@ -356,7 +356,6 @@ AddPackage age                                 # A simple, modern and secure fil
 AddPackage clamav                              # Anti-virus toolkit for Unix
 AddPackage just                                # A handy way to save and run project-specific commands
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
-AddPackage --foreign ouch-git                  # Painless compression and decompression in the terminal (git version)
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage --foreign termscp                   # A feature rich terminal UI file transfer and explorer
 AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes
