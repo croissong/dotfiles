@@ -4,26 +4,56 @@
         "/home/croissong/.local/bin/bin": {
             "path": "/home/croissong/.local/bin/bin",
             "remote_name": "bin",
-            "version": "v0.11.0",
+            "version": "v0.15.0",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "github.com/marcosnils/bin",
-            "provider": "github"
+            "url": "https://github.com/marcosnils/bin/releases/tag/v0.15.0",
+            "provider": "",
+            "package_path": ""
         },
         "/home/croissong/.local/bin/humioctl": {
             "path": "/home/croissong/.local/bin/humioctl",
             "remote_name": "humioctl",
-            "version": "v0.28.11",
+            "version": "v0.29.1",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "github.com/humio/cli",
-            "provider": "github"
+            "url": "https://github.com/humio/cli/releases/tag/v0.29.1",
+            "provider": "",
+            "package_path": "humioctl"
+        },
+        "/home/croissong/.local/bin/mizu": {
+            "path": "/home/croissong/.local/bin/mizu",
+            "remote_name": "mizu",
+            "version": "32.0",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "https://github.com/up9inc/mizu/releases/tag/32.0",
+            "provider": "",
+            "package_path": ""
+        },
+        "/home/croissong/.local/bin/sttr": {
+            "path": "/home/croissong/.local/bin/sttr",
+            "remote_name": "sttr",
+            "version": "v0.2.12",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "https://github.com/abhimanyu003/sttr/releases/tag/v0.2.12",
+            "provider": "",
+            "package_path": ""
+        },
+        "/home/croissong/.local/bin/switcher": {
+            "path": "/home/croissong/.local/bin/switcher",
+            "remote_name": "switcher",
+            "version": "0.7.0",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "https://github.com/danielfoehrKn/kubeswitch/",
+            "provider": "github",
+            "package_path": ""
         },
         "/home/croissong/.local/bin/vals": {
             "path": "/home/croissong/.local/bin/vals",
             "remote_name": "vals",
-            "version": "v0.15.0",
+            "version": "v0.16.2",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "github.com/variantdev/vals",
-            "provider": "github"
+            "url": "https://github.com/variantdev/vals/releases/tag/v0.16.2",
+            "provider": "",
+            "package_path": "vals"
         }
     }
 }
