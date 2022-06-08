@@ -10,20 +10,12 @@ bat_full = "100%"
 bat_charging = "+"
 bat_discharging = "-"
 
-
-[[block]]
-block = "custom"
-command = "$XDG_CONFIG_HOME/i3status-rust/pomodoro-block.sh"
-json = true
-interval = 30
-
 [[block]]
 block = "maildir"
 interval = 60
 inboxes = [
-  # TODO: env var https://github.com/greshake/i3status-rust/issues/1246
-  "/home/croissong/.local/share/mail/jm@iogroup.org/INBOX",
-  "/home/croissong/.local/share/mail/jm@iogroup.org/ops"
+  "~/.local/share/mail/jm@iogroup.org/INBOX",
+  "~/.local/share/mail/jm@iogroup.org/ops"
 ]
 threshold_warning = 5
 threshold_critical = 10000000
