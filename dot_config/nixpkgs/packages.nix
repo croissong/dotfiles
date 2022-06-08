@@ -2,10 +2,14 @@
 let
   packages = with pkgs; {
     cli = [
+      bat               # Cat clone with syntax highlighting and git integration
       jless # A command-line pager for JSON data
 
       gopass                 # The slightly more awesome standard unix password manager for teams.
       gopass-summon-provider # summon provider for gopass
+
+      podman            # Tool and library for running OCI-based containers in pods
+      podman-compose    # A script to run docker-compose.yml using podman
 
       yq-go # Portable command-line YAML processor
     ];
@@ -33,6 +37,10 @@ in
     packages.cli
     ++ packages.system
     ++ packages.apps;
+
+
+
+  systemd.user.sessionVariables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
 
   nixpkgs.overlays = [
     (self: super: {

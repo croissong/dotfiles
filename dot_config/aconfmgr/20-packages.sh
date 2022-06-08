@@ -1,18 +1,18 @@
 # So 18. Apr 17:33:57 CEST 2021 - Unknown packages
 
-AddPackage acpi_call-dkms    # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
-AddPackage acpid             # A daemon for delivering ACPI power management events with netlink support
-AddPackage alsa-tools        # Advanced tools for certain sound cards
-AddPackage alsa-utils        # Advanced Linux Sound Architecture - Utilities
-AddPackage ansible           # Official assortment of Ansible collections
-AddPackage ansible-lint      # Checks playbooks for practices and behaviour that could potentially be improved.
-AddPackage arp-scan          # A tool that uses ARP to discover and fingerprint IP hosts on the local network
-AddPackage aspell-en         # English dictionary for aspell
-AddPackage autoconf          # A GNU tool for automatically configuring source code
-AddPackage automake          # A GNU tool for automatically creating Makefiles
-AddPackage base              # Minimal package set to define a basic Arch Linux installation
-AddPackage bash              # The GNU Bourne Again shell
-AddPackage bat               # Cat clone with syntax highlighting and git integration
+AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
+AddPackage acpid          # A daemon for delivering ACPI power management events with netlink support
+AddPackage alsa-tools     # Advanced tools for certain sound cards
+AddPackage alsa-utils     # Advanced Linux Sound Architecture - Utilities
+AddPackage ansible        # Official assortment of Ansible collections
+AddPackage ansible-lint   # Checks playbooks for practices and behaviour that could potentially be improved.
+AddPackage arp-scan       # A tool that uses ARP to discover and fingerprint IP hosts on the local network
+AddPackage aspell-en      # English dictionary for aspell
+AddPackage autoconf       # A GNU tool for automatically configuring source code
+AddPackage automake       # A GNU tool for automatically creating Makefiles
+AddPackage base           # Minimal package set to define a basic Arch Linux installation
+AddPackage bash           # The GNU Bourne Again shell
+AddPackage
 AddPackage binutils          # A set of programs to assemble and manipulate binary and object files
 AddPackage bison             # The GNU general-purpose parser generator
 AddPackage blueman           # GTK+ Bluetooth Manager
@@ -72,7 +72,6 @@ AddPackage gstreamer         # Multimedia graph framework - core
 AddPackage gstreamer-vaapi   # Multimedia graph framework - vaapi plugin
 AddPackage gutenprint        # Top quality printer drivers for POSIX systems
 AddPackage gzip              # GNU compression utility
-AddPackage helm              # The Kubernetes Package Manager
 AddPackage hey               # HTTP load generator
 AddPackage hplip             # Drivers for HP DeskJet, OfficeJet, Photosmart, Business Inkjet and some LaserJet
 AddPackage httpie            # cURL for humans
@@ -107,58 +106,57 @@ AddPackage linux-lts         # The LTS Linux kernel and modules
 AddPackage linux-zen         # The Linux ZEN kernel and modules
 AddPackage linux-zen-headers # Headers and scripts for building modules for the Linux ZEN kernel
 
-AddPackage logrotate         # Rotates system logs automatically
-AddPackage lsof              # Lists open files for running Unix processes
-AddPackage lutris            # Open Gaming Platform
-AddPackage lvm2              # Logical Volume Manager 2 utilities
-AddPackage lynx              # A text browser for the World Wide Web
-AddPackage lzop              # File compressor using lzo lib
-AddPackage m4                # The GNU macro processor
-AddPackage make              # GNU make utility to maintain groups of programs
-AddPackage man-db            # A utility for reading man pages
-AddPackage man-pages         # Linux man pages
-AddPackage maven             # Java project management and project comprehension tool
-AddPackage mdadm             # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
-AddPackage meld              # Compare files, directories and working copies
-AddPackage miniserve         # Tool to serve files via HTTP
-AddPackage mitmproxy         # SSL-capable man-in-the-middle HTTP proxy
-AddPackage moreutils         # A growing collection of the unix tools that nobody thought to write thirty years ago
-AddPackage mpv               # a free, open source, and cross-platform media player
-AddPackage mtr               # Combines the functionality of traceroute and ping into one tool (CLI version)
-AddPackage mumble            # An Open Source, low-latency, high quality voice chat software (client)
-AddPackage mypy              # Optional static typing for Python 2 and 3 (PEP484)
-AddPackage net-tools         # Configuration tools for Linux networking
-AddPackage nethogs           # A net top tool which displays traffic used per process instead of per IP or interface
-AddPackage nftables          # Netfilter tables userspace tools
-AddPackage nmap              # Utility for network discovery and security auditing
-AddPackage noto-fonts        # Google Noto TTF fonts
-AddPackage noto-fonts-emoji  # Google Noto emoji fonts
-AddPackage npm               # A package manager for javascript
-AddPackage nvchecker         # New version checker for software releases
-AddPackage nzbget            # Download from Usenet using .nzb files
-AddPackage openldap          # Lightweight Directory Access Protocol (LDAP) client and server
-AddPackage openssh           # Premier connectivity tool for remote login with the SSH protocol
-AddPackage opus              # Totally open, royalty-free, highly versatile audio codec
-AddPackage otf-font-awesome  # Iconic font designed for Bootstrap
-AddPackage p7zip             # Command-line file archiver with high compression ratio
-AddPackage packer            # tool for creating identical machine images for multiple platforms from a single source configuration
-AddPackage pacman            # A library-based package manager with dependency support
-AddPackage pamixer           # Pulseaudio command-line mixer like amixer
-AddPackage parallel          # A shell tool for executing jobs in parallel
-AddPackage pass              # Stores, retrieves, generates, and synchronizes passwords securely
-AddPackage patch             # A utility to apply patch files to original sources
-AddPackage patchutils        # A small collection of programs that operate on patch files
-AddPackage pciutils          # PCI bus configuration space access library and tools
-AddPackage perl              # A highly capable, feature-rich programming language
-AddPackage perl-cgi          # Handle Common Gateway Interface requests and responses
-AddPackage physlock          # Lightweight Linux console locking tool
-AddPackage pipewire          # Low-latency audio/video router and processor
-AddPackage pipewire-alsa     # Low-latency audio/video router and processor - ALSA configuration
-AddPackage pipewire-pulse    # Low-latency audio/video router and processor - PulseAudio replacement
-AddPackage pkgconf           # Package compiler and linker metadata toolkit
-AddPackage plantuml          # Component that allows to quickly write uml diagrams
-AddPackage podman            # Tool and library for running OCI-based containers in pods
-AddPackage podman-compose    # A script to run docker-compose.yml using podman
+AddPackage logrotate        # Rotates system logs automatically
+AddPackage lsof             # Lists open files for running Unix processes
+AddPackage lutris           # Open Gaming Platform
+AddPackage lvm2             # Logical Volume Manager 2 utilities
+AddPackage lynx             # A text browser for the World Wide Web
+AddPackage lzop             # File compressor using lzo lib
+AddPackage m4               # The GNU macro processor
+AddPackage make             # GNU make utility to maintain groups of programs
+AddPackage man-db           # A utility for reading man pages
+AddPackage man-pages        # Linux man pages
+AddPackage maven            # Java project management and project comprehension tool
+AddPackage mdadm            # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
+AddPackage meld             # Compare files, directories and working copies
+AddPackage miniserve        # Tool to serve files via HTTP
+AddPackage mitmproxy        # SSL-capable man-in-the-middle HTTP proxy
+AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
+AddPackage mpv              # a free, open source, and cross-platform media player
+AddPackage mtr              # Combines the functionality of traceroute and ping into one tool (CLI version)
+AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
+AddPackage mypy             # Optional static typing for Python 2 and 3 (PEP484)
+AddPackage net-tools        # Configuration tools for Linux networking
+AddPackage nethogs          # A net top tool which displays traffic used per process instead of per IP or interface
+AddPackage nftables         # Netfilter tables userspace tools
+AddPackage nmap             # Utility for network discovery and security auditing
+AddPackage noto-fonts       # Google Noto TTF fonts
+AddPackage noto-fonts-emoji # Google Noto emoji fonts
+AddPackage npm              # A package manager for javascript
+AddPackage nvchecker        # New version checker for software releases
+AddPackage nzbget           # Download from Usenet using .nzb files
+AddPackage openldap         # Lightweight Directory Access Protocol (LDAP) client and server
+AddPackage openssh          # Premier connectivity tool for remote login with the SSH protocol
+AddPackage opus             # Totally open, royalty-free, highly versatile audio codec
+AddPackage otf-font-awesome # Iconic font designed for Bootstrap
+AddPackage p7zip            # Command-line file archiver with high compression ratio
+AddPackage packer           # tool for creating identical machine images for multiple platforms from a single source configuration
+AddPackage pacman           # A library-based package manager with dependency support
+AddPackage pamixer          # Pulseaudio command-line mixer like amixer
+AddPackage parallel         # A shell tool for executing jobs in parallel
+AddPackage pass             # Stores, retrieves, generates, and synchronizes passwords securely
+AddPackage patch            # A utility to apply patch files to original sources
+AddPackage patchutils       # A small collection of programs that operate on patch files
+AddPackage pciutils         # PCI bus configuration space access library and tools
+AddPackage perl             # A highly capable, feature-rich programming language
+AddPackage perl-cgi         # Handle Common Gateway Interface requests and responses
+AddPackage physlock         # Lightweight Linux console locking tool
+AddPackage pipewire         # Low-latency audio/video router and processor
+AddPackage pipewire-alsa    # Low-latency audio/video router and processor - ALSA configuration
+AddPackage pipewire-pulse   # Low-latency audio/video router and processor - PulseAudio replacement
+AddPackage pkgconf          # Package compiler and linker metadata toolkit
+AddPackage plantuml         # Component that allows to quickly write uml diagrams
+
 AddPackage prettier          # An opinionated code formatter for JS, JSON, CSS, YAML and much more
 AddPackage procps-ng         # Utilities for monitoring your system and its processes
 AddPackage procs             # A modern replacement for ps written in Rust
@@ -296,9 +294,6 @@ AddPackage --foreign ike-scan                       # A tool that uses IKE proto
 AddPackage --foreign jp                             # Command line interface to JMESPath
 AddPackage --foreign jsonnet                        # The data templating language
 AddPackage --foreign keybase-bin                    # the Keybase Go client, filesystem, and GUI
-AddPackage --foreign krew-bin                       # Krew is the package manager for kubectl plugins.
-AddPackage --foreign kubectl-bin                    # Kubernetes.io client binary
-AddPackage --foreign kubernetes-helmfile-bin        # Deploy Kubernetes Helm Charts
 AddPackage --foreign libspotify                     # C API package allowing third-party developers to write applications that utilize the Spotify music streaming service
 AddPackage --foreign linkerd                        # A service sidecar for Kubernetes and beyond. Main repo for Linkerd 2.x. - https
 AddPackage --foreign log4c                          # Logging FrameWork for C, as Log4j or Log4Cpp
@@ -325,7 +320,6 @@ AddPackage --foreign python-soundcloud-git          # A Python wrapper around th
 AddPackage --foreign rtags                          # A client/server application that indexes C/C++ code
 AddPackage --foreign svgo                           # Tool for optimizing SVG files
 AddPackage --foreign teams                          # Microsoft Teams for Linux is your chat-centered workspace in Office 365
-AddPackage --foreign telepresence                   # Local development against a remote Kubernetes or OpenShift cluster
 
 AddPackage --foreign ttf-ubraille  # Unicode Braillt font
 AddPackage --foreign usql          # A universal command-line interface for SQL databases
@@ -504,7 +498,6 @@ AddPackage gpg-tui                      # A terminal user interface for GnuPG
 AddPackage --foreign kubeval-bin        # Tool for validating Kubernetes YAML or JSON configuration files
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
 AddPackage go-tools                     # Developer tools for the Go programming language
-AddPackage kubectx                      # Utility to manage and switch between kubectl contexts and Kubernetes namespaces
 AddPackage angle-grinder                # Slice and dice logs on the command line
 AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
 AddPackage --foreign cqlsh              # CQL shell for apache cassandra
@@ -525,7 +518,6 @@ AddPackage python-pipx                  # Install and Run Python Applications in
 AddPackage skopeo                       # A command line utility for various operations on container images and image repositories.
 AddPackage stylua                       # Code formatter for Lua
 AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
-AddPackage --foreign kubeswitch-bin     # The kubectx for operators.
 
 #
 # Stuff
