@@ -14,6 +14,11 @@ let
       podman-compose # A script to run docker-compose.yml using podman
 
       yq-go # Portable command-line YAML processor
+      zbar                   # Application and library for reading bar codes from various sources
+    ];
+
+    media = [
+      ffmpeg_5 # Complete solution to record, convert and stream audio and video
     ];
 
 
@@ -23,7 +28,17 @@ let
     ];
 
 
+    dev = [
+      packer           # tool for creating identical machine images for multiple platforms from a single source configuration
+      pluto              # A cli tool to help discover deprecated apiVersions in Kubernetes
+      shellcheck     # Shell script analysis tool (binary release)
+      terraform              # HashiCorp tool for building and updating infrastructure as code idempotently
+    ];
+
+
     apps = [
+      gnome-podcasts # Podcast application for GNOME
+      mpv              # a free, open source, and cross-platform media player
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
       zoom # Video Conferencing and Web Conferencing Service
     ];
@@ -38,7 +53,9 @@ in
   home.packages =
     packages.cli
     ++ packages.system
-    ++ packages.apps;
+    ++ packages.apps
+    ++ packages.media
+    ++ packages.dev;
 
 
 

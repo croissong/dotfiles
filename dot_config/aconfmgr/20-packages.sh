@@ -65,7 +65,6 @@ AddPackage grim              # Screenshot utility for Wayland
 AddPackage groff             # GNU troff text-formatting system
 AddPackage gsfonts           # (URW)++ base 35 font set
 AddPackage gst-libav         # Multimedia graph framework - libav plugin
-AddPackage gst-plugins-bad   # Multimedia graph framework - bad plugins
 AddPackage gst-plugins-good  # Multimedia graph framework - good plugins
 AddPackage gst-plugins-ugly  # Multimedia graph framework - ugly plugins
 AddPackage gstreamer         # Multimedia graph framework - core
@@ -122,7 +121,6 @@ AddPackage meld             # Compare files, directories and working copies
 AddPackage miniserve        # Tool to serve files via HTTP
 AddPackage mitmproxy        # SSL-capable man-in-the-middle HTTP proxy
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
-AddPackage mpv              # a free, open source, and cross-platform media player
 AddPackage mtr              # Combines the functionality of traceroute and ping into one tool (CLI version)
 AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
 AddPackage mypy             # Optional static typing for Python 2 and 3 (PEP484)
@@ -140,7 +138,6 @@ AddPackage openssh          # Premier connectivity tool for remote login with th
 AddPackage opus             # Totally open, royalty-free, highly versatile audio codec
 AddPackage otf-font-awesome # Iconic font designed for Bootstrap
 AddPackage p7zip            # Command-line file archiver with high compression ratio
-AddPackage packer           # tool for creating identical machine images for multiple platforms from a single source configuration
 AddPackage pacman           # A library-based package manager with dependency support
 AddPackage pamixer          # Pulseaudio command-line mixer like amixer
 AddPackage parallel         # A shell tool for executing jobs in parallel
@@ -179,29 +176,28 @@ AddPackage revive            # faster, stricter, configurable, extensible, and b
 AddPackage ripgrep           # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage rmlint            # Tool to remove duplicates and other lint, being much faster than fdupes
 AddPackage rsync             # A fast and versatile file copying tool for remote and local files
-AddPackage
-AddPackage rustup        # The Rust toolchain installer
-AddPackage s3cmd         # A command line client for Amazon S3
-AddPackage sd            # Intuitive find & replace
-AddPackage sdcv          # StarDict Console Version
-AddPackage seahorse      # GNOME application for managing PGP keys.
-AddPackage sed           # GNU stream editor
-AddPackage shadow        # Password and account management tool suite with support for shadow files and PAM
-AddPackage shfmt         # Format shell programs
-AddPackage slurp         # Select a region in a Wayland compositor
-AddPackage smartmontools # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
-AddPackage socat         # Multipurpose relay
-AddPackage sops          # Editor of encrypted files that supports YAML, JSON and BINARY formats
-AddPackage sshfs         # FUSE client based on the SSH File Transfer Protocol
-AddPackage sshuttle      # Transparent proxy server that forwards all TCP packets over ssh
-AddPackage stardict      # International dictionary software
-AddPackage steam         # Valve's digital software delivery system
-AddPackage step-cli      # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
-AddPackage streamlink    # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
-AddPackage strongswan    # Open source IPsec implementation
-AddPackage sudo          # Give certain users the ability to run some commands as root
-AddPackage swaks         # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
-AddPackage swappy        # A Wayland native snapshot editing tool
+AddPackage rustup            # The Rust toolchain installer
+AddPackage s3cmd             # A command line client for Amazon S3
+AddPackage sd                # Intuitive find & replace
+AddPackage sdcv              # StarDict Console Version
+AddPackage seahorse          # GNOME application for managing PGP keys.
+AddPackage sed               # GNU stream editor
+AddPackage shadow            # Password and account management tool suite with support for shadow files and PAM
+AddPackage shfmt             # Format shell programs
+AddPackage slurp             # Select a region in a Wayland compositor
+AddPackage smartmontools     # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
+AddPackage socat             # Multipurpose relay
+AddPackage sops              # Editor of encrypted files that supports YAML, JSON and BINARY formats
+AddPackage sshfs             # FUSE client based on the SSH File Transfer Protocol
+AddPackage sshuttle          # Transparent proxy server that forwards all TCP packets over ssh
+AddPackage stardict          # International dictionary software
+AddPackage steam             # Valve's digital software delivery system
+AddPackage step-cli          # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
+AddPackage streamlink        # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
+AddPackage strongswan        # Open source IPsec implementation
+AddPackage sudo              # Give certain users the ability to run some commands as root
+AddPackage swaks             # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
+AddPackage swappy            # A Wayland native snapshot editing tool
 
 AddPackage sysfsutils             # System Utilities Based on Sysfs
 AddPackage sysstat                # a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
@@ -211,7 +207,6 @@ AddPackage systemd-sysvcompat     # sysvinit compat for systemd
 AddPackage tar                    # Utility used to store, backup, and transport files
 AddPackage task                   # A command-line todo list manager
 AddPackage tcpdump                # Powerful command-line packet analyzer
-AddPackage terraform              # HashiCorp tool for building and updating infrastructure as code idempotently
 AddPackage tesseract              # An OCR program
 AddPackage tesseract-data-eng     # Tesseract OCR data (eng)
 AddPackage texinfo                # GNU documentation system for on-line information and printed output
@@ -271,8 +266,6 @@ AddPackage xorg-xrandr            # Primitive command line interface to RandR ex
 AddPackage xorg-xset              # User preference utility for X
 AddPackage xorg-xwayland          # run X clients under wayland
 AddPackage yarn                   # Fast, reliable, and secure dependency management
-AddPackage zbar                   # Application and library for reading bar codes from various sources
-AddPackage zip                    # Compressor/archiver for creating and modifying zipfiles
 AddPackage zsh                    # A very advanced and programmable command interpreter (shell) for UNIX
 
 # So 18. Apr 17:34:04 CEST 2021 - Unknown foreign packages
@@ -505,8 +498,6 @@ AddPackage --foreign frpc               # A fast reverse proxy to help you expos
 AddPackage --foreign terraform-docs-bin # Generate docs from terraform modules
 AddPackage glow                         # Command-line markdown renderer
 AddPackage --foreign gron-bin           # gron transforms JSON into discrete assignments to make it easier to grep.
-AddPackage --foreign pluto              # A cli tool to help discover deprecated apiVersions in Kubernetes
-AddPackage --foreign shellcheck-bin     # Shell script analysis tool (binary release)
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
@@ -540,8 +531,6 @@ AddPackage kdenlive             # A non-linear video editor for Linux using the 
 #
 # Media
 #
-
-AddPackage gnome-podcasts # Podcast application for GNOME
 
 # Not sure
 AddPackage sox # The Swiss Army knife of sound processing tools
