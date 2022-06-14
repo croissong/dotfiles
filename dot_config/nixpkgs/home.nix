@@ -1,4 +1,3 @@
-
 { pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
@@ -11,7 +10,8 @@
   };
 
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
-   nixpkgs.overlays = [ (self: super: {
+  nixpkgs.overlays = [
+    (self: super: {
       termdown = super.termdown.overrideAttrs (prev: rec {
         version = "1.18.0";
         src = super.fetchFromGitHub {
@@ -21,43 +21,54 @@
           owner = "trehn";
         };
       });
-    }) ];
+    })
+  ];
 
 
-   services.wlsunset = {
-     enable = true;
-     latitude = "51.3";
-     longitude = "9.5";
-     temperature.night = 2500;
-   };
+  services.wlsunset = {
+    enable = true;
+    latitude = "51.3";
+    longitude = "9.5";
+    temperature.night = 2500;
+  };
 
-   home = {
-     stateVersion = "21.11";
-     homeDirectory = "/home/croissong";
-     username = "croissong";
+  home = {
+    stateVersion = "21.11";
+    homeDirectory = "/home/croissong";
+    username = "croissong";
 
-     packages = with pkgs; [
-       argocd                       # Declarative continuous deployment for Kubernetes
-       calibre                # Ebook management application
-       chezmoi # Manage your dotfiles across multiple machines
-       i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
+    packages = with pkgs; [
+      argocd # Declarative continuous deployment for Kubernetes
+      calibre # Ebook management application
+      chezmoi # Manage your dotfiles across multiple machines
+      i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
 
-       nixpkgs-fmt
-       termdown # Countdown timer and stopwatch in your terminal
-       rust-analyzer     # Experimental Rust compiler front-end for IDEs
-       slack     # Slack Desktop for Linux, using the system Electron package
-       syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
-       wl-color-picker # A wayland color picker that also works on wlroots
-       wlsunset # Day/night gamma adjustments for Wayland compositors
-       xplr # A hackable, minimal, fast TUI file explorer
+      nixpkgs-fmt
+      termdown # Countdown timer and stopwatch in your terminal
+      rust-analyzer # Experimental Rust compiler front-end for IDEs
+      slack # Slack Desktop for Linux, using the system Electron package
+      syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
+      wl-color-picker # A wayland color picker that also works on wlroots
+      wlsunset # Day/night gamma adjustments for Wayland compositors
+      xplr # A hackable, minimal, fast TUI file explorer
 
-     ];
-   };
+    ];
+  };
 
-   imports = [
-     ./packages.nix
-     ./k8s.nix
-   ];
+  imports = [
+    ./packages.nix
+    ./k8s.nix
+  ];
+
+  programs.chromium = {
+    enable = true;
+    package = pkgs.ungoogled-chromium;
+    commandLineArgs = [
+      "--enable-webrtc-pipewire-capturer"
+      "--enable-features=UseOzonePlatform"
+      "--ozone-platform=wayland"
+    ];
+  };
 
   programs.firefox = {
     enable = true;
@@ -65,7 +76,7 @@
     profiles.dev-edition-default = {
       path = "p8klfsds.dev-edition-default";
       userChrome = ''
-      #TabsToolbar { visibility: collapse; }
+        #TabsToolbar { visibility: collapse; }
       '';
     };
 
@@ -86,7 +97,7 @@
           Locked = true;
         };
         PromptForDownloadLocation = true;
-        RequestedLocales = ["en"];
+        RequestedLocales = [ "en" ];
         UserMessaging = {
           ExtensionRecommendations = false;
           FeatureRecommendations = true;
@@ -122,25 +133,25 @@
       };
 
       extraPrefs = ''
-      // Show more ssl cert infos
-      lockPref("browser.aboutConfig.showWarning", false);
-      lockPref("browser.startup.page", 3);
-      lockPref("browser.toolbars.bookmarks.visibility", "never");
-      lockPref("extensions.htmlaboutaddons.recommendations.enabled", false);
-      lockPref("intl.accept_languages", "en");
-      lockPref("mousewheel.with_control.action", 1);
-      // lockPref("security.ssl.enable_ocsp_stapling", true);
-      lockPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+        // Show more ssl cert infos
+        lockPref("browser.aboutConfig.showWarning", false);
+        lockPref("browser.startup.page", 3);
+        lockPref("browser.toolbars.bookmarks.visibility", "never");
+        lockPref("extensions.htmlaboutaddons.recommendations.enabled", false);
+        lockPref("intl.accept_languages", "en");
+        lockPref("mousewheel.with_control.action", 1);
+        // lockPref("security.ssl.enable_ocsp_stapling", true);
+        lockPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
-      // https://wiki.archlinux.org/title/firefox#Wayland
-      // disabled: causes ugly scrolling
-      // lockPref("gfx.webrender.compositor.force-enabled", false);
+        // https://wiki.archlinux.org/title/firefox#Wayland
+        // disabled: causes ugly scrolling
+        // lockPref("gfx.webrender.compositor.force-enabled", false);
 
 
-      // disable mouse pinch zoom
-      lockPref("apz.allow_zooming", false);
-      lockPref("browser.gesture.pinch.in", "");
-      lockPref("browser.gesture.pinch.out", "");
+        // disable mouse pinch zoom
+        lockPref("apz.allow_zooming", false);
+        lockPref("browser.gesture.pinch.in", "");
+        lockPref("browser.gesture.pinch.out", "");
       '';
     };
   };
