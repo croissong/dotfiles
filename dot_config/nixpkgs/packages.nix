@@ -41,6 +41,10 @@ let
       mpv              # a free, open source, and cross-platform media player
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
       zoom # Video Conferencing and Web Conferencing Service
+
+
+      # https://nixos.wiki/wiki/Accelerated_Video_Playback
+      intel-media-driver
     ];
 
 

@@ -156,6 +156,26 @@
     };
   };
 
+
+  # https://github.com/guibou/nixGL
+  xdg.desktopEntries.firefox = {
+    categories = [ "Network" "WebBrowser" ];
+    exec = "nixGL firefox %U";
+    genericName = "Web Browser";
+    icon = "firefox";
+    mimeType = [
+      "text/html"
+      "text/xml"
+      "application/xhtml+xml"
+      "application/vnd.mozilla.xul+xml"
+      "x-scheme-handler/http"
+      "x-scheme-handler/https"
+      "x-scheme-handler/ftp"
+    ];
+    name = "Firefox (Wayland)";
+    type = "Application";
+  };
+
   systemd.user.sessionVariables.MOZ_ENABLE_WAYLAND = 1;
 
 
