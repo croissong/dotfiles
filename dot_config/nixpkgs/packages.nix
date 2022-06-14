@@ -29,6 +29,7 @@ let
 
 
     dev = [
+      checkov
       packer           # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto              # A cli tool to help discover deprecated apiVersions in Kubernetes
       shellcheck     # Shell script analysis tool (binary release)
@@ -38,7 +39,10 @@ let
 
     apps = [
       gnome-podcasts # Podcast application for GNOME
-      mpv              # a free, open source, and cross-platform media player
+
+      # https://github.com/guibou/nixGL
+      # mpv              # a free, open source, and cross-platform media player
+
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
       zoom # Video Conferencing and Web Conferencing Service
 
@@ -66,6 +70,7 @@ in
   systemd.user.sessionVariables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
 
   nixpkgs.overlays = [
+
     (self: super: {
       batsignal = super.batsignal.overrideAttrs (prev: rec {
         version = "1.5.0";
