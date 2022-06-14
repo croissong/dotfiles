@@ -32,6 +32,7 @@ let
       checkov
       packer           # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto              # A cli tool to help discover deprecated apiVersions in Kubernetes
+      nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
       shellcheck     # Shell script analysis tool (binary release)
       terraform              # HashiCorp tool for building and updating infrastructure as code idempotently
     ];

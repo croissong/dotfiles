@@ -154,7 +154,6 @@ AddPackage pipewire-pulse   # Low-latency audio/video router and processor - Pul
 AddPackage pkgconf          # Package compiler and linker metadata toolkit
 AddPackage plantuml         # Component that allows to quickly write uml diagrams
 
-AddPackage prettier          # An opinionated code formatter for JS, JSON, CSS, YAML and much more
 AddPackage procps-ng         # Utilities for monitoring your system and its processes
 AddPackage procs             # A modern replacement for ps written in Rust
 AddPackage psmisc            # Miscellaneous procfs tools
