@@ -17,6 +17,11 @@ let
       zbar                   # Application and library for reading bar codes from various sources
     ];
 
+
+    pers = [
+      ledger            # Double-entry accounting system with a command-line reporting interface
+    ];
+
     media = [
       ffmpeg_5 # Complete solution to record, convert and stream audio and video
     ];
@@ -25,6 +30,7 @@ let
     system = [
       batsignal # A lightweight battery monitor daemon
       mako # Lightweight notification daemon for Wayland
+      pamixer # Pulseaudio command-line mixer like amixer
     ];
 
 
@@ -40,6 +46,8 @@ let
 
     apps = [
       gnome-podcasts # Podcast application for GNOME
+      inkscape # Professional vector graphics editor
+      libreoffice-fresh # LibreOffice branch which contains new features and program enhancements
 
       # https://github.com/guibou/nixGL
       # mpv              # a free, open source, and cross-platform media player
@@ -64,7 +72,8 @@ in
     ++ packages.system
     ++ packages.apps
     ++ packages.media
-    ++ packages.dev;
+    ++ packages.dev
+    ++ packages.pers;
 
 
 
