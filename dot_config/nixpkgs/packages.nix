@@ -14,12 +14,12 @@ let
       podman-compose # A script to run docker-compose.yml using podman
 
       yq-go # Portable command-line YAML processor
-      zbar                   # Application and library for reading bar codes from various sources
+      zbar # Application and library for reading bar codes from various sources
     ];
 
 
     pers = [
-      ledger            # Double-entry accounting system with a command-line reporting interface
+      ledger # Double-entry accounting system with a command-line reporting interface
     ];
 
     media = [
@@ -28,6 +28,8 @@ let
 
 
     system = [
+      du-dust # du + rust = dust. Like du but more intuitive
+      duf # Disk Usage/Free Utility
       batsignal # A lightweight battery monitor daemon
       mako # Lightweight notification daemon for Wayland
       pamixer # Pulseaudio command-line mixer like amixer
@@ -36,11 +38,13 @@ let
 
     dev = [
       checkov
-      packer           # tool for creating identical machine images for multiple platforms from a single source configuration
-      pluto              # A cli tool to help discover deprecated apiVersions in Kubernetes
+      go-mockery # A mock code autogenerator for golang
+      mitmproxy # SSL-capable man-in-the-middle HTTP proxy
+      packer # tool for creating identical machine images for multiple platforms from a single source configuration
+      pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
-      shellcheck     # Shell script analysis tool (binary release)
-      terraform              # HashiCorp tool for building and updating infrastructure as code idempotently
+      shellcheck # Shell script analysis tool (binary release)
+      terraform # HashiCorp tool for building and updating infrastructure as code idempotently
     ];
 
 

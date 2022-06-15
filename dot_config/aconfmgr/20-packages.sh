@@ -114,9 +114,7 @@ AddPackage man-db           # A utility for reading man pages
 AddPackage man-pages        # Linux man pages
 AddPackage maven            # Java project management and project comprehension tool
 AddPackage mdadm            # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
-AddPackage meld             # Compare files, directories and working copies
 AddPackage miniserve        # Tool to serve files via HTTP
-AddPackage mitmproxy        # SSL-capable man-in-the-middle HTTP proxy
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
 AddPackage mtr              # Combines the functionality of traceroute and ping into one tool (CLI version)
 AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
@@ -375,8 +373,6 @@ AddPackage mcfly                         # Fly through your shell history
 AddPackage --foreign wezterm-nightly-bin # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 AddPackage zoxide                        # A fast cd command that learns your habits (binary release)
 AddPackage bottom                        # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
-AddPackage dust                          # du + rust = dust. Like du but more intuitive
-AddPackage duf                           # Disk Usage/Free Utility
 AddPackage --foreign await               # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
 
 #
@@ -496,7 +492,6 @@ AddPackage --foreign gron-bin           # gron transforms JSON into discrete ass
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
-AddPackage --foreign golang-mockery     # A mock code autogenerator for golang
 AddPackage cargo-edit                   # Managing cargo dependencies from the command line
 AddPackage postgresql-libs              # Libraries for use with PostgreSQL
 AddPackage python-pipx                  # Install and Run Python Applications in Isolated Environments
