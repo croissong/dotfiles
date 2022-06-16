@@ -13,6 +13,8 @@ let
       podman # Tool and library for running OCI-based containers in pods
       podman-compose # A script to run docker-compose.yml using podman
 
+      termshark                     # Terminal UI for tshark, inspired by Wireshark
+
       yq-go # Portable command-line YAML processor
       zbar # Application and library for reading bar codes from various sources
     ];
@@ -33,6 +35,10 @@ let
       batsignal # A lightweight battery monitor daemon
       mako # Lightweight notification daemon for Wayland
       pamixer # Pulseaudio command-line mixer like amixer
+    ];
+
+    shell = [
+      starship                      # The cross-shell prompt for astronauts
     ];
 
 
@@ -56,6 +62,8 @@ let
       # https://github.com/guibou/nixGL
       # mpv              # a free, open source, and cross-platform media player
 
+      tenacity # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
+
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
       zoom # Video Conferencing and Web Conferencing Service
 
@@ -77,7 +85,8 @@ in
     ++ packages.apps
     ++ packages.media
     ++ packages.dev
-    ++ packages.pers;
+    ++ packages.pers
+    ++ packages.shell;
 
 
 

@@ -366,7 +366,6 @@ AddPackage kalendar                   # A calendar application using Akonadi to 
 
 AddPackage fzf                           # Command-line fuzzy finder
 AddPackage direnv                        # a shell extension that manages your environment
-AddPackage starship                      # The cross-shell prompt for astronauts
 AddPackage --foreign sheldon-bin         # A fast, configurable, shell plugin manager
 AddPackage git-delta                     # A viewer for git and diff output
 AddPackage mcfly                         # Fly through your shell history
@@ -396,7 +395,6 @@ AddPackage imv                           # Image viewer for Wayland and X11
 AddPackage khard                         # Console CardDAV client
 AddPackage --foreign davmail             # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
-AddPackage termshark                     # Terminal UI for tshark, inspired by Wireshark
 AddPackage curlie                        # The power of curl, the ease of use of httpie.
 AddPackage --foreign cheat               # Allows you to create and view interactive cheatsheets on the command-line
 AddPackage choose                        # A human-friendly and fast alternative to cut and (sometimes) awk
@@ -511,8 +509,7 @@ AddPackage --foreign tor-browser           # Tor Browser Bundle
 # AddPackage --foreign tizonia-all    # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.
 AddPackage --foreign python-spotipy # A light weight Python library for the Spotify Web API
 
-AddPackage --foreign portsmf-git         # Portable library for reading/writing Standard MIDI Files
-AddPackage --foreign tenacity-wxgtk3-git # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
+AddPackage --foreign portsmf-git # Portable library for reading/writing Standard MIDI Files
 
 AddPackage --foreign ventoy-bin # A new multiboot USB solution (Binary)
 AddPackage --foreign epick      # Color picker for creating harmonic color palettes
