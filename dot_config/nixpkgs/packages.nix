@@ -13,7 +13,7 @@ let
       podman # Tool and library for running OCI-based containers in pods
       podman-compose # A script to run docker-compose.yml using podman
 
-      termshark                     # Terminal UI for tshark, inspired by Wireshark
+      termshark # Terminal UI for tshark, inspired by Wireshark
 
       yq-go # Portable command-line YAML processor
       zbar # Application and library for reading bar codes from various sources
@@ -38,14 +38,17 @@ let
     ];
 
     shell = [
-      starship                      # The cross-shell prompt for astronauts
+      starship # The cross-shell prompt for astronauts
     ];
 
 
     dev = [
       checkov
+      doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang
+      google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
       mitmproxy # SSL-capable man-in-the-middle HTTP proxy
+      mypy # Optional static typing for Python 2 and 3 (PEP484)
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more

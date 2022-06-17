@@ -32,7 +32,6 @@ AddPackage delve            # A debugger for the Go programming language.
 AddPackage device-mapper    # Device mapper userspace library and tools
 AddPackage diffutils        # Utility programs used for creating patch files
 AddPackage docker           # Pack, ship and run any application as a lightweight container
-AddPackage doctl            # The official command line interface for the DigitalOcean API
 AddPackage e2fsprogs        # Ext2/3/4 filesystem utilities
 AddPackage earlyoom         # Early OOM Daemon for Linux
 AddPackage electrum         # Lightweight Bitcoin wallet
@@ -118,7 +117,6 @@ AddPackage miniserve        # Tool to serve files via HTTP
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
 AddPackage mtr              # Combines the functionality of traceroute and ping into one tool (CLI version)
 AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
-AddPackage mypy             # Optional static typing for Python 2 and 3 (PEP484)
 AddPackage net-tools        # Configuration tools for Linux networking
 AddPackage nethogs          # A net top tool which displays traffic used per process instead of per IP or interface
 AddPackage nftables         # Netfilter tables userspace tools
@@ -465,7 +463,6 @@ AddPackage prometheus                   # An open-source systems monitoring and 
 AddPackage pyright                      # Type checker for the Python language
 AddPackage redis                        # An in-memory database that persists on disk
 AddPackage --foreign eclipse-mat        # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
-AddPackage --foreign google-cloud-sdk   # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
 AddPackage quicklisp                    # A library manager for Common Lisp
 AddPackage --foreign jdk-adoptopenjdk   # OpenJDK Java 16 development kit (AdoptOpenJDK build)
 AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
