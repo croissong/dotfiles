@@ -71,3 +71,5 @@ disabled = true
 disabled = true
 [php]
 disabled = true
+[vagrant]
+disabled = true
