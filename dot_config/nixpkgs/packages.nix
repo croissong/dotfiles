@@ -13,6 +13,7 @@ let
       podman # Tool and library for running OCI-based containers in pods
       podman-compose # A script to run docker-compose.yml using podman
 
+      termscp # A feature rich terminal UI file transfer and explorer
       termshark # Terminal UI for tshark, inspired by Wireshark
 
       yq-go # Portable command-line YAML processor
@@ -28,6 +29,12 @@ let
       ffmpeg_5 # Complete solution to record, convert and stream audio and video
     ];
 
+    vms = [
+      libguestfs # Access and modify virtual machine disk images
+      quickemu # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.
+      vagrant # Build and distribute virtualized development environments
+      virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
+    ];
 
     system = [
       du-dust # du + rust = dust. Like du but more intuitive
@@ -89,7 +96,8 @@ in
     ++ packages.media
     ++ packages.dev
     ++ packages.pers
-    ++ packages.shell;
+    ++ packages.shell
+    ++ packages.vms;
 
 
 

@@ -230,7 +230,6 @@ AddPackage unrar                  # The RAR uncompression program
 AddPackage unzip                  # For extracting and viewing files in .zip archives
 AddPackage usbutils               # A collection of USB tools to query connected USB devices
 AddPackage util-linux             # Miscellaneous system utilities for Linux
-AddPackage vagrant                # Build and distribute virtualized development environments
 AddPackage vdirsyncer             # Synchronize CalDAV and CardDAV.
 AddPackage vi                     # The original ex/vi text editor
 AddPackage vim                    # Vi Improved, a highly configurable, improved version of the vi text editor
@@ -341,7 +340,6 @@ AddPackage clamav                              # Anti-virus toolkit for Unix
 AddPackage just                                # A handy way to save and run project-specific commands
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
-AddPackage --foreign termscp                   # A feature rich terminal UI file transfer and explorer
 AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes
 AddPackage --foreign mani                      # A CLI tool that helps you manage multiple repositories
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
@@ -541,7 +539,5 @@ AddPackage qt6-wayland # Provides APIs for Wayland
 # VMs
 #
 
-AddPackage virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
 # AddPackage dnsmasq # Lightweight, easy to configure DNS forwarder and DHCP server
-AddPackage iptables-nft       # Linux kernel packet control tool (using nft interface)
-AddPackage --foreign quickemu # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.
+AddPackage iptables-nft # Linux kernel packet control tool (using nft interface)
