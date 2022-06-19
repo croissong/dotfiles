@@ -1,24 +1,20 @@
 # So 18. Apr 17:33:57 CEST 2021 - Unknown packages
 
-AddPackage acpi_call-dkms # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
-AddPackage acpid          # A daemon for delivering ACPI power management events with netlink support
-AddPackage alsa-tools     # Advanced tools for certain sound cards
-AddPackage alsa-utils     # Advanced Linux Sound Architecture - Utilities
-AddPackage ansible        # Official assortment of Ansible collections
-AddPackage ansible-lint   # Checks playbooks for practices and behaviour that could potentially be improved.
-AddPackage arp-scan       # A tool that uses ARP to discover and fingerprint IP hosts on the local network
-AddPackage aspell-en      # English dictionary for aspell
-AddPackage autoconf       # A GNU tool for automatically configuring source code
-AddPackage automake       # A GNU tool for automatically creating Makefiles
-AddPackage base           # Minimal package set to define a basic Arch Linux installation
-AddPackage bash           # The GNU Bourne Again shell
-AddPackage
+AddPackage acpi_call-dkms   # A linux kernel module that enables calls to ACPI methods through /proc/acpi/call - module sources
+AddPackage acpid            # A daemon for delivering ACPI power management events with netlink support
+AddPackage alsa-tools       # Advanced tools for certain sound cards
+AddPackage alsa-utils       # Advanced Linux Sound Architecture - Utilities
+AddPackage arp-scan         # A tool that uses ARP to discover and fingerprint IP hosts on the local network
+AddPackage aspell-en        # English dictionary for aspell
+AddPackage autoconf         # A GNU tool for automatically configuring source code
+AddPackage automake         # A GNU tool for automatically creating Makefiles
+AddPackage base             # Minimal package set to define a basic Arch Linux installation
+AddPackage bash             # The GNU Bourne Again shell
 AddPackage binutils         # A set of programs to assemble and manipulate binary and object files
 AddPackage bison            # The GNU general-purpose parser generator
 AddPackage blueman          # GTK+ Bluetooth Manager
 AddPackage bluez            # Daemons for the bluetooth protocol stack
 AddPackage bluez-utils      # Development and debugging utilities for the bluetooth protocol stack
-AddPackage broot            # Fuzzy Search + tree + cd
 AddPackage btrfs-progs      # Btrfs filesystem utilities
 AddPackage bzip2            # A high-quality data compression program
 AddPackage caddy            # Fast web server with automatic HTTPS

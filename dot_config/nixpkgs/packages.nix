@@ -3,6 +3,7 @@ let
   packages = with pkgs; {
     cli = [
       bat # Cat clone with syntax highlighting and git integration
+      broot # Fuzzy Search + tree + cd
       jless # A command-line pager for JSON data
 
       gopass # The slightly more awesome standard unix password manager for teams.
@@ -46,6 +47,15 @@ let
 
     shell = [
       starship # The cross-shell prompt for astronauts
+    ];
+
+    nix = [
+      nixos-generators
+    ];
+
+    tools = [
+      ansible # Official assortment of Ansible collections
+      ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
     ];
 
 
@@ -97,7 +107,9 @@ in
     ++ packages.dev
     ++ packages.pers
     ++ packages.shell
-    ++ packages.vms;
+    ++ packages.vms
+    ++ packages.nix
+    ++ packages.tools;
 
 
 
