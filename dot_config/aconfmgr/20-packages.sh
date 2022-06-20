@@ -337,7 +337,6 @@ AddPackage just                                # A handy way to save and run pro
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes
-AddPackage --foreign mani                      # A CLI tool that helps you manage multiple repositories
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
 AddPackage --foreign tcpping                   # test response times using TCP SYN packets
 AddPackage libva-utils                         # Intel VA-API Media Applications and Scripts for libva
@@ -453,8 +452,6 @@ AddPackage --foreign xdg-ninja-git # A shell script which checks your $HOME for 
 # Dev
 #
 
-AddPackage prometheus                   # An open-source systems monitoring and alerting toolkit
-AddPackage pyright                      # Type checker for the Python language
 AddPackage redis                        # An in-memory database that persists on disk
 AddPackage --foreign eclipse-mat        # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
 AddPackage quicklisp                    # A library manager for Common Lisp
@@ -502,9 +499,8 @@ AddPackage --foreign python-spotipy # A light weight Python library for the Spot
 
 AddPackage --foreign portsmf-git # Portable library for reading/writing Standard MIDI Files
 
-AddPackage --foreign ventoy-bin # A new multiboot USB solution (Binary)
-AddPackage --foreign epick      # Color picker for creating harmonic color palettes
-AddPackage kdenlive             # A non-linear video editor for Linux using the MLT video framework
+AddPackage --foreign epick # Color picker for creating harmonic color palettes
+AddPackage kdenlive        # A non-linear video editor for Linux using the MLT video framework
 
 #
 # Media

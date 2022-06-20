@@ -9,6 +9,7 @@ let
       gopass # The slightly more awesome standard unix password manager for teams.
       gopass-summon-provider # summon provider for gopass
 
+      mani # A CLI tool that helps you manage multiple repositories
       ouch # Painless compression and decompression in the terminal (git version)
 
       podman # Tool and library for running OCI-based containers in pods
@@ -28,11 +29,13 @@ let
 
     media = [
       ffmpeg_5 # Complete solution to record, convert and stream audio and video
+      imagemagick
     ];
 
     vms = [
       libguestfs # Access and modify virtual machine disk images
       quickemu # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.
+      tigervnc
       vagrant # Build and distribute virtualized development environments
       virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
     ];
@@ -56,6 +59,7 @@ let
     tools = [
       ansible # Official assortment of Ansible collections
       ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
+      ventoy-bin # A new multiboot USB solution (Binary)
     ];
 
 
@@ -68,6 +72,8 @@ let
       mypy # Optional static typing for Python 2 and 3 (PEP484)
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
+      prometheus # An open-source systems monitoring and alerting toolkit
+      pyright # Type checker for the Python language
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
       shellcheck # Shell script analysis tool (binary release)
       terraform # HashiCorp tool for building and updating infrastructure as code idempotently
@@ -141,6 +147,25 @@ in
         };
       });
     })
+
+    # (self: super: {
+    #   mani =
+    #     let
+    #       version = "0.20.0";
+    #       src = pkgs.fetchFromGitHub {
+    #         owner = "alajmo";
+    #         repo = "mani";
+    #         rev = "v${version}";
+    #         sha256 = "sha256-o0oOpqGRfdOm/uS8U+H0MzTWBjb5wJBTpDbT/o0Afrc=";
+    #       };
+    #     in
+    #     (pkgs.mani.override rec {
+    #       buildGoModule = args: pkgs.buildGoModule.override { go = pkgs.go_1_17; } (args // {
+    #         inherit src version;
+    #         vendorSha256 = "sha256-NnXQAf8m2cGLvwSOzQWXffiG1zyVqDPQnGAeqe7EUHy=";
+    #       });
+    #     });
+    # })
 
 
     (self: super: {
