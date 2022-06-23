@@ -73,3 +73,5 @@ disabled = true
 disabled = true
 [vagrant]
 disabled = true
+[cmake]
+disabled = true
