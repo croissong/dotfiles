@@ -42,7 +42,6 @@ alias printer='system-config-printer'
 alias df='duf'
 alias clip='wl-copy -n'
 alias du='dust -b'
-alias journalctl='journalctl -fxe'
 # todo https://github.com/junegunn/fzf/issues/2028
 alias pass=gopass
 alias p="gopass ls --flat | fzf  --bind 'enter:execute-silent(gopass -c {})+abort,alt-enter:execute-silent(gopass -c {}),alt-#:execute-silent(gopass otp -c {})+abort,space:execute(gopass show {})+abort,alt-+:execute-silent(choose -f / -1 <<< {} | wl-copy -n)'"
@@ -141,7 +140,11 @@ b64d() { echo -n $(cat -) | base64 -d; }
 
 alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promotor'
 
-alias restart-netds='systemctl restart systemd-networkd.service systemd-resolved.service iwd'
+alias journalctl='journalctl -fxe'
+alias susp='systemctl suspend'
+
+alias netd-restart='systemctl restart systemd-networkd systemd-resolved iwd'
+alias netd-journal='journalctl -u systemd-networkd -u systemd-resolved -u iwd'
 
 e() {
   if [ -z "$1" ]; then
