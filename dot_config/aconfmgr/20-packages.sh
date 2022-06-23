@@ -279,7 +279,6 @@ AddPackage --foreign log4c                          # Logging FrameWork for C, a
 AddPackage --foreign mitogen                        # Distributed self-replicating programs in Python
 AddPackage --foreign mssql-tools                    # Microsoft® SQL Server® Tools for Linux
 AddPackage --foreign mutt-wizard                    # Simple interface to auto-configure neomutt and isync with safe passwords
-AddPackage --foreign ngrok                          # secure introspectable tunnels to localhost
 AddPackage --foreign openpomodoro                   # A command-line Pomodoro tracker which uses the Open Pomodoro Format
 AddPackage --foreign pandoc-bin                     # Pandoc - executable only, without 750MB Haskell depends/makedepends
 AddPackage --foreign paru-bin                       # Feature packed AUR helper
@@ -326,7 +325,6 @@ AddPackage --foreign ruby-asciidoctor-diagram  # Asciidoctor diagramming extensi
 AddPackage xournalpp                           # Handwriting notetaking software with PDF annotation support
 AddPackage --foreign colorized-logs            # Tools for logs with ANSI color
 AddPackage --foreign topgrade                  # Invoke the upgrade procedure of multiple package managers
-AddPackage pastel                              # A command-line tool to generate, analyze, convert and manipulate colors
 AddPackage --foreign parsec-bin                # Remotely connect to a gaming pc for a low latency remote computing experience
 AddPackage --foreign meli                      # A MUA for the terminal aiming for configurability and extensibility with sane defaults
 AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone

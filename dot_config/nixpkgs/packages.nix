@@ -59,6 +59,10 @@ let
     tools = [
       ansible # Official assortment of Ansible collections
       ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
+      # TODO (ngrok alternative)
+      # rathole # A reverse proxy for NAT traversal
+      ngrok # secure introspectable tunnels to localhost
+      pastel # A command-line tool to generate, analyze, convert and manipulate colors
       ventoy-bin # A new multiboot USB solution (Binary)
     ];
 
