@@ -72,11 +72,13 @@ let
       doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
+      ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
       mitmproxy # SSL-capable man-in-the-middle HTTP proxy
       mypy # Optional static typing for Python 2 and 3 (PEP484)
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
       prometheus # An open-source systems monitoring and alerting toolkit
+      protobuf
       pyright # Type checker for the Python language
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
       shellcheck # Shell script analysis tool (binary release)

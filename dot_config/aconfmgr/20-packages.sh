@@ -455,7 +455,6 @@ AddPackage --foreign eclipse-mat        # Eclipse Memory Analyzer Tool (MAT), a 
 AddPackage quicklisp                    # A library manager for Common Lisp
 AddPackage --foreign jdk-adoptopenjdk   # OpenJDK Java 16 development kit (AdoptOpenJDK build)
 AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
-AddPackage --foreign ktlint             # An anti-bikeshedding Kotlin linter with built-in formatter
 AddPackage --foreign azure-cli          # Command-line tools for Azure.
 AddPackage --foreign jetbrains-toolbox  # Manage all your JetBrains Projects and Tools
 AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
