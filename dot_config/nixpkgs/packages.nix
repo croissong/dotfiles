@@ -18,8 +18,14 @@ let
       termscp # A feature rich terminal UI file transfer and explorer
       termshark # Terminal UI for tshark, inspired by Wireshark
 
+      watchexec # Executes commands in response to file modifications
+
       yq-go # Portable command-line YAML processor
       zbar # Application and library for reading bar codes from various sources
+
+
+      imv # A command line image viewer for tiling window managers
+
     ];
 
 
@@ -48,8 +54,14 @@ let
       pamixer # Pulseaudio command-line mixer like amixer
     ];
 
+    backup = [
+      borgbackup # Deduplicating archiver with compression and encryption
+      borgmatic # Simple, configuration-driven backup software for servers and workstation
+    ];
+
     shell = [
       starship # The cross-shell prompt for astronauts
+      zoxide # A fast cd command that learns your habits
     ];
 
     nix = [
@@ -61,6 +73,7 @@ let
       ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
       # TODO (ngrok alternative)
       # rathole # A reverse proxy for NAT traversal
+      miniserve # CLI tool to serve files and directories over HTTP
       ngrok # secure introspectable tunnels to localhost
       pastel # A command-line tool to generate, analyze, convert and manipulate colors
       ventoy-bin # A new multiboot USB solution (Binary)
@@ -121,7 +134,8 @@ in
     ++ packages.shell
     ++ packages.vms
     ++ packages.nix
-    ++ packages.tools;
+    ++ packages.tools
+    ++ packages.backup;
 
 
 

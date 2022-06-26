@@ -109,7 +109,6 @@ AddPackage man-db           # A utility for reading man pages
 AddPackage man-pages        # Linux man pages
 AddPackage maven            # Java project management and project comprehension tool
 AddPackage mdadm            # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
-AddPackage miniserve        # Tool to serve files via HTTP
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
 AddPackage mtr              # Combines the functionality of traceroute and ping into one tool (CLI version)
 AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
@@ -353,22 +352,18 @@ AddPackage kalendar                   # A calendar application using Akonadi to 
 # shell
 #
 
-AddPackage fzf                           # Command-line fuzzy finder
-AddPackage direnv                        # a shell extension that manages your environment
-AddPackage --foreign sheldon-bin         # A fast, configurable, shell plugin manager
-AddPackage git-delta                     # A viewer for git and diff output
-AddPackage mcfly                         # Fly through your shell history
-AddPackage --foreign wezterm-nightly-bin # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
-AddPackage zoxide                        # A fast cd command that learns your habits (binary release)
-AddPackage bottom                        # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
-AddPackage --foreign await               # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
+AddPackage fzf                   # Command-line fuzzy finder
+AddPackage direnv                # a shell extension that manages your environment
+AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
+AddPackage git-delta             # A viewer for git and diff output
+AddPackage mcfly                 # Fly through your shell history
+AddPackage --foreign wezterm     # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+AddPackage bottom                # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
+AddPackage --foreign await       # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
 
 #
 # backup
 #
-
-AddPackage borg                       # Deduplicating backup program with compression and authenticated encryption
-AddPackage borgmatic                  # Simple, configuration-driven backup software for servers and workstations
 AddPackage python-llfuse              # A set of Python bindings for the low level FUSE API.
 AddPackage snapper                    # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
 AddPackage --foreign backblaze-b2-bin # Backblaze B2 Command Line Client
@@ -380,7 +375,6 @@ AddPackage gifsicle # A powerful command-line program for creating, editing, man
 # CLIs
 #
 
-AddPackage imv                           # Image viewer for Wayland and X11
 AddPackage khard                         # Console CardDAV client
 AddPackage --foreign davmail             # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
@@ -411,7 +405,6 @@ AddPackage --foreign viddy       # A modern watch command
 AddPackage --foreign navi        # An interactive cheatsheet tool for the command-line
 AddPackage pv                    # A terminal-based tool for monitoring the progress of data through a pipeline.
 AddPackage peco                  # Simplistic interactive filtering tool
-AddPackage watchexec             # Executes commands in response to file modifications
 AddPackage miller                # Name-indexed data processing tool
 AddPackage gping                 # Ping, but with a graph
 #
