@@ -146,6 +146,8 @@ alias susp='systemctl suspend'
 alias netd-restart='systemctl restart systemd-networkd systemd-resolved iwd'
 alias netd-journal='journalctl -u systemd-networkd -u systemd-resolved -u iwd'
 
+alias nixs='nix --extra-experimental-features nix-command --extra-experimental-features flakes search nixpkgs'
+
 e() {
   if [ -z "$1" ]; then
     TMP="$(mktemp /tmp/stdin-XXX)"
