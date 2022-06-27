@@ -11,6 +11,7 @@ alias rm='trash -v'
 
 alias find='fd -H'
 alias top=btm
+alias topgrade='topgrade --show-skipped'
 alias open='handlr open'
 alias history='history -E'
 alias tree=br

@@ -2,6 +2,8 @@ access-matrix
 bulk-action
 fuzzy
 gs
+ice
+krew
 lineage
 neat
 ns
