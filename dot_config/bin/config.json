@@ -22,9 +22,9 @@
         "/home/croissong/.local/bin/mizu": {
             "path": "/home/croissong/.local/bin/mizu",
             "remote_name": "mizu",
-            "version": "32.0",
+            "version": "34.0",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/up9inc/mizu/releases/tag/32.0",
+            "url": "https://github.com/up9inc/mizu/releases/tag/34.0",
             "provider": "",
             "package_path": ""
         },
@@ -37,30 +37,30 @@
             "provider": "",
             "package_path": ""
         },
-        "/home/croissong/.local/bin/switcher": {
-            "path": "/home/croissong/.local/bin/switcher",
-            "remote_name": "switcher",
-            "version": "0.7.0",
-            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/danielfoehrKn/kubeswitch/",
-            "provider": "github",
-            "package_path": ""
-        },
         "/home/croissong/.local/bin/switch.sh": {
             "path": "/home/croissong/.local/bin/switch.sh",
             "remote_name": "switch.sh",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/danielfoehrKn/kubeswitch/",
+            "url": "https://github.com/danielfoehrKn/kubeswitch",
             "provider": "github",
+            "package_path": ""
+        },
+        "/home/croissong/.local/bin/switcher": {
+            "path": "/home/croissong/.local/bin/switcher",
+            "remote_name": "switcher",
+            "version": "0.7.1",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "url": "https://github.com/danielfoehrKn/kubeswitch/releases/tag/0.7.1",
+            "provider": "",
             "package_path": ""
         },
         "/home/croissong/.local/bin/vals": {
             "path": "/home/croissong/.local/bin/vals",
             "remote_name": "vals",
-            "version": "v0.16.2",
+            "version": "v0.18.0",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/variantdev/vals/releases/tag/v0.16.2",
+            "url": "https://github.com/variantdev/vals/releases/tag/v0.18.0",
             "provider": "",
             "package_path": "vals"
         }
