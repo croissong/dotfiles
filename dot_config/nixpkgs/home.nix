@@ -57,7 +57,6 @@
 
   imports = [
     ./packages.nix
-    ./k8s.nix
   ];
 
   programs.chromium = {

@@ -98,6 +98,14 @@ let
       terraform # HashiCorp tool for building and updating infrastructure as code idempotently
     ];
 
+    k8s = [
+      helmfile # Deploy Kubernetes Helm Charts
+      krew # Krew is the package manager for kubectl plugins.
+      kubectl # Kubernetes.io client binary
+      kubernetes-helm # The Kubernetes Package Manager
+      telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
+    ];
+
 
     apps = [
       gnome-podcasts # Podcast application for GNOME
@@ -135,7 +143,8 @@ in
     ++ packages.vms
     ++ packages.nix
     ++ packages.tools
-    ++ packages.backup;
+    ++ packages.backup
+    ++ packages.k8s;
 
 
 
