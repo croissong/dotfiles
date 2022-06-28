@@ -66,6 +66,7 @@ let
 
     nix = [
       nixos-generators
+      alejandra
     ];
 
     tools = [
