@@ -1,10 +1,9 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
   programs.home-manager.enable = true;
 
   systemd.user.sessionVariables = {
-
     # used by: slack
     NIXOS_OZONE_WL = 1;
   };
@@ -23,7 +22,6 @@
       });
     })
   ];
-
 
   services.wlsunset = {
     enable = true;
@@ -51,7 +49,6 @@
       wl-color-picker # A wayland color picker that also works on wlroots
       wlsunset # Day/night gamma adjustments for Wayland compositors
       xplr # A hackable, minimal, fast TUI file explorer
-
     ];
   };
 
@@ -96,7 +93,7 @@
           Locked = true;
         };
         PromptForDownloadLocation = true;
-        RequestedLocales = [ "en" ];
+        RequestedLocales = ["en"];
         UserMessaging = {
           ExtensionRecommendations = false;
           FeatureRecommendations = true;
@@ -125,6 +122,11 @@
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
           };
+
+          # "simple-tab-groups@drive4ik" = {
+          #   installation_mode = "force_installed";
+          #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
+          # };
           "*" = {
             installation_mode = "blocked";
           };
@@ -155,10 +157,9 @@
     };
   };
 
-
   # https://github.com/guibou/nixGL
   xdg.desktopEntries.firefox = {
-    categories = [ "Network" "WebBrowser" ];
+    categories = ["Network" "WebBrowser"];
     exec = "nixGL firefox %U";
     genericName = "Web Browser";
     icon = "firefox";
@@ -176,7 +177,4 @@
   };
 
   systemd.user.sessionVariables.MOZ_ENABLE_WAYLAND = 1;
-
-
-
 }

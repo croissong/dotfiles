@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   packages = with pkgs; {
     cli = [
       bat # Cat clone with syntax highlighting and git integration
@@ -23,11 +22,8 @@ let
       yq-go # Portable command-line YAML processor
       zbar # Application and library for reading bar codes from various sources
 
-
       imv # A command line image viewer for tiling window managers
-
     ];
-
 
     pers = [
       ledger # Double-entry accounting system with a command-line reporting interface
@@ -80,7 +76,6 @@ let
       ventoy-bin # A new multiboot USB solution (Binary)
     ];
 
-
     dev = [
       checkov
       doctl # The official command line interface for the DigitalOcean API
@@ -107,7 +102,6 @@ let
       telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
     ];
 
-
     apps = [
       gnome-podcasts # Podcast application for GNOME
       inkscape # Professional vector graphics editor
@@ -121,18 +115,15 @@ let
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
       zoom # Video Conferencing and Web Conferencing Service
 
-
       # https://nixos.wiki/wiki/Accelerated_Video_Playback
       intel-media-driver
     ];
-
 
     unused = [
       ugrep # ultra fast grep with interactive TUI, fuzzy search, boolean queries, hexdumps and more
     ];
   };
-in
-{
+in {
   home.packages =
     packages.cli
     ++ packages.system
@@ -147,12 +138,9 @@ in
     ++ packages.backup
     ++ packages.k8s;
 
-
-
   systemd.user.sessionVariables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
 
   nixpkgs.overlays = [
-
     (self: super: {
       batsignal = super.batsignal.overrideAttrs (prev: rec {
         version = "1.5.0";
@@ -197,10 +185,10 @@ in
     #     });
     # })
 
-
     (self: super: {
       # https://github.com/NixOS/nixpkgs/issues/107070
-      ouch = super.rustPlatform.buildRustPackage
+      ouch =
+        super.rustPlatform.buildRustPackage
         rec {
           pname = "ouch";
           version = "0.3.1-next";
@@ -215,12 +203,11 @@ in
           cargoSha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnR=";
           cargoHash = "sha256-RsvpFrwX7QhKpOevH9OnG/E0vRbBpSWLO2j6NUVT/Sg=";
 
+          nativeBuildInputs = [super.help2man super.installShellFiles super.pkg-config];
 
-          nativeBuildInputs = [ super.help2man super.installShellFiles super.pkg-config ];
+          buildInputs = [super.bzip2 super.xz super.zlib super.zstd];
 
-          buildInputs = [ super.bzip2 super.xz super.zlib super.zstd ];
-
-          buildFeatures = [ "zstd/pkg-config" ];
+          buildFeatures = ["zstd/pkg-config"];
 
           postInstall = ''
             help2man $out/bin/ouch > ouch.1
@@ -236,7 +223,7 @@ in
             description = "A command-line utility for easily compressing and decompressing files and directories";
             homepage = "https://github.com/ouch-org/ouch";
             license = licenses.mit;
-            maintainers = with maintainers; [ figsoda psibi ];
+            maintainers = with maintainers; [figsoda psibi];
           };
         };
     })
