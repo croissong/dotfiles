@@ -81,6 +81,7 @@
       doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
+      hexyl # A command-line hex viewer
       ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
       mitmproxy # SSL-capable man-in-the-middle HTTP proxy
       mypy # Optional static typing for Python 2 and 3 (PEP484)
