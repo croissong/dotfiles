@@ -266,7 +266,6 @@ AddPackage --foreign drive-bin                      # Google Drive client for th
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
 AddPackage --foreign golangci-lint-bin              # Linters Runner for Go. 5x faster than gometalinter.
 AddPackage --foreign grpcurl-bin                    # Like cURL, but for gRPC
-AddPackage --foreign gsctl-bin                      # The Giant Swarm command line interface
 AddPackage --foreign http-prompt                    # An interactive HTTP command-line client
 AddPackage --foreign ike-scan                       # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
 AddPackage --foreign jp                             # Command line interface to JMESPath
@@ -395,13 +394,9 @@ AddPackage visidata                      # Terminal spreadsheet multitool for di
 AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
-# required for topgrade cargo step
-AddPackage --foreign cargo-update # A cargo subcommand for checking and applying updates to installed executables
-
 AddPackage --foreign imgp        # Multi-core batch image resizer and rotator
 AddPackage --foreign python-grip # Preview GitHub Markdown files like Readme locally before committing them
 AddPackage --foreign sysz        # fzf terminal UI for systemctl
-AddPackage --foreign viddy       # A modern watch command
 AddPackage --foreign navi        # An interactive cheatsheet tool for the command-line
 AddPackage pv                    # A terminal-based tool for monitoring the progress of data through a pipeline.
 AddPackage peco                  # Simplistic interactive filtering tool

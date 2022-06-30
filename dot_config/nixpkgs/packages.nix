@@ -17,6 +17,7 @@
       termscp # A feature rich terminal UI file transfer and explorer
       termshark # Terminal UI for tshark, inspired by Wireshark
 
+      viddy # A modern watch command
       watchexec # Executes commands in response to file modifications
 
       yq-go # Portable command-line YAML processor
@@ -77,10 +78,14 @@
     ];
 
     dev = [
-      checkov
+      # required for topgrade cargo step
+      cargo-update # A cargo subcommand for checking and applying updates to installed executables
+
+      checkov # Static code analysis tool for infrastructure-as-code
       doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
+      gsctl # The Giant Swarm command line interface
       hexyl # A command-line hex viewer
       ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
       mitmproxy # SSL-capable man-in-the-middle HTTP proxy
