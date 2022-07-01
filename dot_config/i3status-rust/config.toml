@@ -45,6 +45,6 @@ format = "{percentage}"
 
 [[block]]
 block = "time"
-interval = 60
+interval = 30
 format = "%a %m-%d %H:%M"
 icons_format = ""
