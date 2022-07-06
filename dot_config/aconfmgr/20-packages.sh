@@ -329,7 +329,6 @@ AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
 AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone based on the SIP protocol (AppImage version)
 AddPackage age                                 # A simple, modern and secure file encryption tool
 AddPackage clamav                              # Anti-virus toolkit for Unix
-AddPackage just                                # A handy way to save and run project-specific commands
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes

@@ -8,6 +8,8 @@
       gopass # The slightly more awesome standard unix password manager for teams.
       gopass-summon-provider # summon provider for gopass
 
+      just # A handy way to save and run project-specific commands
+
       mani # A CLI tool that helps you manage multiple repositories
       ouch # Painless compression and decompression in the terminal (git version)
 
@@ -22,6 +24,8 @@
 
       yq-go # Portable command-line YAML processor
       zbar # Application and library for reading bar codes from various sources
+
+      libqalculate # An advanced calculator library
 
       imv # A command line image viewer for tiling window managers
     ];
@@ -69,6 +73,9 @@
     tools = [
       ansible # Official assortment of Ansible collections
       ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
+
+      dhcping # Send DHCP request to find out if a DHCP server is running
+
       # TODO (ngrok alternative)
       # rathole # A reverse proxy for NAT traversal
       miniserve # CLI tool to serve files and directories over HTTP
@@ -82,6 +89,7 @@
       cargo-update # A cargo subcommand for checking and applying updates to installed executables
 
       checkov # Static code analysis tool for infrastructure-as-code
+      cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
