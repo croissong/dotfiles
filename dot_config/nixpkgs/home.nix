@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  lib = import <nixpkgs/lib>;
+in {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
   programs.home-manager.enable = true;
@@ -30,10 +36,16 @@
     temperature.night = 2500;
   };
 
+  imports = [
+    ./packages.nix
+  ];
+
   home = {
-    stateVersion = "21.11";
+    stateVersion = "22.05";
     homeDirectory = "/home/croissong";
     username = "croissong";
+
+    # enableNixpkgsReleaseCheck = true;
 
     packages = with pkgs; [
       argocd # Declarative continuous deployment for Kubernetes
@@ -50,11 +62,24 @@
       wlsunset # Day/night gamma adjustments for Wayland compositors
       xplr # A hackable, minimal, fast TUI file explorer
     ];
-  };
 
-  imports = [
-    ./packages.nix
-  ];
+    file = {
+      "tmp/packages.txt".text = let
+        packages = builtins.map (p: "${p.name}") config.home.packages;
+        sortedUnique = builtins.sort builtins.lessThan (lib.unique packages);
+        formatted = builtins.concatStringsSep "\n" sortedUnique;
+      in
+        formatted;
+    };
+
+    activation = {
+      # https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/
+      printPackageDiff = ''
+        diff -u ~/tmp/packages-prev.txt ~/tmp/packages.txt | delta --color-only --24-bit-color=never --paging never
+        cp -f ~/tmp/packages.txt ~/tmp/packages-prev.txt
+      '';
+    };
+  };
 
   programs.chromium = {
     enable = true;
