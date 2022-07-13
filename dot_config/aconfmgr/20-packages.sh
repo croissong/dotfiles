@@ -178,7 +178,6 @@ AddPackage sshfs             # FUSE client based on the SSH File Transfer Protoc
 AddPackage sshuttle          # Transparent proxy server that forwards all TCP packets over ssh
 AddPackage stardict          # International dictionary software
 AddPackage steam             # Valve's digital software delivery system
-AddPackage step-cli          # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
 AddPackage streamlink        # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
 AddPackage strongswan        # Open source IPsec implementation
 AddPackage sudo              # Give certain users the ability to run some commands as root

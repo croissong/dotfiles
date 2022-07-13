@@ -1,9 +1,10 @@
+# https://nix-community.github.io/home-manager/options.html
 {
   pkgs,
   config,
+  lib,
   ...
 }: let
-  lib = import <nixpkgs/lib>;
 in {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
@@ -74,10 +75,7 @@ in {
 
     activation = {
       # https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/
-      printPackageDiff = ''
-        diff -u ~/tmp/packages-prev.txt ~/tmp/packages.txt | delta --color-only --24-bit-color=never --paging never
-        cp -f ~/tmp/packages.txt ~/tmp/packages-prev.txt
-      '';
+      printPackageDiff = lib.hm.dag.entryAfter ["writeBoundary"] "~/.config/nixpkgs/scripts/print-package-diff.sh";
     };
   };
 
