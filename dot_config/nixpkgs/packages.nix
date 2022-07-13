@@ -1,33 +1,48 @@
 {pkgs, ...}: let
+  lib = import <nixpkgs/lib>;
+
+  packages_dict = with pkgs; {
+    cli = {
+      dev = [
+        step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
+      ];
+
+      media = [
+        imv # A command line image viewer for tiling window managers
+      ];
+
+      tools = [
+        bat # Cat clone with syntax highlighting and git integration
+        broot # Fuzzy Search + tree + cd
+        jless # A command-line pager for JSON data
+
+        gopass # The slightly more awesome standard unix password manager for teams.
+        gopass-summon-provider # summon provider for gopass
+
+        just # A handy way to save and run project-specific commands
+
+        mani # A CLI tool that helps you manage multiple repositories
+        ouch # Painless compression and decompression in the terminal (git version)
+
+        podman # Tool and library for running OCI-based containers in pods
+        podman-compose # A script to run docker-compose.yml using podman
+
+        termscp # A feature rich terminal UI file transfer and explorer
+        termshark # Terminal UI for tshark, inspired by Wireshark
+
+        viddy # A modern watch command
+        watchexec # Executes commands in response to file modifications
+
+        yq-go # Portable command-line YAML processor
+        zbar # Application and library for reading bar codes from various sources
+
+        libqalculate # An advanced calculator library
+      ];
+    };
+  };
+
   packages = with pkgs; {
     cli = [
-      bat # Cat clone with syntax highlighting and git integration
-      broot # Fuzzy Search + tree + cd
-      jless # A command-line pager for JSON data
-
-      gopass # The slightly more awesome standard unix password manager for teams.
-      gopass-summon-provider # summon provider for gopass
-
-      just # A handy way to save and run project-specific commands
-
-      mani # A CLI tool that helps you manage multiple repositories
-      ouch # Painless compression and decompression in the terminal (git version)
-
-      podman # Tool and library for running OCI-based containers in pods
-      podman-compose # A script to run docker-compose.yml using podman
-
-      termscp # A feature rich terminal UI file transfer and explorer
-      termshark # Terminal UI for tshark, inspired by Wireshark
-
-      viddy # A modern watch command
-      watchexec # Executes commands in response to file modifications
-
-      yq-go # Portable command-line YAML processor
-      zbar # Application and library for reading bar codes from various sources
-
-      libqalculate # An advanced calculator library
-
-      imv # A command line image viewer for tiling window managers
     ];
 
     pers = [
@@ -150,7 +165,8 @@ in {
     ++ packages.nix
     ++ packages.tools
     ++ packages.backup
-    ++ packages.k8s;
+    ++ packages.k8s
+    ++ builtins.concatLists (lib.attrsets.collect builtins.isList packages_dict);
 
   systemd.user.sessionVariables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
 
