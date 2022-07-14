@@ -445,26 +445,20 @@ AddPackage --foreign azure-cli          # Command-line tools for Azure.
 AddPackage --foreign jetbrains-toolbox  # Manage all your JetBrains Projects and Tools
 AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
 AddPackage xh                           # Friendly and fast tool for sending HTTP requests
-AddPackage dog                          # Command-line DNS client like dig
-AddPackage gpg-tui                      # A terminal user interface for GnuPG
-AddPackage --foreign kubeval-bin        # Tool for validating Kubernetes YAML or JSON configuration files
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
 AddPackage go-tools                     # Developer tools for the Go programming language
-AddPackage angle-grinder                # Slice and dice logs on the command line
 AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
 AddPackage --foreign cqlsh              # CQL shell for apache cassandra
 AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
 AddPackage --foreign frpc               # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 AddPackage --foreign terraform-docs-bin # Generate docs from terraform modules
 AddPackage glow                         # Command-line markdown renderer
-AddPackage --foreign gron-bin           # gron transforms JSON into discrete assignments to make it easier to grep.
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
 AddPackage cargo-edit                   # Managing cargo dependencies from the command line
 AddPackage postgresql-libs              # Libraries for use with PostgreSQL
 AddPackage python-pipx                  # Install and Run Python Applications in Isolated Environments
-AddPackage skopeo                       # A command line utility for various operations on container images and image repositories.
 AddPackage stylua                       # Code formatter for Lua
 AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
 

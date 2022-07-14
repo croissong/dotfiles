@@ -4,7 +4,10 @@
   packages_dict = with pkgs; {
     cli = {
       dev = [
+        angle-grinder # Slice and dice logs on the command line
+        kubeval # Tool for validating Kubernetes YAML or JSON configuration files
         step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
+        skopeo # A command line utility for various operations on container images and image repositories.
       ];
 
       media = [
@@ -14,10 +17,14 @@
       tools = [
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
+        dogdns # Command-line DNS client like dig
         jless # A command-line pager for JSON data
 
         gopass # The slightly more awesome standard unix password manager for teams.
         gopass-summon-provider # summon provider for gopass
+
+        gpg-tui # A terminal user interface for GnuPG
+        gron # Make JSON greppable!
 
         just # A handy way to save and run project-specific commands
 
