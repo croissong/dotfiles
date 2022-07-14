@@ -175,3 +175,6 @@ ts-to-unix() {
 ts-now-s() {
   date +'%s'
 }
+
+# https://github.com/guibou/nixGL
+alias imv='nixGL imv'
