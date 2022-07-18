@@ -38,6 +38,8 @@ alias myip='dig -1 myip.opendns.com @resolver1.opendns.com'
 
 alias ec=echo
 
+alias nix='nix --extra-experimental-features "nix-command flakes"'
+
 alias printer='system-config-printer'
 
 alias df='duf'
