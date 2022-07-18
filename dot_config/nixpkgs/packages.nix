@@ -46,6 +46,12 @@
         libqalculate # An advanced calculator library
       ];
     };
+
+    lang = {
+      go = [
+        golangci-lint # Fast linters Runner for Go
+      ];
+    };
   };
 
   packages = with pkgs; {

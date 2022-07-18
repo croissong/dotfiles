@@ -120,7 +120,6 @@ alias mvnupdate='mvn versions:dependency-updates-report -DprocessDependencyManag
 
 alias curl=curlie
 alias curll='/usr/bin/curl'
-alias curlwbench='curl -H "PRIVATE-TOKEN: `pass show svh/gitlab-token`" --cert $HOME/.config/svh/ssl_smarthub-wbench/user.crt --key $HOME/.config/svh/ssl_smarthub-wbench/userkey.pem'
 
 alias cal='khal'
 alias call='cal list'

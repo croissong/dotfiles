@@ -1,4 +1,5 @@
 # https://nix-community.github.io/home-manager/index.html#ch-nix-flakes
+# TODO: https://www.reddit.com/r/NixOS/comments/qpqnfq/flake_structure_for_multi_system/hjx1hr0/?context=3
 {
   description = "Home Manager configuration of moi";
 

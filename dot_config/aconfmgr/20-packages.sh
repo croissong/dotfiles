@@ -263,7 +263,6 @@ AddPackage --foreign dasel                          # Query and update data stru
 AddPackage --foreign dive                           # A tool for exploring each layer in a docker image
 AddPackage --foreign drive-bin                      # Google Drive client for the commandline (binary version)
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
-AddPackage --foreign golangci-lint-bin              # Linters Runner for Go. 5x faster than gometalinter.
 AddPackage --foreign grpcurl-bin                    # Like cURL, but for gRPC
 AddPackage --foreign http-prompt                    # An interactive HTTP command-line client
 AddPackage --foreign ike-scan                       # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
