@@ -56,7 +56,6 @@ AddPackage gopls            # Language server for Go programming language
 AddPackage gradle           # Powerful build system for the JVM
 AddPackage graphviz         # Graph visualization software
 AddPackage grep             # A string search utility
-AddPackage grim             # Screenshot utility for Wayland
 AddPackage groff            # GNU troff text-formatting system
 AddPackage gsfonts          # (URW)++ base 35 font set
 AddPackage gst-libav        # Multimedia graph framework - libav plugin

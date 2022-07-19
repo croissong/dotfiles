@@ -47,9 +47,31 @@
       ];
     };
 
+    dev = {
+      net = [
+        mtr #  A network diagnostics tool
+      ];
+
+      lang = {
+        webdev = [
+          nodePackages."@angular/cli" # CLI tool for Angular
+          nodePackages.create-react-app # Create React apps with no build configuration.
+          nodePackages.gatsby-cli # Gatsby command-line interface for creating new sites
+          nodePackages.npm-check-updates # Find newer versions of dependencies than what your package.json allows
+          nodePackages.typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver
+        ];
+      };
+    };
+
     lang = {
       go = [
         golangci-lint # Fast linters Runner for Go
+      ];
+    };
+
+    desktop = {
+      cli = [
+        grim # Grab images from a Wayland compositor
       ];
     };
   };
