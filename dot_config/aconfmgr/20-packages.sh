@@ -20,7 +20,6 @@ AddPackage bzip2            # A high-quality data compression program
 AddPackage caddy            # Fast web server with automatic HTTPS
 AddPackage checkbashisms    # Debian script that checks for bashisms
 AddPackage coreutils        # The basic file, shell and text manipulation utilities of the GNU operating system
-AddPackage croc             # Easily and securely send things from one computer to another.
 AddPackage cryptsetup       # Userspace setup tool for transparent encryption of block devices using dm-crypt
 AddPackage cups             # The CUPS Printing System - daemon package
 AddPackage dbeaver          # Free universal SQL Client for developers and database administrators (community edition)
@@ -109,7 +108,6 @@ AddPackage man-pages        # Linux man pages
 AddPackage maven            # Java project management and project comprehension tool
 AddPackage mdadm            # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
-AddPackage mtr              # Combines the functionality of traceroute and ping into one tool (CLI version)
 AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
 AddPackage net-tools        # Configuration tools for Linux networking
 AddPackage nethogs          # A net top tool which displays traffic used per process instead of per IP or interface
@@ -141,9 +139,7 @@ AddPackage pkgconf          # Package compiler and linker metadata toolkit
 AddPackage plantuml         # Component that allows to quickly write uml diagrams
 
 AddPackage procps-ng         # Utilities for monitoring your system and its processes
-AddPackage procs             # A modern replacement for ps written in Rust
 AddPackage psmisc            # Miscellaneous procfs tools
-AddPackage pueue             # A command scheduler for shells
 AddPackage pulseaudio-alsa   # ALSA Configuration for PulseAudio
 AddPackage pwgen             # Password generator for creating easily memorable passwords
 AddPackage python-black      # Uncompromising Python code formatter

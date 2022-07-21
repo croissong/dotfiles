@@ -20,6 +20,7 @@
         dogdns # Command-line DNS client like dig
         jless # A command-line pager for JSON data
 
+        # TODO: https://github.com/golang/go/issues/53852
         gopass # The slightly more awesome standard unix password manager for teams.
         gopass-summon-provider # summon provider for gopass
 
@@ -49,14 +50,15 @@
 
     dev = {
       net = [
-        mtr #  A network diagnostics tool
+        mtr # Combines the functionality of traceroute and ping
       ];
 
       lang = {
         webdev = [
           nodePackages."@angular/cli" # CLI tool for Angular
           nodePackages.create-react-app # Create React apps with no build configuration.
-          nodePackages.gatsby-cli # Gatsby command-line interface for creating new sites
+          # TODO: https://github.com/NixOS/nixpkgs/issues/180899
+          # nodePackages.gatsby-cli # Gatsby command-line interface for creating new sites
           nodePackages.npm-check-updates # Find newer versions of dependencies than what your package.json allows
           nodePackages.typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver
         ];
@@ -72,6 +74,26 @@
     desktop = {
       cli = [
         grim # Grab images from a Wayland compositor
+        croc # Easily and securely send things from one computer to another
+      ];
+    };
+
+    shell = {
+      tools = [
+        pueue # A daemon for managing long running shell commands
+      ];
+    };
+
+    system = {
+      cli = [
+        procs # A modern replacement for ps written in Rust
+      ];
+    };
+
+    entertain = {
+      gaming = [
+        # wine-wayland # An Open Source implementation of the Windows API on top of OpenGL and Unix
+        # bottles # An easy-to-use wineprefix manager
       ];
     };
   };
