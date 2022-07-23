@@ -154,7 +154,6 @@ AddPackage python-virtualenv # Virtual Python Environment builder
 AddPackage rdesktop          # An open source client for Windows Remote Desktop Services
 AddPackage reflector         # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 AddPackage revive            # faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
-AddPackage ripgrep           # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage rmlint            # Tool to remove duplicates and other lint, being much faster than fdupes
 AddPackage rsync             # A fast and versatile file copying tool for remote and local files
 AddPackage rustup            # The Rust toolchain installer
@@ -164,8 +163,6 @@ AddPackage sdcv              # StarDict Console Version
 AddPackage seahorse          # GNOME application for managing PGP keys.
 AddPackage sed               # GNU stream editor
 AddPackage shadow            # Password and account management tool suite with support for shadow files and PAM
-AddPackage shfmt             # Format shell programs
-AddPackage slurp             # Select a region in a Wayland compositor
 AddPackage smartmontools     # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
 AddPackage socat             # Multipurpose relay
 AddPackage sops              # Editor of encrypted files that supports YAML, JSON and BINARY formats

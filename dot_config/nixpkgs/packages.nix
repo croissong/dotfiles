@@ -1,5 +1,15 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  config,
+  ...
+}: let
   lib = import <nixpkgs/lib>;
+
+  pkgs_stable =
+    import
+    (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/refs/tags/22.05.tar.gz)
+    # reuse the current configuration
+    {inherit config;};
 
   packages_dict = with pkgs; {
     cli = {
@@ -21,8 +31,8 @@
         jless # A command-line pager for JSON data
 
         # TODO: https://github.com/golang/go/issues/53852
-        gopass # The slightly more awesome standard unix password manager for teams.
-        gopass-summon-provider # summon provider for gopass
+        pkgs_stable.gopass # The slightly more awesome standard unix password manager for teams.
+        pkgs_stable.gopass-summon-provider # summon provider for gopass
 
         gpg-tui # A terminal user interface for GnuPG
         gron # Make JSON greppable!
@@ -69,12 +79,18 @@
       go = [
         golangci-lint # Fast linters Runner for Go
       ];
+
+      shell = [
+        shfmt # A shell parser and formatter
+      ];
     };
 
     desktop = {
       cli = [
         grim # Grab images from a Wayland compositor
         croc # Easily and securely send things from one computer to another
+        ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
+        slurp # Select a region in a Wayland compositor
       ];
     };
 
