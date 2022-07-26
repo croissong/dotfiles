@@ -224,7 +224,7 @@
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
       prometheus # An open-source systems monitoring and alerting toolkit
-      protobuf
+      protobuf # Google's data interchange format
       pyright # Type checker for the Python language
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
       shellcheck # Shell script analysis tool (binary release)
@@ -279,18 +279,6 @@ in {
   systemd.user.sessionVariables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
 
   nixpkgs.overlays = [
-    (self: super: {
-      batsignal = super.batsignal.overrideAttrs (prev: rec {
-        version = "1.5.0";
-        src = super.fetchFromGitHub {
-          rev = version;
-          sha256 = "sha256-gZMGbw7Ij1IVQSWOqG/91YrbWTG3I3l6Yp11QbVCfyY=";
-          repo = "batsignal";
-          owner = "electrickite";
-        };
-      });
-    })
-
     (self: super: {
       mako = super.mako.overrideAttrs (prev: rec {
         version = "0d95a1653616454e894f27edc329a9f3a7f96dc2";
