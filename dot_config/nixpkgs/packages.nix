@@ -68,6 +68,10 @@
         mtr # Combines the functionality of traceroute and ping
       ];
 
+      protocols = [
+        swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
+      ];
+
       lang = {
         webdev = [
           nodePackages."@angular/cli" # CLI tool for Angular
@@ -83,11 +87,24 @@
           # jetbrains.idea-community # IDE by Jetbrains, community edition
         ];
       };
+
+      data = [
+        usql # A universal command-line interface for SQL databases
+      ];
     };
 
     lang = {
       go = [
         golangci-lint # Fast linters Runner for Go
+        delve # A debugger for the Go programming language.
+        go # Core compiler tools for the Go programming language
+        gopls # Language server for Go programming language
+        go-tools # Developer tools for the Go programming language
+      ];
+
+      jvm = [
+        gradle # Powerful build system for the JVM
+        maven # Java project management and project comprehension tool
       ];
 
       shell = [

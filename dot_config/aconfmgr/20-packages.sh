@@ -23,7 +23,6 @@ AddPackage coreutils        # The basic file, shell and text manipulation utilit
 AddPackage cryptsetup       # Userspace setup tool for transparent encryption of block devices using dm-crypt
 AddPackage cups             # The CUPS Printing System - daemon package
 AddPackage dbeaver          # Free universal SQL Client for developers and database administrators (community edition)
-AddPackage delve            # A debugger for the Go programming language.
 AddPackage device-mapper    # Device mapper userspace library and tools
 AddPackage diffutils        # Utility programs used for creating patch files
 AddPackage docker           # Pack, ship and run any application as a lightweight container
@@ -50,9 +49,6 @@ AddPackage gimp             # GNU Image Manipulation Program
 AddPackage glibc            # GNU C Library
 AddPackage gnome-keyring    # Stores passwords and encryption keys
 AddPackage gnu-free-fonts   # A free family of scalable outline fonts
-AddPackage go               # Core compiler tools for the Go programming language
-AddPackage gopls            # Language server for Go programming language
-AddPackage gradle           # Powerful build system for the JVM
 AddPackage graphviz         # Graph visualization software
 AddPackage grep             # A string search utility
 AddPackage groff            # GNU troff text-formatting system
@@ -105,7 +101,6 @@ AddPackage m4               # The GNU macro processor
 AddPackage make             # GNU make utility to maintain groups of programs
 AddPackage man-db           # A utility for reading man pages
 AddPackage man-pages        # Linux man pages
-AddPackage maven            # Java project management and project comprehension tool
 AddPackage mdadm            # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
 AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
@@ -173,7 +168,6 @@ AddPackage steam             # Valve's digital software delivery system
 AddPackage streamlink        # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
 AddPackage strongswan        # Open source IPsec implementation
 AddPackage sudo              # Give certain users the ability to run some commands as root
-AddPackage swaks             # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
 AddPackage swappy            # A Wayland native snapshot editing tool
 
 AddPackage sysfsutils             # System Utilities Based on Sysfs
@@ -286,7 +280,6 @@ AddPackage --foreign svgo                           # Tool for optimizing SVG fi
 AddPackage --foreign teams                          # Microsoft Teams for Linux is your chat-centered workspace in Office 365
 
 AddPackage --foreign ttf-ubraille  # Unicode Braillt font
-AddPackage --foreign usql          # A universal command-line interface for SQL databases
 AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland session
 AddPackage --foreign xsv-bin       # CSV command line toolkit written in Rust
 
@@ -433,7 +426,6 @@ AddPackage --foreign azure-cli          # Command-line tools for Azure.
 AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
 AddPackage xh                           # Friendly and fast tool for sending HTTP requests
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
-AddPackage go-tools                     # Developer tools for the Go programming language
 AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
 AddPackage --foreign cqlsh              # CQL shell for apache cassandra
 AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
