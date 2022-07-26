@@ -28,6 +28,7 @@ alias ms='mailsync'
 alias watch='viddy'
 alias sys=sysz
 alias gpgt=gpg-tui
+alias tf=terraform
 
 alias mani='mani -c ~/.config/mani/code.yaml'
 alias mani-all='cm apply ~/.config/mani && mani run rm && mani sync'
