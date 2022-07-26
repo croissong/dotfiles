@@ -24,9 +24,14 @@
         imv # A command line image viewer for tiling window managers
       ];
 
+      data = [
+        dasel # Query and update data structures from the command line.
+      ];
+
       tools = [
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
+
         dogdns # Command-line DNS client like dig
         jless # A command-line pager for JSON data
 
@@ -71,6 +76,11 @@
           # nodePackages.gatsby-cli # Gatsby command-line interface for creating new sites
           nodePackages.npm-check-updates # Find newer versions of dependencies than what your package.json allows
           nodePackages.typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver
+          yarn # Fast, reliable, and secure dependency management
+        ];
+
+        java = [
+          # jetbrains.idea-community # IDE by Jetbrains, community edition
         ];
       };
     };
@@ -91,6 +101,12 @@
         croc # Easily and securely send things from one computer to another
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
         slurp # Select a region in a Wayland compositor
+      ];
+    };
+
+    media = {
+      cli = [
+        visidata # Interactive terminal multitool for tabular data
       ];
     };
 
@@ -133,6 +149,8 @@
       tigervnc
       vagrant # Build and distribute virtualized development environments
       virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
+      # lxd # Daemon based on liblxc offering a REST API to manage containers
+      distrobuilder # System container image builder for LXC and LXD
     ];
 
     system = [

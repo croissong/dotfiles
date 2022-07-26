@@ -241,7 +241,6 @@ AddPackage xorg-xprop             # Property displayer for X
 AddPackage xorg-xrandr            # Primitive command line interface to RandR extension
 AddPackage xorg-xset              # User preference utility for X
 AddPackage xorg-xwayland          # run X clients under wayland
-AddPackage yarn                   # Fast, reliable, and secure dependency management
 AddPackage zsh                    # A very advanced and programmable command interpreter (shell) for UNIX
 
 # So 18. Apr 17:34:04 CEST 2021 - Unknown foreign packages
@@ -251,7 +250,6 @@ AddPackage --foreign apache-tools                   # Useful Apache tools - htdi
 AddPackage --foreign bluez-firmware                 # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
 AddPackage --foreign bukuserver                     # Powerful command-line bookmark manager. CLI and server.
 AddPackage --foreign cyberark-summon                # CLI that provides on-demand secrets access for common DevOps tools
-AddPackage --foreign dasel                          # Query and update data structures from the command line.
 AddPackage --foreign dive                           # A tool for exploring each layer in a docker image
 AddPackage --foreign drive-bin                      # Google Drive client for the commandline (binary version)
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
@@ -379,7 +377,6 @@ AddPackage --foreign bcal                # Storage conversion and expression cal
 AddPackage --foreign dtool               # A collection of development tools for numeric conversion
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
 AddPackage --foreign jwt-cli-bin         # A super fast CLI tool to decode and encode JWTs built in Rust
-AddPackage visidata                      # Terminal spreadsheet multitool for discovering and arranging data
 AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
@@ -433,7 +430,6 @@ AddPackage quicklisp                    # A library manager for Common Lisp
 AddPackage --foreign jdk-adoptopenjdk   # OpenJDK Java 16 development kit (AdoptOpenJDK build)
 AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
 AddPackage --foreign azure-cli          # Command-line tools for Azure.
-AddPackage --foreign jetbrains-toolbox  # Manage all your JetBrains Projects and Tools
 AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
 AddPackage xh                           # Friendly and fast tool for sending HTTP requests
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
