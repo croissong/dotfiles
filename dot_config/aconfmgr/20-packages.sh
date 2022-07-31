@@ -27,7 +27,6 @@ AddPackage diffutils        # Utility programs used for creating patch files
 AddPackage docker           # Pack, ship and run any application as a lightweight container
 AddPackage e2fsprogs        # Ext2/3/4 filesystem utilities
 AddPackage earlyoom         # Early OOM Daemon for Linux
-AddPackage electrum         # Lightweight Bitcoin wallet
 AddPackage ethtool          # Utility for controlling network drivers and hardware
 AddPackage exa              # ls replacement
 AddPackage fakeroot         # Tool for simulating superuser privileges
@@ -35,7 +34,6 @@ AddPackage fd               # Simple, fast and user-friendly alternative to find
 AddPackage file             # File type identification utility
 AddPackage filesystem       # Base Arch Linux files
 AddPackage findutils        # GNU utilities to locate files
-AddPackage flake8           # The modular source code checker
 AddPackage flex             # A tool for generating text-scanning programs
 AddPackage fwupd            # Simple daemon to allow session software to update firmware
 AddPackage gawk             # GNU version of awk
@@ -61,7 +59,6 @@ AddPackage gutenprint       # Top quality printer drivers for POSIX systems
 AddPackage gzip             # GNU compression utility
 AddPackage hey              # HTTP load generator
 AddPackage hplip            # Drivers for HP DeskJet, OfficeJet, Photosmart, Business Inkjet and some LaserJet
-AddPackage httpie           # cURL for humans
 AddPackage inetutils        # A collection of common network programs
 AddPackage inotify-tools    # inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify.
 AddPackage intel-ucode      # Microcode update files for Intel CPUs
@@ -88,7 +85,6 @@ AddPackage linux-zen-headers # Headers and scripts for building modules for the 
 
 AddPackage logrotate        # Rotates system logs automatically
 AddPackage lsof             # Lists open files for running Unix processes
-AddPackage lutris           # Open Gaming Platform
 AddPackage lvm2             # Logical Volume Manager 2 utilities
 AddPackage lynx             # A text browser for the World Wide Web
 AddPackage lzop             # File compressor using lzo lib
@@ -127,42 +123,27 @@ AddPackage pipewire-alsa    # Low-latency audio/video router and processor - ALS
 AddPackage pipewire-pulse   # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage pkgconf          # Package compiler and linker metadata toolkit
 
-AddPackage procps-ng         # Utilities for monitoring your system and its processes
-AddPackage psmisc            # Miscellaneous procfs tools
-AddPackage pulseaudio-alsa   # ALSA Configuration for PulseAudio
-AddPackage pwgen             # Password generator for creating easily memorable passwords
-AddPackage python-black      # Uncompromising Python code formatter
-AddPackage python-gevent     # Python network library that uses greenlet and libev for easy and scalable concurrency
-AddPackage python-jedi       # Awesome autocompletion for python
-AddPackage python-pip        # The PyPA recommended tool for installing Python packages
-AddPackage python-poetry     # Python dependency management and packaging made easy
-AddPackage python-pyalsa     # Python binding for the ALSA library
-AddPackage python-setuptools # Easily download, build, install, upgrade, and uninstall Python packages
-AddPackage python-six        # Python 2 and 3 compatibility utilities
-AddPackage python-virtualenv # Virtual Python Environment builder
-AddPackage rdesktop          # An open source client for Windows Remote Desktop Services
-AddPackage reflector         # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
-AddPackage revive            # faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
-AddPackage rmlint            # Tool to remove duplicates and other lint, being much faster than fdupes
-AddPackage rsync             # A fast and versatile file copying tool for remote and local files
-AddPackage rustup            # The Rust toolchain installer
-AddPackage s3cmd             # A command line client for Amazon S3
-AddPackage sd                # Intuitive find & replace
-AddPackage sdcv              # StarDict Console Version
-AddPackage seahorse          # GNOME application for managing PGP keys.
-AddPackage sed               # GNU stream editor
-AddPackage shadow            # Password and account management tool suite with support for shadow files and PAM
-AddPackage smartmontools     # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
-AddPackage socat             # Multipurpose relay
-AddPackage sops              # Editor of encrypted files that supports YAML, JSON and BINARY formats
-AddPackage sshfs             # FUSE client based on the SSH File Transfer Protocol
-AddPackage sshuttle          # Transparent proxy server that forwards all TCP packets over ssh
-AddPackage stardict          # International dictionary software
-AddPackage steam             # Valve's digital software delivery system
-AddPackage streamlink        # CLI program that launches streams from various streaming services in a custom video player (livestreamer fork)
-AddPackage strongswan        # Open source IPsec implementation
-AddPackage sudo              # Give certain users the ability to run some commands as root
-AddPackage swappy            # A Wayland native snapshot editing tool
+AddPackage procps-ng       # Utilities for monitoring your system and its processes
+AddPackage psmisc          # Miscellaneous procfs tools
+AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
+AddPackage pwgen           # Password generator for creating easily memorable passwords
+AddPackage rdesktop        # An open source client for Windows Remote Desktop Services
+AddPackage reflector       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
+AddPackage revive          # faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
+AddPackage rmlint          # Tool to remove duplicates and other lint, being much faster than fdupes
+AddPackage rsync           # A fast and versatile file copying tool for remote and local files
+AddPackage rustup          # The Rust toolchain installer
+AddPackage sdcv            # StarDict Console Version
+AddPackage seahorse        # GNOME application for managing PGP keys.
+AddPackage sed             # GNU stream editor
+AddPackage shadow          # Password and account management tool suite with support for shadow files and PAM
+AddPackage smartmontools   # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
+AddPackage sshfs           # FUSE client based on the SSH File Transfaer Protocol
+AddPackage stardict        # International dictionary software
+AddPackage steam           # Valve's digital software delivery system
+AddPackage strongswan      # Open source IPsec implementation
+AddPackage sudo            # Give certain users the ability to run some commands as root
+AddPackage swappy          # A Wayland native snapshot editing tool
 
 AddPackage sysfsutils             # System Utilities Based on Sysfs
 AddPackage sysstat                # a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
@@ -209,7 +190,6 @@ AddPackage vi                     # The original ex/vi text editor
 AddPackage vim                    # Vi Improved, a highly configurable, improved version of the vi text editor
 AddPackage virt-manager           # Desktop user interface for managing virtual machines
 AddPackage w3m                    # Text-based Web browser as well as pager
-AddPackage websocat               # Command-line client for web sockets, like netcat/curl/socat for ws
 AddPackage wf-recorder            # Screen recorder for wlroots-based compositors such as sway
 AddPackage wget                   # Network utility to retrieve files from the Web
 AddPackage which                  # A utility to show the full path of commands
@@ -235,13 +215,11 @@ AddPackage zsh                    # A very advanced and programmable command int
 AddPackage --foreign aconfmgr-git                   # A configuration manager for Arch Linux
 AddPackage --foreign apache-tools                   # Useful Apache tools - htdigest, htpasswd, ab, htdbm
 AddPackage --foreign bluez-firmware                 # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
-AddPackage --foreign bukuserver                     # Powerful command-line bookmark manager. CLI and server.
 AddPackage --foreign cyberark-summon                # CLI that provides on-demand secrets access for common DevOps tools
 AddPackage --foreign dive                           # A tool for exploring each layer in a docker image
 AddPackage --foreign drive-bin                      # Google Drive client for the commandline (binary version)
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
 AddPackage --foreign grpcurl-bin                    # Like cURL, but for gRPC
-AddPackage --foreign http-prompt                    # An interactive HTTP command-line client
 AddPackage --foreign ike-scan                       # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
 AddPackage --foreign jp                             # Command line interface to JMESPath
 AddPackage --foreign jsonnet                        # The data templating language
@@ -285,7 +263,6 @@ AddPackage --foreign ookla-speedtest-bin # Speedtest CLI by Ookla
 AddPackage gifski                        # GIF encoder based on libimagequant (pngquant). Squeezes maximum possible quality from the awful GIF format.
 AddPackage goimapnotify                  # Execute scripts on IMAP mailbox changes (new/deleted/updated messages) using IDLE, golang version.
 AddPackage pngquant                      # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
-AddPackage --foreign cozy-audiobooks     # A modern audio book player for Linux using GTK+ 3.
 AddPackage --foreign wev                 # tool for debugging wayland events, similar to xev
 AddPackage zathura                       # Minimalistic document viewer
 AddPackage zathura-pdf-mupdf             # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
@@ -335,9 +312,8 @@ AddPackage --foreign await       # 32kb small memory footprint single binary tha
 #
 # backup
 #
-AddPackage python-llfuse              # A set of Python bindings for the low level FUSE API.
-AddPackage snapper                    # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
-AddPackage --foreign backblaze-b2-bin # Backblaze B2 Command Line Client
+AddPackage python-llfuse # A set of Python bindings for the low level FUSE API.
+AddPackage snapper       # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
 
 # For emacs-gif-screencast
 AddPackage gifsicle # A powerful command-line program for creating, editing, manipulating and getting information about GIF images and animations
@@ -345,10 +321,7 @@ AddPackage gifsicle # A powerful command-line program for creating, editing, man
 #
 # CLIs
 #
-
-AddPackage khard                         # Console CardDAV client
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
-AddPackage curlie                        # The power of curl, the ease of use of httpie.
 AddPackage --foreign cheat               # Allows you to create and view interactive cheatsheets on the command-line
 AddPackage choose                        # A human-friendly and fast alternative to cut and (sometimes) awk
 AddPackage --foreign slides-bin          # Terminal based presentation tool
@@ -356,22 +329,20 @@ AddPackage --foreign webex-bin           # Webex for Linux
 AddPackage --foreign diffsitter-bin      # A tree-sitter based AST difftool to get meaningful semantic diffs
 AddPackage oath-toolkit                  # OATH one-time password toolkit
 AddPackage sad                           # Space Age seD
-AddPackage sslscan                       # A fast tool to scan SSL services such as HTTPS to determine supported ciphers
-AddPackage --foreign bcal                # Storage conversion and expression calculator
+AddPackage sslscan                       # A fast tool to scan SSL services such as HTTPS to determine supported
 AddPackage --foreign dtool               # A collection of development tools for numeric conversion
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
 AddPackage --foreign jwt-cli-bin         # A super fast CLI tool to decode and encode JWTs built in Rust
 AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
-AddPackage --foreign imgp        # Multi-core batch image resizer and rotator
-AddPackage --foreign python-grip # Preview GitHub Markdown files like Readme locally before committing them
-AddPackage --foreign sysz        # fzf terminal UI for systemctl
-AddPackage --foreign navi        # An interactive cheatsheet tool for the command-line
-AddPackage pv                    # A terminal-based tool for monitoring the progress of data through a pipeline.
-AddPackage peco                  # Simplistic interactive filtering tool
-AddPackage miller                # Name-indexed data processing tool
-AddPackage gping                 # Ping, but with a graph
+AddPackage --foreign imgp # Multi-core batch image resizer and rotator
+AddPackage --foreign sysz # fzf terminal UI for systemctl
+AddPackage --foreign navi # An interactive cheatsheet tool for the command-line
+AddPackage pv             # A terminal-based tool for monitoring the progress of data through a pipeline.
+AddPackage peco           # Simplistic interactive filtering tool
+AddPackage miller         # Name-indexed data processing tool
+AddPackage gping          # Ping, but with a graph
 #
 # System
 #
@@ -422,7 +393,6 @@ AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
 AddPackage cargo-edit                   # Managing cargo dependencies from the command line
 AddPackage postgresql-libs              # Libraries for use with PostgreSQL
-AddPackage python-pipx                  # Install and Run Python Applications in Isolated Environments
 AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
 
 #
@@ -430,7 +400,6 @@ AddPackage --foreign altair             # A beautiful feature-rich GraphQL Clien
 #
 
 AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
-AddPackage --foreign streamlink-twitch-gui # A multi platform Twitch.tv browser for Streamlink
 AddPackage --foreign tor-browser           # Tor Browser Bundle
 
 # AddPackage --foreign tizonia-all    # Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, TuneIn, iHeartRadio, Plex servers and Chromecast devices.

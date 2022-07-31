@@ -1,4 +1,4 @@
 * Apply
 ```
-terraform apply -parallelism=1
+just apply
 ```

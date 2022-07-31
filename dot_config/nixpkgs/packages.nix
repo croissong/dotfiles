@@ -28,8 +28,14 @@
       ];
 
       data = [
+        bcal # Storage conversion and expression calculator
         dasel # Query and update data structures from the command line.
         jq # Command-line JSON processor
+        sd # Intuitive find & replace
+      ];
+
+      backup = [
+        backblaze-b2 # Command-line tool for accessing the Backblaze B2 storage service
       ];
 
       tools = [
@@ -70,6 +76,15 @@
     dev = {
       net = [
         mtr # Combines the functionality of traceroute and ping
+        socat # Utility for bidirectional data transfer between two independent data channels
+        sshuttle # Transparent proxy server that works as a poor man's VPN
+        websocat # Command-line client for WebSockets (like netcat/socat)
+      ];
+
+      http = [
+        curlie # Frontend to curl that adds the ease of use of httpie, without compromising on features and performance
+        httpie # A command line HTTP client whose goal is to make CLI human-friendly
+        http-prompt # An interactive HTTP command-line client
       ];
 
       protocols = [
@@ -79,10 +94,13 @@
       docs = [
         plantuml # Component that allows to quickly write uml diagrams
         glow # Command-line markdown renderer
+        python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
       ];
 
       cn = [
         azure-cli # Command-line tools for Azure.
+        s3cmd # Command line tool for managing Amazon S3 and CloudFront services
+        sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
       ];
 
       editor = [
@@ -101,7 +119,6 @@
         ];
 
         java = [
-          openjdk # java jdk 17
           eclipse-mat # Fast and feature-rich Java heap analyzer
           visualvm # A visual interface for viewing information about Java application
           jetbrains.idea-community # IDE by Jetbrains, community edition
@@ -128,6 +145,15 @@
         maven # Java project management and project comprehension tool
       ];
 
+      python = [
+        black # The uncompromising Python code formatter
+        python310Packages.flake8 # The modular source code checker
+        mypy # Optional static typing for Python 2 and 3 (PEP484)
+        poetry # Python dependency management and packaging made easy.
+        pyright # Type checker for the Python language
+        twine # Collection of utilities for interacting with PyPI
+      ];
+
       shell = [
         shfmt # A shell parser and formatter
       ];
@@ -143,6 +169,12 @@
       ];
     };
 
+    bizz = {
+      fin = [
+        electrum # A lightweight Bitcoin wallet
+      ];
+    };
+
     media = {
       cli = [
         visidata # Interactive terminal multitool for tabular data
@@ -153,6 +185,12 @@
       ];
       video = [
         obs-studio # Free, open source software for live streaming and recording
+        streamlink # CLI for extracting streams from various websites to video player of your choosing
+        streamlink-twitch-gui-bin # Twitch.tv browser for Streamlink
+      ];
+
+      audio = [
+        cozy # A modern audio book player for Linux using GTK 3
       ];
     };
 
@@ -167,6 +205,13 @@
         davmail # A Java application which presents a Microsoft Exchange server as local CALDAV, IMAP and SMTP servers
 
         khal # CLI calendar application build around CalDAV
+        khard # Console carddav client
+      ];
+
+      bookmarks = [
+        buku # Private cmdline bookmark manager
+        bukubrow # A WebExtension for Buku, a command-line bookmark manager
+        oil-buku # Search-as-you-type cli frontend for the buku bookmarks manager using peco
       ];
     };
 
@@ -181,6 +226,8 @@
       gaming = [
         # wine-wayland # An Open Source implementation of the Windows API on top of OpenGL and Unix
         # bottles # An easy-to-use wineprefix manager
+
+        lutris # Open Source gaming platform for GNU/Linux
       ];
     };
   };
@@ -259,12 +306,10 @@
       hexyl # A command-line hex viewer
       ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
       mitmproxy # SSL-capable man-in-the-middle HTTP proxy
-      mypy # Optional static typing for Python 2 and 3 (PEP484)
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
       prometheus # An open-source systems monitoring and alerting toolkit
       protobuf # Google's data interchange format
-      pyright # Type checker for the Python language
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
       shellcheck # Shell script analysis tool (binary release)
       terraform # HashiCorp tool for building and updating infrastructure as code idempotently
