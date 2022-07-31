@@ -1,15 +1,18 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: let
-  lib = import <nixpkgs/lib>;
-
   pkgs_stable =
     import
     (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/refs/tags/22.05.tar.gz)
     # reuse the current configuration
     {inherit config;};
+
+  my_pkgs = import ./my-pkgs.nix {
+    inherit pkgs lib config;
+  };
 
   packages_dict = with pkgs; {
     cli = {
@@ -26,6 +29,7 @@
 
       data = [
         dasel # Query and update data structures from the command line.
+        jq # Command-line JSON processor
       ];
 
       tools = [
@@ -135,6 +139,7 @@
         croc # Easily and securely send things from one computer to another
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
         slurp # Select a region in a Wayland compositor
+        tmpmail # A temporary email right from your terminal written in POSIX sh
       ];
     };
 
@@ -168,6 +173,7 @@
     system = {
       cli = [
         procs # A modern replacement for ps written in Rust
+        my_pkgs.xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
       ];
     };
 
@@ -223,6 +229,7 @@
     nix = [
       nixos-generators
       alejandra
+      nix-update
     ];
 
     tools = [

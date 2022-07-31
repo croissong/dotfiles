@@ -69,7 +69,6 @@ AddPackage iproute2         # IP Routing Utilities
 AddPackage iputils          # Network monitoring tools, including ping
 AddPackage iwd              # Internet Wireless Daemon
 AddPackage jfsutils         # JFS filesystem utilities
-AddPackage jq               # Command-line JSON processor
 AddPackage lame             # A high quality MPEG Audio Layer III (MP3) encoder
 AddPackage less             # A terminal based program for viewing text files
 AddPackage lftp             # Sophisticated command line based FTP client
@@ -286,7 +285,6 @@ AddPackage --foreign ookla-speedtest-bin # Speedtest CLI by Ookla
 AddPackage gifski                        # GIF encoder based on libimagequant (pngquant). Squeezes maximum possible quality from the awful GIF format.
 AddPackage goimapnotify                  # Execute scripts on IMAP mailbox changes (new/deleted/updated messages) using IDLE, golang version.
 AddPackage pngquant                      # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
-AddPackage --foreign tmpmail-git         # A temporary email right from your terminal
 AddPackage --foreign cozy-audiobooks     # A modern audio book player for Linux using GTK+ 3.
 AddPackage --foreign wev                 # tool for debugging wayland events, similar to xev
 AddPackage zathura                       # Minimalistic document viewer
@@ -397,14 +395,13 @@ CreateLink /etc/systemd/user/default.target.wants/xdg-user-dirs-update.service /
 #
 # sys tools
 #
-AddPackage dmidecode               # Desktop Management Interface table related utilities
-AddPackage pavucontrol             # PulseAudio Volume Control
-AddPackage hwdetect                # Hardware detection script with loading modules and mkinitcpio.conf
-AddPackage efibootmgr              # Linux user-space application to modify the EFI Boot Manager
-AddPackage --foreign thinkfan      # A minimalist fan control program. Supports the sysfs hwmon interface and thinkpad_acpi
-AddPackage --foreign thinkfan-ui   # A small gui app for Linux to control the fan speed and monitor temps on a ThinkPad
-AddPackage arch-install-scripts    # Scripts to aid in installing Arch Linux
-AddPackage --foreign xdg-ninja-git # A shell script which checks your $HOME for unwanted files and directories.
+AddPackage dmidecode             # Desktop Management Interface table related utilities
+AddPackage pavucontrol           # PulseAudio Volume Control
+AddPackage hwdetect              # Hardware detection script with loading modules and mkinitcpio.conf
+AddPackage efibootmgr            # Linux user-space application to modify the EFI Boot Manager
+AddPackage --foreign thinkfan    # A minimalist fan control program. Supports the sysfs hwmon interface and thinkpad_acpi
+AddPackage --foreign thinkfan-ui # A small gui app for Linux to control the fan speed and monitor temps on a ThinkPad
+AddPackage arch-install-scripts  # Scripts to aid in installing Arch Linux
 
 #
 # Dev
