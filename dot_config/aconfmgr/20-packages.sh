@@ -22,7 +22,6 @@ AddPackage checkbashisms    # Debian script that checks for bashisms
 AddPackage coreutils        # The basic file, shell and text manipulation utilities of the GNU operating system
 AddPackage cryptsetup       # Userspace setup tool for transparent encryption of block devices using dm-crypt
 AddPackage cups             # The CUPS Printing System - daemon package
-AddPackage dbeaver          # Free universal SQL Client for developers and database administrators (community edition)
 AddPackage device-mapper    # Device mapper userspace library and tools
 AddPackage diffutils        # Utility programs used for creating patch files
 AddPackage docker           # Pack, ship and run any application as a lightweight container
@@ -71,9 +70,6 @@ AddPackage iputils          # Network monitoring tools, including ping
 AddPackage iwd              # Internet Wireless Daemon
 AddPackage jfsutils         # JFS filesystem utilities
 AddPackage jq               # Command-line JSON processor
-AddPackage khal             # CLI calendar application build around CalDAV
-AddPackage krita            # Edit and paint images
-AddPackage kustomize        # Template-free customization of Kubernetes YAML manifests
 AddPackage lame             # A high quality MPEG Audio Layer III (MP3) encoder
 AddPackage less             # A terminal based program for viewing text files
 AddPackage lftp             # Sophisticated command line based FTP client
@@ -131,7 +127,6 @@ AddPackage pipewire         # Low-latency audio/video router and processor
 AddPackage pipewire-alsa    # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse   # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage pkgconf          # Package compiler and linker metadata toolkit
-AddPackage plantuml         # Component that allows to quickly write uml diagrams
 
 AddPackage procps-ng         # Utilities for monitoring your system and its processes
 AddPackage psmisc            # Miscellaneous procfs tools
@@ -214,7 +209,6 @@ AddPackage vdirsyncer             # Synchronize CalDAV and CardDAV.
 AddPackage vi                     # The original ex/vi text editor
 AddPackage vim                    # Vi Improved, a highly configurable, improved version of the vi text editor
 AddPackage virt-manager           # Desktop user interface for managing virtual machines
-AddPackage visualvm               # Visual tool integrating several commandline JDK tools and lightweight profiling capabilities
 AddPackage w3m                    # Text-based Web browser as well as pager
 AddPackage websocat               # Command-line client for web sockets, like netcat/curl/socat for ws
 AddPackage wf-recorder            # Screen recorder for wlroots-based compositors such as sway
@@ -355,7 +349,6 @@ AddPackage gifsicle # A powerful command-line program for creating, editing, man
 #
 
 AddPackage khard                         # Console CardDAV client
-AddPackage --foreign davmail             # a POP/IMAP/SMTP/Caldav/LDAP gateway for the exchange service
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
 AddPackage curlie                        # The power of curl, the ease of use of httpie.
 AddPackage --foreign cheat               # Allows you to create and view interactive cheatsheets on the command-line
@@ -418,11 +411,7 @@ AddPackage --foreign xdg-ninja-git # A shell script which checks your $HOME for 
 #
 
 AddPackage redis                        # An in-memory database that persists on disk
-AddPackage --foreign eclipse-mat        # Eclipse Memory Analyzer Tool (MAT), a toolkit for analyzing Java heap dumps.
 AddPackage quicklisp                    # A library manager for Common Lisp
-AddPackage --foreign jdk-adoptopenjdk   # OpenJDK Java 16 development kit (AdoptOpenJDK build)
-AddPackage --foreign jdk11-adoptopenjdk # OpenJDK Java 11 development kit (AdoptOpenJDK build)
-AddPackage --foreign azure-cli          # Command-line tools for Azure.
 AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
 AddPackage xh                           # Friendly and fast tool for sending HTTP requests
 AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
@@ -431,21 +420,18 @@ AddPackage --foreign cqlsh              # CQL shell for apache cassandra
 AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
 AddPackage --foreign frpc               # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 AddPackage --foreign terraform-docs-bin # Generate docs from terraform modules
-AddPackage glow                         # Command-line markdown renderer
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
 AddPackage cargo-edit                   # Managing cargo dependencies from the command line
 AddPackage postgresql-libs              # Libraries for use with PostgreSQL
 AddPackage python-pipx                  # Install and Run Python Applications in Isolated Environments
-AddPackage stylua                       # Code formatter for Lua
 AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
 
 #
 # Stuff
 #
 
-AddPackage obs-studio                      # Free, open source software for live streaming and recording
 AddPackage --foreign discord_arch_electron # Discord (popular voice + video app) using the system provided electron for increased security and performance
 AddPackage --foreign streamlink-twitch-gui # A multi platform Twitch.tv browser for Streamlink
 AddPackage --foreign tor-browser           # Tor Browser Bundle

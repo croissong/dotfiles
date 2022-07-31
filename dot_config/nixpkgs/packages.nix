@@ -72,6 +72,19 @@
         swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
       ];
 
+      docs = [
+        plantuml # Component that allows to quickly write uml diagrams
+        glow # Command-line markdown renderer
+      ];
+
+      cn = [
+        azure-cli # Command-line tools for Azure.
+      ];
+
+      editor = [
+        stylua # Code formatter for Lua
+      ];
+
       lang = {
         webdev = [
           nodePackages."@angular/cli" # CLI tool for Angular
@@ -84,12 +97,16 @@
         ];
 
         java = [
-          # jetbrains.idea-community # IDE by Jetbrains, community edition
+          openjdk # java jdk 17
+          eclipse-mat # Fast and feature-rich Java heap analyzer
+          visualvm # A visual interface for viewing information about Java application
+          jetbrains.idea-community # IDE by Jetbrains, community edition
         ];
       };
 
       data = [
         usql # A universal command-line interface for SQL databases
+        dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
       ];
     };
 
@@ -125,11 +142,26 @@
       cli = [
         visidata # Interactive terminal multitool for tabular data
       ];
+
+      images = [
+        krita # Edit and paint images
+      ];
+      video = [
+        obs-studio # Free, open source software for live streaming and recording
+      ];
     };
 
     shell = {
       tools = [
         pueue # A daemon for managing long running shell commands
+      ];
+    };
+
+    pim = {
+      all = [
+        davmail # A Java application which presents a Microsoft Exchange server as local CALDAV, IMAP and SMTP servers
+
+        khal # CLI calendar application build around CalDAV
       ];
     };
 
@@ -236,6 +268,7 @@
       krew # Krew is the package manager for kubectl plugins.
       kubectl # Kubernetes.io client binary
       kubernetes-helm # The Kubernetes Package Manager
+      kustomize # Template-free customization of Kubernetes YAML manifests
       telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
     ];
 

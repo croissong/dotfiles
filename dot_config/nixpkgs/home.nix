@@ -74,6 +74,9 @@ in {
         formatted;
     };
 
+    # only has v11 currently
+    file.".local/bin/jdks/openjdk11".source = pkgs.adoptopenjdk-bin; # java jdk 11
+
     activation = {
       # https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/
       printPackageDiff = lib.hm.dag.entryAfter ["writeBoundary"] "~/.config/nixpkgs/scripts/print-package-diff.sh";
