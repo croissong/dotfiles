@@ -45,9 +45,8 @@
         dogdns # Command-line DNS client like dig
         jless # A command-line pager for JSON data
 
-        # TODO: https://github.com/golang/go/issues/53852
-        pkgs_stable.gopass # The slightly more awesome standard unix password manager for teams.
-        pkgs_stable.gopass-summon-provider # summon provider for gopass
+        gopass # The slightly more awesome standard unix password manager for teams.
+        gopass-summon-provider # summon provider for gopass
 
         gpg-tui # A terminal user interface for GnuPG
         gron # Make JSON greppable!
