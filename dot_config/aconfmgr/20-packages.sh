@@ -387,7 +387,6 @@ AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
 AddPackage --foreign cqlsh              # CQL shell for apache cassandra
 AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
 AddPackage --foreign frpc               # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
-AddPackage --foreign terraform-docs-bin # Generate docs from terraform modules
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
