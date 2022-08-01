@@ -1,1 +1,4 @@
-only = ["krew", "sheldon", "cargo", "rustup", "firmware", "bin", "go", "pipx"] # "chezmoi",
+only = ["krew", "sheldon", "cargo", "rustup", "firmware", "bin", "go"] # "chezmoi",
+
+# [commands]
+# "xdg-ninja" = "xdg-ninja"
