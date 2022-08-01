@@ -2,6 +2,8 @@
   name = Jan Moeller
   email = jan.moeller0@gmail.com
   signingkey = 96A438F9EE72572F
+[init]
+  defaultBranch = main
 [commit]
   template = ~/.config/git/commit_template.txt
   gpgsign = true
