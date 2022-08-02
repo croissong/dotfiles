@@ -15,6 +15,10 @@
   };
 
   packages_dict = with pkgs; {
+    ent = [
+      yt-dlp
+    ];
+
     cli = {
       dev = [
         angle-grinder # Slice and dice logs on the command line
@@ -197,6 +201,14 @@
     shell = {
       tools = [
         pueue # A daemon for managing long running shell commands
+        fzf # Command-line fuzzy finder
+        sysz # A fzf terminal UI for systemctl
+
+        bottom # A cross-platform graphical process/system monitor with a customizable interface
+      ];
+
+      core = [
+        mcfly # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
       ];
     };
 

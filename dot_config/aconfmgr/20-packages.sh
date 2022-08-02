@@ -281,7 +281,6 @@ AddPackage age                                 # A simple, modern and secure fil
 AddPackage clamav                              # Anti-virus toolkit for Unix
 AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
-AddPackage yt-dlp                              # A youtube-dl fork with additional features and fixes
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
 AddPackage --foreign tcpping                   # test response times using TCP SYN packets
 AddPackage libva-utils                         # Intel VA-API Media Applications and Scripts for libva
@@ -299,14 +298,10 @@ AddPackage kalendar                   # A calendar application using Akonadi to 
 #
 # shell
 #
-
-AddPackage fzf                   # Command-line fuzzy finder
 AddPackage direnv                # a shell extension that manages your environment
 AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
 AddPackage git-delta             # A viewer for git and diff output
-AddPackage mcfly                 # Fly through your shell history
 AddPackage --foreign wezterm     # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
-AddPackage bottom                # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
 AddPackage --foreign await       # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
 
 #
@@ -337,7 +332,6 @@ AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
 AddPackage --foreign imgp # Multi-core batch image resizer and rotator
-AddPackage --foreign sysz # fzf terminal UI for systemctl
 AddPackage --foreign navi # An interactive cheatsheet tool for the command-line
 AddPackage pv             # A terminal-based tool for monitoring the progress of data through a pipeline.
 AddPackage peco           # Simplistic interactive filtering tool
@@ -353,7 +347,6 @@ AddPackage --foreign xdg-utils-handlr   # A shim for xdg-utils to use handlr und
 AddPackage --foreign chaotic-keyring    # Chaotic-AUR PGP keyring
 AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pacman
 AddPackage --foreign dashbinsh          # Relink /bin/sh to dash
-AddPackage --foreign downgrade          # Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
 AddPackage --foreign yofi-bin           # Minimalistic menu for Wayland-based compositors
 AddPackage --foreign wob                # A lightweight overlay volume/backlight/progress/anything bar for Wayland
 AddPackage libfixposix                  # Thin wrapper over POSIX syscalls
