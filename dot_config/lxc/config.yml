@@ -1,0 +1,10 @@
+default-remote: local
+remotes:
+  images:
+    addr: https://images.linuxcontainers.org
+    protocol: simplestreams
+    public: true
+  local:
+    addr: unix://
+    public: false
+aliases: {}
