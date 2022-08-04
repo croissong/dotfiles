@@ -46,6 +46,9 @@
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
 
+        cheat # Allows you to create and view interactive cheatsheets on the command-line
+        navi # An interactive cheatsheet tool for the command-line
+
         dogdns # Command-line DNS client like dig
         jless # A command-line pager for JSON data
 
@@ -186,6 +189,8 @@
 
       images = [
         krita # Edit and paint images
+
+        epick # Color picker for creating harmonic color palettes
       ];
       video = [
         obs-studio # Free, open source software for live streaming and recording
@@ -294,6 +299,7 @@
     tools = [
       ansible # Official assortment of Ansible collections
       ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
+      python310Packages.mitogen # Python Library for writing distributed self-replicating programs
 
       dhcping # Send DHCP request to find out if a DHCP server is running
 

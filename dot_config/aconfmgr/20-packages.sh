@@ -227,7 +227,6 @@ AddPackage --foreign keybase-bin                    # the Keybase Go client, fil
 AddPackage --foreign libspotify                     # C API package allowing third-party developers to write applications that utilize the Spotify music streaming service
 AddPackage --foreign linkerd                        # A service sidecar for Kubernetes and beyond. Main repo for Linkerd 2.x. - https
 AddPackage --foreign log4c                          # Logging FrameWork for C, as Log4j or Log4Cpp
-AddPackage --foreign mitogen                        # Distributed self-replicating programs in Python
 AddPackage --foreign mssql-tools                    # Microsoft® SQL Server® Tools for Linux
 AddPackage --foreign mutt-wizard                    # Simple interface to auto-configure neomutt and isync with safe passwords
 AddPackage --foreign openpomodoro                   # A command-line Pomodoro tracker which uses the Open Pomodoro Format
@@ -317,7 +316,6 @@ AddPackage gifsicle # A powerful command-line program for creating, editing, man
 # CLIs
 #
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
-AddPackage --foreign cheat               # Allows you to create and view interactive cheatsheets on the command-line
 AddPackage choose                        # A human-friendly and fast alternative to cut and (sometimes) awk
 AddPackage --foreign slides-bin          # Terminal based presentation tool
 AddPackage --foreign webex-bin           # Webex for Linux
@@ -332,7 +330,6 @@ AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
 AddPackage --foreign imgp # Multi-core batch image resizer and rotator
-AddPackage --foreign navi # An interactive cheatsheet tool for the command-line
 AddPackage pv             # A terminal-based tool for monitoring the progress of data through a pipeline.
 AddPackage peco           # Simplistic interactive filtering tool
 AddPackage miller         # Name-indexed data processing tool
@@ -398,9 +395,7 @@ AddPackage --foreign tor-browser           # Tor Browser Bundle
 AddPackage --foreign python-spotipy # A light weight Python library for the Spotify Web API
 
 AddPackage --foreign portsmf-git # Portable library for reading/writing Standard MIDI Files
-
-AddPackage --foreign epick # Color picker for creating harmonic color palettes
-AddPackage kdenlive        # A non-linear video editor for Linux using the MLT video framework
+AddPackage kdenlive              # A non-linear video editor for Linux using the MLT video framework
 
 #
 # Media
