@@ -132,7 +132,6 @@ AddPackage reflector       # A Python 3 module and script to retrieve and filter
 AddPackage revive          # faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
 AddPackage rmlint          # Tool to remove duplicates and other lint, being much faster than fdupes
 AddPackage rsync           # A fast and versatile file copying tool for remote and local files
-AddPackage rustup          # The Rust toolchain installer
 AddPackage sdcv            # StarDict Console Version
 AddPackage seahorse        # GNOME application for managing PGP keys.
 AddPackage sed             # GNU stream editor
@@ -378,9 +377,7 @@ AddPackage --foreign cqlsh              # CQL shell for apache cassandra
 AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
 AddPackage --foreign frpc               # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
-AddPackage --foreign cargo-make         # Rust task runner and build tool
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
-AddPackage cargo-edit                   # Managing cargo dependencies from the command line
 AddPackage postgresql-libs              # Libraries for use with PostgreSQL
 AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
 

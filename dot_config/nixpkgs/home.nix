@@ -3,6 +3,7 @@
   pkgs,
   config,
   lib,
+  rust-overlay,
   ...
 }: let
 in {
@@ -17,6 +18,7 @@ in {
 
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
   nixpkgs.overlays = [
+    rust-overlay.overlays.default
     (self: super: {
       termdown = super.termdown.overrideAttrs (prev: rec {
         version = "1.18.0";
@@ -75,7 +77,7 @@ in {
     };
 
     # only has v11 currently
-    file.".local/bin/jdks/openjdk11".source = pkgs.adoptopenjdk-bin; # java jdk 11
+    file.".local/jdks/openjdk11".source = pkgs.adoptopenjdk-bin; # java jdk 11
 
     activation = {
       # https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/

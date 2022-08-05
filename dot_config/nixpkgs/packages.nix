@@ -161,6 +161,14 @@
         twine # Collection of utilities for interacting with PyPI
       ];
 
+      rust = [
+        cargo-edit # Managing cargo dependencies from the command line
+        cargo-make # Rust task runner and build tool
+        # required for topgrade cargo step
+        cargo-update # A cargo subcommand for checking and applying updates to installed executables
+        rust-bin.stable.latest.default
+      ];
+
       shell = [
         shfmt # A shell parser and formatter
       ];
@@ -312,9 +320,6 @@
     ];
 
     dev = [
-      # required for topgrade cargo step
-      cargo-update # A cargo subcommand for checking and applying updates to installed executables
-
       checkov # Static code analysis tool for infrastructure-as-code
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
