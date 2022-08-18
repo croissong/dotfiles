@@ -152,8 +152,6 @@ AddPackage systemd-sysvcompat     # sysvinit compat for systemd
 AddPackage tar                    # Utility used to store, backup, and transport files
 AddPackage task                   # A command-line todo list manager
 AddPackage tcpdump                # Powerful command-line packet analyzer
-AddPackage tesseract              # An OCR program
-AddPackage tesseract-data-eng     # Tesseract OCR data (eng)
 AddPackage texinfo                # GNU documentation system for on-line information and printed output
 AddPackage texlive-bibtexextra    # TeX Live - Additional BibTeX styles and bibliography databases
 AddPackage texlive-core           # TeX Live core distribution
@@ -214,7 +212,6 @@ AddPackage zsh                    # A very advanced and programmable command int
 AddPackage --foreign aconfmgr-git                   # A configuration manager for Arch Linux
 AddPackage --foreign apache-tools                   # Useful Apache tools - htdigest, htpasswd, ab, htdbm
 AddPackage --foreign bluez-firmware                 # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
-AddPackage --foreign cyberark-summon                # CLI that provides on-demand secrets access for common DevOps tools
 AddPackage --foreign dive                           # A tool for exploring each layer in a docker image
 AddPackage --foreign drive-bin                      # Google Drive client for the commandline (binary version)
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
