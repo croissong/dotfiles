@@ -19,6 +19,19 @@
       yt-dlp
     ];
 
+    docs = [
+      logseq # A local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base
+    ];
+
+    daily = [
+      # vivaldi
+      # vivaldi-ffmpeg-codecs
+    ];
+
+    special_purpose = [
+      tesseract # An OCR program
+    ];
+
     cli = {
       dev = [
         angle-grinder # Slice and dice logs on the command line
@@ -58,6 +71,8 @@
         gpg-tui # A terminal user interface for GnuPG
         gron # Make JSON greppable!
 
+        gum # Tasty Bubble Gum for your shell
+
         just # A handy way to save and run project-specific commands
 
         mani # A CLI tool that helps you manage multiple repositories
@@ -65,6 +80,8 @@
 
         podman # Tool and library for running OCI-based containers in pods
         podman-compose # A script to run docker-compose.yml using podman
+
+        summon # CLI that provides on-demand secrets access for common DevOps tools
 
         termscp # A feature rich terminal UI file transfer and explorer
         termshark # Terminal UI for tshark, inspired by Wireshark
@@ -105,9 +122,14 @@
 
       cn = [
         azure-cli # Command-line tools for Azure.
+        k6 # A modern load testing tool, using Go and JavaScript
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
+      ];
+
+      cicd = [
+        # codeowners
       ];
 
       editor = [
@@ -198,7 +220,8 @@
       images = [
         krita # Edit and paint images
 
-        epick # Color picker for creating harmonic color palettes
+        # TODO: hash mismatch
+        # epick # Color picker for creating harmonic color palettes
       ];
       video = [
         obs-studio # Free, open source software for live streaming and recording
@@ -385,81 +408,4 @@ in {
     ++ builtins.concatLists (lib.attrsets.collect builtins.isList packages_dict);
 
   systemd.user.sessionVariables.DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
-
-  nixpkgs.overlays = [
-    (self: super: {
-      mako = super.mako.overrideAttrs (prev: rec {
-        version = "0d95a1653616454e894f27edc329a9f3a7f96dc2";
-
-        src = super.fetchFromGitHub {
-          owner = "emersion";
-          repo = super.mako.pname;
-          rev = "0d95a1653616454e894f27edc329a9f3a7f96dc2";
-          sha256 = "sha256-06UDXVsC7jDd/Lq7dSu3ZnkGW9rLiGHSJLoG9SZi1HY=";
-        };
-      });
-    })
-
-    # (self: super: {
-    #   mani =
-    #     let
-    #       version = "0.20.0";
-    #       src = pkgs.fetchFromGitHub {
-    #         owner = "alajmo";
-    #         repo = "mani";
-    #         rev = "v${version}";
-    #         sha256 = "sha256-o0oOpqGRfdOm/uS8U+H0MzTWBjb5wJBTpDbT/o0Afrc=";
-    #       };
-    #     in
-    #     (pkgs.mani.override rec {
-    #       buildGoModule = args: pkgs.buildGoModule.override { go = pkgs.go_1_17; } (args // {
-    #         inherit src version;
-    #         vendorSha256 = "sha256-NnXQAf8m2cGLvwSOzQWXffiG1zyVqDPQnGAeqe7EUHy=";
-    #       });
-    #     });
-    # })
-
-    (self: super: {
-      # https://github.com/NixOS/nixpkgs/issues/107070
-      ouch =
-        super.rustPlatform.buildRustPackage
-        rec {
-          pname = "ouch";
-          version = "0.3.1-next";
-
-          src = super.fetchFromGitHub {
-            owner = "ouch-org";
-            repo = pname;
-            rev = "fc532d81d8136cc69eb73bdf3c3d65faede7a596";
-            sha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnY=";
-          };
-
-          cargoSha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnR=";
-          cargoHash = "sha256-RsvpFrwX7QhKpOevH9OnG/E0vRbBpSWLO2j6NUVT/Sg=";
-
-          nativeBuildInputs = [super.help2man super.installShellFiles super.pkg-config];
-
-          buildInputs = [super.bzip2 super.xz super.zlib super.zstd];
-
-          buildFeatures = ["zstd/pkg-config"];
-
-          postInstall = ''
-            help2man $out/bin/ouch > ouch.1
-            installManPage ouch.1
-
-            completions=($releaseDir/build/ouch-*/out/completions)
-            installShellCompletion $completions/ouch.{bash,fish} --zsh $completions/_ouch
-          '';
-
-          GEN_COMPLETIONS = 1;
-
-          meta = with super.lib; {
-            description = "A command-line utility for easily compressing and decompressing files and directories";
-            homepage = "https://github.com/ouch-org/ouch";
-            license = licenses.mit;
-            maintainers = with maintainers; [figsoda psibi];
-          };
-        };
-    })
-  ];
 }

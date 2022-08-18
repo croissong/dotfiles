@@ -157,7 +157,7 @@ in {
           #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
           # };
           "*" = {
-            installation_mode = "blocked";
+            # installation_mode = "blocked";
           };
         };
       };
