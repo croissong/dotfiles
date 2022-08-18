@@ -8,23 +8,16 @@ local wezterm = require("wezterm")
 
 -- https://wezfurlong.org/wezterm/config/lua/wezterm/on.html#custom-events
 
-local os = require("os")
-local io = require("io")
-
 wezterm.on("copy-scrollback", function(window, pane)
 	local scrollback = pane:get_lines_as_text(250)
-	proc = io.popen("wl-copy -n", "w")
-	proc:write(scrollback)
-	proc:close()
+	window:copy_to_clipboard(scrollback)
 end)
 
 wezterm.on("copy-cmd", function(window, pane)
 	local scrollback = pane:get_lines_as_text()
 	string_after_prompt = string.match(scrollback, ".*❯ (.*)")
 	cmd = string_after_prompt:gsub("\n", "")
-	proc = io.popen("wl-copy -n", "w")
-	proc:write(cmd)
-	proc:close()
+	window:copy_to_clipboard(cmd)
 end)
 
 ---
