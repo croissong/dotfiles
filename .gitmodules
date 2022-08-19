@@ -1,0 +1,3 @@
+[submodule "priv"]
+	path = priv
+	url = git@gitlab.com:Croissong/priv.git
