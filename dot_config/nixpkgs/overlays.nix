@@ -12,6 +12,28 @@
   })
 
   (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/bukubrow/default.nix
+    bukubrow = let
+      version = "5.4.0";
+      src = super.fetchFromGitHub {
+        owner = "SamHH";
+        repo = super.bukubrow.pname;
+        rev = "v${version}";
+        sha256 = "1a3gqxj6d1shv3w0v9m8x2xr0bvcynchy778yqalxkc3x4vr0nbn";
+      };
+    in (super.bukubrow.override rec {
+      rustPlatform.buildRustPackage = args:
+        super.rustPlatform.buildRustPackage (args
+          // {
+            cargoSha256 = "sha256-CuCiygdBBCmsQ4ZPa8vH6aSxj0+lrh01aHQ6blq9Zg8=";
+            inherit src version;
+            patches = [];
+          });
+    });
+  })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
     summon = let
       version = "0.9.3";
       src = super.fetchFromGitHub {
