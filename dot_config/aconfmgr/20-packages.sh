@@ -267,7 +267,6 @@ AddPackage asciidoctor                         # An implementation of AsciiDoc i
 AddPackage --foreign ruby-asciidoctor-diagram  # Asciidoctor diagramming extension
 AddPackage xournalpp                           # Handwriting notetaking software with PDF annotation support
 AddPackage --foreign colorized-logs            # Tools for logs with ANSI color
-AddPackage --foreign topgrade                  # Invoke the upgrade procedure of multiple package managers
 AddPackage --foreign parsec-bin                # Remotely connect to a gaming pc for a low latency remote computing experience
 AddPackage --foreign meli                      # A MUA for the terminal aiming for configurability and extensibility with sane defaults
 AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
@@ -285,7 +284,6 @@ AddPackage libva-utils                         # Intel VA-API Media Applications
 ##
 
 AddPackage himalaya                   # Minimalist CLI email client
-AddPackage --foreign hydroxide        # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 AddPackage --foreign nyxt-browser-git # Keyboard-oriented, Common Lisp extensible web-browser
 AddPackage --foreign toggldesktop     # Toggl time tracking software
 AddPackage kalendar                   # A calendar application using Akonadi to sync with external services
@@ -321,14 +319,12 @@ AddPackage sad                           # Space Age seD
 AddPackage sslscan                       # A fast tool to scan SSL services such as HTTPS to determine supported
 AddPackage --foreign dtool               # A collection of development tools for numeric conversion
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
-AddPackage --foreign jwt-cli-bin         # A super fast CLI tool to decode and encode JWTs built in Rust
 AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
 AddPackage --foreign imgp # Multi-core batch image resizer and rotator
 AddPackage pv             # A terminal-based tool for monitoring the progress of data through a pipeline.
 AddPackage peco           # Simplistic interactive filtering tool
-AddPackage miller         # Name-indexed data processing tool
 AddPackage gping          # Ping, but with a graph
 #
 # System
@@ -341,7 +337,6 @@ AddPackage --foreign chaotic-keyring    # Chaotic-AUR PGP keyring
 AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pacman
 AddPackage --foreign dashbinsh          # Relink /bin/sh to dash
 AddPackage --foreign yofi-bin           # Minimalistic menu for Wayland-based compositors
-AddPackage --foreign wob                # A lightweight overlay volume/backlight/progress/anything bar for Wayland
 AddPackage libfixposix                  # Thin wrapper over POSIX syscalls
 AddPackage libxcrypt-compat             # Modern library for one-way hashing of passwords - legacy API functions
 AddPackage libva-intel-driver           # VA-API implementation for Intel G45 and HD Graphics family

@@ -48,6 +48,7 @@
         bcal # Storage conversion and expression calculator
         dasel # Query and update data structures from the command line.
         jq # Command-line JSON processor
+        miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
         sd # Intuitive find & replace
       ];
 
@@ -198,11 +199,18 @@
 
     desktop = {
       cli = [
-        grim # Grab images from a Wayland compositor
         croc # Easily and securely send things from one computer to another
+        grim # Grab images from a Wayland compositor
+        hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
+
+        topgrade # Invoke the upgrade procedure of multiple package managers
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
         slurp # Select a region in a Wayland compositor
         tmpmail # A temporary email right from your terminal written in POSIX sh
+      ];
+
+      wm = [
+        wob # A lightweight overlay bar for Wayland
       ];
     };
 
@@ -350,6 +358,7 @@
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
       gsctl # The Giant Swarm command line interface
       hexyl # A command-line hex viewer
+      jwt-cli # A super fast CLI tool to decode and encode JWTs
       ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
       mitmproxy # SSL-capable man-in-the-middle HTTP proxy
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
