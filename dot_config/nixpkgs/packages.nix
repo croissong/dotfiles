@@ -374,6 +374,7 @@
       helmfile # Deploy Kubernetes Helm Charts
       krew # Krew is the package manager for kubectl plugins.
       kubectl # Kubernetes.io client binary
+      my_pkgs.kubesess
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
       telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
