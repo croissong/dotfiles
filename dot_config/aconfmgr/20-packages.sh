@@ -259,8 +259,6 @@ AddPackage gifski                        # GIF encoder based on libimagequant (p
 AddPackage goimapnotify                  # Execute scripts on IMAP mailbox changes (new/deleted/updated messages) using IDLE, golang version.
 AddPackage pngquant                      # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
 AddPackage --foreign wev                 # tool for debugging wayland events, similar to xev
-AddPackage zathura                       # Minimalistic document viewer
-AddPackage zathura-pdf-mupdf             # PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
 AddPackage b3sum                         # BLAKE3 hash function CLI utility, written in Rust
 
 AddPackage asciidoctor                         # An implementation of AsciiDoc in Ruby
@@ -272,8 +270,6 @@ AddPackage --foreign meli                      # A MUA for the terminal aiming f
 AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
 AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone based on the SIP protocol (AppImage version)
 AddPackage age                                 # A simple, modern and secure file encryption tool
-AddPackage clamav                              # Anti-virus toolkit for Unix
-AddPackage trash-cli                           # Command line trashcan (recycle bin) interface
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
 AddPackage --foreign tcpping                   # test response times using TCP SYN packets
@@ -371,7 +367,6 @@ AddPackage --foreign frpc               # A fast reverse proxy to help you expos
 AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
 AddPackage postgresql-libs              # Libraries for use with PostgreSQL
-AddPackage --foreign altair             # A beautiful feature-rich GraphQL Client for all platforms.
 
 #
 # Stuff

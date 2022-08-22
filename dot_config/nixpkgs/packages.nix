@@ -113,6 +113,7 @@
 
       protocols = [
         swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
+        altair # A feature-rich GraphQL Client IDE
       ];
 
       docs = [
@@ -212,6 +213,10 @@
       wm = [
         wob # A lightweight overlay bar for Wayland
       ];
+
+      docs = [
+        zathura # A highly customizable and functional PDF viewer
+      ];
     };
 
     bizz = {
@@ -273,8 +278,10 @@
 
     system = {
       cli = [
+        clamav # Anti-virus toolkit for Unix
         procs # A modern replacement for ps written in Rust
         my_pkgs.xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
+        trash-cli # Command line tool for the desktop trash can
       ];
     };
 
