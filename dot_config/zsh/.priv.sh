@@ -1,1 +1,1 @@
-/home/croissong/Priv/.config/zsh/.priv.sh
+../../priv/.config/zsh/.priv.sh
