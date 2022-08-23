@@ -1,0 +1,27 @@
+---
+client:
+  restart_in_place: false
+  read_local_logs: true
+  show_confirmation_questions: false
+  show_expanded_aliases: false
+  dark_mode: false
+  max_status_lines: ~
+  status_time_format: "%H:%M:%S"
+  status_datetime_format: "%Y-%m-%d\n%H:%M:%S"
+daemon:
+  default_parallel_tasks: 1
+  pause_group_on_failure: false
+  pause_all_on_failure: false
+  callback: ~
+  callback_log_lines: 10
+  groups:
+    default: 1
+shared:
+  pueue_directory: /home/croissong/.local/share/pueue
+  use_unix_socket: true
+  unix_socket_path: /home/croissong/.local/share/pueue/pueue_croissong.socket
+  host: 127.0.0.1
+  port: "6924"
+  daemon_cert: /home/croissong/.local/share/pueue/certs/daemon.cert
+  daemon_key: /home/croissong/.local/share/pueue/certs/daemon.key
+  shared_secret_path: /home/croissong/.local/share/pueue/shared_secret
