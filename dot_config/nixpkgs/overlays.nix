@@ -114,4 +114,25 @@
         };
       };
   })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/kubelogin/default.nix
+    kubelogin = let
+      version = "0.0.20";
+      src = super.fetchFromGitHub {
+        owner = "Azure";
+        repo = super.kubelogin.pname;
+        rev = "v${version}";
+        sha256 = "sha256-+u+75Z2Efaq16g7kGNq1GHavXwtKvNO6dytniUr8mlE=";
+      };
+    in (super.kubelogin.override rec {
+      buildGoModule = args:
+        super.buildGoModule (args
+          // {
+            vendorSha256 = "sha256-vJfTf9gD/qrsPAfJeMYLjGa90mYLOshgDehv2Fcl6xM=";
+            inherit src version;
+            patches = [];
+          });
+    });
+  })
 ]
