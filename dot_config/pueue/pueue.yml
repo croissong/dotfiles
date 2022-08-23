@@ -14,14 +14,12 @@ daemon:
   pause_all_on_failure: false
   callback: ~
   callback_log_lines: 10
-  groups:
-    default: 1
 shared:
-  pueue_directory: /home/croissong/.local/share/pueue
+  pueue_directory: ~/.local/share/pueue
   use_unix_socket: true
-  unix_socket_path: /home/croissong/.local/share/pueue/pueue_croissong.socket
+  unix_socket_path: ~/.local/share/pueue/pueue_croissong.socket
   host: 127.0.0.1
   port: "6924"
-  daemon_cert: /home/croissong/.local/share/pueue/certs/daemon.cert
-  daemon_key: /home/croissong/.local/share/pueue/certs/daemon.key
-  shared_secret_path: /home/croissong/.local/share/pueue/shared_secret
+  daemon_cert: ~/.local/share/pueue/certs/daemon.cert
+  daemon_key: ~/.local/share/pueue/certs/daemon.key
+  shared_secret_path: ~/.local/share/pueue/shared_secret
