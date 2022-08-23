@@ -73,46 +73,24 @@
   })
 
   (self: super: {
-    # https://github.com/NixOS/nixpkgs/issues/107070
-    ouch =
-      super.rustPlatform.buildRustPackage
-      rec {
-        pname = "ouch";
-        version = "0.3.1-next";
-
-        src = super.fetchFromGitHub {
-          owner = "ouch-org";
-          repo = pname;
-          rev = "fc532d81d8136cc69eb73bdf3c3d65faede7a596";
-          sha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnY=";
-        };
-
-        cargoSha256 = "sha256-Qj2CvplJBfgrAep4ivVXiNKDQN2S4R1hdlqZ4S2+MnR=";
-        cargoHash = "sha256-RsvpFrwX7QhKpOevH9OnG/E0vRbBpSWLO2j6NUVT/Sg=";
-
-        nativeBuildInputs = [super.help2man super.installShellFiles super.pkg-config];
-
-        buildInputs = [super.bzip2 super.xz super.zlib super.zstd];
-
-        buildFeatures = ["zstd/pkg-config"];
-
-        postInstall = ''
-          help2man $out/bin/ouch > ouch.1
-          installManPage ouch.1
-
-          completions=($releaseDir/build/ouch-*/out/completions)
-          installShellCompletion $completions/ouch.{bash,fish} --zsh $completions/_ouch
-        '';
-
-        GEN_COMPLETIONS = 1;
-
-        meta = with super.lib; {
-          description = "A command-line utility for easily compressing and decompressing files and directories";
-          homepage = "https://github.com/ouch-org/ouch";
-          license = licenses.mit;
-          maintainers = with maintainers; [figsoda psibi];
-        };
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/bukubrow/default.nix
+    ouch = let
+      version = "0.3.1-next";
+      src = super.fetchFromGitHub {
+        owner = "ouch-org";
+        repo = super.ouch.pname;
+        rev = "99ec7d2cf2a929554a3520e393dd80d087935278";
+        sha256 = "sha256-nBDCAb8y8tz4VM7eC+AdF0N2cwoJ/GwqiOo8RhUQs4w=";
       };
+    in (super.ouch.override rec {
+      rustPlatform.buildRustPackage = args:
+        super.rustPlatform.buildRustPackage (args
+          // {
+            cargoSha256 = "sha256-RsvpFrwX7QhKpOevH9OnG/E0vRbBpSWLO2j6NUVT/Sg=";
+            inherit src version;
+            patches = [];
+          });
+    });
   })
 
   (self: super: {
