@@ -216,6 +216,7 @@
 
       wm = [
         wob # A lightweight overlay bar for Wayland
+        swappy # A Wayland native snapshot editing tool
       ];
 
       docs = [

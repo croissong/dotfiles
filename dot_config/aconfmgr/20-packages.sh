@@ -142,7 +142,6 @@ AddPackage stardict        # International dictionary software
 AddPackage steam           # Valve's digital software delivery system
 AddPackage strongswan      # Open source IPsec implementation
 AddPackage sudo            # Give certain users the ability to run some commands as root
-AddPackage swappy          # A Wayland native snapshot editing tool
 
 AddPackage sysfsutils             # System Utilities Based on Sysfs
 AddPackage sysstat                # a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
