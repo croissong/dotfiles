@@ -68,34 +68,32 @@ man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (sele
 # Kubectl
 #
 
-alias kc=kubectl
-alias kcf=kubectl-fuzzy
+alias k=kubectl
+alias kf=kubectl-fuzzy
 
-alias kctx='switch'
-alias kcn='switch ns'
-alias kctxrm='kc config delete-context'
-alias kctxmv='kc config rename-context'
+alias ktxrm='k config delete-context'
+alias ktxmv='k config rename-context'
 
-alias kck='kc delete'
-alias kckf='kcf delete'
+alias kk='k delete'
+alias kkf='kf delete'
 
-alias kcg='kc neat get -o yaml'
-alias kcgr='kc get -o yaml'
+alias kg='k neat get -o yaml'
+alias kgr='k get -o yaml'
 
-alias kcd='kc describe'
-alias kcdf='kcf describe'
+alias kd='k describe'
+alias kdf='kf describe'
 
-alias kce='kc edit'
-alias kcroll='kc rollout restart'
+alias ke='k edit'
+alias kroll='k rollout restart'
 
-alias kcl="kc stern -t --container-state running,waiting,terminated"
+alias kl="k stern -t --container-state running,waiting,terminated"
 
-alias kcx='kc exec -ti'
-alias kcxf='kcf exec -ti'
+alias kx='k exec -ti'
+alias kxf='kf exec -ti'
 
-alias kcfwd='kc port-forward'
-alias kcw='kc get po -w -owide | rg'
-alias kcgs='kc get -owide --sort-by=.metadata.creationTimestamp'
+alias kfwd='k port-forward'
+alias kw='k get po -w -owide | rg'
+alias kgs='k get -owide --sort-by=.metadata.creationTimestamp'
 
 #
 #

@@ -29,14 +29,18 @@
       sha256 = "sha256-LByeD2pF4vpHYt6xdGZDtIWTV5asTdHLqw8DIOCi5X0=";
     };
 
-    phases = ["installPhase"];
+    phases = ["unpackPhase" "installPhase"];
+    unpackPhase = ''
+      tar zxpf $src -C .
+    '';
     installPhase = ''
-      mkdir -p $out/tar
-      tar zxpf $src -C $out/tar &&
       mkdir -p $out/bin
-      cp $out/tar/target/x86_64-unknown-linux-gnu/release/kubesess $out/bin/kubesess
+      cp target/x86_64-unknown-linux-gnu/release/kubesess $out/bin/kubesess
+      mkdir -p $out/share/${pname}
+      cp -r scripts $out/share/${pname}/scripts
     '';
   };
+
   xmlformatter = pkgs.python3Packages.buildPythonPackage rec {
     pname = "xmlformatter";
     version = "0.2.4";
