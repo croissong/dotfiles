@@ -37,7 +37,22 @@
       cp $out/tar/target/x86_64-unknown-linux-gnu/release/kubesess $out/bin/kubesess
     '';
   };
+  xmlformatter = pkgs.python3Packages.buildPythonPackage rec {
+    pname = "xmlformatter";
+    version = "0.2.4";
+
+    src = pkgs.python3Packages.fetchPypi {
+      inherit pname version;
+      sha256 = "sha256-bZPEvATP+x1M9uudkDQBjpsmTkVUJp59pnU5ukv/A/U=";
+    };
+    # checkInputs = [pkgs.python3Packages.pytest pkgs.python3Packages.setuptools];
+    # propagatedBuildInputs = [
+    #   pkgs.python3Packages.setuptools
+    #   pkgs.python3Packages.pytest
+    # ];
+  };
 in {
   xdg-ninja = xdg-ninja;
   kubesess = kubesess;
+  xmlformatter = xmlformatter;
 }

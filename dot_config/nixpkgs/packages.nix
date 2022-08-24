@@ -196,6 +196,10 @@
       shell = [
         shfmt # A shell parser and formatter
       ];
+
+      xml = [
+        my_pkgs.xmlformatter
+      ];
     };
 
     desktop = {
