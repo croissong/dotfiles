@@ -98,6 +98,10 @@
     };
 
     dev = {
+      editor = [
+        neovim
+      ];
+
       net = [
         mtr # Combines the functionality of traceroute and ping
         socat # Utility for bidirectional data transfer between two independent data channels
@@ -120,6 +124,10 @@
         plantuml # Component that allows to quickly write uml diagrams
         glow # Command-line markdown renderer
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
+      ];
+
+      stuff = [
+        powershell
       ];
 
       cn = [
@@ -220,7 +228,8 @@
       ];
 
       docs = [
-        zathura # A highly customizable and functional PDF viewer
+        # TODO: build failure
+        # zathura # A highly customizable and functional PDF viewer
       ];
     };
 
@@ -363,7 +372,8 @@
     ];
 
     dev = [
-      checkov # Static code analysis tool for infrastructure-as-code
+      # TODO: build failure -> https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/analysis/checkov/default.nix
+      # checkov # Static code analysis tool for infrastructure-as-code
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang

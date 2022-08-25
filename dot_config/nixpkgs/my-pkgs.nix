@@ -22,11 +22,11 @@
 
   kubesess = pkgs.stdenv.mkDerivation rec {
     pname = "kubesess";
-    version = "1.2.3";
+    version = "1.2.4";
 
     src = pkgs.fetchurl {
       url = "https://github.com/Ramilito/kubesess/releases/download/${version}/kubesess_${version}_x86_64-unknown-linux-gnu.tar.gz";
-      sha256 = "sha256-LByeD2pF4vpHYt6xdGZDtIWTV5asTdHLqw8DIOCi5X0=";
+      sha256 = "sha256-PIUFwGvDCuacz2ugKvyS/fW/KjmyiMXKFmWR4I5EyUM=";
     };
 
     phases = ["unpackPhase" "installPhase"];
