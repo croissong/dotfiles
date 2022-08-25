@@ -7,7 +7,7 @@ ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
 StandardInput=socket
-ExecStart=/usr/bin/wob
+ExecStart=/home/croissong/.nix-profile/bin/wob
 
 [Install]
 WantedBy=graphical-session.target
