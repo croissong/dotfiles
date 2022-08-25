@@ -1,4 +1,5 @@
-only = ["krew", "sheldon", "cargo", "firmware", "bin", "go"] # "chezmoi",
+only = ["krew", "sheldon", "cargo", "firmware", "bin", "go", "custom_commands"] # "chezmoi",
 
-# [commands]
+[commands]
+"buku" = "buku -e ~/Dotfiles/priv/buku.org"
 # "xdg-ninja" = "xdg-ninja"
