@@ -98,10 +98,6 @@
     };
 
     dev = {
-      editor = [
-        neovim
-      ];
-
       net = [
         mtr # Combines the functionality of traceroute and ping
         socat # Utility for bidirectional data transfer between two independent data channels
@@ -144,6 +140,7 @@
 
       editor = [
         stylua # Code formatter for Lua
+        neovim
       ];
 
       lang = {
