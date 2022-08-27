@@ -52,17 +52,24 @@
         sd # Intuitive find & replace
       ];
 
+      pipe = [
+        choose # A human-friendly and fast alternative to cut and (sometimes) awk
+        sad # CLI tool to search and replace
+      ];
+
       backup = [
         backblaze-b2 # Command-line tool for accessing the Backblaze B2 storage service
       ];
 
       tools = [
+        age # Modern encryption tool with small explicit keys
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
 
         cheat # Allows you to create and view interactive cheatsheets on the command-line
         navi # An interactive cheatsheet tool for the command-line
 
+        delta # A syntax-highlighting pager for git
         dogdns # Command-line DNS client like dig
         jless # A command-line pager for JSON data
 
@@ -122,13 +129,18 @@
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
       ];
 
+      media = [
+        image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
+      ];
+
       stuff = [
         powershell
       ];
 
       cn = [
-        azure-cli # Command-line tools for Azure.
+        azure-cli
         k6 # A modern load testing tool, using Go and JavaScript
+        linkerd
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
@@ -159,11 +171,16 @@
           visualvm # A visual interface for viewing information about Java application
           jetbrains.idea-community # IDE by Jetbrains, community edition
         ];
+
+        misc = [
+          go-jsonnet
+        ];
       };
 
       data = [
         usql # A universal command-line interface for SQL databases
         dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
+        xsv # A fast CSV toolkit written in Rust
       ];
     };
 
@@ -174,6 +191,7 @@
         go # Core compiler tools for the Go programming language
         gopls # Language server for Go programming language
         go-tools # Developer tools for the Go programming language
+        revive # Fast, configurable, extensible, flexible, and beautiful linter for Go
       ];
 
       jvm = [
@@ -225,8 +243,13 @@
       ];
 
       docs = [
-        # TODO: build failure
-        # zathura # A highly customizable and functional PDF viewer
+        zathura # A highly customizable and functional PDF viewer
+      ];
+
+      odre = [
+        kbfs # The Keybase filesystem
+        keybase
+        keybase-gui
       ];
     };
 
@@ -239,6 +262,9 @@
     media = {
       cli = [
         visidata # Interactive terminal multitool for tabular data
+
+        # For emacs-gif-screencast
+        gifsicle # Command-line tool for creating, editing, and getting information about GIF images and animations
       ];
 
       images = [

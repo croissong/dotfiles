@@ -129,7 +129,6 @@ AddPackage pulseaudio-alsa # ALSA Configuration for PulseAudio
 AddPackage pwgen           # Password generator for creating easily memorable passwords
 AddPackage rdesktop        # An open source client for Windows Remote Desktop Services
 AddPackage reflector       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
-AddPackage revive          # faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
 AddPackage rmlint          # Tool to remove duplicates and other lint, being much faster than fdupes
 AddPackage rsync           # A fast and versatile file copying tool for remote and local files
 AddPackage sdcv            # StarDict Console Version
@@ -215,10 +214,7 @@ AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development nat
 AddPackage --foreign grpcurl-bin                    # Like cURL, but for gRPC
 AddPackage --foreign ike-scan                       # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
 AddPackage --foreign jp                             # Command line interface to JMESPath
-AddPackage --foreign jsonnet                        # The data templating language
-AddPackage --foreign keybase-bin                    # the Keybase Go client, filesystem, and GUI
 AddPackage --foreign libspotify                     # C API package allowing third-party developers to write applications that utilize the Spotify music streaming service
-AddPackage --foreign linkerd                        # A service sidecar for Kubernetes and beyond. Main repo for Linkerd 2.x. - https
 AddPackage --foreign log4c                          # Logging FrameWork for C, as Log4j or Log4Cpp
 AddPackage --foreign mssql-tools                    # Microsoft® SQL Server® Tools for Linux
 AddPackage --foreign mutt-wizard                    # Simple interface to auto-configure neomutt and isync with safe passwords
@@ -239,12 +235,10 @@ AddPackage --foreign python-ptvsd                   # Python debugger package fo
 AddPackage --foreign python-pychromecast            # Library for Python 3 to communicate with the Google Chromecast
 AddPackage --foreign python-soundcloud-git          # A Python wrapper around the Soundcloud API
 AddPackage --foreign rtags                          # A client/server application that indexes C/C++ code
-AddPackage --foreign svgo                           # Tool for optimizing SVG files
 AddPackage --foreign teams                          # Microsoft Teams for Linux is your chat-centered workspace in Office 365
 
 AddPackage --foreign ttf-ubraille  # Unicode Braillt font
 AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland session
-AddPackage --foreign xsv-bin       # CSV command line toolkit written in Rust
 
 #
 # tools
@@ -266,7 +260,6 @@ AddPackage --foreign parsec-bin                # Remotely connect to a gaming pc
 AddPackage --foreign meli                      # A MUA for the terminal aiming for configurability and extensibility with sane defaults
 AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
 AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone based on the SIP protocol (AppImage version)
-AddPackage age                                 # A simple, modern and secure file encryption tool
 AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
 AddPackage --foreign tcpping                   # test response times using TCP SYN packets
@@ -286,7 +279,6 @@ AddPackage kalendar                   # A calendar application using Akonadi to 
 #
 AddPackage direnv                # a shell extension that manages your environment
 AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
-AddPackage git-delta             # A viewer for git and diff output
 AddPackage --foreign wezterm     # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
 AddPackage --foreign await       # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
 
@@ -296,19 +288,14 @@ AddPackage --foreign await       # 32kb small memory footprint single binary tha
 AddPackage python-llfuse # A set of Python bindings for the low level FUSE API.
 AddPackage snapper       # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
 
-# For emacs-gif-screencast
-AddPackage gifsicle # A powerful command-line program for creating, editing, manipulating and getting information about GIF images and animations
-
 #
 # CLIs
 #
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
-AddPackage choose                        # A human-friendly and fast alternative to cut and (sometimes) awk
 AddPackage --foreign slides-bin          # Terminal based presentation tool
 AddPackage --foreign webex-bin           # Webex for Linux
 AddPackage --foreign diffsitter-bin      # A tree-sitter based AST difftool to get meaningful semantic diffs
 AddPackage oath-toolkit                  # OATH one-time password toolkit
-AddPackage sad                           # Space Age seD
 AddPackage sslscan                       # A fast tool to scan SSL services such as HTTPS to determine supported
 AddPackage --foreign dtool               # A collection of development tools for numeric conversion
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
@@ -390,9 +377,6 @@ AddPackage sbcl # Steel Bank Common Lisp
 
 AddPackage sway     # Tiling Wayland compositor and replacement for the i3 window manager
 AddPackage swayidle # Idle management daemon for Wayland
-
-# required by tenacity-git
-AddPackage portmidi # Cross platform library for interfacing with OS MIDI I/O APIs
 
 AddPackage remind           # A sophisticated calendar and alarm program.
 AddPackage --foreign webtty # Share a terminal session over WebRTC
