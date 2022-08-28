@@ -63,6 +63,7 @@
 
       tools = [
         age # Modern encryption tool with small explicit keys
+        b3sum # BLAKE3 cryptographic hash function
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
 
@@ -84,6 +85,7 @@
         just # A handy way to save and run project-specific commands
 
         mani # A CLI tool that helps you manage multiple repositories
+        ookla-speedtest # Internet speedtest tool
         ouch # Painless compression and decompression in the terminal (git version)
 
         podman # Tool and library for running OCI-based containers in pods
@@ -106,6 +108,7 @@
 
     dev = {
       net = [
+        xh # Friendly and fast tool for sending HTTP requests
         mtr # Combines the functionality of traceroute and ping
         socat # Utility for bidirectional data transfer between two independent data channels
         sshuttle # Transparent proxy server that works as a poor man's VPN
@@ -124,6 +127,8 @@
       ];
 
       docs = [
+        asciidoctor-with-extensions
+        drawio # A desktop application for creating diagrams
         plantuml # Component that allows to quickly write uml diagrams
         glow # Command-line markdown renderer
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
@@ -174,6 +179,12 @@
 
         misc = [
           go-jsonnet
+          xxHash # Extremely fast hash algorithm
+        ];
+
+        db = [
+          mongosh # The MongoDB Shell
+          redli # A humane alternative to the Redis-cli and TLS
         ];
       };
 
@@ -228,6 +239,7 @@
     desktop = {
       cli = [
         croc # Easily and securely send things from one computer to another
+        goimapnotify # Execute scripts on IMAP mailbox changes using IDLE
         grim # Grab images from a Wayland compositor
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
@@ -328,6 +340,10 @@
         # bottles # An easy-to-use wineprefix manager
 
         lutris # Open Source gaming platform for GNU/Linux
+      ];
+
+      media = [
+        blanket # Improve focus and increase your productivity by listening to different sounds
       ];
     };
   };

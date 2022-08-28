@@ -244,23 +244,16 @@ AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland se
 # tools
 #
 
-AddPackage system-config-printer         # A CUPS printer configuration tool and status applet
-AddPackage --foreign ookla-speedtest-bin # Speedtest CLI by Ookla
-AddPackage gifski                        # GIF encoder based on libimagequant (pngquant). Squeezes maximum possible quality from the awful GIF format.
-AddPackage goimapnotify                  # Execute scripts on IMAP mailbox changes (new/deleted/updated messages) using IDLE, golang version.
-AddPackage pngquant                      # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
-AddPackage --foreign wev                 # tool for debugging wayland events, similar to xev
-AddPackage b3sum                         # BLAKE3 hash function CLI utility, written in Rust
-
-AddPackage asciidoctor                         # An implementation of AsciiDoc in Ruby
-AddPackage --foreign ruby-asciidoctor-diagram  # Asciidoctor diagramming extension
+AddPackage system-config-printer               # A CUPS printer configuration tool and status applet
+AddPackage gifski                              # GIF encoder based on libimagequant (pngquant). Squeezes maximum possible quality from the awful GIF format.
+AddPackage pngquant                            # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
+AddPackage --foreign wev                       # tool for debugging wayland events, similar to xev
 AddPackage xournalpp                           # Handwriting notetaking software with PDF annotation support
 AddPackage --foreign colorized-logs            # Tools for logs with ANSI color
 AddPackage --foreign parsec-bin                # Remotely connect to a gaming pc for a low latency remote computing experience
 AddPackage --foreign meli                      # A MUA for the terminal aiming for configurability and extensibility with sane defaults
 AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
 AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone based on the SIP protocol (AppImage version)
-AddPackage blanket                             # Improve focus and increase your productivity by listening to different sounds
 AddPackage qemu-desktop                        # A QEMU setup for desktop environments
 AddPackage --foreign tcpping                   # test response times using TCP SYN packets
 AddPackage libva-utils                         # Intel VA-API Media Applications and Scripts for libva
@@ -338,19 +331,14 @@ AddPackage arch-install-scripts  # Scripts to aid in installing Arch Linux
 #
 # Dev
 #
-
-AddPackage redis                        # An in-memory database that persists on disk
-AddPackage quicklisp                    # A library manager for Common Lisp
-AddPackage libgccjit                    # Just-In-Time Compilation using GCC.
-AddPackage xh                           # Friendly and fast tool for sending HTTP requests
-AddPackage --foreign mongodb-shell      # The MongoDB Shell includes all features of legacy mongo shell with new syntax highligting, clear error messages and intelligent autocomplete.
-AddPackage --foreign fblog-bin          # Small command-line JSON log viewer
-AddPackage --foreign cqlsh              # CQL shell for apache cassandra
-AddPackage --foreign drawio-desktop-bin # Diagram drawing application built on web technology
-AddPackage --foreign frpc               # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
-AddPackage docker-compose               # Pythonless package of a a tool for defining and running multi-container applications
-AddPackage mkcert                       # Simple tool for making locally-trusted development certificates
-AddPackage postgresql-libs              # Libraries for use with PostgreSQL
+AddPackage quicklisp           # A library manager for Common Lisp
+AddPackage libgccjit           # Just-In-Time Compilation using GCC.
+AddPackage --foreign fblog-bin # Small command-line JSON log viewer
+AddPackage --foreign cqlsh     # CQL shell for apache cassandra
+AddPackage --foreign frpc      # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
+AddPackage docker-compose      # Pythonless package of a a tool for defining and running multi-container applications
+AddPackage mkcert              # Simple tool for making locally-trusted development certificates
+AddPackage postgresql-libs     # Libraries for use with PostgreSQL
 
 #
 # Stuff
