@@ -1,15 +1,4 @@
 [
-  (self: super: {
-    mako = super.mako.overrideAttrs (prev: rec {
-      version = "0d95a1653616454e894f27edc329a9f3a7f96dc2";
-      src = super.fetchFromGitHub {
-        owner = "emersion";
-        repo = super.mako.pname;
-        rev = "0d95a1653616454e894f27edc329a9f3a7f96dc2";
-        sha256 = "sha256-06UDXVsC7jDd/Lq7dSu3ZnkGW9rLiGHSJLoG9SZi1HY=";
-      };
-    });
-  })
 
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/bukubrow/default.nix
