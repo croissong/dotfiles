@@ -1,5 +1,7 @@
 only = ["krew", "sheldon", "cargo", "firmware", "bin", "go", "custom_commands"] # "chezmoi",
 
 [commands]
-"buku" = "buku -e ~/Dotfiles/priv/buku.org"
+buku = '''
+expect -c 'set exp_internal 1; spawn buku -e /home/croissong/Dotfiles/priv/buku.org; expect -re ".*Overwrite?.*"; send "y\r"; expect eof'
+'''
 # "xdg-ninja" = "xdg-ninja"
