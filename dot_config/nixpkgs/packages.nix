@@ -155,9 +155,10 @@
         # codeowners
       ];
 
-      editor = [
-        stylua # Code formatter for Lua
+      edit = [
         neovim
+        stylua # Code formatter for Lua
+        treefmt
       ];
 
       lang = {
@@ -197,6 +198,7 @@
 
     lang = {
       go = [
+        ginkgo # A Modern Testing Framework for Go
         golangci-lint # Fast linters Runner for Go
         delve # A debugger for the Go programming language.
         go # Core compiler tools for the Go programming language
@@ -298,6 +300,7 @@
 
     shell = {
       tools = [
+        exa # ls replacement
         pueue # A daemon for managing long running shell commands
         fzf # Command-line fuzzy finder
         sysz # A fzf terminal UI for systemctl

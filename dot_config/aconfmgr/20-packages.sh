@@ -28,7 +28,6 @@ AddPackage docker           # Pack, ship and run any application as a lightweigh
 AddPackage e2fsprogs        # Ext2/3/4 filesystem utilities
 AddPackage earlyoom         # Early OOM Daemon for Linux
 AddPackage ethtool          # Utility for controlling network drivers and hardware
-AddPackage exa              # ls replacement
 AddPackage fakeroot         # Tool for simulating superuser privileges
 AddPackage fd               # Simple, fast and user-friendly alternative to find
 AddPackage file             # File type identification utility
