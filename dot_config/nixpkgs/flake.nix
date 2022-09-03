@@ -28,7 +28,9 @@
       modules = [
         ./home.nix
       ];
-      extraSpecialArgs = {inherit rust-overlay;};
+      extraSpecialArgs = {
+        inherit rust-overlay;
+      };
     };
   };
 }

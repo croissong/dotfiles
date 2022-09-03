@@ -6,6 +6,7 @@
   rust-overlay,
   ...
 }: let
+  secrets = import ./secrets.nix;
 in {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
@@ -205,5 +206,25 @@ in {
     type = "Application";
   };
 
+  accounts.email.accounts = {
+    iogroup = {
+      address = secrets.mail.datawerk.username;
+      primary = true;
+      flavor = "outlook.office365.com";
+      passwordCommand = "echo ${secrets.mail.datawerk.password}";
+      imap = {
+        port = 993;
+        host = "outlook.office365.com";
+        tls.enable = true;
+      };
+      imapnotify = {
+        enable = true;
+        boxes = ["INBOX" "ops"];
+        onNotify = "/usr/bin/mailsync jm@iogroup.org"; # TODO
+      };
+    };
+  };
+
+  services.imapnotify.enable = true;
   systemd.user.sessionVariables.MOZ_ENABLE_WAYLAND = 1;
 }
