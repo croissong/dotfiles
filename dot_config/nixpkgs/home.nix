@@ -53,19 +53,16 @@ in {
     # enableNixpkgsReleaseCheck = true;
 
     packages = with pkgs; [
-      argocd # Declarative continuous deployment for Kubernetes
       calibre # Ebook management application
       chezmoi # Manage your dotfiles across multiple machines
       i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
 
-      nixpkgs-fmt
       termdown # Countdown timer and stopwatch in your terminal
       rust-analyzer # Experimental Rust compiler front-end for IDEs
       slack # Slack Desktop for Linux, using the system Electron package
       syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
       wl-color-picker # A wayland color picker that also works on wlroots
       wlsunset # Day/night gamma adjustments for Wayland compositors
-      xplr # A hackable, minimal, fast TUI file explorer
     ];
 
     file = {

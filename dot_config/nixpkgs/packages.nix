@@ -122,8 +122,9 @@
       ];
 
       protocols = [
-        swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
         altair # A feature-rich GraphQL Client IDE
+        grpcurl # Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
+        swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
       ];
 
       docs = [
@@ -134,15 +135,12 @@
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
       ];
 
-      media = [
-        image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
-      ];
-
       stuff = [
         powershell
       ];
 
       cn = [
+        argocd # Declarative continuous deployment for Kubernetes
         azure-cli
         k6 # A modern load testing tool, using Go and JavaScript
         linkerd
@@ -215,6 +213,7 @@
       python = [
         black # The uncompromising Python code formatter
         python310Packages.flake8 # The modular source code checker
+        py-spy # Sampling profiler for Python programs
         mypy # Optional static typing for Python 2 and 3 (PEP484)
         poetry # Python dependency management and packaging made easy.
         pyright # Type checker for the Python language
@@ -265,6 +264,8 @@
         kbfs # The Keybase filesystem
         keybase
         keybase-gui
+
+        nvchecker # New version checker for software
       ];
     };
 
@@ -280,6 +281,12 @@
 
         # For emacs-gif-screencast
         gifsicle # Command-line tool for creating, editing, and getting information about GIF images and animations
+
+        # TODO: not sure if these are needed (directly)
+        gifski # GIF encoder based on libimagequant (pngquant)
+        pngquant # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
+
+        image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
       ];
 
       images = [
@@ -297,16 +304,20 @@
       audio = [
         cozy # A modern audio book player for Linux using GTK 3
       ];
+
+      comm = [
+        mumble # low-latency, high quality voice chat software
+      ];
     };
 
     shell = {
       tools = [
         exa # ls replacement
+        fd # A simple, fast and user-friendly alternative to find
         pueue # A daemon for managing long running shell commands
         fzf # Command-line fuzzy finder
         sysz # A fzf terminal UI for systemctl
-
-        bottom # A cross-platform graphical process/system monitor with a customizable interface
+        xplr # A hackable, minimal, fast TUI file explorer
       ];
 
       core = [
@@ -331,10 +342,13 @@
 
     system = {
       cli = [
+        bottom # A cross-platform graphical process/system monitor with a customizable interface
         clamav # Anti-virus toolkit for Unix
+        light # GNU/Linux application to control backlights
         procs # A modern replacement for ps written in Rust
         my_pkgs.xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         trash-cli # Command line tool for the desktop trash can
+        nethogs # A small 'net top' tool, grouping bandwidth by process
       ];
     };
 

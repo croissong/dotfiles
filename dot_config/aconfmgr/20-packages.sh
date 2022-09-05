@@ -28,7 +28,6 @@ AddPackage e2fsprogs        # Ext2/3/4 filesystem utilities
 AddPackage earlyoom         # Early OOM Daemon for Linux
 AddPackage ethtool          # Utility for controlling network drivers and hardware
 AddPackage fakeroot         # Tool for simulating superuser privileges
-AddPackage fd               # Simple, fast and user-friendly alternative to find
 AddPackage file             # File type identification utility
 AddPackage filesystem       # Base Arch Linux files
 AddPackage findutils        # GNU utilities to locate files
@@ -74,7 +73,6 @@ AddPackage libpipewire02    # User space API to deal with multimedia pipelines (
 AddPackage libtool          # A generic library support script
 AddPackage libvirt          # API for controlling virtualization engines (openvz,kvm,qemu,virtualbox,xen,etc)
 AddPackage licenses         # Standard licenses distribution package
-AddPackage light            # Program to easily change brightness on backlight-controllers.
 
 AddPackage linux-firmware    # Firmware files for Linux
 AddPackage linux-lts         # The LTS Linux kernel and modules
@@ -92,15 +90,12 @@ AddPackage man-db           # A utility for reading man pages
 AddPackage man-pages        # Linux man pages
 AddPackage mdadm            # A tool for managing/monitoring Linux md device arrays, also known as Software RAID
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
-AddPackage mumble           # An Open Source, low-latency, high quality voice chat software (client)
 AddPackage net-tools        # Configuration tools for Linux networking
-AddPackage nethogs          # A net top tool which displays traffic used per process instead of per IP or interface
 AddPackage nftables         # Netfilter tables userspace tools
 AddPackage nmap             # Utility for network discovery and security auditing
 AddPackage noto-fonts       # Google Noto TTF fonts
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage npm              # A package manager for javascript
-AddPackage nvchecker        # New version checker for software releases
 AddPackage nzbget           # Download from Usenet using .nzb files
 AddPackage openldap         # Lightweight Directory Access Protocol (LDAP) client and server
 AddPackage openssh          # Premier connectivity tool for remote login with the SSH protocol
@@ -209,7 +204,6 @@ AddPackage --foreign bluez-firmware                 # Firmwares for Broadcom BCM
 AddPackage --foreign dive                           # A tool for exploring each layer in a docker image
 AddPackage --foreign drive-bin                      # Google Drive client for the commandline (binary version)
 AddPackage --foreign emacs-gcc-wayland-devel-bin    # GNU Emacs. Development native-comp branch and pgtk branch combined, served as a binary.
-AddPackage --foreign grpcurl-bin                    # Like cURL, but for gRPC
 AddPackage --foreign ike-scan                       # A tool that uses IKE protocol to discover, fingerprint and test IPSec VPN servers
 AddPackage --foreign jp                             # Command line interface to JMESPath
 AddPackage --foreign libspotify                     # C API package allowing third-party developers to write applications that utilize the Spotify music streaming service
@@ -221,7 +215,6 @@ AddPackage --foreign pandoc-bin                     # Pandoc - executable only, 
 AddPackage --foreign paru-bin                       # Feature packed AUR helper
 AddPackage --foreign pet-bin                        # Simple command-line snippet manager, written in Go.
 AddPackage --foreign pkg_scripts                    # A collection of pacman and package-related utilities.
-AddPackage --foreign py-spy                         # Sampling profiler for Python programs
 AddPackage --foreign python-flask-admin             # Simple and extensible admin interface framework for Flask
 AddPackage --foreign python-flask-api               # Browsable web APIs for Flask.
 AddPackage --foreign python-flask-paginate          # A simple paginate extension for flask
@@ -243,8 +236,6 @@ AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland se
 #
 
 AddPackage system-config-printer               # A CUPS printer configuration tool and status applet
-AddPackage gifski                              # GIF encoder based on libimagequant (pngquant). Squeezes maximum possible quality from the awful GIF format.
-AddPackage pngquant                            # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
 AddPackage --foreign wev                       # tool for debugging wayland events, similar to xev
 AddPackage xournalpp                           # Handwriting notetaking software with PDF annotation support
 AddPackage --foreign colorized-logs            # Tools for logs with ANSI color
