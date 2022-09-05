@@ -393,9 +393,10 @@
     ];
 
     nix = [
-      nixos-generators
       alejandra
+      nixos-generators
       nix-update
+      nvd
     ];
 
     tools = [
