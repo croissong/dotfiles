@@ -247,6 +247,7 @@
 
         topgrade # Invoke the upgrade procedure of multiple package managers
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
+        amber # A code search-and-replace tool
         slurp # Select a region in a Wayland compositor
         tmpmail # A temporary email right from your terminal written in POSIX sh
       ];
@@ -417,6 +418,7 @@
     dev = [
       # TODO: build failure -> https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/analysis/checkov/default.nix
       # checkov # Static code analysis tool for infrastructure-as-code
+      caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
       go-mockery # A mock code autogenerator for golang

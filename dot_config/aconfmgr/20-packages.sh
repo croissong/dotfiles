@@ -17,7 +17,6 @@ AddPackage bluez            # Daemons for the bluetooth protocol stack
 AddPackage bluez-utils      # Development and debugging utilities for the bluetooth protocol stack
 AddPackage btrfs-progs      # Btrfs filesystem utilities
 AddPackage bzip2            # A high-quality data compression program
-AddPackage caddy            # Fast web server with automatic HTTPS
 AddPackage checkbashisms    # Debian script that checks for bashisms
 AddPackage coreutils        # The basic file, shell and text manipulation utilities of the GNU operating system
 AddPackage cryptsetup       # Userspace setup tool for transparent encryption of block devices using dm-crypt
