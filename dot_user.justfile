@@ -14,7 +14,8 @@ nix-hm:
 
 
 nix-diff:
-  home-manager generations | head -n2 | choose 4 | sd -f m '^(.*)\n(.*)$' 'nvd diff /nix/var/nix/profiles/per-user/croissong/home-manager-{$2,$1}-link' | bash
+  # https://discourse.nixos.org/t/nvd-simple-nix-nixos-version-diff-tool/12397/28
+  nix --extra-experimental-features "nix-command flakes" store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2)
 
 
 

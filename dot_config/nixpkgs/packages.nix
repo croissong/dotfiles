@@ -397,7 +397,9 @@
       alejandra
       nixos-generators
       nix-update
-      nvd
+
+      # not used for now
+      # nvd
     ];
 
     tools = [
