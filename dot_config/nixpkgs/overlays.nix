@@ -21,7 +21,7 @@
   })
 
   (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/bukubrow/default.nix
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/compression/ouch/default.nix
     ouch = let
       version = "0.3.1-next";
       src = super.fetchFromGitHub {

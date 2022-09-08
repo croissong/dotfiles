@@ -112,6 +112,7 @@
         mtr # Combines the functionality of traceroute and ping
         socat # Utility for bidirectional data transfer between two independent data channels
         sshuttle # Transparent proxy server that works as a poor man's VPN
+        sslscan # Tests SSL/TLS services and discover supported cipher suites
         websocat # Command-line client for WebSockets (like netcat/socat)
       ];
 
@@ -291,9 +292,7 @@
 
       images = [
         krita # Edit and paint images
-
-        # TODO: hash mismatch
-        # epick # Color picker for creating harmonic color palettes
+        epick # Color picker for creating harmonic color palettes
       ];
       video = [
         obs-studio # Free, open source software for live streaming and recording
@@ -391,6 +390,7 @@
 
     system = [
       du-dust # du + rust = dust. Like du but more intuitive
+      dua # A tool to conveniently learn about the disk usage of directories, fast!
       duf # Disk Usage/Free Utility
       batsignal # A lightweight battery monitor daemon
       mako # Lightweight notification daemon for Wayland
@@ -437,6 +437,7 @@
       caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
+      gh # GitHub CLI too
       go-mockery # A mock code autogenerator for golang
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
       gsctl # The Giant Swarm command line interface
