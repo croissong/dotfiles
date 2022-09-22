@@ -4,27 +4,27 @@
         "/home/croissong/.local/bin/bin": {
             "path": "/home/croissong/.local/bin/bin",
             "remote_name": "bin",
-            "version": "v0.15.0",
+            "version": "v0.15.1",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/marcosnils/bin/releases/tag/v0.15.0",
+            "url": "https://github.com/marcosnils/bin/releases/tag/v0.15.1",
             "provider": "",
             "package_path": ""
         },
         "/home/croissong/.local/bin/humioctl": {
             "path": "/home/croissong/.local/bin/humioctl",
             "remote_name": "humioctl",
-            "version": "v0.29.1",
+            "version": "v0.30.1",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/humio/cli/releases/tag/v0.29.1",
+            "url": "https://github.com/humio/cli/releases/tag/v0.30.1",
             "provider": "",
             "package_path": "humioctl"
         },
         "/home/croissong/.local/bin/mizu": {
             "path": "/home/croissong/.local/bin/mizu",
             "remote_name": "mizu",
-            "version": "34.0",
+            "version": "36.0",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/up9inc/mizu/releases/tag/34.0",
+            "url": "https://github.com/up9inc/mizu/releases/tag/36.0",
             "provider": "",
             "package_path": ""
         },
@@ -34,24 +34,6 @@
             "version": "v0.2.12",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "url": "https://github.com/abhimanyu003/sttr/releases/tag/v0.2.12",
-            "provider": "",
-            "package_path": ""
-        },
-        "/home/croissong/.local/bin/switch.sh": {
-            "path": "/home/croissong/.local/bin/switch.sh",
-            "remote_name": "switch.sh",
-            "version": "0.7.1",
-            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/danielfoehrKn/kubeswitch",
-            "provider": "github",
-            "package_path": ""
-        },
-        "/home/croissong/.local/bin/switcher": {
-            "path": "/home/croissong/.local/bin/switcher",
-            "remote_name": "switcher",
-            "version": "0.7.1",
-            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/danielfoehrKn/kubeswitch/releases/tag/0.7.1",
             "provider": "",
             "package_path": ""
         },
