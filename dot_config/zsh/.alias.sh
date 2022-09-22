@@ -27,6 +27,8 @@ alias mr='neomutt -R'
 alias ms='mailsync'
 alias watch='viddy'
 alias sys=sysz
+alias sy=systemctl
+alias syu='sy --user'
 alias gpgt=gpg-tui
 alias tf=terraform
 
