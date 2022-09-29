@@ -19,6 +19,7 @@ x-scheme-handler/ftp=nyxt.desktop;
 [Default Applications]
 application/mxf=mpv.desktop;
 application/ogg=mpv.desktop;
+application/pdf=org.pwmt.zathura.desktop;
 application/sdp=mpv.desktop;
 application/smil=mpv.desktop;
 application/streamingmedia=mpv.desktop;
@@ -50,7 +51,7 @@ audio/*=mpv.desktop;
 image/*=imv.desktop;
 inode/directory=wl-copy.desktop;
 text/english=emacsclient.desktop;
-text/html=emacsclient.desktop;
+text/html=emacsclient.desktop;vivaldi-stable.desktop;nyxt.desktop;
 text/x-*=emacsclient.desktop;
 video/*=mpv.desktop;
 x-scheme-handler/ftp=nyxt.desktop;
