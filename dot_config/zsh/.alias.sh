@@ -13,7 +13,7 @@ alias find='fd -H'
 alias top=btm
 alias topgrade='topgrade --show-skipped'
 alias open='handlr open'
-alias history='history -E'
+alias history='history -E 0 | tac | cat'
 alias tree=br
 alias x=xplr
 alias ps=procs
@@ -31,6 +31,8 @@ alias sy=systemctl
 alias syu='sy --user'
 alias gpgt=gpg-tui
 alias tf=terraform
+
+alias weather='curl v2.wttr.in'
 
 alias mani='mani -c ~/.config/mani/code.yaml'
 alias mani-all='cm apply ~/.config/mani && mani run rm && mani sync'
@@ -106,6 +108,8 @@ alias twa='task add'
 alias twl='task list'
 alias twd='task done'
 alias twm='task modify'
+
+alias godeps='go get -u all && go mod tidy'
 
 alias docker=podman
 alias summon='summon -f summon.yml'
