@@ -15,8 +15,12 @@
   };
 
   packages_dict = with pkgs; {
+    inbox = [
+      my_pkgs.go-commitlinter
+    ];
     ent = [
       yt-dlp
+      my_pkgs.ytui-music
     ];
 
     docs = [
@@ -46,6 +50,7 @@
 
       data = [
         bcal # Storage conversion and expression calculator
+        my_pkgs.csvlens # Command line csv viewer
         dasel # Query and update data structures from the command line.
         jq # Command-line JSON processor
         miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
@@ -155,6 +160,7 @@
       ];
 
       edit = [
+        my_pkgs.diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
         neovim
         stylua # Code formatter for Lua
         treefmt
@@ -187,6 +193,10 @@
           redli # A humane alternative to the Redis-cli and TLS
         ];
       };
+
+      util = [
+        my_pkgs.dtool # CLI tool collection to assist development
+      ];
 
       data = [
         usql # A universal command-line interface for SQL databases
@@ -258,6 +268,7 @@
       ];
 
       docs = [
+        my_pkgs.wutag # CLI tool for tagging and organizing files by tags
         zathura # A highly customizable and functional PDF viewer
       ];
 

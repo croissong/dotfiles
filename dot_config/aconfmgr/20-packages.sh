@@ -276,9 +276,7 @@ AddPackage snapper       # A tool for managing BTRFS and LVM snapshots. It can c
 AddPackage --foreign tiny-irc-client-bin # tiny is an IRC client written in Rust.
 AddPackage --foreign slides-bin          # Terminal based presentation tool
 AddPackage --foreign webex-bin           # Webex for Linux
-AddPackage --foreign diffsitter-bin      # A tree-sitter based AST difftool to get meaningful semantic diffs
 AddPackage oath-toolkit                  # OATH one-time password toolkit
-AddPackage --foreign dtool               # A collection of development tools for numeric conversion
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
 AddPackage --foreign rusty-krab-manager  # Time management TUI
 AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
