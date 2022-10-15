@@ -1,15 +1,10 @@
 {
   pkgs,
+  pkgs-stable,
   config,
   lib,
   ...
 }: let
-  pkgs_stable =
-    import
-    (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/refs/tags/22.05.tar.gz)
-    # reuse the current configuration
-    {inherit config;};
-
   my_pkgs = import ./my-pkgs.nix {
     inherit pkgs lib config;
   };
