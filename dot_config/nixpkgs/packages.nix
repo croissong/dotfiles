@@ -108,6 +108,7 @@
 
     dev = {
       net = [
+        gping # Ping, but with a graph
         xh # Friendly and fast tool for sending HTTP requests
         mtr # Combines the functionality of traceroute and ping
         socat # Utility for bidirectional data transfer between two independent data channels
@@ -204,6 +205,7 @@
       go = [
         ginkgo # A Modern Testing Framework for Go
         golangci-lint # Fast linters Runner for Go
+        gotestsum # A human friendly `go test` runner
         delve # A debugger for the Go programming language.
         go # Core compiler tools for the Go programming language
         gopls # Language server for Go programming language
@@ -308,6 +310,7 @@
 
       audio = [
         cozy # A modern audio book player for Linux using GTK 3
+        sox # The Swiss Army knife of sound processing tools
       ];
 
       comm = [

@@ -284,7 +284,6 @@ AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 AddPackage --foreign imgp # Multi-core batch image resizer and rotator
 AddPackage pv             # A terminal-based tool for monitoring the progress of data through a pipeline.
 AddPackage peco           # Simplistic interactive filtering tool
-AddPackage gping          # Ping, but with a graph
 #
 # System
 #
@@ -342,9 +341,6 @@ AddPackage kdenlive              # A non-linear video editor for Linux using the
 #
 # Media
 #
-
-# Not sure
-AddPackage sox # The Swiss Army knife of sound processing tools
 
 # Nyxt, lisp
 AddPackage sbcl # Steel Bank Common Lisp
