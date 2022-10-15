@@ -16,6 +16,8 @@
     ent = [
       yt-dlp
       my_pkgs.ytui-music
+      steamcmd
+      steam-tui
     ];
 
     docs = [
@@ -59,6 +61,7 @@
 
       backup = [
         backblaze-b2 # Command-line tool for accessing the Backblaze B2 storage service
+        rclone # CLI to sync files and directories to and from major cloud storage
       ];
 
       tools = [
@@ -265,7 +268,9 @@
       ];
 
       docs = [
+        paperwork # Personal document manager
         my_pkgs.wutag # CLI tool for tagging and organizing files by tags
+        simple-scan
         zathura # A highly customizable and functional PDF viewer
       ];
 
@@ -419,6 +424,7 @@
     nix = [
       alejandra
       nixos-generators
+      nix-tree
       nix-update
 
       # not used for now
