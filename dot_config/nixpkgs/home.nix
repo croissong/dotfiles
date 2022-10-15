@@ -217,6 +217,9 @@ in {
     };
   };
 
-  services.imapnotify.enable = true;
+  services = {
+    imapnotify.enable = true;
+    kdeconnect.enable = true;
+  };
   systemd.user.sessionVariables.MOZ_ENABLE_WAYLAND = 1;
 }
