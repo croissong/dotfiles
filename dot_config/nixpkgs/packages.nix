@@ -335,6 +335,7 @@
 
       core = [
         mcfly # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
+        my_pkgs.sheldon # Fast, configurable, shell plugin manager
       ];
     };
 

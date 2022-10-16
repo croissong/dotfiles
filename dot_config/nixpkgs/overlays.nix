@@ -40,4 +40,30 @@
           });
     });
   })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/helmfile/default.nix
+    helmfile = let
+      version = "0.147.0";
+      src = super.fetchFromGitHub {
+        owner = "helmfile";
+        repo = super.helmfile.pname;
+        rev = "v0.147.0";
+        sha256 = "sha256-W6xkLqH0wHvCmwzwQyXpRbcj/itm3leRMFGa5RIYJ4A=";
+      };
+    in (super.helmfile.override rec {
+      buildGoModule = args:
+        super.buildGoModule (args
+          // {
+            vendorSha256 = "sha256-77dedk8QG3KNQX21IbA9HuJPRgNwgwqhmZvViRnxJHw=";
+            inherit src version;
+
+            postInstall = ''
+              installShellCompletion --cmd helmfile \
+                --bash <($out/bin/helmfile completion --bash) \
+                --zsh <($out/bin/helmfile completion --zsh)
+            '';
+          });
+    });
+  })
 ]

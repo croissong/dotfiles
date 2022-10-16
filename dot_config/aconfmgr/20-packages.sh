@@ -259,10 +259,9 @@ AddPackage kalendar                   # A calendar application using Akonadi to 
 #
 # shell
 #
-AddPackage direnv                # a shell extension that manages your environment
-AddPackage --foreign sheldon-bin # A fast, configurable, shell plugin manager
-AddPackage --foreign wezterm     # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
-AddPackage --foreign await       # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
+AddPackage direnv            # a shell extension that manages your environment
+AddPackage --foreign wezterm # Bleeding edge builds of a GPU-accelerated cross-platform terminal emulator and multiplexer implemented in Rust
+AddPackage --foreign await   # 32kb small memory footprint single binary that run list of commands in parallel and waits for their termination
 
 #
 # backup

@@ -96,6 +96,35 @@
     };
   };
 
+  sheldon =
+    pkgs.stdenv.mkDerivation rec {
+      pname = "sheldon";
+      version = "0.7.0";
+
+      src =
+        pkgs.fetchurl {
+          url = "https://github.com/rossmacarthur/sheldon/releases/download/${version}/sheldon-${version}-x86_64-unknown-linux-musl.tar.gz
+";
+          sha256 = "sha256-wkP+Luq9N68o1DpVmixohrgq0pv7ynKTe/Po5+sgxOg=";
+        };
+
+      sourceRoot = ".";
+      installPhase = ''
+        install -m755 -D sheldon $out/bin/sheldon
+        runHook postInstall
+      '';
+
+      nativeBuildInputs = [pkgs.installShellFiles];
+      postInstall = ''
+        installShellCompletion --zsh completions/sheldon.zsh
+      '';
+
+      meta = with pkgs.lib; {
+        homepage = "https://github.com/rossmacarthur/sheldon";
+        description = "Fast, configurable, shell plugin manager";
+      };
+    };
+
   dtool = pkgs.rustPlatform.buildRustPackage rec {
     pname = "dtool";
     version = "0.12.0";
@@ -139,6 +168,7 @@
       description = "Youtube client in terminal for music";
     };
   };
+
   go-commitlinter = pkgs.stdenv.mkDerivation rec {
     pname = "go-commitlinter";
     version = "0.1.2";
@@ -187,6 +217,7 @@ in {
   wutag = wutag;
   xmlformatter = xmlformatter;
   diffsitter = diffsitter;
+  sheldon = sheldon;
   dtool = dtool;
   ytui-music = ytui-music;
   go-commitlinter = go-commitlinter;
