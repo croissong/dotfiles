@@ -198,21 +198,43 @@ in {
     type = "Application";
   };
 
-  accounts.email.accounts = {
-    iogroup = {
-      address = secrets.mail.datawerk.username;
-      primary = true;
-      flavor = "outlook.office365.com";
-      passwordCommand = "echo ${secrets.mail.datawerk.password}";
-      imap = {
-        port = 993;
-        host = "outlook.office365.com";
-        tls.enable = true;
-      };
-      imapnotify = {
-        enable = true;
-        boxes = ["INBOX" "ops"];
-        onNotify = "/usr/bin/mailsync jm@iogroup.org"; # TODO
+  programs.mbsync.enable = true;
+  accounts.email = {
+    maildirBasePath = ".local/share/mail";
+
+    accounts = {
+      iogroup = {
+        address = secrets.mail.datawerk.username;
+        primary = true;
+        flavor = "outlook.office365.com";
+        passwordCommand = "echo ${secrets.mail.datawerk.password}";
+
+        folders = {
+          inbox = "INBOX";
+          # TODO: drafts,sent,trash
+        };
+
+        imap = {
+          port = 993;
+          host = "outlook.office365.com";
+          tls.enable = true;
+        };
+        imapnotify = {
+          enable = true;
+          boxes = ["INBOX" "ops"];
+          onNotify = "/usr/bin/mailsync jm@iogroup.org"; # TODO
+        };
+
+        maildir = {
+          # TODO: remove this and switch maildir references to default: .local/share/mail/iogroup/
+          path = "jm@iogroup.org";
+        };
+
+        mbsync = {
+          enable = true;
+          create = "both";
+          expunge = "both";
+        };
       };
     };
   };
