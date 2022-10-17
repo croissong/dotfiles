@@ -1,4 +1,4 @@
-access-token: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).digitalocean.token }}
+access-token: {{ secretJSON | dig "digitalocean" "token" "" }}
 account:
   get:
     format: ""

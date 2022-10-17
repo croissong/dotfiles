@@ -19,9 +19,9 @@ fileext = ".ics"
 
 [storage wrk_calendar_remote]
 type = "caldav"
-url = "http://localhost:1080/users/{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.user }}/calendar/"
-username = "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.user }}"
-password = "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.password }}"
+url = "http://localhost:1080/users/{{ secretJSON | dig "mail" "datawerk" "user" "" }}/calendar/"
+username = "{{ secretJSON | dig "mail" "datawerk" "user" "" }}"
+password = "{{ secretJSON | dig "mail" "datawerk" "password" "" }}"
 start_date = "datetime.now() - timedelta(days=180)"
 end_date = "datetime.now() + timedelta(days=180)"
 

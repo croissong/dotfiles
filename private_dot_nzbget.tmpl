@@ -23,8 +23,8 @@ Server1.Optional=no
 Server1.Group=0
 Server1.Host=news.frugalusenet.com
 Server1.Port=563
-Server1.Username={{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).nzbget.username }}
-Server1.Password={{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).nzbget.password }}
+Server1.Username={{ secretJSON | dig "nzbget" "username" "" }}
+Server1.Password={{ secretJSON | dig "nzbget" "password" "" }}
 Server1.JoinGroup=no
 Server1.Encryption=yes
 Server1.Cipher=
@@ -710,7 +710,7 @@ ShellOverride=
 # notified on other events (such as "nzb-added" or "nzb-downloaded").
 EventInterval=0
 Feed1.Name=dog
-Feed1.URL=https://dognzb.cr/rss.cfm?r={{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).nzbget.feedApiKey }}&t=9000
+Feed1.URL=https://dognzb.cr/rss.cfm?r={{ secretJSON | dig "nzbget" "feedApiKey" "" }}&t=9000
 Feed1.Filter=
 Feed1.Interval=15
 Feed1.Backlog=yes

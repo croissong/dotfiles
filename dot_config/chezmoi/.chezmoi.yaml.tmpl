@@ -1,7 +1,12 @@
-secret.command: sops
+secret:
+  command: sops
+  args:
+    - "-d"
+    - "--output-type=json"
+    - "{{ .chezmoi.sourceDir }}/secrets.yml"
 merge.command: emacsscripts
 merge.args: ediff3
 sourceDir: {{ env "DOTFILES" }}
 encryption: gpg
-gpg.recipient: CE979DEE904C26AA371678C296A438F9EE72572F
+gpg.recipient: jan.moeller0@gmail.com
 verbose: true

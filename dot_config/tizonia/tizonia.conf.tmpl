@@ -138,7 +138,7 @@ mpris-enabled = false
 
 # YouTube configuration
 # -------------------------------------------------------------------------
-youtube.api_key = {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).tizonia.youtubeApiKey }}
+youtube.api_key = {{ secretJSON | dig "tizonia" "youtubeApiKey" "" }}
 # youtube.buffer_seconds = size of the audio buffer (in seconds) to use
 #                          while downloading streams. Default: 60.
 #                          Increase in case of cuts.

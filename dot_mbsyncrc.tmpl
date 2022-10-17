@@ -2,8 +2,8 @@
 IMAPStore jm@iogroup.org-remote
 Host outlook.office365.com
 Port 993
-User {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.user }}
-Pass {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.password }}
+User {{ secretJSON | dig "mail" "datawerk" "user" "" }}
+Pass {{ secretJSON | dig "mail" "datawerk" "password" "" }}
 AuthMechs LOGIN
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt

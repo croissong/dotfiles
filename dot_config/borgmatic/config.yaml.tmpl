@@ -5,7 +5,7 @@ location:
   - /home/croissong
   - /etc
   repositories:
-  - {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).borgmatic.repo }}
+  - {{ secretJSON | dig "borgmatic" "repo" "" }}
 
   exclude_patterns:
     - '*.pyc'
@@ -30,7 +30,7 @@ hooks:
 
 storage:
   compression: auto,zstd
-  encryption_passphrase: {{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).borgmatic.passphrase }}
+  encryption_passphrase: {{ secretJSON | dig "borgmatic" "passphrase" "" }}
   archive_name_format: '{hostname}-{now}'
 
 retention:
