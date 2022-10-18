@@ -21,4 +21,4 @@ nix-diff:
 
 gc:
   podman system prune --all --force && podman rmi --all
-  nix-collect-garbage
+  nix-collect-garbage -d
