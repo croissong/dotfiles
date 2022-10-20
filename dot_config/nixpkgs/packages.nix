@@ -49,11 +49,16 @@
         bcal # Storage conversion and expression calculator
         my_pkgs.csvlens # Command line csv viewer
         dasel # Query and update data structures from the command line.
+        gron # Make JSON greppable!
+        jless # A command-line pager for JSON data
         jq # Command-line JSON processor
         miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
         sd # Intuitive find & replace
       ];
 
+      misc = [
+        espeak # Open source speech synthesizer that supports over 70 languages, based on eSpeak
+      ];
       pipe = [
         choose # A human-friendly and fast alternative to cut and (sometimes) awk
         sad # CLI tool to search and replace
@@ -75,13 +80,11 @@
 
         delta # A syntax-highlighting pager for git
         dogdns # Command-line DNS client like dig
-        jless # A command-line pager for JSON data
 
         gopass # The slightly more awesome standard unix password manager for teams.
         gopass-summon-provider # summon provider for gopass
 
         gpg-tui # A terminal user interface for GnuPG
-        gron # Make JSON greppable!
 
         gum # Tasty Bubble Gum for your shell
 
@@ -190,6 +193,7 @@
         db = [
           mongosh # The MongoDB Shell
           redli # A humane alternative to the Redis-cli and TLS
+          usql # A universal command-line interface for SQL databases
         ];
       };
 
@@ -198,7 +202,6 @@
       ];
 
       data = [
-        usql # A universal command-line interface for SQL databases
         dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
         xsv # A fast CSV toolkit written in Rust
       ];
@@ -358,7 +361,8 @@
       cli = [
         bottom # A cross-platform graphical process/system monitor with a customizable interface
         clamav # Anti-virus toolkit for Unix
-        light # GNU/Linux application to control backlights
+        # TODO: requires nixos for udev rules (`programs.light.enable = true;`)
+        # light # GNU/Linux application to control backlights
         procs # A modern replacement for ps written in Rust
         my_pkgs.xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         trash-cli # Command line tool for the desktop trash can
@@ -436,6 +440,8 @@
       ansible # Official assortment of Ansible collections
       ansible-lint # Checks playbooks for practices and behaviour that could potentially be improved.
       python310Packages.mitogen # Python Library for writing distributed self-replicating programs
+
+      python310Packages.qrcode # Quick Response code generation for Python
 
       dhcping # Send DHCP request to find out if a DHCP server is running
 
