@@ -1,8 +1,8 @@
 [Added Associations]
 application/epub+zip=calibre-ebook-viewer.desktop;
-application/msword=libreoffice-writer.desktop;
-application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;calibre-ebook-edit.desktop;
+application/msword=writer.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=impress.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=writer.desktop;calibre-ebook-edit.desktop;
 application/x-apple-diskimage=nyxt.desktop;
 application/x-extension-htm=nyxt.desktop;
 application/x-extension-html=nyxt.desktop;
@@ -12,7 +12,7 @@ application/x-extension-xhtml=nyxt.desktop;
 application/xhtml+xml=nyxt.desktop;
 image/jpeg=nyxt.desktop;
 image/png=imv.desktop;gimp.desktop;
-text/csv=libreoffice-calc.desktop;
+text/csv=calc.desktop;
 text/plain=emacsclient.desktop;
 x-scheme-handler/ftp=nyxt.desktop;
 
@@ -25,7 +25,7 @@ application/smil=mpv.desktop;
 application/streamingmedia=mpv.desktop;
 application/vnd.apple.mpegurl=mpv.desktop;
 application/vnd.ms-asf=mpv.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=writer.desktop;
 application/vnd.rn-realmedia=mpv.desktop;
 application/vnd.rn-realmedia-vbr=mpv.desktop;
 application/x-cue=mpv.desktop;
