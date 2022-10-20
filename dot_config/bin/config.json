@@ -10,15 +10,6 @@
             "provider": "",
             "package_path": ""
         },
-        "/home/croissong/.local/bin/humioctl": {
-            "path": "/home/croissong/.local/bin/humioctl",
-            "remote_name": "humioctl",
-            "version": "v0.30.1",
-            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "url": "https://github.com/humio/cli/releases/tag/v0.30.1",
-            "provider": "",
-            "package_path": "humioctl"
-        },
         "/home/croissong/.local/bin/mizu": {
             "path": "/home/croissong/.local/bin/mizu",
             "remote_name": "mizu",

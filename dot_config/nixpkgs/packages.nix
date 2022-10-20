@@ -150,6 +150,7 @@
       cn = [
         argocd # Declarative continuous deployment for Kubernetes
         azure-cli
+        humioctl
         k6 # A modern load testing tool, using Go and JavaScript
         linkerd
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
