@@ -1,0 +1,3 @@
+#+begin_src shell
+pw-loopback -l 5000 -C rnnoise_source
+#+end_src
