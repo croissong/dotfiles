@@ -163,7 +163,7 @@
       ];
 
       edit = [
-        my_pkgs.diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
+        diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
         neovim
         stylua # Code formatter for Lua
         treefmt

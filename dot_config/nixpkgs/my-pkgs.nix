@@ -76,26 +76,6 @@
     };
   };
 
-  diffsitter = pkgs.stdenv.mkDerivation rec {
-    pname = "diffsitter";
-    version = "0.7.1";
-
-    src = pkgs.fetchurl {
-      url = "https://github.com/afnanenayet/diffsitter/releases/download/v${version}/diffsitter-x86_64-unknown-linux-gnu.tar.gz";
-      sha256 = "sha256-1cxlFLzUwBz65JDkbAwYnThbrnbF0m5XkXCLVniSJ60=";
-    };
-
-    installPhase = ''
-      install -m755 -D diffsitter $out/bin/diffsitter
-    '';
-
-    meta = with pkgs.lib; {
-      homepage = "https://github.com/afnanenayet/diffsitter";
-      description = "A tree-sitter based AST difftool to get meaningful semantic diffs";
-      platforms = platforms.linux;
-    };
-  };
-
   sheldon =
     pkgs.stdenv.mkDerivation rec {
       pname = "sheldon";
@@ -216,7 +196,6 @@ in {
   kubesess = kubesess;
   wutag = wutag;
   xmlformatter = xmlformatter;
-  diffsitter = diffsitter;
   sheldon = sheldon;
   dtool = dtool;
   ytui-music = ytui-music;
