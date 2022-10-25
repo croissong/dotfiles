@@ -100,6 +100,10 @@ in {
 
     package = pkgs.wrapFirefox pkgs.firefox-devedition-bin-unwrapped {
       forceWayland = true;
+      cfg = {
+        enableTridactylNative = true;
+      };
+
       extraPolicies = {
         # https://github.com/mozilla/policy-templates/blob/master/README.md
 
@@ -132,25 +136,31 @@ in {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/markdown-to-jira/latest.xpi";
           };
-          "extension@tabliss.io" = {
-            installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi";
-          };
           "jid1-xUfzOsOFlzSOXg@jetpack" = {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/reddit-enhancement-suite/latest.xpi";
           };
-          "simple-tab-groups@drive4ik" = {
+          "tridactyl.vim.betas.nonewtab@cmcaine.co.uk" = {
             installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
+            install_url = "https://tridactyl.cmcaine.co.uk/betas/nonewtab/tridactyl_no_new_tab_beta-latest.xpi";
+            install_sources = [
+              "https://tridactyl.cmcaine.co.uk/betas/*"
+            ];
           };
-
-          # "simple-tab-groups@drive4ik" = {
-          #   installation_mode = "force_installed";
-          #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-tab-groups/latest.xpi";
-          # };
+          "extension@tabliss.io" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi";
+          };
+          "spookfox@bitspook.in" = {
+            installation_mode = "force_installed";
+            install_url = "https://github.com/bitspook/spookfox/releases/download/v0.2.5/spookfox-firefox.xpi";
+            install_sources = [
+              "https://github.com/bitspook/spookfox/releases/download/*"
+              "https://objects.githubusercontent.com/*"
+            ];
+          };
           "*" = {
-            # installation_mode = "blocked";
+            installation_mode = "blocked";
           };
         };
       };

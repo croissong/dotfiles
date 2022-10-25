@@ -1,0 +1,24 @@
+" https://github.com/tridactyl/tridactyl/blob/master/.tridactylrc
+"
+" "
+" " Binds
+" "
+"
+"
+"
+
+" set storageloc local
+set tabsort mru
+set modeindicator false
+
+bind --mode=ex <A-ä> ex.next_completion
+bind --mode=ex <A-ü> ex.prev_completion
+
+bind --mode=ex <A-p> ex.execute_ex_on_completion_args tabclose
+
+bind --mode=normal l fillcmdline tab
+
+unbind --mode=normal <C-f>
+unbind --mode=normal <C-l>
+
+set visualenterauto false
