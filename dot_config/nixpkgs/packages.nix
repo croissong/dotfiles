@@ -26,8 +26,6 @@
     ];
 
     daily = [
-      # vivaldi
-      # vivaldi-ffmpeg-codecs
     ];
 
     special_purpose = [

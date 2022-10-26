@@ -14,6 +14,7 @@ image/jpeg=nyxt.desktop;
 image/png=imv.desktop;gimp.desktop;
 text/csv=calc.desktop;
 text/plain=emacsclient.desktop;
+text/org=emacsclient.desktop;
 x-scheme-handler/ftp=nyxt.desktop;
 
 [Default Applications]
@@ -51,12 +52,12 @@ audio/*=mpv.desktop;
 image/*=imv.desktop;
 inode/directory=wl-copy.desktop;
 text/english=emacsclient.desktop;
-text/html=emacsclient.desktop;vivaldi-stable.desktop;nyxt.desktop;
+text/html=emacsclient.desktop;firefox.desktop;nyxt.desktop;
 text/x-*=emacsclient.desktop;
 video/*=mpv.desktop;
 x-scheme-handler/ftp=nyxt.desktop;
-x-scheme-handler/http=vivaldi-stable.desktop;nyxt.desktop;wl-copy.desktop;
-x-scheme-handler/https=vivaldi-stable.desktop;mpv.desktop;nyxt.desktop;wl-copy.desktop;
+x-scheme-handler/http=firefox.desktop;nyxt.desktop;wl-copy.desktop;
+x-scheme-handler/https=firefox.desktop;mpv.desktop;nyxt.desktop;wl-copy.desktop;
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
 x-scheme-handler/msteams=teams.desktop;
 x-scheme-handler/terminal=org.wezfurlong.wezterm.desktop;
