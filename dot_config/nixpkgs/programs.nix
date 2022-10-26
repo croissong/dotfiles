@@ -159,6 +159,9 @@ in {
     };
   };
 
+  # https://github.com/NixOS/nixpkgs/issues/47340#issuecomment-440645870
+  home.file.".mozilla/native-messaging-hosts/tridactyl.json".source = "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts/tridactyl.json";
+
   # https://github.com/guibou/nixGL
   xdg.desktopEntries.firefox = {
     categories = ["Network" "WebBrowser"];
