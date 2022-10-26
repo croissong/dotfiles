@@ -16,6 +16,7 @@
     ent = [
       yt-dlp
       my_pkgs.ytui-music
+      toipe
       steamcmd
       steam-tui
     ];
@@ -36,6 +37,7 @@
     cli = {
       dev = [
         angle-grinder # Slice and dice logs on the command line
+        cocogitto # The Conventional Commits & semver toolbox
         kubeval # Tool for validating Kubernetes YAML or JSON configuration files
         step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
         skopeo # A command line utility for various operations on container images and image repositories.
@@ -324,6 +326,7 @@
 
       comm = [
         mumble # low-latency, high quality voice chat software
+        linphone
       ];
     };
 
@@ -362,6 +365,9 @@
       cli = [
         bottom # A cross-platform graphical process/system monitor with a customizable interface
         clamav # Anti-virus toolkit for Unix
+        inxi # A full featured CLI system information tool
+        lshw
+        hwinfo
         # TODO: requires nixos for udev rules (`programs.light.enable = true;`)
         # light # GNU/Linux application to control backlights
         procs # A modern replacement for ps written in Rust
