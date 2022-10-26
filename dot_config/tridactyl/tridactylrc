@@ -21,5 +21,6 @@ bind --mode=normal l fillcmdline tab
 
 unbind --mode=normal <C-f>
 unbind --mode=normal <C-l>
+unbind --mode=normal f
 
 set visualenterauto false
