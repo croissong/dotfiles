@@ -14,7 +14,8 @@ set modeindicator false
 bind --mode=ex <A-ä> ex.next_completion
 bind --mode=ex <A-ü> ex.prev_completion
 
-bind --mode=ex <A-p> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <A-q> ex.execute_ex_on_completion_args tabclose
+bind --mode=ex <A-w> tabdetach
 
 bind --mode=normal l fillcmdline tab
 
