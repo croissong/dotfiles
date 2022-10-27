@@ -39,6 +39,7 @@
         kubeval # Tool for validating Kubernetes YAML or JSON configuration files
         step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
         skopeo # A command line utility for various operations on container images and image repositories.
+        watchman # Watchman exists to watch files and record when they change.
       ];
 
       media = [
@@ -153,6 +154,7 @@
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
         linkerd
+        mimir # Grafana Mimir
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
@@ -164,6 +166,7 @@
 
       edit = [
         diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
+        my_pkgs.go-commitlinter
         neovim
         stylua # Code formatter for Lua
         treefmt
