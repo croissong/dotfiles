@@ -58,6 +58,8 @@
             vendorSha256 = "sha256-77dedk8QG3KNQX21IbA9HuJPRgNwgwqhmZvViRnxJHw=";
             inherit src version;
 
+            ldflags = ["-s" "-w" "-X go.szostok.io/version.version=${version}"];
+
             postInstall = ''
               installShellCompletion --cmd helmfile \
                 --bash <($out/bin/helmfile completion --bash) \
