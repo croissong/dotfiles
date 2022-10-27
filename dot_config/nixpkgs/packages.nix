@@ -194,6 +194,7 @@
         ];
 
         db = [
+          # my_pkgs.cqlsh # cli for interacting with Cassandra using CQL
           mongosh # The MongoDB Shell
           redli # A humane alternative to the Redis-cli and TLS
           usql # A universal command-line interface for SQL databases
@@ -454,6 +455,8 @@
 
       # TODO (ngrok alternative)
       # rathole # A reverse proxy for NAT traversal
+      frp # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
+
       miniserve # CLI tool to serve files and directories over HTTP
       ngrok # secure introspectable tunnels to localhost
       pastel # A command-line tool to generate, analyze, convert and manipulate colors

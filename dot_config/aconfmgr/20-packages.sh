@@ -114,7 +114,8 @@ AddPackage physlock         # Lightweight Linux console locking tool
 AddPackage pipewire         # Low-latency audio/video router and processor
 AddPackage pipewire-alsa    # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse   # Low-latency audio/video router and processor - PulseAudio replacement
-AddPackage pkgconf          # Package compiler and linker metadata toolkit
+
+AddPackage pkgconf # Package compiler and linker metadata toolkit
 
 AddPackage procps-ng       # Utilities for monitoring your system and its processes
 AddPackage psmisc          # Miscellaneous procfs tools
@@ -235,17 +236,16 @@ AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland se
 # tools
 #
 
-AddPackage system-config-printer               # A CUPS printer configuration tool and status applet
-AddPackage --foreign wev                       # tool for debugging wayland events, similar to xev
-AddPackage xournalpp                           # Handwriting notetaking software with PDF annotation support
-AddPackage --foreign colorized-logs            # Tools for logs with ANSI color
-AddPackage --foreign parsec-bin                # Remotely connect to a gaming pc for a low latency remote computing experience
-AddPackage --foreign meli                      # A MUA for the terminal aiming for configurability and extensibility with sane defaults
-AddPackage --foreign zoiper                    # a SIP and IAX2 VoIP softphone
-AddPackage --foreign linphone-desktop-appimage # A free VoIP and video softphone based on the SIP protocol (AppImage version)
-AddPackage qemu-desktop                        # A QEMU setup for desktop environments
-AddPackage --foreign tcpping                   # test response times using TCP SYN packets
-AddPackage libva-utils                         # Intel VA-API Media Applications and Scripts for libva
+AddPackage system-config-printer    # A CUPS printer configuration tool and status applet
+AddPackage --foreign wev            # tool for debugging wayland events, similar to xev
+AddPackage xournalpp                # Handwriting notetaking software with PDF annotation support
+AddPackage --foreign colorized-logs # Tools for logs with ANSI color
+AddPackage --foreign parsec-bin     # Remotely connect to a gaming pc for a low latency remote computing experience
+AddPackage --foreign meli           # A MUA for the terminal aiming for configurability and extensibility with sane defaults
+AddPackage --foreign zoiper         # a SIP and IAX2 VoIP softphone
+AddPackage qemu-desktop             # A QEMU setup for desktop environments
+AddPackage --foreign tcpping        # test response times using TCP SYN packets
+AddPackage libva-utils              # Intel VA-API Media Applications and Scripts for libva
 
 ##
 ## daily
@@ -318,8 +318,6 @@ AddPackage arch-install-scripts  # Scripts to aid in installing Arch Linux
 AddPackage quicklisp           # A library manager for Common Lisp
 AddPackage libgccjit           # Just-In-Time Compilation using GCC.
 AddPackage --foreign fblog-bin # Small command-line JSON log viewer
-AddPackage --foreign cqlsh     # CQL shell for apache cassandra
-AddPackage --foreign frpc      # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 AddPackage docker-compose      # Pythonless package of a a tool for defining and running multi-container applications
 AddPackage mkcert              # Simple tool for making locally-trusted development certificates
 AddPackage postgresql-libs     # Libraries for use with PostgreSQL
