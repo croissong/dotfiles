@@ -121,7 +121,6 @@
     };
 
     phases = ["installPhase"];
-    # sourceRoot = ".";
     installPhase = ''
       install -m755 -D $src $out/bin/ytui_music
     '';
@@ -165,7 +164,6 @@
 
     nativeBuildInputs = [pkgs.pkg-config];
     buildInputs = [pkgs.bzip2 pkgs.xz pkgs.zlib pkgs.zstd];
-    # buildFeatures = ["zstd/pkg-config"];
 
     cargoSha256 = "sha256-qK95TCZUyDdV2X2mEdGwkeh+zCjurwN9gdy6dJgTeQo=";
 

@@ -65,15 +65,6 @@ in {
       wlsunset # Day/night gamma adjustments for Wayland compositors
     ];
 
-    file = {
-      "tmp/packages.txt".text = let
-        packages = builtins.map (p: "${p.name}") config.home.packages;
-        sortedUnique = builtins.sort builtins.lessThan (lib.unique packages);
-        formatted = builtins.concatStringsSep "\n" sortedUnique;
-      in
-        formatted;
-    };
-
     # only has v11 currently
     file.".local/jdks/openjdk11".source = pkgs.adoptopenjdk-bin; # java jdk 11
   };
