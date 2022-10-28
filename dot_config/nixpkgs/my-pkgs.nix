@@ -191,6 +191,26 @@
       description = "Command line csv viewer";
     };
   };
+
+  vhs = pkgs.stdenv.mkDerivation rec {
+    pname = "vhs";
+    version = "0.1.0";
+
+    src = pkgs.fetchurl {
+      url = "https://github.com/charmbracelet/vhs/releases/download/v${version}/vhs_${version}_Linux_x86_64.tar.gz";
+      sha256 = "sha256-QUJIvLFagxV2G6fTPoeiTf7M9Kw9iCUDf1H5sqY1Re0=";
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D vhs $out/bin/vhs
+    '';
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/charmbracelet/vhs";
+      description = "Your CLI home video recorder vhs";
+    };
+  };
 in {
   xdg-ninja = xdg-ninja;
   kubesess = kubesess;
@@ -201,4 +221,5 @@ in {
   ytui-music = ytui-music;
   go-commitlinter = go-commitlinter;
   csvlens = csvlens;
+  vhs = vhs;
 }

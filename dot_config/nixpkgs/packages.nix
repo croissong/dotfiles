@@ -44,6 +44,7 @@
 
       media = [
         imv # A command line image viewer for tiling window managers
+        my_pkgs.vhs # Your CLI home video recorder vhs
       ];
 
       data = [
@@ -60,6 +61,7 @@
       misc = [
         espeak # Open source speech synthesizer that supports over 70 languages, based on eSpeak
       ];
+
       pipe = [
         choose # A human-friendly and fast alternative to cut and (sometimes) awk
         sad # CLI tool to search and replace
