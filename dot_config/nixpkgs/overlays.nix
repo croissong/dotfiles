@@ -68,4 +68,47 @@
           });
     });
   })
+
+  (self: super: {
+    cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation rec {
+      pname = "cyrus-sasl-xoauth2";
+      version = "master";
+
+      src = super.pkgs.fetchFromGitHub {
+        owner = "moriyoshi";
+        repo = "cyrus-sasl-xoauth2";
+        rev = "master";
+        sha256 = "sha256-OlmHuME9idC0fWMzT4kY+YQ43GGch53snDq3w5v/cgk=";
+      };
+
+      nativeBuildInputs = [super.pkg-config super.automake super.autoconf super.libtool];
+      propagatedBuildInputs = [super.cyrus_sasl];
+
+      buildPhase = ''
+        ./autogen.sh
+        ./configure
+      '';
+
+      installPhase = ''
+        make DESTDIR="$out" install
+      '';
+
+      meta = with super.pkgs.lib; {
+        homepage = "https://github.com/moriyoshi/cyrus-sasl-xoauth2";
+        description = "XOAUTH2 mechanism plugin for cyrus-sasl";
+      };
+    };
+
+    # https://github.com/NixOS/nixpkgs/issues/108480#issuecomment-1115108802
+    isync-oauth2 = super.buildEnv {
+      name = "isync-oauth2";
+      paths = [super.isync];
+      pathsToLink = ["/bin"];
+      nativeBuildInputs = [super.makeWrapper];
+      postBuild = ''
+        wrapProgram "$out/bin/mbsync" \
+          --prefix SASL_PATH : "${super.cyrus_sasl.out.outPath}/lib/sasl2:${self.cyrus-sasl-xoauth2}/usr/lib/sasl2"
+      '';
+    };
+  })
 ]

@@ -79,7 +79,10 @@ in {
     ];
   };
 
-  programs.mbsync.enable = true;
+  programs.mbsync = {
+    enable = true;
+    package = pkgs.isync-oauth2;
+  };
   accounts.email = {
     maildirBasePath = ".local/share/mail";
 
@@ -88,7 +91,7 @@ in {
         address = secrets.mail.datawerk.username;
         primary = true;
         flavor = "outlook.office365.com";
-        passwordCommand = "echo ${secrets.mail.datawerk.password}";
+        passwordCommand = "mailctl access ${secrets.mail.datawerk.username}";
 
         folders = {
           inbox = "INBOX";
@@ -104,6 +107,9 @@ in {
           enable = true;
           boxes = ["INBOX" "ops"];
           onNotify = "/usr/bin/mailsync jm@iogroup.org"; # TODO
+          extraConfig = {
+            xoauth2 = true;
+          };
         };
 
         maildir = {
@@ -115,6 +121,9 @@ in {
           enable = true;
           create = "both";
           expunge = "both";
+          extraConfig.account = {
+            AuthMechs = "XOAUTH2";
+          };
         };
       };
     };
