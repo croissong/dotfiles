@@ -1,5 +1,10 @@
 only = ["krew", "sheldon", "cargo", "firmware", "bin", "go", "custom_commands"] # "chezmoi",
 
+skip_notify = true
+
+[firmware]
+upgrade = true
+
 [commands]
 buku = '''
 expect -c 'set exp_internal 1; spawn buku -e /home/croissong/Dotfiles/priv/buku.org; expect -re ".*Overwrite?.*"; send "y\r"; expect eof'
