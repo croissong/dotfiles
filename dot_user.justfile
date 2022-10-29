@@ -9,13 +9,12 @@ nix: nix-hm nix-diff
 
 nix-hm:
   chezmoi apply ~/.config/nixpkgs
-  cd ~/.config/nixpkgs && nix --extra-experimental-features "nix-command flakes" flake update
-  NIXPKGS_ALLOW_UNFREE=1 home-manager --extra-experimental-features "nix-command flakes" --impure switch --flake ~/.config/nixpkgs#moi
+  NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch --flake ~/.config/nixpkgs#moi --update-input nixpkgs --update-input home-manager
 
 
 nix-diff:
   # https://discourse.nixos.org/t/nvd-simple-nix-nixos-version-diff-tool/12397/28
-  nix --extra-experimental-features "nix-command flakes" store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2)
+  nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2)
 
 
 
