@@ -1,12 +1,13 @@
 {
   pkgs,
   pkgs-stable,
+  pkgs-master,
   config,
   lib,
   ...
 }: let
   my_pkgs = import ./my-pkgs.nix {
-    inherit pkgs lib config;
+    inherit pkgs pkgs-master config;
   };
 
   packages_dict = with pkgs; {
@@ -264,6 +265,7 @@
       cli = [
         croc # Easily and securely send things from one computer to another
         goimapnotify # Execute scripts on IMAP mailbox changes using IDLE
+        my_pkgs.mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
         grim # Grab images from a Wayland compositor
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
@@ -377,7 +379,7 @@
         # TODO: requires nixos for udev rules (`programs.light.enable = true;`)
         # light # GNU/Linux application to control backlights
         procs # A modern replacement for ps written in Rust
-        my_pkgs.xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
+        xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         trash-cli # Command line tool for the desktop trash can
         nethogs # A small 'net top' tool, grouping bandwidth by process
       ];

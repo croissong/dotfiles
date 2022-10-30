@@ -5,6 +5,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-22.05";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -15,6 +16,7 @@
 
   outputs = {
     nixpkgs,
+    nixpkgs-master,
     nixpkgs-stable,
     home-manager,
     rust-overlay,
@@ -25,6 +27,7 @@
     allowUnfree = true;
     pkgs = nixpkgs.legacyPackages.${system};
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+    pkgs-master = nixpkgs-master.legacyPackages.${system};
   in {
     homeConfigurations.moi = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
@@ -32,7 +35,7 @@
         ./home.nix
       ];
       extraSpecialArgs = {
-        inherit rust-overlay pkgs-stable;
+        inherit rust-overlay pkgs-stable pkgs-master;
       };
     };
   };
