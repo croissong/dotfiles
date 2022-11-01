@@ -1,6 +1,8 @@
 {pkgs, ...}: let
   bookmarks = builtins.fromJSON (builtins.readFile "/home/croissong/Dotfiles/priv/buku-firefox-nix.json");
 in {
+  systemd.user.sessionVariables.MOZ_ENABLE_WAYLAND = 1;
+
   programs.firefox = {
     enable = true;
 
@@ -33,7 +35,7 @@ in {
         "intl.accept_languages" = "en";
 
         # TODO: not sure if nix sets this automatically when 'userChrome' is confgured
-        # "toolkit.legacyUserProfileCustomizations.stylesheets", true
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
 
       search = {
