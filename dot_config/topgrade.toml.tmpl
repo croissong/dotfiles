@@ -7,6 +7,6 @@ upgrade = true
 
 [commands]
 buku = '''
-expect -c 'set exp_internal 1; spawn buku -e /home/croissong/Dotfiles/priv/buku.org; expect -re ".*Overwrite?.*"; send "y\r"; expect eof'
+buku -p -j {{expandenv "$DOTFILES/priv/buku.json"}}
 '''
 # "xdg-ninja" = "xdg-ninja"
