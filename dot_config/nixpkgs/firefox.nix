@@ -12,14 +12,29 @@ in {
 
       bookmarks = bookmarks;
 
-      # settings = {
-      #   "browser.startup.homepage" = "https://nixos.org";
-      #   "browser.search.region" = "DE";
-      #   "browser.search.isUS" = false;
-      #   "distribution.searchplugins.defaultLocale" = "en-GB";
-      #   "general.useragent.locale" = "en-GB";
-      #   "browser.bookmarks.showMobileBookmarks" = true;
-      # };
+      settings = {
+        "browser.urlbar.suggest.engines" = false;
+        "browser.urlbar.suggest.history" = false;
+        "browser.urlbar.suggest.quickactions" = false;
+        "browser.urlbar.suggest.topsites" = false;
+        "browser.search.region" = "DE";
+
+        # disable mouse pinch zoom
+        "apz.allow_zooming" = false;
+        "browser.gesture.pinch.in" = "";
+        "browser.gesture.pinch.out" = "";
+        # disable mouse wheel zoom
+        "mousewheel.with_control.action" = 1;
+
+        "browser.aboutConfig.showWarning" = false;
+        "browser.startup.page" = 3;
+        "browser.toolbars.bookmarks.visibility" = "never";
+        "extensions.htmlaboutaddons.recommendations.enabled" = false;
+        "intl.accept_languages" = "en";
+
+        # TODO: not sure if nix sets this automatically when 'userChrome' is confgured
+        # "toolkit.legacyUserProfileCustomizations.stylesheets", true
+      };
 
       search = {
         default = "Google";
@@ -136,28 +151,6 @@ in {
           };
         };
       };
-
-      extraPrefs = ''
-        // Show more ssl cert infos
-        lockPref("browser.aboutConfig.showWarning", false);
-        lockPref("browser.startup.page", 3);
-        lockPref("browser.toolbars.bookmarks.visibility", "never");
-        lockPref("extensions.htmlaboutaddons.recommendations.enabled", false);
-        lockPref("intl.accept_languages", "en");
-        lockPref("mousewheel.with_control.action", 1);
-        // lockPref("security.ssl.enable_ocsp_stapling", true);
-        lockPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-
-        // https://wiki.archlinux.org/title/firefox#Wayland
-        // disabled: causes ugly scrolling
-        // lockPref("gfx.webrender.compositor.force-enabled", false);
-
-
-        // disable mouse pinch zoom
-        lockPref("apz.allow_zooming", false);
-        lockPref("browser.gesture.pinch.in", "");
-        lockPref("browser.gesture.pinch.out", "");
-      '';
     };
   };
 
