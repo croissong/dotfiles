@@ -1,5 +1,5 @@
 [Default]
-save_dir=$HOME/tmp
+save_dir=/tmp
 save_filename_format=swappy-%Y%m%d-%H%M%S.png
 show_panel=true
 line_size=5
