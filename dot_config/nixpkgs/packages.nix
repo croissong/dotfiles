@@ -181,9 +181,8 @@
           yarn # Fast, reliable, and secure dependency management
 
           nodePackages."@angular/cli" # CLI tool for Angular
-          nodePackages.create-react-app # Create React apps with no build configuration.
-          # TODO: https://github.com/NixOS/nixpkgs/issues/180899
-          # nodePackages.gatsby-cli # Gatsby command-line interface for creating new sites
+          nodePackages.create-react-app # Create React apps with no build configuration
+          nodePackages.gatsby-cli # Gatsby command-line interface for creating new sites
           nodePackages.npm-check-updates # Find newer versions of dependencies than what your package.json allows
           nodePackages.typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver
         ];
@@ -444,6 +443,7 @@
     nix = [
       alejandra
       nixos-generators
+      nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
       nix-update
 

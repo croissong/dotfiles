@@ -175,11 +175,11 @@
 
   vhs = pkgs.stdenv.mkDerivation rec {
     pname = "vhs";
-    version = "0.1.0";
+    version = "0.1.1";
 
     src = pkgs.fetchurl {
       url = "https://github.com/charmbracelet/vhs/releases/download/v${version}/vhs_${version}_Linux_x86_64.tar.gz";
-      sha256 = "sha256-QUJIvLFagxV2G6fTPoeiTf7M9Kw9iCUDf1H5sqY1Re0=";
+      sha256 = "1592j8a1sk4qbnwjc29b4dm8lhr29k9jgaf0k2lwvdwfjxcv4rr9";
     };
 
     sourceRoot = ".";
@@ -192,6 +192,26 @@
       description = "Your CLI home video recorder vhs";
     };
   };
+
+  mailctl = pkgs.stdenv.mkDerivation rec {
+    pname = "mailctl";
+    version = "0.7.4";
+
+    src = pkgs.fetchurl {
+      url = "https://github.com/pdobsan/mailctl/releases/download/${version}/mailctl-${version}-Linux-x86_64";
+      sha256 = "sha256-nBj6vfUfScMTy4rn7qQ8bRaMsSXBiTXQCq6ngjIsU6U==";
+    };
+
+    phases = ["installPhase"];
+    installPhase = ''
+      install -m755 -D $src $out/bin/mailctl
+    '';
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/pdobsan/mailctl";
+      description = "Provide IMAP/SMTP clients with the capabilities of renewal and authorization of OAuth2 credentials";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -202,4 +222,5 @@ in {
   go-commitlinter = go-commitlinter;
   csvlens = csvlens;
   vhs = vhs;
+  mailctl = mailctl;
 }
