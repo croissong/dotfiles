@@ -9,7 +9,12 @@ nix: nix-hm nix-diff
 
 nix-hm:
   chezmoi apply ~/.config/nixpkgs
-  NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch --flake ~/.config/nixpkgs#moi --update-input nixpkgs --update-input home-manager
+  NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch \
+  --flake ~/.config/nixpkgs#moi \
+  --update-input nixpkgs \
+  --update-input home-manager \
+  --update-input nixpkgs-stable
+  # --update-input nixpkgs-master \
 
 
 nix-diff:

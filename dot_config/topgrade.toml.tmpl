@@ -7,6 +7,6 @@ upgrade = true
 
 [commands]
 buku = '''
-buku -p -j {{expandenv "$DOTFILES/priv/buku.json"}}
+{{expandenv "$XDG_CONFIG_HOME/topgrade/buku.sh"}} {{expandenv "$DOTFILES/priv"}}
 '''
 # "xdg-ninja" = "xdg-ninja"
