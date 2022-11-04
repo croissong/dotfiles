@@ -1,4 +1,4 @@
-" https://github.com/tridactyl/tridactyl/blob/master/.tridactylrc
+" see `:help`
 "
 " "
 " " Binds
@@ -22,5 +22,6 @@ bind --mode=normal l fillcmdline tab
 unbind --mode=normal <C-f>
 unbind --mode=normal <C-l>
 unbind --mode=normal f
+unbind --mode=normal d
 
 set visualenterauto false
