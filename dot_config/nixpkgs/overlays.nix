@@ -111,4 +111,25 @@
       '';
     };
   })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/applications/networking/instant-messengers/twitch-tui/default.nix#L27
+    twitch-tui = let
+      version = "2.0.0-rc.1";
+      src = super.fetchFromGitHub {
+        owner = "Xithrius";
+        repo = super.twitch-tui.pname;
+        rev = "184564cd855858c18c11756ef1c510f9c22d7471";
+        sha256 = "sha256-lxcusriUjG4Ww+oLuQbuZugCOWUB3xNi8wzs/XqvTVc=";
+      };
+    in (super.twitch-tui.override rec {
+      rustPlatform.buildRustPackage = args:
+        super.rustPlatform.buildRustPackage (args
+          // {
+            cargoHash = "sha256-TIVy6DjVQfZG8w+4TF/d+IS2PzBj4FX0PKfyatWaop4=";
+            nativeBuildInputs = [super.pkgs.pkg-config super.pkgs.zstd];
+            inherit src version;
+          });
+    });
+  })
 ]

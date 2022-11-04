@@ -17,7 +17,9 @@
     ent = [
       yt-dlp
       my_pkgs.ytui-music
+      my_pkgs.youtube-tui
       toipe # Trusty terminal typing tester
+      twitch-tui
       steamcmd
       steam-tui
     ];
