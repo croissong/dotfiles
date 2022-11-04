@@ -189,6 +189,26 @@
       description = "Provide IMAP/SMTP clients with the capabilities of renewal and authorization of OAuth2 credentials";
     };
   };
+
+  youtube-tui = pkgs.stdenv.mkDerivation rec {
+    pname = "youtube-tui";
+    version = "0.4.4";
+
+    src = pkgs.fetchurl {
+      url = "https://github.com/Siriusmart/youtube-tui/releases/download/v${version}/youtube-tui_arch-x86_64";
+      sha256 = "sha256-/ukER5wM0B02+obu9iw/FWoV1qCTuL/jLEI/5ddSRsQ=";
+    };
+
+    phases = ["installPhase"];
+    installPhase = ''
+      install -m755 -D $src $out/bin/youtube-tui
+    '';
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/Siriusmart/youtube-tui";
+      description = "An aesthetically pleasing YouTube TUI written in Rust ";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -196,6 +216,7 @@ in {
   sheldon = sheldon;
   dtool = dtool;
   ytui-music = ytui-music;
+  youtube-tui = youtube-tui;
   go-commitlinter = go-commitlinter;
   csvlens = csvlens;
   mailctl = mailctl;
