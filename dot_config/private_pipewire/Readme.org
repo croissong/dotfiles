@@ -1,3 +1,4 @@
 #+begin_src shell
+pactl list sources short
 pw-loopback -l 5000 -C rnnoise_source
 #+end_src
