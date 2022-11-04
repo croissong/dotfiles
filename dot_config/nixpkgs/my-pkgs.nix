@@ -59,34 +59,31 @@
     };
   };
 
-  sheldon =
-    pkgs.stdenv.mkDerivation rec {
-      pname = "sheldon";
-      version = "0.7.0";
+  sheldon = pkgs.stdenv.mkDerivation rec {
+    pname = "sheldon";
+    version = "0.7.1";
 
-      src =
-        pkgs.fetchurl {
-          url = "https://github.com/rossmacarthur/sheldon/releases/download/${version}/sheldon-${version}-x86_64-unknown-linux-musl.tar.gz
-";
-          sha256 = "sha256-wkP+Luq9N68o1DpVmixohrgq0pv7ynKTe/Po5+sgxOg=";
-        };
-
-      sourceRoot = ".";
-      installPhase = ''
-        install -m755 -D sheldon $out/bin/sheldon
-        runHook postInstall
-      '';
-
-      nativeBuildInputs = [pkgs.installShellFiles];
-      postInstall = ''
-        installShellCompletion --zsh completions/sheldon.zsh
-      '';
-
-      meta = with pkgs.lib; {
-        homepage = "https://github.com/rossmacarthur/sheldon";
-        description = "Fast, configurable, shell plugin manager";
-      };
+    src = pkgs.fetchurl {
+      url = "https://github.com/rossmacarthur/sheldon/releases/download/${version}/sheldon-${version}-x86_64-unknown-linux-musl.tar.gz";
+      sha256 = "19h7j89gjsvbaaqr68c7p0sii7692r1kag2x3fnbzjb2ns5l2czk";
     };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D sheldon $out/bin/sheldon
+      runHook postInstall
+    '';
+
+    nativeBuildInputs = [pkgs.installShellFiles];
+    postInstall = ''
+      installShellCompletion --zsh completions/sheldon.zsh
+    '';
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/rossmacarthur/sheldon";
+      description = "Fast, configurable, shell plugin manager";
+    };
+  };
 
   dtool = pkgs.rustPlatform.buildRustPackage rec {
     pname = "dtool";
@@ -95,7 +92,7 @@
     src = pkgs.fetchFromGitHub {
       owner = "guoxbin";
       repo = "dtool";
-      rev = "master";
+      rev = "v0.12.0";
       sha256 = "sha256-hdT3xLO5r5UKVM6Be4zerEi4Wh0653mGXQ9/eoeYSwk=";
     };
 
@@ -158,8 +155,8 @@
     src = pkgs.fetchFromGitHub {
       owner = "YS-L";
       repo = "csvlens";
-      rev = "master";
-      sha256 = "sha256-ffxCPYI6NbwidvlqsfZdKhnvnyAR2QVNRDBWCRDWEeQ=";
+      rev = "v0.1.9";
+      sha256 = "sha256-HVVUR8nSsnSMhr6gvKAj3vEgIbLpfKI7iJSlXGUrS2M==";
     };
 
     nativeBuildInputs = [pkgs.pkg-config];
@@ -170,26 +167,6 @@
     meta = with pkgs.lib; {
       homepage = "https://github.com/YS-L/csvlens";
       description = "Command line csv viewer";
-    };
-  };
-
-  vhs = pkgs.stdenv.mkDerivation rec {
-    pname = "vhs";
-    version = "0.1.1";
-
-    src = pkgs.fetchurl {
-      url = "https://github.com/charmbracelet/vhs/releases/download/v${version}/vhs_${version}_Linux_x86_64.tar.gz";
-      sha256 = "1592j8a1sk4qbnwjc29b4dm8lhr29k9jgaf0k2lwvdwfjxcv4rr9";
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D vhs $out/bin/vhs
-    '';
-
-    meta = with pkgs.lib; {
-      homepage = "https://github.com/charmbracelet/vhs";
-      description = "Your CLI home video recorder vhs";
     };
   };
 
@@ -221,6 +198,5 @@ in {
   ytui-music = ytui-music;
   go-commitlinter = go-commitlinter;
   csvlens = csvlens;
-  vhs = vhs;
   mailctl = mailctl;
 }

@@ -45,7 +45,7 @@
 
       media = [
         imv # A command line image viewer for tiling window managers
-        my_pkgs.vhs # Your CLI home video recorder vhs
+        vhs # A tool for generating terminal GIFs with code
       ];
 
       data = [
