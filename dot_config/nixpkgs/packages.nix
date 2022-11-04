@@ -149,6 +149,7 @@
 
       stuff = [
         powershell
+        mold # A faster drop-in replacement for existing Unix linkers
       ];
 
       cn = [
