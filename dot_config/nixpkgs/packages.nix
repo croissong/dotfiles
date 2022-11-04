@@ -28,6 +28,10 @@
       logseq # A local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base
     ];
 
+    lib = [
+      geoipWithDatabase
+    ];
+
     daily = [
     ];
 
@@ -63,6 +67,11 @@
 
       misc = [
         espeak # Open source speech synthesizer that supports over 70 languages, based on eSpeak
+      ];
+
+      mobile = [
+        pkgs-stable.android-tools
+        scrcpy # Display and control your Android device
       ];
 
       pipe = [
