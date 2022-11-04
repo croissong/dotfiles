@@ -1,2 +1,5 @@
 [target.x86_64-unknown-linux-gnu]
+# TODO
+# https://discourse.nixos.org/t/using-mold-as-linker-prevents-libraries-from-being-found/18530
+# https://github.com/NixOS/nixpkgs/pull/172452
 rustflags = ["-C", "link-arg=-fuse-ld=~/.nix-profile/bin/mold"]
