@@ -1,13 +1,15 @@
 access-matrix
 bulk-action
 fuzzy
-gs
 ice
 krew
 lineage
 neat
 ns
+rbac-tool
+resource-capacity
 sniff
 stern
 view-secret
 who-can
+whoami
