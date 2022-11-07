@@ -15,7 +15,8 @@ bind --mode=ex <A-ä> ex.next_completion
 bind --mode=ex <A-ü> ex.prev_completion
 
 bind --mode=ex <A-q> ex.execute_ex_on_completion_args tabclose
-bind --mode=ex <A-w> tabdetach
+bind <A-w> tabdetach
+bind <A-d> tabduplicate
 
 bind --mode=normal l fillcmdline tab
 
