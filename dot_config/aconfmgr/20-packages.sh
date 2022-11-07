@@ -254,7 +254,6 @@ AddPackage libva-utils              # Intel VA-API Media Applications and Script
 AddPackage himalaya                   # Minimalist CLI email client
 AddPackage --foreign nyxt-browser-git # Keyboard-oriented, Common Lisp extensible web-browser
 AddPackage --foreign toggldesktop     # Toggl time tracking software
-AddPackage kalendar                   # A calendar application using Akonadi to sync with external services
 
 #
 # shell
@@ -267,7 +266,6 @@ AddPackage --foreign await   # 32kb small memory footprint single binary that ru
 # backup
 #
 AddPackage python-llfuse # A set of Python bindings for the low level FUSE API.
-AddPackage snapper       # A tool for managing BTRFS and LVM snapshots. It can create, diff and restore snapshots and provides timelined auto-snapping.
 
 #
 # CLIs
@@ -277,8 +275,6 @@ AddPackage --foreign slides-bin          # Terminal based presentation tool
 AddPackage --foreign webex-bin           # Webex for Linux
 AddPackage oath-toolkit                  # OATH one-time password toolkit
 AddPackage dateutils                     # nifty command line date and time utilities; fast date calculations and conversion in the shell
-AddPackage --foreign rusty-krab-manager  # Time management TUI
-AddPackage --foreign shellcaster-bin     # Terminal-based TUI podcast manager
 
 AddPackage --foreign imgp # Multi-core batch image resizer and rotator
 AddPackage pv             # A terminal-based tool for monitoring the progress of data through a pipeline.

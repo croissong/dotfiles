@@ -20,6 +20,7 @@
       my_pkgs.youtube-tui
       toipe # Trusty terminal typing tester
       twitch-tui
+      my_pkgs.shellcaster # Terminal-based podcast manager
       steamcmd
       steam-tui
     ];
@@ -33,6 +34,7 @@
     ];
 
     daily = [
+      my_pkgs.rusty-krab-manager # time management tui in rust
     ];
 
     special_purpose = [
@@ -81,6 +83,7 @@
 
       backup = [
         backblaze-b2 # Command-line tool for accessing the Backblaze B2 storage service
+        snapper # A tool for managing BTRFS and LVM snapshots
         rclone # CLI to sync files and directories to and from major cloud storage
       ];
 

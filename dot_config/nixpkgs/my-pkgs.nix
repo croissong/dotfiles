@@ -37,21 +37,19 @@
     #   pkgs.python3Packages.setuptools
     #   pkgs.python3Packages.pytest
     # ];
-  wutag = pkgs.rustPlatform.buildRustPackage rec {
+  wutag = pkgs.stdenv.mkDerivation rec {
     pname = "wutag";
     version = "0.5.0";
 
-    src = pkgs.fetchFromGitHub {
-      owner = "vv9k";
-      repo = "wutag";
-      rev = "master";
-      sha256 = "sha256-69yD7d3jtfANzkYT6sgMfDjABrDsw5TBmSV/XVsvHVw=";
+    src = pkgs.fetchurl {
+      url = "https://github.com/vv9k/wutag/releases/download/${version}/wutag-${version}-x86_64-unknown-linux.tar.xz";
+      sha256 = "sha256-xpF3rNl9hYAjqWPeZ21UxhuIMVI0VPZx5Gik4/2BFxo=";
     };
 
-    nativeBuildInputs = [pkgs.pkg-config];
-    buildInputs = [pkgs.bzip2 pkgs.xz pkgs.zlib pkgs.zstd];
-
-    cargoSha256 = "sha256-p4HkmIXIxe+gFb17faUJwi8FDWZBRcciZIyvLgJDccQ=";
+    # sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D wutag $out/bin/wutag
+    '';
 
     meta = with pkgs.lib; {
       homepage = "https://github.com/vv9k/wutag";
@@ -92,7 +90,7 @@
     src = pkgs.fetchFromGitHub {
       owner = "guoxbin";
       repo = "dtool";
-      rev = "v0.12.0";
+      rev = "v${version}";
       sha256 = "sha256-hdT3xLO5r5UKVM6Be4zerEi4Wh0653mGXQ9/eoeYSwk=";
     };
 
@@ -104,7 +102,6 @@
     meta = with pkgs.lib; {
       homepage = "https://github.com/guoxbin/dtool";
       description = "CLI tool collection to assist development";
-      platforms = platforms.linux;
     };
   };
 
@@ -206,7 +203,48 @@
 
     meta = with pkgs.lib; {
       homepage = "https://github.com/Siriusmart/youtube-tui";
-      description = "An aesthetically pleasing YouTube TUI written in Rust ";
+      description = "An aesthetically pleasing YouTube TUI written in Rust";
+    };
+  };
+
+  shellcaster = pkgs.stdenv.mkDerivation rec {
+    pname = "shellcaster";
+    version = "2.0.1";
+
+    src = pkgs.fetchurl {
+      url = "https://github.com/jeff-hughes/shellcaster/releases/download/v${version}/shellcaster-${version}-archlinux-x86_64.tar.gz";
+      sha256 = "sha256-VwOXOfE5MoP20/1BIe1tIA/xfOzA0iQ4Fy8cEn+fPNY=";
+    };
+
+    installPhase = ''
+      install -m755 -D shellcaster $out/bin/shellcaster
+    '';
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/jeff-hughes/shellcaster";
+      description = "Terminal-based podcast manager built in Rust";
+    };
+  };
+
+  rusty-krab-manager = pkgs.rustPlatform.buildRustPackage rec {
+    pname = "rusty-krab-manager";
+    version = "1.3";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "aryakaul";
+      repo = "rusty-krab-manager";
+      rev = "v${version}";
+      sha256 = "sha256-NiOmXV9gadfBQgFG9BU0e+UmEr023WbhVQCe+FfJaoI=";
+    };
+
+    nativeBuildInputs = [pkgs.pkg-config];
+    buildInputs = [pkgs.alsa-lib];
+
+    cargoSha256 = "sha256-2VVWEC7VnaaSLwq4b5zK9i6ihhBT0ZEBqq/a0VhisfU=";
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/aryakaul/rusty-krab-manager";
+      description = "time management tui in rust";
     };
   };
 in {
@@ -220,4 +258,6 @@ in {
   go-commitlinter = go-commitlinter;
   csvlens = csvlens;
   mailctl = mailctl;
+  shellcaster = shellcaster;
+  rusty-krab-manager = rusty-krab-manager;
 }
