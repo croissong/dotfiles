@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=streamlink
+MimeType=text/plain
+Exec=streamlink
+Type=Application
+Terminal=false
+Categories=Development
