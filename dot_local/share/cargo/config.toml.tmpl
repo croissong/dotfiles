@@ -2,4 +2,5 @@
 # TODO
 # https://discourse.nixos.org/t/using-mold-as-linker-prevents-libraries-from-being-found/18530
 # https://github.com/NixOS/nixpkgs/pull/172452
-rustflags = ["-C", "link-arg=-fuse-ld=~/.nix-profile/bin/mold"]
+linker = "clang"
+rustflags = ["-C", "link-arg=-fuse-ld={{expandenv "$HOME/.nix-profile/bin/mold"}}"]
