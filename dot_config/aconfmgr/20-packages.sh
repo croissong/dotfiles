@@ -39,11 +39,9 @@ AddPackage gcc-libs         # Runtime libraries shipped by GCC
 AddPackage gdb              # The GNU Debugger
 AddPackage gettext          # GNU internationalization library
 AddPackage ghostscript      # An interpreter for the PostScript language
-AddPackage gimp             # GNU Image Manipulation Program
 AddPackage glibc            # GNU C Library
 AddPackage gnome-keyring    # Stores passwords and encryption keys
 AddPackage gnu-free-fonts   # A free family of scalable outline fonts
-AddPackage graphviz         # Graph visualization software
 AddPackage grep             # A string search utility
 AddPackage groff            # GNU troff text-formatting system
 AddPackage gsfonts          # (URW)++ base 35 font set

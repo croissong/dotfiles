@@ -156,6 +156,7 @@
       docs = [
         asciidoctor-with-extensions
         drawio # A desktop application for creating diagrams
+        graphviz # Graph visualization tools
         plantuml # Component that allows to quickly write uml diagrams
         glow # Command-line markdown renderer
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
@@ -334,6 +335,7 @@
 
       images = [
         krita # Edit and paint images
+        gimp # The GNU Image Manipulation Program
         epick # Color picker for creating harmonic color palettes
       ];
       video = [
