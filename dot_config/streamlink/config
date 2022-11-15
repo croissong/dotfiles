@@ -2,3 +2,4 @@
 player=mpv --cache 10240
 player-no-close
 default-stream=best
+twitch-disable-ads
