@@ -189,11 +189,11 @@
 
   youtube-tui = pkgs.stdenv.mkDerivation rec {
     pname = "youtube-tui";
-    version = "0.4.4";
+    version = "0.5.0";
 
     src = pkgs.fetchurl {
-      url = "https://github.com/Siriusmart/youtube-tui/releases/download/v${version}/youtube-tui_arch-x86_64";
-      sha256 = "sha256-/ukER5wM0B02+obu9iw/FWoV1qCTuL/jLEI/5ddSRsQ=";
+      url = "https://github.com/Siriusmart/youtube-tui/releases/download/v${version}/default.youtube-tui_arch-x86_64";
+      sha256 = "1yq9azx3hf48cc18a6pxsyknm9qaq0wd7a7maiwmgmc2xmsccs3n";
     };
 
     phases = ["installPhase"];
@@ -247,6 +247,26 @@
       description = "time management tui in rust";
     };
   };
+
+  klog = pkgs.stdenv.mkDerivation rec {
+    pname = "klog";
+    version = "5.3";
+
+    src = pkgs.fetchzip {
+      url = "https://github.com/jotaen/klog/releases/download/v${version}/klog-linux.zip";
+      sha256 = "sha256-WFcaY90gxn8haS9jwtmB14XwnFtaw465QSrvcOnp82w=";
+      stripRoot = false;
+    };
+
+    installPhase = ''
+      install -m755 -D klog $out/bin/klog
+    '';
+
+    meta = with pkgs.lib; {
+      homepage = "https://github.com/jotaen/klog";
+      description = "Command line tool for time tracking";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -260,4 +280,5 @@ in {
   mailctl = mailctl;
   shellcaster = shellcaster;
   rusty-krab-manager = rusty-krab-manager;
+  klog = klog;
 }
