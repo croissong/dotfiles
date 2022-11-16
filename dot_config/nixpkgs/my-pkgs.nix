@@ -197,6 +197,10 @@
     };
 
     phases = ["installPhase"];
+    buildInputs = [libsixel openssl];
+    nativeBuildInputs = [
+      autoPatchelfHook # Automatically setup the loader, and do the magic
+    ];
     installPhase = ''
       install -m755 -D $src $out/bin/youtube-tui
     '';
