@@ -44,12 +44,12 @@
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/helmfile/default.nix
     helmfile = let
-      version = "0.147.0";
+      version = "0.148.1";
       src = super.fetchFromGitHub {
         owner = "helmfile";
         repo = super.helmfile.pname;
-        rev = "v0.147.0";
-        sha256 = "sha256-W6xkLqH0wHvCmwzwQyXpRbcj/itm3leRMFGa5RIYJ4A=";
+        rev = "v${version}";
+        sha256 = "sha256-Nvf26ahWc1fCWngroc+5gPV1T5UBa/6ix/I9tdQ01t8=";
       };
     in (super.helmfile.override rec {
       buildGoModule = args:
