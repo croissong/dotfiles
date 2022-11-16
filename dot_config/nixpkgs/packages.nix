@@ -33,8 +33,9 @@
       geoipWithDatabase
     ];
 
-    daily = [
+    orga = [
       my_pkgs.rusty-krab-manager # time management tui in rust
+      my_pkgs.klog
     ];
 
     special_purpose = [
@@ -60,6 +61,7 @@
         bcal # Storage conversion and expression calculator
         my_pkgs.csvlens # Command line csv viewer
         dasel # Query and update data structures from the command line.
+        fblog # A small command-line JSON log viewer
         gron # Make JSON greppable!
         jless # A command-line pager for JSON data
         jq # Command-line JSON processor
@@ -213,6 +215,10 @@
         misc = [
           go-jsonnet
           xxHash # Extremely fast hash algorithm
+        ];
+
+        c = [
+          rtags # C/C++ client-server indexer based on clang
         ];
 
         db = [

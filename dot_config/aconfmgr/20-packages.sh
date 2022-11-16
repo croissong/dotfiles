@@ -224,7 +224,6 @@ AddPackage --foreign python-plexapi                 # Python bindings for the Pl
 AddPackage --foreign python-ptvsd                   # Python debugger package for use with Visual Studio and Visual Studio Code
 AddPackage --foreign python-pychromecast            # Library for Python 3 to communicate with the Google Chromecast
 AddPackage --foreign python-soundcloud-git          # A Python wrapper around the Soundcloud API
-AddPackage --foreign rtags                          # A client/server application that indexes C/C++ code
 AddPackage --foreign teams                          # Microsoft Teams for Linux is your chat-centered workspace in Office 365
 
 AddPackage --foreign ttf-ubraille  # Unicode Braillt font
@@ -309,12 +308,11 @@ AddPackage arch-install-scripts  # Scripts to aid in installing Arch Linux
 #
 # Dev
 #
-AddPackage quicklisp           # A library manager for Common Lisp
-AddPackage libgccjit           # Just-In-Time Compilation using GCC.
-AddPackage --foreign fblog-bin # Small command-line JSON log viewer
-AddPackage docker-compose      # Pythonless package of a a tool for defining and running multi-container applications
-AddPackage mkcert              # Simple tool for making locally-trusted development certificates
-AddPackage postgresql-libs     # Libraries for use with PostgreSQL
+AddPackage quicklisp       # A library manager for Common Lisp
+AddPackage libgccjit       # Just-In-Time Compilation using GCC.
+AddPackage docker-compose  # Pythonless package of a a tool for defining and running multi-container applications
+AddPackage mkcert          # Simple tool for making locally-trusted development certificates
+AddPackage postgresql-libs # Libraries for use with PostgreSQL
 
 #
 # Stuff
