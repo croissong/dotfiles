@@ -56,6 +56,7 @@
 
       media = [
         imv # A command line image viewer for tiling window managers
+        # qimgv TODO: maybe
         vhs # A tool for generating terminal GIFs with code
       ];
 
@@ -169,6 +170,10 @@
       stuff = [
         powershell
         mold # A faster drop-in replacement for existing Unix linkers
+        seer # A Qt gui frontend for GDB
+
+        # maybe
+        # https://github.com/cs01/gdbgui
       ];
 
       cn = [
