@@ -27,6 +27,7 @@
 
     docs = [
       logseq # A local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base
+      newsboat # A fork of Newsbeuter, an RSS/Atom feed reader for the text console
     ];
 
     lib = [
