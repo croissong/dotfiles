@@ -273,6 +273,26 @@ with pkgs; let
       description = "Command line tool for time tracking";
     };
   };
+
+  versio = stdenv.mkDerivation rec {
+    pname = "versio";
+    version = "0.6.5";
+
+    src = fetchurl {
+      url = "https://github.com/chaaz/versio/releases/download/v${version}/versio__x86_64-unknown-linux-gnu";
+      sha256 = "sha256-TEqINf2gp6MVG0QmIdOS6MUZF/RQT75HK5lWjzdA2RM=";
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/versio
+    '';
+
+    meta = with lib; {
+      homepage = "https://github.com/chaaz/versio";
+      description = "A version number manager";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -287,4 +307,5 @@ in {
   shellcaster = shellcaster;
   rusty-krab-manager = rusty-krab-manager;
   klog = klog;
+  versio = versio;
 }

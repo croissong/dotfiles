@@ -51,6 +51,7 @@
         step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
         skopeo # A command line utility for various operations on container images and image repositories.
         watchman # Watchman exists to watch files and record when they change.
+        my_pkgs.versio # A version number manager
       ];
 
       media = [
