@@ -12,7 +12,6 @@
 
   packages_dict = with pkgs; {
     inbox = [
-      my_pkgs.go-commitlinter
     ];
     ent = [
       yt-dlp
@@ -424,7 +423,11 @@
       ];
 
       media = [
+      ];
+
+      productivity = [
         blanket # Improve focus and increase your productivity by listening to different sounds
+        my_pkgs.focus
       ];
     };
   };

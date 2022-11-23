@@ -47,7 +47,6 @@ with pkgs; let
       sha256 = "sha256-xpF3rNl9hYAjqWPeZ21UxhuIMVI0VPZx5Gik4/2BFxo=";
     };
 
-    # sourceRoot = ".";
     installPhase = ''
       install -m755 -D wutag $out/bin/wutag
     '';
@@ -293,11 +292,32 @@ with pkgs; let
       description = "A version number manager";
     };
   };
+
+  focus = stdenv.mkDerivation rec {
+    pname = "focus";
+    version = "1.2.0";
+
+    src = fetchurl {
+      url = "https://github.com/ayoisaiah/focus/releases/download/v${version}/focus_${version}_linux_amd64.tar.gz";
+      sha256 = "145hkv91hhcfch0bbn2rcgldc7bjynr7kpl6wg9z28jg7pq02572";
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D focus $out/bin/focus
+    '';
+
+    meta = with lib; {
+      homepage = "https://github.com/ayoisaiah/focus";
+      description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
   xmlformatter = xmlformatter;
   sheldon = sheldon;
+  cqlsh = cqlsh;
   dtool = dtool;
   ytui-music = ytui-music;
   youtube-tui = youtube-tui;
@@ -308,4 +328,5 @@ in {
   rusty-krab-manager = rusty-krab-manager;
   klog = klog;
   versio = versio;
+  focus = focus;
 }
