@@ -88,7 +88,6 @@ in {
     };
 
     package = pkgs.wrapFirefox pkgs.firefox-devedition-bin-unwrapped {
-      forceWayland = true;
       cfg = {
         enableTridactylNative = true;
       };
