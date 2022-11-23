@@ -6,7 +6,7 @@ set +a
 # Loading in login shell suffices
 # Viddy also requires aliases loaded in login shell
 {{ include "dot_config/zsh/.alias.sh" }}
-{{ include "dot_config/zsh/.priv.sh" }}
+{{ include "priv/.config/zsh/.priv.sh" }}
 {{ include "dot_config/zsh/.env-vars.sh" }}
 
 if [ "$(tty)" = "/dev/tty1" ]; then
