@@ -115,6 +115,7 @@ in {
           SkipOnboarding = true;
         };
 
+        # https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings
         ExtensionSettings = {
           "uBlock0@raymondhill.net" = {
             installation_mode = "force_installed";
@@ -139,17 +140,21 @@ in {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi";
           };
-          "spookfox@bitspook.in" = {
+          "tab-stash@condordes.net" = {
             installation_mode = "force_installed";
-            install_url = "https://github.com/bitspook/spookfox/releases/download/v0.2.5/spookfox-firefox.xpi";
-            install_sources = [
-              "https://github.com/bitspook/spookfox/releases/download/*"
-              "https://objects.githubusercontent.com/*"
-            ];
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-stash/latest.xpi";
           };
-          "*" = {
-            installation_mode = "blocked";
-          };
+          # "spookfox@bitspook.in" = {
+          #   installation_mode = "force_installed";
+          #   install_url = "https://github.com/bitspook/spookfox/releases/download/v0.2.5/spookfox-firefox.xpi";
+          #   install_sources = [
+          #     "https://github.com/bitspook/spookfox/releases/download/*"
+          #     "https://objects.githubusercontent.com/*"
+          #   ];
+          # };
+          # "*" = {
+          #   installation_mode = "blocked";
+          # };
         };
       };
     };
