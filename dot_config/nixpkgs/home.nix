@@ -1,4 +1,5 @@
 # https://nix-community.github.io/home-manager/options.html
+# https://mipmip.github.io/home-manager-option-search/
 {
   pkgs,
   config,

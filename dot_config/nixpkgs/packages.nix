@@ -88,6 +88,7 @@
       backup = [
         backblaze-b2 # Command-line tool for accessing the Backblaze B2 storage service
         snapper # A tool for managing BTRFS and LVM snapshots
+        httm # Interactive, file-level Time Machine-like tool for ZFS/btrfs
         rclone # CLI to sync files and directories to and from major cloud storage
       ];
 
@@ -428,6 +429,7 @@
       productivity = [
         blanket # Improve focus and increase your productivity by listening to different sounds
         my_pkgs.focus
+        minder
       ];
     };
   };
@@ -475,7 +477,8 @@
     ];
 
     nix = [
-      alejandra
+      alejandra # The Uncompromising Nix Code Formatter
+      nil # Yet another language server for Nix
       nixos-generators
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
