@@ -186,6 +186,7 @@
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
+        terraform-ls # Terraform Language Server
         trivy # A simple and comprehensive vulnerability scanner for containers
       ];
 
