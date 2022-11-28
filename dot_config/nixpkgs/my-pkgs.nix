@@ -100,7 +100,7 @@ with pkgs; let
 
     cargoSha256 = "sha256-uQxECH188MwHijtrsBh1+CfDNGYpAgVlh5cH07POB5s=";
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/guoxbin/dtool";
       description = "CLI tool collection to assist development";
     };
@@ -120,7 +120,7 @@ with pkgs; let
       install -m755 -D $src $out/bin/ytui_music
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/sudipghimire533/ytui-music";
       description = "Youtube client in terminal for music";
     };
@@ -140,7 +140,7 @@ with pkgs; let
       install -m755 -D go-commitlinter $out/bin/go-commitlinter
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/masahiro331/go-commitlinter";
       description = "go-commitlinter is simple commit message linter.";
     };
@@ -162,7 +162,7 @@ with pkgs; let
 
     cargoSha256 = "sha256-qK95TCZUyDdV2X2mEdGwkeh+zCjurwN9gdy6dJgTeQo=";
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/YS-L/csvlens";
       description = "Command line csv viewer";
     };
@@ -182,7 +182,7 @@ with pkgs; let
       install -m755 -D $src $out/bin/mailctl
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/pdobsan/mailctl";
       description = "Provide IMAP/SMTP clients with the capabilities of renewal and authorization of OAuth2 credentials";
     };
@@ -206,7 +206,7 @@ with pkgs; let
       install -m755 -D $src $out/bin/youtube-tui
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/Siriusmart/youtube-tui";
       description = "An aesthetically pleasing YouTube TUI written in Rust";
     };
@@ -225,7 +225,7 @@ with pkgs; let
       install -m755 -D shellcaster $out/bin/shellcaster
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/jeff-hughes/shellcaster";
       description = "Terminal-based podcast manager built in Rust";
     };
@@ -267,7 +267,7 @@ with pkgs; let
       install -m755 -D klog $out/bin/klog
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/jotaen/klog";
       description = "Command line tool for time tracking";
     };
@@ -287,7 +287,7 @@ with pkgs; let
       install -m755 -D $src $out/bin/versio
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/chaaz/versio";
       description = "A version number manager";
     };
@@ -307,7 +307,7 @@ with pkgs; let
       install -m755 -D focus $out/bin/focus
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/ayoisaiah/focus";
       description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
     };

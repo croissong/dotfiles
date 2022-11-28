@@ -9,7 +9,7 @@
         rev = "v${version}";
         sha256 = "sha256-j+3gnrjcMEk5phF0SivjBZBeK7xWjzkAyy4SD3cHDUg=";
       };
-    in (super.summon.override rec {
+    in (super.summon.override {
       buildGoModule = args:
         super.buildGoModule (args
           // {
@@ -30,7 +30,7 @@
         rev = "v${version}";
         sha256 = "sha256-Nvf26ahWc1fCWngroc+5gPV1T5UBa/6ix/I9tdQ01t8=";
       };
-    in (super.helmfile.override rec {
+    in (super.helmfile.override {
       buildGoModule = args:
         super.buildGoModule (args
           // {
@@ -49,7 +49,7 @@
   })
 
   (self: super: {
-    cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation rec {
+    cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation {
       pname = "cyrus-sasl-xoauth2";
       version = "master";
 
@@ -72,7 +72,7 @@
         make DESTDIR="$out" install
       '';
 
-      meta = with super.pkgs.lib; {
+      meta = {
         homepage = "https://github.com/moriyoshi/cyrus-sasl-xoauth2";
         description = "XOAUTH2 mechanism plugin for cyrus-sasl";
       };
