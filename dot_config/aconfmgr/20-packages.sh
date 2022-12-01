@@ -172,7 +172,6 @@ AddPackage unrar                  # The RAR uncompression program
 AddPackage unzip                  # For extracting and viewing files in .zip archives
 AddPackage usbutils               # A collection of USB tools to query connected USB devices
 AddPackage util-linux             # Miscellaneous system utilities for Linux
-AddPackage vdirsyncer             # Synchronize CalDAV and CardDAV.
 AddPackage virt-manager           # Desktop user interface for managing virtual machines
 AddPackage w3m                    # Text-based Web browser as well as pager
 AddPackage wf-recorder            # Screen recorder for wlroots-based compositors such as sway

@@ -129,6 +129,7 @@
         watchexec # Executes commands in response to file modifications
 
         yq-go # Portable command-line YAML processor
+        dyff #  A diff tool for YAML files, and sometimes JSON
         zbar # Application and library for reading bar codes from various sources
 
         libqalculate # An advanced calculator library
@@ -391,6 +392,7 @@
 
         khal # CLI calendar application build around CalDAV
         khard # Console carddav client
+        vdirsyncer # Synchronize calendars and contacts
       ];
 
       bookmarks = [
@@ -479,6 +481,7 @@
 
     nix = [
       alejandra # The Uncompromising Nix Code Formatter
+      comma # Comma runs software without installing it.
       nil # Yet another language server for Nix
       nixos-generators
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
