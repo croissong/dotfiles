@@ -51,7 +51,7 @@ with pkgs; let
       install -m755 -D wutag $out/bin/wutag
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/vv9k/wutag";
       description = "CLI Tool for tagging and organizing files by tags";
     };
@@ -78,7 +78,7 @@ with pkgs; let
       installShellCompletion --zsh completions/sheldon.zsh
     '';
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/rossmacarthur/sheldon";
       description = "Fast, configurable, shell plugin manager";
     };
@@ -148,19 +148,19 @@ with pkgs; let
 
   csvlens = rustPlatform.buildRustPackage rec {
     pname = "csvlens";
-    version = "0.1.9";
+    version = "0.1.10";
 
     src = fetchFromGitHub {
       owner = "YS-L";
       repo = "csvlens";
-      rev = "v0.1.9";
-      sha256 = "sha256-HVVUR8nSsnSMhr6gvKAj3vEgIbLpfKI7iJSlXGUrS2M==";
+      rev = "v${version}";
+      sha256 = "sha256-7lTIVmGhL/cMndx3LC3EcJHxNHc4wM9BqFcVYp8F99g=";
     };
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
 
-    cargoSha256 = "sha256-qK95TCZUyDdV2X2mEdGwkeh+zCjurwN9gdy6dJgTeQo=";
+    cargoSha256 = "sha256-cYm9z6K2fSIKcHxFb7rhudsMkKb4jhi2jwocNTouCmM=";
 
     meta = {
       homepage = "https://github.com/YS-L/csvlens";
@@ -190,11 +190,11 @@ with pkgs; let
 
   youtube-tui = stdenv.mkDerivation rec {
     pname = "youtube-tui";
-    version = "0.5.0";
+    version = "0.5.3";
 
     src = fetchurl {
-      url = "https://github.com/Siriusmart/youtube-tui/releases/download/v${version}/default.youtube-tui_arch-x86_64";
-      sha256 = "1yq9azx3hf48cc18a6pxsyknm9qaq0wd7a7maiwmgmc2xmsccs3n";
+      url = "https://github.com/Siriusmart/youtube-tui/releases/download/v${version}/youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64";
+      sha256 = "1izsyp0a4h04k33wn851fxfnm32zddqiqw1nn043bd5r5wbq8wwd";
     };
 
     buildInputs = [libsixel openssl];
@@ -247,7 +247,7 @@ with pkgs; let
 
     cargoSha256 = "sha256-2VVWEC7VnaaSLwq4b5zK9i6ihhBT0ZEBqq/a0VhisfU=";
 
-    meta = with lib; {
+    meta = {
       homepage = "https://github.com/aryakaul/rusty-krab-manager";
       description = "time management tui in rust";
     };
@@ -255,11 +255,11 @@ with pkgs; let
 
   klog = stdenv.mkDerivation rec {
     pname = "klog";
-    version = "5.3";
+    version = "5.4";
 
     src = fetchzip {
       url = "https://github.com/jotaen/klog/releases/download/v${version}/klog-linux.zip";
-      sha256 = "sha256-WFcaY90gxn8haS9jwtmB14XwnFtaw465QSrvcOnp82w=";
+      sha256 = "sha256-SOwuzxWWdo0vMw+vdSt2lVABPPzywlWEOKN8e0QugzA=";
       stripRoot = false;
     };
 

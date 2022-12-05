@@ -111,4 +111,24 @@
           });
     });
   })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/goimapnotify/default.nix
+    goimapnotify = let
+      version = "2.4-rc3";
+      src = super.fetchFromGitLab {
+        owner = "shackra";
+        repo = "goimapnotify";
+        rev = version;
+        sha256 = "sha256-tu2fUPBOJcWiYLmxEjRjdRdS9i+Rl9icQVb90kEXYTY=";
+      };
+    in (super.goimapnotify.override {
+      buildGoModule = args:
+        super.buildGoModule (args
+          // {
+            vendorSha256 = "sha256-DphGe9jbKo1aIfpF5kRYNSn/uIYHaRMrygda5t46svw=";
+            inherit src version;
+          });
+    });
+  })
 ]

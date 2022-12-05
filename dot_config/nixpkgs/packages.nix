@@ -115,6 +115,7 @@
 
         mani # A CLI tool that helps you manage multiple repositories
         ookla-speedtest # Internet speedtest tool
+
         ouch # Painless compression and decompression in the terminal (git version)
 
         podman # Tool and library for running OCI-based containers in pods
@@ -161,6 +162,7 @@
 
       docs = [
         asciidoctor-with-extensions
+        akira-unstable # Native Linux Design application
         drawio # A desktop application for creating diagrams
         graphviz # Graph visualization tools
         plantuml # Component that allows to quickly write uml diagrams
