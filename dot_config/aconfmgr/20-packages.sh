@@ -90,7 +90,6 @@ AddPackage mdadm            # A tool for managing/monitoring Linux md device arr
 AddPackage moreutils        # A growing collection of the unix tools that nobody thought to write thirty years ago
 AddPackage net-tools        # Configuration tools for Linux networking
 AddPackage nftables         # Netfilter tables userspace tools
-AddPackage nmap             # Utility for network discovery and security auditing
 AddPackage noto-fonts       # Google Noto TTF fonts
 AddPackage noto-fonts-emoji # Google Noto emoji fonts
 AddPackage npm              # A package manager for javascript

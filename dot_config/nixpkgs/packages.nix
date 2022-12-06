@@ -102,6 +102,7 @@
         navi # An interactive cheatsheet tool for the command-line
 
         delta # A syntax-highlighting pager for git
+        difftastic # A syntax-aware diff
         dogdns # Command-line DNS client like dig
 
         gopass # The slightly more awesome standard unix password manager for teams.
@@ -142,6 +143,9 @@
         gping # Ping, but with a graph
         xh # Friendly and fast tool for sending HTTP requests
         mtr # Combines the functionality of traceroute and ping
+        rustcat # Port listener and reverse shell (netcat clone)
+        nmap # A free and open source utility for network discovery and security auditing
+        rustscan # Faster Nmap Scanning with Rust
         socat # Utility for bidirectional data transfer between two independent data channels
         sshuttle # Transparent proxy server that works as a poor man's VPN
         sslscan # Tests SSL/TLS services and discover supported cipher suites
@@ -203,6 +207,7 @@
         neovim
         stylua # Code formatter for Lua
         treefmt
+        tokei # A program that allows you to count your code, quickly
       ];
 
       lang = {
@@ -230,6 +235,14 @@
 
         c = [
           rtags # C/C++ client-server indexer based on clang
+        ];
+
+        frameworks = [
+          dioxus-cli #CLI tool for developing, testing, and publishing Dioxus apps
+        ];
+
+        latex = [
+          tectonic # Modernized, complete, self-contained TeX/LaTeX engine
         ];
 
         db = [
