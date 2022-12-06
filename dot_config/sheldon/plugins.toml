@@ -21,7 +21,11 @@ inline = 'zsh-defer -c "eval $(zoxide init --cmd c zsh)"'
 inline = 'zsh-defer -c "eval $(direnv hook zsh)"'
 
 [plugins.atuin]
-inline = 'zsh-defer -c "eval $(atuin init zsh)"'
+inline = """
+export ATUIN_NOBIND='true'
+zsh-defer -c 'eval "$(atuin init zsh)"'
+bindkey '^r' _atuin_search_widget
+"""
 
 [plugins.broot]
 inline = 'zsh-defer source $XDG_CONFIG_HOME/broot/launcher/bash/br'
