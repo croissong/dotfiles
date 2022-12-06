@@ -8,7 +8,7 @@ alias less=bat
 alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log; }
 
-alias rm='trash -v'
+alias rt='trash put'
 
 alias find='fd -H'
 alias top=btm

@@ -429,7 +429,7 @@
         # light # GNU/Linux application to control backlights
         procs # A modern replacement for ps written in Rust
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
-        trash-cli # Command line tool for the desktop trash can
+        trashy # A simple, fast, and featureful alternative to rm and trash-cli
         nethogs # A small 'net top' tool, grouping bandwidth by process
       ];
     };
