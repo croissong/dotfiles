@@ -9,4 +9,5 @@ def find_password(username):
 QUIET = True
 USERNAME = "jan.moeller0@gmail.com"
 PASSWORD = find_password(USERNAME)
+AUTOREFRESH = False
 print(PASSWORD)
