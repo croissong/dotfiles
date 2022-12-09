@@ -65,8 +65,6 @@ alias paruch='paru --config ~/.config/pacman/chaotic-aur.conf'
 
 alias jwtd='jwt decode -j --iso8601'
 
-alias lock='physlock -ds'
-
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
 
 #

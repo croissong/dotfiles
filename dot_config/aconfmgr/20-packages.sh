@@ -107,7 +107,6 @@ AddPackage patchutils       # A small collection of programs that operate on pat
 AddPackage pciutils         # PCI bus configuration space access library and tools
 AddPackage perl             # A highly capable, feature-rich programming language
 AddPackage perl-cgi         # Handle Common Gateway Interface requests and responses
-AddPackage physlock         # Lightweight Linux console locking tool
 AddPackage pipewire         # Low-latency audio/video router and processor
 AddPackage pipewire-alsa    # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-pulse   # Low-latency audio/video router and processor - PulseAudio replacement
