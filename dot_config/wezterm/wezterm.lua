@@ -163,7 +163,7 @@ for i = 1, 8 do
 	})
 end
 
-search_mode = wezterm.gui.default_key_tables().copy_mode
+search_mode = wezterm.gui.default_key_tables().search_mode
 table.insert(search_mode, { key = "w", mods = "CTRL", action = wezterm.action({ CopyMode = "ClearPattern" }) })
 
 key_tables = {
@@ -208,6 +208,28 @@ mouse_bindings = { -- Change the default click behavior so that it only selects
 	},
 }
 
+-- https://github.com/wez/wezterm/issues/928#issuecomment-1152781846
+hyperlink_rules = {
+	-- Linkify things that look like URLs
+	-- This is actually the default if you don't specify any hyperlink_rules
+	{
+		regex = "\\b\\w+://(?:[\\w.-]+)(?:(:?:\\.[a-z]{2,15})|(?::\\d{1,5}))\\S*\\b",
+		format = "$0",
+	},
+
+	-- linkify email addresses
+	{
+		regex = "\\b\\w+@[\\w-]+(\\.[\\w-]+)+\\b",
+		format = "mailto:$0",
+	},
+
+	-- file:// URI
+	{
+		regex = "\\bfile://\\S*\\b",
+		format = "$0",
+	},
+}
+
 ---
 -- config
 ---
@@ -226,6 +248,7 @@ return {
 	keys = keys,
 	key_tables = key_tables,
 	mouse_bindings = mouse_bindings,
+	hyperlink_rules = hyperlink_rules,
 	debug_key_events = false,
 	key_map_preference = "Physical",
 }
