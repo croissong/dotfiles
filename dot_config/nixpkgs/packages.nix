@@ -316,6 +316,7 @@
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
         topgrade # Invoke the upgrade procedure of multiple package managers
+        my_pkgs.gup
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
         amber # A code search-and-replace tool
         slurp # Select a region in a Wayland compositor

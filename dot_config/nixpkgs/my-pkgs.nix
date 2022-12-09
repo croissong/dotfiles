@@ -312,6 +312,26 @@ with pkgs; let
       description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
     };
   };
+
+  gup = stdenv.mkDerivation rec {
+    pname = "gup";
+    version = "0.15.1";
+
+    src = fetchurl {
+      url = "https://github.com/nao1215/gup/releases/download/v${version}/gup_${version}_Linux_x86_64.tar.gz";
+      sha256 = "0n2vmq70yc6njg5s2xxswb6qbwmdjqggkv5gd0yjl1cq8wb9h92r";
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D gup $out/bin/gup
+    '';
+
+    meta = {
+      homepage = "https://github.com/nao1215/gup";
+      description = "Update binaries installed by go install";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -329,4 +349,5 @@ in {
   klog = klog;
   versio = versio;
   focus = focus;
+  gup = gup;
 }
