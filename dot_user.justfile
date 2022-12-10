@@ -1,3 +1,7 @@
+default:
+  @just --choose
+
+
 vpnio-start:
     systemctl restart strongswan
     sudo swanctl -i -c vpn
@@ -5,7 +9,7 @@ vpnio-stop:
     systemctl stop strongswan
 
 
-nix: nix-hm nix-diff
+nix: nix-nv nix-hm nix-diff
 
 nix-hm:
   chezmoi apply ~/.config/nixpkgs
@@ -22,7 +26,9 @@ nix-diff:
   nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2)
 
 
+nix-nv:
+ nvfetcher
 
 gc:
-  podman system prune --all --force && podman rmi --all
+  podman system prune --all --force && podman rmi --all --force
   nix-collect-garbage -d

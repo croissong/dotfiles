@@ -6,8 +6,12 @@
   lib,
   ...
 }: let
+  generated = import ./_sources/generated.nix {
+    inherit (pkgs) fetchurl fetchgit fetchFromGitHub dockerTools;
+  };
+
   my_pkgs = import ./my-pkgs.nix {
-    inherit pkgs pkgs-master config;
+    inherit pkgs config generated;
   };
 
   packages_dict = with pkgs; {
@@ -504,6 +508,7 @@
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
       nix-update
+      nvfetcher # Generate nix sources expr for the latest version of packages
 
       # not used for now
       # nvd
@@ -553,6 +558,7 @@
 
     k8s = [
       helmfile # Deploy Kubernetes Helm Charts
+      my_pkgs.vals # Helm-like configuration values loader with support for various sources
       krew # Krew is the package manager for kubectl plugins.
       kubectl # Kubernetes.io client binary
       kubelogin # A Kubernetes credential plugin implementing Azure authentication

@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  generated,
   ...
 }:
 with pkgs; let
@@ -332,6 +333,23 @@ with pkgs; let
       description = "Update binaries installed by go install";
     };
   };
+
+  vals = stdenv.mkDerivation rec {
+    pname = "vals";
+    version = generated.vals.version;
+
+    src = generated.vals.src;
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D vals $out/bin/vals
+    '';
+
+    meta = {
+      homepage = "https://github.com/variantdev/vals";
+      description = "Helm-like configuration values loader with support for various sources";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -350,4 +368,5 @@ in {
   versio = versio;
   focus = focus;
   gup = gup;
+  vals = vals;
 }

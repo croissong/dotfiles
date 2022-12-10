@@ -1,0 +1,4 @@
+[vals]
+fetch.url = "https://github.com/variantdev/vals/releases/download/v$ver/vals_$ver_linux_amd64.tar.gz"
+src.github = "variantdev/vals"
+src.prefix = "v"
