@@ -8,3 +8,4 @@ secrets.yml
 todo.*
 .config/borgmatic/excludes.sh
 /krew/backup.txt
+.config/nixpkgs/nvfetcher.toml
