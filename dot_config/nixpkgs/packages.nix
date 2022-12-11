@@ -38,7 +38,6 @@
     ];
 
     orga = [
-      my_pkgs.rusty-krab-manager # time management tui in rust
       my_pkgs.klog
     ];
 
@@ -80,7 +79,7 @@
       ];
 
       mobile = [
-        pkgs-stable.android-tools
+        android-tools
         scrcpy # Display and control your Android device
       ];
 
@@ -402,7 +401,6 @@
 
       core = [
         atuin # Replacement for a shell history which records additional commands context
-        mcfly # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
         my_pkgs.sheldon # Fast, configurable, shell plugin manager
       ];
     };
@@ -539,7 +537,8 @@
       caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
-      gh # GitHub CLI too
+      gh # GitHub CLI tool
+      glab # GitLab CLI tool
       go-mockery # A mock code autogenerator for golang
       google-cloud-sdk # A set of command-line tools for the Google Cloud Platform. Includes gcloud (with beta and alpha commands), gsutil, and bq.
       gsctl # The Giant Swarm command line interface
