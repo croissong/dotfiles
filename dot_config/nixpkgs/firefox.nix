@@ -116,6 +116,7 @@ in {
         };
 
         # https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings
+        # about:support
         ExtensionSettings = {
           "uBlock0@raymondhill.net" = {
             installation_mode = "force_installed";
@@ -143,6 +144,10 @@ in {
           "tab-stash@condordes.net" = {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-stash/latest.xpi";
+          };
+          "de-DE@dictionaries.addons.mozilla.org" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/dictionary-german/latest.xpi";
           };
           # "spookfox@bitspook.in" = {
           #   installation_mode = "force_installed";
