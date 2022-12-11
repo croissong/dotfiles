@@ -77,3 +77,12 @@ src.pypi = "xmlformatter"
 [kubesess]
 fetch.url = "https://github.com/Ramilito/kubesess/releases/download/$ver/kubesess_$ver_x86_64-unknown-linux-gnu.tar.gz"
 src.github = "Ramilito/kubesess"
+
+[kubeshark]
+fetch.url = "https://github.com/kubeshark/kubeshark/releases/download/$ver/kubeshark_linux_amd64"
+src.github = "kubeshark/kubeshark"
+
+[sttr]
+fetch.url = "https://github.com/abhimanyu003/sttr/releases/download/v$ver/sttr_$ver_linux_amd64.tar.gz"
+src.github = "abhimanyu003/sttr"
+src.prefix = "v"

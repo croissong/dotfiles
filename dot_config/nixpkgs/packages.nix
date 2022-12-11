@@ -72,6 +72,7 @@
         jq # Command-line JSON processor
         miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
         sd # Intuitive find & replace
+        my_pkgs.sttr # cli to perform various operations on string
       ];
 
       misc = [
@@ -562,6 +563,7 @@
       kubectl # Kubernetes.io client binary
       kubelogin # A Kubernetes credential plugin implementing Azure authentication
       my_pkgs.kubesess
+      my_pkgs.kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
       telepresence2 # Local development against a remote Kubernetes or OpenShift cluster

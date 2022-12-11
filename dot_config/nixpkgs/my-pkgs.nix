@@ -251,6 +251,7 @@ with pkgs; let
     pname = "gup";
     version = generated.gup.version;
     src = generated.gup.src;
+
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D gup $out/bin/gup
@@ -265,6 +266,7 @@ with pkgs; let
     pname = "vals";
     version = generated.vals.version;
     src = generated.vals.src;
+
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D vals $out/bin/vals
@@ -272,6 +274,35 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/variantdev/vals";
       description = "Helm-like configuration values loader with support for various sources";
+    };
+  };
+
+  kubeshark = stdenv.mkDerivation rec {
+    pname = "kubeshark";
+    version = generated.kubeshark.version;
+    src = generated.kubeshark.src;
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/kubeshark
+    '';
+    meta = {
+      homepage = "https://github.com/kubeshark/kubeshark";
+      description = "The API traffic viewer for Kubernetes. Think TCPDump and Wireshark re-invented for Kubernetes";
+    };
+  };
+
+  sttr = stdenv.mkDerivation rec {
+    pname = "sttr";
+    version = generated.sttr.version;
+    src = generated.sttr.src;
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D sttr $out/bin/sttr
+    '';
+    meta = {
+      homepage = "https://github.com/abhimanyu003/sttr";
+      description = "cross-platform, cli app to perform various operations on string";
     };
   };
 in {
@@ -293,4 +324,6 @@ in {
   focus = focus;
   gup = gup;
   vals = vals;
+  kubeshark = kubeshark;
+  sttr = sttr;
 }
