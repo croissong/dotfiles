@@ -27,7 +27,7 @@ nix-diff:
 
 
 nix-nv:
- nvfetcher
+ nix run git+https://github.com/berberman/nvfetcher -- --keyfile ~/.config/nvchecker/keyfile.toml
 
 gc:
   podman system prune --all --force && podman rmi --all --force

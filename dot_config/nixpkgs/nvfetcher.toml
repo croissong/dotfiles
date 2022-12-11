@@ -2,3 +2,78 @@
 fetch.url = "https://github.com/variantdev/vals/releases/download/v$ver/vals_$ver_linux_amd64.tar.gz"
 src.github = "variantdev/vals"
 src.prefix = "v"
+
+[gup]
+fetch.url = "https://github.com/nao1215/gup/releases/download/v$ver/gup_$ver_Linux_x86_64.tar.gz"
+src.github = "nao1215/gup"
+src.prefix = "v"
+
+[focus]
+fetch.url = "https://github.com/ayoisaiah/focus/releases/download/v$ver/focus_$ver_linux_amd64.tar.gz"
+src.github = "ayoisaiah/focus"
+src.prefix = "v"
+
+[versio]
+fetch.url = "https://github.com/chaaz/versio/releases/download/v$ver/versio__x86_64-unknown-linux-gnu"
+src.github = "chaaz/versio"
+src.prefix = "v"
+
+[klog]
+fetch.url = "https://github.com/jotaen/klog/releases/download/v$ver/klog-linux.zip"
+src.github = "jotaen/klog"
+src.prefix = "v"
+
+[shellcaster]
+fetch.url = "https://github.com/jeff-hughes/shellcaster/releases/download/v$ver/shellcaster-$ver-archlinux-x86_64.tar.gz"
+src.github = "jeff-hughes/shellcaster"
+src.prefix = "v"
+
+[youtube-tui]
+fetch.url = "https://github.com/Siriusmart/youtube-tui/releases/download/v$ver/youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64"
+src.github = "Siriusmart/youtube-tui"
+src.prefix = "v"
+
+[mailctl]
+fetch.url = "https://github.com/pdobsan/mailctl/releases/download/$ver/mailctl-$ver-Linux-x86_64"
+src.github = "pdobsan/mailctl"
+src.prefix = "v"
+
+[csvlens]
+fetch.github = "YS-L/csvlens"
+src.github_tag = "YS-L/csvlens"
+cargo_locks = [ "Cargo.lock" ]
+
+[go-commitlinter]
+fetch.url = "https://github.com/masahiro331/go-commitlinter/releases/download/$ver/go-commitlinter_$ver_Linux_x86_64.tar.gz"
+src.github = "masahiro331/go-commitlinter"
+
+[ytui-music]
+fetch.url = "https://github.com/sudipghimire533/ytui-music/releases/download/v$ver/ytui_music-linux-amd64"
+src.github = "sudipghimire533/ytui-music"
+src.prefix = "v"
+
+[dtool]
+fetch.github = "guoxbin/dtool"
+src.github_tag = "guoxbin/dtool"
+cargo_locks = [ "Cargo.lock" ]
+
+[sheldon]
+fetch.url = "https://github.com/rossmacarthur/sheldon/releases/download/$ver/sheldon-$ver-x86_64-unknown-linux-musl.tar.gz"
+src.github = "rossmacarthur/sheldon"
+
+[wutag]
+fetch.url = "https://github.com/vv9k/wutag/releases/download/$ver/wutag-$ver-x86_64-unknown-linux.tar.xz"
+src.github = "vv9k/wutag"
+src.prefix = "v"
+
+[cqlsh]
+fetch.pypi = "cqlsh"
+src.pypi = "cqlsh"
+
+[xmlformatter]
+fetch.pypi = "xmlformatter"
+src.pypi = "xmlformatter"
+
+[kubesess]
+fetch.url = "https://github.com/Ramilito/kubesess/releases/download/$ver/kubesess_$ver_x86_64-unknown-linux-gnu.tar.gz"
+src.github = "Ramilito/kubesess"

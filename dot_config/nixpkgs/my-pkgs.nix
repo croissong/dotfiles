@@ -7,46 +7,52 @@
 with pkgs; let
   kubesess = stdenv.mkDerivation rec {
     pname = "kubesess";
-    version = "1.2.8";
+    version = generated.kubesess.version;
+    src = generated.kubesess.src;
 
-    src = fetchurl {
-      url = "https://github.com/Ramilito/kubesess/releases/download/${version}/kubesess_${version}_x86_64-unknown-linux-gnu.tar.gz";
-      sha256 = "sha256-VIhadJ/9RTmHKEI7zzc+ZSXOl9gY0X4NhEXNgbmlwqE=";
-    };
-
-    phases = ["unpackPhase" "installPhase"];
-    unpackPhase = ''
-      tar zxpf $src -C .
-    '';
+    sourceRoot = ".";
     installPhase = ''
-      mkdir -p $out/bin
-      cp target/x86_64-unknown-linux-gnu/release/kubesess $out/bin/kubesess
+      install -m755 -D target/x86_64-unknown-linux-gnu/release/kubesess $out/bin/kubesess
       mkdir -p $out/share/${pname}
       cp -r scripts $out/share/${pname}/scripts
+
+      runHook postInstall
     '';
+
+    # TODO: shellcompletion
+    # nativeBuildInputs = [installShellFiles];
+    # postInstall = ''
+    #   installShellCompletion --zsh --name _kubesess scripts/sh/completion.sh
+    # '';
+
+    meta = {
+      homepage = "https://github.com/Ramilito/kubesess";
+      description = "Kubectl plugin managing sessions";
+    };
   };
 
   xmlformatter = python3Packages.buildPythonPackage rec {
     pname = "xmlformatter";
-    version = "0.2.4";
+    version = generated.xmlformatter.version;
+    src = generated.xmlformatter.src;
+  };
 
-    src = python3Packages.fetchPypi {
-      inherit pname version;
-      sha256 = "sha256-bZPEvATP+x1M9uudkDQBjpsmTkVUJp59pnU5ukv/A/U=";
-    };
-    # checkInputs = [pkgs.python3Packages.pytest pkgs.python3Packages.setuptools];
-    # propagatedBuildInputs = [
-    #   pkgs.python3Packages.setuptools
-    #   pkgs.python3Packages.pytest
-    # ];
+  cqlsh = python3Packages.buildPythonPackage rec {
+    pname = "cqlsh";
+    version = generated.cqlsh.version;
+    src = generated.cqlsh.src;
+
+    propagatedBuildInputs = with python310Packages; [
+      cassandra-driver
+      # six
+      # cql
+    ];
+  };
+
   wutag = stdenv.mkDerivation rec {
     pname = "wutag";
-    version = "0.5.0";
-
-    src = fetchurl {
-      url = "https://github.com/vv9k/wutag/releases/download/${version}/wutag-${version}-x86_64-unknown-linux.tar.xz";
-      sha256 = "sha256-xpF3rNl9hYAjqWPeZ21UxhuIMVI0VPZx5Gik4/2BFxo=";
-    };
+    version = generated.wutag.version;
+    src = generated.wutag.src;
 
     installPhase = ''
       install -m755 -D wutag $out/bin/wutag
@@ -61,19 +67,14 @@ with pkgs; let
   # TODO: https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/sheldon/default.nix
   sheldon = stdenv.mkDerivation rec {
     pname = "sheldon";
-    version = "0.7.1";
-
-    src = fetchurl {
-      url = "https://github.com/rossmacarthur/sheldon/releases/download/${version}/sheldon-${version}-x86_64-unknown-linux-musl.tar.gz";
-      sha256 = "19h7j89gjsvbaaqr68c7p0sii7692r1kag2x3fnbzjb2ns5l2czk";
-    };
+    version = generated.sheldon.version;
+    src = generated.sheldon.src;
 
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D sheldon $out/bin/sheldon
       runHook postInstall
     '';
-
     nativeBuildInputs = [installShellFiles];
     postInstall = ''
       installShellCompletion --zsh completions/sheldon.zsh
@@ -87,19 +88,12 @@ with pkgs; let
 
   dtool = rustPlatform.buildRustPackage rec {
     pname = "dtool";
-    version = "0.12.0";
-
-    src = fetchFromGitHub {
-      owner = "guoxbin";
-      repo = "dtool";
-      rev = "v${version}";
-      sha256 = "sha256-hdT3xLO5r5UKVM6Be4zerEi4Wh0653mGXQ9/eoeYSwk=";
-    };
+    version = generated.dtool.version;
+    src = generated.dtool.src;
+    cargoLock = generated.dtool.cargoLock."Cargo.lock";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib];
-
-    cargoSha256 = "sha256-uQxECH188MwHijtrsBh1+CfDNGYpAgVlh5cH07POB5s=";
 
     meta = {
       homepage = "https://github.com/guoxbin/dtool";
@@ -109,12 +103,8 @@ with pkgs; let
 
   ytui-music = stdenv.mkDerivation rec {
     pname = "ytui-music";
-    version = "2.0.0-beta";
-
-    src = fetchurl {
-      url = "https://github.com/sudipghimire533/ytui-music/releases/download/v${version}/ytui_music-linux-amd64";
-      sha256 = "sha256-J8CMv19HqC+QLrfuLjAQPNK33lUVsed03hj7sOjdQXw=";
-    };
+    version = generated.ytui-music.version;
+    src = generated.ytui-music.src;
 
     unpackPhase = ":";
     installPhase = ''
@@ -129,12 +119,8 @@ with pkgs; let
 
   go-commitlinter = stdenv.mkDerivation rec {
     pname = "go-commitlinter";
-    version = "0.1.2";
-
-    src = fetchurl {
-      url = "https://github.com/masahiro331/go-commitlinter/releases/download/${version}/go-commitlinter_${version}_Linux_x86_64.tar.gz";
-      sha256 = "sha256-eMECQMw+htty9Izso+g3zODtcXFMorNdWF8rl09pSg8=";
-    };
+    version = generated.go-commitlinter.version;
+    src = generated.go-commitlinter.src;
 
     sourceRoot = ".";
     installPhase = ''
@@ -149,19 +135,12 @@ with pkgs; let
 
   csvlens = rustPlatform.buildRustPackage rec {
     pname = "csvlens";
-    version = "0.1.10";
-
-    src = fetchFromGitHub {
-      owner = "YS-L";
-      repo = "csvlens";
-      rev = "v${version}";
-      sha256 = "sha256-7lTIVmGhL/cMndx3LC3EcJHxNHc4wM9BqFcVYp8F99g=";
-    };
+    version = generated.csvlens.version;
+    src = generated.csvlens.src;
+    cargoLock = generated.csvlens.cargoLock."Cargo.lock";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
-
-    cargoSha256 = "sha256-cYm9z6K2fSIKcHxFb7rhudsMkKb4jhi2jwocNTouCmM=";
 
     meta = {
       homepage = "https://github.com/YS-L/csvlens";
@@ -171,12 +150,8 @@ with pkgs; let
 
   mailctl = stdenv.mkDerivation rec {
     pname = "mailctl";
-    version = "0.7.4";
-
-    src = fetchurl {
-      url = "https://github.com/pdobsan/mailctl/releases/download/${version}/mailctl-${version}-Linux-x86_64";
-      sha256 = "sha256-nBj6vfUfScMTy4rn7qQ8bRaMsSXBiTXQCq6ngjIsU6U==";
-    };
+    version = generated.mailctl.version;
+    src = generated.mailctl.src;
 
     unpackPhase = ":";
     installPhase = ''
@@ -191,12 +166,8 @@ with pkgs; let
 
   youtube-tui = stdenv.mkDerivation rec {
     pname = "youtube-tui";
-    version = "0.5.3";
-
-    src = fetchurl {
-      url = "https://github.com/Siriusmart/youtube-tui/releases/download/v${version}/youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64";
-      sha256 = "1izsyp0a4h04k33wn851fxfnm32zddqiqw1nn043bd5r5wbq8wwd";
-    };
+    version = generated.youtube-tui.version;
+    src = generated.youtube-tui.src;
 
     buildInputs = [libsixel openssl];
     nativeBuildInputs = [
@@ -215,12 +186,8 @@ with pkgs; let
 
   shellcaster = stdenv.mkDerivation rec {
     pname = "shellcaster";
-    version = "2.0.1";
-
-    src = fetchurl {
-      url = "https://github.com/jeff-hughes/shellcaster/releases/download/v${version}/shellcaster-${version}-archlinux-x86_64.tar.gz";
-      sha256 = "sha256-VwOXOfE5MoP20/1BIe1tIA/xfOzA0iQ4Fy8cEn+fPNY=";
-    };
+    version = generated.shellcaster.version;
+    src = generated.shellcaster.src;
 
     installPhase = ''
       install -m755 -D shellcaster $out/bin/shellcaster
@@ -232,36 +199,12 @@ with pkgs; let
     };
   };
 
-  rusty-krab-manager = rustPlatform.buildRustPackage rec {
-    pname = "rusty-krab-manager";
-    version = "1.3";
-
-    src = fetchFromGitHub {
-      owner = "aryakaul";
-      repo = "rusty-krab-manager";
-      rev = "v${version}";
-      sha256 = "sha256-NiOmXV9gadfBQgFG9BU0e+UmEr023WbhVQCe+FfJaoI=";
-    };
-
-    nativeBuildInputs = [pkg-config];
-    buildInputs = [alsa-lib];
-
-    cargoSha256 = "sha256-2VVWEC7VnaaSLwq4b5zK9i6ihhBT0ZEBqq/a0VhisfU=";
-
-    meta = {
-      homepage = "https://github.com/aryakaul/rusty-krab-manager";
-      description = "time management tui in rust";
-    };
-  };
-
   klog = stdenv.mkDerivation rec {
     pname = "klog";
-    version = "5.4";
-
+    version = generated.klog.version;
     src = fetchzip {
-      url = "https://github.com/jotaen/klog/releases/download/v${version}/klog-linux.zip";
+      url = "https://github.com/jotaen/klog/releases/download/v${generated.klog.version}/klog-linux.zip";
       sha256 = "sha256-SOwuzxWWdo0vMw+vdSt2lVABPPzywlWEOKN8e0QugzA=";
-      stripRoot = false;
     };
 
     installPhase = ''
@@ -276,12 +219,8 @@ with pkgs; let
 
   versio = stdenv.mkDerivation rec {
     pname = "versio";
-    version = "0.6.5";
-
-    src = fetchurl {
-      url = "https://github.com/chaaz/versio/releases/download/v${version}/versio__x86_64-unknown-linux-gnu";
-      sha256 = "sha256-TEqINf2gp6MVG0QmIdOS6MUZF/RQT75HK5lWjzdA2RM=";
-    };
+    version = generated.versio.version;
+    src = generated.versio.src;
 
     unpackPhase = ":";
     installPhase = ''
@@ -296,18 +235,12 @@ with pkgs; let
 
   focus = stdenv.mkDerivation rec {
     pname = "focus";
-    version = "1.2.0";
-
-    src = fetchurl {
-      url = "https://github.com/ayoisaiah/focus/releases/download/v${version}/focus_${version}_linux_amd64.tar.gz";
-      sha256 = "145hkv91hhcfch0bbn2rcgldc7bjynr7kpl6wg9z28jg7pq02572";
-    };
-
+    version = generated.focus.version;
+    src = generated.focus.src;
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D focus $out/bin/focus
     '';
-
     meta = {
       homepage = "https://github.com/ayoisaiah/focus";
       description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
@@ -316,18 +249,12 @@ with pkgs; let
 
   gup = stdenv.mkDerivation rec {
     pname = "gup";
-    version = "0.15.1";
-
-    src = fetchurl {
-      url = "https://github.com/nao1215/gup/releases/download/v${version}/gup_${version}_Linux_x86_64.tar.gz";
-      sha256 = "0n2vmq70yc6njg5s2xxswb6qbwmdjqggkv5gd0yjl1cq8wb9h92r";
-    };
-
+    version = generated.gup.version;
+    src = generated.gup.src;
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D gup $out/bin/gup
     '';
-
     meta = {
       homepage = "https://github.com/nao1215/gup";
       description = "Update binaries installed by go install";
@@ -337,14 +264,11 @@ with pkgs; let
   vals = stdenv.mkDerivation rec {
     pname = "vals";
     version = generated.vals.version;
-
     src = generated.vals.src;
-
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D vals $out/bin/vals
     '';
-
     meta = {
       homepage = "https://github.com/variantdev/vals";
       description = "Helm-like configuration values loader with support for various sources";
