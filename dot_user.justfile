@@ -12,6 +12,8 @@ vpnio-stop:
 nix: nix-nv nix-hm nix-diff
 
 nix-hm:
+  #!/usr/bin/env bash
+  cd ~/Dotfiles/dot_config/nixpkgs/
   chezmoi apply ~/.config/nixpkgs
   NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch \
   --flake ~/.config/nixpkgs#moi \
@@ -27,7 +29,10 @@ nix-diff:
 
 
 nix-nv:
- nix run git+https://github.com/berberman/nvfetcher -- --keyfile ~/.config/nvchecker/keyfile.toml
+ #!/usr/bin/env bash
+ cd ~/Dotfiles/dot_config/nixpkgs/
+ nix run git+https://github.com/berberman/nvfetcher -- \
+   --keyfile ~/.config/nvchecker/keyfile.toml
 
 gc:
   podman system prune --all --force && podman rmi --all --force
