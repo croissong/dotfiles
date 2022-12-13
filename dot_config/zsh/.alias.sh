@@ -144,6 +144,8 @@ awkp() { awk "{print \$${1:-1}}"; }
 b64e() { echo -n $(cat -) | base64 -w0; }
 b64d() { echo -n $(cat -) | base64 -d; }
 
+alias cert-view='step certificate inspect'
+
 alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promotor'
 
 alias journalctl='journalctl -fxe'
