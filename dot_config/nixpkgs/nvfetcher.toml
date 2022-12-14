@@ -86,3 +86,12 @@ src.github = "kubeshark/kubeshark"
 fetch.url = "https://github.com/abhimanyu003/sttr/releases/download/v$ver/sttr_$ver_linux_amd64.tar.gz"
 src.github = "abhimanyu003/sttr"
 src.prefix = "v"
+
+[termshot]
+fetch.url = "https://github.com/homeport/termshot/releases/download/v$ver/termshot_$ver_linux_amd64.tar.gz"
+src.github = "homeport/termshot"
+src.prefix = "v"
+
+[riff]
+fetch.url = "https://github.com/walles/riff/releases/download/$ver/riff-$ver-x86_64-linux"
+src.github = "walles/riff"

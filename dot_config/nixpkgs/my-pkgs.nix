@@ -299,10 +299,48 @@ with pkgs; let
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D sttr $out/bin/sttr
+      runHook postInstall
     '';
+    nativeBuildInputs = [installShellFiles];
+    postInstall = ''
+      installShellCompletion --cmd sttr --zsh <($out/bin/sttr completion zsh)
+    '';
+
     meta = {
       homepage = "https://github.com/abhimanyu003/sttr";
       description = "cross-platform, cli app to perform various operations on string";
+    };
+  };
+
+  termshot = stdenv.mkDerivation rec {
+    pname = "termshot";
+    version = generated.termshot.version;
+    src = generated.termshot.src;
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D termshot $out/bin/termshot
+    '';
+
+    meta = {
+      homepage = "https://github.com/homeport/termshot";
+      description = "Creates screenshots based on terminal command output ";
+    };
+  };
+
+  riff = stdenv.mkDerivation rec {
+    pname = "riff";
+    version = generated.riff.version;
+    src = generated.riff.src;
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/riff
+    '';
+
+    meta = {
+      homepage = "https://github.com/walles/riff";
+      description = "A diff filter highlighting which line parts have changed";
     };
   };
 in {
@@ -318,7 +356,6 @@ in {
   csvlens = csvlens;
   mailctl = mailctl;
   shellcaster = shellcaster;
-  rusty-krab-manager = rusty-krab-manager;
   klog = klog;
   versio = versio;
   focus = focus;
@@ -326,4 +363,6 @@ in {
   vals = vals;
   kubeshark = kubeshark;
   sttr = sttr;
+  termshot = termshot;
+  riff = riff;
 }

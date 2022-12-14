@@ -1,3 +1,4 @@
 /dot_config/nyxt/init.lisp
 .terraform*
 tf/secrets.auto.tfvars
+/dot_config/nixpkgs/_sources/

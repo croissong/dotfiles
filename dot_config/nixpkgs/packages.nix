@@ -60,6 +60,7 @@
         imv # A command line image viewer for tiling window managers
         # qimgv TODO: maybe
         vhs # A tool for generating terminal GIFs with code
+        my_pkgs.termshot # Creates screenshots based on terminal command output
       ];
 
       data = [
@@ -107,6 +108,8 @@
 
         delta # A syntax-highlighting pager for git
         difftastic # A syntax-aware diff
+        diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
+        my_pkgs.riff # A diff filter highlighting which line parts have changed
         dogdns # Command-line DNS client like dig
 
         gopass # The slightly more awesome standard unix password manager for teams.
@@ -190,6 +193,7 @@
       cn = [
         argocd # Declarative continuous deployment for Kubernetes
         azure-cli
+        cmctl # A CLI tool for managing cert-manager service on Kubernetes clusters
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
         linkerd
@@ -206,7 +210,6 @@
       ];
 
       edit = [
-        diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
         my_pkgs.go-commitlinter
         neovim
         stylua # Code formatter for Lua
@@ -484,6 +487,7 @@
       du-dust # du + rust = dust. Like du but more intuitive
       dua # A tool to conveniently learn about the disk usage of directories, fast!
       duf # Disk Usage/Free Utility
+      godu # Utility helping to discover large files/folders
       batsignal # A lightweight battery monitor daemon
       mako # Lightweight notification daemon for Wayland
       pamixer # Pulseaudio command-line mixer like amixer
