@@ -7,6 +7,7 @@ lineage
 neat
 ns
 rbac-tool
+reap
 resource-capacity
 sniff
 stern
