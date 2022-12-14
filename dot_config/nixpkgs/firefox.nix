@@ -141,9 +141,9 @@ in {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi";
           };
-          "tab-stash@condordes.net" = {
+          "extension@one-tab.com" = {
             installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-stash/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/onetab/latest.xpi";
           };
           "de-DE@dictionaries.addons.mozilla.org" = {
             installation_mode = "force_installed";
