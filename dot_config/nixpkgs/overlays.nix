@@ -23,18 +23,17 @@
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/helmfile/default.nix
     helmfile = let
-      version = "0.148.1";
-      src = super.fetchFromGitHub {
-        owner = "helmfile";
-        repo = super.helmfile.pname;
-        rev = "v${version}";
-        sha256 = "sha256-Nvf26ahWc1fCWngroc+5gPV1T5UBa/6ix/I9tdQ01t8=";
+      generated = import ./_sources/generated.nix {
+        inherit (super) fetchurl fetchgit fetchFromGitHub dockerTools;
       };
+
+      version = generated.helmfile.version;
+      src = generated.helmfile.src;
     in (super.helmfile.override {
       buildGoModule = args:
         super.buildGoModule (args
           // {
-            vendorSha256 = "sha256-hwJ3vVbGE7L+mkjDzxy6xDT9hjA5cIwxQsHaJpozwvE=";
+            vendorSha256 = "sha256-akxA1AeYuaIKBAgt+u5fWcFYYP1YVMT79l5WwTn1bnI=";
             inherit src version;
 
             ldflags = ["-s" "-w" "-X go.szostok.io/version.version=${version}"];

@@ -9,12 +9,14 @@ vpnio-stop:
     systemctl stop strongswan
 
 
-nix: nix-nv nix-hm nix-diff
+nix: nix-nv nix-cm nix-hm nix-diff nix-check-missing
 
-nix-hm:
+nix-cm:
   #!/usr/bin/env bash
   cd ~/Dotfiles/dot_config/nixpkgs/
   chezmoi apply ~/.config/nixpkgs
+
+nix-hm:
   NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch \
   --flake ~/.config/nixpkgs#moi \
   --update-input nixpkgs \
@@ -33,6 +35,12 @@ nix-nv:
  cd ~/Dotfiles/dot_config/nixpkgs/
  nix run git+https://github.com/berberman/nvfetcher -- \
    --keyfile ~/.config/nvchecker/keyfile.toml
+
+nix-check-missing:
+  # outdated
+  nix search nixpkgs '\.(helmfile|sheldon)'
+  # missing
+  nix search nixpkgs '\.(csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|vals|versio$)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force

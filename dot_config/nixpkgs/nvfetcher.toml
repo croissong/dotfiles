@@ -95,3 +95,7 @@ src.prefix = "v"
 [riff]
 fetch.url = "https://github.com/walles/riff/releases/download/$ver/riff-$ver-x86_64-linux"
 src.github = "walles/riff"
+
+[helmfile]
+fetch.github = "helmfile/helmfile"
+src.github_tag = "helmfile/helmfile"

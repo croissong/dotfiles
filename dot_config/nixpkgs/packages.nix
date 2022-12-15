@@ -219,6 +219,7 @@
 
       lang = {
         webdev = [
+          deno # A secure runtime for JavaScript and TypeScript
           nodejs
           yarn # Fast, reliable, and secure dependency management
 
