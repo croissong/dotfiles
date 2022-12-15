@@ -28,9 +28,6 @@
   interactive = auto
   ui = true
   pager = true
-[http "https://smarthub-wbench.workbench.telekom.de"]
-  sslCert = ~/.config/svh/ssl_smarthub-wbench/user.crt
-  sslKey = ~/.config/svh/ssl_smarthub-wbench/userkey.pem
 [alias]
   br = branch -vv
   bra = branch -avv

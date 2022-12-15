@@ -30,3 +30,4 @@ pyrightconfig.json
 /.direnv
 /.local*
 .justfile
+.ignore
