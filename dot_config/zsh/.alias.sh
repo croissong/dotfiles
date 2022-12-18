@@ -89,7 +89,7 @@ alias kdf='kf describe'
 alias ke='k edit'
 alias kroll='k rollout restart'
 
-alias kl="k stern -t --container-state running,waiting,terminated"
+alias kl="k stern -n $(kubesess -c namespace) -t --container-state running,waiting,terminated"
 
 alias kx='k exec -ti'
 alias kxf='kf exec -ti'
