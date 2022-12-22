@@ -120,7 +120,6 @@ AddPackage pwgen           # Password generator for creating easily memorable pa
 AddPackage rdesktop        # An open source client for Windows Remote Desktop Services
 AddPackage reflector       # A Python 3 module and script to retrieve and filter the latest Pacman mirror list.
 AddPackage rmlint          # Tool to remove duplicates and other lint, being much faster than fdupes
-AddPackage rsync           # A fast and versatile file copying tool for remote and local files
 AddPackage sdcv            # StarDict Console Version
 AddPackage seahorse        # GNOME application for managing PGP keys.
 AddPackage sed             # GNU stream editor
@@ -217,11 +216,11 @@ AddPackage --foreign python-flask-paginate          # A simple paginate extensio
 AddPackage --foreign python-flask-reverse-proxy-fix # Python Flask middleware for applications running under a reverse proxy.
 AddPackage --foreign python-gmusicapi               # An unofficial client library for Google Music
 AddPackage --foreign python-mpv                     # Python interface to the awesome mpv media player
-AddPackage --foreign python-plexapi                 # Python bindings for the Plex API.
-AddPackage --foreign python-ptvsd                   # Python debugger package for use with Visual Studio and Visual Studio Code
-AddPackage --foreign python-pychromecast            # Library for Python 3 to communicate with the Google Chromecast
-AddPackage --foreign python-soundcloud-git          # A Python wrapper around the Soundcloud API
-AddPackage --foreign teams                          # Microsoft Teams for Linux is your chat-centered workspace in Office 365
+
+AddPackage --foreign python-ptvsd          # Python debugger package for use with Visual Studio and Visual Studio Code
+AddPackage --foreign python-pychromecast   # Library for Python 3 to communicate with the Google Chromecast
+AddPackage --foreign python-soundcloud-git # A Python wrapper around the Soundcloud API
+AddPackage --foreign teams                 # Microsoft Teams for Linux is your chat-centered workspace in Office 365
 
 AddPackage --foreign ttf-ubraille  # Unicode Braillt font
 AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland session
@@ -283,7 +282,6 @@ AddPackage --foreign xdg-utils-handlr   # A shim for xdg-utils to use handlr und
 AddPackage --foreign chaotic-keyring    # Chaotic-AUR PGP keyring
 AddPackage --foreign chaotic-mirrorlist # Chaotic-AUR mirror list for use by pacman
 AddPackage --foreign dashbinsh          # Relink /bin/sh to dash
-AddPackage --foreign yofi-bin           # Minimalistic menu for Wayland-based compositors
 AddPackage libfixposix                  # Thin wrapper over POSIX syscalls
 AddPackage libxcrypt-compat             # Modern library for one-way hashing of passwords - legacy API functions
 AddPackage libva-intel-driver           # VA-API implementation for Intel G45 and HD Graphics family

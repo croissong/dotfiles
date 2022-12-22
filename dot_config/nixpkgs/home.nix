@@ -2,6 +2,7 @@
 # https://mipmip.github.io/home-manager-option-search/
 {
   pkgs,
+  pkgs-master,
   config,
   lib,
   rust-overlay,

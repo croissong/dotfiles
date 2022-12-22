@@ -129,6 +129,8 @@
         podman # Tool and library for running OCI-based containers in pods
         podman-compose # A script to run docker-compose.yml using podman
 
+        rsync # Fast incremental file transfer utility
+
         summon # CLI that provides on-demand secrets access for common DevOps tools
 
         termscp # A feature rich terminal UI file transfer and explorer
@@ -211,6 +213,7 @@
 
       edit = [
         my_pkgs.go-commitlinter
+        helix #  A post-modern modal text editor
         neovim
         stylua # Code formatter for Lua
         treefmt
@@ -482,6 +485,7 @@
       virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
       # lxd # Daemon based on liblxc offering a REST API to manage containers
       distrobuilder # System container image builder for LXC and LXD
+      x11docker # Run graphical applications with Docker
     ];
 
     system = [
