@@ -37,9 +37,9 @@ nix-nv:
 
 nix-check-missing:
   # outdated
-  nix search nixpkgs '\.(helmfile|sheldon)'
+  nix search nixpkgs '\.(helmfile|sheldon|vals|summon|twitch-tui|goimapnotify)'
   # missing
-  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|sttr|vals|versio$|youtube-tui)'
+  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|sttr|versio$|youtube-tui)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force

@@ -26,6 +26,7 @@
       my_pkgs.shellcaster # Terminal-based podcast manager
       steamcmd
       steam-tui
+      parsec-bin # Remote gaming streaming service client
     ];
 
     docs = [
@@ -65,6 +66,7 @@
 
       data = [
         bcal # Storage conversion and expression calculator
+        eva # A calculator REPL, similar to bc
         my_pkgs.csvlens # Command line csv viewer
         dasel # Query and update data structures from the command line.
         fblog # A small command-line JSON log viewer
@@ -188,6 +190,8 @@
         mold # A faster drop-in replacement for existing Unix linkers
         seer # A Qt gui frontend for GDB
 
+        my_pkgs.aiac # Artificial Intelligence Infrastructure-as-Code Generator
+
         # maybe
         # https://github.com/cs01/gdbgui
       ];
@@ -203,6 +207,7 @@
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
+        tektoncd-cli # CLI for interacting with Tekton
         terraform-ls # Terraform Language Server
         trivy # A simple and comprehensive vulnerability scanner for containers
       ];
@@ -567,7 +572,7 @@
 
     k8s = [
       helmfile # Deploy Kubernetes Helm Charts
-      my_pkgs.vals # Helm-like configuration values loader with support for various sources
+      vals # Helm-like configuration values loader with support for various sources
       krew # Krew is the package manager for kubectl plugins.
       kubectl # Kubernetes.io client binary
       kubelogin # A Kubernetes credential plugin implementing Azure authentication

@@ -1,7 +1,6 @@
 [vals]
-fetch.url = "https://github.com/variantdev/vals/releases/download/v$ver/vals_$ver_linux_amd64.tar.gz"
-src.github = "variantdev/vals"
-src.prefix = "v"
+fetch.github = "variantdev/vals"
+src.github_tag = "variantdev/vals"
 
 [gup]
 fetch.url = "https://github.com/nao1215/gup/releases/download/v$ver/gup_$ver_Linux_x86_64.tar.gz"
@@ -29,7 +28,7 @@ src.github = "jeff-hughes/shellcaster"
 src.prefix = "v"
 
 [youtube-tui]
-fetch.url = "https://github.com/Siriusmart/youtube-tui/releases/download/v$ver/youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64"
+fetch.url = "https://github.com/Siriusmart/youtube-tui/releases/download/v$ver/youtube-tui-full_arch-x86_64"
 src.github = "Siriusmart/youtube-tui"
 src.prefix = "v"
 
@@ -99,3 +98,8 @@ src.github = "walles/riff"
 [helmfile]
 fetch.github = "helmfile/helmfile"
 src.github_tag = "helmfile/helmfile"
+
+[aiac]
+fetch.url = "https://github.com/gofireflyio/aiac/releases/download/v$ver/aiac_$ver_Linux-64bit.tar.gz"
+src.github = "gofireflyio/aiac"
+src.prefix = "v"

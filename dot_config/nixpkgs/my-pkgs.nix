@@ -262,21 +262,6 @@ with pkgs; let
     };
   };
 
-  vals = stdenv.mkDerivation rec {
-    pname = "vals";
-    version = generated.vals.version;
-    src = generated.vals.src;
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D vals $out/bin/vals
-    '';
-    meta = {
-      homepage = "https://github.com/variantdev/vals";
-      description = "Helm-like configuration values loader with support for various sources";
-    };
-  };
-
   kubeshark = stdenv.mkDerivation rec {
     pname = "kubeshark";
     version = generated.kubeshark.version;
@@ -343,6 +328,22 @@ with pkgs; let
       description = "A diff filter highlighting which line parts have changed";
     };
   };
+
+  aiac = stdenv.mkDerivation rec {
+    pname = "aiac";
+    version = generated.aiac.version;
+    src = generated.aiac.src;
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D aiac $out/bin/aiac
+    '';
+
+    meta = {
+      homepage = "https://github.com/gofireflyio/aiac";
+      description = "Artificial Intelligence Infrastructure-as-Code Generator";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -360,9 +361,9 @@ in {
   versio = versio;
   focus = focus;
   gup = gup;
-  vals = vals;
   kubeshark = kubeshark;
   sttr = sttr;
   termshot = termshot;
   riff = riff;
+  aiac = aiac;
 }
