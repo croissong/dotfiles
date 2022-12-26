@@ -89,7 +89,7 @@ alias kdf='kf describe'
 alias ke='k edit'
 alias kroll='k rollout restart'
 
-alias kl="k stern -n $(kubesess -c namespace) -t --container-state running,waiting,terminated"
+alias kl='k stern -n $(kubesess -c namespace) -t --container-state running,waiting,terminated'
 
 alias kx='k exec -ti'
 alias kxf='kf exec -ti'
@@ -120,7 +120,7 @@ alias volg='pamixer --get-volume-human'
 
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'
-alias mvntree='mvn dependency:tree | tee > /tmp/tree.txt'
+alias mvntree='mvn dependency:tree | tee /tmp/tree.txt'
 alias mvnpom='mvn help:effective-pom | tee /tmp/pom.xml'
 alias mvnupdate='mvn versions:dependency-updates-report -DprocessDependencyManagementTransitive=false && chromium target/site/dependency-updates-report.html'
 
@@ -170,6 +170,7 @@ e() {
 function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
 
 alias j='just --justfile ~/.user.justfile --working-directory .'
+alias jpriv='just --justfile ~/.user-priv.justfile --working-directory .'
 
 ts-from-unix() {
   date --utc -Iseconds -d @$1

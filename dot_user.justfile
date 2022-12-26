@@ -1,7 +1,6 @@
 default:
   @just --choose
 
-
 vpnio-start:
     systemctl restart strongswan
     sudo swanctl -i -c vpn
@@ -40,7 +39,7 @@ nix-check-missing:
   # outdated
   nix search nixpkgs '\.(helmfile|sheldon)'
   # missing
-  nix search nixpkgs '\.(csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|vals|versio$)'
+  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|sttr|vals|versio$|youtube-tui)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force
