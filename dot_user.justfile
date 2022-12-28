@@ -37,7 +37,7 @@ nix-nv:
 
 nix-check-missing:
   # outdated
-  nix search nixpkgs '\.(helmfile|sheldon|vals|summon|twitch-tui|goimapnotify)'
+  nix search nixpkgs '\.(helmfile|sheldon|summon|twitch-tui|goimapnotify)'
   # missing
   nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|sttr|versio$|youtube-tui)'
 

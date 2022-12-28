@@ -1,7 +1,3 @@
-[vals]
-fetch.github = "variantdev/vals"
-src.github_tag = "variantdev/vals"
-
 [gup]
 fetch.url = "https://github.com/nao1215/gup/releases/download/v$ver/gup_$ver_Linux_x86_64.tar.gz"
 src.github = "nao1215/gup"

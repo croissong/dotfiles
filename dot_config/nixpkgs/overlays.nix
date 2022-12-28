@@ -130,23 +130,4 @@
           });
     });
   })
-
-  (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/security/vals/default.nix
-    vals = let
-      generated = import ./_sources/generated.nix {
-        inherit (super) fetchurl fetchgit fetchFromGitHub dockerTools;
-      };
-
-      version = super.removePrefix "v" generated.vals.version;
-      src = generated.vals.src;
-    in (super.vals.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorSha256 = "sha256-DZhGe9jbKo1aIfpF5kRYNSn/uIYHaRMrygda5t46svw=";
-            inherit src version;
-          });
-    });
-  })
 ]
