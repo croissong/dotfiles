@@ -35,13 +35,6 @@ in {
     })
   ];
 
-  services.wlsunset = {
-    enable = true;
-    latitude = "51.3";
-    longitude = "9.5";
-    temperature.night = 2500;
-  };
-
   imports = [
     ./packages.nix
     ./programs.nix
