@@ -8,8 +8,6 @@ CreateLink /etc/resolv.conf /run/systemd/resolve/stub-resolv.conf
 
 CopyFile /etc/snapper/configs/config 640
 
-
-
 CopyFile /etc/systemd/logind.conf
 CopyFile /etc/systemd/network/10-wlan0.link
 CopyFile /etc/systemd/network/11-eth0.link
@@ -18,9 +16,6 @@ CopyFile /etc/systemd/network/20-bond.network
 CopyFile /etc/systemd/network/25-wired.network
 CopyFile /etc/systemd/network/30-wireless.network
 CopyFile /etc/systemd/resolved.conf
-
-
-
 
 CreateLink /etc/systemd/system/bluetooth.target.wants/bluetooth.service /usr/lib/systemd/system/bluetooth.service
 CreateLink /etc/systemd/system/dbus-org.bluez.service /usr/lib/systemd/system/bluetooth.service
@@ -45,12 +40,7 @@ CreateLink /etc/systemd/system/sockets.target.wants/org.cups.cupsd.socket /usr/l
 CreateLink /etc/systemd/system/sockets.target.wants/systemd-networkd.socket /usr/lib/systemd/system/systemd-networkd.socket
 CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
 
-
 CreateLink /etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service /usr/lib/systemd/system/systemd-networkd-wait-online.service
-
-
-CopyFile /etc/systemd/system/physlock.service
-CreateLink /etc/systemd/system/sleep.target.wants/physlock.service /etc/systemd/system/physlock.service
 
 CopyFile /etc/systemd/system/reflector.timer
 CreateLink /etc/systemd/system/timers.target.wants/reflector.timer /etc/systemd/system/reflector.timer
@@ -73,7 +63,6 @@ CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-browser.socket /usr/
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-extra.socket /usr/lib/systemd/user/gpg-agent-extra.socket
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent-ssh.socket /usr/lib/systemd/user/gpg-agent-ssh.socket
 CreateLink /etc/systemd/user/sockets.target.wants/gpg-agent.socket /usr/lib/systemd/user/gpg-agent.socket
-
 
 # mask rfkill, see https://wiki.archlinux.org/title/TLPö
 CreateLink /etc/systemd/system/systemd-rfkill.service /dev/null
