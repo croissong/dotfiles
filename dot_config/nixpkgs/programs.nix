@@ -35,4 +35,10 @@ in {
     longitude = "9.5";
     temperature.night = 2500;
   };
+
+  # TODO: use nixos services + declarative config
+  # https://nixos.wiki/wiki/Syncthing
+  services.syncthing = {
+    enable = true;
+  };
 }
