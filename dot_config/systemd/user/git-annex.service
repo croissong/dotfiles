@@ -1,0 +1,9 @@
+[Unit]
+Description=git-annex assistant daemon
+
+[Service]
+ExecStart=/home/croissong/.nix-profile/bin/git-annex assistant --autostart --foreground --debug --notify-finish --notify-start
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
