@@ -1,0 +1,38 @@
+# manifest.yaml
+name: updatecli
+
+# Defines how to get "source" information such as Jenkins version
+sources:
+  version:
+    kind: githubRelease
+    spec:
+      owner: "updatecli"
+      repository: "updatecli"
+      token: "e7a096b99940e763fcf5200e1c649612bdb519dd"
+      versionFilter:
+        kind: latest
+    transformers:
+      - trimprefix: "v"
+
+  sha:
+    kind: shell
+    sourceid: version
+    spec:
+      command: 'nix-prefetch-url https://github.com/updatecli/updatecli/releases/download/v{{ source `version` }}/updatecli_Linux_x86_64.tar.gz'
+
+targets:
+  nixpkgs-version:
+    name: update nix version
+    kind: json
+    sourceid: version
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: updatecli.version
+
+  nixpkgs-sha:
+    name: update nix sha
+    kind: json
+    sourceid: sha
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: updatecli.sha

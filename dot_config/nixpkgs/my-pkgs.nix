@@ -2,6 +2,7 @@
   pkgs,
   config,
   generated,
+  versions,
   ...
 }:
 with pkgs; let
@@ -344,6 +345,26 @@ with pkgs; let
       description = "Artificial Intelligence Infrastructure-as-Code Generator";
     };
   };
+
+  updatecli = stdenv.mkDerivation rec {
+    PROJECT_ROOT = builtins.toString ./.;
+    pname = "updatecli";
+    version = versions.updatecli.version;
+    src = fetchurl {
+      url = "https://github.com/updatecli/updatecli/releases/download/v${version}/updatecli_Linux_x86_64.tar.gz";
+      sha256 = versions.updatecli.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D updatecli $out/bin/updatecli
+    '';
+
+    meta = {
+      homepage = "https://github.com/updatecli/updatecli";
+      description = "A Declarative Dependency Management tool ";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -366,4 +387,5 @@ in {
   termshot = termshot;
   riff = riff;
   aiac = aiac;
+  updatecli = updatecli;
 }

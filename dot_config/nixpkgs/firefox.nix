@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  bookmarks = builtins.fromJSON (builtins.readFile "/home/croissong/Dotfiles/priv/buku-firefox-nix.json");
+  bookmarks = builtins.fromJSON (builtins.readFile "${builtins.getEnv "DOTFILES"}/priv/buku-firefox-nix.json");
 in {
   systemd.user.sessionVariables.MOZ_ENABLE_WAYLAND = 1;
 

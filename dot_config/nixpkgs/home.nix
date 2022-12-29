@@ -49,7 +49,6 @@ in {
 
     packages = with pkgs; [
       calibre # Ebook management application
-      chezmoi # Manage your dotfiles across multiple machines
       i3status-rust # Resourcefriendly and feature-rich replacement for i3status, written in pure Rust
 
       termdown # Countdown timer and stopwatch in your terminal
