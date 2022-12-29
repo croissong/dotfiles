@@ -1,3 +1,6 @@
+# ln -s $XDG_CONFIG_HOME/treefmt/treefmt.toml treefmt.toml
+# ignore in .git/info/exclude
+
 [formatter.nix]
 command = "alejandra"
 includes = ["*.nix"]
@@ -8,5 +11,5 @@ includes = ["*.sh"]
 
 [formatter.xml]
 command = "xmlformat"
-options = ["--blanks" "--indent" "4" "--selfclose" "-"]
+options = ["--blanks", "--indent", "4", "--selfclose", "-"]
 includes = ["*.xml"]
