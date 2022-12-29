@@ -59,3 +59,7 @@
 
 [interactive]
     diffFilter = delta --color-only
+
+[annex]
+  resolvemerge = false
+  synccontent = true
