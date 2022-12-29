@@ -44,3 +44,7 @@ nix-check-missing:
 gc:
   podman system prune --all --force && podman rmi --all --force
   nix-collect-garbage -d
+
+
+scan:
+  ./scan --verbose --mode Color --resolution 600 -e 1 --open --ocr --no-default-size -x 'airscan:e0:Canon TS5000 series'
