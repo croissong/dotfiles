@@ -1,15 +1,17 @@
 {
   pkgs,
   config,
-  generated,
   versions,
   ...
 }:
 with pkgs; let
   kubesess = stdenv.mkDerivation rec {
     pname = "kubesess";
-    version = generated.kubesess.version;
-    src = generated.kubesess.src;
+    version = versions.kubesess.version;
+    src = fetchurl {
+      url = versions.kubesess.url;
+      sha256 = versions.kubesess.sha;
+    };
 
     sourceRoot = ".";
     installPhase = ''
@@ -34,14 +36,20 @@ with pkgs; let
 
   xmlformatter = python3Packages.buildPythonPackage rec {
     pname = "xmlformatter";
-    version = generated.xmlformatter.version;
-    src = generated.xmlformatter.src;
+    version = versions.xmlformatter.version;
+    src = fetchurl {
+      url = versions.xmlformatter.url;
+      sha256 = versions.xmlformatter.sha;
+    };
   };
 
   cqlsh = python3Packages.buildPythonPackage rec {
     pname = "cqlsh";
-    version = generated.cqlsh.version;
-    src = generated.cqlsh.src;
+    version = versions.cqlsh.version;
+    src = fetchurl {
+      url = versions.cqlsh.url;
+      sha256 = versions.cqlsh.sha;
+    };
 
     propagatedBuildInputs = with python310Packages; [
       cassandra-driver
@@ -52,8 +60,11 @@ with pkgs; let
 
   wutag = stdenv.mkDerivation rec {
     pname = "wutag";
-    version = generated.wutag.version;
-    src = generated.wutag.src;
+    version = versions.wutag.version;
+    src = fetchurl {
+      url = versions.wutag.url;
+      sha256 = versions.wutag.sha;
+    };
 
     installPhase = ''
       install -m755 -D wutag $out/bin/wutag
@@ -68,8 +79,11 @@ with pkgs; let
   # TODO: https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/sheldon/default.nix
   sheldon = stdenv.mkDerivation rec {
     pname = "sheldon";
-    version = generated.sheldon.version;
-    src = generated.sheldon.src;
+    version = versions.sheldon.version;
+    src = fetchurl {
+      url = versions.sheldon.url;
+      sha256 = versions.sheldon.sha;
+    };
 
     sourceRoot = ".";
     installPhase = ''
@@ -89,9 +103,14 @@ with pkgs; let
 
   dtool = rustPlatform.buildRustPackage rec {
     pname = "dtool";
-    version = generated.dtool.version;
-    src = generated.dtool.src;
-    cargoLock = generated.dtool.cargoLock."Cargo.lock";
+    version = versions.dtool.version;
+    src = fetchFromGitHub {
+      owner = "guoxbin";
+      repo = "dtool";
+      rev = "v${version}";
+      sha256 = versions.dtool.sha;
+    };
+    cargoSha256 = "sha256-r8r3f4yKMQgjtB3j4qE7cqQL18nIqAGPO5RsFErqh2c=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib];
@@ -104,8 +123,11 @@ with pkgs; let
 
   ytui-music = stdenv.mkDerivation rec {
     pname = "ytui-music";
-    version = generated.ytui-music.version;
-    src = generated.ytui-music.src;
+    version = versions.ytui-music.version;
+    src = fetchurl {
+      url = versions.ytui-music.url;
+      sha256 = versions.ytui-music.sha;
+    };
 
     unpackPhase = ":";
     installPhase = ''
@@ -120,8 +142,11 @@ with pkgs; let
 
   go-commitlinter = stdenv.mkDerivation rec {
     pname = "go-commitlinter";
-    version = generated.go-commitlinter.version;
-    src = generated.go-commitlinter.src;
+    version = versions.go-commitlinter.version;
+    src = fetchurl {
+      url = versions.go-commitlinter.url;
+      sha256 = versions.go-commitlinter.sha;
+    };
 
     sourceRoot = ".";
     installPhase = ''
@@ -136,9 +161,14 @@ with pkgs; let
 
   csvlens = rustPlatform.buildRustPackage rec {
     pname = "csvlens";
-    version = generated.csvlens.version;
-    src = generated.csvlens.src;
-    cargoLock = generated.csvlens.cargoLock."Cargo.lock";
+    version = versions.csvlens.version;
+    src = fetchFromGitHub {
+      owner = "YS-L";
+      repo = "csvlens";
+      rev = "v${version}";
+      sha256 = versions.csvlens.sha;
+    };
+    cargoSha256 = "sha256-cYm9z6K2fSIKcHxFb7rhudsMkKb4jhi2jwocNTouCmM=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -151,8 +181,11 @@ with pkgs; let
 
   mailctl = stdenv.mkDerivation rec {
     pname = "mailctl";
-    version = generated.mailctl.version;
-    src = generated.mailctl.src;
+    version = versions.mailctl.version;
+    src = fetchurl {
+      url = versions.mailctl.url;
+      sha256 = versions.mailctl.sha;
+    };
 
     unpackPhase = ":";
     installPhase = ''
@@ -167,8 +200,11 @@ with pkgs; let
 
   youtube-tui = stdenv.mkDerivation rec {
     pname = "youtube-tui";
-    version = generated.youtube-tui.version;
-    src = generated.youtube-tui.src;
+    version = versions.youtube-tui.version;
+    src = fetchurl {
+      url = versions.youtube-tui.url;
+      sha256 = versions.youtube-tui.sha;
+    };
 
     buildInputs = [libsixel openssl];
     nativeBuildInputs = [
@@ -187,8 +223,11 @@ with pkgs; let
 
   shellcaster = stdenv.mkDerivation rec {
     pname = "shellcaster";
-    version = generated.shellcaster.version;
-    src = generated.shellcaster.src;
+    version = versions.shellcaster.version;
+    src = fetchurl {
+      url = versions.shellcaster.url;
+      sha256 = versions.shellcaster.sha;
+    };
 
     installPhase = ''
       install -m755 -D shellcaster $out/bin/shellcaster
@@ -202,10 +241,11 @@ with pkgs; let
 
   klog = stdenv.mkDerivation rec {
     pname = "klog";
-    version = generated.klog.version;
+    version = versions.klog.version;
     src = fetchzip {
-      url = "https://github.com/jotaen/klog/releases/download/v${generated.klog.version}/klog-linux.zip";
-      sha256 = "sha256-SOwuzxWWdo0vMw+vdSt2lVABPPzywlWEOKN8e0QugzA=";
+      url = versions.klog.url;
+      sha256 = versions.klog.sha;
+      stripRoot = false;
     };
 
     installPhase = ''
@@ -220,8 +260,11 @@ with pkgs; let
 
   versio = stdenv.mkDerivation rec {
     pname = "versio";
-    version = generated.versio.version;
-    src = generated.versio.src;
+    version = versions.versio.version;
+    src = fetchurl {
+      url = versions.versio.url;
+      sha256 = versions.versio.sha;
+    };
 
     unpackPhase = ":";
     installPhase = ''
@@ -236,8 +279,11 @@ with pkgs; let
 
   focus = stdenv.mkDerivation rec {
     pname = "focus";
-    version = generated.focus.version;
-    src = generated.focus.src;
+    version = versions.focus.version;
+    src = fetchurl {
+      url = versions.focus.url;
+      sha256 = versions.focus.sha;
+    };
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D focus $out/bin/focus
@@ -250,8 +296,11 @@ with pkgs; let
 
   gup = stdenv.mkDerivation rec {
     pname = "gup";
-    version = generated.gup.version;
-    src = generated.gup.src;
+    version = versions.gup.version;
+    src = fetchurl {
+      url = versions.gup.url;
+      sha256 = versions.gup.sha;
+    };
 
     sourceRoot = ".";
     installPhase = ''
@@ -265,8 +314,11 @@ with pkgs; let
 
   kubeshark = stdenv.mkDerivation rec {
     pname = "kubeshark";
-    version = generated.kubeshark.version;
-    src = generated.kubeshark.src;
+    version = versions.kubeshark.version;
+    src = fetchurl {
+      url = versions.kubeshark.url;
+      sha256 = versions.kubeshark.sha;
+    };
 
     unpackPhase = ":";
     installPhase = ''
@@ -280,8 +332,12 @@ with pkgs; let
 
   sttr = stdenv.mkDerivation rec {
     pname = "sttr";
-    version = generated.sttr.version;
-    src = generated.sttr.src;
+    version = versions.sttr.version;
+    src = fetchurl {
+      url = versions.sttr.url;
+      sha256 = versions.sttr.sha;
+    };
+
     sourceRoot = ".";
     installPhase = ''
       install -m755 -D sttr $out/bin/sttr
@@ -300,8 +356,11 @@ with pkgs; let
 
   termshot = stdenv.mkDerivation rec {
     pname = "termshot";
-    version = generated.termshot.version;
-    src = generated.termshot.src;
+    version = versions.termshot.version;
+    src = fetchurl {
+      url = versions.termshot.url;
+      sha256 = versions.termshot.sha;
+    };
 
     sourceRoot = ".";
     installPhase = ''
@@ -316,8 +375,11 @@ with pkgs; let
 
   riff = stdenv.mkDerivation rec {
     pname = "riff";
-    version = generated.riff.version;
-    src = generated.riff.src;
+    version = versions.riff.version;
+    src = fetchurl {
+      url = versions.riff.url;
+      sha256 = versions.riff.sha;
+    };
 
     unpackPhase = ":";
     installPhase = ''
@@ -332,8 +394,11 @@ with pkgs; let
 
   aiac = stdenv.mkDerivation rec {
     pname = "aiac";
-    version = generated.aiac.version;
-    src = generated.aiac.src;
+    version = versions.aiac.version;
+    src = fetchurl {
+      url = versions.aiac.url;
+      sha256 = versions.aiac.sha;
+    };
 
     sourceRoot = ".";
     installPhase = ''

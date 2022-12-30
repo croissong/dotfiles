@@ -1,15 +1,100 @@
 repos:
-  - name: updatecli
+  - repo: updatecli
     owner: updatecli
-    repo: updatecli
-    urlpath: releases/download/v${VERSION}/updatecli_Linux_x86_64.tar.gz
+    asset: updatecli_Linux_x86_64.tar.gz
 
-  - name: got
+  - repo: got
     owner: melbahja
-    repo: got
-    urlpath: releases/download/v${VERSION}/got_${VERSION}_Linux_amd64.tar.gz
+    asset: got_${VERSION}_Linux_amd64.tar.gz
 
-  - name: sane-scan-pdf
+  - repo: sane-scan-pdf
     owner: rocketraman
-    repo: sane-scan-pdf
-    urlpath: archive/refs/tags/v${VERSION}.tar.gz
+
+  - repo: gup
+    owner: nao1215
+    asset: gup_${VERSION}_Linux_x86_64.tar.gz
+
+  - repo: focus
+    owner: ayoisaiah
+    asset: focus_${VERSION}_linux_amd64.tar.gz
+
+  - repo: versio
+    owner: chaaz
+    asset: versio__x86_64-unknown-linux-gnu
+
+  - repo: klog
+    owner: jotaen
+    asset: klog-linux.zip
+
+  - repo: shellcaster
+    owner: jeff-hughes
+    asset: shellcaster-${VERSION}-archlinux-x86_64.tar.gz
+
+  - repo: youtube-tui
+    owner: Siriusmart
+    asset: youtube-tui-full_arch-x86_64
+
+  - repo: mailctl
+    owner: pdobsan
+    asset: mailctl-${VERSION}-Linux-x86_64
+    trimPrefix: false
+
+  - repo: csvlens
+    owner: YS-L
+
+  - repo: go-commitlinter
+    owner: masahiro331
+    asset: go-commitlinter_${VERSION}_Linux_x86_64.tar.gz
+    trimPrefix: false
+
+  - repo: ytui-music
+    owner: sudipghimire533
+    asset: ytui_music-linux-amd64
+
+  - repo: dtool
+    owner: guoxbin
+
+  - repo: sheldon
+    owner: rossmacarthur
+    asset: sheldon-${VERSION}-x86_64-unknown-linux-musl.tar.gz
+    trimPrefix: false
+
+  - repo: wutag
+    owner: vv9k
+    asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
+    trimPrefix: false
+
+  - repo: kubesess
+    owner: Ramilito
+    asset: kubesess_${VERSION}_x86_64-unknown-linux-gnu.tar.gz
+    trimPrefix: false
+
+  - repo: kubeshark
+    owner: kubeshark
+    asset: kubeshark_linux_amd64
+    trimPrefix: false
+
+  - repo: sttr
+    owner: abhimanyu003
+    asset: sttr_${VERSION}_linux_amd64.tar.gz
+
+  - repo: termshot
+    owner: homeport
+    asset: termshot_${VERSION}_linux_amd64.tar.gz
+
+  - repo: riff
+    owner: walles
+    trimPrefix: false
+    asset: riff-${VERSION}-x86_64-linux
+
+  - repo: helmfile
+    owner: helmfile
+
+  - repo: aiac
+    owner: gofireflyio
+    asset: aiac_${VERSION}_Linux-64bit.tar.gz
+
+
+pypi:
+  - package: cqlsh
+  - package: xmlformatter

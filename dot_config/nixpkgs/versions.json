@@ -1,6 +1,127 @@
 {
+  "aiac": {
+    "sha": "0gxr9gfb3b3xq9ccsdqnfgixiqigwjj19q9l4fanpx9kfjhlmypn",
+    "url": "https://github.com/gofireflyio/aiac/releases/download/v1.0.0/aiac_1.0.0_Linux-64bit.tar.gz",
+    "version": "1.0.0"
+  },
+  "cqlsh": {
+    "sha": "12f8dfd45vxy5bv6d8gr5dpngai6cb8q6pdwcayj04c0x0j0rqim",
+    "url": "https://files.pythonhosted.org/packages/af/62/88bf9200252158871843a1f65c5215a5480f64817b663ff8ece41ad0f977/cqlsh-6.0.0-py3-none-any.whl",
+    "version": "6.0.0"
+  },
+  "csvlens": {
+    "sha": "1n7p0ngn45apm10wzh1qfwsg34bhqhnjqxywkl6gfbx1c5bchm7f",
+    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.10.tar.gz",
+    "version": "0.1.10"
+  },
+  "dtool": {
+    "sha": "0kh1pbqqf1mj9kv9fd5i0a4crawyd9b23s3d36pswv04vh0gx0cv",
+    "url": "https://github.com/guoxbin/dtool/archive/refs/tags/v0.12.0.tar.gz",
+    "version": "0.12.0"
+  },
+  "focus": {
+    "sha": "145hkv91hhcfch0bbn2rcgldc7bjynr7kpl6wg9z28jg7pq02572",
+    "url": "https://github.com/ayoisaiah/focus/releases/download/v1.2.0/focus_1.2.0_linux_amd64.tar.gz",
+    "version": "1.2.0"
+  },
+  "go-commitlinter": {
+    "sha": "03sad57rfaszb1fv78jcf5qyvq6c6zla7v4cyirdp1iyri005hbq",
+    "url": "https://github.com/masahiro331/go-commitlinter/releases/download/0.1.2/go-commitlinter_0.1.2_Linux_x86_64.tar.gz",
+    "version": "0.1.2"
+  },
+  "got": {
+    "sha": "0jcmmkyb930h881kpp9scl3blfris8my5lbyp061a7z9glz1p8xq",
+    "url": "https://github.com/melbahja/got/releases/download/v0.7.0/got_0.7.0_Linux_amd64.tar.gz",
+    "version": "0.7.0"
+  },
+  "gup": {
+    "sha": "0n2vmq70yc6njg5s2xxswb6qbwmdjqggkv5gd0yjl1cq8wb9h92r",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.15.1/gup_0.15.1_Linux_x86_64.tar.gz",
+    "version": "0.15.1"
+  },
+  "helmfile": {
+    "sha": "0vc5pl83c25c9kqgrkfsq40nwh4ymly2rdsd8jmsakdrdvb1nz3p",
+    "url": "https://github.com/helmfile/helmfile/archive/refs/tags/v0.149.0.tar.gz",
+    "version": "0.149.0"
+  },
+  "klog": {
+    "sha": "0c435r27nz537225bhpjzhy02l4mfqmpbbqg6cpqsxln2p7jxv28",
+    "url": "https://github.com/jotaen/klog/releases/download/v5.4/klog-linux.zip",
+    "version": "5.4"
+  },
+  "kubesess": {
+    "sha": "18f2lnwq3ka5hh6pxl8qv2bww9b57qvwyfs2523kjigxkxs5m22l",
+    "url": "https://github.com/Ramilito/kubesess/releases/download/1.2.8/kubesess_1.2.8_x86_64-unknown-linux-gnu.tar.gz",
+    "version": "1.2.8"
+  },
+  "kubeshark": {
+    "sha": "1z12336bcv9l6qyxfnmh1q07cs7j2x4wclvyx7wsx4l1vnpnp08k",
+    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.1/kubeshark_linux_amd64",
+    "version": "38.1"
+  },
+  "mailctl": {
+    "sha": "19ak5hr859xf1b83b2f14nqqq5kd7jjfxrwarc9w6j8zynyzl64w",
+    "url": "https://github.com/pdobsan/mailctl/releases/download/0.7.4/mailctl-0.7.4-Linux-x86_64",
+    "version": "0.7.4"
+  },
+  "riff": {
+    "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
+    "url": "https://github.com/walles/riff/releases/download/2.22.2/riff-2.22.2-x86_64-linux",
+    "version": "2.22.2"
+  },
+  "sane-scan-pdf": {
+    "sha": "19v3zzj0fgkdc9y4a8r8k9rfa6bna5hb5g0s65ri4dy64hpgi2gk",
+    "url": "https://github.com/rocketraman/sane-scan-pdf/archive/refs/tags/v1.3.tar.gz",
+    "version": "1.3"
+  },
+  "sheldon": {
+    "sha": "19h7j89gjsvbaaqr68c7p0sii7692r1kag2x3fnbzjb2ns5l2czk",
+    "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.1/sheldon-0.7.1-x86_64-unknown-linux-musl.tar.gz",
+    "version": "0.7.1"
+  },
+  "shellcaster": {
+    "sha": "1miwkxzi471g2ww29ln0xiyg23r0dpnj2hgxsgv86ciry4wrf0sp",
+    "url": "https://github.com/jeff-hughes/shellcaster/releases/download/v2.0.1/shellcaster-2.0.1-archlinux-x86_64.tar.gz",
+    "version": "2.0.1"
+  },
+  "sttr": {
+    "sha": "1hqf864iy8d7ipsx7f170p68jab36kpspgdpl574vgjkqap2wbl3",
+    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.14/sttr_0.2.14_linux_amd64.tar.gz",
+    "version": "0.2.14"
+  },
+  "termshot": {
+    "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
+    "url": "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_linux_amd64.tar.gz",
+    "version": "0.2.5"
+  },
   "updatecli": {
     "sha": "0slw7449hvnkj2lq1i13kqmzni0s1ifbxcg4h8yjv9nbwpk1h922",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.40.2/updatecli_Linux_x86_64.tar.gz",
     "version": "0.40.2"
+  },
+  "versio": {
+    "sha": "052x94ax0vsadbsh4ac8br0x0j3vfh6s30w5sdidzxs0s75lshwv",
+    "url": "https://github.com/chaaz/versio/releases/download/v0.7.0/versio__x86_64-unknown-linux-gnu",
+    "version": "0.7.0"
+  },
+  "wutag": {
+    "sha": "06hph7yy7938wiqzcm1la8qqh6y6ainngpk3m4iq11bxv6n7g4f6",
+    "url": "https://github.com/vv9k/wutag/releases/download/0.5.0/wutag-0.5.0-x86_64-unknown-linux.tar.xz",
+    "version": "0.5.0"
+  },
+  "xmlformatter": {
+    "sha": "1x83zx5vlfbmlryrw9jl8m72d6wf04s917gbyr61vyyg0jyc94vd",
+    "url": "https://files.pythonhosted.org/packages/73/7c/f711c049f49ac37e375fa1201588efa1e94f13f7af62d48e1ee9d4677c41/xmlformatter-0.2.4.tar.gz",
+    "version": "0.2.4"
+  },
+  "youtube-tui": {
+    "sha": "1wynalggbpc9i5vxy112hi6pharldm2v189qyvh7xnp4g7cy01dq",
+    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.0/youtube-tui-full_arch-x86_64",
+    "version": "0.6.0"
+  },
+  "ytui-music": {
+    "sha": "0z21vplb1yqqvrsfgc8mapgbgliw20q2xvmp5s82za27byzqrh17",
+    "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-beta/ytui_music-linux-amd64",
+    "version": "2.0.0-beta"
   }
 }

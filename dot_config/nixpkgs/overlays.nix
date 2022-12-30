@@ -23,12 +23,15 @@
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/helmfile/default.nix
     helmfile = let
-      generated = import ./_sources/generated.nix {
-        inherit (super) fetchurl fetchgit fetchFromGitHub dockerTools;
-      };
+      versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
 
-      version = generated.helmfile.version;
-      src = generated.helmfile.src;
+      version = versions.helmfile.version;
+      src = super.fetchFromGitHub {
+        owner = "helmfile";
+        repo = "helmfile";
+        rev = "v${version}";
+        sha256 = versions.helmfile.sha;
+      };
     in (super.helmfile.override {
       buildGoModule = args:
         super.buildGoModule (args

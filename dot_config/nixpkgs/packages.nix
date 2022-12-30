@@ -6,13 +6,10 @@
   lib,
   ...
 }: let
-  generated = import ./_sources/generated.nix {
-    inherit (pkgs) fetchurl fetchgit fetchFromGitHub dockerTools;
-  };
   versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
 
   my_pkgs = import ./my-pkgs.nix {
-    inherit pkgs config generated versions;
+    inherit pkgs config versions;
   };
 
   packages_dict = with pkgs; {

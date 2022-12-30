@@ -1,0 +1,57 @@
+name: nix
+
+sources:
+  {{range .pypi}}
+
+  {{ .package }}-version:
+    kind: json
+    spec:
+      file: https://pypi.org/pypi/{{ .package }}/json
+      key: info.version
+
+  {{ .package }}-url:
+    kind: json
+    dependson:
+      - {{ printf "%s-version" .package }}
+    spec:
+      file: https://pypi.org/pypi/{{ .package }}/{{ source (printf "%s-version" .package) }}/json
+      key: urls.[0].url
+
+
+  {{ .package }}-sha:
+    kind: shell
+    dependson:
+      - {{ printf "%s-url" .package }}
+    spec:
+      command: ./nix-fetch-sha.sh {{ source (printf "%s-url" .package) }}
+
+  {{end}}
+
+targets:
+  {{range .pypi}}
+
+  {{ .package }}-nixpkgs-version:
+    name: update nix version
+    kind: json
+    sourceid: {{ .package }}-version
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: {{ .package }}.version
+
+  {{ .package }}-nixpkgs-sha:
+    name: update nix sha
+    kind: json
+    sourceid: {{ .package }}-sha
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: {{ .package }}.sha
+
+  {{ .package }}-nixpkgs-url:
+    name: update nix url
+    kind: json
+    sourceid: {{ .package }}-url
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: {{ .package }}.url
+
+  {{end}}

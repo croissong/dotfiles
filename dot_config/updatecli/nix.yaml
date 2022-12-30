@@ -3,7 +3,7 @@ name: nix
 sources:
   {{range .repos}}
 
-  {{ .name }}-version:
+  {{ .repo }}-version:
     kind: githubrelease
     spec:
       owner: "{{ .owner }}"
@@ -12,57 +12,59 @@ sources:
       versionFilter:
         kind: latest
     transformers:
-      - trimprefix: "v"
+      - trimprefix: {{ or .trimprefix "v" }}
 
-  {{ .name }}-url:
+  {{ .repo }}-url:
     kind: shell
     dependson:
-      - {{ printf "%s-version" .name }}
+      - {{ printf "%s-version" .repo }}
     spec:
       environments:
         - name: OWNER
           value: '{{ .owner }}'
         - name: REPO
           value: '{{ .repo }}'
-        - name: URLPATH
-          value: '{{ .urlpath }}'
-      command: ./build-url.sh {{ source (printf "%s-version" .name) }}
+        - name: ASSET
+          value: '{{ or .asset false }}'
+        - name: TRIM_PREFIX
+          value: '{{ .trimPrefix }}'
+      command: ./build-url.sh {{ source (printf "%s-version" .repo) }}
 
 
-  {{ .name }}-sha:
+  {{ .repo }}-sha:
     kind: shell
     dependson:
-      - {{ printf "%s-url" .name }}
+      - {{ printf "%s-url" .repo }}
     spec:
-      command: ./nix-fetch-sha.sh {{ source (printf "%s-url" .name) }}
+      command: ./nix-fetch-sha.sh {{ source (printf "%s-url" .repo) }}
 
   {{end}}
 
 targets:
   {{range .repos}}
 
-  {{ .name }}-nixpkgs-version:
+  {{ .repo }}-nixpkgs-version:
     name: update nix version
     kind: json
-    sourceid: {{ .name }}-version
+    sourceid: {{ .repo }}-version
     spec:
       file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
-      key: {{ .name }}.version
+      key: {{ .repo }}.version
 
-  {{ .name }}-nixpkgs-sha:
+  {{ .repo }}-nixpkgs-sha:
     name: update nix sha
     kind: json
-    sourceid: {{ .name }}-sha
+    sourceid: {{ .repo }}-sha
     spec:
       file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
-      key: {{ .name }}.sha
+      key: {{ .repo }}.sha
 
-  {{ .name }}-nixpkgs-url:
+  {{ .repo }}-nixpkgs-url:
     name: update nix url
     kind: json
-    sourceid: {{ .name }}-url
+    sourceid: {{ .repo }}-url
     spec:
       file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
-      key: {{ .name }}.url
+      key: {{ .repo }}.url
 
   {{end}}
