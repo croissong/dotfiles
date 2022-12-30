@@ -47,4 +47,4 @@ gc:
 
 
 scan:
-  ./scan --verbose --mode Color --resolution 600 -e 1 --open --ocr --no-default-size -x 'airscan:e0:Canon TS5000 series'
+  scan --verbose --mode Color --resolution 600 -e 1 --open --ocr --no-default-size -x 'airscan:e0:Canon TS5000 series'

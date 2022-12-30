@@ -1,0 +1,18 @@
+apply:
+  summon -f summon.yml \
+  updatecli apply \
+  --values dot-values.yaml \
+  -c nix.yaml
+
+diff:
+  summon -f summon.yml \
+  updatecli diff \
+  --values dot-values.yaml \
+  -c nix.yaml
+
+
+manifest:
+  summon -f summon.yml \
+  updatecli manifest show \
+  --values dot-values.yaml \
+  -c nix.yaml --clean

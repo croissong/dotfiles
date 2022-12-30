@@ -35,6 +35,7 @@
       newsboat # A fork of Newsbeuter, an RSS/Atom feed reader for the text console
       git-annex # manage files with git, without checking their contents into git
       git-annex-remote-rclone
+      git-annex-remote-googledrive
     ];
 
     lib = [
@@ -63,6 +64,7 @@
         skopeo # A command line utility for various operations on container images and image repositories.
         watchman # Watchman exists to watch files and record when they change.
         my_pkgs.versio # A version number manager
+        grex # cli for generating regular expressions from user-provided test cases
       ];
 
       media = [
@@ -81,9 +83,11 @@
         gron # Make JSON greppable!
         jless # A command-line pager for JSON data
         jq # Command-line JSON processor
+        ijq # Interactive wrapper for jq
         miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
         sd # Intuitive find & replace
         my_pkgs.sttr # cli to perform various operations on string
+        teip # A tool to bypass a partial range of standard input to any command
       ];
 
       misc = [
@@ -154,6 +158,8 @@
         zbar # Application and library for reading bar codes from various sources
 
         libqalculate # An advanced calculator library
+
+        my_pkgs.got # CLI to download large files faster than cURL and Wget
       ];
     };
 
@@ -455,6 +461,9 @@
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         trashy # A simple, fast, and featureful alternative to rm and trash-cli
         nethogs # A small 'net top' tool, grouping bandwidth by process
+
+        system-config-printer
+        my_pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
       ];
     };
 

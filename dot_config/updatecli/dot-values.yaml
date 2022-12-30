@@ -1,0 +1,15 @@
+repos:
+  - name: updatecli
+    owner: updatecli
+    repo: updatecli
+    urlpath: releases/download/v${VERSION}/updatecli_Linux_x86_64.tar.gz
+
+  - name: got
+    owner: melbahja
+    repo: got
+    urlpath: releases/download/v${VERSION}/got_${VERSION}_Linux_amd64.tar.gz
+
+  - name: sane-scan-pdf
+    owner: rocketraman
+    repo: sane-scan-pdf
+    urlpath: archive/refs/tags/v${VERSION}.tar.gz

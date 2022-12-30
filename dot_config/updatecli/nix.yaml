@@ -1,0 +1,68 @@
+name: nix
+
+sources:
+  {{range .repos}}
+
+  {{ .name }}-version:
+    kind: githubrelease
+    spec:
+      owner: "{{ .owner }}"
+      repository: "{{ .repo }}"
+      token: {{ requiredEnv "GH_TOKEN"  }}
+      versionFilter:
+        kind: latest
+    transformers:
+      - trimprefix: "v"
+
+  {{ .name }}-url:
+    kind: shell
+    dependson:
+      - {{ printf "%s-version" .name }}
+    spec:
+      environments:
+        - name: OWNER
+          value: '{{ .owner }}'
+        - name: REPO
+          value: '{{ .repo }}'
+        - name: URLPATH
+          value: '{{ .urlpath }}'
+      command: ./build-url.sh {{ source (printf "%s-version" .name) }}
+
+
+  {{ .name }}-sha:
+    kind: shell
+    dependson:
+      - {{ printf "%s-url" .name }}
+    spec:
+      command: ./nix-fetch-sha.sh {{ source (printf "%s-url" .name) }}
+
+  {{end}}
+
+targets:
+  {{range .repos}}
+
+  {{ .name }}-nixpkgs-version:
+    name: update nix version
+    kind: json
+    sourceid: {{ .name }}-version
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: {{ .name }}.version
+
+  {{ .name }}-nixpkgs-sha:
+    name: update nix sha
+    kind: json
+    sourceid: {{ .name }}-sha
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: {{ .name }}.sha
+
+  {{ .name }}-nixpkgs-url:
+    name: update nix url
+    kind: json
+    sourceid: {{ .name }}-url
+    spec:
+      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      key: {{ .name }}.url
+
+  {{end}}

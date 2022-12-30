@@ -347,11 +347,10 @@ with pkgs; let
   };
 
   updatecli = stdenv.mkDerivation rec {
-    PROJECT_ROOT = builtins.toString ./.;
     pname = "updatecli";
     version = versions.updatecli.version;
     src = fetchurl {
-      url = "https://github.com/updatecli/updatecli/releases/download/v${version}/updatecli_Linux_x86_64.tar.gz";
+      url = versions.updatecli.url;
       sha256 = versions.updatecli.sha;
     };
 
@@ -362,7 +361,48 @@ with pkgs; let
 
     meta = {
       homepage = "https://github.com/updatecli/updatecli";
-      description = "A Declarative Dependency Management tool ";
+      description = "A Declarative Dependency Management tool";
+    };
+  };
+
+  got = stdenv.mkDerivation rec {
+    pname = "got";
+    version = versions.got.version;
+    src = fetchurl {
+      url = versions.got.url;
+      sha256 = versions.got.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D got $out/bin/got
+    '';
+
+    meta = {
+      homepage = "https://github.com/updatecli/updatecli";
+      description = "A Declarative Dependency Management tool";
+    };
+  };
+
+  sane-scan-pdf = stdenv.mkDerivation rec {
+    pname = "sane-scan-pdf";
+    version = versions.sane-scan-pdf.version;
+    src = fetchFromGitHub {
+      owner = "rocketraman";
+      repo = "sane-scan-pdf";
+      rev = "v${version}";
+      sha256 = versions.sane-scan-pdf.sha;
+    };
+
+    # sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D scan $out/bin/scan
+      install -m755 -D scan_perpage $out/bin/scan_perpage
+    '';
+
+    meta = {
+      homepage = "https://github.com/rocketraman/sane-scan-pdf";
+      description = "Sane command-line scan-to-pdf script on Linux with OCR and deskew support";
     };
   };
 in {
@@ -388,4 +428,6 @@ in {
   riff = riff;
   aiac = aiac;
   updatecli = updatecli;
+  sane-scan-pdf = sane-scan-pdf;
+  got = got;
 }
