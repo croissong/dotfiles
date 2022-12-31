@@ -229,7 +229,6 @@ AddPackage --foreign wshowkeys-git # Displays keys being pressed on a Wayland se
 # tools
 #
 
-AddPackage system-config-printer    # A CUPS printer configuration tool and status applet
 AddPackage --foreign wev            # tool for debugging wayland events, similar to xev
 AddPackage xournalpp                # Handwriting notetaking software with PDF annotation support
 AddPackage --foreign colorized-logs # Tools for logs with ANSI color

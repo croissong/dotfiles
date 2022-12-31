@@ -33,6 +33,12 @@
       git-annex # manage files with git, without checking their contents into git
       git-annex-remote-rclone
       git-annex-remote-googledrive
+
+      system-config-printer
+      my_pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
+
+      djvulibre # for emacs doc-tools
+      mupdf # for emacs doc-tools
     ];
 
     lib = [
@@ -69,6 +75,8 @@
         # qimgv TODO: maybe
         vhs # A tool for generating terminal GIFs with code
         my_pkgs.termshot # Creates screenshots based on terminal command output
+        menyoki # Screen{shot,cast} and perform ImageOps on the command line
+        swappy # A Wayland native snapshot editing tool
       ];
 
       data = [
@@ -85,6 +93,7 @@
         sd # Intuitive find & replace
         my_pkgs.sttr # cli to perform various operations on string
         teip # A tool to bypass a partial range of standard input to any command
+        python310Packages.graphtage # diff tree-like files such as JSON and XML
       ];
 
       misc = [
@@ -353,7 +362,6 @@
 
       wm = [
         wob # A lightweight overlay bar for Wayland
-        swappy # A Wayland native snapshot editing tool
       ];
 
       docs = [
@@ -361,6 +369,7 @@
         my_pkgs.wutag # CLI tool for tagging and organizing files by tags
         simple-scan
         zathura # A highly customizable and functional PDF viewer
+        deskew # deskewing scanned text documents
       ];
 
       odre = [
@@ -422,6 +431,7 @@
         fzf # Command-line fuzzy finder
         sysz # A fzf terminal UI for systemctl
         xplr # A hackable, minimal, fast TUI file explorer
+        nnn # file browser forked from noice
       ];
 
       core = [
@@ -459,9 +469,14 @@
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
         trashy # A simple, fast, and featureful alternative to rm and trash-cli
         nethogs # A small 'net top' tool, grouping bandwidth by process
+      ];
 
-        system-config-printer
-        my_pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
+      disk = [
+        du-dust # du + rust = dust. Like du but more intuitive
+        dua # A tool to conveniently learn about the disk usage of directories, fast!
+        duf # Disk Usage/Free Utility
+        godu # Utility helping to discover large files/folders
+        czkawka # remove unnecessary files from your computer
       ];
     };
 
@@ -509,10 +524,6 @@
     ];
 
     system = [
-      du-dust # du + rust = dust. Like du but more intuitive
-      dua # A tool to conveniently learn about the disk usage of directories, fast!
-      duf # Disk Usage/Free Utility
-      godu # Utility helping to discover large files/folders
       batsignal # A lightweight battery monitor daemon
       mako # Lightweight notification daemon for Wayland
       pamixer # Pulseaudio command-line mixer like amixer
@@ -535,8 +546,6 @@
       nixos-generators
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
-      nix-update
-      nvfetcher # Generate nix sources expr for the latest version of packages
 
       # not used for now
       # nvd
