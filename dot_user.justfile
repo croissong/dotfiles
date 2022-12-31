@@ -20,7 +20,9 @@ nix-hm:
   --flake ~/.config/nixpkgs#moi \
   --update-input nixpkgs \
   --update-input home-manager \
-  --update-input nixpkgs-stable
+  --update-input nixpkgs-stable \
+  --update-input rust-overlay \
+  --update-input tree-grepper
   # --update-input nixpkgs-master \
 
 
@@ -32,7 +34,7 @@ nix-check-missing:
   # outdated
   nix search nixpkgs '\.(helmfile|sheldon|summon|twitch-tui|goimapnotify)'
   # missing
-  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|sttr|versio$|youtube-tui)'
+  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|shellcaster|sttr|versio$|youtube-tui|updatecli|got$)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force

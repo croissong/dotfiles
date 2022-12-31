@@ -12,6 +12,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay.url = "github:oxalica/rust-overlay";
+    tree-grepper.url = "github:BrianHicks/tree-grepper";
+    tree-grepper.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -20,6 +22,7 @@
     nixpkgs-stable,
     home-manager,
     rust-overlay,
+    tree-grepper,
     ...
   }: let
     system = "x86_64-linux";
@@ -35,7 +38,7 @@
         ./home.nix
       ];
       extraSpecialArgs = {
-        inherit rust-overlay pkgs-stable pkgs-master;
+        inherit rust-overlay pkgs-stable pkgs-master tree-grepper;
       };
     };
   };

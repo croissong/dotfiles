@@ -6,6 +6,7 @@
   config,
   lib,
   rust-overlay,
+  tree-grepper,
   ...
 }: let
   secrets = import ./secrets.nix;
@@ -22,6 +23,7 @@ in {
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
   nixpkgs.overlays = [
     rust-overlay.overlays.default
+    tree-grepper.overlay.x86_64-linux
     (self: super: {
       termdown = super.termdown.overrideAttrs (prev: rec {
         version = "1.18.0";

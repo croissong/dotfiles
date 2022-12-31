@@ -94,6 +94,7 @@
         my_pkgs.sttr # cli to perform various operations on string
         teip # A tool to bypass a partial range of standard input to any command
         python310Packages.graphtage # diff tree-like files such as JSON and XML
+        tree-grepper # Like grep, but uses tree-sitter grammars to search
       ];
 
       misc = [
