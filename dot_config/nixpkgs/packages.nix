@@ -125,6 +125,7 @@
 
         gopass # The slightly more awesome standard unix password manager for teams.
         gopass-summon-provider # summon provider for gopass
+        tessen # An interactive menu to autotype and copy Pass and GoPass data
 
         gpg-tui # A terminal user interface for GnuPG
 

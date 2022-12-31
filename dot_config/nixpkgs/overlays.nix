@@ -133,4 +133,17 @@
           });
     });
   })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/security/tessen/default.nix
+    tessen = super.tessen.overrideAttrs (prev: rec {
+      version = "master";
+      src = super.fetchFromSourcehut {
+        owner = "~ayushnix";
+        repo = super.tessen.pname;
+        rev = "${version}";
+        sha256 = "sha256-fcIxdzCYhhXjCCs4XJ70TDg02XsHnOh0DqN5A/dSyug=";
+      };
+    });
+  })
 ]
