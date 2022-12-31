@@ -11,11 +11,16 @@
   rebase = true
 [core]
   excludesfile = ~/.config/git/ignore
-  pager = delta
+  pager = bat
+
 [diff]
   submodule = log
+  external = difft
 [diff "json"]
     textconv = "jq ''"
+[diff "sopsdiffer"]
+  textconv = sops -d
+
 [status]
   submodulesummary = 1
   showuntrackedfiles = normal
@@ -28,6 +33,7 @@
   interactive = auto
   ui = true
   pager = true
+
 [alias]
   br = branch -vv
   bra = branch -avv
@@ -50,15 +56,6 @@
 
 [apply]
   whitespace = warn
-[diff "sopsdiffer"]
-  textconv = sops -d
-
-[delta]
-    syntax-theme = gruvbox-dark
-    side-by-side = true
-
-[interactive]
-    diffFilter = delta --color-only
 
 [annex]
   resolvemerge = false
