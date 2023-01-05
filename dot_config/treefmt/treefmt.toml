@@ -1,5 +1,5 @@
 # ln -s $XDG_CONFIG_HOME/treefmt/treefmt.toml treefmt.toml
-# ignore in .git/info/exclude
+# echo '/treefmt.toml' >> .git/info/exclude
 
 [formatter.nix]
 command = "alejandra"
