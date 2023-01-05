@@ -130,6 +130,7 @@
         delta # A syntax-highlighting pager for git
         difftastic # A syntax-aware diff
         diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
+        dyff #  A diff tool for YAML files, and sometimes JSON
         my_pkgs.riff # A diff filter highlighting which line parts have changed
         dogdns # Command-line DNS client like dig
 
@@ -162,7 +163,7 @@
         watchexec # Executes commands in response to file modifications
 
         yq-go # Portable command-line YAML processor
-        dyff #  A diff tool for YAML files, and sometimes JSON
+
         zbar # Application and library for reading bar codes from various sources
 
         libqalculate # An advanced calculator library
@@ -203,6 +204,9 @@
         drawio # A desktop application for creating diagrams
         graphviz # Graph visualization tools
         plantuml # Component that allows to quickly write uml diagrams
+
+        d2 # A modern diagram scripting language that turns text to diagrams
+
         glow # Command-line markdown renderer
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
       ];
@@ -241,7 +245,6 @@
       edit = [
         my_pkgs.go-commitlinter
         helix #  A post-modern modal text editor
-        neovim
         stylua # Code formatter for Lua
         treefmt
         tokei # A program that allows you to count your code, quickly
@@ -338,6 +341,7 @@
 
       shell = [
         shfmt # A shell parser and formatter
+        nodePackages.bash-language-server
       ];
 
       xml = [
@@ -548,8 +552,7 @@
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
 
-      # not used for now
-      # nvd
+      nixos-shell
     ];
 
     tools = [
