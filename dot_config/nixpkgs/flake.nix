@@ -23,6 +23,7 @@
     home-manager,
     rust-overlay,
     tree-grepper,
+    nur,
     ...
   }: let
     system = "x86_64-linux";
@@ -36,6 +37,7 @@
       inherit pkgs;
       modules = [
         ./home.nix
+        nur.nixosModules.nur
       ];
       extraSpecialArgs = {
         inherit rust-overlay pkgs-stable pkgs-master tree-grepper;
