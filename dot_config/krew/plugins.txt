@@ -9,6 +9,7 @@ ns
 rbac-tool
 reap
 resource-capacity
+slice
 sniff
 stern
 view-secret
