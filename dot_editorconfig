@@ -1,6 +1,13 @@
+# https://github.com/editorconfig/editorconfig/issues/465
+
+root = true
+
 [*]
 indent_style = space
 indent_size = 2
+
+[Makefile]
+indent_style = tab
 
 # shfmt options
 # https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd
