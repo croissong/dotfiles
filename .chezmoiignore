@@ -4,6 +4,7 @@ secrets.yml
 /**/Readme.md
 /**/Readme.org
 .config/nyxt/init.org
+.config/updatecli
 /tf/
 todo.*
 .config/borgmatic/excludes.sh

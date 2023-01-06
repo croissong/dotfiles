@@ -5,9 +5,9 @@
     "version": "1.0.0"
   },
   "cqlsh": {
-    "sha": "12f8dfd45vxy5bv6d8gr5dpngai6cb8q6pdwcayj04c0x0j0rqim",
-    "url": "https://files.pythonhosted.org/packages/af/62/88bf9200252158871843a1f65c5215a5480f64817b663ff8ece41ad0f977/cqlsh-6.0.0-py3-none-any.whl",
-    "version": "6.0.0"
+    "sha": "0baqsrzsph12ijql37ii6azbd0x7gc4gv6qbrynxl55yizcc4mzv",
+    "url": "https://files.pythonhosted.org/packages/89/e6/42b0a920d56af0411c47d486e031ca48519e949ea0f712ba511d056cb5f2/cqlsh-6.1.0-py3-none-any.whl",
+    "version": "6.1.0"
   },
   "csvlens": {
     "sha": "1n7p0ngn45apm10wzh1qfwsg34bhqhnjqxywkl6gfbx1c5bchm7f",
@@ -100,9 +100,9 @@
     "version": "0.40.2"
   },
   "versio": {
-    "sha": "052x94ax0vsadbsh4ac8br0x0j3vfh6s30w5sdidzxs0s75lshwv",
-    "url": "https://github.com/chaaz/versio/releases/download/v0.7.0/versio__x86_64-unknown-linux-gnu",
-    "version": "0.7.0"
+    "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
+    "url": "https://github.com/chaaz/versio/releases/download/v0.7.1/versio__x86_64-unknown-linux-gnu",
+    "version": "0.7.1"
   },
   "wutag": {
     "sha": "06hph7yy7938wiqzcm1la8qqh6y6ainngpk3m4iq11bxv6n7g4f6",

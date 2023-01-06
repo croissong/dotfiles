@@ -28,7 +28,7 @@ sources:
           value: '{{ or .asset false }}'
         - name: TRIM_PREFIX
           value: '{{ .trimPrefix }}'
-      command: ./build-url.sh {{ source (printf "%s-version" .repo) }}
+      command: ./dot/build-url.sh {{ source (printf "%s-version" .repo) }}
 
 
   {{ .repo }}-sha:
@@ -36,7 +36,7 @@ sources:
     dependson:
       - {{ printf "%s-url" .repo }}
     spec:
-      command: ./nix-fetch-sha.sh {{ source (printf "%s-url" .repo) }}
+      command: ./dot/nix-fetch-sha.sh {{ source (printf "%s-url" .repo) }}
 
   {{end}}
 
@@ -48,7 +48,7 @@ targets:
     kind: json
     sourceid: {{ .repo }}-version
     spec:
-      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
       key: {{ .repo }}.version
 
   {{ .repo }}-nixpkgs-sha:
@@ -56,7 +56,7 @@ targets:
     kind: json
     sourceid: {{ .repo }}-sha
     spec:
-      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
       key: {{ .repo }}.sha
 
   {{ .repo }}-nixpkgs-url:
@@ -64,7 +64,7 @@ targets:
     kind: json
     sourceid: {{ .repo }}-url
     spec:
-      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
       key: {{ .repo }}.url
 
   {{end}}

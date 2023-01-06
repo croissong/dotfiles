@@ -23,7 +23,7 @@ sources:
     dependson:
       - {{ printf "%s-url" .package }}
     spec:
-      command: ./nix-fetch-sha.sh {{ source (printf "%s-url" .package) }}
+      command: ./dot/nix-fetch-sha.sh {{ source (printf "%s-url" .package) }}
 
   {{end}}
 
@@ -35,7 +35,7 @@ targets:
     kind: json
     sourceid: {{ .package }}-version
     spec:
-      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
       key: {{ .package }}.version
 
   {{ .package }}-nixpkgs-sha:
@@ -43,7 +43,7 @@ targets:
     kind: json
     sourceid: {{ .package }}-sha
     spec:
-      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
       key: {{ .package }}.sha
 
   {{ .package }}-nixpkgs-url:
@@ -51,7 +51,7 @@ targets:
     kind: json
     sourceid: {{ .package }}-url
     spec:
-      file: {{ requiredEnv "DOTFILES" }}/dot_config/nixpkgs/versions.json
+      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
       key: {{ .package }}.url
 
   {{end}}

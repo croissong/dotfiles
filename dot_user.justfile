@@ -1,5 +1,5 @@
 default:
-  @just --choose
+  @just --justfile ~/.user.justfile --choose
 
 vpnio-start:
     systemctl restart strongswan
@@ -12,7 +12,7 @@ nix: nix-cm nix-hm nix-diff nix-check-missing
 
 nix-cm:
   #!/usr/bin/env bash
-  cd ~/Dotfiles/dot_config/nixpkgs/
+  cd $DOT/dot_config/nixpkgs/
   chezmoi apply ~/.config/nixpkgs
 
 nix-hm:
@@ -46,4 +46,4 @@ scan:
 
 
 updatecli:
-  @just --justfile ~/Dotfiles/dot_config/updatecli/justfile apply
+  @just --justfile $DOT/dot_config/updatecli/justfile -d $DOT/dot_config/updatecli apply
