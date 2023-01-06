@@ -6,7 +6,7 @@ secret:
     - "{{ .chezmoi.sourceDir }}/secrets.yml"
 merge.command: emacsscripts
 merge.args: ediff3
-sourceDir: {{ env "DOTFILES" }}
+sourceDir: {{ env "DOT" }}
 encryption: gpg
 gpg.recipient: jan.moeller0@gmail.com
 verbose: true
