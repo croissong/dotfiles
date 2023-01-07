@@ -85,21 +85,31 @@
           fblog # A small command-line JSON log viewer
         ];
 
-        query = [
-          bcal # Storage conversion and expression calculator
-          eva # A calculator REPL, similar to bc
-          my_pkgs.csvlens # Command line csv viewer
-          dasel # Query and update data structures from the command line.
-          gron # Make JSON greppable!
+        json = [
           jless # A command-line pager for JSON data
           jq # Command-line JSON processor
           gojq # Pure Go implementation of jq
           ijq # Interactive wrapper for jq
-          miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
-          sd # Intuitive find & replace
+          gron # Make JSON greppable!
+          tv # Format json into table view
+        ];
+
+        tools = [
+          bcal # Storage conversion and expression calculator
+          eva # A calculator REPL, similar to bc
           my_pkgs.sttr # cli to perform various operations on string
+        ];
+
+        csv = [
+          my_pkgs.csvlens # Command line csv viewer
+          tidy-viewer # CLI csv pretty printer
+        ];
+
+        pipe = [
+          miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
+          dasel # Query and update data structures from the command line.
+          sd # Intuitive find & replace
           teip # A tool to bypass a partial range of standard input to any command
-          python310Packages.graphtage # diff tree-like files such as JSON and XML
           tree-grepper # Like grep, but uses tree-sitter grammars to search
         ];
       };
@@ -137,6 +147,7 @@
         delta # A syntax-highlighting pager for git
         difftastic # A syntax-aware diff
         diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
+        python310Packages.graphtage # diff tree-like files such as JSON and XML
         dyff #  A diff tool for YAML files, and sometimes JSON
         my_pkgs.riff # A diff filter highlighting which line parts have changed
         dogdns # Command-line DNS client like dig
