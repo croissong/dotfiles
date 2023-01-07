@@ -32,6 +32,7 @@ alias sy=systemctl
 alias syu='sy --user'
 alias gpgt=gpg-tui
 alias tf=terraform
+alias jq=gojq
 
 alias weather='curl v2.wttr.in'
 
@@ -87,7 +88,7 @@ alias kdf='kf describe'
 alias ke='k edit'
 alias kroll='k rollout restart'
 
-alias kl='k stern -n $(kubesess -c namespace) -t --container-state running,waiting,terminated'
+alias kl='k stern -n $(kubesess -c namespace) --container-state running,waiting,terminated -e linkerd -oraw'
 
 alias kx='k exec -ti'
 alias kxf='kf exec -ti'

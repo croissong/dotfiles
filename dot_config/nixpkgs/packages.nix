@@ -81,7 +81,7 @@
 
       data = {
         logs = [
-          lnav
+          snazy # A snazzy json log viewer
           fblog # A small command-line JSON log viewer
         ];
 
@@ -93,6 +93,7 @@
           gron # Make JSON greppable!
           jless # A command-line pager for JSON data
           jq # Command-line JSON processor
+          gojq # Pure Go implementation of jq
           ijq # Interactive wrapper for jq
           miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
           sd # Intuitive find & replace
