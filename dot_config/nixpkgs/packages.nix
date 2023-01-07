@@ -79,23 +79,29 @@
         swappy # A Wayland native snapshot editing tool
       ];
 
-      data = [
-        bcal # Storage conversion and expression calculator
-        eva # A calculator REPL, similar to bc
-        my_pkgs.csvlens # Command line csv viewer
-        dasel # Query and update data structures from the command line.
-        fblog # A small command-line JSON log viewer
-        gron # Make JSON greppable!
-        jless # A command-line pager for JSON data
-        jq # Command-line JSON processor
-        ijq # Interactive wrapper for jq
-        miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
-        sd # Intuitive find & replace
-        my_pkgs.sttr # cli to perform various operations on string
-        teip # A tool to bypass a partial range of standard input to any command
-        python310Packages.graphtage # diff tree-like files such as JSON and XML
-        tree-grepper # Like grep, but uses tree-sitter grammars to search
-      ];
+      data = {
+        logs = [
+          lnav
+          fblog # A small command-line JSON log viewer
+        ];
+
+        query = [
+          bcal # Storage conversion and expression calculator
+          eva # A calculator REPL, similar to bc
+          my_pkgs.csvlens # Command line csv viewer
+          dasel # Query and update data structures from the command line.
+          gron # Make JSON greppable!
+          jless # A command-line pager for JSON data
+          jq # Command-line JSON processor
+          ijq # Interactive wrapper for jq
+          miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
+          sd # Intuitive find & replace
+          my_pkgs.sttr # cli to perform various operations on string
+          teip # A tool to bypass a partial range of standard input to any command
+          python310Packages.graphtage # diff tree-like files such as JSON and XML
+          tree-grepper # Like grep, but uses tree-sitter grammars to search
+        ];
+      };
 
       misc = [
         espeak # Open source speech synthesizer that supports over 70 languages, based on eSpeak
@@ -211,15 +217,11 @@
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
       ];
 
-      stuff = [
-        powershell
-        mold # A faster drop-in replacement for existing Unix linkers
+      general = [
         seer # A Qt gui frontend for GDB
-
+        mold # A faster drop-in replacement for existing Unix linkers
         my_pkgs.aiac # Artificial Intelligence Infrastructure-as-Code Generator
-
-        # maybe
-        # https://github.com/cs01/gdbgui
+        powershell
       ];
 
       cn = [
@@ -248,6 +250,7 @@
         stylua # Code formatter for Lua
         treefmt
         tokei # A program that allows you to count your code, quickly
+        tree-sitter-grammars.tree-sitter-yaml
       ];
 
       lang = {
@@ -310,6 +313,7 @@
         golangci-lint # Fast linters Runner for Go
         gotestsum # A human friendly `go test` runner
         delve # A debugger for the Go programming language.
+        gdlv # GUI frontend for Delve
         go # Core compiler tools for the Go programming language
         gopls # Language server for Go programming language
         go-tools # Developer tools for the Go programming language
@@ -408,6 +412,7 @@
 
       images = [
         krita # Edit and paint images
+        pinta # Drawing/editing program modeled after Paint.NET
         gimp # The GNU Image Manipulation Program
         epick # Color picker for creating harmonic color palettes
       ];
