@@ -50,9 +50,9 @@
     "version": "5.4"
   },
   "kubesess": {
-    "sha": "18f2lnwq3ka5hh6pxl8qv2bww9b57qvwyfs2523kjigxkxs5m22l",
-    "url": "https://github.com/Ramilito/kubesess/releases/download/1.2.8/kubesess_1.2.8_x86_64-unknown-linux-gnu.tar.gz",
-    "version": "1.2.8"
+    "sha": "16nfq3j4ag28gr32p3srwwx91yck2lrvyssxvwlwfrapq5gfis50",
+    "url": "https://github.com/Ramilito/kubesess/releases/download/1.2.9/kubesess_1.2.9_x86_64-unknown-linux-gnu.tar.gz",
+    "version": "1.2.9"
   },
   "kubeshark": {
     "sha": "1z12336bcv9l6qyxfnmh1q07cs7j2x4wclvyx7wsx4l1vnpnp08k",
@@ -115,9 +115,9 @@
     "version": "0.2.4"
   },
   "youtube-tui": {
-    "sha": "1wynalggbpc9i5vxy112hi6pharldm2v189qyvh7xnp4g7cy01dq",
-    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.0/youtube-tui-full_arch-x86_64",
-    "version": "0.6.0"
+    "sha": "",
+    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.1/youtube-tui-full_arch-x86_64",
+    "version": "0.6.1"
   },
   "ytui-music": {
     "sha": "0z21vplb1yqqvrsfgc8mapgbgliw20q2xvmp5s82za27byzqrh17",
