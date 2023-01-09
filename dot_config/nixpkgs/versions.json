@@ -95,9 +95,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "0slw7449hvnkj2lq1i13kqmzni0s1ifbxcg4h8yjv9nbwpk1h922",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.40.2/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.40.2"
+    "sha": "1x04wdl0kzbdpawi3cpvjrmkv4i0bxpgrv07fk7vr8xy8iav6xar",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.41.0/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.41.0"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
@@ -115,8 +115,8 @@
     "version": "0.2.4"
   },
   "youtube-tui": {
-    "sha": "",
-    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.1/youtube-tui-full_arch-x86_64",
+    "sha": "00lvl09zdiifrh3jw0za4vfyihr3l441q84a8q7zb5ykq4aa46mi",
+    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.1/default.youtube-tui-full_arch-x86_64",
     "version": "0.6.1"
   },
   "ytui-music": {
