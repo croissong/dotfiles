@@ -34,7 +34,7 @@ with pkgs; let
     };
   };
 
-  xmlformatter = python3Packages.buildPythonPackage rec {
+  xmlformatter = python3Packages.buildPythonPackage {
     pname = "xmlformatter";
     version = versions.xmlformatter.version;
     src = fetchurl {
@@ -43,7 +43,7 @@ with pkgs; let
     };
   };
 
-  cqlsh = python3Packages.buildPythonPackage rec {
+  cqlsh = python3Packages.buildPythonPackage {
     pname = "cqlsh";
     version = versions.cqlsh.version;
     src = fetchurl {
@@ -58,7 +58,7 @@ with pkgs; let
     ];
   };
 
-  wutag = stdenv.mkDerivation rec {
+  wutag = stdenv.mkDerivation {
     pname = "wutag";
     version = versions.wutag.version;
     src = fetchurl {
@@ -77,7 +77,7 @@ with pkgs; let
   };
 
   # TODO: https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/sheldon/default.nix
-  sheldon = stdenv.mkDerivation rec {
+  sheldon = stdenv.mkDerivation {
     pname = "sheldon";
     version = versions.sheldon.version;
     src = fetchurl {
@@ -121,7 +121,7 @@ with pkgs; let
     };
   };
 
-  ytui-music = stdenv.mkDerivation rec {
+  ytui-music = stdenv.mkDerivation {
     pname = "ytui-music";
     version = versions.ytui-music.version;
     src = fetchurl {
@@ -140,7 +140,7 @@ with pkgs; let
     };
   };
 
-  go-commitlinter = stdenv.mkDerivation rec {
+  go-commitlinter = stdenv.mkDerivation {
     pname = "go-commitlinter";
     version = versions.go-commitlinter.version;
     src = fetchurl {
@@ -179,7 +179,7 @@ with pkgs; let
     };
   };
 
-  mailctl = stdenv.mkDerivation rec {
+  mailctl = stdenv.mkDerivation {
     pname = "mailctl";
     version = versions.mailctl.version;
     src = fetchurl {
@@ -198,7 +198,7 @@ with pkgs; let
     };
   };
 
-  youtube-tui = stdenv.mkDerivation rec {
+  youtube-tui = stdenv.mkDerivation {
     pname = "youtube-tui";
     version = versions.youtube-tui.version;
     src = fetchurl {
@@ -221,7 +221,7 @@ with pkgs; let
     };
   };
 
-  shellcaster = stdenv.mkDerivation rec {
+  shellcaster = stdenv.mkDerivation {
     pname = "shellcaster";
     version = versions.shellcaster.version;
     src = fetchurl {
@@ -239,7 +239,7 @@ with pkgs; let
     };
   };
 
-  klog = stdenv.mkDerivation rec {
+  klog = stdenv.mkDerivation {
     pname = "klog";
     version = versions.klog.version;
     src = fetchzip {
@@ -258,7 +258,7 @@ with pkgs; let
     };
   };
 
-  versio = stdenv.mkDerivation rec {
+  versio = stdenv.mkDerivation {
     pname = "versio";
     version = versions.versio.version;
     src = fetchurl {
@@ -277,7 +277,7 @@ with pkgs; let
     };
   };
 
-  focus = stdenv.mkDerivation rec {
+  focus = stdenv.mkDerivation {
     pname = "focus";
     version = versions.focus.version;
     src = fetchurl {
@@ -294,7 +294,7 @@ with pkgs; let
     };
   };
 
-  gup = stdenv.mkDerivation rec {
+  gup = stdenv.mkDerivation {
     pname = "gup";
     version = versions.gup.version;
     src = fetchurl {
@@ -312,7 +312,7 @@ with pkgs; let
     };
   };
 
-  kubeshark = stdenv.mkDerivation rec {
+  kubeshark = stdenv.mkDerivation {
     pname = "kubeshark";
     version = versions.kubeshark.version;
     src = fetchurl {
@@ -330,7 +330,7 @@ with pkgs; let
     };
   };
 
-  sttr = stdenv.mkDerivation rec {
+  sttr = stdenv.mkDerivation {
     pname = "sttr";
     version = versions.sttr.version;
     src = fetchurl {
@@ -354,7 +354,7 @@ with pkgs; let
     };
   };
 
-  termshot = stdenv.mkDerivation rec {
+  termshot = stdenv.mkDerivation {
     pname = "termshot";
     version = versions.termshot.version;
     src = fetchurl {
@@ -373,7 +373,7 @@ with pkgs; let
     };
   };
 
-  riff = stdenv.mkDerivation rec {
+  riff = stdenv.mkDerivation {
     pname = "riff";
     version = versions.riff.version;
     src = fetchurl {
@@ -392,7 +392,7 @@ with pkgs; let
     };
   };
 
-  aiac = stdenv.mkDerivation rec {
+  aiac = stdenv.mkDerivation {
     pname = "aiac";
     version = versions.aiac.version;
     src = fetchurl {
@@ -411,7 +411,7 @@ with pkgs; let
     };
   };
 
-  updatecli = stdenv.mkDerivation rec {
+  updatecli = stdenv.mkDerivation {
     pname = "updatecli";
     version = versions.updatecli.version;
     src = fetchurl {
@@ -430,7 +430,7 @@ with pkgs; let
     };
   };
 
-  got = stdenv.mkDerivation rec {
+  got = stdenv.mkDerivation {
     pname = "got";
     version = versions.got.version;
     src = fetchurl {
@@ -470,6 +470,25 @@ with pkgs; let
       description = "Sane command-line scan-to-pdf script on Linux with OCR and deskew support";
     };
   };
+
+  desed = stdenv.mkDerivation {
+    pname = "desed";
+    version = versions.desed.version;
+    src = fetchurl {
+      url = versions.desed.url;
+      sha256 = versions.desed.sha;
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/desed
+    '';
+
+    meta = {
+      homepage = "https://github.com/SoptikHa2/desed";
+      description = "Debugger for Sed: demystify and debug your sed scripts";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -495,4 +514,5 @@ in {
   updatecli = updatecli;
   sane-scan-pdf = sane-scan-pdf;
   got = got;
+  desed = desed;
 }

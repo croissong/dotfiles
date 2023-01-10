@@ -16,3 +16,10 @@ manifest:
   updatecli manifest show \
   --values dot-values.yaml \
   -c nix.yaml --clean
+
+
+apply-wrk:
+  summon -f summon.yml \
+  updatecli apply \
+  --values wrk/values.yaml \
+  -c wrk

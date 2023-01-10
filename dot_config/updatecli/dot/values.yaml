@@ -94,6 +94,10 @@ repos:
     owner: gofireflyio
     asset: aiac_${VERSION}_Linux-64bit.tar.gz
 
+  - repo: desed
+    owner: SoptikHa2
+    asset: desed-x86_64-unknown-linux-gnu
+
 
 pypi:
   - package: cqlsh

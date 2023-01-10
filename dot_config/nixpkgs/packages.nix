@@ -109,6 +109,7 @@
           miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
           dasel # Query and update data structures from the command line.
           sd # Intuitive find & replace
+          my_pkgs.desed # Debugger for Sed
           teip # A tool to bypass a partial range of standard input to any command
           tree-grepper # Like grep, but uses tree-sitter grammars to search
         ];

@@ -14,6 +14,11 @@
     "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.10.tar.gz",
     "version": "0.1.10"
   },
+  "desed": {
+    "sha": "1klz4xhnalgh5mq90dfv5qgbzbqhri6nvah525kdhvn67wysysp5",
+    "url": "https://github.com/SoptikHa2/desed/releases/download/v1.2.1/desed-x86_64-unknown-linux-gnu",
+    "version": "1.2.1"
+  },
   "dtool": {
     "sha": "0kh1pbqqf1mj9kv9fd5i0a4crawyd9b23s3d36pswv04vh0gx0cv",
     "url": "https://github.com/guoxbin/dtool/archive/refs/tags/v0.12.0.tar.gz",
