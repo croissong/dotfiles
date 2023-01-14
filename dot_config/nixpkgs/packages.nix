@@ -92,6 +92,7 @@
           ijq # Interactive wrapper for jq
           gron # Make JSON greppable!
           tv # Format json into table view
+          jc # serializes the output of popular command line tools to structured JSON output
         ];
 
         tools = [
@@ -582,8 +583,7 @@
 
       dhcping # Send DHCP request to find out if a DHCP server is running
 
-      # TODO (ngrok alternative)
-      # rathole # A reverse proxy for NAT traversal
+      rathole # A reverse proxy for NAT traversal
       frp # A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 
       miniserve # CLI tool to serve files and directories over HTTP

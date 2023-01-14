@@ -32,7 +32,7 @@ repos:
 
   - repo: youtube-tui
     owner: Siriusmart
-    asset: default.youtube-tui-full_arch-x86_64
+    asset: youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64
 
   - repo: mailctl
     owner: pdobsan
