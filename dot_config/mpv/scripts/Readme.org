@@ -1,3 +1,5 @@
 - https://github.com/Eisa01/mpv-scripts#simplehistory
 - https://github.com/occivink/mpv-scripts#seek-tolua
   input.conf -> `Shift+Ctrl+S script-binding toggle-seeker`
+
+- https://github.com/4e6/mpv-reload
