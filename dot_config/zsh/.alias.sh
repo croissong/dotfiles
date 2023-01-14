@@ -79,8 +79,8 @@ alias ktxmv='k config rename-context'
 alias kk='k delete'
 alias kkf='kf delete'
 
-alias kg='k neat get -o yaml'
-alias kgr='k get -o yaml'
+alias kg='k get -o yaml'
+alias kgn='k neat get -o yaml'
 
 alias kd='k describe'
 alias kdf='kf describe'
@@ -88,7 +88,9 @@ alias kdf='kf describe'
 alias ke='k edit'
 alias kroll='k rollout restart'
 
-alias kl='k stern -n $(kubesess -c namespace) --container-state running,waiting,terminated -e linkerd -oraw'
+alias kl='k tail -o zerolog --zerolog-timestamp-field="@timestamp" --zerolog-error-field="stacktrace"'
+alias klr='k tail'
+alias fzt='fzf +s --tac --ansi'
 
 alias kx='k exec -ti'
 alias kxf='kf exec -ti'

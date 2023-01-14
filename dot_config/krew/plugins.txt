@@ -12,6 +12,7 @@ resource-capacity
 slice
 sniff
 stern
+tail
 view-secret
 who-can
 whoami
