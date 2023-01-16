@@ -60,9 +60,9 @@
     "version": "1.2.9"
   },
   "kubeshark": {
-    "sha": "1z12336bcv9l6qyxfnmh1q07cs7j2x4wclvyx7wsx4l1vnpnp08k",
-    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.1/kubeshark_linux_amd64",
-    "version": "38.1"
+    "sha": "1r2bw8fw0dmlfkgjcdnmcp8zl8x859x860j6606kkm205r826d2g",
+    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.3/kubeshark_linux_amd64",
+    "version": "38.3"
   },
   "mailctl": {
     "sha": "19ak5hr859xf1b83b2f14nqqq5kd7jjfxrwarc9w6j8zynyzl64w",
@@ -100,9 +100,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "1x04wdl0kzbdpawi3cpvjrmkv4i0bxpgrv07fk7vr8xy8iav6xar",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.41.0/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.41.0"
+    "sha": "1gvhrb096pccq5b1rmh7008l0z34bz082x050yrj2l7ndii2ygdj",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.42.0/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.42.0"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
