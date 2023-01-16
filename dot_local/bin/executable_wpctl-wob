@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+
+increase-volume() {
+  wpctl set-volume @DEFAULT_SINK@ 5%+
+  _to_wob @DEFAULT_SINK@
+}
+
+decrease-volume() {
+  wpctl set-volume @DEFAULT_SINK@ 5%-
+  _to_wob @DEFAULT_SINK@
+}
+
+toggle-mute() {
+  wpctl set-mute @DEFAULT_SINK@ toggle
+  _to_wob @DEFAULT_SINK@
+}
+
+toggle-mic-mute() {
+  wpctl set-mute @DEFAULT_SOURCE@ toggle
+  _to_wob @DEFAULT_SOURCE@
+
+  # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/1849
+  volume="$(wpctl get-volume @DEFAULT_SOURCE@)"
+  volume=${volume#Volume: *}
+  case "$volume" in (*MUTED*) mute=1;; *) mute=0;; esac
+  echo $mute > /sys/class/leds/platform::micmute/brightness
+}
+
+_to_wob() {
+ volume="$(wpctl get-volume $1)"
+ volume=${volume#Volume: *}
+ case "$volume" in (*MUTED*) volume=0;; esac
+ printf "%0.0f\n" "${volume%% *}e+2" > "$XDG_RUNTIME_DIR/wob.sock"
+}
+
+
+"$@"
