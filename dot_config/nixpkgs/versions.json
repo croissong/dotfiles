@@ -45,9 +45,9 @@
     "version": "0.15.1"
   },
   "helmfile": {
-    "sha": "0vc5pl83c25c9kqgrkfsq40nwh4ymly2rdsd8jmsakdrdvb1nz3p",
-    "url": "https://github.com/helmfile/helmfile/archive/refs/tags/v0.149.0.tar.gz",
-    "version": "0.149.0"
+    "sha": "0xjk4xp0j5cclhqgh3pdmwl25p1wvw52r7xqz0fkp8rfj3was07g",
+    "url": "https://github.com/helmfile/helmfile/archive/refs/tags/v0.150.0.tar.gz",
+    "version": "0.150.0"
   },
   "klog": {
     "sha": "0c435r27nz537225bhpjzhy02l4mfqmpbbqg6cpqsxln2p7jxv28",

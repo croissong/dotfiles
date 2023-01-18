@@ -4,7 +4,7 @@ name = "plain"
 idle_fg = "#ebdbb2"
 
 [icons]
-name = "awesome5"
+name = "awesome"
 [icons.overrides]
 bat_full = "100%"
 bat_charging = "+"
@@ -50,6 +50,7 @@ interval = 60
 driver = "upower"
 device = "DisplayDevice"
 format = "{percentage}"
+icons_format = " <span font='10'>{icon}</span>   "
 
 [[block]]
 block = "time"

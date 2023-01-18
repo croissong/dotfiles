@@ -36,7 +36,7 @@
       buildGoModule = args:
         super.buildGoModule (args
           // {
-            vendorSha256 = "sha256-akxA1AeYuaIKBAgt+u5fWcFYYP1YVMT79l5WwTn1bnI=";
+            vendorSha256 = "sha256-vLLS+/Xfnlt6cvkNvXKX3DVLku1Q4bRCiv2vMTfOnfw=";
             inherit src version;
 
             ldflags = ["-s" "-w" "-X go.szostok.io/version.version=${version}"];
