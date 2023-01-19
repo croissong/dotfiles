@@ -39,6 +39,8 @@
 
       djvulibre # for emacs doc-tools
       mupdf # for emacs doc-tools
+
+      xournalpp # handwriting Notetaking software with PDF annotation support
     ];
 
     lib = [
@@ -265,6 +267,7 @@
         treefmt
         tokei # A program that allows you to count your code, quickly
         tree-sitter-grammars.tree-sitter-yaml
+        tree-sitter-grammars.tree-sitter-toml
       ];
 
       lang = {
@@ -529,6 +532,7 @@
 
     pers = [
       ledger # Double-entry accounting system with a command-line reporting interface
+      reckon # Flexibly import bank account CSV files into Ledger for command line accounting
     ];
 
     media = [
@@ -598,6 +602,9 @@
       caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
+
+      mob # Tool for smooth git handover
+
       gh # GitHub CLI tool
       glab # GitLab CLI tool
       go-mockery # A mock code autogenerator for golang
