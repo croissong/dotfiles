@@ -489,6 +489,25 @@ with pkgs; let
       description = "Debugger for Sed: demystify and debug your sed scripts";
     };
   };
+
+  qsv = stdenv.mkDerivation {
+    pname = "klog";
+    version = versions.qsv.version;
+    src = fetchzip {
+      url = versions.qsv.url;
+      sha256 = versions.qsv.sha;
+      stripRoot = false;
+    };
+
+    installPhase = ''
+      install -m755 -D qsv $out/bin/qsv
+    '';
+
+    meta = {
+      homepage = "https://github.com/jqnatividad/qsv";
+      description = "CSVs sliced, diced & analyzed";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -515,4 +534,5 @@ in {
   sane-scan-pdf = sane-scan-pdf;
   got = got;
   desed = desed;
+  qsv = qsv;
 }

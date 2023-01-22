@@ -69,6 +69,11 @@
     "url": "https://github.com/pdobsan/mailctl/releases/download/0.7.4/mailctl-0.7.4-Linux-x86_64",
     "version": "0.7.4"
   },
+  "qsv": {
+    "sha": "08dqf5r2bdmi330d25n25p3g2ypv0s6h8d7zgq5dkq979rqnp50y",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.84.0/qsv-0.84.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.84.0"
+  },
   "riff": {
     "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
     "url": "https://github.com/walles/riff/releases/download/2.22.2/riff-2.22.2-x86_64-linux",

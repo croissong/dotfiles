@@ -320,7 +320,7 @@
 
       data = [
         dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
-        xsv # A fast CSV toolkit written in Rust
+        my_pkgs.qsv #  CSVs sliced, diced & analyzed.
       ];
     };
 

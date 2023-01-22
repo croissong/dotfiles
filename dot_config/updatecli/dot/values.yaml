@@ -98,6 +98,10 @@ repos:
     owner: SoptikHa2
     asset: desed-x86_64-unknown-linux-gnu
 
+  - repo: qsv
+    owner: jqnatividad
+    trimPrefix: false
+    asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
 
 pypi:
   - package: cqlsh
