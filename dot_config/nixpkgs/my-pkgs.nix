@@ -5,6 +5,191 @@
   ...
 }:
 with pkgs; let
+  aiac = stdenv.mkDerivation {
+    pname = "aiac";
+    version = versions.aiac.version;
+    src = fetchurl {
+      url = versions.aiac.url;
+      sha256 = versions.aiac.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D aiac $out/bin/aiac
+    '';
+
+    meta = {
+      homepage = "https://github.com/gofireflyio/aiac";
+      description = "Artificial Intelligence Infrastructure-as-Code Generator";
+    };
+  };
+
+  cqlsh = python3Packages.buildPythonPackage {
+    pname = "cqlsh";
+    version = versions.cqlsh.version;
+    src = fetchurl {
+      url = versions.cqlsh.url;
+      sha256 = versions.cqlsh.sha;
+    };
+
+    propagatedBuildInputs = with python310Packages; [
+      cassandra-driver
+      # six
+      # cql
+    ];
+  };
+
+  csvlens = rustPlatform.buildRustPackage rec {
+    pname = "csvlens";
+    version = versions.csvlens.version;
+    src = fetchFromGitHub {
+      owner = "YS-L";
+      repo = "csvlens";
+      rev = "v${version}";
+      sha256 = versions.csvlens.sha;
+    };
+    cargoSha256 = "sha256-cYm9z6K2fSIKcHxFb7rhudsMkKb4jhi2jwocNTouCmM=";
+
+    nativeBuildInputs = [pkg-config];
+    buildInputs = [bzip2 xz zlib zstd];
+
+    meta = {
+      homepage = "https://github.com/YS-L/csvlens";
+      description = "Command line csv viewer";
+    };
+  };
+
+  desed = stdenv.mkDerivation {
+    pname = "desed";
+    version = versions.desed.version;
+    src = fetchurl {
+      url = versions.desed.url;
+      sha256 = versions.desed.sha;
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/desed
+    '';
+
+    meta = {
+      homepage = "https://github.com/SoptikHa2/desed";
+      description = "Debugger for Sed: demystify and debug your sed scripts";
+    };
+  };
+
+  dtool = rustPlatform.buildRustPackage rec {
+    pname = "dtool";
+    version = versions.dtool.version;
+    src = fetchFromGitHub {
+      owner = "guoxbin";
+      repo = "dtool";
+      rev = "v${version}";
+      sha256 = versions.dtool.sha;
+    };
+    cargoSha256 = "sha256-r8r3f4yKMQgjtB3j4qE7cqQL18nIqAGPO5RsFErqh2c=";
+
+    nativeBuildInputs = [pkg-config];
+    buildInputs = [bzip2 xz zlib];
+
+    meta = {
+      homepage = "https://github.com/guoxbin/dtool";
+      description = "CLI tool collection to assist development";
+    };
+  };
+
+  focus = stdenv.mkDerivation {
+    pname = "focus";
+    version = versions.focus.version;
+    src = fetchurl {
+      url = versions.focus.url;
+      sha256 = versions.focus.sha;
+    };
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D focus $out/bin/focus
+    '';
+    meta = {
+      homepage = "https://github.com/ayoisaiah/focus";
+      description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
+    };
+  };
+
+  go-commitlinter = stdenv.mkDerivation {
+    pname = "go-commitlinter";
+    version = versions.go-commitlinter.version;
+    src = fetchurl {
+      url = versions.go-commitlinter.url;
+      sha256 = versions.go-commitlinter.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D go-commitlinter $out/bin/go-commitlinter
+    '';
+
+    meta = {
+      homepage = "https://github.com/masahiro331/go-commitlinter";
+      description = "go-commitlinter is simple commit message linter.";
+    };
+  };
+
+  got = stdenv.mkDerivation {
+    pname = "got";
+    version = versions.got.version;
+    src = fetchurl {
+      url = versions.got.url;
+      sha256 = versions.got.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D got $out/bin/got
+    '';
+
+    meta = {
+      homepage = "https://github.com/updatecli/updatecli";
+      description = "A Declarative Dependency Management tool";
+    };
+  };
+
+  gup = stdenv.mkDerivation {
+    pname = "gup";
+    version = versions.gup.version;
+    src = fetchurl {
+      url = versions.gup.url;
+      sha256 = versions.gup.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D gup $out/bin/gup
+    '';
+    meta = {
+      homepage = "https://github.com/nao1215/gup";
+      description = "Update binaries installed by go install";
+    };
+  };
+
+  klog = stdenv.mkDerivation {
+    pname = "klog";
+    version = versions.klog.version;
+    src = fetchzip {
+      url = versions.klog.url;
+      sha256 = versions.klog.sha;
+      stripRoot = false;
+    };
+
+    installPhase = ''
+      install -m755 -D klog $out/bin/klog
+    '';
+
+    meta = {
+      homepage = "https://github.com/jotaen/klog";
+      description = "Command line tool for time tracking";
+    };
+  };
+
   kubesess = stdenv.mkDerivation rec {
     pname = "kubesess";
     version = versions.kubesess.version;
@@ -34,45 +219,119 @@ with pkgs; let
     };
   };
 
-  xmlformatter = python3Packages.buildPythonPackage {
-    pname = "xmlformatter";
-    version = versions.xmlformatter.version;
+  kubeshark = stdenv.mkDerivation {
+    pname = "kubeshark";
+    version = versions.kubeshark.version;
     src = fetchurl {
-      url = versions.xmlformatter.url;
-      sha256 = versions.xmlformatter.sha;
-    };
-  };
-
-  cqlsh = python3Packages.buildPythonPackage {
-    pname = "cqlsh";
-    version = versions.cqlsh.version;
-    src = fetchurl {
-      url = versions.cqlsh.url;
-      sha256 = versions.cqlsh.sha;
+      url = versions.kubeshark.url;
+      sha256 = versions.kubeshark.sha;
     };
 
-    propagatedBuildInputs = with python310Packages; [
-      cassandra-driver
-      # six
-      # cql
-    ];
-  };
-
-  wutag = stdenv.mkDerivation {
-    pname = "wutag";
-    version = versions.wutag.version;
-    src = fetchurl {
-      url = versions.wutag.url;
-      sha256 = versions.wutag.sha;
-    };
-
+    unpackPhase = ":";
     installPhase = ''
-      install -m755 -D wutag $out/bin/wutag
+      install -m755 -D $src $out/bin/kubeshark
+    '';
+    meta = {
+      homepage = "https://github.com/kubeshark/kubeshark";
+      description = "The API traffic viewer for Kubernetes. Think TCPDump and Wireshark re-invented for Kubernetes";
+    };
+  };
+
+  mailctl = stdenv.mkDerivation {
+    pname = "mailctl";
+    version = versions.mailctl.version;
+    src = fetchurl {
+      url = versions.mailctl.url;
+      sha256 = versions.mailctl.sha;
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/mailctl
     '';
 
     meta = {
-      homepage = "https://github.com/vv9k/wutag";
-      description = "CLI Tool for tagging and organizing files by tags";
+      homepage = "https://github.com/pdobsan/mailctl";
+      description = "Provide IMAP/SMTP clients with the capabilities of renewal and authorization of OAuth2 credentials";
+    };
+  };
+
+  protocurl = stdenv.mkDerivation {
+    pname = "protocurl";
+    version = versions.protocurl.version;
+    src = fetchzip {
+      url = versions.protocurl.url;
+      sha256 = versions.protocurl.sha;
+      stripRoot = false;
+    };
+
+    installPhase = ''
+      install -m755 -D bin/protocurl $out/bin/protocurl
+    '';
+
+    meta = {
+      homepage = "https://github.com/qaware/protocurl";
+      description = "cURL for Protobuf";
+    };
+  };
+
+  qsv = stdenv.mkDerivation {
+    pname = "qsv";
+    version = versions.qsv.version;
+    src = fetchzip {
+      url = versions.qsv.url;
+      sha256 = versions.qsv.sha;
+      stripRoot = false;
+    };
+
+    installPhase = ''
+      install -m755 -D qsv $out/bin/qsv
+    '';
+
+    meta = {
+      homepage = "https://github.com/jqnatividad/qsv";
+      description = "CSVs sliced, diced & analyzed";
+    };
+  };
+
+  riff = stdenv.mkDerivation {
+    pname = "riff";
+    version = versions.riff.version;
+    src = fetchurl {
+      url = versions.riff.url;
+      sha256 = versions.riff.sha;
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/riff
+    '';
+
+    meta = {
+      homepage = "https://github.com/walles/riff";
+      description = "A diff filter highlighting which line parts have changed";
+    };
+  };
+
+  sane-scan-pdf = stdenv.mkDerivation rec {
+    pname = "sane-scan-pdf";
+    version = versions.sane-scan-pdf.version;
+    src = fetchFromGitHub {
+      owner = "rocketraman";
+      repo = "sane-scan-pdf";
+      rev = "v${version}";
+      sha256 = versions.sane-scan-pdf.sha;
+    };
+
+    # sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D scan $out/bin/scan
+      install -m755 -D scan_perpage $out/bin/scan_perpage
+    '';
+
+    meta = {
+      homepage = "https://github.com/rocketraman/sane-scan-pdf";
+      description = "Sane command-line scan-to-pdf script on Linux with OCR and deskew support";
     };
   };
 
@@ -101,126 +360,6 @@ with pkgs; let
     };
   };
 
-  dtool = rustPlatform.buildRustPackage rec {
-    pname = "dtool";
-    version = versions.dtool.version;
-    src = fetchFromGitHub {
-      owner = "guoxbin";
-      repo = "dtool";
-      rev = "v${version}";
-      sha256 = versions.dtool.sha;
-    };
-    cargoSha256 = "sha256-r8r3f4yKMQgjtB3j4qE7cqQL18nIqAGPO5RsFErqh2c=";
-
-    nativeBuildInputs = [pkg-config];
-    buildInputs = [bzip2 xz zlib];
-
-    meta = {
-      homepage = "https://github.com/guoxbin/dtool";
-      description = "CLI tool collection to assist development";
-    };
-  };
-
-  ytui-music = stdenv.mkDerivation {
-    pname = "ytui-music";
-    version = versions.ytui-music.version;
-    src = fetchurl {
-      url = versions.ytui-music.url;
-      sha256 = versions.ytui-music.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/ytui_music
-    '';
-
-    meta = {
-      homepage = "https://github.com/sudipghimire533/ytui-music";
-      description = "Youtube client in terminal for music";
-    };
-  };
-
-  go-commitlinter = stdenv.mkDerivation {
-    pname = "go-commitlinter";
-    version = versions.go-commitlinter.version;
-    src = fetchurl {
-      url = versions.go-commitlinter.url;
-      sha256 = versions.go-commitlinter.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D go-commitlinter $out/bin/go-commitlinter
-    '';
-
-    meta = {
-      homepage = "https://github.com/masahiro331/go-commitlinter";
-      description = "go-commitlinter is simple commit message linter.";
-    };
-  };
-
-  csvlens = rustPlatform.buildRustPackage rec {
-    pname = "csvlens";
-    version = versions.csvlens.version;
-    src = fetchFromGitHub {
-      owner = "YS-L";
-      repo = "csvlens";
-      rev = "v${version}";
-      sha256 = versions.csvlens.sha;
-    };
-    cargoSha256 = "sha256-cYm9z6K2fSIKcHxFb7rhudsMkKb4jhi2jwocNTouCmM=";
-
-    nativeBuildInputs = [pkg-config];
-    buildInputs = [bzip2 xz zlib zstd];
-
-    meta = {
-      homepage = "https://github.com/YS-L/csvlens";
-      description = "Command line csv viewer";
-    };
-  };
-
-  mailctl = stdenv.mkDerivation {
-    pname = "mailctl";
-    version = versions.mailctl.version;
-    src = fetchurl {
-      url = versions.mailctl.url;
-      sha256 = versions.mailctl.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/mailctl
-    '';
-
-    meta = {
-      homepage = "https://github.com/pdobsan/mailctl";
-      description = "Provide IMAP/SMTP clients with the capabilities of renewal and authorization of OAuth2 credentials";
-    };
-  };
-
-  youtube-tui = stdenv.mkDerivation {
-    pname = "youtube-tui";
-    version = versions.youtube-tui.version;
-    src = fetchurl {
-      url = versions.youtube-tui.url;
-      sha256 = versions.youtube-tui.sha;
-    };
-
-    buildInputs = [libsixel openssl];
-    nativeBuildInputs = [
-      autoPatchelfHook # Automatically setup the loader, and do the magic
-    ];
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/youtube-tui
-    '';
-
-    meta = {
-      homepage = "https://github.com/Siriusmart/youtube-tui";
-      description = "An aesthetically pleasing YouTube TUI written in Rust";
-    };
-  };
-
   shellcaster = stdenv.mkDerivation {
     pname = "shellcaster";
     version = versions.shellcaster.version;
@@ -236,97 +375,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/jeff-hughes/shellcaster";
       description = "Terminal-based podcast manager built in Rust";
-    };
-  };
-
-  klog = stdenv.mkDerivation {
-    pname = "klog";
-    version = versions.klog.version;
-    src = fetchzip {
-      url = versions.klog.url;
-      sha256 = versions.klog.sha;
-      stripRoot = false;
-    };
-
-    installPhase = ''
-      install -m755 -D klog $out/bin/klog
-    '';
-
-    meta = {
-      homepage = "https://github.com/jotaen/klog";
-      description = "Command line tool for time tracking";
-    };
-  };
-
-  versio = stdenv.mkDerivation {
-    pname = "versio";
-    version = versions.versio.version;
-    src = fetchurl {
-      url = versions.versio.url;
-      sha256 = versions.versio.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/versio
-    '';
-
-    meta = {
-      homepage = "https://github.com/chaaz/versio";
-      description = "A version number manager";
-    };
-  };
-
-  focus = stdenv.mkDerivation {
-    pname = "focus";
-    version = versions.focus.version;
-    src = fetchurl {
-      url = versions.focus.url;
-      sha256 = versions.focus.sha;
-    };
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D focus $out/bin/focus
-    '';
-    meta = {
-      homepage = "https://github.com/ayoisaiah/focus";
-      description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
-    };
-  };
-
-  gup = stdenv.mkDerivation {
-    pname = "gup";
-    version = versions.gup.version;
-    src = fetchurl {
-      url = versions.gup.url;
-      sha256 = versions.gup.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D gup $out/bin/gup
-    '';
-    meta = {
-      homepage = "https://github.com/nao1215/gup";
-      description = "Update binaries installed by go install";
-    };
-  };
-
-  kubeshark = stdenv.mkDerivation {
-    pname = "kubeshark";
-    version = versions.kubeshark.version;
-    src = fetchurl {
-      url = versions.kubeshark.url;
-      sha256 = versions.kubeshark.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/kubeshark
-    '';
-    meta = {
-      homepage = "https://github.com/kubeshark/kubeshark";
-      description = "The API traffic viewer for Kubernetes. Think TCPDump and Wireshark re-invented for Kubernetes";
     };
   };
 
@@ -373,44 +421,6 @@ with pkgs; let
     };
   };
 
-  riff = stdenv.mkDerivation {
-    pname = "riff";
-    version = versions.riff.version;
-    src = fetchurl {
-      url = versions.riff.url;
-      sha256 = versions.riff.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/riff
-    '';
-
-    meta = {
-      homepage = "https://github.com/walles/riff";
-      description = "A diff filter highlighting which line parts have changed";
-    };
-  };
-
-  aiac = stdenv.mkDerivation {
-    pname = "aiac";
-    version = versions.aiac.version;
-    src = fetchurl {
-      url = versions.aiac.url;
-      sha256 = versions.aiac.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D aiac $out/bin/aiac
-    '';
-
-    meta = {
-      homepage = "https://github.com/gofireflyio/aiac";
-      description = "Artificial Intelligence Infrastructure-as-Code Generator";
-    };
-  };
-
   updatecli = stdenv.mkDerivation {
     pname = "updatecli";
     version = versions.updatecli.version;
@@ -430,129 +440,119 @@ with pkgs; let
     };
   };
 
-  got = stdenv.mkDerivation {
-    pname = "got";
-    version = versions.got.version;
+  versio = stdenv.mkDerivation {
+    pname = "versio";
+    version = versions.versio.version;
     src = fetchurl {
-      url = versions.got.url;
-      sha256 = versions.got.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D got $out/bin/got
-    '';
-
-    meta = {
-      homepage = "https://github.com/updatecli/updatecli";
-      description = "A Declarative Dependency Management tool";
-    };
-  };
-
-  sane-scan-pdf = stdenv.mkDerivation rec {
-    pname = "sane-scan-pdf";
-    version = versions.sane-scan-pdf.version;
-    src = fetchFromGitHub {
-      owner = "rocketraman";
-      repo = "sane-scan-pdf";
-      rev = "v${version}";
-      sha256 = versions.sane-scan-pdf.sha;
-    };
-
-    # sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D scan $out/bin/scan
-      install -m755 -D scan_perpage $out/bin/scan_perpage
-    '';
-
-    meta = {
-      homepage = "https://github.com/rocketraman/sane-scan-pdf";
-      description = "Sane command-line scan-to-pdf script on Linux with OCR and deskew support";
-    };
-  };
-
-  desed = stdenv.mkDerivation {
-    pname = "desed";
-    version = versions.desed.version;
-    src = fetchurl {
-      url = versions.desed.url;
-      sha256 = versions.desed.sha;
+      url = versions.versio.url;
+      sha256 = versions.versio.sha;
     };
 
     unpackPhase = ":";
     installPhase = ''
-      install -m755 -D $src $out/bin/desed
+      install -m755 -D $src $out/bin/versio
     '';
 
     meta = {
-      homepage = "https://github.com/SoptikHa2/desed";
-      description = "Debugger for Sed: demystify and debug your sed scripts";
+      homepage = "https://github.com/chaaz/versio";
+      description = "A version number manager";
     };
   };
 
-  qsv = stdenv.mkDerivation {
-    pname = "qsv";
-    version = versions.qsv.version;
-    src = fetchzip {
-      url = versions.qsv.url;
-      sha256 = versions.qsv.sha;
-      stripRoot = false;
+  wutag = stdenv.mkDerivation {
+    pname = "wutag";
+    version = versions.wutag.version;
+    src = fetchurl {
+      url = versions.wutag.url;
+      sha256 = versions.wutag.sha;
     };
 
     installPhase = ''
-      install -m755 -D qsv $out/bin/qsv
+      install -m755 -D wutag $out/bin/wutag
     '';
 
     meta = {
-      homepage = "https://github.com/jqnatividad/qsv";
-      description = "CSVs sliced, diced & analyzed";
+      homepage = "https://github.com/vv9k/wutag";
+      description = "CLI Tool for tagging and organizing files by tags";
     };
   };
 
-  protocurl = stdenv.mkDerivation {
-    pname = "protocurl";
-    version = versions.protocurl.version;
-    src = fetchzip {
-      url = versions.protocurl.url;
-      sha256 = versions.protocurl.sha;
-      stripRoot = false;
+  xmlformatter = python3Packages.buildPythonPackage {
+    pname = "xmlformatter";
+    version = versions.xmlformatter.version;
+    src = fetchurl {
+      url = versions.xmlformatter.url;
+      sha256 = versions.xmlformatter.sha;
+    };
+  };
+
+  youtube-tui = stdenv.mkDerivation {
+    pname = "youtube-tui";
+    version = versions.youtube-tui.version;
+    src = fetchurl {
+      url = versions.youtube-tui.url;
+      sha256 = versions.youtube-tui.sha;
     };
 
+    buildInputs = [libsixel openssl];
+    nativeBuildInputs = [
+      autoPatchelfHook # Automatically setup the loader, and do the magic
+    ];
+    unpackPhase = ":";
     installPhase = ''
-      install -m755 -D protocurl $out/bin/protocurl
+      install -m755 -D $src $out/bin/youtube-tui
     '';
 
     meta = {
-      homepage = "https://github.com/qaware/protocurl";
-      description = "cURL for Protobuf";
+      homepage = "https://github.com/Siriusmart/youtube-tui";
+      description = "An aesthetically pleasing YouTube TUI written in Rust";
+    };
+  };
+
+  ytui-music = stdenv.mkDerivation {
+    pname = "ytui-music";
+    version = versions.ytui-music.version;
+    src = fetchurl {
+      url = versions.ytui-music.url;
+      sha256 = versions.ytui-music.sha;
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/ytui_music
+    '';
+
+    meta = {
+      homepage = "https://github.com/sudipghimire533/ytui-music";
+      description = "Youtube client in terminal for music";
     };
   };
 in {
-  kubesess = kubesess;
-  wutag = wutag;
-  xmlformatter = xmlformatter;
-  sheldon = sheldon;
+  aiac = aiac;
   cqlsh = cqlsh;
-  dtool = dtool;
-  ytui-music = ytui-music;
-  youtube-tui = youtube-tui;
-  go-commitlinter = go-commitlinter;
   csvlens = csvlens;
-  mailctl = mailctl;
-  shellcaster = shellcaster;
-  klog = klog;
-  versio = versio;
+  desed = desed;
+  dtool = dtool;
   focus = focus;
+  go-commitlinter = go-commitlinter;
+  got = got;
   gup = gup;
+  klog = klog;
+  kubesess = kubesess;
   kubeshark = kubeshark;
+  mailctl = mailctl;
+  protocurl = protocurl;
+  qsv = qsv;
+  riff = riff;
+  sane-scan-pdf = sane-scan-pdf;
+  sheldon = sheldon;
+  shellcaster = shellcaster;
   sttr = sttr;
   termshot = termshot;
-  riff = riff;
-  aiac = aiac;
   updatecli = updatecli;
-  sane-scan-pdf = sane-scan-pdf;
-  got = got;
-  desed = desed;
-  qsv = qsv;
-  protocurl = protocurl;
+  versio = versio;
+  wutag = wutag;
+  xmlformatter = xmlformatter;
+  youtube-tui = youtube-tui;
+  ytui-music = ytui-music;
 }
