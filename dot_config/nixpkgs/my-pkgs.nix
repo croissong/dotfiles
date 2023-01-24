@@ -491,7 +491,7 @@ with pkgs; let
   };
 
   qsv = stdenv.mkDerivation {
-    pname = "klog";
+    pname = "qsv";
     version = versions.qsv.version;
     src = fetchzip {
       url = versions.qsv.url;

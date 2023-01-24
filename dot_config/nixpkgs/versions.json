@@ -70,9 +70,9 @@
     "version": "0.7.4"
   },
   "qsv": {
-    "sha": "08dqf5r2bdmi330d25n25p3g2ypv0s6h8d7zgq5dkq979rqnp50y",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.84.0/qsv-0.84.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.84.0"
+    "sha": "121f86rml417wh8xh24gddfgd31gzaknhimpa5m93il2dzhcxg9i",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.85.0/qsv-0.85.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.85.0"
   },
   "riff": {
     "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
@@ -105,9 +105,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "1gvhrb096pccq5b1rmh7008l0z34bz082x050yrj2l7ndii2ygdj",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.42.0/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.42.0"
+    "sha": "1fn22077irr5zhv7bx4yz2jk48pc9ysr2g6v9p4vcb672vsa1gmz",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.43.0/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.43.0"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
