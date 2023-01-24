@@ -217,6 +217,7 @@
       protocols = [
         altair # A feature-rich GraphQL Client IDE
         grpcurl # Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
+        my_pkgs.protocurl # cURL for Protobuf
         swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
       ];
 

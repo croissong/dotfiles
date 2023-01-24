@@ -69,6 +69,11 @@
     "url": "https://github.com/pdobsan/mailctl/releases/download/0.7.4/mailctl-0.7.4-Linux-x86_64",
     "version": "0.7.4"
   },
+  "protocurl": {
+    "sha": "1icsvjqgv59zrjhwsam08gk15ik5imy62ayflmli6nh5fpm4b4mb",
+    "url": "https://github.com/qaware/protocurl/releases/download/v1.5.5/protocurl_1.5.5_linux_amd64.zip",
+    "version": "1.5.5"
+  },
   "qsv": {
     "sha": "121f86rml417wh8xh24gddfgd31gzaknhimpa5m93il2dzhcxg9i",
     "url": "https://github.com/jqnatividad/qsv/releases/download/0.85.0/qsv-0.85.0-x86_64-unknown-linux-gnu.zip",

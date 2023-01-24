@@ -508,6 +508,25 @@ with pkgs; let
       description = "CSVs sliced, diced & analyzed";
     };
   };
+
+  protocurl = stdenv.mkDerivation {
+    pname = "protocurl";
+    version = versions.protocurl.version;
+    src = fetchzip {
+      url = versions.protocurl.url;
+      sha256 = versions.protocurl.sha;
+      stripRoot = false;
+    };
+
+    installPhase = ''
+      install -m755 -D protocurl $out/bin/protocurl
+    '';
+
+    meta = {
+      homepage = "https://github.com/qaware/protocurl";
+      description = "cURL for Protobuf";
+    };
+  };
 in {
   kubesess = kubesess;
   wutag = wutag;
@@ -535,4 +554,5 @@ in {
   got = got;
   desed = desed;
   qsv = qsv;
+  protocurl = protocurl;
 }

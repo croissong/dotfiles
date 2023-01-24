@@ -103,6 +103,10 @@ repos:
     trimPrefix: false
     asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
 
+  - repo: protocurl
+    owner: qaware
+    asset: protocurl_${VERSION}_linux_amd64.zip
+
 pypi:
   - package: cqlsh
   - package: xmlformatter
