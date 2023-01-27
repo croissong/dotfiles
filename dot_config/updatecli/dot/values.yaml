@@ -26,10 +26,6 @@ repos:
     owner: jotaen
     asset: klog-linux.zip
 
-  - repo: shellcaster
-    owner: jeff-hughes
-    asset: shellcaster-${VERSION}-archlinux-x86_64.tar.gz
-
   - repo: youtube-tui
     owner: Siriusmart
     asset: youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64

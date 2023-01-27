@@ -94,11 +94,6 @@
     "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.1/sheldon-0.7.1-x86_64-unknown-linux-musl.tar.gz",
     "version": "0.7.1"
   },
-  "shellcaster": {
-    "sha": "1miwkxzi471g2ww29ln0xiyg23r0dpnj2hgxsgv86ciry4wrf0sp",
-    "url": "https://github.com/jeff-hughes/shellcaster/releases/download/v2.0.1/shellcaster-2.0.1-archlinux-x86_64.tar.gz",
-    "version": "2.0.1"
-  },
   "sttr": {
     "sha": "1hqf864iy8d7ipsx7f170p68jab36kpspgdpl574vgjkqap2wbl3",
     "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.14/sttr_0.2.14_linux_amd64.tar.gz",

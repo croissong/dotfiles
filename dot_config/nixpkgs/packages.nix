@@ -26,7 +26,6 @@
       my-pkgs.youtube-tui
       toipe # Trusty terminal typing tester
       twitch-tui
-      my-pkgs.shellcaster # Terminal-based podcast manager
       steamcmd
       steam-tui
       parsec-bin # Remote gaming streaming service client
