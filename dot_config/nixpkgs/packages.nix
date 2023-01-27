@@ -8,20 +8,25 @@
 }: let
   versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
 
-  my_pkgs = import ./my-pkgs.nix {
+  my-pkgs = import ./my-pkgs.nix {
     inherit pkgs config versions;
   };
 
   packages_dict = with pkgs; {
     inbox = [
+      # handlr
+
+      rofi
+      # dvc-with-remotes
     ];
+
     ent = [
       yt-dlp
-      my_pkgs.ytui-music
-      my_pkgs.youtube-tui
+      my-pkgs.ytui-music
+      my-pkgs.youtube-tui
       toipe # Trusty terminal typing tester
       twitch-tui
-      my_pkgs.shellcaster # Terminal-based podcast manager
+      my-pkgs.shellcaster # Terminal-based podcast manager
       steamcmd
       steam-tui
       parsec-bin # Remote gaming streaming service client
@@ -35,7 +40,7 @@
       git-annex-remote-googledrive
 
       system-config-printer
-      my_pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
+      my-pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
 
       djvulibre # for emacs doc-tools
       mupdf # for emacs doc-tools
@@ -48,7 +53,7 @@
     ];
 
     orga = [
-      my_pkgs.klog
+      my-pkgs.klog
     ];
 
     special_purpose = [
@@ -56,7 +61,7 @@
     ];
 
     dot = [
-      my_pkgs.updatecli # Continuously update everything
+      my-pkgs.updatecli # Continuously update everything
       chezmoi # Manage your dotfiles across multiple machines
     ];
 
@@ -68,7 +73,7 @@
         step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
         skopeo # A command line utility for various operations on container images and image repositories.
         watchman # Watchman exists to watch files and record when they change.
-        my_pkgs.versio # A version number manager
+        my-pkgs.versio # A version number manager
         grex # cli for generating regular expressions from user-provided test cases
       ];
 
@@ -76,7 +81,7 @@
         imv # A command line image viewer for tiling window managers
         # qimgv TODO: maybe
         vhs # A tool for generating terminal GIFs with code
-        my_pkgs.termshot # Creates screenshots based on terminal command output
+        my-pkgs.termshot # Creates screenshots based on terminal command output
         menyoki # Screen{shot,cast} and perform ImageOps on the command line
         swappy # A Wayland native snapshot editing tool
       ];
@@ -100,11 +105,11 @@
         tools = [
           bcal # Storage conversion and expression calculator
           eva # A calculator REPL, similar to bc
-          my_pkgs.sttr # cli to perform various operations on string
+          my-pkgs.sttr # cli to perform various operations on string
         ];
 
         csv = [
-          my_pkgs.csvlens # Command line csv viewer
+          my-pkgs.csvlens # Command line csv viewer
           tidy-viewer # CLI csv pretty printer
         ];
 
@@ -112,7 +117,7 @@
           miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
           dasel # Query and update data structures from the command line.
           sd # Intuitive find & replace
-          my_pkgs.desed # Debugger for Sed
+          my-pkgs.desed # Debugger for Sed
           teip # A tool to bypass a partial range of standard input to any command
           tree-grepper # Like grep, but uses tree-sitter grammars to search
         ];
@@ -153,7 +158,7 @@
         diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
         python310Packages.graphtage # diff tree-like files such as JSON and XML
         dyff #  A diff tool for YAML files, and sometimes JSON
-        my_pkgs.riff # A diff filter highlighting which line parts have changed
+        my-pkgs.riff # A diff filter highlighting which line parts have changed
         dogdns # Command-line DNS client like dig
 
         gopass # The slightly more awesome standard unix password manager for teams.
@@ -180,6 +185,7 @@
 
         termscp # A feature rich terminal UI file transfer and explorer
         termshark # Terminal UI for tshark, inspired by Wireshark
+        wireshark
 
         viddy # A modern watch command
         watchexec # Executes commands in response to file modifications
@@ -190,7 +196,7 @@
 
         libqalculate # An advanced calculator library
 
-        my_pkgs.got # CLI to download large files faster than cURL and Wget
+        my-pkgs.got # CLI to download large files faster than cURL and Wget
       ];
     };
 
@@ -217,7 +223,7 @@
       protocols = [
         altair # A feature-rich GraphQL Client IDE
         grpcurl # Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
-        my_pkgs.protocurl # cURL for Protobuf
+        my-pkgs.protocurl # cURL for Protobuf
         swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
       ];
 
@@ -237,7 +243,7 @@
       general = [
         seer # A Qt gui frontend for GDB
         mold # A faster drop-in replacement for existing Unix linkers
-        my_pkgs.aiac # Artificial Intelligence Infrastructure-as-Code Generator
+        my-pkgs.aiac # Artificial Intelligence Infrastructure-as-Code Generator
         powershell
       ];
 
@@ -262,7 +268,7 @@
       ];
 
       edit = [
-        my_pkgs.go-commitlinter
+        my-pkgs.go-commitlinter
         helix #  A post-modern modal text editor
         stylua # Code formatter for Lua
         treefmt
@@ -316,12 +322,12 @@
       };
 
       util = [
-        my_pkgs.dtool # CLI tool collection to assist development
+        my-pkgs.dtool # CLI tool collection to assist development
       ];
 
       data = [
         dbeaver # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
-        my_pkgs.qsv #  CSVs sliced, diced & analyzed.
+        my-pkgs.qsv #  CSVs sliced, diced & analyzed.
       ];
     };
 
@@ -367,7 +373,7 @@
       ];
 
       xml = [
-        my_pkgs.xmlformatter
+        my-pkgs.xmlformatter
       ];
     };
 
@@ -375,12 +381,12 @@
       cli = [
         croc # Easily and securely send things from one computer to another
         goimapnotify # Execute scripts on IMAP mailbox changes using IDLE
-        my_pkgs.mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
+        my-pkgs.mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
         grim # Grab images from a Wayland compositor
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
         topgrade # Invoke the upgrade procedure of multiple package managers
-        my_pkgs.gup
+        my-pkgs.gup
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
         amber # A code search-and-replace tool
         slurp # Select a region in a Wayland compositor
@@ -393,7 +399,7 @@
 
       docs = [
         paperwork # Personal document manager
-        my_pkgs.wutag # CLI tool for tagging and organizing files by tags
+        my-pkgs.wutag # CLI tool for tagging and organizing files by tags
         simple-scan
         zathura # A highly customizable and functional PDF viewer
         deskew # deskewing scanned text documents
@@ -464,7 +470,7 @@
 
       core = [
         atuin # Replacement for a shell history which records additional commands context
-        my_pkgs.sheldon # Fast, configurable, shell plugin manager
+        my-pkgs.sheldon # Fast, configurable, shell plugin manager
       ];
     };
 
@@ -521,7 +527,7 @@
 
       productivity = [
         blanket # Improve focus and increase your productivity by listening to different sounds
-        my_pkgs.focus
+        my-pkgs.focus
         minder
       ];
     };
@@ -630,8 +636,8 @@
       krew # Krew is the package manager for kubectl plugins.
       kubectl # Kubernetes.io client binary
       kubelogin # A Kubernetes credential plugin implementing Azure authentication
-      my_pkgs.kubesess
-      my_pkgs.kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
+      my-pkgs.kubesess
+      my-pkgs.kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
       telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
