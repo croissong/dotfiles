@@ -60,9 +60,9 @@
     "version": "1.2.9"
   },
   "kubeshark": {
-    "sha": "1r2bw8fw0dmlfkgjcdnmcp8zl8x859x860j6606kkm205r826d2g",
-    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.3/kubeshark_linux_amd64",
-    "version": "38.3"
+    "sha": "1kj12al9lw8brw37333wap236qfc7afjv3mrs8b1srfl5mk80mi5",
+    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.4/kubeshark_linux_amd64",
+    "version": "38.4"
   },
   "mailctl": {
     "sha": "19ak5hr859xf1b83b2f14nqqq5kd7jjfxrwarc9w6j8zynyzl64w",

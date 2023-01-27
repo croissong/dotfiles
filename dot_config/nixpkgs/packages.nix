@@ -185,7 +185,7 @@
 
         termscp # A feature rich terminal UI file transfer and explorer
         termshark # Terminal UI for tshark, inspired by Wireshark
-        wireshark
+        wireshark # Powerful network protocol analyzer
 
         viddy # A modern watch command
         watchexec # Executes commands in response to file modifications
