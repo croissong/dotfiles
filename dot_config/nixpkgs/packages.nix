@@ -610,6 +610,8 @@
       doctl # The official command line interface for the DigitalOcean API
 
       mob # Tool for smooth git handover
+      git
+      git-trim # Automatically trims your branches whose tracking remote refs are merged or gone
 
       gh # GitHub CLI tool
       glab # GitLab CLI tool
