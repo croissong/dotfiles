@@ -114,10 +114,8 @@ alias godeps='go get -u all && go mod tidy'
 alias docker=podman
 alias summon='summon -f summon.yml'
 
-alias pets='pet search | clip'
-
-alias vol=pamixer
-alias volg='pamixer --get-volume-human'
+alias ways='the-way search'
+alias wayn='the-way new'
 
 alias mvnpkg='mvn package -DskipTests'
 alias mvndep='mvn dependency:resolve -Dclassifier=sources'

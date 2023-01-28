@@ -149,8 +149,8 @@
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
 
-        cheat # Allows you to create and view interactive cheatsheets on the command-line
-        navi # An interactive cheatsheet tool for the command-line
+        tealdeer # tldr in Rust
+        the-way # Terminal code snippets manager
 
         delta # A syntax-highlighting pager for git
         difftastic # A syntax-aware diff
@@ -273,7 +273,7 @@
         treefmt
         tokei # A program that allows you to count your code, quickly
         tree-sitter-grammars.tree-sitter-yaml
-        tree-sitter-grammars.tree-sitter-toml
+        # tree-sitter-grammars.tree-sitter-toml
       ];
 
       lang = {
