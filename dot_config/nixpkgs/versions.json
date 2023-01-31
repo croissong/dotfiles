@@ -60,9 +60,9 @@
     "version": "1.2.9"
   },
   "kubeshark": {
-    "sha": "1kj12al9lw8brw37333wap236qfc7afjv3mrs8b1srfl5mk80mi5",
-    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.4/kubeshark_linux_amd64",
-    "version": "38.4"
+    "sha": "03pmy264cq8pz46nd2163wq6sivk2rgxb54lpdwkcdf89bv8axx5",
+    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_linux_amd64",
+    "version": "38.5"
   },
   "mailctl": {
     "sha": "19ak5hr859xf1b83b2f14nqqq5kd7jjfxrwarc9w6j8zynyzl64w",
@@ -75,9 +75,9 @@
     "version": "1.5.5"
   },
   "qsv": {
-    "sha": "121f86rml417wh8xh24gddfgd31gzaknhimpa5m93il2dzhcxg9i",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.85.0/qsv-0.85.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.85.0"
+    "sha": "09ddsimm2hmm38c87a4vvs6zpq9l78q0as70rl0ighwzj4rihrm1",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.87.0/qsv-0.87.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.87.0"
   },
   "riff": {
     "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
@@ -125,9 +125,9 @@
     "version": "0.2.4"
   },
   "youtube-tui": {
-    "sha": "00lvl09zdiifrh3jw0za4vfyihr3l441q84a8q7zb5ykq4aa46mi",
-    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.1/youtube-tui-full_arch-x86_64.youtube-tui-full_arch-x86_64",
-    "version": "0.6.1"
+    "sha": "0k304lf0n5b9g7py72c9yzhx1rf6abmj6m6sw9vqyyqwfcvs2qy8",
+    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.2/default.youtube-tui-full_arch-x86_64",
+    "version": "0.6.2"
   },
   "ytui-music": {
     "sha": "0z21vplb1yqqvrsfgc8mapgbgliw20q2xvmp5s82za27byzqrh17",
