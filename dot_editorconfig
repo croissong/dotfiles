@@ -15,3 +15,6 @@ indent_style = tab
 # https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd
 shell_variant      = bash
 switch_case_indent = false
+
+[*.md]
+trim_trailing_whitespace = false
