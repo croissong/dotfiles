@@ -168,8 +168,7 @@ e() {
 
 function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
 
-alias j='just --justfile ~/.user.justfile --working-directory .'
-alias jpriv='just --justfile ~/.user-priv.justfile --working-directory .'
+alias j='just --unstable --justfile ~/.user.justfile --working-directory .'
 
 ts-from-unix() {
   date --utc -Iseconds -d @$1

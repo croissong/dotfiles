@@ -1,11 +1,13 @@
+!include Dot/priv/justfile
+
 default:
-  @just --justfile ~/.user.justfile --choose
+  @just --choose      
 
 vpnio-start:
-    systemctl restart strongswan
-    sudo swanctl -i -c vpn
+  systemctl restart strongswan
+  sudo swanctl -i -c vpn
 vpnio-stop:
-    systemctl stop strongswan
+  systemctl stop strongswan
 
 
 nix: nix-cm nix-hm nix-diff nix-check-missing
