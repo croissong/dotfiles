@@ -75,9 +75,9 @@
     "version": "1.5.5"
   },
   "qsv": {
-    "sha": "09ddsimm2hmm38c87a4vvs6zpq9l78q0as70rl0ighwzj4rihrm1",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.87.0/qsv-0.87.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.87.0"
+    "sha": "0b5cq6a86yr6gzh70wwc1q3bqfa2iz7ww110l85hxys319qlmqiw",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.87.1/qsv-0.87.1-x86_64-unknown-linux-gnu.zip",
+    "version": "0.87.1"
   },
   "riff": {
     "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
@@ -130,7 +130,7 @@
     "version": "0.6.2"
   },
   "ytui-music": {
-    "sha": "0z21vplb1yqqvrsfgc8mapgbgliw20q2xvmp5s82za27byzqrh17",
+    "sha": "0i5g5qb87hd4h95wcyg753xvz0nycqs5li0xbm4wykg9w0myyhz8",
     "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-beta/ytui_music-linux-amd64",
     "version": "2.0.0-beta"
   }
