@@ -1,7 +1,7 @@
 !include Dot/priv/justfile
 
 default:
-  @just --choose      
+  @just --choose
 
 vpnio-start:
   systemctl restart strongswan
@@ -30,11 +30,11 @@ nix-hm:
 
 nix-diff:
   # https://discourse.nixos.org/t/nvd-simple-nix-nixos-version-diff-tool/12397/28
-  nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2)
+  nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2) | rg →
 
 nix-check-missing:
   # outdated
-  nix search nixpkgs '\.(helmfile|sheldon|summon|goimapnotify)'
+  nix search nixpkgs '\.(sheldon|summon|goimapnotify)'
   # missing
   nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|kubeshark|mailctl|riff|sttr|versio$|youtube-tui|updatecli|got$)'
 
