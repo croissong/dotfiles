@@ -86,9 +86,9 @@ repos:
   - repo: helmfile
     owner: helmfile
 
-  - repo: aiac
-    owner: gofireflyio
-    asset: aiac_${VERSION}_Linux-64bit.tar.gz
+  - repo: ata
+    owner: rikhuijzer
+    asset: ata-x86_64-unknown-linux-gnu
 
   - repo: desed
     owner: SoptikHa2

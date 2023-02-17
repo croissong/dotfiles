@@ -5,22 +5,22 @@
   ...
 }:
 with pkgs; let
-  aiac = stdenv.mkDerivation {
-    pname = "aiac";
-    version = versions.aiac.version;
+  ata = stdenv.mkDerivation {
+    pname = "ata";
+    version = versions.ata.version;
     src = fetchurl {
-      url = versions.aiac.url;
-      sha256 = versions.aiac.sha;
+      url = versions.ata.url;
+      sha256 = versions.ata.sha;
     };
 
-    sourceRoot = ".";
+    unpackPhase = ":";
     installPhase = ''
-      install -m755 -D aiac $out/bin/aiac
+      install -m755 -D $src $out/bin/ata
     '';
 
     meta = {
-      homepage = "https://github.com/gofireflyio/aiac";
-      description = "Artificial Intelligence Infrastructure-as-Code Generator";
+      homepage = "https://github.com/rikhuijzer/ata";
+      description = "OpenAI GPT in the terminal";
     };
   };
 
@@ -48,7 +48,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-cYm9z6K2fSIKcHxFb7rhudsMkKb4jhi2jwocNTouCmM=";
+    cargoSha256 = "sha256-ootnX+5Afn1DK7ILNqjgyMxxdGbQPtQ8GJVQBjuHIBQ=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -528,7 +528,7 @@ with pkgs; let
     };
   };
 in {
-  aiac = aiac;
+  ata = ata;
   cqlsh = cqlsh;
   csvlens = csvlens;
   desed = desed;

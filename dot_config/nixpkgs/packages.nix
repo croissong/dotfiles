@@ -17,6 +17,7 @@
       # handlr
 
       rofi
+      tofi
       # dvc-with-remotes
     ];
 
@@ -148,6 +149,7 @@
         b3sum # BLAKE3 cryptographic hash function
         bat # Cat clone with syntax highlighting and git integration
         broot # Fuzzy Search + tree + cd
+        as-tree # Print a list of paths as a tree of paths
 
         tealdeer # tldr in Rust
         the-way # Terminal code snippets manager
@@ -177,6 +179,8 @@
 
         podman # Tool and library for running OCI-based containers in pods
         podman-compose # A script to run docker-compose.yml using podman
+
+        nerdctl # CLI for containerd
 
         rsync # Fast incremental file transfer utility
 
@@ -242,7 +246,7 @@
       general = [
         seer # A Qt gui frontend for GDB
         mold # A faster drop-in replacement for existing Unix linkers
-        my-pkgs.aiac # Artificial Intelligence Infrastructure-as-Code Generator
+        my-pkgs.ata # OpenAI GPT in the terminal
         powershell
       ];
 
@@ -480,6 +484,7 @@
         khal # CLI calendar application build around CalDAV
         khard # Console carddav client
         vdirsyncer # Synchronize calendars and contacts
+        himalaya # Command-line interface for email management
       ];
 
       bookmarks = [
@@ -580,6 +585,7 @@
       nixos-generators
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
+      nix-init # Generate Nix packages from URLs
 
       nixos-shell
     ];
