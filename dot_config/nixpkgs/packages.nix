@@ -16,8 +16,6 @@
     inbox = [
       # handlr
 
-      rofi
-      tofi
       # dvc-with-remotes
     ];
 
@@ -398,6 +396,7 @@
 
       wm = [
         wob # A lightweight overlay bar for Wayland
+        tofi # Tiny dynamic menu for Wayland
       ];
 
       docs = [

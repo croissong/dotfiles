@@ -1,0 +1,16 @@
+width = 30%
+height = 30%
+border-width = 0
+outline-width = 0
+padding-left = 2%
+padding-top = 2%
+result-spacing = 5
+num-results = 8
+font = "/usr/share/fonts/nerd-fonts-complete/TTF/Hack Regular Nerd Font Complete.ttf"
+background-color = 48493cd6
+font-size = 17
+drun-launch = true
+ascii-input = true
+prompt-text = ""
+selection-color = #baaf5e
+hint-font = false
