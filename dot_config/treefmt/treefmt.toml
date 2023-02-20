@@ -13,3 +13,8 @@ includes = ["*.sh"]
 command = "xmlformat"
 options = ["--blanks", "--indent", "4", "--selfclose", "-"]
 includes = ["*.xml"]
+
+[formatter.jsonnet]
+command = "jsonnetfmt"
+options = ["--in-place"]
+includes = ["*.jsonnet"]
