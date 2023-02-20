@@ -219,24 +219,6 @@ with pkgs; let
     };
   };
 
-  kubeshark = stdenv.mkDerivation {
-    pname = "kubeshark";
-    version = versions.kubeshark.version;
-    src = fetchurl {
-      url = versions.kubeshark.url;
-      sha256 = versions.kubeshark.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/kubeshark
-    '';
-    meta = {
-      homepage = "https://github.com/kubeshark/kubeshark";
-      description = "The API traffic viewer for Kubernetes. Think TCPDump and Wireshark re-invented for Kubernetes";
-    };
-  };
-
   mailctl = stdenv.mkDerivation {
     pname = "mailctl";
     version = versions.mailctl.version;
@@ -539,7 +521,6 @@ in {
   gup = gup;
   klog = klog;
   kubesess = kubesess;
-  kubeshark = kubeshark;
   mailctl = mailctl;
   protocurl = protocurl;
   qsv = qsv;

@@ -40,9 +40,9 @@
     "version": "0.7.0"
   },
   "gup": {
-    "sha": "0pc42jgz9dpxbdjwnrz2wi0z4p44bvaac9gbbm7ap1pbv8h68l0c",
-    "url": "https://github.com/nao1215/gup/releases/download/v0.16.0/gup_0.16.0_Linux_x86_64.tar.gz",
-    "version": "0.16.0"
+    "sha": "1jimr7wzihh2s0p6ck3qzl61qdpf5x9kyy7dmqkv1n791hpz57vn",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.17.0/gup_0.17.0_Linux_x86_64.tar.gz",
+    "version": "0.17.0"
   },
   "helmfile": {
     "sha": "00yh1p5y063rwfy4y0j2ypay6gw5b50chf1rm58k6xpky6x32fw7",
@@ -59,11 +59,6 @@
     "url": "https://github.com/Ramilito/kubesess/releases/download/1.2.9/kubesess_1.2.9_x86_64-unknown-linux-gnu.tar.gz",
     "version": "1.2.9"
   },
-  "kubeshark": {
-    "sha": "03pmy264cq8pz46nd2163wq6sivk2rgxb54lpdwkcdf89bv8axx5",
-    "url": "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_linux_amd64",
-    "version": "38.5"
-  },
   "mailctl": {
     "sha": "19ak5hr859xf1b83b2f14nqqq5kd7jjfxrwarc9w6j8zynyzl64w",
     "url": "https://github.com/pdobsan/mailctl/releases/download/0.7.4/mailctl-0.7.4-Linux-x86_64",
@@ -75,9 +70,9 @@
     "version": "1.5.5"
   },
   "qsv": {
-    "sha": "1sjzkfib2vzc1x9akyvy6hrmgar9a7w1zyrjz9fszjq6n1avhkr1",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.88.2/qsv-0.88.2-x86_64-unknown-linux-gnu.zip",
-    "version": "0.88.2"
+    "sha": "01k5mwnxhhch0szrg696w0933jnbdih9ang2p8mvy4wglj9lq7lz",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.89.0/qsv-0.89.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.89.0"
   },
   "riff": {
     "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
@@ -105,9 +100,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "1816i4m5sgpk4qcysq5krcnh1mbfqhpiyqzzmdv7xg78xqszq4x1",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.44.2/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.44.2"
+    "sha": "17kg68jjpdvqg1alz7j3nad3s9q6mid3xgby830iw88axsf515c3",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.44.4/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.44.4"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",

@@ -643,7 +643,7 @@
       kubectl # Kubernetes.io client binary
       kubelogin # A Kubernetes credential plugin implementing Azure authentication
       my-pkgs.kubesess
-      my-pkgs.kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
+      kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
       telepresence2 # Local development against a remote Kubernetes or OpenShift cluster

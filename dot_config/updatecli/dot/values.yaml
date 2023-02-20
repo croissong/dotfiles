@@ -65,11 +65,6 @@ repos:
     asset: kubesess_${VERSION}_x86_64-unknown-linux-gnu.tar.gz
     trimPrefix: false
 
-  - repo: kubeshark
-    owner: kubeshark
-    asset: kubeshark_linux_amd64
-    trimPrefix: false
-
   - repo: sttr
     owner: abhimanyu003
     asset: sttr_${VERSION}_linux_amd64.tar.gz
