@@ -8,9 +8,7 @@
   rust-overlay,
   tree-grepper,
   ...
-}: let
-  secrets = import ./secrets.nix;
-in {
+}: {
   nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
   programs.home-manager.enable = true;

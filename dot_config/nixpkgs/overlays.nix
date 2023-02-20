@@ -36,16 +36,8 @@
       buildGoModule = args:
         super.buildGoModule (args
           // {
-            vendorSha256 = "sha256-vLLS+/Xfnlt6cvkNvXKX3DVLku1Q4bRCiv2vMTfOnfw=";
+            vendorSha256 = "sha256-f0K3/xF+nJvlhtLAyLOah2RaZbaEqD8C28cPCLyaCXI=";
             inherit src version;
-
-            ldflags = ["-s" "-w" "-X go.szostok.io/version.version=${version}"];
-
-            postInstall = ''
-              installShellCompletion --cmd helmfile \
-                --bash <($out/bin/helmfile completion --bash) \
-                --zsh <($out/bin/helmfile completion --zsh)
-            '';
           });
     });
   })

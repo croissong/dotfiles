@@ -1,8 +1,8 @@
 {
-  "aiac": {
-    "sha": "0gxr9gfb3b3xq9ccsdqnfgixiqigwjj19q9l4fanpx9kfjhlmypn",
-    "url": "https://github.com/gofireflyio/aiac/releases/download/v1.0.0/aiac_1.0.0_Linux-64bit.tar.gz",
-    "version": "1.0.0"
+  "ata": {
+    "sha": "1kmk4g6cixg3armjvfsnqi2mi85zcykv7al1qjh4ns5g3wn7kxd2",
+    "url": "https://github.com/rikhuijzer/ata/releases/download/v1.0.3/ata-x86_64-unknown-linux-gnu",
+    "version": "1.0.3"
   },
   "cqlsh": {
     "sha": "0baqsrzsph12ijql37ii6azbd0x7gc4gv6qbrynxl55yizcc4mzv",
@@ -10,9 +10,9 @@
     "version": "6.1.0"
   },
   "csvlens": {
-    "sha": "1n7p0ngn45apm10wzh1qfwsg34bhqhnjqxywkl6gfbx1c5bchm7f",
-    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.10.tar.gz",
-    "version": "0.1.10"
+    "sha": "13rggcyn5dpk9p7m42p68b4hsf8nj9h3icffnszd6rl6sr3fs57q",
+    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.11.tar.gz",
+    "version": "0.1.11"
   },
   "desed": {
     "sha": "1klz4xhnalgh5mq90dfv5qgbzbqhri6nvah525kdhvn67wysysp5",
@@ -40,14 +40,14 @@
     "version": "0.7.0"
   },
   "gup": {
-    "sha": "0n2vmq70yc6njg5s2xxswb6qbwmdjqggkv5gd0yjl1cq8wb9h92r",
-    "url": "https://github.com/nao1215/gup/releases/download/v0.15.1/gup_0.15.1_Linux_x86_64.tar.gz",
-    "version": "0.15.1"
+    "sha": "0pc42jgz9dpxbdjwnrz2wi0z4p44bvaac9gbbm7ap1pbv8h68l0c",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.16.0/gup_0.16.0_Linux_x86_64.tar.gz",
+    "version": "0.16.0"
   },
   "helmfile": {
-    "sha": "0xjk4xp0j5cclhqgh3pdmwl25p1wvw52r7xqz0fkp8rfj3was07g",
-    "url": "https://github.com/helmfile/helmfile/archive/refs/tags/v0.150.0.tar.gz",
-    "version": "0.150.0"
+    "sha": "00yh1p5y063rwfy4y0j2ypay6gw5b50chf1rm58k6xpky6x32fw7",
+    "url": "https://github.com/helmfile/helmfile/archive/refs/tags/v0.151.0.tar.gz",
+    "version": "0.151.0"
   },
   "klog": {
     "sha": "0c435r27nz537225bhpjzhy02l4mfqmpbbqg6cpqsxln2p7jxv28",
@@ -75,9 +75,9 @@
     "version": "1.5.5"
   },
   "qsv": {
-    "sha": "0b5cq6a86yr6gzh70wwc1q3bqfa2iz7ww110l85hxys319qlmqiw",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.87.1/qsv-0.87.1-x86_64-unknown-linux-gnu.zip",
-    "version": "0.87.1"
+    "sha": "1sjzkfib2vzc1x9akyvy6hrmgar9a7w1zyrjz9fszjq6n1avhkr1",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.88.2/qsv-0.88.2-x86_64-unknown-linux-gnu.zip",
+    "version": "0.88.2"
   },
   "riff": {
     "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
@@ -95,9 +95,9 @@
     "version": "0.7.1"
   },
   "sttr": {
-    "sha": "1hqf864iy8d7ipsx7f170p68jab36kpspgdpl574vgjkqap2wbl3",
-    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.14/sttr_0.2.14_linux_amd64.tar.gz",
-    "version": "0.2.14"
+    "sha": "1xm9ccqi4wfpp999la7fkxvirz2bwlnmnlk1ga48zcdmw9ncw6i3",
+    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.15/sttr_0.2.15_linux_amd64.tar.gz",
+    "version": "0.2.15"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
@@ -105,9 +105,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "1fn22077irr5zhv7bx4yz2jk48pc9ysr2g6v9p4vcb672vsa1gmz",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.43.0/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.43.0"
+    "sha": "1816i4m5sgpk4qcysq5krcnh1mbfqhpiyqzzmdv7xg78xqszq4x1",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.44.2/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.44.2"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
