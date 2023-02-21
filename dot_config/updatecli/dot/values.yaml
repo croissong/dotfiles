@@ -100,4 +100,5 @@ repos:
 
 pypi:
   - package: cqlsh
+  - package: promformat
   - package: xmlformatter

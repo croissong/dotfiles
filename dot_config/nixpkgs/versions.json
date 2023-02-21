@@ -64,6 +64,11 @@
     "url": "https://github.com/pdobsan/mailctl/releases/download/0.7.4/mailctl-0.7.4-Linux-x86_64",
     "version": "0.7.4"
   },
+  "promformat": {
+    "sha": "1shrwydsgqvs3lyvwcgy6z90ly3nqz8a4mxbgnpi098pfgm3ixnz",
+    "url": "https://files.pythonhosted.org/packages/4d/c0/e780892ac19894544e800be47474c7e271157de5af560094c0696c1b9b88/promformat-0.0.4-py3-none-any.whl",
+    "version": "0.0.4"
+  },
   "protocurl": {
     "sha": "1icsvjqgv59zrjhwsam08gk15ik5imy62ayflmli6nh5fpm4b4mb",
     "url": "https://github.com/qaware/protocurl/releases/download/v1.5.5/protocurl_1.5.5_linux_amd64.zip",

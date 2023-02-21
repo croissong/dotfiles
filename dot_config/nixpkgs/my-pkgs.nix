@@ -509,6 +509,53 @@ with pkgs; let
       description = "Youtube client in terminal for music";
     };
   };
+
+  kanri = pkgs.appimageTools.wrapType2 rec {
+    pname = "kanri";
+    version = "0.3.3";
+
+    src = fetchurl {
+      url = "https://github.com/trobonox/kanri/releases/download/app-v0.3.3/kanri_0.3.3_amd64.AppImage";
+      hash = "sha256-gyRjDPPLhBHufSZZPNyEKmGwKziai1TW6B5ui63xB1E=";
+    };
+
+    # TODO: many examples https://github.com/NixOS/nixpkgs/search?q=appimageTools&type=issues
+    # kanri-desktop = writeTextDir "share/applications/kanri.desktop" ''
+    #   [Desktop Entry]
+    #   Version=3
+    #   Type=Application
+    #   Name=Kanri
+    #   Exec=kanri
+    # '';
+
+    # TODO: https://github.com/NixOS/nixpkgs/issues/200955
+    extraPkgs = pkgs: with pkgs; [libthai];
+
+    extraInstallCommands = ''
+      mv $out/bin/kanri-${version} $out/bin/kanri
+    '';
+
+    meta = {
+      homepage = "https://github.com/trobonox/kanri";
+      description = "Kanban board desktop application";
+    };
+  };
+
+  promformat = python3Packages.buildPythonPackage {
+    pname = "promformat";
+    format = "wheel";
+    version = versions.promformat.version;
+    src = fetchurl {
+      url = versions.promformat.url;
+      sha256 = versions.promformat.sha;
+    };
+    propagatedBuildInputs = with python310Packages; [antlr4-python3-runtime];
+
+    meta = {
+      homepage = "https://github.com/facetoe/promformat";
+      description = "PromQL formatter";
+    };
+  };
 in {
   ata = ata;
   cqlsh = cqlsh;
@@ -519,9 +566,11 @@ in {
   go-commitlinter = go-commitlinter;
   got = got;
   gup = gup;
+  kanri = kanri;
   klog = klog;
   kubesess = kubesess;
   mailctl = mailctl;
+  promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;
   riff = riff;

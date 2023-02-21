@@ -17,6 +17,8 @@
       # handlr
 
       # dvc-with-remotes
+      my-pkgs.kanri
+      my-pkgs.promformat
     ];
 
     ent = [
