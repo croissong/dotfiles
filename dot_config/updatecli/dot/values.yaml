@@ -30,11 +30,6 @@ repos:
     owner: Siriusmart
     asset: default.youtube-tui-full_arch-x86_64
 
-  - repo: mailctl
-    owner: pdobsan
-    asset: mailctl-${VERSION}-Linux-x86_64
-    trimPrefix: false
-
   - repo: csvlens
     owner: YS-L
 
@@ -102,3 +97,10 @@ pypi:
   - package: cqlsh
   - package: promformat
   - package: xmlformatter
+
+sourcehut:
+  mailctl:
+    repo:
+      name: mailctl
+      owner: ~petrus
+    asset: mailctl-${VERSION}.tgz

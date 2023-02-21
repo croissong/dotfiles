@@ -60,9 +60,9 @@
     "version": "1.2.9"
   },
   "mailctl": {
-    "sha": "19ak5hr859xf1b83b2f14nqqq5kd7jjfxrwarc9w6j8zynyzl64w",
-    "url": "https://github.com/pdobsan/mailctl/releases/download/0.7.4/mailctl-0.7.4-Linux-x86_64",
-    "version": "0.7.4"
+    "sha": "04lkyny785qqimv38rmgkl2qvnbr8s8sfbpzll2p30ah6qznszra",
+    "url": "https://git.sr.ht/~petrus/mailctl/refs/download/0.8.3/mailctl-0.8.3.tgz",
+    "version": "0.8.3"
   },
   "promformat": {
     "sha": "1shrwydsgqvs3lyvwcgy6z90ly3nqz8a4mxbgnpi098pfgm3ixnz",
