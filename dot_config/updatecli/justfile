@@ -2,7 +2,7 @@ apply:
   summon -f summon.yml \
   updatecli apply \
   --values dot/values.yaml \
-  -c dot
+  -c dot/nix.yaml
 
 diff:
   summon -f summon.yml \

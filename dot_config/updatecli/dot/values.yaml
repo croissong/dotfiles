@@ -1,106 +1,104 @@
-repos:
-  - repo: updatecli
-    owner: updatecli
-    asset: updatecli_Linux_x86_64.tar.gz
+# pypi:
+#   - package: cqlsh
+#   - package: promformat
+#   - package: xmlformatter
 
-  - repo: got
-    owner: melbahja
-    asset: got_${VERSION}_Linux_amd64.tar.gz
+ata:
+  owner: rikhuijzer
+  asset: ata-x86_64-unknown-linux-gnu
 
-  - repo: sane-scan-pdf
-    owner: rocketraman
+csvlens:
+  owner: YS-L
 
-  - repo: gup
-    owner: nao1215
-    asset: gup_${VERSION}_Linux_x86_64.tar.gz
+desed:
+  owner: SoptikHa2
+  asset: desed-x86_64-unknown-linux-gnu
 
-  - repo: focus
-    owner: ayoisaiah
-    asset: focus_${VERSION}_linux_amd64.tar.gz
 
-  - repo: versio
-    owner: chaaz
-    asset: versio__x86_64-unknown-linux-gnu
+dtool:
+  owner: guoxbin
 
-  - repo: klog
-    owner: jotaen
-    asset: klog-linux.zip
+got:
+  owner: melbahja
+  asset: got_${VERSION}_Linux_amd64.tar.gz
 
-  - repo: youtube-tui
-    owner: Siriusmart
-    asset: default.youtube-tui-full_arch-x86_64
+focus:
+  owner: ayoisaiah
+  asset: focus_${VERSION}_linux_amd64.tar.gz
 
-  - repo: csvlens
-    owner: YS-L
+go-commitlinter:
+  owner: masahiro331
+  asset: go-commitlinter_${VERSION}_Linux_x86_64.tar.gz
+  trimPrefix: false
 
-  - repo: go-commitlinter
-    owner: masahiro331
-    asset: go-commitlinter_${VERSION}_Linux_x86_64.tar.gz
-    trimPrefix: false
+gup:
+  owner: nao1215
+  asset: gup_${VERSION}_Linux_x86_64.tar.gz
 
-  - repo: ytui-music
-    owner: sudipghimire533
-    asset: ytui_music-linux-amd64
+helmfile:
+  owner: helmfile
 
-  - repo: dtool
-    owner: guoxbin
+klog:
+  owner: jotaen
+  asset: klog-linux.zip
 
-  - repo: sheldon
-    owner: rossmacarthur
-    asset: sheldon-${VERSION}-x86_64-unknown-linux-musl.tar.gz
-    trimPrefix: false
+kubesess:
+  owner: Ramilito
+  asset: kubesess_${VERSION}_x86_64-unknown-linux-gnu.tar.gz
+  trimPrefix: false
 
-  - repo: wutag
-    owner: vv9k
-    asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
-    trimPrefix: false
+mailctl:
+  kind: sourcehut
+  owner: ~petrus
+  asset: mailctl-${VERSION}.tgz
 
-  - repo: kubesess
-    owner: Ramilito
-    asset: kubesess_${VERSION}_x86_64-unknown-linux-gnu.tar.gz
-    trimPrefix: false
+protocurl:
+  owner: qaware
+  asset: protocurl_${VERSION}_linux_amd64.zip
 
-  - repo: sttr
-    owner: abhimanyu003
-    asset: sttr_${VERSION}_linux_amd64.tar.gz
+qsv:
+  owner: jqnatividad
+  trimPrefix: false
+  asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
 
-  - repo: termshot
-    owner: homeport
-    asset: termshot_${VERSION}_linux_amd64.tar.gz
+riff:
+  owner: walles
+  trimPrefix: false
+  asset: riff-${VERSION}-x86_64-linux
 
-  - repo: riff
-    owner: walles
-    trimPrefix: false
-    asset: riff-${VERSION}-x86_64-linux
+sane-scan-pdf:
+  owner: rocketraman
 
-  - repo: helmfile
-    owner: helmfile
+sheldon:
+  owner: rossmacarthur
+  asset: sheldon-${VERSION}-x86_64-unknown-linux-musl.tar.gz
+  trimPrefix: false
 
-  - repo: ata
-    owner: rikhuijzer
-    asset: ata-x86_64-unknown-linux-gnu
+sttr:
+  owner: abhimanyu003
+  asset: sttr_${VERSION}_linux_amd64.tar.gz
 
-  - repo: desed
-    owner: SoptikHa2
-    asset: desed-x86_64-unknown-linux-gnu
+termshot:
+  owner: homeport
+  asset: termshot_${VERSION}_linux_amd64.tar.gz
 
-  - repo: qsv
-    owner: jqnatividad
-    trimPrefix: false
-    asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
+updatecli:
+  owner: updatecli
+  asset: updatecli_Linux_x86_64.tar.gz
 
-  - repo: protocurl
-    owner: qaware
-    asset: protocurl_${VERSION}_linux_amd64.zip
+versio:
+  owner: chaaz
+  asset: versio__x86_64-unknown-linux-gnu
 
-pypi:
-  - package: cqlsh
-  - package: promformat
-  - package: xmlformatter
+wutag:
+  owner: vv9k
+  asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
+  trimPrefix: false
 
-sourcehut:
-  mailctl:
-    repo:
-      name: mailctl
-      owner: ~petrus
-    asset: mailctl-${VERSION}.tgz
+youtube-tui:
+  owner: Siriusmart
+  asset: youtube-tui-full_arch-x86_64
+
+ytui-music:
+  owner: sudipghimire533
+  asset: ytui_music-linux-amd64

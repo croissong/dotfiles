@@ -1,70 +1,69 @@
 name: nix
 
 sources:
-  {{range .repos}}
+  {{ range $name, $config := . }}
 
-  {{ .repo }}-version:
+  # set defaults
+  {{ $config = mergeOverwrite (dict "kind" "github" "repo" $name "asset" false "trimPrefix" true) $config }}
+
+  {{ if eq $config.kind "sourcehut" }}
+  {{ $name }}:
+    kind: shell
+    spec:
+      environments:
+        - name: PATH
+          value: '{{ requiredEnv "PATH" }}'
+        - name: SH_TOKEN
+          value: '{{ requiredEnv "SH_TOKEN" }}'
+      command: ./dot/sourcehut.sh '{{ $config | toJson }}'
+
+  {{ else if eq $config.kind "github" }}
+  {{ $name }}-version:
     kind: githubrelease
     spec:
-      owner: "{{ .owner }}"
-      repository: "{{ .repo }}"
+      repository: "{{ $config.repo }}"
+      owner: "{{ $config.owner }}"
       token: {{ requiredEnv "GH_TOKEN"  }}
       versionFilter:
         kind: latest
+    {{ if $config.trimPrefix }}
     transformers:
-      - trimprefix: {{ or .trimprefix "v" }}
-
-  {{ .repo }}-url:
+      - trimprefix: "v"
+    {{ end }}
+  {{ $name }}:
     kind: shell
     dependson:
-      - {{ printf "%s-version" .repo }}
+      - {{ printf "%s-version" $name }}
     spec:
-      environments:
-        - name: OWNER
-          value: '{{ .owner }}'
-        - name: REPO
-          value: '{{ .repo }}'
-        - name: ASSET
-          value: '{{ or .asset false }}'
-        - name: TRIM_PREFIX
-          value: '{{ .trimPrefix }}'
-      command: ./dot/build-url.sh {{ source (printf "%s-version" .repo) }}
-
-
-  {{ .repo }}-sha:
-    kind: shell
-    dependson:
-      - {{ printf "%s-url" .repo }}
-    spec:
-      command: ./dot/nix-fetch-sha.sh {{ source (printf "%s-url" .repo) }}
+      command: ./dot/github.sh '{{ $config | toJson }}' '{{ source (printf "%s-version" $name) }}'
+  {{end}}
 
   {{end}}
 
 targets:
-  {{range .repos}}
+  {{range $name, $repo := .}}
 
-  {{ .repo }}-nixpkgs-version:
-    name: update nix version
-    kind: json
-    sourceid: {{ .repo }}-version
+  {{ $name }}:
+    kind: shell
+    sourceid: {{ $name }}
     spec:
-      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
-      key: {{ .repo }}.version
-
-  {{ .repo }}-nixpkgs-sha:
-    name: update nix sha
-    kind: json
-    sourceid: {{ .repo }}-sha
-    spec:
-      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
-      key: {{ .repo }}.sha
-
-  {{ .repo }}-nixpkgs-url:
-    name: update nix url
-    kind: json
-    sourceid: {{ .repo }}-url
-    spec:
-      file: {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
-      key: {{ .repo }}.url
+      shell: bash
+      environments:
+        - name: PATH
+          value: '{{ requiredEnv "PATH" }}'
+      changedif:
+        kind: file/checksum
+        spec:
+          files:
+            - {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
+      command: |
+        update_versions_file() {
+          versions_file={{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
+          curr=$(dasel -f "$versions_file" {{ $name }})
+          dasel put -f "$versions_file" -t yaml {{ $name }} -v "$1"
+          next=$(dasel -f "$versions_file" {{ $name }})
+          riff <(echo "$curr") <(echo "$next")
+        }
+        update_versions_file \
 
   {{end}}
