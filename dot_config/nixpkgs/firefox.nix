@@ -149,6 +149,14 @@ in {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/dictionary-german/latest.xpi";
           };
+          "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard//latest.xpi";
+          };
+          "{dd627932-80c4-43bf-8432-db8f47e918ae}" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-manager-v2/latest.xpi";
+          };
           # "spookfox@bitspook.in" = {
           #   installation_mode = "force_installed";
           #   install_url = "https://github.com/bitspook/spookfox/releases/download/v0.2.5/spookfox-firefox.xpi";
