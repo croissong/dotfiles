@@ -3,8 +3,6 @@ alias ll='ls -l'
 alias l='xplr'
 
 alias cat=bat
-alias b=bat
-alias less=bat
 alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log; }
 
@@ -45,6 +43,7 @@ alias cm='chezmoi'
 alias myip='dig -1 myip.opendns.com @resolver1.opendns.com'
 
 alias ec=echo
+alias cg='cd $(git root)'
 
 alias nix='nix --extra-experimental-features "nix-command flakes"'
 
@@ -155,6 +154,12 @@ alias netd-restart='systemctl restart systemd-networkd systemd-resolved iwd'
 alias netd-journal='journalctl -u systemd-networkd -u systemd-resolved -u iwd'
 
 alias nixs='nix search nixpkgs'
+
+function pickcolor() {
+  grim -g "$(slurp -p)" -t ppm - |
+    convert - -format '%[pixel:p{0,0}]' txt:- |
+    awk -F ' ' 'NR==2 {print $3}'
+}
 
 e() {
   if [ -z "$1" ]; then
