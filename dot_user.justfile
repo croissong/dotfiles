@@ -1,5 +1,6 @@
 !include Dot/priv/justfile
 
+
 default:
   @just --choose
 
@@ -10,21 +11,21 @@ vpnio-stop:
   systemctl stop strongswan
 
 
-nix: nix-cm nix-hm nix-diff nix-check-missing
+nix *args: nix-cm (nix-hm args) nix-diff nix-check-missing
 
 nix-cm:
   #!/usr/bin/env bash
   cd $DOT/dot_config/nixpkgs/
   chezmoi apply ~/.config/nixpkgs
 
-nix-hm:
+nix-hm *args:
   NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch \
   --flake ~/.config/nixpkgs#moi \
   --update-input nixpkgs \
   --update-input home-manager \
   --update-input nixpkgs-stable \
   --update-input rust-overlay \
-  --update-input tree-grepper
+  --update-input tree-grepper {{args}}
   # --update-input nixpkgs-master \
 
 
@@ -36,7 +37,7 @@ nix-check-missing:
   # outdated
   nix search nixpkgs '\.(sheldon|summon|goimapnotify)'
   # missing
-  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|mailctl|riff|sttr|versio$|youtube-tui|updatecli|got$)'
+  nix search nixpkgs '\.(aiac|csvlens|kubesess|klog|focus|gup|riff|termshot|mailctl|riff|sttr|versio$|slidev|updatecli|got$)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force
@@ -44,7 +45,10 @@ gc:
 
 
 scan:
-  scan --verbose --mode Color --resolution 600 -e 1 --open --ocr --no-default-size -x 'airscan:e0:Canon TS5000 series'
+  /tmp/scan --verbose --mode Color --resolution 600 -e 1 --open --ocr --no-default-size -x 'airscan:e1:Canon TS5000 series'
+
+  # scanadf -L
+  # scanadf -d pixma:04A91802_0B3458 -e 1 -S /tmp/scan_perpage --script-wait 0 0 --resolution 300 --mode Color -o /tmp/worlitz-kk.jpg
 
 
 updatecli:
