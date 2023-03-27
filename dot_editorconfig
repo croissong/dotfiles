@@ -11,6 +11,7 @@ trim_trailing_whitespace = true
 [Makefile]
 indent_style = tab
 
+[*.sh]
 # shfmt options
 # https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd
 shell_variant      = bash
