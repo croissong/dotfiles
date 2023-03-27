@@ -1,8 +1,8 @@
 {
   "ata": {
-    "sha": "1kmk4g6cixg3armjvfsnqi2mi85zcykv7al1qjh4ns5g3wn7kxd2",
-    "url": "https://github.com/rikhuijzer/ata/releases/download/v1.0.3/ata-x86_64-unknown-linux-gnu",
-    "version": "1.0.3"
+    "sha": "1r832lmgpvbh1w6xsy98r6pcq6f5v2rrk3ziqvkwpmjy60j2q011",
+    "url": "https://github.com/rikhuijzer/ata/releases/download/v2.0.1/ata-x86_64-unknown-linux-gnu",
+    "version": "2.0.1"
   },
   "cqlsh": {
     "sha": "0baqsrzsph12ijql37ii6azbd0x7gc4gv6qbrynxl55yizcc4mzv",
@@ -10,9 +10,9 @@
     "version": "6.1.0"
   },
   "csvlens": {
-    "sha": "13rggcyn5dpk9p7m42p68b4hsf8nj9h3icffnszd6rl6sr3fs57q",
-    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.11.tar.gz",
-    "version": "0.1.11"
+    "sha": "0ij33yyr02fjfm4dc5zpmm3b2j3ph4crffac26740sygm76rm8nq",
+    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.12.tar.gz",
+    "version": "0.1.12"
   },
   "desed": {
     "sha": "1klz4xhnalgh5mq90dfv5qgbzbqhri6nvah525kdhvn67wysysp5",
@@ -25,9 +25,9 @@
     "version": "0.12.0"
   },
   "focus": {
-    "sha": "145hkv91hhcfch0bbn2rcgldc7bjynr7kpl6wg9z28jg7pq02572",
-    "url": "https://github.com/ayoisaiah/focus/releases/download/v1.2.0/focus_1.2.0_linux_amd64.tar.gz",
-    "version": "1.2.0"
+    "sha": "0k08d1gc4mcj2wni4ajz1q4phcjbgciggci30ssl61anqd1cbqf7",
+    "url": "https://github.com/ayoisaiah/focus/releases/download/v1.3.0/focus_1.3.0_linux_amd64.tar.gz",
+    "version": "1.3.0"
   },
   "go-commitlinter": {
     "sha": "03sad57rfaszb1fv78jcf5qyvq6c6zla7v4cyirdp1iyri005hbq",
@@ -40,19 +40,14 @@
     "version": "0.7.0"
   },
   "gup": {
-    "sha": "1jimr7wzihh2s0p6ck3qzl61qdpf5x9kyy7dmqkv1n791hpz57vn",
-    "url": "https://github.com/nao1215/gup/releases/download/v0.17.0/gup_0.17.0_Linux_x86_64.tar.gz",
-    "version": "0.17.0"
-  },
-  "helmfile": {
-    "sha": "00yh1p5y063rwfy4y0j2ypay6gw5b50chf1rm58k6xpky6x32fw7",
-    "url": "https://github.com/helmfile/helmfile/archive/refs/tags/v0.151.0.tar.gz",
-    "version": "0.151.0"
+    "sha": "0yfm1qfkyyin39ngqpb55l3g5mw4m6nvbimwg4wq0riwgajqbjfw",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.20.1/gup_0.20.1_Linux_x86_64.tar.gz",
+    "version": "0.20.1"
   },
   "klog": {
-    "sha": "0c435r27nz537225bhpjzhy02l4mfqmpbbqg6cpqsxln2p7jxv28",
-    "url": "https://github.com/jotaen/klog/releases/download/v5.4/klog-linux.zip",
-    "version": "5.4"
+    "sha": "13sb4vkz0xkxnv1q3b0awjdx3kcdyj36pzxpn365jp4jndf6f45g",
+    "url": "https://github.com/jotaen/klog/releases/download/v6.0/klog-linux.zip",
+    "version": "6.0"
   },
   "kubesess": {
     "sha": "16nfq3j4ag28gr32p3srwwx91yck2lrvyssxvwlwfrapq5gfis50",
@@ -60,9 +55,9 @@
     "version": "1.2.9"
   },
   "mailctl": {
-    "sha": "04lkyny785qqimv38rmgkl2qvnbr8s8sfbpzll2p30ah6qznszra",
-    "url": "https://git.sr.ht/~petrus/mailctl/refs/download/0.8.3/mailctl-0.8.3.tgz",
-    "version": "0.8.3"
+    "sha": "18dw64yl1fhpg1d861vzaqds7rv12la5ilcig4xg0n7v5sjr4wcx",
+    "url": "https://git.sr.ht/~petrus/mailctl/refs/download/0.8.6/mailctl-0.8.6.tgz",
+    "version": "0.8.6"
   },
   "promformat": {
     "sha": "1shrwydsgqvs3lyvwcgy6z90ly3nqz8a4mxbgnpi098pfgm3ixnz",
@@ -70,19 +65,19 @@
     "version": "0.0.4"
   },
   "protocurl": {
-    "sha": "1icsvjqgv59zrjhwsam08gk15ik5imy62ayflmli6nh5fpm4b4mb",
-    "url": "https://github.com/qaware/protocurl/releases/download/v1.5.5/protocurl_1.5.5_linux_amd64.zip",
-    "version": "1.5.5"
+    "sha": "0wib6f95bx86anjkvv5pz5fvhis0pmn691v7q18nd6ijzawva2c7",
+    "url": "https://github.com/qaware/protocurl/releases/download/v1.6.0/protocurl_1.6.0_linux_amd64.zip",
+    "version": "1.6.0"
   },
   "qsv": {
-    "sha": "01k5mwnxhhch0szrg696w0933jnbdih9ang2p8mvy4wglj9lq7lz",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.89.0/qsv-0.89.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.89.0"
+    "sha": "133y60vnmlj0s4s697c5in899fa92f8idkd28clyf2sja1cjb5ly",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.95.0/qsv-0.95.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.95.0"
   },
   "riff": {
-    "sha": "1p4m9a0y7749knl73mbb08yg1y8x76gdzapl9x0nyr2cbmn4cp5j",
-    "url": "https://github.com/walles/riff/releases/download/2.22.2/riff-2.22.2-x86_64-linux",
-    "version": "2.22.2"
+    "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
+    "url": "https://github.com/walles/riff/releases/download/2.23.2/riff-2.23.2-x86_64-linux",
+    "version": "2.23.2"
   },
   "sane-scan-pdf": {
     "sha": "19v3zzj0fgkdc9y4a8r8k9rfa6bna5hb5g0s65ri4dy64hpgi2gk",
@@ -95,9 +90,9 @@
     "version": "0.7.1"
   },
   "sttr": {
-    "sha": "1xm9ccqi4wfpp999la7fkxvirz2bwlnmnlk1ga48zcdmw9ncw6i3",
-    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.15/sttr_0.2.15_linux_amd64.tar.gz",
-    "version": "0.2.15"
+    "sha": "1ijzd4qw2m6j3rx5frps1swyk806az95wh7hiy31fy5wzzmi2r27",
+    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.16/sttr_0.2.16_linux_amd64.tar.gz",
+    "version": "0.2.16"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
@@ -105,9 +100,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "17kg68jjpdvqg1alz7j3nad3s9q6mid3xgby830iw88axsf515c3",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.44.4/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.44.4"
+    "sha": "0mkivza708vhcr6z5nsmj58xx6fslsqrd78mwdsr65605sfwz2ql",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.47.2/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.47.2"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
@@ -124,13 +119,8 @@
     "url": "https://files.pythonhosted.org/packages/73/7c/f711c049f49ac37e375fa1201588efa1e94f13f7af62d48e1ee9d4677c41/xmlformatter-0.2.4.tar.gz",
     "version": "0.2.4"
   },
-  "youtube-tui": {
-    "sha": "0k304lf0n5b9g7py72c9yzhx1rf6abmj6m6sw9vqyyqwfcvs2qy8",
-    "url": "https://github.com/Siriusmart/youtube-tui/releases/download/v0.6.2/default.youtube-tui-full_arch-x86_64",
-    "version": "0.6.2"
-  },
   "ytui-music": {
-    "sha": "0i5g5qb87hd4h95wcyg753xvz0nycqs5li0xbm4wykg9w0myyhz8",
+    "sha": "08j3y9w6di7a72p6ld3cld9fckab1gkakvick6irifjjrhvfvja9",
     "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-beta/ytui_music-linux-amd64",
     "version": "2.0.0-beta"
   }

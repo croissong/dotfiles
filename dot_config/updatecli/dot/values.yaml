@@ -35,9 +35,6 @@ gup:
   owner: nao1215
   asset: gup_${VERSION}_Linux_x86_64.tar.gz
 
-helmfile:
-  owner: helmfile
-
 klog:
   owner: jotaen
   asset: klog-linux.zip
@@ -94,10 +91,6 @@ wutag:
   owner: vv9k
   asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
   trimPrefix: false
-
-youtube-tui:
-  owner: Siriusmart
-  asset: youtube-tui-full_arch-x86_64
 
 ytui-music:
   owner: sudipghimire533

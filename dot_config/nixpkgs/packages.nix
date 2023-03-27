@@ -24,7 +24,7 @@
     ent = [
       yt-dlp
       my-pkgs.ytui-music
-      my-pkgs.youtube-tui
+      youtube-tui
       toipe # Trusty terminal typing tester
       twitch-tui
       steamcmd
@@ -84,6 +84,7 @@
         my-pkgs.termshot # Creates screenshots based on terminal command output
         menyoki # Screen{shot,cast} and perform ImageOps on the command line
         swappy # A Wayland native snapshot editing tool
+        ksnip # screenshot tool wihth many annotation features
       ];
 
       data = {
@@ -148,6 +149,7 @@
         age # Modern encryption tool with small explicit keys
         b3sum # BLAKE3 cryptographic hash function
         bat # Cat clone with syntax highlighting and git integration
+        moar # Nice-to-use pager for humans
         broot # Fuzzy Search + tree + cd
         as-tree # Print a list of paths as a tree of paths
 
@@ -218,6 +220,7 @@
       ];
 
       http = [
+        curl
         curlie # Frontend to curl that adds the ease of use of httpie, without compromising on features and performance
         httpie # A command line HTTP client whose goal is to make CLI human-friendly
         http-prompt # An interactive HTTP command-line client
@@ -240,6 +243,8 @@
         d2 # A modern diagram scripting language that turns text to diagrams
 
         glow # Command-line markdown renderer
+
+        # TODO: slidev  https://sli.dev/guide/install.html#starter-template
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
       ];
 
@@ -258,6 +263,7 @@
         k6 # A modern load testing tool, using Go and JavaScript
         linkerd
         mimir # Grafana Mimir
+        grafana
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
@@ -277,13 +283,16 @@
         treefmt
         tokei # A program that allows you to count your code, quickly
         tree-sitter-grammars.tree-sitter-yaml
+        devbox # Instant, easy, predictable shells and containers.
+        direnv # A shell extension that manages your environment
+        nix-direnv-flakes # A fast, persistent use_nix implementation for direnv
         # tree-sitter-grammars.tree-sitter-toml
       ];
 
       lang = {
         webdev = [
           deno # A secure runtime for JavaScript and TypeScript
-          nodejs
+          nodejs_latest
           yarn # Fast, reliable, and secure dependency management
 
           nodePackages."@angular/cli" # CLI tool for Angular
@@ -355,7 +364,9 @@
       python = [
         black # The uncompromising Python code formatter
         python310Packages.flake8 # The modular source code checker
-        py-spy # Sampling profiler for Python programs
+        # TODO: build failure
+        # py-spy # Sampling profiler for Python programs
+        memray
         mypy # Optional static typing for Python 2 and 3 (PEP484)
         poetry # Python dependency management and packaging made easy.
         pyright # Type checker for the Python language
@@ -436,6 +447,7 @@
         pngquant # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
 
         image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
+        oxipng # A multithreaded lossless PNG compression optimizer (used for image_optim)
       ];
 
       images = [
@@ -589,6 +601,7 @@
       nix-init # Generate Nix packages from URLs
 
       nixos-shell
+      node2nix
     ];
 
     tools = [

@@ -48,7 +48,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-ootnX+5Afn1DK7ILNqjgyMxxdGbQPtQ8GJVQBjuHIBQ=";
+    cargoSha256 = "sha256-Onb8pyl3U/EaJ/J/yZn1jGvUZWms/mJVFilWA4rmKCE=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -219,7 +219,7 @@ with pkgs; let
     };
   };
 
-  mailctl = stdenv.mkDerivation {
+  mailctl = stdenv.mkDerivation rec {
     pname = "mailctl";
     version = versions.mailctl.version;
     src = fetchurl {
@@ -227,9 +227,8 @@ with pkgs; let
       sha256 = versions.mailctl.sha;
     };
 
-    unpackPhase = ":";
     installPhase = ''
-      install -m755 -D $src $out/bin/mailctl
+      install -m755 -D mailctl-${version}-Linux-x86_64 $out/bin/mailctl
     '';
 
     meta = {
@@ -465,29 +464,6 @@ with pkgs; let
     src = fetchurl {
       url = versions.xmlformatter.url;
       sha256 = versions.xmlformatter.sha;
-    };
-  };
-
-  youtube-tui = stdenv.mkDerivation {
-    pname = "youtube-tui";
-    version = versions.youtube-tui.version;
-    src = fetchurl {
-      url = versions.youtube-tui.url;
-      sha256 = versions.youtube-tui.sha;
-    };
-
-    buildInputs = [libsixel openssl];
-    nativeBuildInputs = [
-      autoPatchelfHook # Automatically setup the loader, and do the magic
-    ];
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/youtube-tui
-    '';
-
-    meta = {
-      homepage = "https://github.com/Siriusmart/youtube-tui";
-      description = "An aesthetically pleasing YouTube TUI written in Rust";
     };
   };
 

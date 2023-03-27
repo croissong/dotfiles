@@ -21,28 +21,6 @@
   })
 
   (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/helmfile/default.nix
-    helmfile = let
-      versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
-
-      version = versions.helmfile.version;
-      src = super.fetchFromGitHub {
-        owner = "helmfile";
-        repo = "helmfile";
-        rev = "v${version}";
-        sha256 = versions.helmfile.sha;
-      };
-    in (super.helmfile.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorSha256 = "sha256-f0K3/xF+nJvlhtLAyLOah2RaZbaEqD8C28cPCLyaCXI=";
-            inherit src version;
-          });
-    });
-  })
-
-  (self: super: {
     cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation {
       pname = "cyrus-sasl-xoauth2";
       version = "master";
