@@ -1,4 +1,4 @@
-only = ["krew", "sheldon", "cargo", "firmware", "go", "custom_commands"] # "chezmoi",
+only = ["krew", "sheldon", "cargo", "firmware", "custom_commands"] # "chezmoi",
 
 skip_notify = true
 display_preamble = false
@@ -7,15 +7,9 @@ display_preamble = false
 upgrade = true
 
 [commands]
-buku = '''
-{{expandenv "$XDG_CONFIG_HOME/topgrade/buku.sh"}} {{expandenv "$DOT/priv"}}
-'''
+buku = "$XDG_CONFIG_HOME/topgrade/buku.sh"
 
-krew_export = '''
-$XDG_CONFIG_HOME/topgrade/krew-export.sh
-'''
+krew_export = "$XDG_CONFIG_HOME/topgrade/krew-export.sh"
 
-the_way = '''
-the-way export > {{expandenv "$DOT/priv"}}/snippets.json
-'''
+the_way_export = "$XDG_CONFIG_HOME/topgrade/the_way_export.sh"
 # "xdg-ninja" = "xdg-ninja"
