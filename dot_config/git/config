@@ -50,6 +50,7 @@
   hist = log --graph --decorate --date=short --pretty=format:\"%Cblue%h%Creset %C(yellow)%ad%Creset %Cgreen%<(20)%an%Creset\t%s %Cred%d%Creset \"
   ls = ls-files
   mt = mergetool
+  root = !pwd
   grepp =  "!f(){ git log -p -S$1 -- $2; }; f"
   st = status -sb
   regexadd = "!f() { git diff --no-ext-diff -U0 \
