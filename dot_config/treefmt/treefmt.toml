@@ -6,8 +6,9 @@ command = "alejandra"
 includes = ["*.nix"]
 
 [formatter.shell]
-command = "shfmt"
 includes = ["*.sh"]
+command = "shfmt"
+options = ["--write"]
 
 [formatter.xml]
 command = "xmlformat"
@@ -17,4 +18,14 @@ includes = ["*.xml"]
 [formatter.jsonnet]
 command = "jsonnetfmt"
 options = ["--in-place"]
-includes = ["*.jsonnet"]
+includes = ["*.jsonnet", "*.libsonnet"]
+
+[formatter.go]
+includes = ["*.go"]
+command = "gofmt"
+options = ["-w"]
+
+[formatter.terraform]
+includes = ["*.tf"]
+command = "terraform"
+options = ["fmt"]
