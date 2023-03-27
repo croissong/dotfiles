@@ -1,10 +1,10 @@
 [theme]
-name = "plain"
+theme = "plain"
 [theme.overrides]
 idle_fg = "#ebdbb2"
 
 [icons]
-name = "awesome"
+icons = "awesome5"
 [icons.overrides]
 bat_full = "100%"
 bat_charging = "+"
@@ -12,7 +12,6 @@ bat_discharging = "-"
 
 [[block]]
 block = "maildir"
-interval = 60
 inboxes = [
   "~/.local/share/mail/jm@iogroup.org/INBOX",
   "~/.local/share/mail/jm@iogroup.org/ops"
@@ -33,15 +32,14 @@ icons_format = " <span font='11'>{icon}</span> "
 [[block]]
 block = "load"
 interval = 60
-format = "{1m}"
-icons_format = ""
+format = "$1m"
 
 [[block]]
 block = "temperature"
 interval = 60
 chip = "coretemp-isa-*"
-collapsed = false
-format = "{average}"
+format_alt = " $icon "
+format = "$average"
 icons_format = ""
 
 [[block]]
@@ -49,11 +47,11 @@ block = "battery"
 interval = 60
 driver = "upower"
 device = "DisplayDevice"
-format = "{percentage}"
+format = "$percentage"
 icons_format = " <span font='10'>{icon}</span>   "
 
 [[block]]
 block = "time"
 interval = 30
-format = "%a %m-%d %H:%M"
+format = "$timestamp.datetime(f:'%a %m-%d %H:%M')"
 icons_format = ""
