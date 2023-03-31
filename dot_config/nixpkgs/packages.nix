@@ -69,10 +69,10 @@
       dev = [
         angle-grinder # Slice and dice logs on the command line
         cocogitto # The Conventional Commits & semver toolbox
-        kubeval # Tool for validating Kubernetes YAML or JSON configuration files
+        kubeconform # Tool for validating Kubernetes YAML or JSON configuration files
+        kubernetes-polaris # Validate and remediate Kubernetes resources
         step-cli # A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc.
         skopeo # A command line utility for various operations on container images and image repositories.
-        watchman # Watchman exists to watch files and record when they change.
         my-pkgs.versio # A version number manager
         grex # cli for generating regular expressions from user-provided test cases
       ];
@@ -239,6 +239,7 @@
         drawio # A desktop application for creating diagrams
         graphviz # Graph visualization tools
         plantuml # Component that allows to quickly write uml diagrams
+        pandoc
 
         d2 # A modern diagram scripting language that turns text to diagrams
 
@@ -560,7 +561,7 @@
     ];
 
     media = [
-      ffmpeg_5 # Complete solution to record, convert and stream audio and video
+      ffmpeg
       imagemagick
     ];
 
@@ -623,8 +624,7 @@
     ];
 
     dev = [
-      # TODO: build failure -> https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/analysis/checkov/default.nix
-      # checkov # Static code analysis tool for infrastructure-as-code
+      checkov # Static code analysis tool for infrastructure-as-code
       caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API

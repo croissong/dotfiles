@@ -91,8 +91,31 @@
         owner = "~ayushnix";
         repo = super.tessen.pname;
         rev = "${version}";
-        sha256 = "sha256-fcIxdzCYhhXjCCs4XJ70TDg02XsHnOh0DqN5A/dSyug=";
+        sha256 = "sha256-7hiH1il9vFkrld5wFU+jT7IuudKwigO7ggFuwVbkvYw=";
       };
+    });
+  })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
+    telepresence = let
+      versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
+
+      version = versions.telepresence.version;
+      src = super.fetchFromGitHub {
+        owner = "telepresence";
+        repo = "telepresenceio";
+        rev = "v${version}";
+        sha256 = versions.telepresence.sha;
+      };
+    in (super.summon.override {
+      buildGoModule = args:
+        super.buildGoModule (args
+          // {
+            vendorSha256 = "sha256-ofBqcD/WsUi0XSKydITttsOQja46bQG3Rn1pgsh1b9k=";
+            inherit src version;
+            patches = [];
+          });
     });
   })
 ]
