@@ -109,6 +109,11 @@
     "url": "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_linux_amd64.tar.gz",
     "version": "0.2.5"
   },
+  "tre": {
+    "sha": "1b3b4q5yd3s6san8yrxixslrxsj2m06d0960513139ybnq6v5dj7",
+    "url": "https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-unknown-linux-musl.tar.gz",
+    "version": "0.4.0"
+  },
   "updatecli": {
     "sha": "0y3r3a4b57k77swdjyy4fgqipa4qsxmqzfhlzs4vl7fc9ls76xin",
     "url": "https://github.com/updatecli/updatecli/releases/download/v0.48.1/updatecli_Linux_x86_64.tar.gz",

@@ -6,15 +6,14 @@
 with pkgs; let
   ain = stdenv.mkDerivation {
     pname = "ain";
-    version = versions.ata.version;
+    version = versions.ain.version;
     src = fetchurl {
-      url = versions.ata.url;
-      sha256 = versions.ata.sha;
+      url = versions.ain.url;
+      sha256 = versions.ain.sha;
     };
 
-    unpackPhase = ":";
     installPhase = ''
-      install -m755 -D $src $out/bin/ain
+      install -m755 -D ain $out/bin/ain
     '';
 
     meta = {
@@ -416,7 +415,26 @@ with pkgs; let
 
     meta = {
       homepage = "https://github.com/homeport/termshot";
-      description = "Creates screenshots based on terminal command output ";
+      description = "Creates screenshots based on terminal command output";
+    };
+  };
+
+  tre = stdenv.mkDerivation {
+    pname = "tre";
+    version = versions.tre.version;
+    src = fetchurl {
+      url = versions.tre.url;
+      sha256 = versions.tre.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D tre $out/bin/tre
+    '';
+
+    meta = {
+      homepage = "https://github.com/dduan/tre";
+      description = "Tree command, improved";
     };
   };
 
@@ -574,6 +592,7 @@ in {
   shellcaster = shellcaster;
   sttr = sttr;
   termshot = termshot;
+  tre = tre;
   updatecli = updatecli;
   versio = versio;
   wutag = wutag;

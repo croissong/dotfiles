@@ -151,6 +151,7 @@
         bat # Cat clone with syntax highlighting and git integration
         moar # Nice-to-use pager for humans
         broot # Fuzzy Search + tree + cd
+        my-pkgs.tre # Tree command, improved.
         as-tree # Print a list of paths as a tree of paths
 
         tealdeer # tldr in Rust
@@ -457,6 +458,7 @@
         pinta # Drawing/editing program modeled after Paint.NET
         gimp # The GNU Image Manipulation Program
         epick # Color picker for creating harmonic color palettes
+        pastel # A command-line tool to generate, analyze, convert and manipulate colors
       ];
       video = [
         obs-studio # Free, open source software for live streaming and recording
@@ -620,7 +622,6 @@
 
       miniserve # CLI tool to serve files and directories over HTTP
       ngrok # secure introspectable tunnels to localhost
-      pastel # A command-line tool to generate, analyze, convert and manipulate colors
       ventoy-bin # A new multiboot USB solution (Binary)
     ];
 
