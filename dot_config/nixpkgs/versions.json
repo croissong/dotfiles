@@ -70,9 +70,9 @@
     "version": "1.6.0"
   },
   "qsv": {
-    "sha": "133y60vnmlj0s4s697c5in899fa92f8idkd28clyf2sja1cjb5ly",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.95.0/qsv-0.95.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.95.0"
+    "sha": "1lzpsnqkal476zd0xmdbqyxijvhx7g9jz98ia1w0916nb2ybv3k1",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.95.1/qsv-0.95.1-x86_64-unknown-linux-gnu.zip",
+    "version": "0.95.1"
   },
   "riff": {
     "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
@@ -90,9 +90,14 @@
     "version": "0.7.1"
   },
   "sttr": {
-    "sha": "1ijzd4qw2m6j3rx5frps1swyk806az95wh7hiy31fy5wzzmi2r27",
-    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.16/sttr_0.2.16_linux_amd64.tar.gz",
-    "version": "0.2.16"
+    "sha": "1hp3jrdazvmpn9s9wwrdapqpkpaj1gkzv96w6nk7h5x2g5qd59l7",
+    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.17/sttr_0.2.17_linux_amd64.tar.gz",
+    "version": "0.2.17"
+  },
+  "telepresence": {
+    "sha": "0r8imhlzg0akix0mll2cqsajjrzr29f6s99dxabadvgni7j3s269",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.12.1/telepresence-linux-amd64",
+    "version": "2.12.1"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
@@ -100,9 +105,9 @@
     "version": "0.2.5"
   },
   "updatecli": {
-    "sha": "0mkivza708vhcr6z5nsmj58xx6fslsqrd78mwdsr65605sfwz2ql",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.47.2/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.47.2"
+    "sha": "0y3r3a4b57k77swdjyy4fgqipa4qsxmqzfhlzs4vl7fc9ls76xin",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.48.1/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.48.1"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
