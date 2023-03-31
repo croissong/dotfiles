@@ -220,6 +220,7 @@
       ];
 
       http = [
+        my-pkgs.ain # A HTTP API client for the terminal
         curl
         curlie # Frontend to curl that adds the ease of use of httpie, without compromising on features and performance
         httpie # A command line HTTP client whose goal is to make CLI human-friendly

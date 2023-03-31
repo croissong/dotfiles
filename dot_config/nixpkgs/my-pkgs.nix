@@ -1,10 +1,28 @@
 {
   pkgs,
-  config,
   versions,
   ...
 }:
 with pkgs; let
+  ain = stdenv.mkDerivation {
+    pname = "ain";
+    version = versions.ata.version;
+    src = fetchurl {
+      url = versions.ata.url;
+      sha256 = versions.ata.sha;
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/ain
+    '';
+
+    meta = {
+      homepage = "https://github.com/jonaslu/ain";
+      description = "A HTTP API client for the terminal";
+    };
+  };
+
   ata = stdenv.mkDerivation {
     pname = "ata";
     version = versions.ata.version;
@@ -533,6 +551,7 @@ with pkgs; let
     };
   };
 in {
+  ain = ain;
   ata = ata;
   cqlsh = cqlsh;
   csvlens = csvlens;
