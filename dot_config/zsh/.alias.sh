@@ -140,8 +140,8 @@ alias emacsmin='emacs -q --load ~/.config/emacs/init-minimal.el'
 
 awkp() { awk "{print \$${1:-1}}"; }
 
-b64e() { echo -n $(cat -) | base64 -w0; }
-b64d() { echo -n $(cat -) | base64 -d; }
+alias b64e='sttr base64-encode'
+alias b64d='sttr base64-decode'
 
 alias cert-view='step certificate inspect'
 
