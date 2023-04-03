@@ -29,3 +29,8 @@ options = ["-w"]
 includes = ["*.tf"]
 command = "terraform"
 options = ["fmt"]
+
+[formatter.d2]
+includes = ["*.d2"]
+command = "d2"
+options = ["fmt"]
