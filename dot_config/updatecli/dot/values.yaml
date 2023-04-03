@@ -3,6 +3,10 @@
 #   - package: promformat
 #   - package: xmlformatter
 
+ain:
+  owner: jonaslu
+  asset: ain_${VERSION}_linux_x86_64.tar.gz
+
 ata:
   owner: rikhuijzer
   asset: ata-x86_64-unknown-linux-gnu
@@ -78,6 +82,11 @@ sttr:
 termshot:
   owner: homeport
   asset: termshot_${VERSION}_linux_amd64.tar.gz
+
+tre:
+  owner: dduan
+  asset: tre-v${VERSION}-x86_64-unknown-linux-musl.tar.gz
+
 
 updatecli:
   owner: updatecli
