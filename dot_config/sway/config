@@ -1,3 +1,5 @@
+include /etc/sway/config.d/*
+
 set $mod Mod4
 font pango:monospace 8
 
@@ -84,13 +86,6 @@ for_window [app_id="pinentry-qt"] floating enable
 
 
 include ./keybinds.conf
-
-# Required to get e.g. wl-clipboard wayland connection working in emacs on system start (without having to restart the emacs daemon)
-# Used in conjunction with 'exec-path-from-shell' in emacs
-# also see /etc/sway/config.d/50-systemd-user.conf
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 
 # Required for wlsunset to work on system start
 exec systemctl --user start sway-session.target
