@@ -1,8 +1,10 @@
+# https://github.com/rossmacarthur/dotfiles/blob/trunk/src/sheldon/plugins.toml
+
 shell = "zsh"
 
 [templates]
-defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
-# defer-more = "{% for file in files %}zsh-defer -t 0.5 source \"{{ file }}\"\n{% endfor %}"
+defer = """{% for file in files %}zsh-defer source "{{ file }}"\n{% endfor %}"""
+defer-more = """{% for file in files %}zsh-defer -t 0.5 source "{{ file }}"\n{% endfor %}"""
 
 
 [plugins]
@@ -54,7 +56,17 @@ use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
 [plugins.kubesess]
-inline = 'zsh-defer source $HOME/.nix-profile/share/kubesess/scripts/sh/kubesess.sh'
+inline = """
+zsh-defer source $HOME/.nix-profile/share/kubesess/scripts/sh/kubesess.sh
+# source $HOME/.nix-profile/share/kubesess/scripts/sh/completion.sh
+"""
+
+[plugins.my-completions]
+local = "~/.config/zsh/plugins/my-completions"
+apply = ["fpath"]
+# use = []
 
 [plugins.compinit]
-inline = 'autoload -Uz compinit && zsh-defer compinit'
+github = "rossmacarthur/dotfiles"
+use = ["src/zsh/plugins/compinit.plugin.zsh"]
+apply = ["defer"]
