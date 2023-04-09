@@ -1,4 +1,4 @@
-pass_backend="gopass"
+_PASS_BACKEND="gopass"
 action="copy"
 dmenu_backend="tofi"
 tofi_config_file="/home/croissong/.config/tofi/tessen.config"
