@@ -2,20 +2,40 @@
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
     summon = let
-      version = "0.9.4";
+      version = "0.9.5";
       src = super.fetchFromGitHub {
         owner = "cyberark";
         repo = "summon";
         rev = "v${version}";
-        sha256 = "sha256-j+3gnrjcMEk5phF0SivjBZBeK7xWjzkAyy4SD3cHDUg=";
+        sha256 = "sha256-C2eSrYp0CkPCcNufF18hHu4bVEK57cReT6jVgNvHZ1I=";
       };
     in (super.summon.override {
       buildGoModule = args:
         super.buildGoModule (args
           // {
-            vendorSha256 = "sha256-ofBqcD/WsUi0XSKydITttsOQja46bQG3Rn1pgsh1b9k=";
+            vendorSha256 = "sha256-ErR4vUxH49tciGnypXuOU71mPBO64QbyGEaanKQDoLU=";
             inherit src version;
             patches = [];
+          });
+    });
+  })
+
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
+    d2 = let
+      version = "0.3.0";
+      src = super.fetchFromGitHub {
+        owner = "terrastruct";
+        repo = "d2";
+        rev = "v${version}";
+        hash = "sha256-ll6kOmHJZRsN6DkQRAUXyxz61tjwwi+p5eOuLfGDpI8=";
+      };
+    in (super.d2.override {
+      buildGoModule = args:
+        super.buildGoModule (args
+          // {
+            vendorHash = "sha256-jfGolYHWX/9Zr5JHiWl8mCfaaRT2AU8v32PtgM1KI8c=";
+            inherit src version;
           });
     });
   })

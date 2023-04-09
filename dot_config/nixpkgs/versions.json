@@ -75,9 +75,9 @@
     "version": "1.6.0"
   },
   "qsv": {
-    "sha": "1lzpsnqkal476zd0xmdbqyxijvhx7g9jz98ia1w0916nb2ybv3k1",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.95.1/qsv-0.95.1-x86_64-unknown-linux-gnu.zip",
-    "version": "0.95.1"
+    "sha": "0ibhb8y6kwha8ifi7mxiwjnaygrjabxsyk9b4zjysk9kll7l398p",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.98.0/qsv-0.98.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.98.0"
   },
   "riff": {
     "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
@@ -95,14 +95,14 @@
     "version": "0.7.1"
   },
   "sttr": {
-    "sha": "1hp3jrdazvmpn9s9wwrdapqpkpaj1gkzv96w6nk7h5x2g5qd59l7",
-    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.17/sttr_0.2.17_linux_amd64.tar.gz",
-    "version": "0.2.17"
+    "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs",
+    "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.18/sttr_0.2.18_linux_amd64.tar.gz",
+    "version": "0.2.18"
   },
   "telepresence": {
-    "sha": "0r8imhlzg0akix0mll2cqsajjrzr29f6s99dxabadvgni7j3s269",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.12.1/telepresence-linux-amd64",
-    "version": "2.12.1"
+    "sha": "14j4495r1gpl9bn5zh8w0gz920z4a3nnf41h5bwdvsgs3cmdca6z",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.12.2/telepresence-linux-amd64",
+    "version": "2.12.2"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
@@ -135,8 +135,8 @@
     "version": "0.2.4"
   },
   "ytui-music": {
-    "sha": "08j3y9w6di7a72p6ld3cld9fckab1gkakvick6irifjjrhvfvja9",
-    "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-beta/ytui_music-linux-amd64",
-    "version": "2.0.0-beta"
+    "sha": "0gmvq1hi97ijfwxhyr304nb390myai5rd98l56ahdjd2srpz3w3z",
+    "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-rc1/ytui_music-linux-amd64",
+    "version": "2.0.0-rc1"
   }
 }

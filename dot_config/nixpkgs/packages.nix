@@ -40,6 +40,7 @@
       git-annex-remote-googledrive
 
       system-config-printer
+      ocrmypdf # Adds an OCR text layer to scanned PDF files
       my-pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
 
       djvulibre # for emacs doc-tools
@@ -82,6 +83,7 @@
         # qimgv TODO: maybe
         vhs # A tool for generating terminal GIFs with code
         my-pkgs.termshot # Creates screenshots based on terminal command output
+        kdenlive # video editor
         menyoki # Screen{shot,cast} and perform ImageOps on the command line
         swappy # A Wayland native snapshot editing tool
         ksnip # screenshot tool wihth many annotation features
@@ -498,7 +500,7 @@
       all = [
         davmail # A Java application which presents a Microsoft Exchange server as local CALDAV, IMAP and SMTP servers
 
-        khal # CLI calendar application build around CalDAV
+        pkgs-stable.khal # CLI calendar application build around CalDAV
         khard # Console carddav client
         vdirsyncer # Synchronize calendars and contacts
         himalaya # Command-line interface for email management
@@ -598,6 +600,7 @@
     nix = [
       alejandra # The Uncompromising Nix Code Formatter
       comma # Comma runs software without installing it.
+      hydra-check # check hydra for the build status of a package
       nil # Yet another language server for Nix
       nixos-generators
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
@@ -626,7 +629,7 @@
     ];
 
     dev = [
-      checkov # Static code analysis tool for infrastructure-as-code
+      # checkov # Static code analysis tool for infrastructure-as-code
       caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
