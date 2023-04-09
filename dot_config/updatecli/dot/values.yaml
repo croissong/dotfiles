@@ -79,6 +79,10 @@ sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
 
+telepresence:
+  owner: telepresenceio
+  asset:  telepresence-linux-amd64
+
 termshot:
   owner: homeport
   asset: termshot_${VERSION}_linux_amd64.tar.gz
