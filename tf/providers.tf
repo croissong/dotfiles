@@ -2,22 +2,22 @@ terraform {
   required_providers {
     outlook = {
       source  = "magodo/outlook"
-      version = "0.0.4"
+      version = "0.5.0"
     }
 
     google = {
       source  = "hashicorp/google"
-      version = "4.40.0"
+      version = "4.51.0"
     }
 
     azuread = {
       source  = "hashicorp/azuread"
-      version = "2.30.0"
+      version = "2.33.0"
     }
 
     sops = {
       source  = "lokkersp/sops"
-      version = "0.6.9"
+      version = "0.6.10"
     }
   }
 
@@ -32,6 +32,5 @@ provider "outlook" {}
 provider "google" {}
 
 provider "azuread" {
-  tenant_id = "a30e38d1-62f2-4b94-aea8-f5ae261fd880"
+  tenant_id = "dc6fe035-d1b7-4fe5-b9f5-8a84d1fe06ae"
 }
-

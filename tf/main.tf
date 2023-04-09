@@ -9,6 +9,10 @@ resource "azuread_application" "mail_auth" {
   display_name     = "mail-auth"
   owners           = [data.azuread_client_config.current.object_id]
   sign_in_audience = "AzureADMultipleOrgs"
+
+  web {
+    redirect_uris = ["http://localhost:8080/"]
+  }
 }
 
 resource "azuread_application_password" "mail_auth" {
