@@ -31,7 +31,7 @@ nix-hm *args:
 
 nix-diff:
   # https://discourse.nixos.org/t/nvd-simple-nix-nixos-version-diff-tool/12397/28
-  nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/home-manager-*-link | /usr/bin/tail -2) | rg →
+  nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/profile-*-link | /usr/bin/tail -2) | rg →
 
 nix-check-missing:
   # outdated
