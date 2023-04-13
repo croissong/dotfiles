@@ -36,6 +36,9 @@ in {
 
         # TODO: not sure if nix sets this automatically when 'userChrome' is confgured
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
+        # probably not needed with auto-tab-discard
+        "browser.tabs.unloadOnLowMemory" = false;
       };
 
       search = {
