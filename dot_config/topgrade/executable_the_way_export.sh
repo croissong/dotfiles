@@ -2,4 +2,4 @@
 
 the-way export > "${DOT}/priv/snippets.json"
 echo "Wrote ${DOT}/priv/snippets.json" >&2
-git -C "$DOT/priv" diff snippets.json
+git --no-pager -C "$DOT/priv" diff snippets.json
