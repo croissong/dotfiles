@@ -188,6 +188,25 @@ with pkgs; let
     };
   };
 
+  handlr-regex = stdenv.mkDerivation {
+    pname = "handlr-regex";
+    version = "0.8.4";
+    src = fetchurl {
+      url = "https://github.com/Anomalocaridid/handlr-regex/releases/download/v0.8.4/handlr";
+      sha256 = "sha256-b4GwJ7hoaOYDlQ90u08WsEG7eP/VMTqXbD58k94XLUk=";
+    };
+
+    unpackPhase = ":";
+    installPhase = ''
+      install -m755 -D $src $out/bin/handlr
+    '';
+
+    meta = {
+      homepage = "https://github.com/Anomalocaridid/handlr-regex";
+      description = "Fork of handlr with support for regex";
+    };
+  };
+
   klog = stdenv.mkDerivation {
     pname = "klog";
     version = versions.klog.version;
@@ -579,6 +598,7 @@ in {
   go-commitlinter = go-commitlinter;
   got = got;
   gup = gup;
+  handlr-regex = handlr-regex;
   kanri = kanri;
   klog = klog;
   kubesess = kubesess;

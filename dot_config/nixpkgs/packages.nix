@@ -1,3 +1,4 @@
+# https://hydra.nixos.org/job/nixpkgs/trunk/krita.x86_64-linux
 {
   pkgs,
   pkgs-stable,
@@ -14,7 +15,7 @@
 
   packages_dict = with pkgs; {
     inbox = [
-      # handlr
+      my-pkgs.handlr-regex
 
       # dvc-with-remotes
       my-pkgs.kanri

@@ -70,14 +70,14 @@
     "version": "0.0.4"
   },
   "protocurl": {
-    "sha": "0wib6f95bx86anjkvv5pz5fvhis0pmn691v7q18nd6ijzawva2c7",
-    "url": "https://github.com/qaware/protocurl/releases/download/v1.6.0/protocurl_1.6.0_linux_amd64.zip",
-    "version": "1.6.0"
+    "sha": "1kdx78dscz98rl4qqj613fw2zi1w5b0m6jx2nj9vy47yhvb0k3db",
+    "url": "https://github.com/qaware/protocurl/releases/download/v1.6.1/protocurl_1.6.1_linux_amd64.zip",
+    "version": "1.6.1"
   },
   "qsv": {
-    "sha": "0ibhb8y6kwha8ifi7mxiwjnaygrjabxsyk9b4zjysk9kll7l398p",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.98.0/qsv-0.98.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.98.0"
+    "sha": "1gzwhrcfiv6kn41jhs7l623i7i6sbqmvjv1p92wbzijl90ii1s8x",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.99.0/qsv-0.99.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.99.0"
   },
   "riff": {
     "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
