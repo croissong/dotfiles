@@ -1,0 +1,6 @@
+theme = "gruvbox_light"
+
+[editor]
+line-number = "relative"
+mouse = false
+gutters = ["diff", "diagnostics", "spacer"]
