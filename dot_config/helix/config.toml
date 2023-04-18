@@ -4,3 +4,14 @@ theme = "gruvbox_light"
 line-number = "relative"
 mouse = false
 gutters = ["diff", "diagnostics", "spacer"]
+
+[editor.statusline]
+left = []
+center = []
+right = []
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.soft-wrap]
+enable = true
