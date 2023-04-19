@@ -75,9 +75,9 @@
     "version": "1.6.1"
   },
   "qsv": {
-    "sha": "1gzwhrcfiv6kn41jhs7l623i7i6sbqmvjv1p92wbzijl90ii1s8x",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.99.0/qsv-0.99.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.99.0"
+    "sha": "11nxxvy1gz34zwn57rsbc2w5yr86xwrkw26yzbjvc98aald35yh4",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.100.0/qsv-0.100.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.100.0"
   },
   "riff": {
     "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
@@ -100,9 +100,9 @@
     "version": "0.2.18"
   },
   "telepresence": {
-    "sha": "14j4495r1gpl9bn5zh8w0gz920z4a3nnf41h5bwdvsgs3cmdca6z",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.12.2/telepresence-linux-amd64",
-    "version": "2.12.2"
+    "sha": "1spnxbi5krhiff6s3j7i80w4bdwh411s45d38wpn2gxhn4y4zqa9",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.0/telepresence-linux-amd64",
+    "version": "2.13.0"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
@@ -115,9 +115,9 @@
     "version": "0.4.0"
   },
   "updatecli": {
-    "sha": "0y3r3a4b57k77swdjyy4fgqipa4qsxmqzfhlzs4vl7fc9ls76xin",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.48.1/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.48.1"
+    "sha": "1q2r3jlzn06hd3h83kkjl2i4lyh8lbsrqhhf07x2jhlg3ir0q39j",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.49.1/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.49.1"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",

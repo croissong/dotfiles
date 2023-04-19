@@ -262,6 +262,7 @@
       ];
 
       cn = [
+        argo # Container native workflow engine for Kubernetes
         argocd # Declarative continuous deployment for Kubernetes
         azure-cli
         cmctl # A CLI tool for managing cert-manager service on Kubernetes clusters
@@ -477,6 +478,7 @@
       comm = [
         mumble # low-latency, high quality voice chat software
         linphone
+        signal-desktop
       ];
     };
 
@@ -626,7 +628,7 @@
 
       miniserve # CLI tool to serve files and directories over HTTP
       ngrok # secure introspectable tunnels to localhost
-      ventoy-bin # A new multiboot USB solution (Binary)
+      ventoy # A new multiboot USB solution (Binary)
     ];
 
     dev = [
