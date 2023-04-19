@@ -294,6 +294,11 @@
         direnv # A shell extension that manages your environment
         nix-direnv-flakes # A fast, persistent use_nix implementation for direnv
         # tree-sitter-grammars.tree-sitter-toml
+
+        nuspell
+        enchant
+        hunspellDicts.de-de
+        hunspellDicts.en-us
       ];
 
       lang = {
