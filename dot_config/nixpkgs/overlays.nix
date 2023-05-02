@@ -21,47 +21,6 @@
   })
 
   (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
-    d2 = let
-      version = "0.4.0";
-      src = super.fetchFromGitHub {
-        owner = "terrastruct";
-        repo = "d2";
-        rev = "v${version}";
-        hash = "sha256-vMgOFZJwlWjNfOp4QsFoq1y9JQm16qDkP7uoOwICuTo=";
-      };
-    in (super.d2.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorHash = "sha256-jfGolYHWX/9Zr5JHiWl8mCfaaRT2AU8v32PtgM1KI8c=";
-            inherit src version;
-          });
-    });
-  })
-
-  (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/helmfile/default.nix
-    helmfile = let
-      version = "0.152.0";
-      src = super.fetchFromGitHub {
-        owner = "helmfile";
-        repo = "helmfile";
-        rev = "v${version}";
-        sha256 = "sha256-y7IM9YMbJvDmCwzR4Iz5losKberxtGkMfyxpyuBEb+o=";
-      };
-    in (super.helmfile.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorHash = "sha256-GRTtpZ4du3FNGpD+LArmNkJFeHs72jkYKYbvp73I/5s=";
-            ldflags = ["-s" "-w" "-X go.szostok.io/version.version=v${version}"];
-            inherit src version;
-          });
-    });
-  })
-
-  (self: super: {
     cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation {
       pname = "cyrus-sasl-xoauth2";
       version = "master";

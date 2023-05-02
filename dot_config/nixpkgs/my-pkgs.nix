@@ -65,7 +65,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-Onb8pyl3U/EaJ/J/yZn1jGvUZWms/mJVFilWA4rmKCE=";
+    cargoSha256 = "sha256-0zd7m002jYAnKn7H+vFNp3vA1/YAkBMHZRwtUvk4Zq4=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];

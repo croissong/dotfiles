@@ -15,9 +15,9 @@
     "version": "6.1.0"
   },
   "csvlens": {
-    "sha": "0ij33yyr02fjfm4dc5zpmm3b2j3ph4crffac26740sygm76rm8nq",
-    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.12.tar.gz",
-    "version": "0.1.12"
+    "sha": "0jhxch8x2f6q7jqrzx1gh0wr5nz8cyczjy84gz72ccfxsvbifni8",
+    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.13.tar.gz",
+    "version": "0.1.13"
   },
   "desed": {
     "sha": "1klz4xhnalgh5mq90dfv5qgbzbqhri6nvah525kdhvn67wysysp5",
@@ -45,14 +45,14 @@
     "version": "0.7.0"
   },
   "gup": {
-    "sha": "0yfm1qfkyyin39ngqpb55l3g5mw4m6nvbimwg4wq0riwgajqbjfw",
-    "url": "https://github.com/nao1215/gup/releases/download/v0.20.1/gup_0.20.1_Linux_x86_64.tar.gz",
-    "version": "0.20.1"
+    "sha": "0n8s06zbh5lb0sv6xdjynma8xywby3ybghdbxqkxmx5sxzvk671m",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.21.0/gup_0.21.0_Linux_x86_64.tar.gz",
+    "version": "0.21.0"
   },
   "klog": {
-    "sha": "13sb4vkz0xkxnv1q3b0awjdx3kcdyj36pzxpn365jp4jndf6f45g",
-    "url": "https://github.com/jotaen/klog/releases/download/v6.0/klog-linux.zip",
-    "version": "6.0"
+    "sha": "0cqpf9yy2rfapxc0qg8ff24gl7kqn6kp4xrkfilz6a3jw5pwpnkg",
+    "url": "https://github.com/jotaen/klog/releases/download/v6.1/klog-linux.zip",
+    "version": "6.1"
   },
   "kubesess": {
     "sha": "16nfq3j4ag28gr32p3srwwx91yck2lrvyssxvwlwfrapq5gfis50",
@@ -75,9 +75,9 @@
     "version": "1.6.1"
   },
   "qsv": {
-    "sha": "11nxxvy1gz34zwn57rsbc2w5yr86xwrkw26yzbjvc98aald35yh4",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.100.0/qsv-0.100.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.100.0"
+    "sha": "1h14bbsysdihp2s9vmcgcsy7jgxvwilg82ijip2lnxmjfrhdp9l1",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.101.0/qsv-0.101.0-x86_64-unknown-linux-gnu.zip",
+    "version": "0.101.0"
   },
   "riff": {
     "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
@@ -85,9 +85,9 @@
     "version": "2.23.2"
   },
   "sane-scan-pdf": {
-    "sha": "19v3zzj0fgkdc9y4a8r8k9rfa6bna5hb5g0s65ri4dy64hpgi2gk",
-    "url": "https://github.com/rocketraman/sane-scan-pdf/archive/refs/tags/v1.3.tar.gz",
-    "version": "1.3"
+    "sha": "0xsbyxv7s6z9nrgvm5rq1661z9fpfdbhlj1mq79si53m3pw60ssq",
+    "url": "https://github.com/rocketraman/sane-scan-pdf/archive/refs/tags/v1.4.tar.gz",
+    "version": "1.4"
   },
   "sheldon": {
     "sha": "19h7j89gjsvbaaqr68c7p0sii7692r1kag2x3fnbzjb2ns5l2czk",
@@ -100,9 +100,9 @@
     "version": "0.2.18"
   },
   "telepresence": {
-    "sha": "1spnxbi5krhiff6s3j7i80w4bdwh411s45d38wpn2gxhn4y4zqa9",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.0/telepresence-linux-amd64",
-    "version": "2.13.0"
+    "sha": "006jx26606jig5nszwilzwy9nrj6zi53nlgxkfjh0iqlrq58dr1x",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.1/telepresence-linux-amd64",
+    "version": "2.13.1"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
@@ -115,9 +115,9 @@
     "version": "0.4.0"
   },
   "updatecli": {
-    "sha": "1q2r3jlzn06hd3h83kkjl2i4lyh8lbsrqhhf07x2jhlg3ir0q39j",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.49.1/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.49.1"
+    "sha": "1rwfpkkw6h6x2js3405ni2xhala1y1hdg78fdjvrjvcph40n7law",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.49.2/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.49.2"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
