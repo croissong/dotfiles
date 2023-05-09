@@ -19,6 +19,7 @@ in {
         "browser.urlbar.suggest.history" = false;
         "browser.urlbar.suggest.quickactions" = false;
         "browser.urlbar.suggest.topsites" = false;
+        "browser.urlbar.suggest.remotetab" = false;
         "browser.search.region" = "DE";
 
         # disable mouse pinch zoom
@@ -156,10 +157,11 @@ in {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard//latest.xpi";
           };
-          "{dd627932-80c4-43bf-8432-db8f47e918ae}" = {
-            installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-manager-v2/latest.xpi";
-          };
+
+          # "{dd627932-80c4-43bf-8432-db8f47e918ae}" = {
+          #   installation_mode = "force_installed";
+          #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-manager-v2/latest.xpi";
+          # };
           # "spookfox@bitspook.in" = {
           #   installation_mode = "force_installed";
           #   install_url = "https://github.com/bitspook/spookfox/releases/download/v0.2.5/spookfox-firefox.xpi";
@@ -168,6 +170,7 @@ in {
           #     "https://objects.githubusercontent.com/*"
           #   ];
           # };
+
           # "*" = {
           #   installation_mode = "blocked";
           # };
