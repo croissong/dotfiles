@@ -34,3 +34,7 @@ options = ["fmt"]
 includes = ["*.d2"]
 command = "d2"
 options = ["fmt"]
+
+[formatter.rust]
+includes = ["*.rs"]
+command = "rustfmt"
