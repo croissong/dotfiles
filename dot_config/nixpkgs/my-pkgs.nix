@@ -255,7 +255,7 @@ with pkgs; let
     };
   };
 
-  mailctl = stdenv.mkDerivation rec {
+  mailctl = stdenv.mkDerivation {
     pname = "mailctl";
     version = versions.mailctl.version;
     src = fetchurl {
@@ -264,7 +264,7 @@ with pkgs; let
     };
 
     installPhase = ''
-      install -m755 -D mailctl-${version}-Linux-x86_64 $out/bin/mailctl
+      install -m755 -D mailctl $out/bin/mailctl
     '';
 
     meta = {

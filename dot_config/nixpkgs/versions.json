@@ -45,9 +45,9 @@
     "version": "0.7.0"
   },
   "gup": {
-    "sha": "0n8s06zbh5lb0sv6xdjynma8xywby3ybghdbxqkxmx5sxzvk671m",
-    "url": "https://github.com/nao1215/gup/releases/download/v0.21.0/gup_0.21.0_Linux_x86_64.tar.gz",
-    "version": "0.21.0"
+    "sha": "0mwyl447q45byssd7a13vkfdnr7mijcav5k3xj08yphfwax4prw8",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.21.1/gup_0.21.1_Linux_x86_64.tar.gz",
+    "version": "0.21.1"
   },
   "klog": {
     "sha": "0cqpf9yy2rfapxc0qg8ff24gl7kqn6kp4xrkfilz6a3jw5pwpnkg",
@@ -60,9 +60,9 @@
     "version": "1.2.9"
   },
   "mailctl": {
-    "sha": "18dw64yl1fhpg1d861vzaqds7rv12la5ilcig4xg0n7v5sjr4wcx",
-    "url": "https://git.sr.ht/~petrus/mailctl/refs/download/0.8.6/mailctl-0.8.6.tgz",
-    "version": "0.8.6"
+    "sha": "14x6nz48mlgb4yr0zjlh8437v9d5j22b9plmgba60grkkk33nc0c",
+    "url": "https://git.sr.ht/~petrus/mailctl/refs/download/0.8.8/mailctl-0.8.8-Linux-x86_64.tgz",
+    "version": "0.8.8"
   },
   "promformat": {
     "sha": "1shrwydsgqvs3lyvwcgy6z90ly3nqz8a4mxbgnpi098pfgm3ixnz",
@@ -80,9 +80,9 @@
     "version": "0.101.0"
   },
   "riff": {
-    "sha": "0qshc73lccyabg92hslw3w94d2g1rlkpc4aqlmgxrsj7dc2fgqs3",
-    "url": "https://github.com/walles/riff/releases/download/2.23.2/riff-2.23.2-x86_64-linux",
-    "version": "2.23.2"
+    "sha": "0p2k5ph7xhrg7ykhal57ldp3q5ws1gw8w8x1n3nrf8jl8ngs4l5r",
+    "url": "https://github.com/walles/riff/releases/download/2.23.3/riff-2.23.3-x86_64-linux",
+    "version": "2.23.3"
   },
   "sane-scan-pdf": {
     "sha": "0xsbyxv7s6z9nrgvm5rq1661z9fpfdbhlj1mq79si53m3pw60ssq",

@@ -51,7 +51,8 @@ kubesess:
 mailctl:
   kind: sourcehut
   owner: ~petrus
-  asset: mailctl-${VERSION}.tgz
+  asset: mailctl-${VERSION}-Linux-x86_64.tgz
+
 
 protocurl:
   owner: qaware

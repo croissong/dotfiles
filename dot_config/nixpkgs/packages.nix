@@ -166,6 +166,7 @@
         python310Packages.graphtage # diff tree-like files such as JSON and XML
         dyff #  A diff tool for YAML files, and sometimes JSON
         my-pkgs.riff # A diff filter highlighting which line parts have changed
+        dig
         dogdns # Command-line DNS client like dig
 
         gopass # The slightly more awesome standard unix password manager for teams.
@@ -219,6 +220,7 @@
         rustscan # Faster Nmap Scanning with Rust
         socat # Utility for bidirectional data transfer between two independent data channels
         sshuttle # Transparent proxy server that works as a poor man's VPN
+        upterm # Secure terminal-session sharing
         sslscan # Tests SSL/TLS services and discover supported cipher suites
         websocat # Command-line client for WebSockets (like netcat/socat)
       ];
@@ -388,6 +390,7 @@
       rust = [
         cargo-edit # Managing cargo dependencies from the command line
         cargo-make # Rust task runner and build tool
+        cargo-generate
         # required for topgrade cargo step
         cargo-update # A cargo subcommand for checking and applying updates to installed executables
         rust-bin.stable.latest.default
