@@ -108,6 +108,7 @@
 
         tools = [
           bcal # Storage conversion and expression calculator
+          fend # Arbitrary-precision unit-aware calculator
           eva # A calculator REPL, similar to bc
           my-pkgs.sttr # cli to perform various operations on string
         ];
@@ -121,9 +122,12 @@
           miller # Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed
           dasel # Query and update data structures from the command line.
           sd # Intuitive find & replace
+          ruplacer # Find and replace text in source files
+          rnr # A command-line tool to batch rename files and directories
           my-pkgs.desed # Debugger for Sed
           teip # A tool to bypass a partial range of standard input to any command
           tree-grepper # Like grep, but uses tree-sitter grammars to search
+          zet # CLI utility to find the union, intersection, set difference, etc of files considered as sets of lines
         ];
       };
 
@@ -251,6 +255,7 @@
         d2 # A modern diagram scripting language that turns text to diagrams
 
         glow # Command-line markdown renderer
+        inlyne # A GPU powered browserless markdown viewer
 
         # TODO: slidev  https://sli.dev/guide/install.html#starter-template
         python310Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
@@ -603,6 +608,8 @@
     backup = [
       borgbackup # Deduplicating archiver with compression and encryption
       borgmatic # Simple, configuration-driven backup software for servers and workstation
+
+      dura # A background process that saves uncommitted changes on git
     ];
 
     shell = [

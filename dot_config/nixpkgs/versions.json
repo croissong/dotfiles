@@ -75,9 +75,9 @@
     "version": "1.6.1"
   },
   "qsv": {
-    "sha": "1h14bbsysdihp2s9vmcgcsy7jgxvwilg82ijip2lnxmjfrhdp9l1",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.101.0/qsv-0.101.0-x86_64-unknown-linux-gnu.zip",
-    "version": "0.101.0"
+    "sha": "11dadna1ii8waxg3za4rwbn3959hz1hikzcpnyfbcxaw3v0wi8cj",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.102.1/qsv-0.102.1-x86_64-unknown-linux-gnu.zip",
+    "version": "0.102.1"
   },
   "riff": {
     "sha": "0p2k5ph7xhrg7ykhal57ldp3q5ws1gw8w8x1n3nrf8jl8ngs4l5r",
