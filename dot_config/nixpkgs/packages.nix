@@ -264,7 +264,7 @@
       general = [
         seer # A Qt gui frontend for GDB
         mold # A faster drop-in replacement for existing Unix linkers
-        my-pkgs.ata # OpenAI GPT in the terminal
+        aichat
         powershell
       ];
 

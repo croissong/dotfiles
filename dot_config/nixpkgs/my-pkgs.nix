@@ -22,25 +22,6 @@ with pkgs; let
     };
   };
 
-  ata = stdenv.mkDerivation {
-    pname = "ata";
-    version = versions.ata.version;
-    src = fetchurl {
-      url = versions.ata.url;
-      sha256 = versions.ata.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/ata
-    '';
-
-    meta = {
-      homepage = "https://github.com/rikhuijzer/ata";
-      description = "OpenAI GPT in the terminal";
-    };
-  };
-
   cqlsh = python3Packages.buildPythonPackage {
     pname = "cqlsh";
     version = versions.cqlsh.version;

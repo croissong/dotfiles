@@ -7,9 +7,6 @@ ain:
   owner: jonaslu
   asset: ain_${VERSION}_linux_x86_64.tar.gz
 
-ata:
-  owner: rikhuijzer
-  asset: ata-x86_64-unknown-linux-gnu
 
 csvlens:
   owner: YS-L

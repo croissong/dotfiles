@@ -4,11 +4,6 @@
     "url": "https://github.com/jonaslu/ain/releases/download/v1.3.0/ain_1.3.0_linux_x86_64.tar.gz",
     "version": "1.3.0"
   },
-  "ata": {
-    "sha": "1r832lmgpvbh1w6xsy98r6pcq6f5v2rrk3ziqvkwpmjy60j2q011",
-    "url": "https://github.com/rikhuijzer/ata/releases/download/v2.0.1/ata-x86_64-unknown-linux-gnu",
-    "version": "2.0.1"
-  },
   "cqlsh": {
     "sha": "0baqsrzsph12ijql37ii6azbd0x7gc4gv6qbrynxl55yizcc4mzv",
     "url": "https://files.pythonhosted.org/packages/89/e6/42b0a920d56af0411c47d486e031ca48519e949ea0f712ba511d056cb5f2/cqlsh-6.1.0-py3-none-any.whl",
