@@ -90,9 +90,9 @@
     "version": "1.4"
   },
   "sheldon": {
-    "sha": "19h7j89gjsvbaaqr68c7p0sii7692r1kag2x3fnbzjb2ns5l2czk",
-    "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.1/sheldon-0.7.1-x86_64-unknown-linux-musl.tar.gz",
-    "version": "0.7.1"
+    "sha": "1f8ggk4n27m796mk6s78zhxq29n3l043vk460zj8lx79yq7aq21h",
+    "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.2/sheldon-0.7.2-x86_64-unknown-linux-musl.tar.gz",
+    "version": "0.7.2"
   },
   "sttr": {
     "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs",
@@ -100,9 +100,9 @@
     "version": "0.2.18"
   },
   "telepresence": {
-    "sha": "006jx26606jig5nszwilzwy9nrj6zi53nlgxkfjh0iqlrq58dr1x",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.1/telepresence-linux-amd64",
-    "version": "2.13.1"
+    "sha": "16rmdqri2rs5shf5l4ydarv1ndhy7mxjsgm5ch4y5w2mn4r5879i",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.2/telepresence-linux-amd64",
+    "version": "2.13.2"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",

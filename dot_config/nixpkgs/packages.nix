@@ -383,8 +383,7 @@
       python = [
         black # The uncompromising Python code formatter
         python310Packages.flake8 # The modular source code checker
-        # TODO: build failure
-        # py-spy # Sampling profiler for Python programs
+        py-spy # Sampling profiler for Python programs
         memray
         mypy # Optional static typing for Python 2 and 3 (PEP484)
         poetry # Python dependency management and packaging made easy.
