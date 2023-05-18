@@ -70,9 +70,9 @@
     "version": "1.6.1"
   },
   "qsv": {
-    "sha": "11dadna1ii8waxg3za4rwbn3959hz1hikzcpnyfbcxaw3v0wi8cj",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.102.1/qsv-0.102.1-x86_64-unknown-linux-gnu.zip",
-    "version": "0.102.1"
+    "sha": "06xs5l7hplzj76sbdnslk6ijiyz8qzpbjzgc1qi2036bxwl4grmz",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.103.1/qsv-0.103.1-x86_64-unknown-linux-gnu.zip",
+    "version": "0.103.1"
   },
   "riff": {
     "sha": "0p2k5ph7xhrg7ykhal57ldp3q5ws1gw8w8x1n3nrf8jl8ngs4l5r",
@@ -85,9 +85,9 @@
     "version": "1.4"
   },
   "sheldon": {
-    "sha": "1f8ggk4n27m796mk6s78zhxq29n3l043vk460zj8lx79yq7aq21h",
-    "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.2/sheldon-0.7.2-x86_64-unknown-linux-musl.tar.gz",
-    "version": "0.7.2"
+    "sha": "06spb45553s2rqjdsivzskf64076yabs6axis7gxjwxlpzalaz8h",
+    "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.3/sheldon-0.7.3-x86_64-unknown-linux-musl.tar.gz",
+    "version": "0.7.3"
   },
   "sttr": {
     "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs",

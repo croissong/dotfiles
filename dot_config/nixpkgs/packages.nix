@@ -276,6 +276,7 @@
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
         linkerd
+        istioctl
         mimir # Grafana Mimir
         grafana
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
