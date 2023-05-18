@@ -33,7 +33,7 @@ alias tf=terraform
 alias jq=gojq
 
 alias steam='steam -nofriendsui -no-browser +open "steam://open/minigameslist"'
-alias weather='curl v2.wttr.in'
+alias weather='wthrr'
 
 alias mani='mani -c ~/.config/mani/code.yaml'
 alias mani-all='cm apply ~/.config/mani && mani run rm && mani sync'

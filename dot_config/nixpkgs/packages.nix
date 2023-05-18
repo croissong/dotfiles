@@ -133,6 +133,7 @@
 
       misc = [
         espeak # Open source speech synthesizer that supports over 70 languages, based on eSpeak
+        wthrr # Weather companion for the terminal
       ];
 
       mobile = [
