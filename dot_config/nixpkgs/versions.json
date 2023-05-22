@@ -110,9 +110,9 @@
     "version": "0.4.0"
   },
   "updatecli": {
-    "sha": "1rwfpkkw6h6x2js3405ni2xhala1y1hdg78fdjvrjvcph40n7law",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.49.2/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.49.2"
+    "sha": "1g5qh4n0l6s9dwp8k9ijcnizafvjx57isf9xmadv8c1vmsjvcqi1",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.50.1/updatecli_Linux_x86_64.tar.gz",
+    "version": "0.50.1"
   },
   "versio": {
     "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",

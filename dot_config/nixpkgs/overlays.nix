@@ -20,6 +20,19 @@
     });
   })
 
+  # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
+  (self: super: {
+    termdown = super.termdown.overrideAttrs (prev: rec {
+      version = "1.18.0";
+      src = super.fetchFromGitHub {
+        rev = version;
+        sha256 = "sha256-Hnk/MOYdbOl14fI0EFbIq7Hmc7TyhcZWGEg2/jmNJ5Y=";
+        repo = "termdown";
+        owner = "trehn";
+      };
+    });
+  })
+
   (self: super: {
     cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation {
       pname = "cyrus-sasl-xoauth2";

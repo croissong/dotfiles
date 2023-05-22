@@ -19,7 +19,7 @@ nix-cm:
   chezmoi apply ~/.config/nixpkgs
 
 nix-hm *args:
-  NIXPKGS_ALLOW_UNFREE=1 home-manager --impure switch \
+  home-manager --impure switch \
   --flake ~/.config/nixpkgs#moi \
   --update-input nixpkgs \
   --update-input home-manager \

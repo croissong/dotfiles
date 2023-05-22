@@ -9,7 +9,12 @@
   tree-grepper,
   ...
 }: {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfreePredicate = pkg: true;
+    permittedInsecurePackages = [
+      "openssl-1.1.1t"
+    ];
+  };
   targets.genericLinux.enable = true;
   programs.home-manager.enable = true;
 
@@ -18,21 +23,9 @@
     NIXOS_OZONE_WL = 1;
   };
 
-  # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
   nixpkgs.overlays = [
     rust-overlay.overlays.default
     tree-grepper.overlay.x86_64-linux
-    (self: super: {
-      termdown = super.termdown.overrideAttrs (prev: rec {
-        version = "1.18.0";
-        src = super.fetchFromGitHub {
-          rev = version;
-          sha256 = "sha256-Hnk/MOYdbOl14fI0EFbIq7Hmc7TyhcZWGEg2/jmNJ5Y=";
-          repo = "termdown";
-          owner = "trehn";
-        };
-      });
-    })
   ];
 
   imports = [
