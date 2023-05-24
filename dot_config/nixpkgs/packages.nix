@@ -183,6 +183,7 @@
         gum # Tasty Bubble Gum for your shell
 
         just # A handy way to save and run project-specific commands
+        go-task # A task runner / simpler Make alternative
 
         mani # A CLI tool that helps you manage multiple repositories
         ookla-speedtest # Internet speedtest tool
@@ -350,6 +351,7 @@
         db = [
           # my_pkgs.cqlsh # cli for interacting with Cassandra using CQL
           mongosh # The MongoDB Shell
+          sqlcmd # A command line tool for working with Microsoft SQL Server, Azure SQL Database
           redli # A humane alternative to the Redis-cli and TLS
           usql # A universal command-line interface for SQL databases
         ];

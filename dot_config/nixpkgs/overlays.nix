@@ -20,6 +20,36 @@
     });
   })
 
+  (self: super: {
+    # https://github.com/NixOS/nixpkgs/blob/nixpkgs-unstable/pkgs/development/tools/go-mockery/default.nix
+    go-mockery = let
+      version = "2.28.1";
+      src = super.fetchFromGitHub {
+        owner = "vektra";
+        repo = "mockery";
+        rev = "v${version}";
+        sha256 = "sha256-TPFrpBwD7r04k4qtyhtRYSXFukfi14TYDHsD57Q0+MQ=";
+      };
+    in (super.go-mockery.override {
+      buildGoModule = args:
+        super.buildGoModule (args
+          // {
+            vendorHash = "sha256-c8HsrcS3x16x3x/VQjQ2XWxfMVYHJ6pbQWztqFj0ju4=";
+            proxyVendor = true;
+            ldflags = [
+              "-s"
+              "-w"
+              "-X"
+              "github.com/vektra/mockery/v2/pkg/logging.SemVer=v${version}"
+            ];
+            preCheck = ''
+              substituteInPlace ./pkg/generator_test.go --replace 0.0.0-dev ${version}
+            '';
+            inherit src version;
+          });
+    });
+  })
+
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/termdown/default.nix
   (self: super: {
     termdown = super.termdown.overrideAttrs (prev: rec {
