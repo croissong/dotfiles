@@ -38,3 +38,8 @@ options = ["fmt"]
 [formatter.rust]
 includes = ["*.rs"]
 command = "rustfmt"
+
+[formatter.slint]
+includes = ["*.slint"]
+command = "slint-fmt"
+options = ["--inline"]
