@@ -287,6 +287,7 @@
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
         tektoncd-cli # CLI for interacting with Tekton
         terraform-ls # Terraform Language Server
+        tflint # Terraform linter
         trivy # A simple and comprehensive vulnerability scanner for containers
       ];
 
@@ -704,7 +705,7 @@
       tenacity # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
 
       ungoogled-chromium # A lightweight approach to removing Google web service dependency
-      zoom # Video Conferencing and Web Conferencing Service
+      zoom-us # Video Conferencing and Web Conferencing Service
 
       # https://nixos.wiki/wiki/Accelerated_Video_Playback
       intel-media-driver

@@ -95,9 +95,9 @@
     "version": "0.2.18"
   },
   "telepresence": {
-    "sha": "16rmdqri2rs5shf5l4ydarv1ndhy7mxjsgm5ch4y5w2mn4r5879i",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.2/telepresence-linux-amd64",
-    "version": "2.13.2"
+    "sha": "16h2rybqii16v3kvbg9xyf90grml0agvn5p0ihfzgrndrp94bwq1",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.3/telepresence-linux-amd64",
+    "version": "2.13.3"
   },
   "termshot": {
     "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
