@@ -1,3 +1,3 @@
 enable_selector = true
-selector = "tofi"
+selector = "bemenu"
 terminal_emulator = '/usr/bin/wezterm'

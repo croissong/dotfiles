@@ -434,7 +434,8 @@
 
       wm = [
         wob # A lightweight overlay bar for Wayland
-        tofi # Tiny dynamic menu for Wayland
+        bemenu # Dynamic menu library and client program inspired by dmenu
+        pinentry-bemenu
       ];
 
       docs = [
