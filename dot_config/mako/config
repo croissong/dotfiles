@@ -2,6 +2,7 @@ font=Iosevka Term 15
 format=<b>%s</b>\n%b
 padding=6
 default-timeout=5000
+output=eDP-1
 
 [urgency=low]
 text-color=#3B7C87
