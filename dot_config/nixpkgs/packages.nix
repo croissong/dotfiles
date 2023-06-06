@@ -436,6 +436,7 @@
         wob # A lightweight overlay bar for Wayland
         bemenu # Dynamic menu library and client program inspired by dmenu
         pinentry-bemenu
+        j4-dmenu-desktop # A wrapper for dmenu that recognize .desktop files
       ];
 
       docs = [
