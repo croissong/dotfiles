@@ -81,9 +81,7 @@ hide_edge_borders --i3 both
 
 
 
-for_window [title="^chrome-extension.*is sharing your screen.$"] floating enable
-for_window [app_id="pinentry-qt"] floating enable
-
+for_window [title=".*Sharing Indicator.*"] floating enable
 
 include ./keybinds.conf
 
