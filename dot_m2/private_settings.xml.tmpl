@@ -1,115 +1,56 @@
-<settings>
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <!-- svh workbench -->
-  <servers>
+    <servers>
         <server>
-            <id>nexus-releases</id>
-            <username>
-            {{ secretJSON | dig "maven" "server" "user" "" }}
-            </username>
-            <password>
-              {{"{"}}{{ secretJSON | dig "maven" "server" "pass" "" }}{{"}"}}
-            </password>
+            <id>anonymous</id>
+            <username>anonymous</username>
+            <password>anonymous</password>
         </server>
         <server>
-            <id>nexus-snapshots</id>
-            <username>
-            {{ secretJSON | dig "maven" "server" "user" "" }}
-            </username>
-            <password>
-              {{"{"}}{{ secretJSON | dig "maven" "server" "pass" "" }}{{"}"}}
-            </password>
+            <id>mcicd-central</id>
+            <username>{{ secretJSON | dig "wrk" "svh" "artifactory" "user" "" }}</username>
+            <password>{{ secretJSON | dig "wrk" "svh" "artifactory" "pass" "" }}</password>
         </server>
-  </servers>
-  <!-- end svh workbench -->
+        <server>
+            <id>mcicd-releases</id>
+            <username>{{ secretJSON | dig "wrk" "svh" "artifactory" "user" "" }}</username>
+            <password>{{ secretJSON | dig "wrk" "svh" "artifactory" "pass" "" }}</password>
+        </server>
+    </servers>
 
-  <mirrors>
+    <mirrors>
         <mirror>
-            <id>public</id>
-            <mirrorOf>*,!Release,!nexus-releases,!nexus-snapshots,!local*</mirrorOf>
-            <url>{{ secretJSON | dig "maven" "server" "url" "" }}/nexus/content/repositories/public</url>
+            <id>mcicd-central</id>
+            <mirrorOf>*,!mcicd-releases</mirrorOf>
+            <name>MCICD Artifactory</name>
+            <url>{{ secretJSON | dig "wrk" "svh" "artifactory" "url" "" }}/artifactory/maven-central</url>
         </mirror>
-  </mirrors>
+    </mirrors>
 
-
-  <profiles>
-
-
-    <profile>
+    <profiles>
+        <profile>
             <id>public</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <repositories>
                 <repository>
-                    <id>nexus</id>
-                    <name>nexus repository by telekom, PI, SE, QTS</name>
-                    <url>{{ secretJSON | dig "maven" "server" "url" "" }}/nexus/content/repositories/public</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>never</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>nexus-releases</id>
-                    <name>nexus repository by telekom</name>
-                    <url>{{ secretJSON | dig "maven" "server" "url" "" }}/nexus/content/repositories/2ndparty</url>
+                    <id>mcicd-releases</id>
+                    <name>MCICD Artifactory</name>
+                    <url>{{ secretJSON | dig "wrk" "svh" "artifactory" "url" "" }}/artifactory/magenta-voice-magenta-maven</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>never</updatePolicy>
                     </releases>
                     <snapshots>
                         <enabled>false</enabled>
-                        <updatePolicy>never</updatePolicy>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>nexus-snapshots</id>
-                    <name>nexus repository by telekom</name>
-                    <url>{{ secretJSON | dig "maven" "server" "url" "" }}/nexus/content/repositories/snapshots</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>never</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
                     </snapshots>
                 </repository>
             </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>nexus</id>
-                    <name>nexus repository by telekom, PI, SE, QTS</name>
-                    <url>{{ secretJSON | dig "maven" "server" "url" "" }}/nexus/content/repositories/public</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>never</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </snapshots>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
-
-        <!-- end svh workbench -->
-
-        <profile>
-            <id>downloadSources</id>
-            <properties>
-                <downloadSources>true</downloadSources>
-                <downloadJavadocs>true</downloadJavadocs>
-            </properties>
         </profile>
     </profiles>
 
-    <activeProfiles>
-        <activeProfile>downloadSources</activeProfile>
-    </activeProfiles>
 </settings>
