@@ -1,3 +1,4 @@
-_PASS_BACKEND="gopass"
+pass_backend="gopass"
 action="copy"
 dmenu_backend="bemenu"
+notify=false
