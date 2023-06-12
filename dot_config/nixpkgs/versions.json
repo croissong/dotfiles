@@ -1,8 +1,8 @@
 {
   "ain": {
-    "sha": "1vcdaifhl6siv23vl2q4aygmbylaa9hm54qm290xkdkjkixhps7m",
+    "version": "1.3.0",
     "url": "https://github.com/jonaslu/ain/releases/download/v1.3.0/ain_1.3.0_linux_x86_64.tar.gz",
-    "version": "1.3.0"
+    "sha": "1vcdaifhl6siv23vl2q4aygmbylaa9hm54qm290xkdkjkixhps7m"
   },
   "cqlsh": {
     "sha": "0baqsrzsph12ijql37ii6azbd0x7gc4gv6qbrynxl55yizcc4mzv",
@@ -10,54 +10,49 @@
     "version": "6.1.0"
   },
   "csvlens": {
-    "sha": "0jhxch8x2f6q7jqrzx1gh0wr5nz8cyczjy84gz72ccfxsvbifni8",
-    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.13.tar.gz",
-    "version": "0.1.13"
+    "version": "0.1.14",
+    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.14.tar.gz",
+    "sha": "18x8nx42ymab7v7af1zygk8hbnkg42d39x1mirr386f2ghxqglkc"
   },
   "desed": {
-    "sha": "1klz4xhnalgh5mq90dfv5qgbzbqhri6nvah525kdhvn67wysysp5",
+    "version": "1.2.1",
     "url": "https://github.com/SoptikHa2/desed/releases/download/v1.2.1/desed-x86_64-unknown-linux-gnu",
-    "version": "1.2.1"
+    "sha": "1klz4xhnalgh5mq90dfv5qgbzbqhri6nvah525kdhvn67wysysp5"
   },
   "dtool": {
-    "sha": "0kh1pbqqf1mj9kv9fd5i0a4crawyd9b23s3d36pswv04vh0gx0cv",
+    "version": "0.12.0",
     "url": "https://github.com/guoxbin/dtool/archive/refs/tags/v0.12.0.tar.gz",
-    "version": "0.12.0"
+    "sha": "0kh1pbqqf1mj9kv9fd5i0a4crawyd9b23s3d36pswv04vh0gx0cv"
   },
   "focus": {
-    "sha": "0k08d1gc4mcj2wni4ajz1q4phcjbgciggci30ssl61anqd1cbqf7",
+    "version": "1.3.0",
     "url": "https://github.com/ayoisaiah/focus/releases/download/v1.3.0/focus_1.3.0_linux_amd64.tar.gz",
-    "version": "1.3.0"
+    "sha": "0k08d1gc4mcj2wni4ajz1q4phcjbgciggci30ssl61anqd1cbqf7"
   },
   "go-commitlinter": {
-    "sha": "03sad57rfaszb1fv78jcf5qyvq6c6zla7v4cyirdp1iyri005hbq",
+    "version": "0.1.2",
     "url": "https://github.com/masahiro331/go-commitlinter/releases/download/0.1.2/go-commitlinter_0.1.2_Linux_x86_64.tar.gz",
-    "version": "0.1.2"
+    "sha": "03sad57rfaszb1fv78jcf5qyvq6c6zla7v4cyirdp1iyri005hbq"
   },
   "got": {
-    "sha": "0jcmmkyb930h881kpp9scl3blfris8my5lbyp061a7z9glz1p8xq",
+    "version": "0.7.0",
     "url": "https://github.com/melbahja/got/releases/download/v0.7.0/got_0.7.0_Linux_amd64.tar.gz",
-    "version": "0.7.0"
+    "sha": "0jcmmkyb930h881kpp9scl3blfris8my5lbyp061a7z9glz1p8xq"
   },
   "gup": {
-    "sha": "0mwyl447q45byssd7a13vkfdnr7mijcav5k3xj08yphfwax4prw8",
-    "url": "https://github.com/nao1215/gup/releases/download/v0.21.1/gup_0.21.1_Linux_x86_64.tar.gz",
-    "version": "0.21.1"
+    "version": "0.22.0",
+    "url": "https://github.com/nao1215/gup/releases/download/v0.22.0/gup_0.22.0_Linux_x86_64.tar.gz",
+    "sha": "0fgdcjfpx6xyrlhp8687liadiakmqrkbn3brpfbw36w75mf5b1qn"
   },
   "klog": {
-    "sha": "0cqpf9yy2rfapxc0qg8ff24gl7kqn6kp4xrkfilz6a3jw5pwpnkg",
+    "version": "6.1",
     "url": "https://github.com/jotaen/klog/releases/download/v6.1/klog-linux.zip",
-    "version": "6.1"
+    "sha": "0cqpf9yy2rfapxc0qg8ff24gl7kqn6kp4xrkfilz6a3jw5pwpnkg"
   },
   "kubesess": {
-    "sha": "16nfq3j4ag28gr32p3srwwx91yck2lrvyssxvwlwfrapq5gfis50",
+    "version": "1.2.9",
     "url": "https://github.com/Ramilito/kubesess/releases/download/1.2.9/kubesess_1.2.9_x86_64-unknown-linux-gnu.tar.gz",
-    "version": "1.2.9"
-  },
-  "mailctl": {
-    "sha": "14x6nz48mlgb4yr0zjlh8437v9d5j22b9plmgba60grkkk33nc0c",
-    "url": "https://git.sr.ht/~petrus/mailctl/refs/download/0.8.8/mailctl-0.8.8-Linux-x86_64.tgz",
-    "version": "0.8.8"
+    "sha": "16nfq3j4ag28gr32p3srwwx91yck2lrvyssxvwlwfrapq5gfis50"
   },
   "promformat": {
     "sha": "1shrwydsgqvs3lyvwcgy6z90ly3nqz8a4mxbgnpi098pfgm3ixnz",
@@ -65,64 +60,64 @@
     "version": "0.0.4"
   },
   "protocurl": {
-    "sha": "1kdx78dscz98rl4qqj613fw2zi1w5b0m6jx2nj9vy47yhvb0k3db",
+    "version": "1.6.1",
     "url": "https://github.com/qaware/protocurl/releases/download/v1.6.1/protocurl_1.6.1_linux_amd64.zip",
-    "version": "1.6.1"
+    "sha": "1kdx78dscz98rl4qqj613fw2zi1w5b0m6jx2nj9vy47yhvb0k3db"
   },
   "qsv": {
-    "sha": "1s1g0fr3v9rncb37w0lxadl41b6pd6kvkllaq9vsrrsmw9m0vynr",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.104.1/qsv-0.104.1-x86_64-unknown-linux-gnu.zip",
-    "version": "0.104.1"
+    "version": "0.106.0",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.106.0/qsv-0.106.0-x86_64-unknown-linux-gnu.zip",
+    "sha": "0y85agnncp3m4iqpmpkjmabnmz38zxzdpn1gxn3dln1flj1zr7fi"
   },
   "riff": {
-    "sha": "0p2k5ph7xhrg7ykhal57ldp3q5ws1gw8w8x1n3nrf8jl8ngs4l5r",
+    "version": "2.23.3",
     "url": "https://github.com/walles/riff/releases/download/2.23.3/riff-2.23.3-x86_64-linux",
-    "version": "2.23.3"
+    "sha": "0p2k5ph7xhrg7ykhal57ldp3q5ws1gw8w8x1n3nrf8jl8ngs4l5r"
   },
   "sane-scan-pdf": {
-    "sha": "0xsbyxv7s6z9nrgvm5rq1661z9fpfdbhlj1mq79si53m3pw60ssq",
+    "version": "1.4",
     "url": "https://github.com/rocketraman/sane-scan-pdf/archive/refs/tags/v1.4.tar.gz",
-    "version": "1.4"
+    "sha": "0xsbyxv7s6z9nrgvm5rq1661z9fpfdbhlj1mq79si53m3pw60ssq"
   },
   "sheldon": {
-    "sha": "06spb45553s2rqjdsivzskf64076yabs6axis7gxjwxlpzalaz8h",
+    "version": "0.7.3",
     "url": "https://github.com/rossmacarthur/sheldon/releases/download/0.7.3/sheldon-0.7.3-x86_64-unknown-linux-musl.tar.gz",
-    "version": "0.7.3"
+    "sha": "06spb45553s2rqjdsivzskf64076yabs6axis7gxjwxlpzalaz8h"
   },
   "sttr": {
-    "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs",
+    "version": "0.2.18",
     "url": "https://github.com/abhimanyu003/sttr/releases/download/v0.2.18/sttr_0.2.18_linux_amd64.tar.gz",
-    "version": "0.2.18"
+    "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs"
   },
   "telepresence": {
-    "sha": "16h2rybqii16v3kvbg9xyf90grml0agvn5p0ihfzgrndrp94bwq1",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.13.3/telepresence-linux-amd64",
-    "version": "2.13.3"
+    "version": "2.14.0-rc.10",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.14.0-rc.10/telepresence-linux-amd64",
+    "sha": "1x8f1iif3y0wxhppirr2961p9p4pvmw2zq6fpwyfrrd9qlplq3ii"
   },
   "termshot": {
-    "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8",
+    "version": "0.2.5",
     "url": "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_linux_amd64.tar.gz",
-    "version": "0.2.5"
+    "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8"
   },
   "tre": {
-    "sha": "1b3b4q5yd3s6san8yrxixslrxsj2m06d0960513139ybnq6v5dj7",
+    "version": "0.4.0",
     "url": "https://github.com/dduan/tre/releases/download/v0.4.0/tre-v0.4.0-x86_64-unknown-linux-musl.tar.gz",
-    "version": "0.4.0"
+    "sha": "1b3b4q5yd3s6san8yrxixslrxsj2m06d0960513139ybnq6v5dj7"
   },
   "updatecli": {
-    "sha": "1g5qh4n0l6s9dwp8k9ijcnizafvjx57isf9xmadv8c1vmsjvcqi1",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.50.1/updatecli_Linux_x86_64.tar.gz",
-    "version": "0.50.1"
+    "version": "0.52.0",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.52.0/updatecli_Linux_x86_64.tar.gz",
+    "sha": "02ily73fpcdzjyx11ls0jdqd381flm53cf3555z7plhqaa01nwl4"
   },
   "versio": {
-    "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k",
+    "version": "0.7.1",
     "url": "https://github.com/chaaz/versio/releases/download/v0.7.1/versio__x86_64-unknown-linux-gnu",
-    "version": "0.7.1"
+    "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k"
   },
   "wutag": {
-    "sha": "06hph7yy7938wiqzcm1la8qqh6y6ainngpk3m4iq11bxv6n7g4f6",
+    "version": "0.5.0",
     "url": "https://github.com/vv9k/wutag/releases/download/0.5.0/wutag-0.5.0-x86_64-unknown-linux.tar.xz",
-    "version": "0.5.0"
+    "sha": "06hph7yy7938wiqzcm1la8qqh6y6ainngpk3m4iq11bxv6n7g4f6"
   },
   "xmlformatter": {
     "sha": "1x83zx5vlfbmlryrw9jl8m72d6wf04s917gbyr61vyyg0jyc94vd",
@@ -130,8 +125,13 @@
     "version": "0.2.4"
   },
   "ytui-music": {
-    "sha": "0gmvq1hi97ijfwxhyr304nb390myai5rd98l56ahdjd2srpz3w3z",
+    "version": "2.0.0-rc1",
     "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-rc1/ytui_music-linux-amd64",
-    "version": "2.0.0-rc1"
+    "sha": "0gmvq1hi97ijfwxhyr304nb390myai5rd98l56ahdjd2srpz3w3z"
+  },
+  "gtree": {
+    "version": "1.7.45",
+    "url": "https://github.com/ddddddO/gtree/releases/download/v1.7.45/gtree_linux_x86_64.tar.gz",
+    "sha": "1ydlhvnd525hyrkmwm4zjazlach46zcm5q2snfcp86gnl1m3hk9s"
   }
 }

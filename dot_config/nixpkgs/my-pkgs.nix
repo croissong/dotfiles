@@ -46,7 +46,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-0zd7m002jYAnKn7H+vFNp3vA1/YAkBMHZRwtUvk4Zq4=";
+    cargoSha256 = "sha256-ux/zdnqFQ1Y2uvqMvetAc+Rl1hEHKOY6/RXRX6oMATM=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -110,6 +110,25 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/ayoisaiah/focus";
       description = "A fully featured productivity timer for the command line, based on the Pomodoro Technique";
+    };
+  };
+
+  gtree = stdenv.mkDerivation {
+    pname = "gtree";
+    version = versions.gtree.version;
+    src = fetchurl {
+      url = versions.gtree.url;
+      sha256 = versions.gtree.sha;
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D gtree $out/bin/gtree
+    '';
+
+    meta = {
+      homepage = "https://github.com/ddddddO/gtree";
+      description = "Generate directory tree and the directories folder using Markdown or Programmatically";
     };
   };
 
@@ -233,24 +252,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/Ramilito/kubesess";
       description = "Kubectl plugin managing sessions";
-    };
-  };
-
-  mailctl = stdenv.mkDerivation {
-    pname = "mailctl";
-    version = versions.mailctl.version;
-    src = fetchurl {
-      url = versions.mailctl.url;
-      sha256 = versions.mailctl.sha;
-    };
-
-    installPhase = ''
-      install -m755 -D mailctl $out/bin/mailctl
-    '';
-
-    meta = {
-      homepage = "https://github.com/pdobsan/mailctl";
-      description = "Provide IMAP/SMTP clients with the capabilities of renewal and authorization of OAuth2 credentials";
     };
   };
 
@@ -576,6 +577,7 @@ in {
   desed = desed;
   dtool = dtool;
   focus = focus;
+  gtree = gtree;
   go-commitlinter = go-commitlinter;
   got = got;
   gup = gup;

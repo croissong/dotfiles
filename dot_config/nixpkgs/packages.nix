@@ -161,6 +161,7 @@
         broot # Fuzzy Search + tree + cd
         my-pkgs.tre # Tree command, improved.
         as-tree # Print a list of paths as a tree of paths
+        my-pkgs.gtree # Generate directory tree and the directories folder using Markdown or Programmatically
 
         tealdeer # tldr in Rust
         the-way # Terminal code snippets manager
@@ -218,6 +219,7 @@
 
     dev = {
       net = [
+        checkip # CLI tool that checks an IP address using various public services
         gping # Ping, but with a graph
         xh # Friendly and fast tool for sending HTTP requests
         mtr # Combines the functionality of traceroute and ping
@@ -242,6 +244,7 @@
       protocols = [
         altair # A feature-rich GraphQL Client IDE
         grpcurl # Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
+        grpc-client-cli # generic gRPC command line client
         my-pkgs.protocurl # cURL for Protobuf
         swaks # Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
       ];
@@ -420,13 +423,14 @@
       cli = [
         croc # Easily and securely send things from one computer to another
         goimapnotify # Execute scripts on IMAP mailbox changes using IDLE
-        my-pkgs.mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
+        mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
         grim # Grab images from a Wayland compositor
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
         topgrade # Invoke the upgrade procedure of multiple package managers
         my-pkgs.gup
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
+        ripgrep-all
         amber # A code search-and-replace tool
         slurp # Select a region in a Wayland compositor
         tmpmail # A temporary email right from your terminal written in POSIX sh
@@ -523,7 +527,7 @@
       all = [
         davmail # A Java application which presents a Microsoft Exchange server as local CALDAV, IMAP and SMTP servers
 
-        pkgs-stable.khal # CLI calendar application build around CalDAV
+        khal # CLI calendar application build around CalDAV
         khard # Console carddav client
         vdirsyncer # Synchronize calendars and contacts
         himalaya # Command-line interface for email management

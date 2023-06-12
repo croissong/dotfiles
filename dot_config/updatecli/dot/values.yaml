@@ -27,6 +27,10 @@ focus:
   owner: ayoisaiah
   asset: focus_${VERSION}_linux_amd64.tar.gz
 
+gtree:
+  owner: ddddddO
+  asset: gtree_linux_x86_64.tar.gz
+
 go-commitlinter:
   owner: masahiro331
   asset: go-commitlinter_${VERSION}_Linux_x86_64.tar.gz
@@ -44,11 +48,6 @@ kubesess:
   owner: Ramilito
   asset: kubesess_${VERSION}_x86_64-unknown-linux-gnu.tar.gz
   trimPrefix: false
-
-mailctl:
-  kind: sourcehut
-  owner: ~petrus
-  asset: mailctl-${VERSION}-Linux-x86_64.tgz
 
 
 protocurl:

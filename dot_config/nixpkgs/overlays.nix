@@ -128,14 +128,10 @@
 
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/security/tessen/default.nix
-    tessen = super.tessen.overrideAttrs (prev: rec {
+    tessen = super.tessen.overrideAttrs (prev: {
       version = "master";
-      src = super.fetchFromSourcehut {
-        owner = "~ayushnix";
-        repo = super.tessen.pname;
-        rev = "${version}";
-        sha256 = "sha256-7hiH1il9vFkrld5wFU+jT7IuudKwigO7ggFuwVbkvYw=";
-      };
+      unpackPhase = ":";
+      src = ~/code/forks/tessen;
     });
   })
 
