@@ -1,13 +1,15 @@
-[
+let
+  versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
+in [
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
     summon = let
-      version = "0.9.5";
+      version = versions.summon.version;
       src = super.fetchFromGitHub {
         owner = "cyberark";
         repo = "summon";
         rev = "v${version}";
-        sha256 = "sha256-C2eSrYp0CkPCcNufF18hHu4bVEK57cReT6jVgNvHZ1I=";
+        sha256 = versions.summon.sha;
       };
     in (super.summon.override {
       buildGoModule = args:
@@ -129,32 +131,34 @@
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/security/tessen/default.nix
     tessen = super.tessen.overrideAttrs (prev: {
-      version = "master";
-      unpackPhase = ":";
-      src = ~/code/forks/tessen;
+      version = "2.2.1-next";
+      dontUnpack = true;
+      src = /home/croissong/code/forks/tessen;
+      installPhase = ''
+        runHook preInstall
+        install -D $src/tessen $out/bin/tessen
+      '';
     });
   })
 
-  (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
-    telepresence = let
-      versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
-
-      version = versions.telepresence.version;
-      src = super.fetchFromGitHub {
-        owner = "telepresence";
-        repo = "telepresenceio";
-        rev = "v${version}";
-        sha256 = versions.telepresence.sha;
-      };
-    in (super.summon.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorSha256 = "sha256-ofBqcD/WsUi0XSKydITttsOQja46bQG3Rn1pgsh1b9k=";
-            inherit src version;
-            patches = [];
-          });
-    });
-  })
+  # (self: super: {
+  #   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/telepresence2/default.nix
+  #   telepresence2 = let
+  #     version = versions.telepresence.version;
+  #     src = super.fetchFromGitHub {
+  #       owner = "telepresenceio";
+  #       repo = "telepresence";
+  #       rev = "v${version}";
+  #       sha256 = versions.telepresence.sha;
+  #     };
+  #   in (super.telepresence2.override {
+  #     buildGoModule = args:
+  #       super.buildGoModule (args
+  #         // {
+  #           vendorSha256 = "sha256-G5brVbIFMoE89xz13snpO291fMa2ic3zZaIEGfB1AV4=";
+  #           inherit src version;
+  #           preBuild = "";
+  #         });
+  #   });
+  # })
 ]

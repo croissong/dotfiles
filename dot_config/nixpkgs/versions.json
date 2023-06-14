@@ -90,9 +90,9 @@
     "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs"
   },
   "telepresence": {
-    "version": "2.14.0-rc.10",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.14.0-rc.10/telepresence-linux-amd64",
-    "sha": "1x8f1iif3y0wxhppirr2961p9p4pvmw2zq6fpwyfrrd9qlplq3ii"
+    "version": "2.14.0",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.14.0/telepresence-linux-amd64",
+    "sha": "0dwilvs9hzphjsmaxzq9y890w1ml3wk7qwx2ibdl5xim8f0mpasw"
   },
   "termshot": {
     "version": "0.2.5",
@@ -133,5 +133,10 @@
     "version": "1.7.45",
     "url": "https://github.com/ddddddO/gtree/releases/download/v1.7.45/gtree_linux_x86_64.tar.gz",
     "sha": "1ydlhvnd525hyrkmwm4zjazlach46zcm5q2snfcp86gnl1m3hk9s"
+  },
+  "summon": {
+    "version": "0.9.5",
+    "url": "https://github.com/cyberark/summon/archive/refs/tags/v0.9.5.tar.gz",
+    "sha": "0lk7qzdq1md89xgc9vdr89a1pvhy45gig7yvf31462klianr4rqb"
   }
 }

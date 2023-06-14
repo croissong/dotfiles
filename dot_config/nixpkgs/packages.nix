@@ -412,6 +412,7 @@
       shell = [
         shfmt # A shell parser and formatter
         nodePackages.bash-language-server
+        nushell # A modern shell written in Rust
       ];
 
       xml = [
@@ -697,7 +698,7 @@
       kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
-      telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
+      my-pkgs.telepresence # Local development against a remote Kubernetes or OpenShift cluster
     ];
 
     apps = [

@@ -523,6 +523,20 @@ with pkgs; let
     };
   };
 
+  telepresence = stdenv.mkDerivation {
+    pname = "telepresence";
+    version = versions.telepresence.version;
+    src = fetchurl {
+      url = versions.telepresence.url;
+      sha256 = versions.telepresence.sha;
+    };
+
+    dontUnpack = true;
+    installPhase = ''
+      install -m755 -D $src $out/bin/telepresence
+    '';
+  };
+
   kanri = pkgs.appimageTools.wrapType2 rec {
     pname = "kanri";
     version = "0.3.3";
@@ -594,6 +608,7 @@ in {
   sheldon = sheldon;
   shellcaster = shellcaster;
   sttr = sttr;
+  telepresence = telepresence;
   termshot = termshot;
   tre = tre;
   updatecli = updatecli;
