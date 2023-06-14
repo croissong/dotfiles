@@ -3,8 +3,8 @@
 shell = "zsh"
 
 [templates]
-defer = """{% for file in files %}zsh-defer source "{{ file }}"\n{% endfor %}"""
-defer-more = """{% for file in files %}zsh-defer -t 0.5 source "{{ file }}"\n{% endfor %}"""
+defer = """{{ hooks | get: "pre" | nl }}{% for file in files %}zsh-defer source "{{ file }}"\n{% endfor %}{{ hooks | get: "post" | nl }}"""
+defer-more = """{{ hooks | get: "pre" | nl }}{% for file in files %}zsh-defer -t 0.5 source "{{ file }}"\n{% endfor %}{{ hooks | get: "post" | nl }}"""
 
 
 [plugins]
@@ -16,8 +16,6 @@ inline = 'eval $(starship init zsh)'
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
-[plugins.zoxide]
-inline = 'zsh-defer -c "eval $(zoxide init --cmd c zsh)"'
 
 [plugins.direnv]
 inline = 'zsh-defer -c "eval $(direnv hook zsh)"'
@@ -64,9 +62,11 @@ zsh-defer source $HOME/.nix-profile/share/kubesess/scripts/sh/kubesess.sh
 [plugins.my-completions]
 local = "~/.config/zsh/plugins/my-completions"
 apply = ["fpath"]
-# use = []
 
 [plugins.compinit]
 github = "rossmacarthur/dotfiles"
 use = ["src/zsh/plugins/compinit.plugin.zsh"]
 apply = ["defer"]
+
+[plugins.zoxide]
+inline = 'zsh-defer -c "eval $(zoxide init --cmd c zsh)"'
