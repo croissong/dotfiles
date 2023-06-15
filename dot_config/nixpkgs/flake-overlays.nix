@@ -1,5 +1,5 @@
 let
-  versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
+  versions = builtins.fromJSON (builtins.readFile ./versions.json);
 in [
   (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix

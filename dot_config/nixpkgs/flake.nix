@@ -28,7 +28,12 @@
     ...
   }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+
+    overlays = import ./flake-overlays.nix;
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = overlays;
+    };
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
     pkgs-master = nixpkgs-master.legacyPackages.${system};
   in {
