@@ -65,9 +65,9 @@
     "sha": "1kdx78dscz98rl4qqj613fw2zi1w5b0m6jx2nj9vy47yhvb0k3db"
   },
   "qsv": {
-    "version": "0.106.0",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.106.0/qsv-0.106.0-x86_64-unknown-linux-gnu.zip",
-    "sha": "0y85agnncp3m4iqpmpkjmabnmz38zxzdpn1gxn3dln1flj1zr7fi"
+    "version": "0.107.0",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.107.0/qsv-0.107.0-x86_64-unknown-linux-gnu.zip",
+    "sha": "0rmzl7f30p2xqkz6a7iianllfxxz5v8mghb7ax6v44hmf9bdyw1v"
   },
   "riff": {
     "version": "2.23.3",
@@ -105,9 +105,9 @@
     "sha": "1b3b4q5yd3s6san8yrxixslrxsj2m06d0960513139ybnq6v5dj7"
   },
   "updatecli": {
-    "version": "0.52.0",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.52.0/updatecli_Linux_x86_64.tar.gz",
-    "sha": "02ily73fpcdzjyx11ls0jdqd381flm53cf3555z7plhqaa01nwl4"
+    "version": "0.53.0",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.53.0/updatecli_Linux_x86_64.tar.gz",
+    "sha": "0z6rj7i3068dgjbxqvwccq3jc4sl4f7qmi5gj8m7c7284k66xqi1"
   },
   "versio": {
     "version": "0.7.1",
@@ -129,14 +129,9 @@
     "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-rc1/ytui_music-linux-amd64",
     "sha": "0gmvq1hi97ijfwxhyr304nb390myai5rd98l56ahdjd2srpz3w3z"
   },
-  "gtree": {
-    "version": "1.7.45",
-    "url": "https://github.com/ddddddO/gtree/releases/download/v1.7.45/gtree_linux_x86_64.tar.gz",
-    "sha": "1ydlhvnd525hyrkmwm4zjazlach46zcm5q2snfcp86gnl1m3hk9s"
-  },
   "summon": {
-    "version": "0.9.5",
-    "url": "https://github.com/cyberark/summon/archive/refs/tags/v0.9.5.tar.gz",
-    "sha": "0lk7qzdq1md89xgc9vdr89a1pvhy45gig7yvf31462klianr4rqb"
+    "version": "0.9.6",
+    "url": "https://github.com/cyberark/summon/archive/refs/tags/v0.9.6.tar.gz",
+    "sha": "17gr0d1grvl3x0dkn8bka7v602d62bn7an8iphc1f2y79vljmqiq"
   }
 }

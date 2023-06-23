@@ -113,25 +113,6 @@ with pkgs; let
     };
   };
 
-  gtree = stdenv.mkDerivation {
-    pname = "gtree";
-    version = versions.gtree.version;
-    src = fetchurl {
-      url = versions.gtree.url;
-      sha256 = versions.gtree.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D gtree $out/bin/gtree
-    '';
-
-    meta = {
-      homepage = "https://github.com/ddddddO/gtree";
-      description = "Generate directory tree and the directories folder using Markdown or Programmatically";
-    };
-  };
-
   go-commitlinter = stdenv.mkDerivation {
     pname = "go-commitlinter";
     version = versions.go-commitlinter.version;
@@ -290,25 +271,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/jqnatividad/qsv";
       description = "CSVs sliced, diced & analyzed";
-    };
-  };
-
-  riff = stdenv.mkDerivation {
-    pname = "riff";
-    version = versions.riff.version;
-    src = fetchurl {
-      url = versions.riff.url;
-      sha256 = versions.riff.sha;
-    };
-
-    unpackPhase = ":";
-    installPhase = ''
-      install -m755 -D $src $out/bin/riff
-    '';
-
-    meta = {
-      homepage = "https://github.com/walles/riff";
-      description = "A diff filter highlighting which line parts have changed";
     };
   };
 
@@ -591,7 +553,6 @@ in {
   desed = desed;
   dtool = dtool;
   focus = focus;
-  gtree = gtree;
   go-commitlinter = go-commitlinter;
   got = got;
   gup = gup;
@@ -603,7 +564,6 @@ in {
   promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;
-  riff = riff;
   sane-scan-pdf = sane-scan-pdf;
   sheldon = sheldon;
   shellcaster = shellcaster;

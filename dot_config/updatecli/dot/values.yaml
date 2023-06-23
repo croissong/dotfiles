@@ -7,7 +7,6 @@ ain:
   owner: jonaslu
   asset: ain_${VERSION}_linux_x86_64.tar.gz
 
-
 csvlens:
   owner: YS-L
 
@@ -26,10 +25,6 @@ got:
 focus:
   owner: ayoisaiah
   asset: focus_${VERSION}_linux_amd64.tar.gz
-
-gtree:
-  owner: ddddddO
-  asset: gtree_linux_x86_64.tar.gz
 
 go-commitlinter:
   owner: masahiro331
@@ -59,10 +54,6 @@ qsv:
   trimPrefix: false
   asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
 
-riff:
-  owner: walles
-  trimPrefix: false
-  asset: riff-${VERSION}-x86_64-linux
 
 sane-scan-pdf:
   owner: rocketraman
@@ -75,6 +66,8 @@ sheldon:
 sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
+
+  owner: cyberark
 
 telepresence:
   owner: telepresenceio

@@ -161,7 +161,7 @@
         broot # Fuzzy Search + tree + cd
         my-pkgs.tre # Tree command, improved.
         as-tree # Print a list of paths as a tree of paths
-        my-pkgs.gtree # Generate directory tree and the directories folder using Markdown or Programmatically
+        gtree # Generate directory tree and the directories folder using Markdown or Programmatically
 
         tealdeer # tldr in Rust
         the-way # Terminal code snippets manager
@@ -171,7 +171,7 @@
         diffsitter # A tree-sitter based AST difftool to get meaningful semantic diffs
         python310Packages.graphtage # diff tree-like files such as JSON and XML
         dyff #  A diff tool for YAML files, and sometimes JSON
-        my-pkgs.riff # A diff filter highlighting which line parts have changed
+        riffdiff # A diff filter highlighting which line parts have changed
         dig
         dogdns # Command-line DNS client like dig
 
@@ -277,6 +277,7 @@
         argo # Container native workflow engine for Kubernetes
         argocd # Declarative continuous deployment for Kubernetes
         azure-cli
+        civo
         cmctl # A CLI tool for managing cert-manager service on Kubernetes clusters
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
@@ -285,6 +286,7 @@
         awscli2
         mimir # Grafana Mimir
         grafana
+        minio-client
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
