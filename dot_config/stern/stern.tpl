@@ -1,0 +1,1 @@
+{{.ContainerName}} {{ with $msg := .Message | tryParseJSON }}[{{ colorGreen (toRFC3339Nano (index $msg "@timestamp")) }}] {{ levelColor $msg.level }} {{ $msg.message }}{{ else }} {{ .Message }} {{ end }}{{"\n"}}

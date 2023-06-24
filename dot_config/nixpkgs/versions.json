@@ -105,9 +105,9 @@
     "sha": "1b3b4q5yd3s6san8yrxixslrxsj2m06d0960513139ybnq6v5dj7"
   },
   "updatecli": {
-    "version": "0.53.0",
-    "url": "https://github.com/updatecli/updatecli/releases/download/v0.53.0/updatecli_Linux_x86_64.tar.gz",
-    "sha": "0z6rj7i3068dgjbxqvwccq3jc4sl4f7qmi5gj8m7c7284k66xqi1"
+    "version": "0.54.0",
+    "url": "https://github.com/updatecli/updatecli/releases/download/v0.54.0/updatecli_Linux_x86_64.tar.gz",
+    "sha": "17cpzz4h1q29isr6g7c1z9swss6g00q6darj9a4cf44fidmkgsm9"
   },
   "versio": {
     "version": "0.7.1",

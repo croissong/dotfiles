@@ -73,11 +73,9 @@ man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (sele
 alias k=kubectl
 alias kf=kubectl-fuzzy
 
-alias ktxrm='k config delete-context'
-alias ktxmv='k config rename-context'
-
-alias kk='k delete'
-alias kkf='kf delete'
+alias kc='switch'
+alias kk='switch h'
+alias kn='switch ns'
 
 alias kg='k get -o yaml'
 alias kgn='k neat get -o yaml'
@@ -88,9 +86,8 @@ alias kdf='kf describe'
 alias ke='k edit'
 alias kroll='k rollout restart'
 
-alias kl='k tail -o zerolog --zerolog-timestamp-field="@timestamp" --zerolog-error-field="stacktrace"'
-alias klr='k tail'
-alias fzt='fzf +s --tac --ansi'
+alias kl='stern --timestamps=short'
+alias klj='stern --template-file ~/.config/stern/stern.tpl'
 
 alias kx='k exec -ti'
 alias kxf='kf exec -ti'

@@ -14,7 +14,6 @@ desed:
   owner: SoptikHa2
   asset: desed-x86_64-unknown-linux-gnu
 
-
 dtool:
   owner: guoxbin
 
@@ -39,12 +38,6 @@ klog:
   owner: jotaen
   asset: klog-linux.zip
 
-kubesess:
-  owner: Ramilito
-  asset: kubesess_${VERSION}_x86_64-unknown-linux-gnu.tar.gz
-  trimPrefix: false
-
-
 protocurl:
   owner: qaware
   asset: protocurl_${VERSION}_linux_amd64.zip
@@ -67,6 +60,7 @@ sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
 
+summon:
   owner: cyberark
 
 telepresence:
@@ -80,7 +74,6 @@ termshot:
 tre:
   owner: dduan
   asset: tre-v${VERSION}-x86_64-unknown-linux-musl.tar.gz
-
 
 updatecli:
   owner: updatecli

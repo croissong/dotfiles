@@ -696,7 +696,8 @@
       krew # Krew is the package manager for kubectl plugins.
       kubectl # Kubernetes.io client binary
       kubelogin # A Kubernetes credential plugin implementing Azure authentication
-      my-pkgs.kubesess
+      kubeswitch
+      stern # Multi pod and container log tailing for Kubernetes
       kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
