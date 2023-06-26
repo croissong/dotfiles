@@ -73,9 +73,9 @@ man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (sele
 alias k=kubectl
 alias kf=kubectl-fuzzy
 
-alias kc='switch'
-alias kk='switch h'
-alias kn='switch ns'
+alias kc='switch --executable-path ~/.nix-profile/bin/switch'
+alias kk='kc h'
+alias kn='kc ns'
 
 alias kg='k get -o yaml'
 alias kgn='k neat get -o yaml'
