@@ -1,8 +1,9 @@
 !include Dot/priv/justfile
 
 
-default:
-  @just --choose
+# https://github.com/casey/just/issues/1557
+# default:
+#   @just --justfile {{justfile()}} --choose
 
 vpnio-start:
   systemctl restart strongswan
@@ -52,4 +53,5 @@ scan:
 
 
 updatecli:
+  systemctl start nix-daemon
   @just --justfile $DOT/dot_config/updatecli/justfile -d $DOT/dot_config/updatecli apply
