@@ -62,7 +62,7 @@ alias unpack='ouch decompress'
 
 alias paruch='paru --config ~/.config/pacman/chaotic-aur.conf'
 
-alias jwtd='jwt decode -j --iso8601'
+alias jwtd='jwt decode -j --date=Local'
 
 man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (selected-frame)))"}
 
@@ -74,8 +74,10 @@ alias k=kubectl
 alias kf=kubectl-fuzzy
 
 alias kc='switch --executable-path ~/.nix-profile/bin/switch'
-alias kk='kc h'
+alias kk='k config current-context'
 alias kn='kc ns'
+alias kcrm='k config delete-context'
+alias kcmv='k config rename-context'
 
 alias kg='k get -o yaml'
 alias kgn='k neat get -o yaml'
