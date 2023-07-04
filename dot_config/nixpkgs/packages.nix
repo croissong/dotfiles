@@ -294,6 +294,7 @@
         terraform-ls # Terraform Language Server
         tflint # Terraform linter
         trivy # A simple and comprehensive vulnerability scanner for containers
+        velero
       ];
 
       cicd = [
@@ -714,7 +715,6 @@
 
       tenacity # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
 
-      ungoogled-chromium # A lightweight approach to removing Google web service dependency
       zoom-us # Video Conferencing and Web Conferencing Service
 
       # https://nixos.wiki/wiki/Accelerated_Video_Playback
