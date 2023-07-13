@@ -74,7 +74,7 @@ alias k=kubectl
 alias kf=kubectl-fuzzy
 
 alias kc='switch --executable-path ~/.nix-profile/bin/switch'
-alias kk='k config current-context'
+alias kk="kubectl config view --minify -o jsonpath='{.contexts[0].context.cluster} {.contexts[0].context.namespace}{\"\n\"}'"
 alias kn='kc ns'
 alias kcrm='k config delete-context'
 alias kcmv='k config rename-context'
