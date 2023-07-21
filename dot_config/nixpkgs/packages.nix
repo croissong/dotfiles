@@ -533,7 +533,6 @@
 
         khal # CLI calendar application build around CalDAV
         khard # Console carddav client
-        vdirsyncer # Synchronize calendars and contacts
         himalaya # Command-line interface for email management
       ];
 

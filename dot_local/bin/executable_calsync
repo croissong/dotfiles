@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e
+
 davmail &
 davmailPID=$!
 while ! ncat -z localhost 1080; do
@@ -6,5 +8,6 @@ while ! ncat -z localhost 1080; do
 done
 
 vdirsyncer sync
+khal list
 
 kill $davmailPID

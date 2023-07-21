@@ -1,16 +1,27 @@
 [calendars]
-  [[work]]
-    path = ~/.local/share/calendars/calendar
-    readonly = False
+  [[wrk_dw]]
+  path = ~/.local/share/calendars/wrk_dw/calendar
+  readonly = True
+  color = light blue
 
-  [[holidays]]
-    path = ~/.local/share/calendars/Feiertage in Deutschland
-    readonly = True
+  # [[holidays]]
+  #   path = ~/.local/share/calendars/Feiertage in Deutschland
+  #   readonly = True
 
+  # [[birthdays]]
+  #   type = birthdays
+  #   path = ~/.local/share/contacts/pers
+
+
+
+[default]
+timedelta = 3d
+
+[locale]
+timeformat = "%H:%M"
 
 [view]
 agenda_event_format = '{calendar-color}{cancelled}{start-end-time-style} {title}{repeat-symbol}{reset}'
 blank_line_before_day = True
-
-[locale]
-local_timezone = Europe/Berlin
+dynamic_days = false
+min_calendar_display = 2
