@@ -165,7 +165,7 @@ in {
 
         Timer = {
           Unit = "calsync.service";
-          OnCalendar = "*-*-* *:05:00";
+          OnCalendar = "0/2:00:00";
           AccuracySec = "10min";
         };
 
