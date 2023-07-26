@@ -1,5 +1,16 @@
 davmail.mode=O365Modern
-davmail.logFilePath=~/.local/state/davmail.log
+davmail.logFilePath={{ env "DOT" }}/.local/state/davmail.log
+
+log4j.logger.davmail=WARN
+log4j.logger.httpclient.wire=WARN
+log4j.logger.org.apache.commons.httpclient=WARN
+log4j.rootLogger=WARN
+
+davmail.disableGuiNotifications=true
+# disable tray icon color switch on activity
+davmail.disableTrayActivitySwitch=true
+# disable startup balloon notifications
+davmail.showStartupBanner=false
 
 
 
@@ -115,10 +126,10 @@ davmail.smtpSaveInSent=true
 # maximum log file size, use Log4J syntax, set to 0 to use an external rotation mechanism, e.g. logrotate
 davmail.logFileSize=1MB
 # log levels
-log4j.logger.davmail=WARN
-log4j.logger.httpclient.wire=WARN
-log4j.logger.org.apache.commons.httpclient=WARN
-log4j.rootLogger=WARN
+# log4j.logger.davmail=WARN
+# log4j.logger.httpclient.wire=WARN
+# log4j.logger.org.apache.commons.httpclient=WARN
+# log4j.rootLogger=WARN
 
 #############################################################
 # Workstation only settings
@@ -133,11 +144,11 @@ davmail.ssl.clientKeystoreFile=
 davmail.ssl.clientKeystorePass=
 
 # disable all balloon notifications
-davmail.disableGuiNotifications=false
+# davmail.disableGuiNotifications=false
 # disable tray icon color switch on activity
-davmail.disableTrayActivitySwitch=false
+# davmail.disableTrayActivitySwitch=false
 # disable startup balloon notifications
-davmail.showStartupBanner=true
+# davmail.showStartupBanner=true
 
 # enable transparent client Kerberos authentication
 davmail.enableKerberos=false
