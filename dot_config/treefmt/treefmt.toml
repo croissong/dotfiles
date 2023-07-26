@@ -15,6 +15,12 @@ command = "xmlformat"
 options = ["--blanks", "--indent", "4", "--selfclose", "-"]
 includes = ["*.xml"]
 
+[formatter.js]
+includes = ["*.js"]
+command = "prettier"
+options = ["--write"]
+
+
 [formatter.jsonnet]
 command = "jsonnetfmt"
 options = ["--in-place"]
