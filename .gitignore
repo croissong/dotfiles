@@ -2,3 +2,4 @@
 .terraform*
 tf/secrets.auto.tfvars
 /dot_config/nixpkgs/_sources/
+/dot_config/nixpkgs/versions.json
