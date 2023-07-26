@@ -1,9 +1,0 @@
-[Unit]
-Description=Alarm Clock
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/timeout 30m %h/.local/bin/alarm
-
-[Install]
-WantedBy=multi-user.target

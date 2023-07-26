@@ -2,7 +2,7 @@
 in {
   imports = [
     ./firefox.nix
-    ./mail.nix
+    ./pim.nix
   ];
 
   programs = {
