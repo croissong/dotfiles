@@ -2,27 +2,6 @@ let
   versions = builtins.fromJSON (builtins.readFile ./versions.json);
 in [
   (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/summon/default.nix
-    summon = let
-      version = versions.summon.version;
-      src = super.fetchFromGitHub {
-        owner = "cyberark";
-        repo = "summon";
-        rev = "v${version}";
-        sha256 = versions.summon.sha;
-      };
-    in (super.summon.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorSha256 = "sha256-ErR4vUxH49tciGnypXuOU71mPBO64QbyGEaanKQDoLU=";
-            inherit src version;
-            patches = [];
-          });
-    });
-  })
-
-  (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/nixpkgs-unstable/pkgs/development/tools/go-mockery/default.nix
     go-mockery = let
       version = "2.28.1";

@@ -10,9 +10,9 @@
     "version": "6.1.0"
   },
   "csvlens": {
-    "version": "0.1.14",
-    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.1.14.tar.gz",
-    "sha": "18x8nx42ymab7v7af1zygk8hbnkg42d39x1mirr386f2ghxqglkc"
+    "version": "0.2.0",
+    "url": "https://github.com/YS-L/csvlens/archive/refs/tags/v0.2.0.tar.gz",
+    "sha": "1q9n85jqa5lkrpfgdsy36c3bghqjhaiw9qzy58vz5gc9p1n0s5nk"
   },
   "desed": {
     "version": "1.2.1",
@@ -65,9 +65,9 @@
     "sha": "1kdx78dscz98rl4qqj613fw2zi1w5b0m6jx2nj9vy47yhvb0k3db"
   },
   "qsv": {
-    "version": "0.108.0",
-    "url": "https://github.com/jqnatividad/qsv/releases/download/0.108.0/qsv-0.108.0-x86_64-unknown-linux-gnu.zip",
-    "sha": "15fd6m29x6hx8qsszlfnhpgqvp3hxmyk9s6sffkw9cai13l3kj7h"
+    "version": "0.109.0",
+    "url": "https://github.com/jqnatividad/qsv/releases/download/0.109.0/qsv-0.109.0-x86_64-unknown-linux-gnu.zip",
+    "sha": "101747x8v7ghnrml84ckv1c13xwld7kvrw5285p3nks17xsxglpl"
   },
   "riff": {
     "version": "2.23.3",
@@ -90,14 +90,14 @@
     "sha": "1dw5fg3pjsfds04fm9svh8kkpnrvw8dlbamschpvh1vpab0877cs"
   },
   "telepresence": {
-    "version": "2.14.0",
-    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.14.0/telepresence-linux-amd64",
-    "sha": "0dwilvs9hzphjsmaxzq9y890w1ml3wk7qwx2ibdl5xim8f0mpasw"
+    "version": "2.14.2",
+    "url": "https://github.com/telepresenceio/telepresence/releases/download/v2.14.2/telepresence-linux-amd64",
+    "sha": "117vdzy67ha00v8hk0614hh5s34mma9kfb7sbf0dac9qs9kj5p6z"
   },
   "termshot": {
-    "version": "0.2.5",
-    "url": "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_linux_amd64.tar.gz",
-    "sha": "184sbiawv8y8f38836d5sxld4n4nj6rb91rzjsxynjcaxi0mpbv8"
+    "version": "0.2.7",
+    "url": "https://github.com/homeport/termshot/releases/download/v0.2.7/termshot_0.2.7_linux_amd64.tar.gz",
+    "sha": "12n94qyx3sq9ydbzlq8b54xbc1p9lzys4hhrbjr4yrf6n95aqzb3"
   },
   "tre": {
     "version": "0.4.0",
@@ -110,9 +110,9 @@
     "sha": "17cpzz4h1q29isr6g7c1z9swss6g00q6darj9a4cf44fidmkgsm9"
   },
   "versio": {
-    "version": "0.7.1",
-    "url": "https://github.com/chaaz/versio/releases/download/v0.7.1/versio__x86_64-unknown-linux-gnu",
-    "sha": "0j0hikfgz493hx897hn95809qpn291wmndl9i9pxxwz2ldy21z2k"
+    "version": "0.7.6",
+    "url": "https://github.com/chaaz/versio/releases/download/v0.7.6/versio__x86_64-unknown-linux-gnu",
+    "sha": "1qpp63amq44qqy8c6fp3hv7i9g86dyjbqhhisrabkcn7596vjvmr"
   },
   "wutag": {
     "version": "0.5.0",
@@ -128,10 +128,5 @@
     "version": "2.0.0-rc1",
     "url": "https://github.com/sudipghimire533/ytui-music/releases/download/v2.0.0-rc1/ytui_music-linux-amd64",
     "sha": "0gmvq1hi97ijfwxhyr304nb390myai5rd98l56ahdjd2srpz3w3z"
-  },
-  "summon": {
-    "version": "0.9.6",
-    "url": "https://github.com/cyberark/summon/archive/refs/tags/v0.9.6.tar.gz",
-    "sha": "17gr0d1grvl3x0dkn8bka7v602d62bn7an8iphc1f2y79vljmqiq"
   }
 }

@@ -43,6 +43,10 @@
       system-config-printer
       ocrmypdf # Adds an OCR text layer to scanned PDF files
       my-pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
+      sane-airscan
+      simple-scan
+
+      okular # KDE document viewer
 
       djvulibre # for emacs doc-tools
       mupdf # for emacs doc-tools
@@ -506,6 +510,7 @@
       comm = [
         mumble # low-latency, high quality voice chat software
         linphone
+        tiny # A console IRC client
         signal-desktop
       ];
     };
@@ -523,7 +528,7 @@
 
       core = [
         atuin # Replacement for a shell history which records additional commands context
-        my-pkgs.sheldon # Fast, configurable, shell plugin manager
+        sheldon # Fast, configurable, shell plugin manager
       ];
     };
 
@@ -663,7 +668,7 @@
     ];
 
     dev = [
-      # checkov # Static code analysis tool for infrastructure-as-code
+      checkov # Static code analysis tool for infrastructure-as-code
       caddy # Fast, cross-platform HTTP/2 web server with automatic HTTPS
       cosign # Container Signing CLI with support for ephemeral keys and Sigstore signing
       doctl # The official command line interface for the DigitalOcean API
@@ -714,7 +719,8 @@
 
       tenacity # FLOSS Audacity Fork. No telemetry, crash reports and other shenanigans like that!
 
-      zoom-us # Video Conferencing and Web Conferencing Service
+      # TODO: nixos
+      # zoom-us # Video Conferencing and Web Conferencing Service
 
       # https://nixos.wiki/wiki/Accelerated_Video_Playback
       intel-media-driver

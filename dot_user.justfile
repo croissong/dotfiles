@@ -36,7 +36,7 @@ nix-diff:
 
 nix-check-missing:
   # outdated
-  nix search nixpkgs '\.(sheldon|summon|goimapnotify)'
+  # nix search nixpkgs '\.()'
   # missing
   nix search nixpkgs '\.(csvlens|klog|focus|gup|termshot|mailctl|sttr|versio$|slidev|updatecli|got$)'
 

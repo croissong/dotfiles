@@ -46,7 +46,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-ux/zdnqFQ1Y2uvqMvetAc+Rl1hEHKOY6/RXRX6oMATM=";
+    cargoSha256 = "sha256-ihyM0Jtd9ymgYW6JqxuoLFbw6dJ0ftnWeeKQVKb6RX4=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -296,31 +296,6 @@ with pkgs; let
     };
   };
 
-  # TODO: https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/misc/sheldon/default.nix
-  sheldon = stdenv.mkDerivation {
-    pname = "sheldon";
-    version = versions.sheldon.version;
-    src = fetchurl {
-      url = versions.sheldon.url;
-      sha256 = versions.sheldon.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D sheldon $out/bin/sheldon
-      runHook postInstall
-    '';
-    nativeBuildInputs = [installShellFiles];
-    postInstall = ''
-      installShellCompletion --zsh completions/sheldon.zsh
-    '';
-
-    meta = {
-      homepage = "https://github.com/rossmacarthur/sheldon";
-      description = "Fast, configurable, shell plugin manager";
-    };
-  };
-
   shellcaster = stdenv.mkDerivation {
     pname = "shellcaster";
     version = versions.shellcaster.version;
@@ -560,12 +535,10 @@ in {
   kanri = kanri;
   klog = klog;
   kubesess = kubesess;
-  mailctl = mailctl;
   promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;
   sane-scan-pdf = sane-scan-pdf;
-  sheldon = sheldon;
   shellcaster = shellcaster;
   sttr = sttr;
   telepresence = telepresence;

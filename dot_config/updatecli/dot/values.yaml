@@ -60,8 +60,6 @@ sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
 
-summon:
-  owner: cyberark
 
 telepresence:
   owner: telepresenceio
