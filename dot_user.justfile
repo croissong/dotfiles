@@ -45,11 +45,12 @@ gc:
   nix-collect-garbage -d
 
 
-scan:
-  /tmp/scan --verbose --mode Color --resolution 600 -e 1 --open --ocr --no-default-size -x 'airscan:e1:Canon TS5000 series'
-
-  # scanadf -L
-  # scanadf -d pixma:04A91802_0B3458 -e 1 -S /tmp/scan_perpage --script-wait 0 0 --resolution 300 --mode Color -o /tmp/worlitz-kk.jpg
+scan out:
+  sy restart avahi-daemon.service
+  scan --verbose --mode Color --resolution 600 -e 1 --no-default-size \
+    -x 'airscan:e0:Canon TS5000 series' \
+    --unpaper --ocr \
+    -o {{out}}.pdf
 
 
 updatecli:

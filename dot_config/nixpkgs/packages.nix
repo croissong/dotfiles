@@ -62,10 +62,6 @@
       my-pkgs.klog
     ];
 
-    special_purpose = [
-      tesseract # An OCR program
-    ];
-
     dot = [
       my-pkgs.updatecli # Continuously update everything
       chezmoi # Manage your dotfiles across multiple machines
@@ -454,11 +450,13 @@
       ];
 
       docs = [
+        deskew # deskewing scanned text documents
         paperwork # Personal document manager
         my-pkgs.wutag # CLI tool for tagging and organizing files by tags
         simple-scan
+        tesseract # An OCR program
+        unpaper # Post-processing tool for scanned sheets of paper
         zathura # A highly customizable and functional PDF viewer
-        deskew # deskewing scanned text documents
       ];
 
       odre = [
