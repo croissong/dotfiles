@@ -404,7 +404,9 @@
         mypy # Optional static typing for Python 2 and 3 (PEP484)
         poetry # Python dependency management and packaging made easy.
         pyright # Type checker for the Python language
+        ruff # An extremely fast Python linter
         twine # Collection of utilities for interacting with PyPI
+        virtualenv
       ];
 
       rust = [
