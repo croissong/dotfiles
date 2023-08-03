@@ -1,5 +1,7 @@
 # Player options
-player=mpv --cache 10240
+player=mpv
+player-args=--cache 10240
 player-no-close
+# verbose-player
 default-stream=best
 twitch-disable-ads
