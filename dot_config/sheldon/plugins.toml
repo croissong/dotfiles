@@ -22,9 +22,7 @@ inline = 'zsh-defer -c "eval $(direnv hook zsh)"'
 
 [plugins.atuin]
 inline = """
-export ATUIN_NOBIND='true'
-zsh-defer -c 'eval "$(atuin init zsh)"'
-bindkey '^r' _atuin_search_widget
+zsh-defer -c 'eval "$(atuin init zsh --disable-up-arrow)"'
 """
 
 [plugins.broot]
@@ -33,8 +31,7 @@ inline = 'zsh-defer source $XDG_CONFIG_HOME/broot/launcher/bash/br'
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 apply = ["defer"]
-[plugins.fzf-tab-conf]
-inline = """
+hooks.post = """
 export FZF_DEFAULT_COMMAND='fd --type f'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':completion:complete:*:options' sort false
@@ -57,10 +54,6 @@ apply = ["defer"]
 github = "danielfoehrKn/kubeswitch"
 use = ["hack/switch/switch.sh"]
 apply = ["defer"]
-
-[plugins.my-completions]
-local = "~/.config/zsh/plugins/my-completions"
-apply = ["fpath"]
 
 [plugins.compinit]
 github = "rossmacarthur/dotfiles"
