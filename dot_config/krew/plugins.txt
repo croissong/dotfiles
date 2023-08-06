@@ -2,10 +2,10 @@ access-matrix
 bulk-action
 fuzzy
 ice
+klock
 krew
 lineage
 neat
-ns
 rbac-tool
 reap
 resource-capacity

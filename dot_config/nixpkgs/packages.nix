@@ -60,6 +60,7 @@
 
     orga = [
       my-pkgs.klog
+      kapow # Punch clock to track time spent on projects
     ];
 
     dot = [
@@ -313,6 +314,7 @@
         nix-direnv-flakes # A fast, persistent use_nix implementation for direnv
         # tree-sitter-grammars.tree-sitter-toml
 
+        focuswriter # Simple, distraction-free writing environment
         nuspell
         enchant
         hunspellDicts.de-de
