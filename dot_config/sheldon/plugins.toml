@@ -51,8 +51,8 @@ use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
 [plugins.kubeswitch]
-github = "danielfoehrKn/kubeswitch"
-use = ["hack/switch/switch.sh"]
+local = "~/.nix-profile/share"
+use = ["switch.zsh"]
 apply = ["defer"]
 
 [plugins.compinit]

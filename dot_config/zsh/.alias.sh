@@ -73,9 +73,9 @@ man() {emacsclient -que "(progn (man \"$1\") (select-frame-set-input-focus (sele
 alias k=kubectl
 alias kf=kubectl-fuzzy
 
-alias kc='switch --executable-path ~/.nix-profile/bin/switch'
+alias kc='switch --show-preview=false'
 alias kk="kubectl config view --minify -o jsonpath='{.contexts[0].context.cluster} {.contexts[0].context.namespace}{\"\n\"}'"
-alias kn='kc ns'
+alias kn='switch ns'
 alias kcrm='k --kubeconfig ~/.kube/config config delete-context'
 alias kcmv='k --kubeconfig ~/.kube/config config rename-context'
 
