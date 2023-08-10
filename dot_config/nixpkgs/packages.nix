@@ -289,6 +289,7 @@
         grafana
         minio-client
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
+        restic
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
         tektoncd-cli # CLI for interacting with Tekton
