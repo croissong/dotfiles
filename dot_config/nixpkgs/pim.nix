@@ -137,6 +137,7 @@ in {
         Unit = {
           Description = "calsync";
           OnFailure = "failure-notify@%n";
+          After = "network-online.target";
         };
 
         Service = {
