@@ -38,7 +38,7 @@ nix-check-missing:
   # outdated
   # nix search nixpkgs '\.()'
   # missing
-  nix search nixpkgs '\.(csvlens|klog|focus|gup|termshot|mailctl|sttr|versio$|slidev|updatecli|got$)'
+  nix search nixpkgs '\.(csvlens|klog|focus|termshot|sttr|versio$|slidev|updatecli|got$)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force

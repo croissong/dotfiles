@@ -7,6 +7,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
+    nixpkgs-custom.url = "github:nixos/nixpkgs/8766168f361300aa48ae7468293b111806feb2cb";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-22.05";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -20,6 +21,7 @@
   outputs = {
     nixpkgs,
     nixpkgs-master,
+    nixpkgs-custom,
     nixpkgs-stable,
     home-manager,
     rust-overlay,
@@ -36,6 +38,7 @@
     };
     pkgs-stable = nixpkgs-stable.legacyPackages.${system};
     pkgs-master = nixpkgs-master.legacyPackages.${system};
+    pkgs-custom = nixpkgs-custom.legacyPackages.${system};
   in {
     homeConfigurations.moi = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
@@ -44,7 +47,7 @@
         nur.nixosModules.nur
       ];
       extraSpecialArgs = {
-        inherit rust-overlay pkgs-stable pkgs-master tree-grepper;
+        inherit rust-overlay pkgs-stable pkgs-master pkgs-custom tree-grepper nixgl;
       };
     };
   };

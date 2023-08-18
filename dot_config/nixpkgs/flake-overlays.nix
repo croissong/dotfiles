@@ -46,63 +46,22 @@ in [
   })
 
   (self: super: {
-    cyrus-sasl-xoauth2 = super.pkgs.stdenv.mkDerivation {
-      pname = "cyrus-sasl-xoauth2";
-      version = "master";
-
-      src = super.pkgs.fetchFromGitHub {
-        owner = "moriyoshi";
-        repo = "cyrus-sasl-xoauth2";
-        rev = "master";
-        sha256 = "sha256-OlmHuME9idC0fWMzT4kY+YQ43GGch53snDq3w5v/cgk=";
-      };
-
-      nativeBuildInputs = [super.pkg-config super.automake super.autoconf super.libtool];
-      propagatedBuildInputs = [super.cyrus_sasl];
-
-      buildPhase = ''
-        ./autogen.sh
-        ./configure
-      '';
-
-      installPhase = ''
-        make DESTDIR="$out" install
-      '';
-
-      meta = {
-        homepage = "https://github.com/moriyoshi/cyrus-sasl-xoauth2";
-        description = "XOAUTH2 mechanism plugin for cyrus-sasl";
-      };
-    };
-
-    # https://github.com/NixOS/nixpkgs/issues/108480#issuecomment-1115108802
-    isync-oauth2 = super.buildEnv {
-      name = "isync-oauth2";
-      paths = [super.isync];
-      pathsToLink = ["/bin"];
-      nativeBuildInputs = [super.makeWrapper];
-      postBuild = ''
-        wrapProgram "$out/bin/mbsync" \
-          --prefix SASL_PATH : "${super.cyrus_sasl.out.outPath}/lib/sasl2:${self.cyrus-sasl-xoauth2}/usr/lib/sasl2"
-      '';
-    };
-  })
-
-  (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/goimapnotify/default.nix
-    goimapnotify = let
-      version = "2.4-rc3";
+    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/sync/rclone/default.nix
+    rclone = let
+      version = "1.63.1-next";
       src = super.fetchFromGitLab {
-        owner = "shackra";
-        repo = "goimapnotify";
-        rev = version;
-        sha256 = "sha256-tu2fUPBOJcWiYLmxEjRjdRdS9i+Rl9icQVb90kEXYTY=";
+        rev = "40de89df73cf26424fdc2a5676f36eefe9d9dc43";
+        hash = "sha256-uS1kSgS8jyHiamfI/t/yT43mneSbSkbj4csIJEWX6Dc=";
+        repo = super.rclone.pname;
+        owner = super.rclone.pname;
       };
-    in (super.goimapnotify.override {
+    in (super.rclone.override {
       buildGoModule = args:
         super.buildGoModule (args
           // {
-            vendorSha256 = "sha256-DphGe9jbKo1aIfpF5kRYNSn/uIYHaRMrygda5t46svw=";
+            vendorHash = "sha256-FGsYzmNGI8dUwLJfthPDHH1EuWLze5szR1P1ySmMyJI=";
+            ldflags = ["-s" "-w" "-X github.com/rclone/rclone/fs.Version=${version}"];
+            doCheck = false;
             inherit src version;
           });
     });

@@ -3,6 +3,7 @@
   pkgs,
   pkgs-stable,
   pkgs-master,
+  pkgs-custom,
   config,
   lib,
   ...
@@ -431,8 +432,7 @@
     desktop = {
       cli = [
         croc # Easily and securely send things from one computer to another
-        goimapnotify # Execute scripts on IMAP mailbox changes using IDLE
-        mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
+        pkgs-custom.mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
         grim # Grab images from a Wayland compositor
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
@@ -541,7 +541,6 @@
 
         khal # CLI calendar application build around CalDAV
         khard # Console carddav client
-        himalaya # Command-line interface for email management
       ];
 
       bookmarks = [
