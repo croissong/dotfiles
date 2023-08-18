@@ -5,10 +5,15 @@
 }: let
   secrets = import ./secrets.nix;
 in {
+  nixpkgs.overlays = [
+    (self: super: {
+      isync = super.isync.override {withCyrusSaslXoauth2 = true;};
+    })
+  ];
+
   programs = {
     mbsync = {
       enable = true;
-      package = pkgs.isync.override {withCyrusSaslXoauth2 = true;};
     };
 
     vdirsyncer = {
@@ -28,6 +33,8 @@ in {
   services = {
     mbsync = {
       enable = true;
+      postExec = "${pkgs.notmuch}/bin/notmuch new";
+      frequency = "0/1:00:00";
     };
   };
 
@@ -146,7 +153,6 @@ in {
         Unit = {
           Description = "calsync";
           OnFailure = "failure-notify@%n";
-          After = "network-online.target";
         };
 
         Service = {
@@ -171,6 +177,7 @@ in {
       calsync = {
         Unit = {
           Description = "regular calsync";
+          After = "network-online.target";
         };
 
         Timer = {
