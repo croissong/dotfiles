@@ -1,6 +1,7 @@
 font=Iosevka Term 15
 format=<b>%s</b>\n%b
 padding=6
+layer=overlay
 default-timeout=5000
 output=eDP-1
 
