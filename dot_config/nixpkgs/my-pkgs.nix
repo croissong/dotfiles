@@ -151,24 +151,6 @@ with pkgs; let
     };
   };
 
-  gup = stdenv.mkDerivation {
-    pname = "gup";
-    version = versions.gup.version;
-    src = fetchurl {
-      url = versions.gup.url;
-      sha256 = versions.gup.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D gup $out/bin/gup
-    '';
-    meta = {
-      homepage = "https://github.com/nao1215/gup";
-      description = "Update binaries installed by go install";
-    };
-  };
-
   handlr-regex = stdenv.mkDerivation {
     pname = "handlr-regex";
     version = "0.8.4";
@@ -204,35 +186,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/jotaen/klog";
       description = "Command line tool for time tracking";
-    };
-  };
-
-  kubesess = stdenv.mkDerivation rec {
-    pname = "kubesess";
-    version = versions.kubesess.version;
-    src = fetchurl {
-      url = versions.kubesess.url;
-      sha256 = versions.kubesess.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D target/x86_64-unknown-linux-gnu/release/kubesess $out/bin/kubesess
-      mkdir -p $out/share/${pname}
-      cp -r scripts $out/share/${pname}/scripts
-
-      runHook postInstall
-    '';
-
-    # TODO: shellcompletion
-    # nativeBuildInputs = [installShellFiles];
-    # postInstall = ''
-    #   installShellCompletion --zsh --name _kubesess scripts/sh/completion.sh
-    # '';
-
-    meta = {
-      homepage = "https://github.com/Ramilito/kubesess";
-      description = "Kubectl plugin managing sessions";
     };
   };
 
@@ -530,11 +483,9 @@ in {
   focus = focus;
   go-commitlinter = go-commitlinter;
   got = got;
-  gup = gup;
   handlr-regex = handlr-regex;
   kanri = kanri;
   klog = klog;
-  kubesess = kubesess;
   promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;

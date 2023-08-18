@@ -283,7 +283,6 @@
         cmctl # A CLI tool for managing cert-manager service on Kubernetes clusters
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
-        linkerd
         istioctl
         awscli2
         mimir # Grafana Mimir
@@ -437,7 +436,6 @@
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
         topgrade # Invoke the upgrade procedure of multiple package managers
-        my-pkgs.gup
         ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
         ripgrep-all
         amber # A code search-and-replace tool
