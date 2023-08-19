@@ -427,6 +427,20 @@ with pkgs; let
     '';
   };
 
+  rmt = stdenv.mkDerivation rec {
+    pname = "rmt";
+    version = "0.2.1";
+    src = fetchurl {
+      url = "https://github.com/AmineZouitine/rmt.rs/releases/download/${version}/rmt-x86_64-unknown-linux-gnu.tar.gz";
+      sha256 = "sha256-DoBpWdLm6C1pcC65hZ+QMam7oY52moabMPXU5bU+ACI=";
+    };
+
+    sourceRoot = ".";
+    installPhase = ''
+      install -m755 -D rmt $out/bin/rmt
+    '';
+  };
+
   kanri = pkgs.appimageTools.wrapType2 rec {
     pname = "kanri";
     version = "0.3.3";
@@ -489,6 +503,7 @@ in {
   promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;
+  rmt = rmt;
   sane-scan-pdf = sane-scan-pdf;
   shellcaster = shellcaster;
   sttr = sttr;
