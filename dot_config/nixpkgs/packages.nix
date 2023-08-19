@@ -555,8 +555,6 @@
         inxi # A full featured CLI system information tool
         lshw
         hwinfo
-        # TODO: requires nixos for udev rules (`programs.light.enable = true;`)
-        # light # GNU/Linux application to control backlights
         procs # A modern replacement for ps written in Rust
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
 

@@ -1,0 +1,9 @@
+# mpv
+# yofi
+# sway, swayidle, swaylock
+
+# TODO digga
+
+# nyxt
+
+# brightnessctl + https://packages.debian.org/stable/ddcci-dkms
