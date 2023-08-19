@@ -555,6 +555,7 @@
         inxi # A full featured CLI system information tool
         lshw
         hwinfo
+        ddcutil # Query and change Linux monitor settings using DDC/CI and USB
         procs # A modern replacement for ps written in Rust
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
 
