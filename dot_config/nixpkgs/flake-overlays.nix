@@ -79,25 +79,4 @@ in [
       '';
     });
   })
-
-  # (self: super: {
-  #   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/networking/telepresence2/default.nix
-  #   telepresence2 = let
-  #     version = versions.telepresence.version;
-  #     src = super.fetchFromGitHub {
-  #       owner = "telepresenceio";
-  #       repo = "telepresence";
-  #       rev = "v${version}";
-  #       sha256 = versions.telepresence.sha;
-  #     };
-  #   in (super.telepresence2.override {
-  #     buildGoModule = args:
-  #       super.buildGoModule (args
-  #         // {
-  #           vendorSha256 = "sha256-G5brVbIFMoE89xz13snpO291fMa2ic3zZaIEGfB1AV4=";
-  #           inherit src version;
-  #           preBuild = "";
-  #         });
-  #   });
-  # })
 ]
