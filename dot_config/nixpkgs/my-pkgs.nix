@@ -65,7 +65,7 @@ with pkgs; let
       sha256 = versions.desed.sha;
     };
 
-    unpackPhase = ":";
+    dontUnpack = true;
     installPhase = ''
       install -m755 -D $src $out/bin/desed
     '';
@@ -159,7 +159,7 @@ with pkgs; let
       sha256 = "sha256-b4GwJ7hoaOYDlQ90u08WsEG7eP/VMTqXbD58k94XLUk=";
     };
 
-    unpackPhase = ":";
+    dontUnpack = true;
     installPhase = ''
       install -m755 -D $src $out/bin/handlr
     '';
@@ -356,7 +356,7 @@ with pkgs; let
       sha256 = versions.versio.sha;
     };
 
-    unpackPhase = ":";
+    dontUnpack = true;
     installPhase = ''
       install -m755 -D $src $out/bin/versio
     '';
@@ -402,7 +402,7 @@ with pkgs; let
       sha256 = versions.ytui-music.sha;
     };
 
-    unpackPhase = ":";
+    dontUnpack = true;
     installPhase = ''
       install -m755 -D $src $out/bin/ytui_music
     '';
