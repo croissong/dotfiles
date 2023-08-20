@@ -6,3 +6,4 @@ search_mode = "fuzzy"
 style = "compact"
 inline_height = 10
 filter_mode = "directory"
+show_help = false
