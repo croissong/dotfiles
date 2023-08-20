@@ -28,6 +28,14 @@ zsh-defer -c 'eval "$(atuin init zsh --disable-up-arrow)"'
 [plugins.broot]
 inline = 'zsh-defer source $XDG_CONFIG_HOME/broot/launcher/bash/br'
 
+[plugins.enhancd]
+github = "b4b4r07/enhancd"
+hooks.pre = """
+  ENHANCD_ENABLE_HOME=false
+  ENHANCD_USE_ABBREV=true
+  ENHANCD_FILTER="fzf --height 25%:fzy"
+"""
+
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 apply = ["defer"]
