@@ -30,6 +30,7 @@ inline = 'zsh-defer source $XDG_CONFIG_HOME/broot/launcher/bash/br'
 
 [plugins.enhancd]
 github = "b4b4r07/enhancd"
+apply = ["defer"]
 hooks.pre = """
   ENHANCD_ENABLE_HOME=false
   ENHANCD_USE_ABBREV=true
