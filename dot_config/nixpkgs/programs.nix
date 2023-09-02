@@ -33,7 +33,7 @@ in {
     enable = true;
     latitude = "51.3";
     longitude = "9.5";
-    temperature.night = 1500;
+    temperature.night = 2000;
   };
 
   # TODO: use nixos services + declarative config
