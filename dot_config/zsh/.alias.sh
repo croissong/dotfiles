@@ -1,4 +1,4 @@
-alias ls='exa -ga --group-directories-first'
+alias ls='eza -ga --group-directories-first'
 alias ll='ls -l'
 alias l='xplr'
 

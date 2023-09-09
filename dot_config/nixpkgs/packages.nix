@@ -516,7 +516,7 @@
 
     shell = {
       tools = [
-        exa # ls replacement
+        eza # ls replacement
         fd # A simple, fast and user-friendly alternative to find
         pueue # A daemon for managing long running shell commands
         fzf # Command-line fuzzy finder
