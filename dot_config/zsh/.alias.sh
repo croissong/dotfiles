@@ -6,7 +6,7 @@ alias cat=bat
 alias q=pueue
 function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log; }
 
-alias rt='trash put'
+alias rt='rmt'
 
 alias find='fd -H'
 alias top=btm
