@@ -82,8 +82,8 @@
       ];
 
       media = [
-        imv # A command line image viewer for tiling window managers
-        # qimgv TODO: maybe
+        swayimg # Image viewer for Sway/Wayland
+        oculante #  minimalistic crossplatform image viewer written in Rust
         vhs # A tool for generating terminal GIFs with code
         my-pkgs.termshot # Creates screenshots based on terminal command output
         kdenlive # video editor
