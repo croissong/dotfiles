@@ -442,6 +442,7 @@
       ];
 
       wm = [
+        cliphist # Wayland clipboard manager
         wob # A lightweight overlay bar for Wayland
         bemenu # Dynamic menu library and client program inspired by dmenu
         pinentry-bemenu

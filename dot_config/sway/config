@@ -90,3 +90,4 @@ exec systemctl --user start sway-session.target
 
 exec batsignal -b -w 30 -c 15 -d 10
 exec swayidle -w
+exec wl-paste --watch cliphist -max-items 10 store
