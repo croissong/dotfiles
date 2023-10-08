@@ -46,28 +46,6 @@ in [
   })
 
   (self: super: {
-    # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/sync/rclone/default.nix
-    rclone = let
-      version = "1.63.1-next";
-      src = super.fetchFromGitLab {
-        rev = "40de89df73cf26424fdc2a5676f36eefe9d9dc43";
-        hash = "sha256-uS1kSgS8jyHiamfI/t/yT43mneSbSkbj4csIJEWX6Dc=";
-        repo = super.rclone.pname;
-        owner = super.rclone.pname;
-      };
-    in (super.rclone.override {
-      buildGoModule = args:
-        super.buildGoModule (args
-          // {
-            vendorHash = "sha256-FGsYzmNGI8dUwLJfthPDHH1EuWLze5szR1P1ySmMyJI=";
-            ldflags = ["-s" "-w" "-X github.com/rclone/rclone/fs.Version=${version}"];
-            doCheck = false;
-            inherit src version;
-          });
-    });
-  })
-
-  (self: super: {
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/security/tessen/default.nix
     tessen = super.tessen.overrideAttrs (prev: {
       version = "2.2.1-next";

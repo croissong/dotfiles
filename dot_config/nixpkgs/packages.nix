@@ -379,6 +379,7 @@
       go = [
         ginkgo # A Modern Testing Framework for Go
         golangci-lint # Fast linters Runner for Go
+        gotools # Additional tools for Go development
         gotestsum # A human friendly `go test` runner
         delve # A debugger for the Go programming language.
         gdlv # GUI frontend for Delve
@@ -429,7 +430,7 @@
     desktop = {
       cli = [
         croc # Easily and securely send things from one computer to another
-        pkgs-custom.mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
+
         grim # Grab images from a Wayland compositor
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
@@ -538,6 +539,9 @@
 
         khal # CLI calendar application build around CalDAV
         khard # Console carddav client
+        mailctl # Provide IMAP/SMTP clients with OAuth2 credentials
+        mu # A collection of utilities for indexing and searching Maildirs
+        mblaze #  maildir utils
       ];
 
       bookmarks = [
@@ -707,7 +711,7 @@
       kubeshark # The API traffic viewer for Kubernetes. Think TCPDump and
       kubernetes-helm # The Kubernetes Package Manager
       kustomize # Template-free customization of Kubernetes YAML manifests
-      my-pkgs.telepresence # Local development against a remote Kubernetes or OpenShift cluster
+      telepresence2 # Local development against a remote Kubernetes or OpenShift cluster
     ];
 
     apps = [
