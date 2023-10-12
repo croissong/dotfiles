@@ -53,7 +53,6 @@ alias df='duf'
 alias clip='wl-copy -n'
 alias du='dust -b'
 alias pass=gopass
-alias ssh='TERM=xterm ssh'
 
 alias ag='angle-grinder -o json'
 
