@@ -3,7 +3,7 @@
   pkgs,
   pkgs-stable,
   pkgs-master,
-  pkgs-custom,
+  pkgs-prev,
   config,
   lib,
   ...
