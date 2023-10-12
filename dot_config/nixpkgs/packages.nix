@@ -291,6 +291,7 @@
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
         restic
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
+        terraform # HashiCorp tool for building and updating infrastructure as code idempotently
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
         tektoncd-cli # CLI for interacting with Tekton
         terraform-ls # Terraform Language Server
@@ -308,6 +309,7 @@
         helix #  A post-modern modal text editor
         stylua # Code formatter for Lua
         treefmt
+        dprint # Code formatting platform written in Rust
         tokei # A program that allows you to count your code, quickly
         tree-sitter-grammars.tree-sitter-yaml
         devbox # Instant, easy, predictable shells and containers.
@@ -697,7 +699,6 @@
       protobuf # Google's data interchange format
       nodePackages.prettier # An opinionated code formatter for JS, JSON, CSS, YAML and much more
       shellcheck # Shell script analysis tool (binary release)
-      terraform # HashiCorp tool for building and updating infrastructure as code idempotently
     ];
 
     k8s = [

@@ -30,10 +30,6 @@ go-commitlinter:
   asset: go-commitlinter_${VERSION}_Linux_x86_64.tar.gz
   trimPrefix: false
 
-gup:
-  owner: nao1215
-  asset: gup_${VERSION}_Linux_x86_64.tar.gz
-
 klog:
   owner: jotaen
   asset: klog-linux.zip
@@ -51,19 +47,11 @@ qsv:
 sane-scan-pdf:
   owner: rocketraman
 
-sheldon:
-  owner: rossmacarthur
-  asset: sheldon-${VERSION}-x86_64-unknown-linux-musl.tar.gz
-  trimPrefix: false
 
 sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
 
-
-telepresence:
-  owner: telepresenceio
-  asset:  telepresence-linux-amd64
 
 termshot:
   owner: homeport
@@ -85,7 +73,3 @@ wutag:
   owner: vv9k
   asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
   trimPrefix: false
-
-ytui-music:
-  owner: sudipghimire533
-  asset: ytui_music-linux-amd64

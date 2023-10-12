@@ -413,20 +413,6 @@ with pkgs; let
     };
   };
 
-  telepresence = stdenv.mkDerivation {
-    pname = "telepresence";
-    version = versions.telepresence.version;
-    src = fetchurl {
-      url = versions.telepresence.url;
-      sha256 = versions.telepresence.sha;
-    };
-
-    dontUnpack = true;
-    installPhase = ''
-      install -m755 -D $src $out/bin/telepresence
-    '';
-  };
-
   rmt = stdenv.mkDerivation rec {
     pname = "rmt";
     version = "0.2.1";
