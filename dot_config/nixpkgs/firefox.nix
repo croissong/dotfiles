@@ -7,8 +7,9 @@ in {
     enable = true;
 
     profiles.dev-edition-default = {
-      path = "p8klfsds.dev-edition-default";
+      path = "64yf2v1u.dev-edition-default";
       userChrome = ''
+
         #TabsToolbar { visibility: collapse; }
       '';
 
@@ -20,6 +21,7 @@ in {
         "browser.urlbar.suggest.quickactions" = false;
         "browser.urlbar.suggest.topsites" = false;
         "browser.urlbar.suggest.remotetab" = false;
+        "browser.urlbar.suggest.searches" = false;
         "browser.search.region" = "DE";
 
         # disable mouse pinch zoom
@@ -91,19 +93,16 @@ in {
       };
     };
 
-    package = pkgs.wrapFirefox pkgs.firefox-devedition-bin-unwrapped {
-      cfg = {
-        enableTridactylNative = true;
-      };
-
+    package = pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
       extraPolicies = {
-        # https://github.com/mozilla/policy-templates/blob/master/README.md
+        # https://mozilla.github.io/policy-templates/
 
         DefaultDownloadDirectory = "/tmp/";
         DisableAppUpdate = true;
         DisableFirefoxStudies = true;
         DisableFirefoxScreenshots = true;
         DisablePocket = true;
+
         DontCheckDefaultBrowser = true;
         PasswordManagerEnabled = false;
         PictureInPicture = {
@@ -130,24 +129,9 @@ in {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/markdown-to-jira/latest.xpi";
           };
-          "jid1-xUfzOsOFlzSOXg@jetpack" = {
-            installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/reddit-enhancement-suite/latest.xpi";
-          };
-          "tridactyl.vim.betas.nonewtab@cmcaine.co.uk" = {
-            installation_mode = "force_installed";
-            install_url = "https://tridactyl.cmcaine.co.uk/betas/nonewtab/tridactyl_no_new_tab_beta-latest.xpi";
-            install_sources = [
-              "https://tridactyl.cmcaine.co.uk/betas/*"
-            ];
-          };
           "extension@tabliss.io" = {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi";
-          };
-          "extension@one-tab.com" = {
-            installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/onetab/latest.xpi";
           };
           "de-DE@dictionaries.addons.mozilla.org" = {
             installation_mode = "force_installed";
@@ -155,12 +139,19 @@ in {
           };
           "{c2c003ee-bd69-42a2-b0e9-6f34222cb046}" = {
             installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard//latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard/latest.xpi";
           };
 
-          # "{dd627932-80c4-43bf-8432-db8f47e918ae}" = {
-          #   installation_mode = "force_installed";
-          #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-manager-v2/latest.xpi";
+          "{0b289d05-9030-47a6-813b-aa80bbf959f5}" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/quickey-the-quick-tab-switcher/latest.xpi";
+          };
+
+          "duplicate-tab@firefox.stefansundin.com" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/duplicate-tab-shortcut/latest.xpi";
+          };
+
           # };
           # "spookfox@bitspook.in" = {
           #   installation_mode = "force_installed";
@@ -171,16 +162,13 @@ in {
           #   ];
           # };
 
-          # "*" = {
-          #   installation_mode = "blocked";
-          # };
+          "*" = {
+            installation_mode = "blocked";
+          };
         };
       };
     };
   };
-
-  # https://github.com/NixOS/nixpkgs/issues/47340#issuecomment-440645870
-  home.file.".mozilla/native-messaging-hosts/tridactyl.json".source = "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts/tridactyl.json";
 
   # https://github.com/guibou/nixGL
   xdg.desktopEntries.firefox = {
