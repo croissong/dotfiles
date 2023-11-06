@@ -142,9 +142,9 @@ in {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-discard/latest.xpi";
           };
 
-          "{0b289d05-9030-47a6-813b-aa80bbf959f5}" = {
+          "{23aee10d-1130-4694-80ef-428e287ba83d}" = {
             installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/quickey-the-quick-tab-switcher/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/grasshopper-urls/latest.xpi";
           };
 
           "duplicate-tab@firefox.stefansundin.com" = {
