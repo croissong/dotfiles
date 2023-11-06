@@ -46,7 +46,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-96sU/ez5Vc5dVKRAkxDwt/ZLJCeRB9u4MAVi285wnn4=";
+    cargoSha256 = "sha256-f2bRiF74CPNuNzQeW/ESBxTzHON1r3DRfM2LM8MaGtY=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -466,7 +466,7 @@ with pkgs; let
       url = versions.promformat.url;
       sha256 = versions.promformat.sha;
     };
-    propagatedBuildInputs = with python310Packages; [antlr4-python3-runtime];
+    propagatedBuildInputs = with python311Packages; [antlr4-python3-runtime];
 
     meta = {
       homepage = "https://github.com/facetoe/promformat";

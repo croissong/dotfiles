@@ -90,6 +90,7 @@
         menyoki # Screen{shot,cast} and perform ImageOps on the command line
         swappy # A Wayland native snapshot editing tool
         ksnip # screenshot tool wihth many annotation features
+        bluetuith # A TUI bluetooth manager for Linux.
       ];
 
       data = {
@@ -361,6 +362,7 @@
         db = [
           # my_pkgs.cqlsh # cli for interacting with Cassandra using CQL
           mongosh # The MongoDB Shell
+          mongodb-tools
           sqlcmd # A command line tool for working with Microsoft SQL Server, Azure SQL Database
           redli # A humane alternative to the Redis-cli and TLS
           usql # A universal command-line interface for SQL databases
@@ -437,8 +439,8 @@
         hydroxide # A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge
 
         topgrade # Invoke the upgrade procedure of multiple package managers
-        ripgrep # A utility that combines the usability of The Silver Searcher with the raw speed of grep
-        ripgrep-all
+        ripgrep
+        ripgrep-all # Ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, and more
         amber # A code search-and-replace tool
         slurp # Select a region in a Wayland compositor
         tmpmail # A temporary email right from your terminal written in POSIX sh
@@ -737,6 +739,17 @@
     ];
   };
 in {
+  nixpkgs.overlays = [
+    (self: super: {
+      nushell =
+        super.nushell.override
+        {
+          additionalFeatures = p: p ++ ["extra"];
+          doCheck = false;
+        };
+    })
+  ];
+
   home.packages =
     packages.cli
     ++ packages.system
