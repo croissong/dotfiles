@@ -46,7 +46,8 @@ gc:
 
 
 scan out:
-  sy restart avahi-daemon.service
+  systemctl restart avahi-daemon.service
+  # scanadf -L
   scan --verbose --mode Color --resolution 600 -e 1 --no-default-size \
     -x 'airscan:e0:Canon TS5000 series' \
     --unpaper --ocr \
