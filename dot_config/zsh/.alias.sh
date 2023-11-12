@@ -73,6 +73,7 @@ alias k=kubectl
 alias kf=kubectl-fuzzy
 
 alias kc='switch --show-preview=false'
+alias kcc='kc h'
 alias kk="kubectl config view --minify -o jsonpath='{.contexts[0].context.cluster} {.contexts[0].context.namespace}{\"\n\"}'"
 alias kn='switch ns'
 alias kcrm='k --kubeconfig ~/.kube/config config delete-context'
@@ -151,7 +152,8 @@ alias susp='systemctl suspend'
 alias netd-restart='systemctl restart systemd-networkd systemd-resolved iwd'
 alias netd-journal='journalctl -u systemd-networkd -u systemd-resolved -u iwd'
 
-alias nixs='nix search nixpkgs'
+alias nixs='nix-search'
+alias nixsd='nix-search -d -n '
 
 function pickcolor() {
   grim -g "$(slurp -p)" -t ppm - |
