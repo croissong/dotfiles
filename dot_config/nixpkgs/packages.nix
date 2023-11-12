@@ -43,6 +43,7 @@
 
       system-config-printer
       ocrmypdf # Adds an OCR text layer to scanned PDF files
+      ocamlPackages.cpdf # PDF Command Line Tools
       my-pkgs.sane-scan-pdf # Sane command-line scan-to-pdf script
       sane-airscan
       simple-scan
@@ -175,6 +176,7 @@
         python310Packages.graphtage # diff tree-like files such as JSON and XML
         dyff #  A diff tool for YAML files, and sometimes JSON
         riffdiff # A diff filter highlighting which line parts have changed
+        yamllint
         dig
         dogdns # Command-line DNS client like dig
 
