@@ -4,9 +4,13 @@ secret:
     - "-d"
     - "--output-type=json"
     - "{{ .chezmoi.sourceDir }}/secrets.yml"
-merge.command: emacsscripts
-merge.args: ediff3
+merge:
+  command: emacsscripts
+  args: ediff3
 sourceDir: {{ env "DOT" }}
 encryption: gpg
-gpg.recipient: jan.moeller0@gmail.com
+gpg:
+  recipient: jan.moeller0@gmail.com
 verbose: true
+diff:
+  pager: ''
