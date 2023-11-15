@@ -425,7 +425,11 @@
       shell = [
         shfmt # A shell parser and formatter
         nodePackages.bash-language-server
-        nushell # A modern shell written in Rust
+        # A modern shell written in Rust
+        (nushell.override {
+          additionalFeatures = p: p ++ ["extra"];
+          doCheck = false;
+        })
       ];
 
       xml = [
@@ -740,17 +744,6 @@
     ];
   };
 in {
-  nixpkgs.overlays = [
-    (self: super: {
-      nushell =
-        super.nushell.override
-        {
-          additionalFeatures = p: p ++ ["extra"];
-          doCheck = false;
-        };
-    })
-  ];
-
   home.packages =
     packages.cli
     ++ packages.system
