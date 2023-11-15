@@ -1,0 +1,66 @@
+/*******************************************************************************
+ * based on https://github.com/newmanls/rofi-themes-collection/blob/master/themes/nord-oneline.rasi
+ *******************************************************************************/
+
+* {
+    font:   "Pango 11";
+
+    text-color:          inherit;
+    text-color-selected: #AA7E41;
+    text-color-accent:   #83ADAD;
+    background-color:    #000000;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    text-color:         #ffffff;
+    location:           south;
+    width:              100%;
+    height:             26px;
+    background-color:   @background-color;
+    children:           [ mainbox,message ];
+}
+
+mainbox {
+    orientation:    horizontal;
+    children:       [ inputbar,listview ];
+}
+
+inputbar {
+    enabled: false;
+}
+
+element-text, element-icon {
+    vertical-align: 0.5;
+}
+
+prompt, entry, message {
+    text-color: @text-color-accent;
+}
+
+listview {
+    padding: 0 5%;
+    layout: horizontal;
+}
+
+element {
+    padding:    1px 4px;
+    spacing:    2px;
+}
+
+element normal urgent {
+    text-color: @text-color-accent;
+}
+
+element selected {
+    text-color: @text-color-selected;
+}
+
+
+element-text {
+    text-color: inherit;
+    highlight: underline;
+}

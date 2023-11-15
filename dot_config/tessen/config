@@ -1,4 +1,4 @@
 pass_backend="gopass"
 action="copy"
-dmenu_backend="bemenu"
+dmenu_backend="rofi"
 notify="false"
