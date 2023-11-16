@@ -31,6 +31,8 @@ in {
         # disable mouse wheel zoom
         "mousewheel.with_control.action" = 1;
 
+        "extensions.formautofill.creditCards.enabled" = false;
+
         "browser.aboutConfig.showWarning" = false;
         "browser.startup.page" = 3;
         "browser.toolbars.bookmarks.visibility" = "never";
@@ -124,10 +126,6 @@ in {
           "uBlock0@raymondhill.net" = {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-          };
-          "@markdown_to_jira" = {
-            installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/markdown-to-jira/latest.xpi";
           };
           "extension@tabliss.io" = {
             installation_mode = "force_installed";
