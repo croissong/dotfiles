@@ -455,7 +455,9 @@
       wm = [
         cliphist # Wayland clipboard manager
         wob # A lightweight overlay bar for Wayland
-        rofi-wayland
+        (rofi-wayland.override {
+          plugins = [rofi-calc];
+        })
         pinentry-rofi
       ];
 

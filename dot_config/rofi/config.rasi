@@ -11,7 +11,7 @@ configuration {
   kb-element-prev: "Alt+odiaeresis";
   kb-custom-5: "Alt+3";
   kb-custom-6: "Alt+1";
-  kb-custom-7: "Alt+2";
+  kb-custom-9: "Alt+2";
   /* unbind to free keybinding */
   kb-custom-1: "";
   kb-custom-2: "";
