@@ -308,7 +308,7 @@
       ];
 
       edit = [
-        my-pkgs.go-commitlinter
+        my-pkgs.commitlint-rs
         helix #  A post-modern modal text editor
         stylua # Code formatter for Lua
         treefmt

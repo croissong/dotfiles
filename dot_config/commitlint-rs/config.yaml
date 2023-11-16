@@ -1,0 +1,33 @@
+# https://keisukeyamashita.github.io/commitlint-rs/rules/scope/
+
+rules:
+  description-empty:
+    level: warning
+
+  description-format:
+    level: error
+    format: ^[a-z].*$
+
+  type-empty:
+    level: error
+
+  # TODO: panics when nonexistent
+  # scope-format:
+  #   level: error
+  #   format: ^[A-Za-z]*$
+
+# https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
+  type:
+    level: error
+    options:
+      - build
+      - chore
+      - ci
+      - docs
+      - feat
+      - fix
+      - perf
+      - refactor
+      - revert
+      - style
+      - test

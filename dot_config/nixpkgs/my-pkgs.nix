@@ -113,25 +113,6 @@ with pkgs; let
     };
   };
 
-  go-commitlinter = stdenv.mkDerivation {
-    pname = "go-commitlinter";
-    version = versions.go-commitlinter.version;
-    src = fetchurl {
-      url = versions.go-commitlinter.url;
-      sha256 = versions.go-commitlinter.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D go-commitlinter $out/bin/go-commitlinter
-    '';
-
-    meta = {
-      homepage = "https://github.com/masahiro331/go-commitlinter";
-      description = "go-commitlinter is simple commit message linter.";
-    };
-  };
-
   got = stdenv.mkDerivation {
     pname = "got";
     version = versions.got.version;
@@ -473,6 +454,23 @@ with pkgs; let
       description = "PromQL formatter";
     };
   };
+
+  commitlint-rs = rustPlatform.buildRustPackage rec {
+    pname = "commitlint-rs";
+    version = versions.commitlint-rs.version;
+    src = fetchFromGitHub {
+      owner = "KeisukeYamashita";
+      repo = "commitlint-rs";
+      rev = "v${version}";
+      sha256 = versions.commitlint-rs.sha;
+    };
+    cargoSha256 = "sha256-JGXP7vvzqMlmk6MS0KDMukTOiqozJF2cC8P3xty21S0=";
+
+    meta = {
+      homepage = "https://github.com/KeisukeYamashita/commitlint-rs";
+      description = "Lint commit messages with conventional commit messages ";
+    };
+  };
 in {
   ain = ain;
   ata = ata;
@@ -481,7 +479,7 @@ in {
   desed = desed;
   dtool = dtool;
   focus = focus;
-  go-commitlinter = go-commitlinter;
+  commitlint-rs = commitlint-rs;
   got = got;
   handlr-regex = handlr-regex;
   kanri = kanri;

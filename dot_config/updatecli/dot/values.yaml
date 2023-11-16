@@ -25,11 +25,6 @@ focus:
   owner: ayoisaiah
   asset: focus_${VERSION}_linux_amd64.tar.gz
 
-go-commitlinter:
-  owner: masahiro331
-  asset: go-commitlinter_${VERSION}_Linux_x86_64.tar.gz
-  trimPrefix: false
-
 klog:
   owner: jotaen
   asset: klog-linux.zip
@@ -73,3 +68,6 @@ wutag:
   owner: vv9k
   asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
   trimPrefix: false
+
+commitlint-rs:
+  owner: KeisukeYamashita
