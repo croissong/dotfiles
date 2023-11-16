@@ -132,25 +132,6 @@ with pkgs; let
     };
   };
 
-  handlr-regex = stdenv.mkDerivation {
-    pname = "handlr-regex";
-    version = "0.8.4";
-    src = fetchurl {
-      url = "https://github.com/Anomalocaridid/handlr-regex/releases/download/v0.8.4/handlr";
-      sha256 = "sha256-b4GwJ7hoaOYDlQ90u08WsEG7eP/VMTqXbD58k94XLUk=";
-    };
-
-    dontUnpack = true;
-    installPhase = ''
-      install -m755 -D $src $out/bin/handlr
-    '';
-
-    meta = {
-      homepage = "https://github.com/Anomalocaridid/handlr-regex";
-      description = "Fork of handlr with support for regex";
-    };
-  };
-
   klog = stdenv.mkDerivation {
     pname = "klog";
     version = versions.klog.version;
@@ -227,24 +208,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/rocketraman/sane-scan-pdf";
       description = "Sane command-line scan-to-pdf script on Linux with OCR and deskew support";
-    };
-  };
-
-  shellcaster = stdenv.mkDerivation {
-    pname = "shellcaster";
-    version = versions.shellcaster.version;
-    src = fetchurl {
-      url = versions.shellcaster.url;
-      sha256 = versions.shellcaster.sha;
-    };
-
-    installPhase = ''
-      install -m755 -D shellcaster $out/bin/shellcaster
-    '';
-
-    meta = {
-      homepage = "https://github.com/jeff-hughes/shellcaster";
-      description = "Terminal-based podcast manager built in Rust";
     };
   };
 
@@ -481,7 +444,6 @@ in {
   focus = focus;
   commitlint-rs = commitlint-rs;
   got = got;
-  handlr-regex = handlr-regex;
   kanri = kanri;
   klog = klog;
   promformat = promformat;
@@ -489,7 +451,6 @@ in {
   qsv = qsv;
   rmt = rmt;
   sane-scan-pdf = sane-scan-pdf;
-  shellcaster = shellcaster;
   sttr = sttr;
   telepresence = telepresence;
   termshot = termshot;

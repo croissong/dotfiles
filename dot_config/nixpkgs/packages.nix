@@ -16,7 +16,7 @@
 
   packages_dict = with pkgs; {
     inbox = [
-      my-pkgs.handlr-regex
+      handlr-regex
 
       # dvc-with-remotes
       my-pkgs.kanri
@@ -458,6 +458,7 @@
         (rofi-wayland.override {
           plugins = [rofi-calc];
         })
+        wtype
         pinentry-rofi
       ];
 
