@@ -33,6 +33,11 @@ resource "sops_file" "secrets" {
       client_id     = azuread_application.mail_auth.application_id
       client_secret = azuread_application_password.mail_auth.value
     }
+    backup_bucket = {
+      bucket_name = b2_bucket.backup.bucket_name
+      key_id      = b2_application_key.autorestic_key.application_key_id
+      key         = b2_application_key.autorestic_key.application_key
+    }
   })
   filename = "secrets-output.yml"
   age = {

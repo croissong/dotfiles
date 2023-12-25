@@ -1,9 +1,5 @@
 secret:
-  command: sops
-  args:
-    - "-d"
-    - "--output-type=json"
-    - "{{ .chezmoi.sourceDir }}/secrets.yml"
+  command: {{ .chezmoi.sourceDir }}/secrets.sh
 merge:
   command: emacsscripts
   args: ediff3

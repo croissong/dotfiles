@@ -645,6 +645,9 @@
       borgbackup # Deduplicating archiver with compression and encryption
       borgmatic # Simple, configuration-driven backup software for servers and workstation
 
+      restic
+      autorestic
+
       dura # A background process that saves uncommitted changes on git
     ];
 
