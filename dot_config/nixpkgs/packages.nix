@@ -35,11 +35,7 @@
     ];
 
     docs = [
-      logseq # A local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base
       newsboat # A fork of Newsbeuter, an RSS/Atom feed reader for the text console
-      git-annex # manage files with git, without checking their contents into git
-      git-annex-remote-rclone
-      git-annex-remote-googledrive
 
       system-config-printer
       ocrmypdf # Adds an OCR text layer to scanned PDF files
@@ -642,9 +638,6 @@
     ];
 
     backup = [
-      borgbackup # Deduplicating archiver with compression and encryption
-      borgmatic # Simple, configuration-driven backup software for servers and workstation
-
       restic
       autorestic
 
