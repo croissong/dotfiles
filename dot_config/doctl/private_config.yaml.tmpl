@@ -1,4 +1,4 @@
-access-token: {{ secretJSON | dig "digitalocean" "token" "" }}
+access-token: {{ secretJSON "secrets" | dig "digitalocean" "token" "" }}
 account:
   get:
     format: ""

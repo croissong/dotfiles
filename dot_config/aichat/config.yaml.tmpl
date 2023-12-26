@@ -1,4 +1,4 @@
-api_key: {{ secretJSON | dig "openaiKey" "" }}
+api_key: {{ secretJSON "secrets" | dig "openaiKey" "" }}
 save: true
 temperature: 1.0
 model: "gpt-3.5-turbo"
