@@ -18,7 +18,6 @@
     inbox = [
       handlr-regex
 
-      # dvc-with-remotes
       my-pkgs.kanri
       my-pkgs.promformat
     ];
@@ -28,7 +27,6 @@
       my-pkgs.ytui-music
       youtube-tui
       toipe # Trusty terminal typing tester
-      twitch-tui
       steamcmd
       steam-tui
       parsec-bin # Remote gaming streaming service client
