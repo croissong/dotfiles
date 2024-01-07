@@ -20,14 +20,13 @@ nix-cm:
   chezmoi apply ~/.config/nixpkgs
 
 nix-hm *args:
+  nix flake update --flake ~/.config/nixpkgs nixpkgs
+  nix flake update --flake ~/.config/nixpkgs home-manager
+  # nixpkgs-stable rust-overlay tree-grepper nixpkgs-master
+
   home-manager --impure switch \
-  --flake ~/.config/nixpkgs#moi \
-  --update-input nixpkgs \
-  --update-input home-manager \
-  --update-input nixpkgs-stable \
-  --update-input rust-overlay \
-  --update-input tree-grepper {{args}}
-  # --update-input nixpkgs-master \
+    --flake ~/.config/nixpkgs#moi \
+    {{args}}
 
 
 nix-diff:
@@ -38,11 +37,12 @@ nix-check-missing:
   # outdated
   # nix search nixpkgs '\.()'
   # missing
-  nix search nixpkgs '\.(csvlens|klog|focus|termshot|sttr|versio$|slidev|updatecli|got$)'
+  nix-search '\.(csvlens|klog|focus|sttr|versio$|slidev|updatecli|got$)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force
   nix-collect-garbage -d
+  yes | paru -Scc
 
 
 scan out:
