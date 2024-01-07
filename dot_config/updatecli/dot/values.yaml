@@ -17,6 +17,9 @@ desed:
 dtool:
   owner: guoxbin
 
+gitwatch:
+  owner: gitwatch
+
 got:
   owner: melbahja
   asset: got_${VERSION}_Linux_amd64.tar.gz
@@ -38,23 +41,12 @@ qsv:
   trimPrefix: false
   asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
 
-
 sane-scan-pdf:
   owner: rocketraman
-
 
 sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
-
-
-termshot:
-  owner: homeport
-  asset: termshot_${VERSION}_linux_amd64.tar.gz
-
-tre:
-  owner: dduan
-  asset: tre-v${VERSION}-x86_64-unknown-linux-musl.tar.gz
 
 updatecli:
   owner: updatecli

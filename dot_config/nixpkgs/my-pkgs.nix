@@ -46,7 +46,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.csvlens.sha;
     };
-    cargoSha256 = "sha256-f2bRiF74CPNuNzQeW/ESBxTzHON1r3DRfM2LM8MaGtY=";
+    cargoSha256 = "sha256-DDMsycYSzkBNvf4f9WVpnADpP72GQEkmJIJsfrlfMcI=";
 
     nativeBuildInputs = [pkg-config];
     buildInputs = [bzip2 xz zlib zstd];
@@ -199,7 +199,6 @@ with pkgs; let
       sha256 = versions.sane-scan-pdf.sha;
     };
 
-    # sourceRoot = ".";
     installPhase = ''
       install -m755 -D scan $out/bin/scan
       install -m755 -D scan_perpage $out/bin/scan_perpage
@@ -208,6 +207,26 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/rocketraman/sane-scan-pdf";
       description = "Sane command-line scan-to-pdf script on Linux with OCR and deskew support";
+    };
+  };
+
+  gitwatch = stdenv.mkDerivation rec {
+    pname = "gitwatch";
+    version = versions.gitwatch.version;
+    src = fetchFromGitHub {
+      owner = "gitwatch";
+      repo = "gitwatch";
+      rev = "v${version}";
+      sha256 = versions.gitwatch.sha;
+    };
+
+    installPhase = ''
+      install -m755 -D gitwatch.sh $out/bin/gitwatch
+    '';
+
+    meta = {
+      homepage = "https://github.com/gitwatch/gitwatch";
+      description = "Watch a file or folder and automatically commit changes to a git repo easily.";
     };
   };
 
@@ -232,44 +251,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/abhimanyu003/sttr";
       description = "cross-platform, cli app to perform various operations on string";
-    };
-  };
-
-  termshot = stdenv.mkDerivation {
-    pname = "termshot";
-    version = versions.termshot.version;
-    src = fetchurl {
-      url = versions.termshot.url;
-      sha256 = versions.termshot.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D termshot $out/bin/termshot
-    '';
-
-    meta = {
-      homepage = "https://github.com/homeport/termshot";
-      description = "Creates screenshots based on terminal command output";
-    };
-  };
-
-  tre = stdenv.mkDerivation {
-    pname = "tre";
-    version = versions.tre.version;
-    src = fetchurl {
-      url = versions.tre.url;
-      sha256 = versions.tre.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D tre $out/bin/tre
-    '';
-
-    meta = {
-      homepage = "https://github.com/dduan/tre";
-      description = "Tree command, improved";
     };
   };
 
@@ -443,6 +424,7 @@ in {
   dtool = dtool;
   focus = focus;
   commitlint-rs = commitlint-rs;
+  gitwatch = gitwatch;
   got = got;
   kanri = kanri;
   klog = klog;
@@ -452,9 +434,6 @@ in {
   rmt = rmt;
   sane-scan-pdf = sane-scan-pdf;
   sttr = sttr;
-  telepresence = telepresence;
-  termshot = termshot;
-  tre = tre;
   updatecli = updatecli;
   versio = versio;
   wutag = wutag;

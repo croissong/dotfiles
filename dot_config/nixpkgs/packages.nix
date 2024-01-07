@@ -80,7 +80,7 @@
         swayimg # Image viewer for Sway/Wayland
         oculante #  minimalistic crossplatform image viewer written in Rust
         vhs # A tool for generating terminal GIFs with code
-        my-pkgs.termshot # Creates screenshots based on terminal command output
+        termshot # Creates screenshots based on terminal command output
         kdenlive # video editor
         menyoki # Screen{shot,cast} and perform ImageOps on the command line
         swappy # A Wayland native snapshot editing tool
@@ -148,6 +148,7 @@
         backblaze-b2 # Command-line tool for accessing the Backblaze B2 storage service
         snapper # A tool for managing BTRFS and LVM snapshots
         httm # Interactive, file-level Time Machine-like tool for ZFS/btrfs
+        my-pkgs.gitwatch
         rclone # CLI to sync files and directories to and from major cloud storage
       ];
 
@@ -157,7 +158,6 @@
         bat # Cat clone with syntax highlighting and git integration
         moar # Nice-to-use pager for humans
         broot # Fuzzy Search + tree + cd
-        my-pkgs.tre # Tree command, improved.
         as-tree # Print a list of paths as a tree of paths
         gtree # Generate directory tree and the directories folder using Markdown or Programmatically
 
@@ -174,6 +174,7 @@
         dig
         dogdns # Command-line DNS client like dig
 
+        oath-toolkit # oathtool
         gopass # The slightly more awesome standard unix password manager for teams.
         gopass-summon-provider # summon provider for gopass
         tessen # An interactive menu to autotype and copy Pass and GoPass data
@@ -213,6 +214,8 @@
         libqalculate # An advanced calculator library
 
         my-pkgs.got # CLI to download large files faster than cURL and Wget
+
+        font-manager
       ];
     };
 
@@ -284,12 +287,14 @@
         awscli2
         mimir # Grafana Mimir
         grafana
+        pulumi-bin
         minio-client
         s3cmd # Command line tool for managing Amazon S3 and CloudFront services
-        restic
         sops # Mozilla sops (Secrets OPerationS) is an editor of encrypted files
+        opentofu
         terraform # HashiCorp tool for building and updating infrastructure as code idempotently
         terraform-docs # A utility to generate documentation from Terraform modules in various output formats
+        nodePackages.cdktf-cli # CDK for Terraform CLI
         tektoncd-cli # CLI for interacting with Tekton
         terraform-ls # Terraform Language Server
         tflint # Terraform linter
@@ -419,11 +424,7 @@
       shell = [
         shfmt # A shell parser and formatter
         nodePackages.bash-language-server
-        # A modern shell written in Rust
-        (nushell.override {
-          additionalFeatures = p: p ++ ["extra"];
-          doCheck = false;
-        })
+        nushellFull # A modern shell written in Rust
       ];
 
       xml = [
@@ -493,7 +494,8 @@
         pngquant # Command-line utility to quantize PNGs down to 8-bit paletted PNGs
 
         image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
-        oxipng # A multithreaded lossless PNG compression optimizer (used for image_optim)
+        oxipng # A multithreaded lossless PNG compression optimizer
+
       ];
 
       images = [
@@ -656,6 +658,7 @@
       nix-prefetch-git #  Script used to obtain source hashes for fetchgit
       nix-tree
       nix-init # Generate Nix packages from URLs
+      nix-search-cli
 
       nixos-shell
       node2nix
