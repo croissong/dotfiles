@@ -1,6 +1,7 @@
 {pkgs, ...}: let
 in {
   imports = [
+    ./backup.nix
     ./firefox.nix
     ./pim.nix
   ];
