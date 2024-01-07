@@ -6,8 +6,8 @@ in {
   programs.firefox = {
     enable = true;
 
-    profiles.dev-edition-default = {
-      path = "64yf2v1u.dev-edition-default";
+    profiles.default = {
+      path = "kxzh8tid.default";
       userChrome = ''
 
         #TabsToolbar { visibility: collapse; }
@@ -32,6 +32,8 @@ in {
         "mousewheel.with_control.action" = 1;
 
         "extensions.formautofill.creditCards.enabled" = false;
+
+        "signon.firefoxRelay.feature" = false;
 
         "browser.aboutConfig.showWarning" = false;
         "browser.startup.page" = 3;
@@ -95,8 +97,7 @@ in {
       };
     };
 
-    package = pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
-      extraPolicies = {
+    policies = {
         # https://mozilla.github.io/policy-templates/
 
         DefaultDownloadDirectory = "/tmp/";
@@ -143,6 +144,11 @@ in {
           "{23aee10d-1130-4694-80ef-428e287ba83d}" = {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/grasshopper-urls/latest.xpi";
+          };
+
+          "extension@one-tab.com" = {
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/onetab/latest.xpi";
           };
 
           "duplicate-tab@firefox.stefansundin.com" = {
