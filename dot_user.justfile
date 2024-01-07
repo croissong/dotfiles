@@ -1,4 +1,4 @@
-!include Dot/priv/justfile
+import 'Dot/priv/justfile'
 
 
 # https://github.com/casey/just/issues/1557
