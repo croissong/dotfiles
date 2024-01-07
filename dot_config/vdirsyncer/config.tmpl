@@ -40,6 +40,3 @@ end_date = "datetime.now() + timedelta(days=180)"
 
 # [storage wrk_contacts_remote]
 # type = "carddav"
-# url = "http://localhost:1080/users/{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.user }}/contacts/"
-# username = "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.user }}"
-# password = "{{ (secretJSON "-d" "--output-type=json" (print .chezmoi.sourceDir "/secrets.yml")).mail.datawerk.password }}"
