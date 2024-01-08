@@ -10,7 +10,7 @@ defer-more = """{{ hooks | get: "pre" | nl }}{% for file in files %}zsh-defer -t
 [plugins]
 
 [plugins.starship]
-inline = 'eval $(starship init zsh)'
+inline = 'eval "$(starship init zsh)"'
 
 
 [plugins.zsh-defer]
