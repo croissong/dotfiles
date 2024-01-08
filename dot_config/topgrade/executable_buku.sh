@@ -8,7 +8,7 @@ jq '[.[] | select( .tags | contains("no-export-ff") | not) | .["url"] = .uri | .
 
 if [[ -n $(git status --porcelain "buku.json") ]]; then
   git --no-pager diff buku.json
-  git add "buku.json"
+  git add buku.json
   git commit -m "chore: update buku bookmarks"
   echo "buku.json changes committed" >&2
 else
