@@ -26,8 +26,7 @@ icons_format = " <span font='10'>{icon}</span>  "
 block = "sound"
 step_width = 3
 device_kind = "source"
-format = "" # only icon
-icons_format = " <span font='11'>{icon}</span> "
+format = " $icon " # only icon
 
 [[block]]
 block = "custom"
@@ -42,15 +41,13 @@ cmd = "handlr open $XDG_CACHE_HOME/service-status/status.json"
 [[block]]
 block = "load"
 interval = 60
-format = "$1m"
+format = "$1m "
 
 [[block]]
 block = "temperature"
 interval = 60
 chip = "coretemp-isa-*"
-format_alt = " $icon "
-format = "$average"
-icons_format = ""
+format = " $average "
 
 [[block]]
 block = "battery"
@@ -63,5 +60,4 @@ icons_format = " <span font='10'>{icon}</span>   "
 [[block]]
 block = "time"
 interval = 30
-format = "$timestamp.datetime(f:'%a %m-%d %H:%M')"
-icons_format = ""
+format = " $timestamp.datetime(f:'%a %m-%d %H:%M')"
