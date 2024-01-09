@@ -4,12 +4,12 @@
       backup = {
         Unit = {
           Description = "autorestic backup";
-          OnFailure = "failure-notify@%n";
         };
 
         Service = {
           Type = "oneshot";
           ExecStart = "${pkgs.autorestic}/bin/autorestic --ci cron";
+          ExecStopPost="${config.home.homeDirectory}/.local/bin/service-status.sh backup";
         };
       };
     };

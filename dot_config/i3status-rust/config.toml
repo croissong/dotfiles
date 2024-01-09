@@ -4,7 +4,7 @@ theme = "plain"
 idle_fg = "#ebdbb2"
 
 [icons]
-icons = "awesome5"
+icons = "awesome6"
 [icons.overrides]
 bat_full = "100%"
 bat_charging = "+"
@@ -28,6 +28,16 @@ step_width = 3
 device_kind = "source"
 format = "" # only icon
 icons_format = " <span font='11'>{icon}</span> "
+
+[[block]]
+block = "custom"
+watch_files = [ "$XDG_CACHE_HOME/service-status/icon.json" ]
+command = "cat $XDG_CACHE_HOME/service-status/icon.json"
+json = true
+[[block.click]]
+button = "left"
+cmd = "handlr open $XDG_CACHE_HOME/service-status/status.json"
+
 
 [[block]]
 block = "load"

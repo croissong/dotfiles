@@ -152,23 +152,12 @@ in {
       calsync = {
         Unit = {
           Description = "calsync";
-          OnFailure = "failure-notify@%n";
         };
 
         Service = {
           Type = "oneshot";
           ExecStart = "%h/.local/bin/calsync";
-        };
-      };
-
-      "failure-notify@" = {
-        Unit = {
-          Description = "notify on failure";
-        };
-
-        Service = {
-          Type = "simple";
-          ExecStart = "/usr/bin/notify-send --urgency=critical --expire-time=60000 '%i failed'";
+          ExecStopPost="${config.home.homeDirectory}/.local/bin/service-status.sh calsync";
         };
       };
     };
