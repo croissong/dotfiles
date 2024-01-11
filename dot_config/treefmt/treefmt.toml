@@ -3,7 +3,7 @@
 
 [formatter.nix]
 command = "alejandra"
-includes = ["*.nix"]
+includes = ["*.nix*"]
 
 [formatter.shell]
 includes = ["*.sh"]
