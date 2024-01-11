@@ -1,4 +1,8 @@
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   systemd.user = {
     services = {
       backup = {
@@ -9,7 +13,19 @@
         Service = {
           Type = "oneshot";
           ExecStart = "${pkgs.autorestic}/bin/autorestic --ci cron";
-          ExecStopPost="${config.home.homeDirectory}/.local/bin/service-status.sh backup";
+          ExecStopPost = "${config.home.homeDirectory}/.local/bin/service-status.sh backup";
+        };
+      };
+
+      "gitwatch-org" = {
+        Unit = {
+          Description = "Gitwatch org docs";
+        };
+        Service = {
+          ExecStart = ''
+            ${config.home.homeDirectory}/.nix-profile/bin/gitwatch -s 30 -m "chore: update docs" ${config.home.homeDirectory}/Docs/org/
+          '';
+          ExecStop = "/bin/true";
         };
       };
     };
@@ -32,21 +48,4 @@
       };
     };
   };
-
-    # "rclone-gitwatch" = {
-    #   Unit = {
-    #     Description = "Watch file or directory and git commit all changes";
-    #     After = ["rclone-mount.service"];
-    #   };
-    #   Install.WantedBy = ["multi-user.target"];
-    #   Service = {
-    #     ExecStart = ''
-    #       gitwatch
-    #     '';
-    #     ExecStop="/bin/true";
-    #     Type = "notify";
-    #     Restart = "always";
-    #     RestartSec = "10s";
-    #   };
-  # };
 }
