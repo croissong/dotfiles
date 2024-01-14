@@ -24,9 +24,6 @@
 
     ent = [
       yt-dlp
-      my-pkgs.ytui-music
-      youtube-tui
-      toipe # Trusty terminal typing tester
       steamcmd
       steam-tui
       parsec-bin # Remote gaming streaming service client
@@ -112,7 +109,7 @@
         ];
 
         csv = [
-          my-pkgs.csvlens # Command line csv viewer
+          csvlens # Command line csv viewer
           tidy-viewer # CLI csv pretty printer
         ];
 
@@ -237,7 +234,7 @@
       ];
 
       http = [
-        my-pkgs.ain # A HTTP API client for the terminal
+        ain # A HTTP API client for the terminal
         curl
         curlie # Frontend to curl that adds the ease of use of httpie, without compromising on features and performance
         httpie # A command line HTTP client whose goal is to make CLI human-friendly
@@ -372,7 +369,7 @@
       };
 
       util = [
-        my-pkgs.dtool # CLI tool collection to assist development
+        dtool # CLI tool collection to assist development
       ];
 
       data = [

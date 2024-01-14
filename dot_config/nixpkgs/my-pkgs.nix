@@ -1,27 +1,10 @@
 {
+  lib,
   pkgs,
   versions,
   ...
 }:
 with pkgs; let
-  ain = stdenv.mkDerivation {
-    pname = "ain";
-    version = versions.ain.version;
-    src = fetchurl {
-      url = versions.ain.url;
-      sha256 = versions.ain.sha;
-    };
-
-    installPhase = ''
-      install -m755 -D ain $out/bin/ain
-    '';
-
-    meta = {
-      homepage = "https://github.com/jonaslu/ain";
-      description = "A HTTP API client for the terminal";
-    };
-  };
-
   cqlsh = python3Packages.buildPythonPackage {
     pname = "cqlsh";
     version = versions.cqlsh.version;
@@ -35,26 +18,6 @@ with pkgs; let
       # six
       # cql
     ];
-  };
-
-  csvlens = rustPlatform.buildRustPackage rec {
-    pname = "csvlens";
-    version = versions.csvlens.version;
-    src = fetchFromGitHub {
-      owner = "YS-L";
-      repo = "csvlens";
-      rev = "v${version}";
-      sha256 = versions.csvlens.sha;
-    };
-    cargoSha256 = "sha256-DDMsycYSzkBNvf4f9WVpnADpP72GQEkmJIJsfrlfMcI=";
-
-    nativeBuildInputs = [pkg-config];
-    buildInputs = [bzip2 xz zlib zstd];
-
-    meta = {
-      homepage = "https://github.com/YS-L/csvlens";
-      description = "Command line csv viewer";
-    };
   };
 
   desed = stdenv.mkDerivation {
@@ -73,26 +36,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/SoptikHa2/desed";
       description = "Debugger for Sed: demystify and debug your sed scripts";
-    };
-  };
-
-  dtool = rustPlatform.buildRustPackage rec {
-    pname = "dtool";
-    version = versions.dtool.version;
-    src = fetchFromGitHub {
-      owner = "guoxbin";
-      repo = "dtool";
-      rev = "v${version}";
-      sha256 = versions.dtool.sha;
-    };
-    cargoSha256 = "sha256-r8r3f4yKMQgjtB3j4qE7cqQL18nIqAGPO5RsFErqh2c=";
-
-    nativeBuildInputs = [pkg-config];
-    buildInputs = [bzip2 xz zlib];
-
-    meta = {
-      homepage = "https://github.com/guoxbin/dtool";
-      description = "CLI tool collection to assist development";
     };
   };
 
@@ -319,25 +262,6 @@ with pkgs; let
     };
   };
 
-  ytui-music = stdenv.mkDerivation {
-    pname = "ytui-music";
-    version = versions.ytui-music.version;
-    src = fetchurl {
-      url = versions.ytui-music.url;
-      sha256 = versions.ytui-music.sha;
-    };
-
-    dontUnpack = true;
-    installPhase = ''
-      install -m755 -D $src $out/bin/ytui_music
-    '';
-
-    meta = {
-      homepage = "https://github.com/sudipghimire533/ytui-music";
-      description = "Youtube client in terminal for music";
-    };
-  };
-
   rmt = stdenv.mkDerivation rec {
     pname = "rmt";
     version = "0.2.1";
@@ -416,12 +340,8 @@ with pkgs; let
     };
   };
 in {
-  ain = ain;
-  ata = ata;
   cqlsh = cqlsh;
-  csvlens = csvlens;
   desed = desed;
-  dtool = dtool;
   focus = focus;
   commitlint-rs = commitlint-rs;
   gitwatch = gitwatch;
@@ -438,5 +358,4 @@ in {
   versio = versio;
   wutag = wutag;
   xmlformatter = xmlformatter;
-  ytui-music = ytui-music;
 }
