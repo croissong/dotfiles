@@ -22,7 +22,7 @@ in {
 
     himalaya = {
       enable = true;
-      package = pkgs.himalaya.override {withNotmuchBackend = true;};
+      package = pkgs.himalaya.override {withNotmuch = true;};
     };
 
     notmuch = {
@@ -157,7 +157,7 @@ in {
         Service = {
           Type = "oneshot";
           ExecStart = "%h/.local/bin/calsync";
-          ExecStopPost="${config.home.homeDirectory}/.local/bin/service-status.sh calsync";
+          ExecStopPost = "${config.home.homeDirectory}/.local/bin/service-status.sh calsync";
         };
       };
     };

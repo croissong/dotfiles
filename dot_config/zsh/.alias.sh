@@ -190,3 +190,9 @@ ts-now-s() {
 
 # https://github.com/guibou/nixGL
 alias imv='nixGL imv'
+
+# TODO
+# function reload() {
+#   source ~/.zshenv
+#   source $ZDOTDIR/.zshrc
+# }

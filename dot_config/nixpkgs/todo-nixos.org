@@ -7,3 +7,5 @@
 # nyxt
 
 # brightnessctl + https://packages.debian.org/stable/ddcci-dkms
+
+# xdg-utils-handlr (for slack open links e.g.)

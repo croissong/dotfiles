@@ -438,6 +438,5 @@ in {
   versio = versio;
   wutag = wutag;
   xmlformatter = xmlformatter;
-  youtube-tui = youtube-tui;
   ytui-music = ytui-music;
 }

@@ -192,6 +192,7 @@
         ouch # Painless compression and decompression in the terminal (git version)
 
         podman # Tool and library for running OCI-based containers in pods
+        # TODO: aardvark-dns
         podman-compose # A script to run docker-compose.yml using podman
 
         nerdctl # CLI for containerd
