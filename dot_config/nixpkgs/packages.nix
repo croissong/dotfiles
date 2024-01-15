@@ -80,7 +80,7 @@
         termshot # Creates screenshots based on terminal command output
         kdenlive # video editor
         menyoki # Screen{shot,cast} and perform ImageOps on the command line
-        swappy # A Wayland native snapshot editing tool
+        satty #  Modern Screenshot Annotation Tool
         ksnip # screenshot tool wihth many annotation features
         bluetuith # A TUI bluetooth manager for Linux.
       ];
