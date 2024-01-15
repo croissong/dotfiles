@@ -52,7 +52,7 @@
     ];
 
     orga = [
-      my-pkgs.klog
+      klog-time-tracker
       kapow # Punch clock to track time spent on projects
     ];
 
@@ -511,7 +511,10 @@
 
       audio = [
         cozy # A modern audio book player for Linux using GTK 3
-        sox # The Swiss Army knife of sound processing tools
+
+        # TODO: collision with gotools
+        # https://github.com/NixOS/nixpkgs/issues/275392
+        # sox # The Swiss Army knife of sound processing tools
       ];
 
       comm = [

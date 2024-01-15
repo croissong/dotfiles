@@ -75,25 +75,6 @@ with pkgs; let
     };
   };
 
-  klog = stdenv.mkDerivation {
-    pname = "klog";
-    version = versions.klog.version;
-    src = fetchzip {
-      url = versions.klog.url;
-      sha256 = versions.klog.sha;
-      stripRoot = false;
-    };
-
-    installPhase = ''
-      install -m755 -D klog $out/bin/klog
-    '';
-
-    meta = {
-      homepage = "https://github.com/jotaen/klog";
-      description = "Command line tool for time tracking";
-    };
-  };
-
   protocurl = stdenv.mkDerivation {
     pname = "protocurl";
     version = versions.protocurl.version;
@@ -332,7 +313,7 @@ with pkgs; let
       rev = "v${version}";
       sha256 = versions.commitlint-rs.sha;
     };
-    cargoSha256 = "sha256-JGXP7vvzqMlmk6MS0KDMukTOiqozJF2cC8P3xty21S0=";
+    cargoSha256 = "sha256-ZskWIoSaNww9gv8CPjS+v4FhFOjHiS+HDKTFc8WYUxw=";
 
     meta = {
       homepage = "https://github.com/KeisukeYamashita/commitlint-rs";
@@ -347,7 +328,6 @@ in {
   gitwatch = gitwatch;
   got = got;
   kanri = kanri;
-  klog = klog;
   promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;

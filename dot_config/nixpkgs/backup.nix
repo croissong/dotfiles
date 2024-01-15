@@ -27,6 +27,10 @@
           '';
           ExecStop = "/bin/true";
         };
+
+        Install = {
+          WantedBy = ["default.target"];
+        };
       };
     };
 
