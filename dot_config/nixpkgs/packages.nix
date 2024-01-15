@@ -569,7 +569,7 @@
         xdg-ninja # A shell script which checks your $HOME for unwanted files and directories
 
         # trashy # A simple, fast, and featureful alternative to rm and trash-cli
-        my-pkgs.rmt # trash
+        my-pkgs.gtrash # trash
 
         nethogs # A small 'net top' tool, grouping bandwidth by process
       ];

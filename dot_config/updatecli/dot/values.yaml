@@ -3,12 +3,9 @@
 #   - package: promformat
 #   - package: xmlformatter
 
-ain:
-  owner: jonaslu
-  asset: ain_${VERSION}_linux_x86_64.tar.gz
 
-csvlens:
-  owner: YS-L
+commitlint-rs:
+  owner: KeisukeYamashita
 
 desed:
   owner: SoptikHa2
@@ -23,6 +20,10 @@ gitwatch:
 got:
   owner: melbahja
   asset: got_${VERSION}_Linux_amd64.tar.gz
+
+gtrash:
+  owner: umlx5h
+  asset: gtrash_Linux_x86_64.tar.gz
 
 focus:
   owner: ayoisaiah
@@ -60,6 +61,3 @@ wutag:
   owner: vv9k
   asset: wutag-${VERSION}-x86_64-unknown-linux.tar.xz
   trimPrefix: false
-
-commitlint-rs:
-  owner: KeisukeYamashita

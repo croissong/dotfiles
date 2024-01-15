@@ -262,17 +262,17 @@ with pkgs; let
     };
   };
 
-  rmt = stdenv.mkDerivation rec {
-    pname = "rmt";
-    version = "0.2.1";
+  gtrash = stdenv.mkDerivation {
+    pname = "gtrash";
+    version = versions.gtrash.version;
     src = fetchurl {
-      url = "https://github.com/AmineZouitine/rmt.rs/releases/download/${version}/rmt-x86_64-unknown-linux-gnu.tar.gz";
-      sha256 = "sha256-DoBpWdLm6C1pcC65hZ+QMam7oY52moabMPXU5bU+ACI=";
+      url = versions.gtrash.url;
+      sha256 = versions.gtrash.sha;
     };
 
     sourceRoot = ".";
     installPhase = ''
-      install -m755 -D rmt $out/bin/rmt
+      install -m755 -D gtrash $out/bin/gtrash
     '';
   };
 
@@ -351,7 +351,7 @@ in {
   promformat = promformat;
   protocurl = protocurl;
   qsv = qsv;
-  rmt = rmt;
+  gtrash = gtrash;
   sane-scan-pdf = sane-scan-pdf;
   sttr = sttr;
   updatecli = updatecli;
