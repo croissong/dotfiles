@@ -1,5 +1,5 @@
 secret:
-  command: {{ .chezmoi.sourceDir }}/secrets.sh
+  command: {{ env "DOT" }}/secrets.sh
 merge:
   command: emacsscripts
   args: ediff3
