@@ -278,7 +278,6 @@
         argocd # Declarative continuous deployment for Kubernetes
         azure-cli
         civo
-        cmctl # A CLI tool for managing cert-manager service on Kubernetes clusters
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
         istioctl
@@ -296,8 +295,6 @@
         tektoncd-cli # CLI for interacting with Tekton
         terraform-ls # Terraform Language Server
         tflint # Terraform linter
-        trivy # A simple and comprehensive vulnerability scanner for containers
-        velero
       ];
 
       cicd = [
