@@ -11,7 +11,7 @@
   versions = builtins.fromJSON (builtins.readFile (./. + "/versions.json"));
 
   my-pkgs = import ./my-pkgs.nix {
-    inherit pkgs config versions;
+    inherit lib pkgs config versions;
   };
 
   packages_dict = with pkgs; {
@@ -20,6 +20,16 @@
 
       my-pkgs.kanri
       my-pkgs.promformat
+
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+      vaapiVdpau
+      libvdpau-va-gl
+      libva-utils
+      nixgl.nixGLIntel
+      nixgl.auto.nixGLDefault
+      glxinfo
+      fontforge
     ];
 
     ent = [
@@ -276,7 +286,8 @@
       cn = [
         argo # Container native workflow engine for Kubernetes
         argocd # Declarative continuous deployment for Kubernetes
-        azure-cli
+        # TODO: nixos
+        # azure-cli
         civo
         humioctl
         k6 # A modern load testing tool, using Go and JavaScript
@@ -491,6 +502,7 @@
         image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
         oxipng # A multithreaded lossless PNG compression optimizer
 
+        # TODO: picopt instead of image_optim (create custom image)
       ];
 
       images = [
@@ -620,7 +632,8 @@
 
     vms = [
       libguestfs # Access and modify virtual machine disk images
-      quickemu # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.
+      # todo nixos
+      # quickemu # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines.
       tigervnc
       vagrant # Build and distribute virtualized development environments
       virt-viewer # A lightweight interface for interacting with the graphical display of virtualized guest OS.
@@ -697,7 +710,8 @@
       hexyl # A command-line hex viewer
       jwt-cli # A super fast CLI tool to decode and encode JWTs
       ktlint # An anti-bikeshedding Kotlin linter with built-in formatter
-      mitmproxy # SSL-capable man-in-the-middle HTTP proxy
+      # TODO: build failure
+      # mitmproxy # SSL-capable man-in-the-middle HTTP proxy
       packer # tool for creating identical machine images for multiple platforms from a single source configuration
       pluto # A cli tool to help discover deprecated apiVersions in Kubernetes
       prometheus # An open-source systems monitoring and alerting toolkit

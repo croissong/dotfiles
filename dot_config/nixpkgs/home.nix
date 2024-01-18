@@ -6,6 +6,7 @@
   config,
   lib,
   rust-overlay,
+  nixgl,
   tree-grepper,
   ...
 }: {
@@ -26,6 +27,7 @@
   nixpkgs.overlays = [
     rust-overlay.overlays.default
     tree-grepper.overlay.x86_64-linux
+    nixgl.overlay
   ];
 
   imports = [
@@ -46,7 +48,8 @@
 
       termdown # Countdown timer and stopwatch in your terminal
       rust-analyzer # Experimental Rust compiler front-end for IDEs
-      slack # Slack Desktop for Linux, using the system Electron package
+      # TODO: nix
+      # slack # Slack Desktop for Linux, using the system Electron package
       syncthing # Open Source Continuous Replication / Cluster Synchronization Thing
       wl-color-picker # A wayland color picker that also works on wlroots
       wlsunset # Day/night gamma adjustments for Wayland compositors

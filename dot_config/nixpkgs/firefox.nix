@@ -46,6 +46,9 @@ in {
 
         # probably not needed with auto-tab-discard
         "browser.tabs.unloadOnLowMemory" = false;
+
+        "webgl.force-enable" = true;
+        "gfx.webrender.enabled" = true; # maybe: widget.wayland-dmabuf-vaapi.enabled
       };
 
       search = {
@@ -166,12 +169,11 @@ in {
           #   ];
           # };
 
-          "*" = {
-            installation_mode = "blocked";
-          };
+          # "*" = {
+          #   installation_mode = "blocked";
+          # };
         };
       };
-    };
   };
 
   # https://github.com/guibou/nixGL

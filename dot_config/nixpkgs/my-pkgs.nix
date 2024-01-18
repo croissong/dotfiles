@@ -178,24 +178,24 @@ with pkgs; let
     };
   };
 
-  updatecli = stdenv.mkDerivation {
-    pname = "updatecli";
-    version = versions.updatecli.version;
-    src = fetchurl {
-      url = versions.updatecli.url;
-      sha256 = versions.updatecli.sha;
-    };
+  # updatecli = stdenv.mkDerivation {
+  #   pname = "updatecli";
+  #   version = versions.updatecli.version;
+  #   src = fetchurl {
+  #     url = versions.updatecli.url;
+  #     sha256 = versions.updatecli.sha;
+  #   };
 
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D updatecli $out/bin/updatecli
-    '';
+  #   sourceRoot = ".";
+  #   installPhase = ''
+  #     install -m755 -D updatecli $out/bin/updatecli
+  #   '';
 
-    meta = {
-      homepage = "https://github.com/updatecli/updatecli";
-      description = "A Declarative Dependency Management tool";
-    };
-  };
+  #   meta = {
+  #     homepage = "https://github.com/updatecli/updatecli";
+  #     description = "A Declarative Dependency Management tool";
+  #   };
+  # };
 
   versio = stdenv.mkDerivation {
     pname = "versio";
@@ -321,6 +321,17 @@ with pkgs; let
     };
   };
 in {
+  updatecli = import ./my/updatecli.nix {
+    inherit
+      lib
+      go
+      buildGoModule
+      fetchFromGitHub
+      nix-update-script
+      installShellFiles
+      ;
+  };
+
   cqlsh = cqlsh;
   desed = desed;
   focus = focus;
@@ -334,7 +345,6 @@ in {
   gtrash = gtrash;
   sane-scan-pdf = sane-scan-pdf;
   sttr = sttr;
-  updatecli = updatecli;
   versio = versio;
   wutag = wutag;
   xmlformatter = xmlformatter;

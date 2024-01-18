@@ -16,6 +16,8 @@
     rust-overlay.url = "github:oxalica/rust-overlay";
     tree-grepper.url = "github:BrianHicks/tree-grepper";
     tree-grepper.inputs.nixpkgs.follows = "nixpkgs";
+    nixgl.url = "github:guibou/nixGL";
+    nixgl.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -23,6 +25,7 @@
     nixpkgs-master,
     nixpkgs-prev,
     nixpkgs-stable,
+    nixgl,
     home-manager,
     rust-overlay,
     tree-grepper,
