@@ -449,7 +449,6 @@
           plugins = [rofi-calc];
         })
         wtype
-        pinentry-rofi
       ];
 
       docs = [
@@ -490,7 +489,6 @@
 
         image_optim # Command line to optimize jpeg, png, gif and svg images using external utilities (advpng, gifsicle, jhead, jpeg-recompress, jpegoptim, jpegrescan, jpegtran, optipng, pngcrush, pngout, pngquant, svgo)
         oxipng # A multithreaded lossless PNG compression optimizer
-
       ];
 
       images = [

@@ -14,3 +14,7 @@ unsetopt nomatch
 
 # https://unix.stackexchange.com/questions/712441/zsh-completion-for-make-only-complete-targets-from-makefile
 zstyle ':completion::complete:make::' tag-order targets variables
+
+# For some reason this gives the best effect
+# from https://stackoverflow.com/questions/444951/zsh-stop-backward-kill-word-on-directory-delimiter
+WORDCHARS
