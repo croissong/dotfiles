@@ -1,8 +1,0 @@
-{{ include "dot_config/zsh/.keybinds.sh" }}
-{{ include "dot_config/zsh/.functions.sh" }}
-{{ include "dot_config/zsh/.options.sh" }}
-
-# https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix#L473
-fpath+=($HOME/.nix-profile/share/zsh/site-functions)
-
-eval "$(sheldon source)"
