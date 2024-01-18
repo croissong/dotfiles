@@ -22,7 +22,7 @@ in {
 
     himalaya = {
       enable = true;
-      package = pkgs.himalaya.override {withNotmuch = true;};
+      # package = pkgs.himalaya.override {withNotmuch = true;};
     };
 
     notmuch = {
