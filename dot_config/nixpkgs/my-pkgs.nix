@@ -134,26 +134,6 @@ with pkgs; let
     };
   };
 
-  gitwatch = stdenv.mkDerivation rec {
-    pname = "gitwatch";
-    version = versions.gitwatch.version;
-    src = fetchFromGitHub {
-      owner = "gitwatch";
-      repo = "gitwatch";
-      rev = "v${version}";
-      sha256 = versions.gitwatch.sha;
-    };
-
-    installPhase = ''
-      install -m755 -D gitwatch.sh $out/bin/gitwatch
-    '';
-
-    meta = {
-      homepage = "https://github.com/gitwatch/gitwatch";
-      description = "Watch a file or folder and automatically commit changes to a git repo easily.";
-    };
-  };
-
   sttr = stdenv.mkDerivation {
     pname = "sttr";
     version = versions.sttr.version;
@@ -194,25 +174,6 @@ with pkgs; let
     meta = {
       homepage = "https://github.com/updatecli/updatecli";
       description = "A Declarative Dependency Management tool";
-    };
-  };
-
-  versio = stdenv.mkDerivation {
-    pname = "versio";
-    version = versions.versio.version;
-    src = fetchurl {
-      url = versions.versio.url;
-      sha256 = versions.versio.sha;
-    };
-
-    dontUnpack = true;
-    installPhase = ''
-      install -m755 -D $src $out/bin/versio
-    '';
-
-    meta = {
-      homepage = "https://github.com/chaaz/versio";
-      description = "A version number manager";
     };
   };
 
@@ -311,7 +272,6 @@ in {
   desed = desed;
   focus = focus;
   commitlint-rs = commitlint-rs;
-  gitwatch = gitwatch;
   got = got;
   kanri = kanri;
   promformat = promformat;
@@ -321,7 +281,6 @@ in {
   sane-scan-pdf = sane-scan-pdf;
   sttr = sttr;
   updatecli = updatecli;
-  versio = versio;
   wutag = wutag;
   xmlformatter = xmlformatter;
 }
