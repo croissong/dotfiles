@@ -1,2 +1,0 @@
-text/calendar; ~/.config/mutt/scripts/mutt-ical.py -i -e "jm@datawerk.de" %s
-application/ics; ~/.config/mutt/scripts/mutt-ical.py -i -e "jm@datawerk.de" %s
