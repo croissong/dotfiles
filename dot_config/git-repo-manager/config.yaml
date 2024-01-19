@@ -1,0 +1,15 @@
+trees:
+- root: ~/dot
+  repos:
+  - name: dotfiles
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: git@github.com:Croissong/dotfiles.git
+      type: ssh
+  - name: system
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: git@github.com:Croissong/system.git
+      type: ssh
