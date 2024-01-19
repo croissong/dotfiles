@@ -60,4 +60,4 @@ icons_format = " <span font='10'>{icon}</span>   "
 [[block]]
 block = "time"
 interval = 30
-format = " $timestamp.datetime(f:'%a %m-%d %H:%M')"
+format = " $timestamp.datetime(f:'%a %m-%d %H:%M') "
