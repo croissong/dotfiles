@@ -243,20 +243,6 @@ with pkgs; let
     };
   };
 
-  gtrash = stdenv.mkDerivation {
-    pname = "gtrash";
-    version = versions.gtrash.version;
-    src = fetchurl {
-      url = versions.gtrash.url;
-      sha256 = versions.gtrash.sha;
-    };
-
-    sourceRoot = ".";
-    installPhase = ''
-      install -m755 -D gtrash $out/bin/gtrash
-    '';
-  };
-
   kanri = pkgs.appimageTools.wrapType2 rec {
     pname = "kanri";
     version = "0.3.3";

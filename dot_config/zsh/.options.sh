@@ -17,4 +17,4 @@ zstyle ':completion::complete:make::' tag-order targets variables
 
 # For some reason this gives the best effect
 # from https://stackoverflow.com/questions/444951/zsh-stop-backward-kill-word-on-directory-delimiter
-WORDCHARS
+WORDCHARS=
