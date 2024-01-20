@@ -2,19 +2,7 @@
 in {
   imports = [
     ./backup.nix
-    ./firefox.nix
-    ./pim.nix
   ];
-
-  programs = {
-    go = {
-      enable = true;
-    };
-
-    java = {
-      enable = true;
-    };
-  };
 
   programs.chromium = {
     enable = true;
@@ -24,17 +12,6 @@ in {
       "--enable-features=UseOzonePlatform"
       "--ozone-platform=wayland"
     ];
-  };
-
-  services = {
-    kdeconnect.enable = true;
-  };
-
-  services.wlsunset = {
-    enable = true;
-    latitude = "51.3";
-    longitude = "9.5";
-    temperature.night = 2000;
   };
 
   # TODO: use nixos services + declarative config
