@@ -1,7 +1,3 @@
-credentials "gitlab.devops.telekom.de" {
-  token = "{{ secretJSON "secrets" | dig "wrk" "svh" "gitlabToken" "" }}"
-}
-
 credentials "app.terraform.io" {
   token = "{{ secretJSON "secrets" | dig "terraformToken" "" }}"
 }
