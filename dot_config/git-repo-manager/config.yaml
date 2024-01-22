@@ -13,3 +13,12 @@ trees:
     - name: origin
       url: git@github.com:Croissong/system.git
       type: ssh
+
+- root: ~/.config
+  repos:
+  - name: emacs
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: git@github.com:Croissong/emacs.git
+      type: ssh

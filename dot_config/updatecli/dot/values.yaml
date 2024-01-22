@@ -11,15 +11,10 @@ desed:
   owner: SoptikHa2
   asset: desed-x86_64-unknown-linux-gnu
 
-dtool:
-  owner: guoxbin
 
 gitwatch:
   owner: gitwatch
 
-got:
-  owner: melbahja
-  asset: got_${VERSION}_Linux_amd64.tar.gz
 
 gtrash:
   owner: umlx5h
@@ -28,10 +23,6 @@ gtrash:
 focus:
   owner: ayoisaiah
   asset: focus_${VERSION}_linux_amd64.tar.gz
-
-klog:
-  owner: jotaen
-  asset: klog-linux.zip
 
 protocurl:
   owner: qaware
@@ -52,10 +43,6 @@ sttr:
 updatecli:
   owner: updatecli
   asset: updatecli_Linux_x86_64.tar.gz
-
-versio:
-  owner: chaaz
-  asset: versio__x86_64-unknown-linux-gnu
 
 wutag:
   owner: vv9k
