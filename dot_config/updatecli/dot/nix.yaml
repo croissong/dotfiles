@@ -55,10 +55,10 @@ targets:
         kind: file/checksum
         spec:
           files:
-            - {{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
+            - {{ requiredEnv "DOT" }}/system/nix-config/versions.json
       command: |
         update_versions_file() {
-          versions_file={{ requiredEnv "DOT" }}/dot_config/nixpkgs/versions.json
+          versions_file={{ requiredEnv "DOT" }}/system/nix-config/versions.json
           curr=$(dasel -f "$versions_file" {{ $name }})
           dasel put -f "$versions_file" -t yaml {{ $name }} -v "$1"
           next=$(dasel -f "$versions_file" {{ $name }})
