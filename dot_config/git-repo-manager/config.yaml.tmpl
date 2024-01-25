@@ -14,6 +14,8 @@ trees:
       url: git@github.com:Croissong/system.git
       type: ssh
 
+  {{ include (expandenv "$DOT/priv/dot/git-repo-manager.yaml") | nindent 2}}
+
 - root: ~/.config
   repos:
   - name: emacs
