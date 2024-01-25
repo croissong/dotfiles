@@ -58,7 +58,7 @@ input type:touchpad {
 
 input type:keyboard {
     # TODO: dvorak
-    xkb_layout de,us
+    xkb_layout us
     xkb_variant nodeadkeys,
     xkb_options ctrl:nocaps
 }
