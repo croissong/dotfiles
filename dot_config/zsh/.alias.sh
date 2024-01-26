@@ -194,8 +194,8 @@ ts-now-s() {
 # https://github.com/guibou/nixGL
 alias imv='nixGL imv'
 
-# TODO
-# function reload() {
-#   source ~/.zshenv
-#   source $ZDOTDIR/.zshrc
-# }
+function reload() {
+  source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+  # TODO
+  # source $ZDOTDIR/.zshrc
+}
