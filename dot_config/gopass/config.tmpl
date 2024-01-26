@@ -6,4 +6,4 @@
 [updater]
   check = false
 
-{{ include "priv/.config/gopass/config" -}}
+{{ include (expandenv "$DOT/priv/dot/gopass.toml") -}}
