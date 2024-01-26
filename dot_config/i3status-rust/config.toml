@@ -20,11 +20,10 @@ threshold_warning = 5
 threshold_critical = 10000000
 interval = 360
 display_type = "new"
-icons_format = " <span font='10'>{icon}</span>  "
+icons_format = " <span font='10'>{icon}</span> "
 
 [[block]]
 block = "sound"
-step_width = 3
 device_kind = "source"
 format = " $icon " # only icon
 
@@ -55,7 +54,7 @@ interval = 60
 driver = "upower"
 device = "DisplayDevice"
 format = "$percentage"
-icons_format = " <span font='10'>{icon}</span>   "
+icons_format = " <span font='10'>{icon}</span> "
 
 [[block]]
 block = "time"
