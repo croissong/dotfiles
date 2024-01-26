@@ -11,7 +11,7 @@ vpnio-start:
 vpnio-stop:
   systemctl stop strongswan
 
-nix: nix-os  nix-hm nix-diff nix-check-missing
+nix: nix-os  nix-hm nix-diff
 
 nix-hm *options:
   nix flake update --impure $DOT/system/nix-config
