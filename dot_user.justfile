@@ -14,25 +14,19 @@ vpnio-stop:
 nix: nix-os  nix-hm nix-diff nix-check-missing
 
 nix-hm *options:
-  cd $DOT/system/nix-config
-  nix flake update
-  home-manager switch --impure --flake .#moi@bon {{options}}
+  nix flake update --impure $DOT/system/nix-config
+  home-manager switch --impure \
+    --flake path://$DOT/system/nix-config#moi@bon {{options}}
 
 nix-os *options:
-  cd $DOT/system/nix-config
-  nix flake update
-  sudo nixos-rebuild switch --impure --flake .#bonVM {{options}}
+  nix flake update --impure $DOT/system/nix-config
+  sudo nixos-rebuild switch --impure \
+    --flake path://$DOT/system/nix-config#bon {{options}}
 
 
 nix-diff:
   # https://discourse.nixos.org/t/nvd-simple-nix-nixos-version-diff-tool/12397/28
   nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/profile-*-link | /usr/bin/tail -2) | rg →
-
-nix-check-missing:
-  # outdated
-  # nix search nixpkgs '\.()'
-  # missing
-  nix-search '\.(focus|sttr|versio$|slidev|got$)'
 
 gc:
   podman system prune --all --force && podman rmi --all --force
