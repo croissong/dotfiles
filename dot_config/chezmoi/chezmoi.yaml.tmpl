@@ -1,9 +1,9 @@
+sourceDir: {{ env "DOT" }}/dotfiles
 secret:
-  command: {{ env "DOT" }}/secrets.sh
+  command: {{ env "DOT" }}/dotfiles/secrets.sh
 merge:
   command: emacsscripts
   args: ediff3
-sourceDir: {{ env "DOT" }}
 encryption: age
 age:
   identity: {{ env "AGE_IDENTITY_FILE" }}

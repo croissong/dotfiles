@@ -7,12 +7,12 @@ version: 2
 
 locations:
   home:
-    from: {{ .chezmoi.homeDir }}
+    from: {{ env "HOME" }}
     to: remote
     hooks:
       before:
-        - {{ env "DOT" }}/dot_config/autorestic/excludes.sh
-        - {{ env "DOT" }}/dot_config/autorestic/git-gc.sh
+        - {{ env "DOT" }}/dotfiles/dot_config/autorestic/excludes.sh
+        - {{ env "DOT" }}/dotfiles/dot_config/autorestic/git-gc.sh
     cron: '0 */8 * * *' # every 8th hour.
     options:
       backup:
@@ -27,7 +27,7 @@ locations:
         exclude-caches: true
         exclude-file:
           - /tmp/excludes.txt
-          - {{ env "DOT" }}/dot_config/autorestic/ignore.txt
+          - {{ env "DOT" }}/dotfiles/dot_config/autorestic/ignore.txt
 
 backends:
   remote:

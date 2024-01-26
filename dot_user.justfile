@@ -11,22 +11,15 @@ vpnio-start:
 vpnio-stop:
   systemctl stop strongswan
 
+nix-hm *options:
+  nix flake update --flake ~/.config/nixpkgs
+  home-manager switch --impure \
+    --flake path://$DOT/system/nix-config#moi@bon {{options}}
 
-nix *args: nix-cm (nix-hm args) nix-diff nix-check-missing
-
-nix-cm:
-  #!/usr/bin/env bash
-  cd $DOT/dot_config/nixpkgs/
-  chezmoi apply ~/.config/nixpkgs
-
-nix-hm *args:
-  nix flake update --flake ~/.config/nixpkgs nixpkgs
-  nix flake update --flake ~/.config/nixpkgs home-manager
-  # nixpkgs-stable rust-overlay tree-grepper nixpkgs-master
-
-  home-manager --impure switch \
-    --flake ~/.config/nixpkgs#moi \
-    {{args}}
+nix-os *options:
+  nix flake update --flake ~/.config/nixpkgs
+  sudo nixos-rebuild switch --impure \
+    --flake path://$DOT/system/nix-config#bonVM {{options}}
 
 
 nix-diff:
