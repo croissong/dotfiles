@@ -1,6 +1,7 @@
 pkglist.txt
 misc/
 secrets.yml
+secrets.sh
 /**/Readme.md
 /**/Readme.org
 .config/nyxt/init.org

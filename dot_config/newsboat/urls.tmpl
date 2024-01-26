@@ -23,6 +23,4 @@ https://feeds.acast.com/public/shows/lets-talk-religion
 https://lexfridman.com/feed/podcast/
 https://anno-punktpunktpunkt.de/feed/mp3
 
-
-
-{{ include "priv/.config/newsboat/urls" }}
+{{ include (expandenv "$DOT/priv/.config/newsboat/urls") }}
