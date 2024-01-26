@@ -5,7 +5,11 @@ secrets.yml
 /**/Readme.org
 .config/nyxt/init.org
 .config/updatecli
-.config/wireplumber # TODO: check if still needed
+
+ # TODO: check if still needed
+.config/wireplumber
+.config/pipewire
+
 /tf/
 todo.*
 .config/borgmatic/excludes.sh
