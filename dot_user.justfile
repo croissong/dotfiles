@@ -15,7 +15,7 @@ nix: nix-os  nix-hm nix-diff nix-check-missing
 
 nix-hm *options:
   cd $DOT/system/nix-config
-  nix flake update --flake .
+  nix flake update
   home-manager switch --impure --flake .#moi@bon {{options}}
 
 nix-os *options:
