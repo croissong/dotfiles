@@ -11,15 +11,17 @@ vpnio-start:
 vpnio-stop:
   systemctl stop strongswan
 
+nix: nix-os  nix-hm nix-diff nix-check-missing
+
 nix-hm *options:
-  nix flake update --flake ~/.config/nixpkgs
-  home-manager switch --impure \
-    --flake path://$DOT/system/nix-config#moi@bon {{options}}
+  cd $DOT/system/nix-config
+  nix flake update --flake .
+  home-manager switch --impure --flake .#moi@bon {{options}}
 
 nix-os *options:
-  nix flake update --flake ~/.config/nixpkgs
-  sudo nixos-rebuild switch --impure \
-    --flake path://$DOT/system/nix-config#bonVM {{options}}
+  cd $DOT/system/nix-config
+  nix flake update
+  sudo nixos-rebuild switch --impure --flake .#bonVM {{options}}
 
 
 nix-diff:
@@ -35,7 +37,6 @@ nix-check-missing:
 gc:
   podman system prune --all --force && podman rmi --all --force
   nix-collect-garbage -d
-  yes | paru -Scc
 
 
 scan out:
