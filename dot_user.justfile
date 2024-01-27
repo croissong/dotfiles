@@ -11,22 +11,26 @@ vpnio-start:
 vpnio-stop:
   systemctl stop strongswan
 
-nix: nix-os  nix-hm nix-diff
+nix: nix-os  nix-hm
 
-nix-hm *options:
-  nix flake update --impure $DOT/system/nix-config
+
+nix-hm update='true': && nix-hm-diff
+  {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
   home-manager switch --impure \
-    --flake path://$DOT/system/nix-config#moi@bon {{options}}
+    --flake path://$DOT/system/nix-config#moi@bon
 
-nix-os *options:
-  nix flake update --impure $DOT/system/nix-config
+nix-os update='true': && nix-os-diff
+  {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
   sudo nixos-rebuild switch --impure \
-    --flake path://$DOT/system/nix-config#bon {{options}}
+    --flake path://$DOT/system/nix-config#bon
 
 
-nix-diff:
-  # https://discourse.nixos.org/t/nvd-simple-nix-nixos-version-diff-tool/12397/28
-  nix store diff-closures $(\ls -dv /nix/var/nix/profiles/per-user/croissong/profile-*-link | /usr/bin/tail -2) | rg →
+nix-os-diff:
+  nix store diff-closures $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2) | rg → | moar
+
+nix-hm-diff:
+  nix store diff-closures $(ls -dv ~/.local/state/nix/profiles/home-manager-*-link | tail -2) | rg → | moar
+
 
 gc:
   podman system prune --all --force && podman rmi --all --force
