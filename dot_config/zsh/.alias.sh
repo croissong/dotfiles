@@ -4,7 +4,6 @@ alias l='xplr'
 
 alias cat=bat
 alias q=pueue
-function tail() { /usr/bin/tail -f "$@" | bat --paging=never -l log; }
 
 alias rt='gtrash put'
 alias rm="echo -e 'use rt'; false"
@@ -47,8 +46,6 @@ alias myip='dig -1 myip.opendns.com @resolver1.opendns.com'
 
 alias ec=echo
 alias cg='cd $(git root)'
-
-alias nix='nix --extra-experimental-features "nix-command flakes"'
 
 alias printer='system-config-printer'
 
@@ -175,8 +172,6 @@ e() {
   fi
 }
 
-function pgrep() { /usr/bin/pgrep "$@" | xargs --no-run-if-empty ps fp; }
-
 alias j='just --unstable --justfile ~/.user.justfile --working-directory .'
 
 ts-from-unix() {
@@ -191,10 +186,8 @@ ts-now-s() {
   date +'%s'
 }
 
-# https://github.com/guibou/nixGL
-alias imv='nixGL imv'
-
 function reload() {
+  unset __HM_SESS_VARS_SOURCED
   source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   # TODO
   # source $ZDOTDIR/.zshrc
