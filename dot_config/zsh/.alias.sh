@@ -33,6 +33,7 @@ alias tf=terraform
 alias jq=gojq
 alias spot=spotify_player
 alias dl='curl --create-dirs -O --output-dir /tmp/'
+alias pkill='pkill -f -e'
 
 alias steam='steam -nofriendsui -no-browser +open "steam://open/minigameslist"'
 alias weather='wthrr'
