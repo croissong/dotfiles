@@ -14,7 +14,7 @@ trees:
       url: git@github.com:Croissong/system.git
       type: ssh
 
-  {{ include (expandenv "$DOT/priv/dot/git-repo-manager.yaml") | nindent 2}}
+  {{ include (expandenv "$DOT/priv/dot/git-repo-manager/priv.yaml") | nindent 2 }}
 
 - root: ~/.config
   repos:
@@ -24,3 +24,5 @@ trees:
     - name: origin
       url: git@github.com:Croissong/emacs.git
       type: ssh
+
+{{ include (expandenv "$DOT/priv/dot/git-repo-manager/wrk.yaml") }}
