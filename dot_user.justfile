@@ -6,10 +6,11 @@ import 'dot/priv/justfile'
 #   @just --justfile {{justfile()}} --choose
 
 vpnio-start:
-  systemctl restart strongswan
-  sudo swanctl -i -c vpn
+  systemctl restart strongswan-swanctl
+  sudo swanctl -i vpn-wrk
 vpnio-stop:
-  systemctl stop strongswan
+  sudo swanctl -t vpn-wrk
+  systemctl stop strongswan-swanctl
 
 nix: nix-os  nix-hm
 
@@ -23,7 +24,6 @@ nix-os update='true': && nix-os-diff
   {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
   sudo nixos-rebuild switch --impure \
     --flake path://$DOT/system/nix-config#bon
-
 
 nix-os-diff:
   nix store diff-closures $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2) | rg → | moar
