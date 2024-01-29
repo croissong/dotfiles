@@ -5,11 +5,11 @@ import 'dot/priv/justfile'
 # default:
 #   @just --justfile {{justfile()}} --choose
 
-vpnio-start:
+vpn-start:
   systemctl restart strongswan-swanctl
-  sudo swanctl -i vpn-wrk
-vpnio-stop:
-  sudo swanctl -t vpn-wrk
+  sudo swanctl -i -c vpn-wrk
+vpn-stop:
+  sudo swanctl -t -c vpn-wrk
   systemctl stop strongswan-swanctl
 
 nix: nix-os  nix-hm
