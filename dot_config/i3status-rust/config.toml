@@ -47,6 +47,8 @@ block = "temperature"
 interval = 60
 chip = "coretemp-isa-*"
 format = " $average "
+info = 70
+format_alt = " $icon $min min, $max max, $average avg "
 
 [[block]]
 block = "battery"
