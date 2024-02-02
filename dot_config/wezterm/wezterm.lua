@@ -245,6 +245,7 @@ return {
   enable_wayland = true,
   font = wezterm.font("Hack"),
   font_size = 13,
+  front_end = "WebGpu",
   keys = keys,
   key_tables = key_tables,
   mouse_bindings = mouse_bindings,
