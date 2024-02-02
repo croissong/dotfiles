@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euxo pipefail
+
 cd ${DOT}/priv
 
 gh api --paginate user/starred --template '{{range .}}{{.full_name}} - {{.description}} {{"\n"}}{{end}}' >gh-stars.txt

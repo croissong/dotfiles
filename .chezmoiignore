@@ -6,6 +6,7 @@ secrets.sh
 /**/Readme.org
 .config/nyxt/init.org
 .config/updatecli
+.config/krew/plugins.txt
 
  # TODO: check if still needed
 .config/wireplumber
