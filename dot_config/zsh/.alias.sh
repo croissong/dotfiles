@@ -25,9 +25,13 @@ alias m=neomutt
 alias mr='neomutt -R'
 alias ms='mailsync'
 alias watch='viddy'
-alias sys=sysz
-alias sy=systemctl
-alias syu='sy --user'
+
+alias sy=systemctl-tui
+alias sys=systemctl
+alias sysu='sys --user'
+alias journ='journalctl -fxe -u'
+alias journu='journalctl -fxe --user -u'
+
 alias gpgt=gpg-tui
 alias tf=terraform
 alias jq=gojq
@@ -147,7 +151,6 @@ alias cert-view='step certificate inspect'
 
 alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promotor'
 
-alias journalctl='journalctl -fxe'
 alias susp='systemctl suspend'
 
 alias netd-restart='systemctl restart systemd-networkd systemd-resolved iwd'
