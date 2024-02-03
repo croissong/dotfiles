@@ -1,5 +1,6 @@
 ice
 klock
+krew
 lineage
 neat
 rbac-tool

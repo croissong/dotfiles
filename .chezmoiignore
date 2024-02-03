@@ -7,6 +7,7 @@ secrets.sh
 .config/nyxt/init.org
 .config/updatecli
 .config/krew/plugins.txt
+.config/topgrade/custom
 
  # TODO: check if still needed
 .config/wireplumber
