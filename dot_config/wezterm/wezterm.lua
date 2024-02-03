@@ -208,28 +208,6 @@ mouse_bindings = { -- Change the default click behavior so that it only selects
   },
 }
 
--- https://github.com/wez/wezterm/issues/928#issuecomment-1152781846
-hyperlink_rules = {
-  -- Linkify things that look like URLs
-  -- This is actually the default if you don't specify any hyperlink_rules
-  {
-    regex = "\\b\\w+://(?:[\\w.-]+)(?:(:?:\\.[a-z]{2,15})|(?::\\d{1,5}))\\S*\\b",
-    format = "$0",
-  },
-
-  -- linkify email addresses
-  {
-    regex = "\\b\\w+@[\\w-]+(\\.[\\w-]+)+\\b",
-    format = "mailto:$0",
-  },
-
-  -- file:// URI
-  {
-    regex = "\\bfile://\\S*\\b",
-    format = "$0",
-  },
-}
-
 ---
 -- config
 ---
