@@ -32,6 +32,13 @@ nix-hm-diff:
   nix store diff-closures $(ls -dv ~/.local/state/nix/profiles/home-manager-*-link | tail -2) | rg → | moar
 
 
+netd-restart:
+  systemctl stop strongswan-swanctl
+  systemctl restart systemd-networkd dnscrypt-proxy2 iwd
+
+netd-journal:
+  journalctl -u systemd-networkd -u dnscrypt-proxy2 -u iwd
+
 gc:
   podman system prune --all --force && podman rmi --all --force
   nix-collect-garbage -d

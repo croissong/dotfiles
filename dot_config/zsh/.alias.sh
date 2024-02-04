@@ -153,9 +153,6 @@ alias promotor='~/.cache/pypoetry/virtualenvs/promotor-M1X4eowa-py3.10/bin/promo
 
 alias susp='systemctl suspend'
 
-alias netd-restart='systemctl restart systemd-networkd systemd-resolved iwd'
-alias netd-journal='journalctl -u systemd-networkd -u systemd-resolved -u iwd'
-
 alias nixs='nix-search'
 alias nixsd='nix-search -d -n '
 
