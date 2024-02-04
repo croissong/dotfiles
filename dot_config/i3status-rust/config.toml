@@ -29,6 +29,7 @@ format = " $icon " # only icon
 
 [[block]]
 block = "custom"
+format = "{ $icon|} $text.pango-str()"
 watch_files = [ "$XDG_CACHE_HOME/service-status/icon.json" ]
 command = "cat $XDG_CACHE_HOME/service-status/icon.json"
 json = true
