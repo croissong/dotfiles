@@ -1,0 +1,15 @@
+## fish settings
+set fish_greeting # Disable greeting
+
+
+## plugin settings
+set fzf_directory_opts --preview=""
+
+
+## bindings
+bind --preset / pager-toggle-search
+
+{{ include "dot_config/fish/conf.d//aliases.fish" -}}
+
+# kubeswitch
+switcher init fish | source

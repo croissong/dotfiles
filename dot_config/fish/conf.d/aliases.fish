@@ -74,11 +74,10 @@ end
 alias k=kubectl
 alias kf=kubectl-fuzzy
 
-# TODO: back to kubie?^^
-alias kc='switch --show-preview=false'
+alias kc='kubeswitch --show-preview=false'
 alias kcc='kc h'
 alias kk="kubectl config view --minify -o jsonpath='{.contexts[0].context.cluster} {.contexts[0].context.namespace}{\"\n\"}'"
-# alias kn='switch ns'
+alias kn='kubeswitch ns'
 alias kcrm='k --kubeconfig ~/.kube/config config delete-context'
 alias kcmv='k --kubeconfig ~/.kube/config config rename-context'
 
@@ -169,6 +168,6 @@ function ts-now-s
 end
 
 function reload
-    unset __HM_SESS_VARS_SOURCED
+    set -e __HM_SESS_VARS_SOURCED
     source $__fish_config_dir/config.fish
 end
