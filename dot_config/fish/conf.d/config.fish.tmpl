@@ -1,6 +1,8 @@
 ## fish settings
 set fish_greeting # Disable greeting
 
+# set manually once...
+# fish_config theme save Nord
 
 ## plugin settings
 set fzf_directory_opts --preview=""
@@ -8,6 +10,8 @@ set fzf_directory_opts --preview=""
 
 ## bindings
 bind --preset / pager-toggle-search
+bind --preset \t complete-and-search
+bind --preset \cw backward-kill-word
 
 {{ include "dot_config/fish/conf.d//aliases.fish" -}}
 

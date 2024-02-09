@@ -12,7 +12,7 @@ alias find='fd -H'
 alias top=btm
 alias topgrade='topgrade --show-skipped'
 alias open='handlr open'
-alias history='history -E 0 | tac | cat'
+alias history='history --show-time'
 alias tree='eza --tree'
 alias x=xplr
 alias ps=procs
@@ -142,14 +142,13 @@ function pickcolor
 end
 
 function e
-    if [ -z "$1" ]
-        set TMP "$(mktemp /tmp/stdin-XXX)"
+    if count $argv >/dev/null
+        emacsclient -n "$argv"
+    else
+        set TMP (mktemp /tmp/stdin-XXX)
         cat >$TMP
         emacsclient -n $TMP
         rm $TMP
-    else
-        emacsclient -n "$argv"
-        fi
     end
 end
 
