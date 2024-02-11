@@ -54,8 +54,7 @@ scan out:
 
 
 updatecli:
-  systemctl start nix-daemon
-  @just --justfile $DOT/dot_config/updatecli/justfile -d $DOT/dot_config/updatecli apply
+  @just --justfile $DOT/dotfiles/dot_config/updatecli/justfile -d $DOT/dotfiles/dot_config/updatecli apply
 
 grm:
   grm repos sync config --config ~/.config/git-repo-manager/config.yaml

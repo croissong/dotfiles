@@ -15,11 +15,6 @@ desed:
 gitwatch:
   owner: gitwatch
 
-
-gtrash:
-  owner: umlx5h
-  asset: gtrash_Linux_x86_64.tar.gz
-
 focus:
   owner: ayoisaiah
   asset: focus_${VERSION}_linux_amd64.tar.gz
@@ -39,10 +34,6 @@ sane-scan-pdf:
 sttr:
   owner: abhimanyu003
   asset: sttr_${VERSION}_linux_amd64.tar.gz
-
-updatecli:
-  owner: updatecli
-  asset: updatecli_Linux_x86_64.tar.gz
 
 wutag:
   owner: vv9k

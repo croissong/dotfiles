@@ -3,7 +3,7 @@
 URL="$1"
 
 if [[ "$URL" == *"/archive/refs"* ]] || [[ "$URL" == *".zip" ]]; then
-  nix-prefetch-url --unpack "$URL"
+  /run/current-system/sw/bin/nix-prefetch-url --unpack "$URL"
 else
-  nix-prefetch-url "$URL"
+  /run/current-system/sw/bin/nix-prefetch-url "$URL"
 fi
