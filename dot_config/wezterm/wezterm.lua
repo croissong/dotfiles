@@ -230,4 +230,5 @@ return {
   hyperlink_rules = hyperlink_rules,
   debug_key_events = false,
   key_map_preference = "Physical",
+  default_prog = { "fish" },
 }
