@@ -5,7 +5,7 @@ cd $DOT/priv
 echo y | buku --nostdin -e buku.md
 echo "Wrote buku export to $DOT/priv/buku.md" >&2
 
-commitIfChanged buku.md
+commitIfChanged buku.md "buku bookmarks"
 
 buku -p -j | jq '[.[] |
 select( .tags | contains("no-export-ff") | not) |

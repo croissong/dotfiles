@@ -12,4 +12,4 @@ gh api --paginate user/starred --template '{{range .}}{{.full_name}} - {{.descri
 
 echo "Wrote Github stars export to $DOT/priv/gh-stars.txt" >&2
 
-commitIfChanged gh-stars.txt
+commitIfChanged gh-stars.txt "Github stars"
