@@ -10,7 +10,6 @@ secrets.sh
 .config/topgrade/custom
 
  # TODO: check if still needed
-.config/wireplumber
 .config/pipewire
 
 /tf/
