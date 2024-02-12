@@ -37,8 +37,6 @@ disabled = true
 disabled = true
 [memory_usage]
 disabled = true
-[nix_shell]
-disabled = true
 [aws]
 disabled = true
 [gcloud]
