@@ -25,4 +25,13 @@ trees:
       url: git@github.com:Croissong/emacs.git
       type: ssh
 
+- root: ~/code/moi
+  repos:
+  - name: patrician
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: git@github.com:Croissong/patrician.git
+      type: ssh
+
 {{ include (expandenv "$DOT/priv/dot/git-repo-manager/wrk.yaml") }}
