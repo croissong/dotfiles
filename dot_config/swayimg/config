@@ -1,0 +1,7 @@
+[general]
+
+# Initial scale (optimal/fit/width/height/fill/real)
+scale = fit
+
+# Start in full screen mode (yes/no)
+fullscreen = yes
