@@ -1,7 +1,11 @@
 apply:
-    terraform apply -parallelism=1
+  summon -f summon.yml terraform apply -parallelism=1
+
+plan:
+  summon -f summon.yml terraform plan -parallelism=1
 
 get-rules:
+  # https://github.com/microsoftgraph/msgraph-cli/releases
   ./mgc login --scopes User.ReadWrite Mail.ReadWrite MailboxSettings.ReadWrite
   ./mgc users item mail-folders item message-rules list --user-id jm@datawerk.com --mail-folder-id inbox
 

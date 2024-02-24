@@ -7,26 +7,27 @@ terraform {
 
     google = {
       source  = "hashicorp/google"
-      version = "4.51.0"
+      version = "5.17.0"
     }
 
     azuread = {
       source  = "hashicorp/azuread"
-      version = "2.33.0"
+      version = "2.47.0"
     }
 
     sops = {
+      # https://github.com/carlpett/terraform-provider-sops/issues/50
       source  = "lokkersp/sops"
       version = "0.6.10"
     }
 
     b2 = {
       source  = "Backblaze/b2"
-      version = "0.8.4"
+      version = "0.8.9"
     }
   }
 
-  required_version = ">= 1.6"
+  required_version = ">= 1.7"
 }
 
 
