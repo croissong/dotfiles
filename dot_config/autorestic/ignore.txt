@@ -8,16 +8,11 @@ $HOME/.config$HOME/.cache
 $HOME/.config/gcloud/logs
 $HOME/.config/GIMP
 $HOME/.config/JetBrains
-$HOME/.config/Mattermost
 $HOME/.config/Microsoft/Microsoft Teams
 $HOME/.config/Slack
 $HOME/.config/chromium
 $HOME/.config/discord
 $HOME/.config/doctl/cache
-$HOME/.config/emacs$HOME/.cache
-$HOME/.config/emacs/eln-cache
-$HOME/.config/emacs/elpaca
-$HOME/.config/emacs/workspace
 $HOME/.config/Keybase/Cache
 $HOME/.config/libreoffice
 $HOME/.config/mpv/watch_later

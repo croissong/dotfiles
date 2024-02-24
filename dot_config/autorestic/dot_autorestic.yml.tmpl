@@ -1,5 +1,3 @@
-# autorestic backup -a -v | jq -r -R '. as $line | try (fromjson | .item) catch $line' | tee /tmp/backedup.txt
-
 # autorestic backup -a -v | tee /tmp/backedup.txt
 # cat /tmp/backedup.txt | jq -r -R '. as $line | try (fromjson | select(.message_type=="verbose_status") | .item) catch $line' | cat
 
@@ -32,11 +30,12 @@ locations:
 backends:
   remote:
     type: s3
-    path: 's3.us-west-002.backblazeb2.com/{{ secretJSON "tf" | dig "backup_bucket" "bucket_name" "" }}'
+    path: 's3.us-west-002.backblazeb2.com/{{ secretJSON "tf" | dig "backup_bon_bucket" "bucket_name" "" }}'
     key: '{{ secretJSON "secrets" | dig "autorestic" "remoteKey" "" }}'
     env:
-      AWS_ACCESS_KEY_ID: {{ secretJSON "tf" | dig "backup_bucket" "key_id" "" }}
-      AWS_SECRET_ACCESS_KEY: {{ secretJSON "tf" | dig "backup_bucket" "key" "" }}
+      AWS_ACCESS_KEY_ID: {{ secretJSON "tf" | dig "backup_bon_bucket" "key_id" "" }}
+      AWS_SECRET_ACCESS_KEY: {{ secretJSON "tf" | dig "backup_bon_bucket" "key" "" }}
+
 
 
 # https://forum.restic.net/t/determine-status-progress-of-current-backup/5211<
