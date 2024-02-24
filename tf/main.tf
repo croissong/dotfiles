@@ -38,6 +38,11 @@ resource "sops_file" "secrets" {
       key_id      = b2_application_key.autorestic_key.application_key_id
       key         = b2_application_key.autorestic_key.application_key
     }
+    backup_bon_bucket = {
+      bucket_name = b2_bucket.backup_bon.bucket_name
+      key_id      = b2_application_key.autorestic_key_bon.application_key_id
+      key         = b2_application_key.autorestic_key_bon.application_key
+    }
   })
   filename = "secrets-output.yml"
   age = {
