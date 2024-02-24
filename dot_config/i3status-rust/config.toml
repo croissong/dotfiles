@@ -43,15 +43,6 @@ block = "load"
 interval = 60
 format = "$1m "
 
-[[block]]
-block = "temperature"
-interval = 60
-chip = "coretemp-isa-*"
-format = " $average "
-good = 60
-idle = 70
-info = 80
-warning = 85
 
 [[block]]
 block = "battery"
