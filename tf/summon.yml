@@ -1,0 +1,2 @@
+B2_APPLICATION_KEY: !var moi/dot/b2_application_key
+B2_APPLICATION_KEY_ID: !var moi/dot/b2_application_key_id
