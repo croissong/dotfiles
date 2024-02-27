@@ -5,9 +5,13 @@ plan:
   summon -f summon.yml terraform plan -parallelism=1
 
 get-rules:
-  # https://github.com/microsoftgraph/msgraph-cli/releases
-  ./mgc login --scopes User.ReadWrite Mail.ReadWrite MailboxSettings.ReadWrite
-  ./mgc users item mail-folders item message-rules list --user-id jm@datawerk.com --mail-folder-id inbox
+  # https://github.com/microsoftgraph/msgraph-cli
+  docker run -it --cap-add=IPC_LOCK ghcr.io/microsoftgraph/msgraph-cli sh
+  mgc login --scopes User.ReadWrite Mail.ReadWrite MailboxSettings.ReadWrite
+  mgc users mail-folders  message-rules list --user-id <email> --mail-folder-id inbox
 
 trigger-rule:
-  ./mgc users item mail-folders item message-rules item get --user-id jm@datawerk.com --mail-folder-id inbox --message-rule-id AgAABSMdbos= --output text
+  docker run -it --cap-add=IPC_LOCK ghcr.io/microsoftgraph/msgraph-cli sh
+  mgc login --scopes User.ReadWrite Mail.ReadWrite MailboxSettings.ReadWrite
+  # Not actually available yet
+  mgc users mail-folders message-rules get --user-id <email> --mail-folder-id inbox --message-rule-id AgAABSMdbos= --output text
