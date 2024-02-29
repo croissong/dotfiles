@@ -12,8 +12,8 @@ command = "xmlformat"
 options = ["--blanks", "--indent", "4", "--selfclose", "-"]
 includes = ["*.xml"]
 
-[formatter.js]
-includes = ["*.js"]
+[formatter.prettier]
+includes = ["*.js", "*.ts", "*.html"]
 command = "prettier"
 options = ["--write"]
 
