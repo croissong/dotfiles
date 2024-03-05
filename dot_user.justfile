@@ -15,21 +15,17 @@ vpn-stop:
 nix: nix-os  nix-hm
 
 
-nix-hm update='true': && nix-hm-diff
+nix-hm update='true':
   {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
-  home-manager switch --impure \
-    --flake path://$DOT/system/nix-config#moi@bon
+  nh home switch -c moi@bon  -- --impure
+  # https://github.com/viperML/nh/pull/65
+  # nh home switch --update -c moi@bon  -- --impure
 
-nix-os update='true': && nix-os-diff
+nix-os update='true':
   {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
-  sudo nixos-rebuild switch --impure \
-    --flake path://$DOT/system/nix-config#bon
-
-nix-os-diff:
-  nix store diff-closures $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2) | rg → | moar
-
-nix-hm-diff:
-  nix store diff-closures $(ls -dv ~/.local/state/nix/profiles/home-manager-*-link | tail -2) | rg → | moar
+  nh os switch --update -- --impure
+  # keep until https://github.com/viperML/nh/pull/65, then use --update
+  # nh os switch --update -- --impure
 
 
 netd-restart:
