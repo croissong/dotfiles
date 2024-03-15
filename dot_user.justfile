@@ -12,20 +12,14 @@ vpn-stop:
   sudo swanctl -t -c vpn-wrk
   systemctl stop strongswan-swanctl
 
-nix: nix-os  nix-hm
+nix: nix-os nix-hm
 
 
 nix-hm update='true':
-  {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
-  nh home switch -c moi@bon  -- --impure
-  # https://github.com/viperML/nh/pull/65
-  # nh home switch --update -c moi@bon  -- --impure
+  nh home switch --update -c moi@bon  -- --impure
 
 nix-os update='true':
-  {{ if update == "true" {"nix flake update --impure --flake $DOT/system/nix-config"} else {""} }}
   nh os switch --update -- --impure
-  # keep until https://github.com/viperML/nh/pull/65, then use --update
-  # nh os switch --update -- --impure
 
 
 netd-restart:
