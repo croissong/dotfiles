@@ -16,10 +16,10 @@ nix: nix-os nix-hm
 
 
 nix-hm update='true':
-  nh home switch --update -c moi@bon  -- --impure
+  nh home switch {{ if update == "true" {"--update"} else {""} }} -c moi@bon  -- --impure
 
 nix-os update='true':
-  nh os switch --update -- --impure
+  nh os switch {{ if update == "true" {"--update"} else {""} }} -- --impure
 
 
 netd-restart:
