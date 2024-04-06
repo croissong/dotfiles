@@ -44,5 +44,5 @@ command = "rustfmt"
 
 [formatter.slint]
 includes = ["*.slint"]
-command = "slint-fmt"
-options = ["--inline"]
+command = "slint-lsp"
+options = ["format", "--inline"]
