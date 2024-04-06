@@ -1,1 +1,4 @@
 edition = "2021"
+error_on_unformatted = true
+group_imports = "StdExternalCrate"
+imports_granularity = "Crate"
