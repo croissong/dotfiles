@@ -1,3 +1,4 @@
+
 [theme]
 theme = "plain"
 [theme.overrides]
@@ -9,6 +10,14 @@ icons = "awesome6"
 bat_full = "100%"
 bat_charging = "+"
 bat_discharging = "-"
+boat = "\ue445"
+
+
+[[block]]
+block = "custom"
+json = true
+command = "hieroglyph --cli"
+watch_files = [ "$XDG_CONFIG_HOME/esplanade/goods.ron" ]
 
 [[block]]
 block = "maildir"

@@ -33,5 +33,13 @@ trees:
     - name: origin
       url: git@github.com:Croissong/patrician.git
       type: ssh
+  - name: hieroglyph
+    worktree_setup: false
+    remotes:
+    - name: origin
+      url: git@github.com:Croissong/hieroglyph.git
+      type: ssh
+
+
 
 {{ include (expandenv "$DOT/priv/dot/git-repo-manager/wrk.yaml") }}
