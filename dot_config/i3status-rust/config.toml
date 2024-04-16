@@ -16,7 +16,7 @@ boat = "\ue445"
 [[block]]
 block = "custom"
 json = true
-command = "hieroglyph cli"
+command = "esplanade cli"
 watch_files = [ "$XDG_DATA_HOME/esplanade/store.redb" ]
 
 [[block]]
