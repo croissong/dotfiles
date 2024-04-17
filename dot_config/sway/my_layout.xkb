@@ -1,0 +1,18 @@
+// from `, setxkbmap -option ctrl:nocaps -option grp:rctrl_rshift_toggle  -layout us,de  -print`
+// see https://gist.github.com/jatcwang/ae3b7019f219b8cdc6798329108c9aee
+// with additional Hyper key remap
+// unfortunately, hyper key is broken in emacs-pgtk :(
+// - https://github.com/emacs-mirror/emacs/blob/adbcf268bc81c439f90b1016700d8a0a234e12b7/etc/PROBLEMS#L470
+// - https://gitlab.gnome.org/GNOME/gtk/-/issues/6137
+
+xkb_keymap {
+        xkb_keycodes  { include "evdev+aliases(qwerty)" };
+        xkb_types     { include "complete"      };
+        xkb_compat    { include "complete"      };
+        xkb_symbols   {
+          include "pc+us+de:2+inet(evdev)+ctrl(nocaps)+group(alts_toggle):1+group(alts_toggle):2"
+          replace key <LCTL> { [ Hyper_R ] };
+          modifier_map Mod5 { <Hyper>, Hyper_R };
+        };
+        xkb_geometry  { include "pc(pc105)"     };
+};
