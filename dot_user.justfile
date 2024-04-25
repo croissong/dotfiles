@@ -27,7 +27,7 @@ netd-restart:
   systemctl restart systemd-networkd dnscrypt-proxy2 iwd
 
 netd-journal:
-  journalctl -u systemd-networkd -u dnscrypt-proxy2 -u iwd
+  journalctl --since "12 hours ago" -u systemd-networkd -u dnscrypt-proxy2 -u iwd
 
 gc:
   podman system prune --all --force && podman rmi --all --force
@@ -47,4 +47,5 @@ updatecli:
   @just --justfile $DOT/dotfiles/dot_config/updatecli/justfile -d $DOT/dotfiles/dot_config/updatecli apply
 
 grm:
+  chezmoi apply -v -r $HOME/.config/git-repo-manager/config.yaml
   grm repos sync config --config ~/.config/git-repo-manager/config.yaml
