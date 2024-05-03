@@ -1,3 +1,3 @@
-# -w "dnslookup: %{time_namelookup} | connect: %{time_connect} | appconnect: %{time_appconnect} | pretransfer: %{time_pretransfer} | starttransfer: %{time_starttransfer} | total: %{time_total} | size: %{size_download}\n"
 -s
 -n
+# -w "@$HOME/.config/curl/curl-timing.cfg"
