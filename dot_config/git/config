@@ -51,7 +51,7 @@
   ls = ls-files
   mt = mergetool
   root = !pwd
-  grepp =  "!f(){ git log -p -S$1 -- $2; }; f"
+  grepp =  "!git log --patch -G\"$1\" #"
   st = status -sb
   regexadd = "!f() { git diff --no-ext-diff -U0 \
    | grepdiff -E $1 --output-matching=hunk \
