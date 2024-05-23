@@ -1,9 +1,12 @@
-// from `, setxkbmap -option ctrl:nocaps -option grp:rctrl_rshift_toggle  -layout us,de  -print`
+// from `, setxkbmap -option ctrl:nocaps -option grp:alts_toggle -layout us,de  -print`
 // see https://gist.github.com/jatcwang/ae3b7019f219b8cdc6798329108c9aee
 // with additional Hyper key remap
 // unfortunately, hyper key is broken in emacs-pgtk :(
 // - https://github.com/emacs-mirror/emacs/blob/adbcf268bc81c439f90b1016700d8a0a234e12b7/etc/PROBLEMS#L470
 // - https://gitlab.gnome.org/GNOME/gtk/-/issues/6137
+
+
+// toggle layout (alts_toggle): Both Alt keys together
 
 xkb_keymap {
         xkb_keycodes  { include "evdev+aliases(qwerty)" };
