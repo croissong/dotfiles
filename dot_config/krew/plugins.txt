@@ -1,4 +1,5 @@
 ice
+iexec
 klock
 krew
 lineage
@@ -7,5 +8,4 @@ rbac-tool
 resource-capacity
 slice
 sniff
-stern
 view-secret
