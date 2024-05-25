@@ -3,17 +3,12 @@
 #   - package: promformat
 #   - package: xmlformatter
 
-
 commitlint-rs:
   owner: KeisukeYamashita
 
 desed:
   owner: SoptikHa2
   asset: desed-x86_64-unknown-linux-gnu
-
-
-gitwatch:
-  owner: gitwatch
 
 focus:
   owner: ayoisaiah
@@ -30,10 +25,6 @@ qsv:
 
 sane-scan-pdf:
   owner: rocketraman
-
-sttr:
-  owner: abhimanyu003
-  asset: sttr_${VERSION}_linux_amd64.tar.gz
 
 wutag:
   owner: vv9k
