@@ -5,24 +5,6 @@ local wezterm = require("wezterm")
 local keys = require("keys")
 local mouse_bindings = require("mouse")
 
----
--- Custom functions
----
-
--- https://wezfurlong.org/wezterm/config/lua/wezterm/on.html#custom-events
-
-wezterm.on("copy-scrollback", function(window, pane)
-  local scrollback = pane:get_lines_as_text(250)
-  window:copy_to_clipboard(scrollback)
-end)
-
-wezterm.on("copy-cmd", function(window, pane)
-  local scrollback = pane:get_lines_as_text()
-  string_after_prompt = string.match(scrollback, ".*❯ (.*)")
-  cmd = string_after_prompt:gsub("\n", "")
-  window:copy_to_clipboard(cmd)
-end)
-
 search_mode = wezterm.gui.default_key_tables().search_mode
 table.insert(search_mode, { key = "w", mods = "CTRL", action = wezterm.action({ CopyMode = "ClearPattern" }) })
 

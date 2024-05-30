@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local functions = require("functions")
+
 local menus = {
   {
     key = "q",
@@ -127,12 +129,12 @@ local keys = {
   {
     key = "e",
     mods = "CTRL|ALT",
-    action = wezterm.action({ EmitEvent = "copy-scrollback" }),
+    action = wezterm.action_callback(functions.copy_scrollback),
   },
   {
     key = "c",
     mods = "ALT",
-    action = wezterm.action({ EmitEvent = "copy-cmd" }),
+    action = wezterm.action_callback(functions.copy_cmd),
   },
 }
 
