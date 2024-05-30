@@ -6,12 +6,27 @@ local menus = {
   {
     key = "q",
     mods = "CTRL",
-    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|LAUNCH_MENU_ITEMS|KEY_ASSIGNMENTS|DOMAINS" } }),
+    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|LAUNCH_MENU_ITEMS|WORKSPACES" } }),
+  },
+  {
+    key = "q",
+    mods = "ALT",
+    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|KEY_ASSIGNMENTS|DOMAINS|COMMANDS" } }),
   },
   {
     key = "w",
     mods = "CTRL|ALT",
+    action = functions.new_workspace,
+  },
+  {
+    key = "`",
+    mods = "ALT",
     action = "ShowTabNavigator",
+  },
+  {
+    key = "p",
+    mods = "CTRL",
+    action = wezterm.action.ActivateCommandPalette,
   },
 }
 

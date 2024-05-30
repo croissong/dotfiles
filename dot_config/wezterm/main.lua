@@ -6,10 +6,21 @@ local keys = require("keys")
 local mouse_bindings = require("mouse")
 
 search_mode = wezterm.gui.default_key_tables().search_mode
-table.insert(search_mode, { key = "w", mods = "CTRL", action = wezterm.action({ CopyMode = "ClearPattern" }) })
+table.insert(search_mode, {
+  key = "w",
+  mods = "CTRL",
+  action = wezterm.action({ CopyMode = "ClearPattern" }),
+})
 
 key_tables = {
   search_mode = search_mode,
+}
+
+launch_menu = {
+  {
+    label = "New tab",
+    cwd = wezterm.home_dir,
+  },
 }
 
 local config = wezterm.config_builder()
@@ -26,10 +37,12 @@ config.font_size = 13
 config.front_end = "WebGpu"
 config.keys = keys
 config.key_tables = key_tables
+config.launch_menu = launch_menu
 config.mouse_bindings = mouse_bindings
 config.hyperlink_rules = hyperlink_rules
 config.debug_key_events = false
 config.key_map_preference = "Physical"
 config.default_prog = { "fish" }
+config.default_workspace = "moi"
 
 return config
