@@ -1,5 +1,81 @@
 local wezterm = require("wezterm")
 
+local menus = {
+  {
+    key = "q",
+    mods = "CTRL",
+    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|LAUNCH_MENU_ITEMS|KEY_ASSIGNMENTS|DOMAINS" } }),
+  },
+  {
+    key = "w",
+    mods = "CTRL|ALT",
+    action = "ShowTabNavigator",
+  },
+}
+
+local panes = {
+  {
+    key = "2",
+    mods = "CTRL",
+    action = wezterm.action({
+      SplitHorizontal = { domain = "CurrentPaneDomain" },
+    }),
+  },
+  {
+    key = "3",
+    mods = "CTRL",
+    action = wezterm.action({
+      SplitVertical = { domain = "CurrentPaneDomain" },
+    }),
+  },
+  {
+    key = "q",
+    mods = "CTRL|ALT",
+    action = wezterm.action({
+      CloseCurrentPane = { confirm = true },
+    }),
+  },
+  {
+    key = "RightArrow",
+    mods = "CTRL|ALT",
+    action = wezterm.action({ ActivatePaneDirection = "Right" }),
+  },
+  {
+    key = "LeftArrow",
+    mods = "CTRL|ALT",
+    action = wezterm.action({ ActivatePaneDirection = "Left" }),
+  },
+  {
+    key = "UpArrow",
+    mods = "CTRL|ALT",
+    action = wezterm.action({ ActivatePaneDirection = "Up" }),
+  },
+  {
+    key = "DownArrow",
+    mods = "CTRL|ALT",
+    action = wezterm.action({ ActivatePaneDirection = "Down" }),
+  },
+}
+
+local misc = {
+  {
+    key = "r",
+    mods = "CTRL|ALT",
+    action = "ReloadConfiguration",
+  },
+  {
+    key = "+",
+    mods = "CTRL",
+    action = "IncreaseFontSize",
+  },
+  {
+    -- key = "-" not working for some reason :(
+    key = "raw:61",
+    mods = "CTRL",
+    action = "DecreaseFontSize",
+  },
+}
+
 local keys = {
   {
     key = "x",
@@ -42,78 +118,11 @@ local keys = {
     action = wezterm.action({ ScrollByPage = 0.5 }),
   },
   {
-    key = "r",
-    mods = "CTRL|ALT",
-    action = "ReloadConfiguration",
-  },
-  {
     key = "s",
     mods = "CTRL",
     action = wezterm.action({
       Search = { CaseInSensitiveString = "" },
     }),
-  },
-  {
-    key = "q",
-    mods = "CTRL",
-    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|LAUNCH_MENU_ITEMS|KEY_ASSIGNMENTS|DOMAINS" } }),
-  },
-  {
-    key = "w",
-    mods = "CTRL|ALT",
-    action = "ShowTabNavigator",
-  },
-  {
-    key = "2",
-    mods = "CTRL",
-    action = wezterm.action({
-      SplitHorizontal = { domain = "CurrentPaneDomain" },
-    }),
-  },
-  {
-    key = "3",
-    mods = "CTRL",
-    action = wezterm.action({
-      SplitVertical = { domain = "CurrentPaneDomain" },
-    }),
-  },
-  {
-    key = "q",
-    mods = "CTRL|ALT",
-    action = wezterm.action({
-      CloseCurrentPane = { confirm = true },
-    }),
-  },
-  {
-    key = "RightArrow",
-    mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Right" }),
-  },
-  {
-    key = "LeftArrow",
-    mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Left" }),
-  },
-  {
-    key = "UpArrow",
-    mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Up" }),
-  },
-  {
-    key = "DownArrow",
-    mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Down" }),
-  },
-  {
-    key = "+",
-    mods = "CTRL",
-    action = "IncreaseFontSize",
-  },
-  {
-    -- key = "-" not working for some reason :(
-    key = "raw:61",
-    mods = "CTRL",
-    action = "DecreaseFontSize",
   },
   {
     key = "e",
@@ -135,5 +144,13 @@ for i = 1, 8 do
     action = wezterm.action({ ActivateTab = i - 1 }),
   })
 end
+
+function extend(t1, t2)
+  return table.move(t2, 1, #t2, #t1 + 1, t1)
+end
+
+extend(keys, menus)
+extend(keys, panes)
+extend(keys, misc)
 
 return keys
