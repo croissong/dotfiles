@@ -3,6 +3,7 @@
 local wezterm = require("wezterm")
 
 local keys = require("keys")
+local mouse_bindings = require("mouse")
 
 ---
 -- Custom functions
@@ -22,58 +23,12 @@ wezterm.on("copy-cmd", function(window, pane)
   window:copy_to_clipboard(cmd)
 end)
 
----
--- Keybindings
----
-
 search_mode = wezterm.gui.default_key_tables().search_mode
 table.insert(search_mode, { key = "w", mods = "CTRL", action = wezterm.action({ CopyMode = "ClearPattern" }) })
 
 key_tables = {
   search_mode = search_mode,
 }
-
----
--- Mouse bindings
----
-
-mouse_bindings = { -- Change the default click behavior so that it only selects
-  -- text and doesn't open hyperlinks
-  {
-    event = {
-      Up = {
-        streak = 1,
-        button = "Left",
-      },
-    },
-    mods = "NONE",
-    action = wezterm.action({ CompleteSelection = "PrimarySelection" }),
-  },
-  { -- and make CTRL-Click open hyperlinks
-    event = {
-      Up = {
-        streak = 1,
-        button = "Left",
-      },
-    },
-    mods = "CTRL",
-    action = "OpenLinkAtMouseCursor",
-  }, -- Disable the 'Down' event of CTRL-Click to avoid weird program behaviors
-  {
-    event = {
-      Down = {
-        streak = 1,
-        button = "Left",
-      },
-    },
-    mods = "CTRL",
-    action = "Nop",
-  },
-}
-
----
--- config
----
 
 local config = wezterm.config_builder()
 config:set_strict_mode(true)
