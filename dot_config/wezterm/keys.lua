@@ -11,12 +11,12 @@ local menus = {
   {
     key = "q",
     mods = "CTRL",
-    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|LAUNCH_MENU_ITEMS|WORKSPACES" } }),
+    action = act.ShowLauncherArgs({ flags = "FUZZY|LAUNCH_MENU_ITEMS|WORKSPACES" }),
   },
   {
     key = "q",
     mods = "ALT",
-    action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|KEY_ASSIGNMENTS|DOMAINS|COMMANDS" } }),
+    action = act.ShowLauncherArgs({ flags = "FUZZY|KEY_ASSIGNMENTS|DOMAINS|COMMANDS" }),
   },
   {
     key = "w",
@@ -26,12 +26,12 @@ local menus = {
   {
     key = "`",
     mods = "ALT",
-    action = "ShowTabNavigator",
+    action = act.ShowTabNavigator,
   },
   {
     key = "p",
     mods = "CTRL",
-    action = wezterm.action.ActivateCommandPalette,
+    action = act.ActivateCommandPalette,
   },
 }
 
@@ -39,43 +39,37 @@ local panes = {
   {
     key = "2",
     mods = "CTRL",
-    action = wezterm.action({
-      SplitHorizontal = { domain = "CurrentPaneDomain" },
-    }),
+    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
   {
     key = "3",
     mods = "CTRL",
-    action = wezterm.action({
-      SplitVertical = { domain = "CurrentPaneDomain" },
-    }),
+    action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
   {
     key = "q",
     mods = "CTRL|ALT",
-    action = wezterm.action({
-      CloseCurrentPane = { confirm = true },
-    }),
+    action = act.CloseCurrentPane({ confirm = true }),
   },
   {
     key = "RightArrow",
     mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Right" }),
+    action = act.ActivatePaneDirection("Right"),
   },
   {
     key = "LeftArrow",
     mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Left" }),
+    action = act.ActivatePaneDirection("Left"),
   },
   {
     key = "UpArrow",
     mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Up" }),
+    action = act.ActivatePaneDirection("Up"),
   },
   {
     key = "DownArrow",
     mods = "CTRL|ALT",
-    action = wezterm.action({ ActivatePaneDirection = "Down" }),
+    action = act.ActivatePaneDirection("Down"),
   },
 }
 
@@ -122,29 +116,27 @@ local keys = {
   {
     key = "w",
     mods = "ALT",
-    action = wezterm.action({ CopyTo = "Clipboard" }),
+    action = act.CopyTo("Clipboard"),
   },
   {
     key = "z",
     mods = "CTRL",
-    action = wezterm.action({ PasteFrom = "Clipboard" }),
+    action = act.PasteFrom("Clipboard"),
   },
   {
     key = "DownArrow",
     mods = "CTRL",
-    action = wezterm.action({ ScrollByPage = 0.5 }),
+    action = act.ScrollByPage(0.5),
   },
   {
     key = "UpArrow",
     mods = "CTRL",
-    action = wezterm.action({ ScrollByPage = -0.5 }),
+    action = act.ScrollByPage(-0.5),
   },
   {
     key = "s",
     mods = "CTRL",
-    action = wezterm.action({
-      Search = { CaseInSensitiveString = "" },
-    }),
+    action = act.Search({ CaseInSensitiveString = "" }),
   },
   {
     key = "e",
@@ -163,7 +155,7 @@ for i = 1, 8 do
   table.insert(keys, {
     key = tostring(i),
     mods = "ALT",
-    action = wezterm.action({ ActivateTab = i - 1 }),
+    action = act.ActivateTab(i - 1),
   })
 end
 
