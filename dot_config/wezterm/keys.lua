@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 local functions = require("functions")
 
@@ -162,6 +163,19 @@ for i = 1, 8 do
   })
 end
 
+-- search mode
+
+search_mode = wezterm.gui.default_key_tables().search_mode
+table.insert(search_mode, {
+  key = "w",
+  mods = "CTRL",
+  action = act.CopyMode("ClearPattern"),
+})
+
+key_tables = {
+  search_mode = search_mode,
+}
+
 function extend(t1, t2)
   return table.move(t2, 1, #t2, #t1 + 1, t1)
 end
@@ -170,4 +184,6 @@ extend(keys, menus)
 extend(keys, panes)
 extend(keys, misc)
 
-return keys
+return function()
+  return keys, key_tables
+end

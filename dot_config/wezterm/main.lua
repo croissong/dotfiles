@@ -2,19 +2,8 @@
 
 local wezterm = require("wezterm")
 
-local keys = require("keys")
+local keys, key_tables = require("keys")()
 local mouse_bindings = require("mouse")
-
-search_mode = wezterm.gui.default_key_tables().search_mode
-table.insert(search_mode, {
-  key = "w",
-  mods = "CTRL",
-  action = wezterm.action({ CopyMode = "ClearPattern" }),
-})
-
-key_tables = {
-  search_mode = search_mode,
-}
 
 launch_menu = {
   {
