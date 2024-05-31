@@ -132,12 +132,12 @@ local keys = {
   {
     key = "DownArrow",
     mods = "CTRL",
-    action = wezterm.action({ ScrollByPage = -0.5 }),
+    action = wezterm.action({ ScrollByPage = 0.5 }),
   },
   {
     key = "UpArrow",
     mods = "CTRL",
-    action = wezterm.action({ ScrollByPage = 0.5 }),
+    action = wezterm.action({ ScrollByPage = -0.5 }),
   },
   {
     key = "s",
