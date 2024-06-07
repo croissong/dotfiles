@@ -190,8 +190,12 @@ copy_mode_keys = {
   },
   {
     key = "Space",
-    mods = "CTRL",
     action = act.CopyMode({ SetSelectionMode = "Cell" }),
+  },
+  {
+    key = "Space",
+    mods = "CTRL",
+    action = act.CopyMode({ SetSelectionMode = "Block" }),
   },
 }
 
