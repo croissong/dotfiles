@@ -1,0 +1,4 @@
+[general]
+initial-tool = "rectangle"
+copy-command = "wl-copy"
+output-filename = "/tmp/satty_%m-%d_%H:%M.png"
