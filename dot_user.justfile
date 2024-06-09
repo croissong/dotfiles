@@ -9,7 +9,7 @@ vpn-start:
   systemctl restart strongswan-swanctl
   sudo swanctl -i -c vpn-wrk
 vpn-stop:
-  sudo swanctl -t -c vpn-wrk
+  sudo swanctl -t -f -c vpn-wrk
   systemctl stop strongswan-swanctl
 
 nix: nix-os nix-hm
