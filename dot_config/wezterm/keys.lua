@@ -189,6 +189,16 @@ copy_mode_keys = {
     action = act.CopyMode("MoveToEndOfLineContent"),
   },
   {
+    key = "LeftArrow",
+    mods = "CTRL",
+    action = act.CopyMode("MoveBackwardWord"),
+  },
+  {
+    key = "RightArrow",
+    mods = "CTRL",
+    action = act.CopyMode("MoveForwardWord"),
+  },
+  {
     key = "Space",
     action = act.CopyMode({ SetSelectionMode = "Cell" }),
   },
