@@ -8,9 +8,12 @@ import '~/dot/priv/justfile'
 vpn-start:
   systemctl restart strongswan-swanctl
   sudo swanctl -i -c vpn-wrk
+  ping 10.1.100.70
 vpn-stop:
   sudo swanctl -t -f -c vpn-wrk
   systemctl stop strongswan-swanctl
+  ping 10.1.100.70
+
 
 nix: nix-os nix-hm
 
