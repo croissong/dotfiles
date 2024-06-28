@@ -1,3 +1,2 @@
 [general]
-shell = "zsh"
-shell_options = "--login"
+shell = "fish"
