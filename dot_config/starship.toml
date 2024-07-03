@@ -29,6 +29,8 @@ disabled = true
 disabled = true
 [git_status]
 disabled = true
+[haskell]
+disabled = true
 [hg_branch]
 disabled = true
 [docker_context]
