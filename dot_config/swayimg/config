@@ -1,3 +1,5 @@
+# https://github.com/artemsen/swayimg/blob/master/extra/swayimgrc
+
 [general]
 
 # Initial scale (optimal/fit/width/height/fill/real)
@@ -5,3 +7,6 @@ scale = fit
 
 # Start in full screen mode (yes/no)
 fullscreen = yes
+
+[info]
+mode = brief
