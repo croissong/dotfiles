@@ -4,7 +4,7 @@ $HOME/.cargo
 $HOME/.conan
 $HOME/.config/autostart
 $HOME/.config/ansible/roles/
-$HOME/.config$HOME/.cache
+$HOME/.config/cef_user_data
 $HOME/.config/gcloud/logs
 $HOME/.config/GIMP
 $HOME/.config/JetBrains
@@ -31,7 +31,7 @@ $HOME/.node_modules
 $HOME/.npm
 $HOME/.rustup
 $HOME/.slime
-$HOME/.tor-browser
+$HOME/.tor project
 $HOME/.trash_rmt
 $HOME/.yarn
 $HOME/.zoom
@@ -52,3 +52,4 @@ tmp/
 
 
 $HOME/code/golang
+$HOME/code/forks/nixpkgs/.git

@@ -14,5 +14,6 @@ secrets.sh
 
 /tf/
 todo.*
-.config/borgmatic/excludes.sh
-/krew/backup.txt
+
+.config/autorestic/*.sh
+.config/autorestic/*.txt
