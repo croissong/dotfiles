@@ -1,3 +1,3 @@
-tail: 100
-max-log-requests: 999
+tail: 1000
 exclude-container: (istio-proxy|istio-validation)
+timestamps: short
