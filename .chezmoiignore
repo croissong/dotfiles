@@ -14,6 +14,3 @@ secrets.sh
 
 /tf/
 todo.*
-
-.config/autorestic/*.sh
-.config/autorestic/*.txt

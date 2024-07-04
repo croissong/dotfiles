@@ -2,7 +2,7 @@
 
 set -uo pipefail
 
-rm -f /tmp/excludes.txt
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 # https://forum.restic.net/t/skipping-git-ignored-files/4638
 
@@ -10,8 +10,8 @@ rm -f /tmp/excludes.txt
 fd -H '\.gitignore' ~/code ~/.config ~/dot \
 	-E 'golang' \
 	-x rg --color=never '^/?([^\s#].*)$' -r {//}'/**/$1' {} \
-	>/tmp/excludes.txt
+	>"${SCRIPT_DIR}/generated-excludes.txt"
 
-lines=$(cat /tmp/excludes.txt | wc -l)
+lines=$(cat ${SCRIPT_DIR}/generated-excludes.txt | wc -l)
 tput setaf 4
 echo "Added $lines lines to excludes"

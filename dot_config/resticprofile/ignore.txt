@@ -52,4 +52,4 @@ tmp/
 
 
 $HOME/code/golang
-$HOME/code/forks/nixpkgs/.git
+$HOME/code/forks/nixpkgs

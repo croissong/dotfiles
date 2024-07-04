@@ -1,0 +1,23 @@
+version: 1
+
+default:
+  repository: 's3:https://s3.us-west-002.backblazeb2.com/{{ secretJSON "tf" | dig "backup_bon_bucket" "bucket_name" "" }}'
+  password-file: repo-pw.txt
+
+  env:
+    AWS_ACCESS_KEY_ID: '{{ secretJSON "tf" | dig "backup_bon_bucket" "key_id" "" }}'
+    AWS_SECRET_ACCESS_KEY: '{{ secretJSON "tf" | dig "backup_bon_bucket" "key" "" }}'
+
+
+  backup:
+    run-before:
+    - ~/.config/resticprofile/generate-excludes.sh
+    - ~/.config/resticprofile/git-gc.sh
+
+
+    exclude-file:
+      - generated-excludes.txt
+      - ignore.txt
+    exclude-caches: true
+    one-file-system: true
+    source: '{{ env "HOME" }}'
