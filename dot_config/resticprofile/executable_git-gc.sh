@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# fd -H --type directory -E 'golang' -E '.local' -E .cache -E tmp '\.git$' ~/ --exec echo '{//}'
+set -ueo pipefail
 
 fd -H --type directory \
 	-E 'golang' -E '.local' -E .cache -E tmp -E nixpkgs \
