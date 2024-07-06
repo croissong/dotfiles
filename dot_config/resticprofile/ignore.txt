@@ -53,3 +53,6 @@ tmp/
 
 $HOME/code/golang
 $HOME/code/forks/nixpkgs
+
+# subset of global gitignore
+.direnv/
