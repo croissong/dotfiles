@@ -46,3 +46,7 @@ command = "rustfmt"
 includes = ["*.slint"]
 command = "slint-lsp"
 options = ["format", "--inline"]
+
+[formatter.nim]
+includes = ["*.nim"]
+command = "nimpretty"
