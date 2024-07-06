@@ -2,10 +2,9 @@
 
 set -ueo pipefail
 
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-excludes_file="${SCRIPT_DIR}/generated-excludes.txt"
+excludes_file="/tmp/generated-excludes.txt"
 
-rm "$excludes_file"
+rm -f "$excludes_file"
 
 # https://forum.restic.net/t/skipping-git-ignored-files/4638
 # https://github.com/borgbackup/borg/issues/641
