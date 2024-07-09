@@ -18,6 +18,7 @@ $HOME/.config/libreoffice
 $HOME/.config/mpv/watch_later
 $HOME/.config/obs-studio/logs
 $HOME/.config/obs-studio/profiler_data
+$HOME/.config/spotify
 $HOME/.config/streamlink-twitch-gui
 $HOME/.config/gem
 $HOME/.eclipse
