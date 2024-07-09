@@ -9,12 +9,10 @@ default:
     AWS_ACCESS_KEY_ID: '{{ secretJSON "tf" | dig "backup_bon_bucket" "key_id" "" }}'
     AWS_SECRET_ACCESS_KEY: '{{ secretJSON "tf" | dig "backup_bon_bucket" "key" "" }}'
 
-
   backup:
     run-before:
-    - ~/.config/resticprofile/generate-excludes.sh
-    - ~/.config/resticprofile/git-gc.sh
-
+      - ~/.config/resticprofile/generate-excludes.sh
+      - ~/.config/resticprofile/git-gc.sh
 
     exclude-file:
       - /tmp/generated-excludes.txt
@@ -22,3 +20,11 @@ default:
     exclude-caches: true
     one-file-system: true
     source: '{{ env "HOME" }}'
+
+  retention:
+    before-backup: false
+    after-backup: true
+    keep-daily: 30
+    keep-hourly: 12
+    keep-weekly: 4
+    keep-monthly: 12
