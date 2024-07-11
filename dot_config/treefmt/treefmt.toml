@@ -13,7 +13,7 @@ options = ["--blanks", "--indent", "4", "--selfclose", "-"]
 includes = ["*.xml"]
 
 [formatter.prettier]
-includes = ["*.js", "*.ts", "*.html", "*.css", "*.scss", "*.toml"]
+includes = ["*.js", "*.ts", "*.tsx", "*.html", "*.css", "*.scss", "*.toml"]
 command = "prettier"
 options = ["--write"]
 
