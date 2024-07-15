@@ -22,7 +22,7 @@ nix-hm update='true':
   nh home switch {{ if update == "true" {"--update"} else {""} }} -c moi@bon  -- --impure
 
 nix-os update='true':
-  nh os switch {{ if update == "true" {"--update"} else {""} }} -- --impure
+  nh os switch {{ if update == "true" {"--update"} else {""} }}
 
 
 netd-restart:
