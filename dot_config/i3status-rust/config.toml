@@ -16,7 +16,7 @@ block = "custom"
 json = true
 format = "$text.pango-str()"
 interval = 1800
-watch_files = [ "$XDG_CONFIG_HOME/esplanade/goods.ron" ]
+watch_files = [ "$XDG_DATA_HOME/esplanade/export.ron" ]
 command = "esplanade cli"
 # command = "~/code/moi/hieroglyph/target/debug/esplanade cli"
 
