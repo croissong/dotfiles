@@ -1,0 +1,4 @@
+[binds]
+
+<Ctrl+c> = exec mv "$imv_current_file" ./keep/; next 1
+<Ctrl+x> = exec mv "$imv_current_file" ./drop/; next 1
