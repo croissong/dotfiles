@@ -9,6 +9,8 @@
   gpgsign = true
 [pull]
   rebase = true
+[rebase]
+  autostash = true
 [core]
   excludesfile = ~/.config/git/ignore
   pager = bat
