@@ -22,3 +22,6 @@ trim_trailing_whitespace = false
 
 [*.org]
 indent_size = 8
+
+[*.json]
+indent_size = 4
