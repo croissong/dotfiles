@@ -31,3 +31,4 @@ pyrightconfig.json
 /.local*
 .justfile
 .ignore
+.my/
