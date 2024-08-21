@@ -2,3 +2,5 @@
 
 <Ctrl+c> = exec mv "$imv_current_file" ./keep/; next 1
 <Ctrl+x> = exec mv "$imv_current_file" ./drop/; next 1
+<Meta+w> = exec wl-copy -n "$imv_current_file"
+<Ctrl+t> = exec gtrash put "$imv_current_file"; next 1
