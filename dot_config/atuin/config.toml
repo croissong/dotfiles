@@ -2,7 +2,7 @@
 
 auto_sync = false
 update_check = false
-search_mode = "fuzzy"
+search_mode = "fulltext"
 style = "compact"
 inline_height = 10
 filter_mode = "directory"
