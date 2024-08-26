@@ -17,12 +17,16 @@ vpn-stop:
 
 nix: nix-os nix-hm
 
-
 nix-hm update='true':
   nh home switch {{ if update == "true" {"--update"} else {""} }} -c moi@bon  -- --impure
 
 nix-os update='true':
   nh os switch {{ if update == "true" {"--update"} else {""} }}
+
+nix-diff-os:
+  # log profile dates
+  ls -l /nix/var/nix/profiles/system-*-link/|tail -2
+  nix store diff-closures $(ls -dv /nix/var/nix/profiles/system-*-link/|tail -2)
 
 
 netd-restart:
