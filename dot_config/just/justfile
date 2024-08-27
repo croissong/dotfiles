@@ -56,3 +56,7 @@ updatecli:
 grm:
   chezmoi apply -v -r $HOME/.config/git-repo-manager/config.yaml
   grm repos sync config --config ~/.config/git-repo-manager/config.yaml
+
+
+klog:
+  @just --choose --justfile $DOT/docs/wrk/timelog/.justfile
