@@ -96,7 +96,11 @@ local keys = {
   {
     key = "Space",
     mods = "CTRL",
-    action = "ActivateCopyMode",
+    -- https://github.com/wez/wezterm/issues/4608
+    action = wezterm.action_callback(function (window, pane)
+        window:perform_action(act.ActivateCopyMode, pane)
+        window:perform_action(act.CopyMode 'ClearPattern', pane)
+    end),
   },
   {
     key = "x",
