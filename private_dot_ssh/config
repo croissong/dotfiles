@@ -3,6 +3,6 @@ UserKnownHostsFile ~/.ssh/known_hosts
 Include ~/.ssh/hosts
 SetEnv TERM=xterm
 
-# PubkeyAcceptedKeyTypes ssh-rsa-cert-v01@openssh.com,ssh-rsa
-# PreferredAuthentications keyboard-interactive,password,publickey,hostbased,gssapi-with-mic
-# ServerAliveInterval=60
+# https://superuser.com/questions/98562/way-to-avoid-ssh-connection-timeout-freezing-of-gnome-terminal
+Host *
+  ServerAliveInterval 240
