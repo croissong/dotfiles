@@ -1,9 +1,5 @@
-import '~/dot/priv/justfile'
-
-
-# https://github.com/casey/just/issues/1557
-# default:
-#   @just --justfile {{justfile()}} --choose
+default:
+  @just -g --choose
 
 vpn-start:
   systemctl restart strongswan-swanctl
@@ -15,7 +11,9 @@ vpn-stop:
   ping 10.1.100.70
 
 
-nix: nix-os nix-hm
+nix:
+  @just --justfile {{justfile()}} nix-os true
+  @just --justfile {{justfile()}} nix-hm false
 
 nix-hm update='true':
   nh home switch {{ if update == "true" {"--update"} else {""} }} -c moi@bon  -- --impure
