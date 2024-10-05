@@ -57,4 +57,4 @@ grm:
 
 
 klog:
-  @just --choose --justfile $DOT/docs/wrk/timelog/.justfile
+  @just --choose --justfile $DOT/docs/wrk/timelog/justfile
