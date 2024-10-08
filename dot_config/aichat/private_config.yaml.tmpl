@@ -1,7 +1,9 @@
-model: openai
+model: claude
 editor: emacsclient
+save_session: true
+keybindings: emacs
 clients:
 - type: openai
   api_key: {{ gopass "tech/openai.com/apikey" }}
-save_session: true
-keybindings: emacs
+- type: claude
+  api_key: {{ gopass "tech/claude_console.anthropic.com/apikey" }}
