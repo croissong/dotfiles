@@ -90,6 +90,13 @@ local misc = {
     mods = "CTRL",
     action = "DecreaseFontSize",
   },
+
+  {
+    -- unbind because key combination already used for fish undo binding
+    key = 'p',
+    mods = 'CTRL',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
 }
 
 local keys = {
