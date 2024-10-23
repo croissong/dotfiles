@@ -33,5 +33,6 @@ config.debug_key_events = false
 config.key_map_preference = "Physical"
 config.default_prog = { "fish" }
 config.default_workspace = "moi"
+config.scrollback_lines = 10000
 
 return config
