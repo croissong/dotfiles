@@ -2,12 +2,12 @@
 
 
 increase-volume() {
-  wpctl set-volume @DEFAULT_SINK@ 5%+
+  wpctl set-volume @DEFAULT_SINK@ 2%+
   _to_wob @DEFAULT_SINK@
 }
 
 decrease-volume() {
-  wpctl set-volume @DEFAULT_SINK@ 5%-
+  wpctl set-volume @DEFAULT_SINK@ 2%-
   _to_wob @DEFAULT_SINK@
 }
 
