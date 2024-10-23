@@ -1,15 +1,7 @@
 # pypi:
 #   - package: cqlsh
 #   - package: promformat
-#   - package: xmlformatter
-
-commitlint-rs:
-  owner: KeisukeYamashita
-
-desed:
-  owner: SoptikHa2
-  asset: desed-x86_64-unknown-linux-gnu
-
+#   - package: xmlformatte
 focus:
   owner: ayoisaiah
   asset: focus_${VERSION}_linux_amd64.tar.gz
@@ -17,11 +9,6 @@ focus:
 protocurl:
   owner: qaware
   asset: protocurl_${VERSION}_linux_amd64.zip
-
-qsv:
-  owner: jqnatividad
-  trimPrefix: false
-  asset: qsv-${VERSION}-x86_64-unknown-linux-gnu.zip
 
 sane-scan-pdf:
   owner: rocketraman
