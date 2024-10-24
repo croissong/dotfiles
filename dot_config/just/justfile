@@ -1,14 +1,9 @@
+# TODO?:
+# set shell := ['nu', '-m', 'light', '-c']
+
+
 default:
   @just -g --choose
-
-vpn-start:
-  systemctl restart strongswan-swanctl
-  sudo swanctl -i -c vpn-wrk
-  ping 10.1.100.70
-vpn-stop:
-  sudo swanctl -t -f -c vpn-wrk
-  systemctl stop strongswan-swanctl
-  ping 10.1.100.70
 
 
 nix:
@@ -28,8 +23,11 @@ nix-diff-os:
 
 
 netd-restart:
-  systemctl stop strongswan-swanctl
-  systemctl restart systemd-networkd dnscrypt-proxy2 iwd
+  #!/usr/bin/env nu
+  sudo systemctl stop strongswan-swanctl
+  sudo systemctl restart systemd-networkd dnscrypt-proxy2 iwd
+  systemctl status systemd-networkd dnscrypt-proxy2 iwd strongswan-swanctl
+
 
 netd-journal:
   journalctl --since "12 hours ago" -u systemd-networkd -u dnscrypt-proxy2 -u iwd
