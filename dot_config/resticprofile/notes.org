@@ -1,0 +1,8 @@
+* check usage
+#+begin_src shell
+
+# vars from `resticprofile show`
+
+export AWS_ACCESS_KEY_ID=<key-id>
+redu -r '<repo>' --password-command 'cat <repo-pw-file>'
+#+end_src

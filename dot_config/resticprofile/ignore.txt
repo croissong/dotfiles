@@ -2,42 +2,47 @@ $HOME/.azure
 $HOME/.cache
 $HOME/.cargo
 $HOME/.conan
-$HOME/.config/autostart
+$HOME/.config/.wrangler
 $HOME/.config/ansible/roles/
+$HOME/.config/autostart
 $HOME/.config/cef_user_data
-$HOME/.config/gcloud/logs
-$HOME/.config/GIMP
-$HOME/.config/JetBrains
-$HOME/.config/Microsoft/Microsoft Teams
-$HOME/.config/Slack
 $HOME/.config/chromium
 $HOME/.config/discord
 $HOME/.config/doctl/cache
+$HOME/.config/gcloud/logs
+$HOME/.config/gem
+$HOME/.config/go
+$HOME/.config/GIMP
+$HOME/.config/JetBrains
 $HOME/.config/Keybase/Cache
 $HOME/.config/libreoffice
+$HOME/.config/Microsoft/Microsoft Teams
 $HOME/.config/mpv/watch_later
 $HOME/.config/obs-studio/logs
 $HOME/.config/obs-studio/profiler_data
+$HOME/.config/Slack
 $HOME/.config/spotify
 $HOME/.config/streamlink-twitch-gui
-$HOME/.config/gem
+$HOME/.config/unity3d
+$HOME/.config/VSCodium
 $HOME/.eclipse
 $HOME/.gradle
 $HOME/.java
 $HOME/.kube
 $HOME/.local
 $HOME/.m2
+$HOME/.mongodb3
 $HOME/.mozilla/firefox
 $HOME/.node_modules
 $HOME/.npm
 $HOME/.rustup
 $HOME/.slime
-$HOME/.tor project
+$HOME/.tor project/
 $HOME/.trash_rmt
-$HOME/.VSCodium
 $HOME/.yarn
 $HOME/.zoom
 $HOME/GPUCache
+$HOME/Libation
 
 $HOME/.factorio
 
