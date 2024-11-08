@@ -8,6 +8,9 @@ rm -f "$excludes_file"
 
 # https://forum.restic.net/t/skipping-git-ignored-files/4638
 # https://github.com/borgbackup/borg/issues/641
+
+# possible failure root cause: empty gitignore
+
 fd -H '\.gitignore' ~/code ~/.config ~/dot \
 	-E 'golang' -E 'nixpkgs' \
 	-x rg --color=never '^/?([^\s#].*)$' -r {//}'/**/$1' {} \
