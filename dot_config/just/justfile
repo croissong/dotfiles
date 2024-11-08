@@ -26,7 +26,7 @@ netd-restart:
   #!/usr/bin/env nu
   sudo systemctl stop strongswan-swanctl
   sudo systemctl restart systemd-networkd dnscrypt-proxy2 iwd
-  systemctl status systemd-networkd dnscrypt-proxy2 iwd strongswan-swanctl
+  systemctl is-active systemd-networkd dnscrypt-proxy2 iwd strongswan-swanctl
 
 
 netd-journal:
