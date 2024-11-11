@@ -152,7 +152,7 @@ local keys = {
   {
     key = "e",
     mods = "CTRL|ALT",
-    action = wezterm.action_callback(functions.copy_scrollback),
+    action = wezterm.action_callback(functions.open_scrollback_in_editor),
   },
   {
     key = "c",
