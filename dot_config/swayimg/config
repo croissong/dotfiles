@@ -8,3 +8,4 @@ scale = fit
 
 [info]
 show = false
+info_timeout = 0
