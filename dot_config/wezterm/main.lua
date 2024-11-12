@@ -5,6 +5,8 @@ local wezterm = require("wezterm")
 local keys, key_tables = require("keys")()
 local mouse_bindings = require("mouse")
 
+require("start")
+
 launch_menu = {
   {
     label = "New tab",
