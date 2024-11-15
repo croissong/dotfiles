@@ -4,14 +4,23 @@ theme = "gruvbox_light"
 line-number = "relative"
 mouse = false
 gutters = ["diff", "diagnostics", "spacer"]
+popup-border = "all"
 
 [editor.statusline]
-left = []
-center = []
-right = []
+# left = []
+# center = []
+# right = []
 
 [editor.cursor-shape]
 insert = "bar"
 
 [editor.soft-wrap]
 enable = true
+
+[editor.lsp]
+display-messages = true
+
+
+[keys.normal]
+pageup = "page_cursor_half_up"
+pagedown = "page_cursor_half_down"
