@@ -26,6 +26,7 @@ rules:
       - docs
       - feat
       - fix
+      - minor
       - perf
       - refactor
       - revert
