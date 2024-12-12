@@ -1,19 +1,20 @@
 
 
 # ----------------------------------------------------------
-# Header - type(scope): Brief description
+# Header - type(scope): brief description
 # ----------------------------------------------------------
-#    * feat             A new feature - SemVar PATCH
-#    * fix              A bug fix - SemVar MINOR
-#    * BREAKING CHANGE  Breaking API change - SemVar MAJOR
-#    * docs             Change to documentation only
-#    * style            Change to style (whitespace, etc.)
-#    * refactor         Change not related to a bug or feat
-#    * perf             Change that affects performance
-#    * test             Change that adds/modifies tests
-#    * build            Change to build system
-#    * ci               Change to CI pipeline/workflow
-#    * chore            General tooling/config/min refactor
+#    * build            change to build system
+#    * ci               change to CI pipeline/workflow
+#    * chore            general tooling/config/min refactor
+#    * docs             change to documentation only
+#    * feat             a new feature - SemVar PATCH
+#    * fix              a bug fix - SemVar MINOR
+#    * minor            minor changes
+#    * perf             change that affects performance
+#    * refactor         change not related to a bug or feat
+#    * revert           revert a change
+#    * style            change to style (whitespace, etc.)
+#    * test             change that adds/modifies tests
 # ----------------------------------------------------------
 
 
