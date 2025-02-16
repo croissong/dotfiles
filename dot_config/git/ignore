@@ -32,3 +32,4 @@ pyrightconfig.json
 .justfile
 .ignore
 .my/
+.aider*
