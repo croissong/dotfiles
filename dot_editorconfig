@@ -20,7 +20,7 @@ switch_case_indent = false
 [*.md]
 trim_trailing_whitespace = false
 
-[*.org]
+[*.org{.gpg,}]
 indent_size = 8
 trim_trailing_whitespace = false
 
