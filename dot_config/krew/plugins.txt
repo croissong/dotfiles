@@ -1,9 +1,11 @@
+duplicate
 ice
 iexec
 klock
 krew
 lineage
 neat
+pv-migrate
 rbac-tool
 resource-capacity
 slice
