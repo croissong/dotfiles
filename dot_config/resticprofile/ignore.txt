@@ -11,8 +11,9 @@ $HOME/.config/discord
 $HOME/.config/doctl/cache
 $HOME/.config/gcloud/logs
 $HOME/.config/gem
-$HOME/.config/go
 $HOME/.config/GIMP
+$HOME/.config/go
+$HOME/.config/google-chrome
 $HOME/.config/JetBrains
 $HOME/.config/Keybase/Cache
 $HOME/.config/libreoffice
