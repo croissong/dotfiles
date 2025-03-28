@@ -6,10 +6,6 @@ default:
   @just -g --choose
 
 
-nix:
-  @just --justfile {{justfile()}} nix-os true
-  @just --justfile {{justfile()}} nix-hm false
-
 nix-hm update='true':
   nh home switch {{ if update == "true" {"--update"} else {""} }} -c moi@bon  -- --impure
 
