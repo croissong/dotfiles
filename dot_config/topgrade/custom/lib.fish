@@ -1,6 +1,6 @@
 function commitIfChanged -a file -a msg
     if string length --quiet (git status --porcelain $file)
-        git --no-pager diff $file
+        git --no-pager --ignore-all-space diff $file
         git add $file
         git commit -m "chore: update $msg"
         echo "$file changes committed" >&2
