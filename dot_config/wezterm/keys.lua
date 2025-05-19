@@ -93,20 +93,38 @@ local misc = {
 
   {
     -- unbind because key combination already used for fish undo binding
-    key = 'p',
-    mods = 'CTRL',
+    key = "p",
+    mods = "CTRL",
     action = wezterm.action.DisableDefaultAssignment,
   },
 }
+
+local workspaces = {
+  key = "w",
+  mods = "CTRL|SHIFT",
+  action = act.ShowLauncherArgs({
+    flags = "WORKSPACES",
+  }),
+}
+
+for i = 0, 9 do
+  table.insert(workspaces, {
+    key = tostring(i),
+    mods = "CTRL|ALT",
+    action = act.SwitchToWorkspace({
+      name = tostring(i),
+    }),
+  })
+end
 
 local keys = {
   {
     key = "Space",
     mods = "CTRL",
     -- https://github.com/wez/wezterm/issues/4608
-    action = wezterm.action_callback(function (window, pane)
-        window:perform_action(act.ActivateCopyMode, pane)
-        window:perform_action(act.CopyMode 'ClearPattern', pane)
+    action = wezterm.action_callback(function(window, pane)
+      window:perform_action(act.ActivateCopyMode, pane)
+      window:perform_action(act.CopyMode("ClearPattern"), pane)
     end),
   },
   {
@@ -230,6 +248,7 @@ key_tables = {
 extend(keys, menus)
 extend(keys, panes)
 extend(keys, misc)
+extend(keys, workspaces)
 
 return function()
   return keys, key_tables

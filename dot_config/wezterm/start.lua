@@ -2,8 +2,8 @@ local wezterm = require("wezterm")
 local mux = wezterm.mux
 
 wezterm.on("gui-startup", function()
-  create_workspace("wrk", "/code/wrk")
-  create_workspace("moi", "/")
+  create_workspace("1", "/")
+  create_workspace("2", "/code/wrk")
 end)
 
 function create_workspace(name, dir)
