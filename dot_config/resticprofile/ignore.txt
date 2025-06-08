@@ -21,6 +21,7 @@ $HOME/.config/Microsoft/Microsoft Teams
 $HOME/.config/mpv/watch_later
 $HOME/.config/obs-studio/logs
 $HOME/.config/obs-studio/profiler_data
+$HOME/.config/packer
 $HOME/.config/Slack
 $HOME/.config/spotify
 $HOME/.config/streamlink-twitch-gui
