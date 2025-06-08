@@ -26,6 +26,8 @@ $HOME/.config/spotify
 $HOME/.config/streamlink-twitch-gui
 $HOME/.config/unity3d
 $HOME/.config/VSCodium
+$HOME/.dartServer
+$HOME/.dart-tool
 $HOME/.eclipse
 $HOME/.gradle
 $HOME/.java
@@ -36,6 +38,7 @@ $HOME/.mongodb3
 $HOME/.mozilla/firefox
 $HOME/.node_modules
 $HOME/.npm
+$HOME/.pub-cache
 $HOME/.rustup
 $HOME/.slime
 $HOME/.tor project/
