@@ -6,14 +6,14 @@ excludes_file="/tmp/generated-excludes.txt"
 
 rm -f "$excludes_file"
 
+script_dir=$(dirname "$0")
+
 # https://forum.restic.net/t/skipping-git-ignored-files/4638
 # https://github.com/borgbackup/borg/issues/641
 
-# possible failure root cause: empty gitignore
-
 fd -H '\.gitignore' ~/code ~/.config ~/dot \
 	-E 'golang' -E 'nixpkgs' \
-	-x rg --color=never '^/?([^\s#].*)$' -r {//}'/**/$1' {} \
+	-x "$script_dir"/parse-gitignore.sh {} {//} \
 	>"$excludes_file"
 
 lines=$(wc -l <"$excludes_file")
