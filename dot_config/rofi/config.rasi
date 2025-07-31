@@ -7,8 +7,8 @@ configuration {
   drun-display-format: "{name}";
   run-command: "swaymsg exec '{cmd}'";
 
-  kb-element-next: "Alt+numbersign";
-  kb-element-prev: "Alt+odiaeresis";
+  kb-element-next: "Right";
+  kb-element-prev: "Left";
   kb-custom-5: "Alt+3";
   kb-custom-6: "Alt+1";
   kb-custom-9: "Alt+2";
@@ -17,4 +17,6 @@ configuration {
   kb-custom-2: "";
   kb-custom-3: "";
   kb-custom-13: "";
+  kb-move-char-forward: "";
+  kb-move-char-back: "";
 }
