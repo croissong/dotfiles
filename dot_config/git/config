@@ -32,8 +32,7 @@
 [status]
   submodulesummary = 1
   showuntrackedfiles = normal
-[credential]
-  helper = /usr/lib/git-core/git-credential-libsecret
+
 [color]
   diff = auto
   status = auto
