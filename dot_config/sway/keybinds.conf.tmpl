@@ -103,6 +103,7 @@ bindsym $mod+Control+e exec "wl-paste | xargs handlr open"
 bindsym --release $mod+Sys_Req exec grim -g "$(slurp -o -r -c '#ff0000ff'; sleep 2)" - | satty --filename -
 bindsym --release $mod+Print exec grim -g "$(slurp -o -r -c '#ff0000ff'; sleep 2)" - | satty --filename -
 bindsym $mod+p exec "tessen"
+bindsym $mod+Control+p exec "wl-copy {{ .mail.moi.username }}"
 
 bindsym Control+Alt+z exec "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"
 
