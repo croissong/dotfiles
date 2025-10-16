@@ -5,4 +5,4 @@ SetEnv TERM=xterm
 
 # https://superuser.com/questions/98562/way-to-avoid-ssh-connection-timeout-freezing-of-gnome-terminal
 Host *
-  ServerAliveInterval 240
+  ServerAliveInterval 60
