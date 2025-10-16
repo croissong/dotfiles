@@ -1,3 +1,6 @@
 kind: SwitchConfig
 version: v1alpha1
 showPreview: false
+kubeconfigStores:
+- kind: digitalocean
+  required: false
