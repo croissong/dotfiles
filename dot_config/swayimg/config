@@ -12,3 +12,5 @@ info_timeout = 0
 
 [keys.gallery]
 Ctrl+d = exec gtrash put "%"
+
+Alt+w = exec wl-copy -n "%"
