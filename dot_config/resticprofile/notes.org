@@ -6,3 +6,9 @@
 export AWS_ACCESS_KEY_ID=<key-id>
 redu -r '<repo>' --password-command 'cat <repo-pw-file>'
 #+end_src
+
+* diff
+#+begin_src shell
+
+resticprofile diff $(resticprofile -q snapshots --json | jq -r '.[-2:][].id')
+#+end_src
