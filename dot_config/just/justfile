@@ -17,6 +17,9 @@ nix-diff-os:
   ls -l /nix/var/nix/profiles/system-*-link/|tail -2
   nix store diff-closures $(ls -dv /nix/var/nix/profiles/system-*-link/|tail -2)
 
+nix-diff-hm:
+  nix profile diff-closures --profile ~/.local/state/nix/profiles/home-manager
+
 
 netd-restart:
   #!/usr/bin/env nu
