@@ -1,0 +1,14 @@
+[spotify]
+client_id = {{ (gopassRaw "ent/spotify/client" | fromYaml).id }}
+client_secret = {{ (gopassRaw "ent/spotify/client" | fromYaml).secret }}
+redirect_uri = http://127.0.0.1:3000/callback
+
+[exportify-cli]
+format = json
+# TODO: not working (PR)
+output = ~/dot/priv/spotify-playlists
+uris = false
+external_ids = false
+no_bar = false
+sort_key = spotify_default
+reverse = false
