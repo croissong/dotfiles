@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+source="40"
 
 increase-volume() {
   wpctl set-volume @DEFAULT_SINK@ 2%+
@@ -17,11 +18,11 @@ toggle-mute() {
 }
 
 toggle-mic-mute() {
-  wpctl set-mute @DEFAULT_SOURCE@ toggle
-  _to_wob @DEFAULT_SOURCE@
+  wpctl set-mute $source toggle
+  _to_wob $source
 
   # https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/1849
-  volume="$(wpctl get-volume @DEFAULT_SOURCE@)"
+  volume="$(wpctl get-volume $source)"
   volume=${volume#Volume: *}
   case "$volume" in (*MUTED*) mute=1;; *) mute=0;; esac
   echo $mute > /sys/class/leds/platform::micmute/brightness
