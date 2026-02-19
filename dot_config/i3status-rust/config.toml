@@ -16,7 +16,7 @@ block = "custom"
 json = true
 format = "$text.pango-str()"
 interval = 1800
-watch_files = [ "$XDG_DATA_HOME/esplanade/export.ron" ]
+watch_files = ["$XDG_DATA_HOME/esplanade/export.ron"]
 command = "esplanade cli"
 # command = "~/code/moi/hieroglyph/target/debug/esplanade cli"
 
@@ -24,7 +24,7 @@ command = "esplanade cli"
 block = "maildir"
 inboxes = [
   "~/.local/share/mail/jm@iogroup.org/INBOX",
-  "~/.local/share/mail/jm@iogroup.org/ops"
+  "~/.local/share/mail/jm@iogroup.org/ops",
 ]
 threshold_warning = 5
 threshold_critical = 10000000
@@ -35,12 +35,12 @@ icons_format = " <span font='10'>{icon}</span> "
 [[block]]
 block = "sound"
 device_kind = "source"
-format = " $icon " # only icon
+format = " $icon "
 
 [[block]]
 block = "custom"
 format = "{ $icon|} $text.pango-str()"
-watch_files = [ "$XDG_CACHE_HOME/service-status/icon.json" ]
+watch_files = ["$XDG_CACHE_HOME/service-status/icon.json"]
 command = "cat $XDG_CACHE_HOME/service-status/icon.json"
 json = true
 [[block.click]]
