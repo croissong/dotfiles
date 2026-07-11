@@ -6,9 +6,11 @@ redirect_uri = http://127.0.0.1:3000/callback
 [exportify-cli]
 format = json
 output = {{ env "HOME" }}/dot/priv/spotify-playlists
+cache_dir = {{ env "XDG_CACHE_HOME" }}/exportify-cli
 uris = false
 external_ids = false
 no_bar = false
 sort_key = spotify_default
 reverse = false
 fields = name,album,artist
+playlists = Liked Songs, foc, moi, comp, part

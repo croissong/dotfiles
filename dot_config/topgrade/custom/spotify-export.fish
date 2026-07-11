@@ -2,7 +2,7 @@
 source (status dirname)/lib.fish
 cd $DOT/priv
 
-exportify-cli --config ~/.config/exportify-cli/config.cfg -a --output ~/dot/priv/spotify-playlists
+exportify-cli --config ~/.config/exportify-cli/config.cfg
 
 echo "Wrote spotify export to $DOT/priv/spotify-playlists" >&2
 
