@@ -1,7 +1,7 @@
 # https://github.com/ClementTsang/bottom/blob/master/sample_configs/default_config.toml
 
 [flags]
-group_processes = true
+processes.default_grouped = true
 basic = true
 color = "gruvbox"
 mem_as_value = true
