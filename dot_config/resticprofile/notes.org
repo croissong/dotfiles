@@ -1,13 +1,28 @@
 * check usage
+
 #+begin_src shell
 
 # vars from `resticprofile show`
 
 export AWS_ACCESS_KEY_ID=<key-id>
 redu -r '<repo>' --password-command 'cat <repo-pw-file>'
+
+resticprofile ls --long --human-readable --sort=size latest | less
+# or
+resticprofile ls --long --human-readable latest | less
+
+awk '{print $8}' /tmp/rest.txt | command sed 's|/[^/]*$||' | \        sort | uniq -c | sort -rn | head -30
+
+git gc --aggressive
 #+end_src
 
 * diff
+#+begin_src shell
+
+resticprofile diff $(resticprofile -q snapshots --json | jq -r '.[-2:][].id')
+#+end_src
+
+* exclude
 #+begin_src shell
 
 resticprofile diff $(resticprofile -q snapshots --json | jq -r '.[-2:][].id')

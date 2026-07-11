@@ -1,32 +1,11 @@
+$HOME/.aider
+$HOME/.android
 $HOME/.azure
 $HOME/.cache
 $HOME/.cargo
+$HOME/.claude
 $HOME/.conan
-$HOME/.config/.wrangler
-$HOME/.config/ansible/roles/
-$HOME/.config/autostart
-$HOME/.config/cef_user_data
-$HOME/.config/chromium
-$HOME/.config/discord
-$HOME/.config/doctl/cache
-$HOME/.config/gcloud/logs
-$HOME/.config/gem
-$HOME/.config/GIMP
-$HOME/.config/go
-$HOME/.config/google-chrome
-$HOME/.config/JetBrains
-$HOME/.config/Keybase/Cache
-$HOME/.config/libreoffice
-$HOME/.config/Microsoft/Microsoft Teams
-$HOME/.config/mpv/watch_later
-$HOME/.config/obs-studio/logs
-$HOME/.config/obs-studio/profiler_data
-$HOME/.config/packer
-$HOME/.config/Slack
-$HOME/.config/spotify
-$HOME/.config/streamlink-twitch-gui
-$HOME/.config/unity3d
-$HOME/.config/VSCodium
+$HOME/.config
 $HOME/.dartServer
 $HOME/.dart-tool
 $HOME/.eclipse
@@ -44,21 +23,20 @@ $HOME/.rustup
 $HOME/.slime
 $HOME/.tor project/
 $HOME/.trash_rmt
+$HOME/.var/app/com.google.AndroidStudio
 $HOME/.yarn
 $HOME/.zoom
+$HOME/Android
 $HOME/GPUCache
 $HOME/Libation
 
-$HOME/.factorio
+$HOME/game
 
-$HOME/.config/lxc
-$HOME/.config/virt-viewer
-$HOME/.config/draw.io
-$HOME/.config/Signal
-$HOME/.config/Altair GraphQL Client/
 $HOME/Downloads
 $HOME/.terraform.d
 $HOME/.visualvm
+$HOME/.factorio
+!$HOME/.factorio/saves
 
 tmp/
 
