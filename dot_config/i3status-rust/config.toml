@@ -34,6 +34,7 @@ icons_format = " <span font='10'>{icon}</span> "
 
 [[block]]
 block = "sound"
+driver = "pulseaudio"
 device_kind = "source"
 format = " $icon "
 
