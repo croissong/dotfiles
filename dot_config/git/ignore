@@ -33,3 +33,6 @@ pyrightconfig.json
 .ignore
 .my/
 .aider*
+
+**/.claude/settings.local.json
+todo.org

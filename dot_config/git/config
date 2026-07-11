@@ -33,7 +33,7 @@
   submodulesummary = 1
   showuntrackedfiles = normal
 [credential]
-  helper = "cache --timeout=3600"
+  helper = "gopass"
 [color]
   diff = auto
   status = auto
@@ -67,3 +67,6 @@
 [annex]
   resolvemerge = false
   synccontent = true
+
+[include]
+  path = privconfig
