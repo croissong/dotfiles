@@ -4,7 +4,7 @@ cd $DOT/priv
 
 # only run once a day
 if string length --quiet (fd --changed-within 7d gh-stars.txt)
-    echo "gh-stars.txt last modfied less than 7d ago (at $(date '+%H:%M' -r gh-stars.txt)) - exiting"
+    echo "gh-stars.txt last modfied less than 7d ago (at $(date '+%d.%m' -r gh-stars.txt)) - exiting"
     exit
 end
 
