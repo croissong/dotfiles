@@ -17,12 +17,7 @@
 
 [diff]
   submodule = log
-  tool = difftastic
-
-[difftool]
-  prompt = false
-[difftool "difftastic"]
-  cmd = difft "$LOCAL" "$REMOTE"
+  external = difft
 
 [diff "json"]
     textconv = "jq ''"
